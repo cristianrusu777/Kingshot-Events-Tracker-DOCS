@@ -2,8 +2,7 @@
 
 Bear Trap is the tracker's default template for the short alliance rally event where players push as much **damage** as they can against the bear.
 
-> Screenshot placeholder: event-bear-trap.png
-
+![Event Bear Trap — Bear Trap](../images/event-bear-trap.png)
 ## How this default is set up
 
 - event style: single-session

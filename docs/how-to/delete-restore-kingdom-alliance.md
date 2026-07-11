@@ -2,8 +2,7 @@
 
 Deleting a kingdom or alliance does not immediately erase it forever. It moves into the recycle-bin flow, where it stays out of normal views and analytics until it is restored or later purged.
 
-> Screenshot placeholder: bin-restore-import.png
-
+![Bin Restore Import — Delete & Restore Kingdoms/Alliances](../images/bin-restore-import.png)
 ## Before you delete
 
 - Make sure you really want to hide the whole kingdom or alliance from normal use.

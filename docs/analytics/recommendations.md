@@ -4,9 +4,25 @@ The app uses the word **recommendations** for three different surfaces. They are
 
 For the general locked/active premium behavior, see [Premium Features](../subscriptions/premium-features.md). This page separates the three recommendation areas so you know what each one does.
 
-> Screenshot placeholder: `premium-recs-locked.png` (S54 locked view)
->
-> Screenshot placeholder: `premium-recs-active.png` (S54 active view)
+::: warning TODO screenshot
+
+**Page:** Smart Recommendations  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/premium-recs-locked.png`
+
+:::
+
+::: warning TODO screenshot
+
+**Page:** Smart Recommendations  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/premium-recs-active.png`
+
+:::
 
 ## 1. Alliance recommendations
 

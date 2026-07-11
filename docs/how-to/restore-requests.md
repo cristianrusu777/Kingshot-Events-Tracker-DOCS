@@ -4,7 +4,15 @@ This guide explains the restore-request flow for users who cannot restore someth
 
 `King`, `Alliance Leader`, and `Supreme Admin` users are the usual approvers. Other users may only be able to file the request.
 
-> Screenshot placeholder: `restore-requests.png` (S46)
+::: warning TODO screenshot
+
+**Page:** Request & Approve Restores  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/restore-requests.png`
+
+:::
 
 ## The short version
 

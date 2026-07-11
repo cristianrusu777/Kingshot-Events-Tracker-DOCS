@@ -2,9 +2,8 @@
 
 Restoring an import brings the import back for review. It does not instantly re-save all of its old live results.
 
-> Screenshot placeholder: bin-restore-import.png
-> Screenshot placeholder: import-restored-draft.png
-
+![Bin Restore Import — Restore a Deleted Import](../images/bin-restore-import.png)
+![Import Restored Draft — Restore a Deleted Import](../images/import-restored-draft.png)
 ## The restore path
 
 ```mermaid

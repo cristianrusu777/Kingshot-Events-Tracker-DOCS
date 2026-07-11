@@ -4,10 +4,9 @@ The **Analytics** area is where the app turns saved results into trends, ranking
 
 If this is your first premium analytics page, see [Premium Features](../subscriptions/premium-features.md) for how locked and active premium tabs behave.
 
-> Screenshot placeholder: `analytics-kingdom.png` (S49)
+![Analytics Kingdom — Analytics Overview](../images/analytics-kingdom.png)
 >
-> Screenshot placeholder: `analytics-alliance.png` (S50)
-
+![Analytics Alliance — Analytics Overview](../images/analytics-alliance.png)
 ## What the tabs are
 
 The Analytics page has up to four tabs:

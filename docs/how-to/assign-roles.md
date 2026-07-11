@@ -2,8 +2,7 @@
 
 Use the assignments editor when one user needs access to a kingdom, an alliance, or more than one place at the same time. This is the normal way to give someone `King`, `Alliance Leader`, `Co-Leader`, or `Alliance Player` access after the account already exists.
 
-> Screenshot placeholder: admin-assignments.png
-
+![Admin Assignments — Assign or Remove Roles](../images/admin-assignments.png)
 ## Open the assignments editor
 
 1. Open **Admin**.

@@ -2,8 +2,7 @@
 
 Gemini can improve screenshot reading quality, but it needs an API key.
 
-> Screenshot placeholder: ocr-gemini-key.png
-
+![Ocr Gemini Key — Set Up Your Gemini API Key](../images/ocr-gemini-key.png)
 ## The privacy detail that matters
 
 Your Gemini key is stored **in this browser**, not on the server.

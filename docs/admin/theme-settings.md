@@ -4,7 +4,15 @@ This guide is for `Supreme Admin` users only.
 
 The Theme Settings page controls the platform's shared appearance settings.
 
-> Screenshot placeholder: `admin-theme.png` (S78)
+::: warning TODO screenshot
+
+**Page:** Theme Settings  
+**Role:** Supreme Admin  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/admin-theme.png`
+
+:::
 
 ## What the current theme system includes
 

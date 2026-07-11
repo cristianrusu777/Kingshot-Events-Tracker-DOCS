@@ -2,8 +2,7 @@
 
 Sanctuary Battle is the default template for an alliance **PvP control and occupation** event.
 
-> Screenshot placeholder: event-sanctuary.png
-
+![Event Sanctuary — Sanctuary Battle](../images/event-sanctuary.png)
 > Warning: Do not treat Sanctuary Battle like Bear Trap. This default is **not** mainly a score race. Participation and control outcome matter first. Score is optional and off by default.
 
 ## What this event is for

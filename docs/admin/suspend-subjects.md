@@ -4,8 +4,7 @@ This guide is for `Supreme Admin` users only.
 
 This page explains the **admin action** of suspending or unsuspending a kingdom or alliance from the subscriptions dashboard. For what suspension feels like to users, and how cascade behavior works, see [Suspension & Limited Mode](../subscriptions/suspension.md).
 
-> Screenshot placeholder: `subs-suspend.png` (S64)
-
+![Subs Suspend — Suspend & Unsuspend](../images/subs-suspend.png)
 ## Where you do this
 
 Open [Subscriptions & Usage Manager](subscriptions-dashboard.md), find the kingdom or alliance row, and use:

@@ -2,8 +2,7 @@
 
 Registration requests are for people who asked for access from the public sign-up flow. Your job is to review each request, decide whether it should move forward, and place the new user in the right kingdom, alliance, and role.
 
-> Screenshot placeholder: admin-registration.png
-
+![Admin Registration — Approve Registration Requests](../images/admin-registration.png)
 ## Open the queue
 
 1. Open **Admin**.

@@ -2,8 +2,7 @@
 
 The **Image Processing Settings** area controls which screenshot-processing options users can see and use.
 
-> Screenshot placeholder: ocr-admin.png
-
+![Ocr Admin — Administer OCR Providers](../images/ocr-admin.png)
 ## What this admin-facing area includes
 
 The current interface really does include:

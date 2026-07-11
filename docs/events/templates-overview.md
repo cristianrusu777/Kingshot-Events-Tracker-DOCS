@@ -7,8 +7,7 @@ Event work in Kingshot Event Tracker starts with two layers:
 
 If you are new to these terms, read [What the Tracker Does](../getting-started/what-is-the-tracker.md) and the [Glossary](../getting-started/glossary.md) first. This page goes deeper on how event pages are used day to day.
 
-> Screenshot placeholder: events-templates.png
-
+![Events Templates — Event Templates & Instances Explained](../images/events-templates.png)
 ## The simple difference
 
 Think of a template as the rulebook and an instance as the match.

@@ -4,8 +4,7 @@ The **Rewards** page is the output step of the rewards workflow. It shows which 
 
 This page is for everyone with reward viewing access, including `King`, `Alliance Leader`, `Co-Leader`, and alliance-scoped readers. If you need to change the rules behind the results, go to [Set Up Reward Rules](reward-rules.md).
 
-> Screenshot placeholder: `rewards.png` (S55)
-
+![Rewards — Review Reward Eligibility](../images/rewards.png)
 ## What this page is for
 
 Use the Rewards page to:

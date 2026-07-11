@@ -2,8 +2,7 @@
 
 The player profile is the deeper view of one player. It combines the current profile, sync state, nickname history, attributes, graphs, and recent records in one place.
 
-> Screenshot placeholder: player-profile.png
-
+![Player Profile — Read a Player Profile](../images/player-profile.png)
 ## Open the profile
 
 Open **Players**, then select the player's name or profile action.
