@@ -56,9 +56,27 @@ This "own plan survives a usage-limit kingdom pause" rule is the main reason an 
 
 ## What still works in limited mode
 
-A suspended (limited) scope keeps **read access** and allows **cleanup**, while blocking new changes. In practice that means you can still view your data and run a [cleanup](cleanup.md), but adding or changing things is turned off until the pause lifts.
+A suspended (limited) scope keeps **read access** and allows **cleanup**, while blocking anything that would add to your data. Concretely:
 
-> **Exactly which buttons are disabled** in limited mode is best confirmed in the app itself — when a scope is suspended, the on-screen banner and the disabled controls show you precisely what's blocked. Rather than memorize a list, rely on the banner: if an action is unavailable, that's limited mode at work. (The general rule holds: viewing and cleanup stay available; creating and editing are blocked.)
+**Blocked while suspended** — every action that creates or adds a tracked resource:
+
+- Adding players
+- Creating events and event instances (sessions)
+- Entering results — both manual entry and applying screenshot/spreadsheet imports
+- Uploading screenshots (and the storage they use)
+- Creating alliances
+- Creating users
+
+**Still allowed** — viewing and tidying up:
+
+- Viewing all your dashboards, analytics, players, events, and history
+- Running a [cleanup](cleanup.md) and deleting things you no longer need (this is how you recover from a usage‑limit pause)
+
+If you try a blocked action you'll get a message that the scope is suspended and the action is disabled until the pause is lifted. The on‑screen banner is always the authoritative source for your specific situation.
+
+## A note on "grace period"
+
+Behind the scenes a subscription can carry a **grace period** status. This is an internal state the app treats like an active plan — it is **not shown to users** in the app and needs no action from you. You'll only ever see a plan as active or suspended in your usage panel.
 
 ## How suspension ends
 

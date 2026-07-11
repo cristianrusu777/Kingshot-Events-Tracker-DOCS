@@ -22,9 +22,9 @@ Until then, the feature appears **locked** — usually as a tab or card labelled
 | **Stage Analytics** | Analysis of staged events, comparing performance between stages. |
 | **Instance Internal Analytics** | Deeper summaries inside a single event instance, including how scores are spread. |
 | **Player Analytics Across Events** | Follow one player across multiple event instances — attendance consistency and score progression over time. *(Alliance-focused.)* |
-| **Custom Analytics Builder** | Build your own tables and charts by scope, event, date range, metric, and grouping. **See the note below.** |
+| **Custom Analytics Builder** | Build your own tables and charts by scope, event, date range, metric, and grouping — a working builder when unlocked. |
 
-> **A note on the Custom Analytics Builder:** the Custom tab is present in the app, but its full unlocked behavior hasn't been confirmed for this documentation. If your plan includes it, open the Custom tab to see what's available in your version rather than relying on a fixed description here. Treat it as "available, details may vary."
+> **About the Custom Analytics Builder:** when your plan unlocks it, the Custom tab is a real, working builder — pick a scope, event, date range, metric, and grouping and it produces a trend chart plus a grouped results table. See [Custom Analytics Builder](../analytics/custom-analytics.md) for the full walkthrough. (It appears as a locked card until unlocked.)
 
 ## Recommendation features
 

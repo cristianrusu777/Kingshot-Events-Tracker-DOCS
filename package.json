@@ -1,14 +1,16 @@
 {
-  "name": "vitepress-docs",
+  "name": "kingshot-event-tracker-docs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "docs:dev": "vitepress dev docs --port 9876",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs --port 9876"
+    "docs:preview": "vitepress preview docs --port 9876",
+    "docs:check": "node scripts/check-doc-links.mjs"
   },
   "devDependencies": {
     "vitepress": "^1.2.3",
     "vue": "^3.4.0"
   }
 }
+

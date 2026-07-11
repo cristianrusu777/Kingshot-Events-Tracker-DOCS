@@ -36,6 +36,12 @@ Everyone in the app has a **role** that decides what they can see and do. If you
 - [Safety Rules You'll Run Into](roles/protection-rules.md) — the guardrails that stop you (or someone else) from locking the platform or deleting the wrong thing.
 - [What "Delete" Really Does](reference/soft-delete.md) — deleting almost never means "gone forever." Read this before you panic about missing data.
 
+## Future Roadmap / Planned Features
+
+The **[Future Roadmap](roadmap/README.md)** describes possible future analytics, recommendations, mobile experiences, video OCR, reports, notifications, and data-quality improvements.
+
+Everything in `docs/roadmap/` is explicitly **planned/future and not implemented yet**. It is not evidence that a feature is currently available or included in a subscription.
+
 ---
 
 *This is the first published section of the documentation (getting started, roles, and core concepts). More sections — players, events, imports, subscriptions, and admin guides — are being added.*

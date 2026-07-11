@@ -29,9 +29,19 @@ Use **Send test email** after saving to confirm the current setup can send mail 
 
 ## Which system emails are sent
 
-The exact list of app events that send email is still something you should **verify in the app or check with your admin** rather than relying on a fixed checklist here.
+The app sends email only for a small set of **account events** — all tied to logging in. There are exactly three automatic messages, plus the manual test email:
 
-That is the cautious approach for this documentation because the planning notes still flag the full trigger list as unverified.
+| Event that triggers it | Who receives it | What it contains |
+|---|---|---|
+| A **registration request is approved** | the new user | a welcome message with their username, a temporary password, a login link, and their assigned role/kingdom/alliance |
+| A **password‑reset request is approved** | the user | a temporary password and a login link |
+| A **password‑reset request is rejected** | the user | a notice that the request was declined (no password) |
+| **Admin resets a user's password** (from the Edit User page) | that user | a temporary password and a login link |
+| **Send test email** (this page) | the test recipient you enter | a sample message to confirm delivery works |
+
+> The last two both use the "password reset" message; the "admin reset" one fires from the user‑management page rather than the reset‑request queue.
+
+**No email is sent** for anything else. In particular, the app does **not** email on: a registration request being *rejected* or marked *needs more info*, subscription/quota/suspension changes, imports, event or player changes, or reports. Those are shown in the app only.
 
 ## Good practice
 
