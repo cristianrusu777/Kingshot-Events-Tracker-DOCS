@@ -54,12 +54,14 @@ features:
 
 ## Most-used guides
 
-- [Browse and filter players](/how-to/players-directory)
-- [Create an event instance](/how-to/create-instance)
-- [Upload screenshots](/imports/upload-screenshots)
-- [Review import rows](/imports/review-rows)
-- [Review reward eligibility](/how-to/rewards)
-- [Run a KvK preparation session](/how-to/kvk-prep)
+<div class="guide-grid">
+  <a class="guide-link" href="/how-to/players-directory">Browse and filter players</a>
+  <a class="guide-link" href="/how-to/create-instance">Create an event instance</a>
+  <a class="guide-link" href="/imports/upload-screenshots">Upload screenshots</a>
+  <a class="guide-link" href="/imports/review-rows">Review import rows</a>
+  <a class="guide-link" href="/how-to/rewards">Review reward eligibility</a>
+  <a class="guide-link" href="/how-to/kvk-prep">Run a KvK preparation session</a>
+</div>
 
 ## Pick a reading path
 
@@ -86,4 +88,3 @@ Uploading does not immediately write player results. The review screen is the sa
 ## Plans, support, and the future
 
 Use [Subscriptions & Usage](/subscriptions/overview) for current plan behavior and [Troubleshooting](/troubleshooting/faq) when something is blocked. The [Future Roadmap](/roadmap/README) is clearly separated from current features and contains planning ideas only.
-

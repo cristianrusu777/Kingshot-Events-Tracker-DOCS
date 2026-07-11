@@ -46,8 +46,11 @@ jobs:
 
   deploy:
     name: Deploy
+    if: github.ref == 'refs/heads/main'
     environment:
-      name: github-pages
+      # The repository's legacy `github-pages` environment rejects `main`.
+      # Keep a dedicated Pages environment while enforcing main in workflow code.
+      name: github-pages-main
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
@@ -55,4 +58,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
