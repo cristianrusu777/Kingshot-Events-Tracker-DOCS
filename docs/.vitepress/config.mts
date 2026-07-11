@@ -115,6 +115,7 @@ function getSidebar() {
 }
 
 export default defineConfig({
+  base: '/Events-Tracker-DOCS/',
   title: 'Project Documentation',
   description: 'A centralized documentation repository.',
   ignoreDeadLinks: true,
