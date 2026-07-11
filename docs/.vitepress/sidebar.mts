@@ -9,7 +9,7 @@ type Doc = { relative: string; link: string; title: string }
 type Section = { text: string; collapsed?: boolean; match: (doc: Doc) => boolean }
 
 const sectionDefinitions: Section[] = [
-  { text: 'Getting Started', collapsed: false, match: d => d.relative.startsWith('getting-started/') },
+  { text: 'Getting Started', match: d => d.relative.startsWith('getting-started/') },
   { text: 'Role Guides', match: d => d.relative.startsWith('roles/') },
   { text: 'Players', match: d => /^how-to\/(add-player|edit-player|delete-restore-player|kick-player|manual-players|nicknames|player-profile|player-sync|players-directory)\.md$/i.test(d.relative) },
   { text: 'Kingdoms & Alliances', match: d => /^how-to\/(manage-kingdoms|manage-alliances|my-alliance|kvk-prep)\.md$/i.test(d.relative) },
@@ -81,4 +81,3 @@ export function createSidebar(): DefaultTheme.SidebarItem[] {
 
   return groups
 }
-
