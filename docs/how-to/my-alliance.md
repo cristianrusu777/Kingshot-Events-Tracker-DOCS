@@ -2,8 +2,7 @@
 
 **My Alliance** is the main management page for `Alliance Leader` and `Co-Leader` users. It gives you a read-first overview of your alliance, plus the quick actions and offer decisions you are allowed to make.
 
-> Screenshot placeholder: my-alliance.png
-
+![My Alliance — Use the My Alliance Page](../images/my-alliance.png)
 ## Open the page
 
 Select **My Alliance** from the sidebar.

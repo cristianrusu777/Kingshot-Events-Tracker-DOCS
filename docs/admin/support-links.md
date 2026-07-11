@@ -4,8 +4,7 @@ This guide is for `Supreme Admin` users only.
 
 Support links are the payment, donation, and contact links shown around the manual subscription flow.
 
-> Screenshot placeholder: `subs-support-links.png` (S70)
-
+![Subs Support Links — Configure Support Links](../images/subs-support-links.png)
 ## What you can configure
 
 The Support Links page includes fields for:

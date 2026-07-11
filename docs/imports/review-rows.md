@@ -2,10 +2,18 @@
 
 The review page is where raw detected rows become trustworthy rows.
 
-> Screenshot placeholder: import-review-before.png
-> Screenshot placeholder: import-review-after.png
-> Screenshot placeholder: import-row-edit.png
+![Import Review Before — Review Import Rows](../images/import-review-before.png)
+::: warning TODO screenshot
 
+**Page:** Review Import Rows  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/import-review-after.png`
+
+:::
+
+![Import Row Edit — Review Import Rows](../images/import-row-edit.png)
 ## What you can do here
 
 From the review table, you can:

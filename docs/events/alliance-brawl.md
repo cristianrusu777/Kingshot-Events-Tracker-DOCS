@@ -2,7 +2,15 @@
 
 Alliance Brawl is the default multi-stage template for the long brawl event with daily stages and one overall total view.
 
-> Screenshot placeholder: import-stage-picker.png
+::: warning TODO screenshot
+
+**Page:** Alliance Brawl  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/import-stage-picker.png`
+
+:::
 
 ## How this default is set up
 

@@ -2,8 +2,7 @@
 
 Use **Event Settings** when you want to control how an event behaves beyond its name and colors.
 
-> Screenshot placeholder: event-settings.png
-
+![Event Settings — Configure Event Settings](../images/event-settings.png)
 ## What is in the interface today
 
 The current settings page lets you configure these real, visible controls:

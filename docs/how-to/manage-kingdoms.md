@@ -2,10 +2,8 @@
 
 The **Kingdoms** area is the top-level management space for a server. It is where a `Supreme Admin` creates kingdoms and where a `Supreme Admin` or `King` reviews the kingdom's alliances, players, responsible users, recent imports, recent reports, and usage state.
 
-> Screenshot placeholder: kingdoms-list.png
-
-> Screenshot placeholder: kingdom-detail.png
-
+![Kingdoms List — Create & Manage Kingdoms](../images/kingdoms-list.png)
+![Kingdom Detail — Create & Manage Kingdoms](../images/kingdom-detail.png)
 ## Who can do what
 
 - `Supreme Admin` can create a new kingdom.

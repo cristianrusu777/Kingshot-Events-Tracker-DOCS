@@ -2,8 +2,7 @@
 
 An alliance lives inside a kingdom. Use alliance management when you need to add a new alliance, rename one, review who is responsible for it, or inspect its players, imports, and reports.
 
-> Screenshot placeholder: alliance-detail.png
-
+![Alliance Detail — Create & Manage Alliances](../images/alliance-detail.png)
 ## Create an alliance
 
 The normal place to create one is the kingdom page.

@@ -2,7 +2,15 @@
 
 Deleting a player is the heavy option. It removes the player from normal views at the kingdom level. If the person only left an alliance, use **Kick** instead.
 
-> Screenshot placeholder: player-delete-impact.png
+::: warning TODO screenshot
+
+**Page:** Delete & Restore a Player  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/player-delete-impact.png`
+
+:::
 
 ## Use kick first when possible
 

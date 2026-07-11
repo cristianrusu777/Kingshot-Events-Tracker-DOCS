@@ -2,8 +2,25 @@
 
 Accepting is the moment an import stops being review-only and starts writing real data.
 
-> Screenshot placeholder: import-conflict.png
-> Screenshot placeholder: import-accept-all.png
+::: warning TODO screenshot
+
+**Page:** Accept Rows (Apply an Import)  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/import-conflict.png`
+
+:::
+
+::: warning TODO screenshot
+
+**Page:** Accept Rows (Apply an Import)  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/import-accept-all.png`
+
+:::
 
 ## What accept does
 

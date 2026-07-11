@@ -2,7 +2,15 @@
 
 A **record batch** is a group of saved result rows tied to one event and date. It gives you a clean way to inspect what was saved together.
 
-> Screenshot placeholder: records-list.png
+::: warning TODO screenshot
+
+**Page:** Records & Record Batches  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/records-list.png`
+
+:::
 
 ## Where record batches come from
 

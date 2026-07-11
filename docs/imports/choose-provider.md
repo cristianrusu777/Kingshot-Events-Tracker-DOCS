@@ -2,8 +2,7 @@
 
 The imports page lets eligible users choose how screenshot images are processed.
 
-> Screenshot placeholder: ocr-providers.png
-
+![Ocr Providers — Choose an Image-Processing Provider](../images/ocr-providers.png)
 ## Your three options
 
 ### Free Local Processing

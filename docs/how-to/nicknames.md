@@ -2,7 +2,15 @@
 
 Nickname history helps the tracker understand that old imports and old event records may refer to the same person under different names.
 
-> Screenshot placeholder: player-nicknames.png
+::: warning TODO screenshot
+
+**Page:** Manage Nickname History  
+**Role:** User with access to this page  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/player-nicknames.png`
+
+:::
 
 ## Why this matters
 

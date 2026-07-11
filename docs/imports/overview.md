@@ -2,8 +2,7 @@
 
 Screenshot imports are built to be safe first. Uploading a screenshot does **not** immediately save live player results. It creates an import and a set of review rows that you check before accepting.
 
-> Screenshot placeholder: imports-page.png
-
+![Imports Page — How Screenshot Imports Work](../images/imports-page.png)
 ## The import lifecycle
 
 ```mermaid

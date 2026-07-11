@@ -2,8 +2,7 @@
 
 Manual Input is the fastest way to type one event/date batch directly without using screenshot OCR.
 
-> Screenshot placeholder: manual-input.png
-
+![Manual Input — Enter Results Manually](../images/manual-input.png)
 ## What this page does
 
 The page loads all players for one alliance, then lets you enter:

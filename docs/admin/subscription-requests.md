@@ -4,8 +4,7 @@ This guide is for `Supreme Admin` users only.
 
 The **Subscription Requests** page is the admin-side queue for manual subscription, upgrade, quota, and premium-interest requests.
 
-> Screenshot placeholder: `subs-admin-requests.png` (S67)
-
+![Subs Admin Requests — Handle Subscription Requests](../images/subs-admin-requests.png)
 ## What you can do here
 
 From this queue, you can:

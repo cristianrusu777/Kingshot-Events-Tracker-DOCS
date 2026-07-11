@@ -2,8 +2,7 @@
 
 Use delete-with-results when an already applied import was wrong and you want the tracker to undo the changes that import recorded.
 
-> Screenshot placeholder: import-delete-impact.png
-
+![Import Delete Impact — Delete an Import & Roll Back Its Changes](../images/import-delete-impact.png)
 ## The walkthrough
 
 1. Open the import.

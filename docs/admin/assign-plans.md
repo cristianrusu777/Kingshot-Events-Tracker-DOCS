@@ -4,7 +4,15 @@ This guide is for `Supreme Admin` users only.
 
 Direct assignment is the fast admin path for putting a plan on a kingdom or alliance from the subscriptions dashboard.
 
-> Screenshot placeholder: `subs-assign.png` (S63)
+::: warning TODO screenshot
+
+**Page:** Assign Plans Directly  
+**Role:** Supreme Admin  
+**State:** Open the screen at the point described in the steps below  
+**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
+**Suggested filename:** `images/subs-assign.png`
+
+:::
 
 ## Use with care
 
