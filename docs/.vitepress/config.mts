@@ -59,7 +59,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Built for the Kingshot Event Tracker community.',
-      copyright: 'Documentation is maintained alongside the tracker.'
+      copyright: 'Created by CRON #1625'
     },
     returnToTopLabel: 'Back to top',
     sidebarMenuLabel: 'Documentation',
@@ -68,4 +68,3 @@ export default defineConfig({
     darkModeSwitchTitle: 'Use dark theme'
   }
 })
-
