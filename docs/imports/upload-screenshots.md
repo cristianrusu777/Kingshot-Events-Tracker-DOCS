@@ -41,8 +41,10 @@ Use the one that matches the screenshot. Alliance Brawl deserves extra care beca
 
 If your role allows it, choose:
 
-- Free Local Processing
-- Gemini
+- Terra Processor
+- Henod Processor
+- Premium Processing (with an eligible plan)
+- Gemini or OpenAI (with your own key)
 
 The page also links straight to image-processing settings when you need to switch providers or add a Gemini key.
 

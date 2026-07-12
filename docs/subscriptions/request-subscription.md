@@ -28,7 +28,7 @@ The form asks for a **request type**. Pick the one that matches your situation:
 | **New subscription** | Start premium for a kingdom or alliance that's currently on the free tier. |
 | **Upgrade** | Move from one plan to a higher one (for example, add features you don't have yet). |
 | **Quota increase** | Stay on your plan but ask for a higher limit on something you're running out of (players, storage, etc.). |
-| **Premium processing interest** | Register interest in the "Premium Processing" feature, which is **coming soon**. This flags that you'd want it — it doesn't turn anything on today. |
+| **Premium processing interest** | Ask for the **Premium Processing** feature — a platform-managed vision AI that reads screenshots with high accuracy and no personal API key. Include it in a new subscription or upgrade to turn it on. |
 | **Other** | Anything that doesn't fit the above. Explain it in your message. |
 
 If you're not sure, **New subscription** (for going premium) or **Quota increase** (for "I just need more room") cover most cases. When in doubt, pick the closest one and describe the details in your message — the admin can adjust.
