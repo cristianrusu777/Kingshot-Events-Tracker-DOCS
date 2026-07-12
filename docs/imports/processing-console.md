@@ -1,14 +1,16 @@
 # Processing Console
 
-The Processing Console shows readable, live processing events. It refreshes every few seconds and can be paused, filtered by processor or severity, searched, and copied for support.
+The **Processing Console** is the processor-specific live feed. It stays focused on screenshot processing and provider health.
 
-Each event includes time, processor, severity, a human-readable message, and—where available—an import ID, technical code, and duration. API keys and other secrets are never shown.
+Use it to watch:
 
-Typical events include screenshot uploaded, processor selected, processing started, processing completed, low-confidence detection, provider unavailable, import review created, and failed health checks.
+- processor selection
+- processing start and finish events
+- import review creation
+- provider failures
+- Henod health checks
+- recent Terra, Henod, Gemini, OpenAI, and Premium activity
 
-Leaders and scoped users see events in their permitted kingdom/alliance context. Supreme admins can use the global admin view.
+The console refreshes automatically, can be paused, filtered, searched, and copied for support. It does not replace the broader platform activity feed.
 
-## Related
-
-- [Choose a processor](processor-categories.md)
-- [Admin processing services](../admin/processing-services.md)
+For cross-platform activity such as auth, settings, subscriptions, imports, and admin actions, use the separate [Platform Console](../admin/platform-console.md).

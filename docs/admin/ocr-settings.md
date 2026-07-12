@@ -6,34 +6,29 @@ The **Image Processing Settings** area controls which screenshot-processing opti
 
 Authorized admins can enable or suspend the individual services:
 
-- **Terra Processor** — built-in local OCR, no user key
-- **Henod Processor** — free system-managed AI, using the server OpenRouter key
-- **Gemini** — bring-your-own-key Google Gemini
-- **OpenAI** — bring-your-own-key OpenAI
-- **Premium Processing** — platform-managed premium vision AI
+- **Terra Processor** - built-in local OCR, no user key
+- **Henod Processor** - free system-managed AI, using the server OpenRouter key
+- **Gemini** - bring-your-own-key Google Gemini
+- **OpenAI** - bring-your-own-key OpenAI
+- **Premium Processor** - platform-managed premium vision AI
 
-The recommended provider controls the initial suggestion only. A saved user selection remains visible in the header, Imports, and KvK; it is never silently swapped for Terra.
+The recommended provider controls the initial suggestion only. A saved user selection remains visible in the header, Imports, Settings, and KvK. The app does not silently swap it to Terra.
 
 ## Henod control
 
-Henod uses the server `OPENROUTER_API_KEY` with free models only. It is never exposed as a user-key processor. When it is suspended, missing server credentials, or automatically suspended after shared-credit exhaustion, it stays visible in the **Free** category with an explanation and cannot be selected.
+Henod uses the server `OPENROUTER_API_KEY` with free models only. It is never exposed as a user-key processor. The runtime now checks both `process.env` and the workspace `.env`, so adding the system key no longer requires a Docker restart just to be detected by status and request flows.
 
-After restoring capacity, open **Admin → Processing Services** and use **Re-check Henod**. A successful health check clears a stale automatic suspension. Failed checks are recorded in the processing console without exposing credentials.
+When Henod is suspended, missing server credentials, or automatically suspended after shared-credit exhaustion, it stays visible in the **Free** category with a clear explanation.
 
 ## Premium control
 
-Premium Processing is available only when the service is enabled, configured, healthy, and the user has the `premium_processing` subscription feature. The interface distinguishes each failed condition rather than displaying a misleading entitlement message.
+Premium Processor is available only when the service is enabled, configured, healthy, and the current scope has the `premium_processing` subscription feature. The UI distinguishes admin disablement from entitlement or service issues.
 
 ## Terra accuracy
 
-Terra preprocesses screenshots with normalized colour and grayscale passes, then reconciles the best candidate rows. It keeps raw OCR evidence and routes malformed names, unsafe values, unusually small alliance power, and low-confidence rows to review. It is suitable for clear screenshots, but difficult stylized screenshots may benefit from Henod, Premium, Gemini, or OpenAI.
+Terra preprocesses screenshots with normalized color and grayscale passes, merges complementary OCR reads, and now prefers stronger name candidates when another OCR pass recovers the missing player name for the same rank. Suspicious rows are routed to review instead of treated as ready data.
 
-## Diagnostics and operations
+## Console split
 
-The diagnostics/status surfaces report local OCR availability, preprocessing capability, provider enablement, selected provider, current jobs, recent failures, duration, and last error. Use the [Processing Services](processing-services.md) page and [Processing Console](../imports/processing-console.md) for live operations.
-
-## Related
-
-- [Processor categories](../imports/processor-categories.md)
-- [Henod Processor](../imports/openrouter-free-ai.md)
-- [Premium Processing](../imports/premium-processing.md)
+- Use [Processing Services](processing-services.md) and [Processing Console](../imports/processing-console.md) for processor operations.
+- Use [Platform Console](platform-console.md) for broader live platform activity.

@@ -1,27 +1,43 @@
 # Processing Services
 
-Open **Admin → Processing Services** to monitor provider state and use the live console.
+Open **Admin -> Processing Services** to monitor processor health and use the processing-specific live console.
 
-## What is monitored
+## What the page shows
 
-The page shows a concise health card for each processor: its current availability, jobs currently running, failures in the last 24 hours, success/error rate, average duration, most recent attempt, and the last readable error. It intentionally reports queue/load activity rather than unreliable host CPU or RAM figures.
+Each processor card reports:
 
-## Terra Processor
+- exact availability state
+- running jobs
+- recent failure count
+- success rate
+- average duration
+- last error
+- last successful processing window
 
-Terra is the local, no-key processor. Its health card reports local availability and the processing metrics above. Terra compares complementary OCR passes and marks malformed names, unsafe numbers, or implausible scores for review instead of treating them as ready rows.
+## Henod
 
-## Henod Processor
+Henod now resolves its server key from the active runtime first and then from the workspace `.env`. The expected server variable is `OPENROUTER_API_KEY`.
 
-Henod is the system-managed free AI processor. Its card distinguishes a usable service from a missing server key, an admin suspension, an automatic shared-credit suspension, and an upstream failure. Credit balance is shown as **unknown** unless the upstream provider supplies an authoritative value; the app never guesses a balance.
+If Henod is unavailable, the page distinguishes:
 
-Use **Re-check Henod** after restoring provider capacity or after a temporary failure. A successful check clears a stale automatic suspension. A failed check writes a safe, readable console event and never reveals the service credential.
+- missing server key
+- suspended by admin or credit exhaustion
+- upstream health-check failure
 
-## With Keys and Premium
+Use **Re-check Henod** after restoring capacity. A successful check clears stale automatic suspension.
 
-Gemini and OpenAI show whether they are enabled and require a user browser key. Premium Processing shows one precise state: disabled by admin, subscription required, implementation unavailable, or available. A user is never told they need a subscription when the service is actually disabled or unconfigured.
+## Premium Processor
+
+Premium Processor distinguishes these states precisely:
+
+- disabled by admin
+- subscription required
+- implementation unavailable
+- available
+
+It no longer tells entitled users they are missing Premium when the actual problem is admin disablement or missing platform configuration.
 
 ## Related
 
-- [Processor categories](../imports/processor-categories.md)
+- [Platform console](platform-console.md)
 - [Processing console](../imports/processing-console.md)
-- [Processor troubleshooting](../troubleshooting/processors.md)
