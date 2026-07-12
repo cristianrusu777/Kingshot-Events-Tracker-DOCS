@@ -1,24 +1,31 @@
 # Choose a Processor
 
-The processor picker has exactly three categories: **Free**, **With Keys**, and **Premium**. Select a category, then choose one processor from its compact selector. Only one processor is active at a time; its name is shown consistently in the header, imports, and KvK.
+The processor picker has exactly three user-facing categories: **Free**, **With Keys**, and **Premium**.
+
+Choose a category first, then pick one processor from the compact selector inside that category. The page shows one details card for the current processor instead of a wall of large cards.
 
 ## Free
 
-- **Terra Processor** is fast and needs no setup. It is best for clear, high-resolution screenshots. Low-confidence or implausible rows are sent to review rather than applied automatically.
-- **Henod Processor** is a system-managed external processor. It requires no user key. If it is unavailable, the picker explains whether it is disabled, suspended because of shared credits, or missing server credentials.
+- **Terra Processor** is local, fast, and requires no setup. It now pushes more suspicious OCR rows into review instead of presenting them as confident data.
+- **Henod Processor** is the free platform-managed AI option. It never accepts a user key. The app checks both the active runtime environment and the workspace `.env`, so a newly added `OPENROUTER_API_KEY` can be detected without restarting Docker.
 
 ## With Keys
 
-- **Gemini** and **OpenAI** use your own provider key. The key controls your usage and cost and is stored only in your browser.
+- **Gemini** and **OpenAI** remain bring-your-own-key processors. Their keys stay in the browser.
 
 ## Premium
 
-**Premium Processor** is available only when all of these are true: your active subscription includes `premium_processing`, an admin enabled the service, and the platform service is configured and healthy.
+**Premium Processor** is available only when all of these are true:
 
-If an option becomes unavailable, the selected processor remains visible with an explanation. Choose another processor before uploading; the header will never silently change it to Terra.
+- An admin enabled Premium Processor
+- The current kingdom or alliance has the `premium_processing` entitlement
+- The platform-managed Premium service is configured
+- The service is healthy
+
+If a processor becomes unavailable, the selection remains visible across the header, imports, settings, and KvK instead of silently switching to Terra.
 
 ## Related
 
-- [Review detected rows](review-rows.md)
 - [Processing console](processing-console.md)
+- [Platform console](../admin/platform-console.md)
 - [Processor troubleshooting](../troubleshooting/processors.md)
