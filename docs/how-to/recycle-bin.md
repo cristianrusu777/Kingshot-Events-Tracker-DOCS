@@ -2,7 +2,8 @@
 
 The **Recycle Bin** is where deleted kingdoms, alliances, players, events, imports, and results wait before permanent removal. It is the place to review what was deleted, restore it when allowed, or request help when you do not have direct restore rights.
 
-![Bin Pagination — Use the Recycle Bin](../images/bin-pagination.png)
+![Bin pagination](../images/bin-pagination.png)
+
 Before using this page, read [What "Delete" Really Does](../reference/soft-delete.md). That guide explains the soft-delete idea. This page explains how to work with the bin itself.
 
 ## What you can browse here

@@ -2,16 +2,6 @@
 
 Deleting a player is the heavy option. It removes the player from normal views at the kingdom level. If the person only left an alliance, use **Kick** instead.
 
-::: warning TODO screenshot
-
-**Page:** Delete & Restore a Player  
-**Role:** User with access to this page  
-**State:** Open the screen at the point described in the steps below  
-**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
-**Suggested filename:** `images/player-delete-impact.png`
-
-:::
-
 ## Use kick first when possible
 
 If the player still belongs to the kingdom and only left the alliance, use [Kick a Player from the Alliance](kick-player.md). That keeps the identity active while removing the current alliance link.

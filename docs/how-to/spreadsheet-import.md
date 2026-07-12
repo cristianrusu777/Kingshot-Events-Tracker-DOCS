@@ -2,16 +2,6 @@
 
 Spreadsheet import is the file-based alternative to screenshot OCR when you already have event rows in `.xlsx`, `.xls`, or `.csv` form.
 
-::: warning TODO screenshot
-
-**Page:** Import a Spreadsheet  
-**Role:** User with access to this page  
-**State:** Open the screen at the point described in the steps below  
-**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
-**Suggested filename:** `images/spreadsheet-upload.png`
-
-:::
-
 ## What the page supports
 
 The spreadsheet panel lets you:

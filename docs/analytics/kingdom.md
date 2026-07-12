@@ -4,7 +4,8 @@ The **Kingdom** tab is the highest-level analytics view in the app. It rolls up 
 
 If this is your first premium analytics page, see [Premium Features](../subscriptions/premium-features.md) for the general locked/active pattern. This page focuses on who can see the tab and what it contains.
 
-![Analytics Kingdom — Kingdom Analytics](../images/analytics-kingdom.png)
+![Analytics kingdom](../images/analytics-kingdom.png)
+
 ## Who can open this tab
 
 There are two valid paths:

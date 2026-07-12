@@ -4,16 +4,6 @@ This guide is mainly for `Supreme Admin` users. Some setups may also let a `King
 
 The Email Settings page controls whether the app uses **Mock Email** or **SMTP Email**, and lets you send a test message.
 
-::: warning TODO screenshot
-
-**Page:** Email Settings  
-**Role:** Supreme Admin  
-**State:** Open the screen at the point described in the steps below  
-**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
-**Suggested filename:** `images/admin-email.png`
-
-:::
-
 ## What you can configure
 
 The page includes:

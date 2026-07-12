@@ -8,7 +8,8 @@ For the general locked/active premium behavior, see [Premium Features](../subscr
 
 Without the premium player-across-events feature, the tab still opens but shows a locked card and a subscription request button instead of data.
 
-![Premium Player Locked — Player Cross-Event Analytics](../images/premium-player-locked.png)
+![Premium player locked](../images/premium-player-locked.png)
+
 The locked card explains that this feature unlocks:
 
 - cross-event performance
@@ -19,7 +20,8 @@ The locked card explains that this feature unlocks:
 
 When the feature is active, you can search for a player by current name or old nickname, or open a player directly from the Kingdom or Alliance analytics tabs.
 
-![Premium Player Active — Player Cross-Event Analytics](../images/premium-player-active.png)
+![Premium player active](../images/premium-player-active.png)
+
 The active Player tab shows:
 
 - a player header with alliance, kingdom, power, Town Center level, and current status

@@ -2,16 +2,7 @@
 
 KvK Prep is the dedicated before-and-after power workflow for **Kingdom of Power**. It is separate from normal event-result imports.
 
-![Kvk Prep — Run a KvK Prep Session](../images/kvk-prep.png)
-::: warning TODO screenshot
-
-**Page:** Run a KvK Prep Session  
-**Role:** User with access to this page  
-**State:** Open the screen at the point described in the steps below  
-**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
-**Suggested filename:** `images/kvk-export.png`
-
-:::
+![Kvk prep](../images/kvk-prep.png)
 
 ## What this page is for
 

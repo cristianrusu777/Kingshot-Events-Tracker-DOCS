@@ -2,7 +2,8 @@
 
 Create an event instance when you want a real dated run of a template that can hold manual rows, screenshot imports, analytics, and rewards.
 
-![Instances List — Create an Event Instance](../images/instances-list.png)
+![Instances list](../images/instances-list.png)
+
 ## What you choose when creating one
 
 The **Add Event Instance** form lets you set:

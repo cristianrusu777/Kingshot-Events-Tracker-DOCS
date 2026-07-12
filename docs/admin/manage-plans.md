@@ -4,7 +4,8 @@ This guide is for `Supreme Admin` users only.
 
 The plan editor controls what each subscription tier includes: scope, limits, features, and the pricing information shown in the app.
 
-![Subs Plan Editor — Create & Edit Plans](../images/subs-plan-editor.png)
+![Subs plan editor](../images/subs-plan-editor.png)
+
 ## Important: the app does not process payments
 
 The plan editor includes fields such as:

@@ -2,7 +2,8 @@
 
 Kingshot Event Tracker starts with seven built-in event templates. These are meant to save setup time and give you sensible starting rules for the most common Kingshot events.
 
-![Event Bear Trap — The Default Events](../images/event-bear-trap.png)
+![Event bear trap](../images/event-bear-trap.png)
+
 Every default template follows one important rule:
 
 - it can be edited

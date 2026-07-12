@@ -4,16 +4,6 @@
 
 This guide is for `Supreme Admin`, `King`, and `Alliance Leader` users who are allowed to manage reward settings. If you only need to review the final output, go to [Review Reward Eligibility](rewards.md).
 
-::: warning TODO screenshot
-
-**Page:** Set Up Reward Rules  
-**Role:** User with access to this page  
-**State:** Open the screen at the point described in the steps below  
-**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
-**Suggested filename:** `images/reward-rules.png`
-
-:::
-
 ## What reward rules do
 
 A reward rule looks at saved analytics and decides who should be marked as eligible for a reward. That can be based on things like:

@@ -2,7 +2,8 @@
 
 Use the **Users** panel when you need to create an account for someone instead of waiting for them to register on their own. This is usually how a `Supreme Admin` or `King` sets up access for a new helper, leader, or `Alliance Player`.
 
-![Admin User Create — Create a User](../images/admin-user-create.png)
+![Admin user create](../images/admin-user-create.png)
+
 ## Before you start
 
 - Make sure you know which kingdom or alliance this person belongs to.

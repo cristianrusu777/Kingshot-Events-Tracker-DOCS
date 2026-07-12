@@ -2,7 +2,8 @@
 
 Instances do not stay open forever. After an event ends, the tracker gives a short cleanup window and then locks the instance to protect history from late changes.
 
-![Session Locked — Locked Instances & Unlock Requests](../images/session-locked.png)
+![Session locked](../images/session-locked.png)
+
 ## The rule
 
 An instance auto-locks **3 days after it ends**.
