@@ -27,7 +27,7 @@ A few notes:
 The top bar shows and controls a few things:
 
 - **Your current kingdom and role** — on the left, so you always know where you're working.
-- **Image‑processing status chip** — shows whether you're using Free Local processing or Gemini Premium, and whether it's ready. Selecting it opens the image‑processing settings (if your role can change them).
+- **Image‑processing status chip** — shows which processor you're using (Terra Processor, Henod Processor, Premium Processing, Gemini, or OpenAI) and whether it's ready. Selecting it opens the image‑processing settings (if your role can change them).
 - **Reports** shortcut, your **name/profile**, and **Logout** — on the right.
 - **Light / Dark theme toggle** — see below.
 

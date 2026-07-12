@@ -1,71 +1,39 @@
 # Administer OCR Providers
 
-The **Image Processing Settings** area controls which screenshot-processing options users can see and use.
-
-![Ocr admin](../images/ocr-admin.png)
-
-## What this admin-facing area includes
-
-The current interface really does include:
-
-- provider enable or disable controls
-- a recommended-provider setting
-- a warning-message setting for Free Local Processing
-- diagnostics for local OCR and Gemini status
-- a local OCR test action
-
-This admin-facing control surface appears to be recently added compared with older planning notes, but it is present in the current interface.
+The **Image Processing Settings** area controls which screenshot-processing options users can see and use. The picker always presents exactly three compact categories: **Free**, **With Keys**, and **Premium**.
 
 ## Provider controls
 
-Authorized admins can manage:
+Authorized admins can enable or suspend the individual services:
 
-- **Enable Free Local Processing**
-- **Enable Gemini**
-- **Suspend system OpenRouter key**
-- **Enable Premium Processing placeholder**
-- the recommended provider users see first
+- **Terra Processor** — built-in local OCR, no user key
+- **Henod Processor** — free system-managed AI, using the server OpenRouter key
+- **Gemini** — bring-your-own-key Google Gemini
+- **OpenAI** — bring-your-own-key OpenAI
+- **Premium Processing** — platform-managed premium vision AI
 
-Premium Processing is still only a placeholder today.
+The recommended provider controls the initial suggestion only. A saved user selection remains visible in the header, Imports, and KvK; it is never silently swapped for Terra.
 
-## System Free AI control
+## Henod control
 
-The system OpenRouter key is configured on the server and is used by default. It is never returned to browsers.
+Henod uses the server `OPENROUTER_API_KEY` with free models only. It is never exposed as a user-key processor. When it is suspended, missing server credentials, or automatically suspended after shared-credit exhaustion, it stays visible in the **Free** category with an explanation and cannot be selected.
 
-When **Suspend system OpenRouter key** is enabled:
+After restoring capacity, open **Admin → Processing Services** and use **Re-check Henod**. A successful health check clears a stale automatic suspension. Failed checks are recorded in the processing console without exposing credentials.
 
-- the Free AI provider remains visible
-- the server stops using the system key immediately for new requests
-- users see instructions in Image Processing Settings to create and save their own OpenRouter key
-- an absent personal key blocks the request with a clear configuration message
+## Premium control
 
-Disabling suspension restores system-key use. Existing imports are unaffected.
+Premium Processing is available only when the service is enabled, configured, healthy, and the user has the `premium_processing` subscription feature. The interface distinguishes each failed condition rather than displaying a misleading entitlement message.
 
-## Warning text
+## Terra accuracy
 
-Admins can also control whether a warning appears on imports when users choose Free Local Processing, and they can edit the text of that warning.
+Terra preprocesses screenshots with normalized colour and grayscale passes, then reconciles the best candidate rows. It keeps raw OCR evidence and routes malformed names, unsafe values, unusually small alliance power, and low-confidence rows to review. It is suitable for clear screenshots, but difficult stylized screenshots may benefit from Henod, Premium, Gemini, or OpenAI.
 
-## Diagnostics panel
+## Diagnostics and operations
 
-The diagnostics panel can show things like:
-
-- whether local OCR is available
-- Tesseract version and language support
-- image preprocessing availability
-- whether Gemini is configured
-- default provider
-- the last run or last error
-
-It also includes a **Test Local OCR** action.
-
-## Good practice
-
-- leave Free Local enabled unless you have a strong reason not to
-- recommend Gemini when users regularly handle difficult screenshots
-- do not describe Premium Processing as live yet
+The diagnostics/status surfaces report local OCR availability, preprocessing capability, provider enablement, selected provider, current jobs, recent failures, duration, and last error. Use the [Processing Services](processing-services.md) page and [Processing Console](../imports/processing-console.md) for live operations.
 
 ## Related
 
-- [Choose an Image-Processing Provider](../imports/choose-provider.md)
-- [Set Up Your Gemini API Key](../imports/gemini-key.md)
-- [Set Up Free AI Extraction](../imports/openrouter-free-ai.md)
+- [Processor categories](../imports/processor-categories.md)
+- [Henod Processor](../imports/openrouter-free-ai.md)
+- [Premium Processing](../imports/premium-processing.md)

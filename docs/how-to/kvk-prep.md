@@ -47,8 +47,10 @@ KvK Prep shows:
 
 For KvK uploads, the page supports:
 
-- Free Local Processing
+- Terra Processor
+- Henod Processor
 - Gemini
+- OpenAI
 - paste from clipboard
 
 After processing, you can:

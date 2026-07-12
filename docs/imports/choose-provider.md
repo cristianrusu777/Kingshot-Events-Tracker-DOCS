@@ -1,72 +1,90 @@
 # Choose an Image-Processing Provider
 
-The imports page lets eligible users choose how screenshot images are processed.
+The imports page lets eligible users choose which processor reads screenshot images. Processors are shown in three groups — **Free processors**, **Premium**, and **Bring your own key** — and each card lists its pluses (+), minuses (−), and what it is best for.
 
 ![Ocr providers](../images/ocr-providers.png)
 
-## Your four options
+## Free processors
 
-### Free Local Processing
+No key and no subscription are needed for these.
 
-Use Free Local Processing when:
+### Terra Processor
 
-- the screenshot is clean and readable
-- you want the default option
-- you do not want to use an external API key
+The built-in default. Nothing to set up.
 
-This is the default path. It is good enough for many normal screenshots, but the app itself warns that manual review is recommended.
+- **+** Always available, no setup
+- **+** Fast and free
+- **+** Nothing to configure
+- **−** Best on clear screenshots
+- **−** Large numbers may need a check
+- **−** Manual review recommended
 
-### Gemini
+**Best for:** clear, high-resolution screenshots.
 
-Use Gemini when:
+### Henod Processor
 
-- text is small
-- names are harder to read
-- the screenshot includes CJK characters or trickier formatting
-- you want the strongest recognition quality
+A stronger free processor, also managed for you — no key needed.
 
-Gemini usually gives the best OCR results, but it requires **your own API key**.
+- **+** Higher accuracy on tough screenshots
+- **+** Free to use
+- **+** No setup needed
+- **−** May be busy during heavy use
+- **−** Slightly slower than Terra
 
-### Free AI Extraction
+**Best for:** messy or low-resolution screenshots.
 
-Free AI Extraction is a personal-key fallback that uses OpenRouter vision models currently offered at no model charge.
+Henod is managed by the platform. If it is temporarily suspended or busy, its card simply shows as unavailable — just pick another processor. You are never asked to supply a key for it.
 
-- While the platform system key is active, this personal-key option is hidden.
-- A Supreme Admin can suspend the system key, which makes Free AI Extraction visible.
-- While suspended, each user must add a personal OpenRouter key in **Settings → Image Processing**.
-- The app permits only `openrouter/free` or explicit model IDs ending in `:free`; it will not silently select a paid model.
-- Free-model capacity and the selected underlying model can vary, so every import remains review-first.
-
-To create a personal key when required:
-
-1. Visit [OpenRouter Keys](https://openrouter.ai/keys).
-2. Sign in or create an account.
-3. Select **Create Key** and give it a recognizable name.
-4. Copy the key and paste it into **Settings → Image Processing → Free AI Extraction**.
-5. Keep the model as `openrouter/free`, save locally, and return to Imports.
+## Premium
 
 ### Premium Processing
 
-Premium Processing is **coming soon**.
+The most accurate option, with **zero setup and no API key** — included in a premium plan and paid for by the platform.
 
-Right now:
+- **+** Best accuracy with zero setup
+- **+** No API key needed — included in your plan
+- **+** Runs on the platform
+- **−** Requires an active premium subscription
 
-- it may appear on the page
-- it is not available as a working processing engine
-- you should not plan an active workflow around it yet
+**Best for:** hands-off, high-accuracy imports. Appears when an admin has enabled it, your plan includes it, and the server is configured. See [Premium Processing](premium-processing.md).
+
+## Bring your own key
+
+Use your own account with a provider you already pay for. You control the model and the cost.
+
+### Gemini
+
+- **+** Top recognition quality
+- **+** Great on hard screenshots
+- **+** You control the model and cost
+- **−** Requires your own Gemini API key
+- **−** Usage billed to your Google account
+
+**Best for:** the highest quality with your own key. See [Set Up Your Gemini API Key](gemini-key.md).
+
+### OpenAI
+
+- **+** Strong recognition quality
+- **+** Handles tricky layouts
+- **+** You control the model and cost
+- **−** Requires your own OpenAI API key
+- **−** Usage billed to your OpenAI account
+
+**Best for:** when you already have an OpenAI key. See [Set Up Your OpenAI API Key](openai-key.md).
 
 ## Quick guidance
 
-Choose:
+- **Terra Processor** — quick, ordinary, readable screenshots
+- **Henod Processor** — harder screenshots, still free
+- **Premium Processing** — best results with no setup, if your plan includes it
+- **Gemini / OpenAI** — best results using your own account
 
-- **Free Local Processing** for quick, ordinary, readable screenshots
-- **Free AI Extraction** for external vision processing without using Gemini
-- **Gemini** for harder screenshots or when accuracy matters more
-- **Premium Processing** never, for now, because it is not live yet
+Every processor is review-first: detected rows are always drafts until you accept them.
 
 ## Related
 
 - [Set Up Your Gemini API Key](gemini-key.md)
-- [Set Up Free AI Extraction](openrouter-free-ai.md)
+- [Set Up Your OpenAI API Key](openai-key.md)
+- [Premium Processing](premium-processing.md)
 - [Upload Screenshots](upload-screenshots.md)
 - [Administer OCR Providers](../admin/ocr-settings.md)
