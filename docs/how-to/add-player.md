@@ -2,7 +2,8 @@
 
 Use the player form when someone should be tracked in the kingdom, even if you do not have import data yet. You can create the player fully by hand or fill part of the form from the game API first.
 
-![Players Add — Add a Player](../images/players-add.png)
+![Players add](../images/players-add.png)
+
 ## Open the form
 
 Go to **Players** and use the **Create Player** section.

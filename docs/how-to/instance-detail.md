@@ -2,7 +2,8 @@
 
 An instance detail page is the working area for one event run. This is where you review the session setup, participant snapshot, source batches, and saved result rows.
 
-![Instance Detail — Work Inside an Instance](../images/instance-detail.png)
+![Instance detail](../images/instance-detail.png)
+
 ## What you can see at the top
 
 The summary table shows:

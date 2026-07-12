@@ -4,7 +4,8 @@ This guide is mainly for `Supreme Admin` users. Some setups may also let a `King
 
 Registration Settings control how public account requests are presented and what information the request form requires.
 
-![Admin Registration — Registration Settings](../images/admin-registration.png)
+![Admin registration](../images/admin-registration.png)
+
 ## What you can configure
 
 The page includes:

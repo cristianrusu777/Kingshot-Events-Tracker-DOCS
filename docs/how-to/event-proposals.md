@@ -2,16 +2,6 @@
 
 The tracker includes an **Event Updates** workflow for proposed template changes. This helps when someone wants a change reviewed before it becomes the live event setup.
 
-::: warning TODO screenshot
-
-**Page:** Propose & Review Template Changes  
-**Role:** User with access to this page  
-**State:** Open the screen at the point described in the steps below  
-**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
-**Suggested filename:** `images/event-proposals.png`
-
-:::
-
 ## What this page is for
 
 Use it when:

@@ -8,7 +8,8 @@ For the general locked/active premium behavior, see [Premium Features](../subscr
 
 Without the custom analytics premium feature, the tab shows a locked card and a subscription request button instead of data.
 
-![Premium Custom Locked — Custom Analytics Builder](../images/premium-custom-locked.png)
+![Premium custom locked](../images/premium-custom-locked.png)
+
 The locked message says this feature can build custom tables and charts by:
 
 - event
@@ -20,7 +21,8 @@ The locked message says this feature can build custom tables and charts by:
 
 The unlocked builder is present in the current frontend code and is working as a real builder, not just a placeholder.
 
-![Premium Custom Active — Custom Analytics Builder](../images/premium-custom-active.png)
+![Premium custom active](../images/premium-custom-active.png)
+
 When active, the page shows:
 
 - an **All events** filter

@@ -2,7 +2,8 @@
 
 The **Players** page is the main working list for player records. It helps you find people quickly, narrow the list to the right scope, and open the next action you need.
 
-![Players List — Browse & Filter Players](../images/players-list.png)
+![Players list](../images/players-list.png)
+
 ## What this page is for
 
 Use the directory to:

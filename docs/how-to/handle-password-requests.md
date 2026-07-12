@@ -2,16 +2,6 @@
 
 The forgot-password flow in this tracker is admin-reviewed. Users submit a request, and an authorized admin decides whether to approve or reject it.
 
-::: warning TODO screenshot
-
-**Page:** Handle Password Reset Requests  
-**Role:** User with access to this page  
-**State:** Open the screen at the point described in the steps below  
-**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
-**Suggested filename:** `images/admin-password-requests.png`
-
-:::
-
 ## Open the request list
 
 1. Open **Admin**.

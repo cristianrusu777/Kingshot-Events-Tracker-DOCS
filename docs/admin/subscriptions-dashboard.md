@@ -4,7 +4,8 @@ This guide is for `Supreme Admin` users only.
 
 The **Subscriptions & Usage** page is the platform-wide dashboard for plans, live usage, direct assignments, overrides, and suspension actions.
 
-![Subs Admin Overview — Subscriptions & Usage Manager](../images/subs-admin-overview.png)
+![Subs admin overview](../images/subs-admin-overview.png)
+
 ## What this page shows
 
 At the top, the page shows platform summary cards such as:

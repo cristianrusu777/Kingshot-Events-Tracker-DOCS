@@ -2,16 +2,6 @@
 
 Upload screenshots from the **Imports** page when you want the app to detect rows for review.
 
-::: warning TODO screenshot
-
-**Page:** Upload Screenshots  
-**Role:** User with access to this page  
-**State:** Open the screen at the point described in the steps below  
-**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
-**Suggested filename:** `images/import-stage-picker.png`
-
-:::
-
 ## Before you upload
 
 Choose the right context first:

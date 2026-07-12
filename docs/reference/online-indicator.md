@@ -2,7 +2,8 @@
 
 The online indicator is a quick presence hint on the **Users** pages. It helps you see whether someone was active very recently without opening audit logs or profile history.
 
-![Admin Users Online — The Online Indicator](../images/admin-users-online.png)
+![Admin users online](../images/admin-users-online.png)
+
 ## What "online" means here
 
 A user counts as online when their most recent activity was within the last 5 minutes.

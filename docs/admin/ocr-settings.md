@@ -2,7 +2,8 @@
 
 The **Image Processing Settings** area controls which screenshot-processing options users can see and use.
 
-![Ocr Admin — Administer OCR Providers](../images/ocr-admin.png)
+![Ocr admin](../images/ocr-admin.png)
+
 ## What this admin-facing area includes
 
 The current interface really does include:
@@ -21,10 +22,24 @@ Authorized admins can manage:
 
 - **Enable Free Local Processing**
 - **Enable Gemini**
+- **Suspend system OpenRouter key**
 - **Enable Premium Processing placeholder**
 - the recommended provider users see first
 
 Premium Processing is still only a placeholder today.
+
+## System Free AI control
+
+The system OpenRouter key is configured on the server and is used by default. It is never returned to browsers.
+
+When **Suspend system OpenRouter key** is enabled:
+
+- the Free AI provider remains visible
+- the server stops using the system key immediately for new requests
+- users see instructions in Image Processing Settings to create and save their own OpenRouter key
+- an absent personal key blocks the request with a clear configuration message
+
+Disabling suspension restores system-key use. Existing imports are unaffected.
 
 ## Warning text
 
@@ -53,3 +68,4 @@ It also includes a **Test Local OCR** action.
 
 - [Choose an Image-Processing Provider](../imports/choose-provider.md)
 - [Set Up Your Gemini API Key](../imports/gemini-key.md)
+- [Set Up Free AI Extraction](../imports/openrouter-free-ai.md)

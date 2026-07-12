@@ -2,7 +2,8 @@
 
 This guide is for senior read-only review of the audit trail. It is useful for `Supreme Admin`, `King`, and `Alliance Leader` users who can open the logs page.
 
-![Audit Logs — Read the Audit Logs](../images/audit-logs.png)
+![Audit logs](../images/audit-logs.png)
+
 ## What the audit log is for
 
 The audit log answers questions like:

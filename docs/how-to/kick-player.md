@@ -2,16 +2,6 @@
 
 Use **Kick** when a player left the alliance but should still exist in the kingdom. This is the safe cleanup path for roster changes.
 
-::: warning TODO screenshot
-
-**Page:** Kick a Player from the Alliance  
-**Role:** User with access to this page  
-**State:** Open the screen at the point described in the steps below  
-**What should be visible:** The complete page, the action being explained, and any warning or confirmation message  
-**Suggested filename:** `images/player-kick.png`
-
-:::
-
 ## Why kick is different from delete
 
 Kicking a player:

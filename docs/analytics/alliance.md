@@ -4,7 +4,8 @@ The **Alliance** tab is the main analytics view for day-to-day leadership work. 
 
 If this is your first premium analytics page, see [Premium Features](../subscriptions/premium-features.md) for the locked/active pattern used by premium-only parts of analytics.
 
-![Analytics Alliance — Alliance Analytics](../images/analytics-alliance.png)
+![Analytics alliance](../images/analytics-alliance.png)
+
 ## Who this is for
 
 This page is useful for:
