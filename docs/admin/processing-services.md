@@ -1,43 +1,47 @@
-# Processing Services
+﻿# Processing Services
 
-Open **Admin -> Processing Services** to monitor processor health and use the processing-specific live console.
+> Supreme Admin only.
 
-## What the page shows
+Processing Services is the configuration and health dashboard for image-processing providers. It is separate from Processing Console.
 
-Each processor card reports:
+## Purpose
 
-- exact availability state
-- running jobs
-- recent failure count
-- success rate
-- average duration
-- last error
-- last successful processing window
+Use this page for:
 
-## Henod
+- provider health;
+- admin enable/disable toggles;
+- runtime key/config status;
+- sanitized diagnostics;
+- queue and usage metrics;
+- last success/error information;
+- Henod re-check action.
 
-Henod now resolves its server key from the active runtime first and then from the workspace `.env`. The expected server variable is `OPENROUTER_API_KEY`.
+## What changed in the responsive pass
 
-If Henod is unavailable, the page distinguishes:
+- Status cards stack on mobile and tablet.
+- Long env/config diagnostics wrap safely instead of overflowing.
+- Normal users never see secret/env details.
+- Supreme Admins see expected env names, detected source, restart hint, and sanitized last errors.
 
-- missing server key
-- suspended by admin or credit exhaustion
-- upstream health-check failure
+## Provider diagnostics
 
-Use **Re-check Henod** after restoring capacity. A successful check clears stale automatic suspension.
+| Field | Meaning |
+|---|---|
+| Admin enabled | Whether the platform toggle allows this provider. |
+| Configured | Whether runtime config is visible to the backend. |
+| Detected source | Sanitized source such as `HENOD_API_KEY:process_env`; secret values are hidden. |
+| Restart hint | Whether a backend restart may be needed after env changes. |
+| Metrics | Running jobs, success rate, duration, last success/error. |
 
-## Premium Processor
+## Processing Services vs consoles
 
-Premium Processor distinguishes these states precisely:
+```mermaid
+flowchart LR
+  A[Processing Services] -->|Configuration and health| B[Provider status cards]
+  C[Processing Console] -->|Live processing events| D[OCR/import stream]
+  E[Platform Console] -->|Global ops terminal| F[Logins, sessions, activity, commands]
+```
 
-- disabled by admin
-- subscription required
-- implementation unavailable
-- available
+## Operating boundary
 
-It no longer tells entitled users they are missing Premium when the actual problem is admin disablement or missing platform configuration.
-
-## Related
-
-- [Platform console](platform-console.md)
-- [Processing console](../imports/processing-console.md)
+Processing Services is deliberately not a live console. It is the status/configuration destination: provider health, enablement, safe diagnostics, re-check actions, and metrics. See [Processing Console](../imports/processing-console.md) for processing jobs and [Platform Console](platform-console.md) for global activity.

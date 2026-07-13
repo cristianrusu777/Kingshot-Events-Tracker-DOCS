@@ -1,6 +1,6 @@
-# Import a Spreadsheet
+﻿# Import a Spreadsheet
 
-Spreadsheet import is the file-based alternative to screenshot OCR when you already have event rows in `.xlsx`, `.xls`, or `.csv` form.
+Spreadsheet import is the file-based alternative to screenshot OCR when you already have event rows in `.xlsx` or `.csv` form.
 
 ## What the page supports
 
@@ -48,6 +48,25 @@ Before applying, make sure you chose the correct:
 
 The spreadsheet panel uses the same event context as the rest of the imports page.
 
+## Safety limits
+
+Spreadsheet upload is intentionally strict. The parser is used only after the request is authenticated and scoped to the user's kingdom/alliance.
+
+Current safety rules:
+
+- one file per request
+- maximum file size: 2 MB
+- maximum data rows: 1,000
+- maximum columns: 50
+- maximum cell length: 500 characters
+- legacy binary .xls files are not accepted; export as .xlsx or .csv first
+- formulas are rejected; paste values before upload
+- macro-enabled spreadsheets are rejected
+- external links are rejected
+- invalid spreadsheets fail safely with a readable error
+
+These limits protect the platform from unsafe spreadsheet content and keep imports reviewable.
+
 ## Good practice
 
 - preview first, especially when using a custom mapping
@@ -59,3 +78,5 @@ The spreadsheet panel uses the same event context as the rest of the imports pag
 - [How Screenshot Imports Work](../imports/overview.md)
 - [Review Import Rows](../imports/review-rows.md)
 - [Accept Rows (Apply an Import)](../imports/apply-import.md)
+
+

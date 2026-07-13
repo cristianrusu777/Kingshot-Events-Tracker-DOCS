@@ -9,6 +9,7 @@ type Doc = { relative: string; link: string; title: string }
 type Section = { text: string; collapsed?: boolean; match: (doc: Doc) => boolean }
 
 const sectionDefinitions: Section[] = [
+  { text: 'Latest Updates', collapsed: false, match: d => d.relative.startsWith('updates/') || /^repair-pass-\d{4}-\d{2}-\d{2}\.md$/i.test(d.relative) },
   { text: 'Getting Started', match: d => d.relative.startsWith('getting-started/') },
   { text: 'Role Guides', match: d => d.relative.startsWith('roles/') },
   { text: 'Players', match: d => /^how-to\/(add-player|edit-player|delete-restore-player|kick-player|manual-players|nicknames|player-profile|player-sync|players-directory)\.md$/i.test(d.relative) },
