@@ -2,8 +2,6 @@
 
 Processing Console is the live processing event stream. It is separate from Processing Services.
 
-![Current Processing Console](../images/current/2026-07-13/desktop-processing-console-current.png)
-
 ## Purpose
 
 Use it to inspect:

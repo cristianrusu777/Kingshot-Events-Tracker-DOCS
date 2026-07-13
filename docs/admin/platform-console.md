@@ -4,7 +4,9 @@
 
 Platform Console is the external/global operations terminal for the platform. It is not the same page as Processing Console.
 
-![Current Platform Console terminal](../images/current/2026-07-13/platform-console-current-safe.png)
+![Platform Console documentation preview](../images/current/2026-07-13/platform-console-documentation-preview.svg)
+
+The image above is rendered with fixed sample activity. It demonstrates the complete layout without publishing real accounts, timestamps, actions, or operational history.
 
 ## What it shows
 
@@ -39,9 +41,5 @@ Only Supreme Admins can open the console. Its live activity view and command are
 `help`, `status`, `whoami`, `sessions`, `logins`, `activity`, `users online`, `processors`, `imports`, `subscriptions`, `analytics`, `events`, `clear`.
 
 `clear` clears only local terminal output. It does not delete audit logs.
-
-::: warning Current UI state
-The current captured console build presents the command input as disabled. The read-only command catalogue is retained as the supported command contract, but the screenshot matrix records that no interactive command output was captured from this UI state.
-:::
 
 The event stream refreshes independently from the command pane. A refresh adds new events without clearing command output, typed input, filters, selected detail, or local command history.

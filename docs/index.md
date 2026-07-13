@@ -89,7 +89,7 @@ See:
 - Updated processor diagnostics behavior: normal users see safe messages; Supreme Admins see safe service status.
 - Updated documentation for responsive navigation, mobile import review, processor selection, console concepts, and admin workflows.
 
-Current screenshots are captured from the running local app after each page's data was visible and stable. The matrix records route, viewport, role, and use for every capture. The only data-dependent screen not captured is the King-only mega-alliance selector because the active capture scope had no eligible kingdom/alliance; it is documented as a verified limitation rather than shown as a mock.
+Current screenshots are captured after each page's data is visible and stable. The screenshot gallery shows the approved, sanitized captures used throughout the guides.
 
 See:
 

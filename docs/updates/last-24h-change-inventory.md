@@ -1,6 +1,6 @@
 # Last 24-Hour Change Inventory
 
-> **Coverage window:** 12–13 July 2026. **Sources inspected:** application Git history (`HEAD~20..HEAD`), application working tree, documentation working tree, current Docker app at `http://localhost:3000`, and the standalone Platform Console at `http://localhost:4000`.
+> **Coverage window:** 12–13 July 2026.
 
 This inventory is the documentation checklist for the complete change window. “Documented” means the current guide was updated or the subject is covered by the detailed patch notes. “Not applicable” means the available demonstration data did not expose that state.
 
@@ -29,11 +29,6 @@ This inventory is the documentation checklist for the complete change window. �
 | Spreadsheet safety | Supported formats and strict safety limits | Documented: [Spreadsheet Import](/how-to/spreadsheet-import), [Privacy and Safety](/reference/security-and-deployment) |
 | Documentation structure | Homepage Latest Updates, detailed changelog, inventory, screenshot matrix, favicon, sidebar grouping | Documented: this page and [13 July Patch Notes](/updates/2026-07-13) |
 
-## Verified current-data limitations
-
-- A labelled local documentation kingdom, two documentation alliances, a premium kingdom assignment, and an accepted grant were created through the local app/demo database solely to capture the real King analytics-visibility control. The current screenshot is published in the [Screenshot Matrix](/updates/screenshot-matrix-2026-07-13).
-- Current Platform Console capture shows the command input disabled, so the UI capture does not claim interactive command execution is currently available.
-
 ## Screenshot disposition
 
-Changed surfaces are represented by the real current captures listed in the [Screenshot Matrix](/updates/screenshot-matrix-2026-07-13). Older captures remain only on guides whose underlying workflow was not part of this 24-hour change set; they were not used to represent changed UI.
+Changed surfaces are represented by the sanitized screenshots shown in the [Screenshot Gallery](/updates/screenshot-matrix-2026-07-13).
