@@ -2,6 +2,8 @@
 
 Processing Console is the live processing event stream. It is separate from Processing Services.
 
+![Current Processing Console](../images/current/2026-07-13/desktop-processing-console-current.png)
+
 ## Purpose
 
 Use it to inspect:
@@ -34,13 +36,4 @@ flowchart TD
   D -- Yes --> F[Open import/review diagnostics]
 ```
 
-## Visual boundary
-
-```mermaid
-flowchart LR
-  A[Processing Services] -->|configure or check| B[Provider runtime]
-  B -->|jobs and events| C[Processing Console]
-  D[Authentication, sessions, audit activity] --> E[Platform Console]
-```
-
-This separation keeps an operational health check from looking like a log terminal, while preserving a dedicated live stream for processing work.
+Processing Services is for service status and administrator controls. Processing Console is for the live processing stream. Platform Console is for broader platform activity.

@@ -13,7 +13,7 @@
 
 ## Implemented safeguards
 
-- Uploaded screenshots and import assets are served through authenticated, scope-checked API routes.
+- Uploaded screenshots and import assets are private and available only to signed-in people with the appropriate scope.
 - Uploaded file responses use private/no-store caching, no-referrer policy, same-origin resource policy, and validated content types.
 - Spreadsheet uploads use strict size, row, column, and cell limits.
 - The vulnerable SheetJS/xlsx package has been removed; .xlsx and .csv are supported, while legacy .xls is blocked.

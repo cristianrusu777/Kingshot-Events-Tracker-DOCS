@@ -59,5 +59,4 @@ Experimental features must be labeled as estimates, expose their evidence, and n
 
 ## What this roadmap does not mean
 
-It does not establish delivery dates, final pricing, final tier packaging, or technical architecture. Current capabilities remain documented outside `docs/roadmap/`.
-
+It does not establish delivery dates, final pricing, or final tier packaging. Current capabilities remain documented outside `docs/roadmap/`.

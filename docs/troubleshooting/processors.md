@@ -6,11 +6,11 @@ Use a full-resolution screenshot with visible names, ranks, and values. Terra pr
 
 ## Henod is unavailable
 
-Henod is platform-managed and never asks users for a key. An unavailable state can mean disabled by admin, missing server credentials, rate limiting, shared-credit suspension, or an external service failure. Ask an admin to open Processing Services and use **Re-check Henod** after a temporary provider issue or restored credits.
+Henod is platform-managed and never asks users for a key. If it is unavailable, choose another processor or ask an administrator to open Processing Services and use **Re-check Henod**.
 
 ## Premium says unavailable
 
-Check the reason displayed in the picker. It distinguishes: admin disabled, subscription required, and implementation/service unavailable. An active subscription alone cannot enable an admin-disabled or unconfigured service.
+Check the reason displayed in the picker. It distinguishes: admin disabled, subscription required, and temporarily unavailable. An active subscription alone cannot enable a service that is not currently available.
 
 ## Header shows the wrong processor
 

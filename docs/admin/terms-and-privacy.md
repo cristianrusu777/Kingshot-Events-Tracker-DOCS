@@ -2,11 +2,13 @@
 
 > This guide explains the platform policy areas reflected in the current Terms & Conditions. It is practical product documentation, not legal advice. A qualified legal professional should review the policy before public production use.
 
+![Current Terms & Conditions page](../images/current/2026-07-13/desktop-terms-current.png)
+
 ## What the terms cover
 
 - Account usage, roles, permissions, and scope boundaries.
 - User-provided screenshots, spreadsheets, OCR/image processing, and review responsibility.
-- Optional bring-your-own Gemini/OpenAI keys: keys are used only for the requested feature and must not be shared between users.
+- Optional personal processor keys: keys are used only for the requested feature and must not be shared between users.
 - Premium availability, manual payment/support arrangements, suspension, maintenance, and refund/cancellation terms that the operator should configure for its deployment.
 - Analytics and recommendations as decision support, not guaranteed outcomes.
 - Supreme-Admin operational monitoring: login/session/page/activity context is used for platform security and support, never to expose secrets in the console.

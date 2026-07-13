@@ -50,7 +50,7 @@ The page also links straight to image-processing settings when you need to switc
 
 ## Private screenshot access
 
-Uploaded screenshots are private tenant data. The app no longer exposes them through public static `/uploads` links. In-app previews use an authenticated API route that checks the import's kingdom/alliance scope before returning the file.
+Uploaded screenshots are private data. In-app previews are available only to signed-in people whose alliance, kingdom, or administrator scope permits access.
 
 Expected behavior:
 

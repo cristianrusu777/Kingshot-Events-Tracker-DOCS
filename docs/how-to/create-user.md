@@ -2,13 +2,17 @@
 
 Users are managed from the Admin page when your role has user-management permission.
 
+![Current Users controls](../images/current/2026-07-13/users-controls-current-safe.png)
+
+![Current tablet Users layout](../images/current/2026-07-13/tablet-users-current.png)
+
 ## What changed in the responsive pass
 
 The Users section is now a full-width management view instead of being squeezed beside logs. It includes:
 
 - clear **Create user** section;
 - clear **Find and sort users** toolbar;
-- backend pagination;
+- pagination;
 - page size selector;
 - role, kingdom, alliance, status, presence, and password-state filters;
 - sorting by username, email, role, scope, created date, last login, and last seen;

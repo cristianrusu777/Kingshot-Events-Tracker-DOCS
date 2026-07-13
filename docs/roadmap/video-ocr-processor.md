@@ -32,7 +32,6 @@ The correct term is **OCR** (optical character recognition).
 - Which frame sampling strategy preserves fast scrolling text?
 - How should the system detect table boundaries across devices and languages?
 - When is merging safe, and when should rows remain separate?
-- What processing limits are fair for shared infrastructure?
+- What processing limits are fair for shared use?
 
 This feature must not record gameplay automatically, inspect hidden game data, or bypass platform protections.
-

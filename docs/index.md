@@ -52,11 +52,17 @@ features:
     linkText: Find a solution
 ---
 
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 ## Latest Updates
 
-### Patch 2026-07-13 — Secure Upload Access, Spreadsheet Safety, Accessibility & Operations
+### Patch 2026-07-13 — Last 24h Platform, Security, Analytics, Console, Admin & Responsive Update
 
-- Private screenshots and import assets are no longer served from public `/uploads` URLs. They now load through authenticated, scope-checked API routes.
+**Coverage:** the complete 12–13 July 2026 change window. This release updates responsive workflows, all processor categories and safe diagnostics, Processing Services/Console, the standalone Platform Console, analytics and premium visibility, administration, terms/privacy, upload safety, spreadsheet safety, accessibility, and documentation navigation.
+
+- Private screenshots and import assets are available only to signed-in people with the correct scope.
 - Spreadsheet imports now enforce stricter safety limits: file size, row count, column count, cell length, no formulas, no macros, no external links, and no legacy `.xls` files.
 - Import previews and spreadsheet uploads are checked against the user's current kingdom/alliance scope before processing.
 - Dialogs and high-use icon-only controls received accessibility improvements: dialog semantics, focus behavior, Escape handling, and explicit labels.
@@ -69,6 +75,9 @@ See:
 - [Import a Spreadsheet](/how-to/spreadsheet-import)
 - [Privacy, Security & Fair-Use Boundaries](/roadmap/privacy-security-and-fair-use)
 - [Full 13 July patch notes](/updates/2026-07-13)
+- [Complete 24-hour inventory](/updates/last-24h-change-inventory)
+- [Current screenshot matrix](/updates/screenshot-matrix-2026-07-13)
+- [Privacy and safety safeguards](/reference/security-and-deployment)
 
 ### Patch 2026-07-13 — Responsive UI, Admin Usability, and Console Updates
 
@@ -77,8 +86,10 @@ See:
 - Improved dense tables with horizontal-scroll affordances, stronger wrapping, and full-width admin layouts where needed.
 - Reworked Users management into a full-width page with clearer create, filter, sort, pagination, and action areas.
 - Made Processing Services, Processing Console, and Platform Console readable on phones and tablets.
-- Updated processor diagnostics behavior: normal users see safe messages; Supreme Admins see sanitized runtime/config diagnostics.
+- Updated processor diagnostics behavior: normal users see safe messages; Supreme Admins see safe service status.
 - Updated documentation for responsive navigation, mobile import review, processor selection, console concepts, and admin workflows.
+
+Current screenshots are captured from the running local app after each page's data was visible and stable. The matrix records route, viewport, role, and use for every capture. The only data-dependent screen not captured is the King-only mega-alliance selector because the active capture scope had no eligible kingdom/alliance; it is documented as a verified limitation rather than shown as a mock.
 
 See:
 
@@ -92,19 +103,19 @@ See:
 
 ### Visual guide
 
-The documentation uses sanitized real interface captures where they represent the current workflow and diagrams for cross-page architecture, permissions, and data flows. Screenshots never contain API keys, session data, or private upload content.
+The documentation uses sanitized real interface captures where they represent the current workflow and diagrams for permissions and user workflows. Screenshots never contain personal keys, session data, or private upload content.
 
 ![Import review screen](./images/import-review-before.png)
 
 ## Most-used guides
 
 <div class="guide-grid">
-  <a class="guide-link" href="/how-to/players-directory">Browse and filter players</a>
-  <a class="guide-link" href="/how-to/create-instance">Create an event instance</a>
-  <a class="guide-link" href="/imports/upload-screenshots">Upload screenshots</a>
-  <a class="guide-link" href="/imports/review-rows">Review import rows</a>
-  <a class="guide-link" href="/how-to/rewards">Review reward eligibility</a>
-  <a class="guide-link" href="/how-to/kvk-prep">Run a KvK preparation session</a>
+  <a class="guide-link" :href="withBase('/how-to/players-directory.html')">Browse and filter players</a>
+  <a class="guide-link" :href="withBase('/how-to/create-instance.html')">Create an event instance</a>
+  <a class="guide-link" :href="withBase('/imports/upload-screenshots.html')">Upload screenshots</a>
+  <a class="guide-link" :href="withBase('/imports/review-rows.html')">Review import rows</a>
+  <a class="guide-link" :href="withBase('/how-to/rewards.html')">Review reward eligibility</a>
+  <a class="guide-link" :href="withBase('/how-to/kvk-prep.html')">Run a KvK preparation session</a>
 </div>
 
 ## Pick a reading path

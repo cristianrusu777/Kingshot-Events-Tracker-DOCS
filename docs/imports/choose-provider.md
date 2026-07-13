@@ -2,7 +2,7 @@
 
 The imports page lets eligible users choose which processor reads screenshot images. Processors are organized into exactly three user-facing categories: **Free**, **With Keys**, and **Premium**.
 
-![Image-processing settings and provider controls](../images/ocr-admin-full.png)
+![Current processor selector](../images/current/2026-07-13/provider-selector-current-safe.png)
 
 ## Responsive behavior
 
@@ -35,18 +35,17 @@ The built-in default. Nothing to set up.
 
 ### Henod Processor
 
-A stronger free processor, managed by the platform — no user key needed.
+A free platform service with no user key needed.
 
-- **+** Higher accuracy on tough screenshots
 - **+** Free to use
 - **+** No setup needed
-- **−** May be unavailable if the shared service/key is not configured or is suspended
+- **−** May be temporarily unavailable
 
 Normal users see a safe message if Henod is temporarily unavailable. Supreme Admins can inspect sanitized diagnostics in Processing Services.
 
 ## With Keys
 
-Use your own account with a provider you already pay for.
+Use your own personal processor key when you choose a With Keys option.
 
 - **Gemini** — see [Set Up Your Gemini API Key](gemini-key.md)
 - **OpenAI** — see [Set Up Your OpenAI API Key](openai-key.md)
@@ -58,11 +57,11 @@ Use your own account with a provider you already pay for.
 The platform-managed premium option. It appears as available when:
 
 1. admin enables Premium Processor;
-2. the selected/current scope has `premium_processing` entitlement;
-3. the backend runtime has the premium provider key/model configured;
+2. the selected/current scope includes Premium Processing;
+3. the platform-managed service is ready;
 4. the service is healthy.
 
-If configuration is broken, normal users see a safe technical-unavailable message. Supreme Admin diagnostics show expected env names and sanitized status without exposing secret values.
+If the service is unavailable, normal users see a safe technical-unavailable message. Administrators see safe service status only.
 
 ## Processor category flow
 
@@ -79,9 +78,9 @@ Every processor is review-first: detected rows are drafts until you accept them.
 
 ## One source of availability
 
-The backend is the source of truth for availability. The header chip, import picker, KvK picker, and settings all use the same effective provider state. A processor that is unavailable is visibly unavailable and cannot be selected for a new import.
+The platform uses one availability state for the header chip, import picker, KvK picker, and settings. A processor that is unavailable is visibly unavailable and cannot be selected for a new import.
 
-Henod may be automatically suspended after an upstream credit or health failure. In that case it is also treated as disabled for new work until a Supreme Admin verifies it from **Processing Services**. The public message stays generic; only Supreme Admin diagnostics show safe operational context.
+Henod may be temporarily suspended when it cannot accept work. In that case it is disabled for new work until a Supreme Admin re-checks it from **Processing Services**. The public message stays generic.
 
 ## Related
 

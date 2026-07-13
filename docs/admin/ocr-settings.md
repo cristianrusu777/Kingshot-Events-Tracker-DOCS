@@ -7,22 +7,22 @@ The **Image Processing Settings** area controls which screenshot-processing opti
 Authorized admins can enable or suspend the individual services:
 
 - **Terra Processor** - built-in local OCR, no user key
-- **Henod Processor** - free system-managed AI, using the server OpenRouter key
+- **Henod Processor** - a free platform-managed service, with no personal key required
 - **Gemini** - bring-your-own-key Google Gemini
 - **OpenAI** - bring-your-own-key OpenAI
-- **Premium Processor** - platform-managed premium vision AI
+- **Premium Processor** - platform-managed premium processing
 
 The recommended provider controls the initial suggestion only. A saved user selection remains visible in the header, Imports, Settings, and KvK. The app does not silently swap it to Terra.
 
 ## Henod control
 
-Henod uses the server `OPENROUTER_API_KEY` with free models only. It is never exposed as a user-key processor. The runtime now checks both `process.env` and the workspace `.env`, so adding the system key no longer requires a Docker restart just to be detected by status and request flows.
+Henod is a platform-managed free option and never accepts a personal key. Administrators manage its availability from Image Processing Settings.
 
-When Henod is suspended, missing server credentials, or automatically suspended after shared-credit exhaustion, it stays visible in the **Free** category with a clear explanation.
+When Henod is unavailable, it stays visible in the **Free** category with a clear explanation.
 
 ## Premium control
 
-Premium Processor is available only when the service is enabled, configured, healthy, and the current scope has the `premium_processing` subscription feature. The UI distinguishes admin disablement from entitlement or service issues.
+Premium Processor is available only when the service is enabled, healthy, and the current scope includes the required premium feature. The UI distinguishes admin disablement from entitlement or service issues.
 
 ## Terra accuracy
 

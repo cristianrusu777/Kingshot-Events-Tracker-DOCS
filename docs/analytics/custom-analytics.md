@@ -2,6 +2,8 @@
 
 The **Custom** tab is a premium builder for making your own analytics view from the data already inside your scope.
 
+![Current custom analytics tab](../images/current/2026-07-13/desktop-custom-analytics-current.png)
+
 For the general locked/active premium behavior, see [Premium Features](../subscriptions/premium-features.md). This page focuses on the Custom tab itself.
 
 ## Locked state
@@ -19,7 +21,7 @@ The locked message says this feature can build custom tables and charts by:
 
 ## Active state
 
-The unlocked builder is present in the current frontend code and is working as a real builder, not just a placeholder.
+The unlocked builder is working as a real builder, not just a placeholder.
 
 ![Premium custom active](../images/premium-custom-active.png)
 
@@ -54,7 +56,7 @@ Use Custom analytics when the built-in tabs are close, but not quite the questio
 
 ## Verification note
 
-This file is based on direct frontend code verification of the unlocked builder. No fallback wording was needed for the active state.
+This guide reflects the verified current behavior of the unlocked builder.
 
 ## Related guides
 

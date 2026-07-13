@@ -2,7 +2,7 @@
 
 This reference is for `Supreme Admin` users and anyone reviewing what a custom role can do.
 
-The permission keys below come from the actual code-defined catalog in `src/domain/accessControl.ts`. This page is a baseline reference for the built-in roles, but custom roles can be configured to any combination.
+The permission list below is a baseline reference for the built-in roles, but custom roles can be configured to any combination.
 
 To use these permissions in practice, see [Create & Edit Custom Roles](../admin/manage-roles.md).
 

@@ -29,7 +29,7 @@ Suspension blocks normal write actions for that subject while keeping read acces
 
 ## About reasons and overrides
 
-The backend tracks suspension reasons, and the broader suspension model includes override behavior in some cases, but those details are best understood from the platform suspension rules rather than from this action guide alone.
+The platform records suspension context. For the user-facing effects, follow the platform suspension rules rather than this action guide alone.
 
 Use [Suspension & Limited Mode](../subscriptions/suspension.md) as the source of truth for:
 
