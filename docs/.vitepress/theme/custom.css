@@ -116,13 +116,13 @@ body {
   padding-bottom: 3px;
 }
 
-.VPSidebarItem.level-0 + .VPSidebarItem.level-0 {
+.VPSidebarItem.level-0+.VPSidebarItem.level-0 {
   margin-top: 8px;
   padding-top: 9px;
   border-top: 1px solid var(--vp-c-divider);
 }
 
-.VPSidebarItem.level-0 > .item .text {
+.VPSidebarItem.level-0>.item .text {
   color: var(--vp-c-text-1);
   font-size: 13px;
   font-weight: 700;
@@ -139,12 +139,12 @@ body {
   line-height: 1.35;
 }
 
-.VPSidebarItem.level-1.is-active > .item {
+.VPSidebarItem.level-1.is-active>.item {
   border-radius: 7px;
   background: var(--vp-c-brand-soft);
 }
 
-.VPSidebarItem.is-active > .item .link > .text {
+.VPSidebarItem.is-active>.item .link>.text {
   color: var(--vp-c-brand-1);
   font-weight: 700;
 }
@@ -314,7 +314,7 @@ body {
   margin-bottom: 16px;
 }
 
-.vp-doc li + li {
+.vp-doc li+li {
   margin-top: 6px;
 }
 
@@ -381,7 +381,7 @@ body {
   box-shadow: 0 6px 18px rgba(9, 13, 17, .06);
 }
 
-.vp-doc :not(pre) > code {
+.vp-doc :not(pre)>code {
   padding: 2px 6px;
   border: 1px solid var(--vp-c-border);
   border-radius: 5px;
@@ -422,9 +422,17 @@ body {
 }
 
 @media (max-width: 959px) {
-  .VPHomeHero { padding-top: 54px !important; }
-  .VPHero .main { max-width: 720px; }
-  .VPDoc .content-container { max-width: 780px; }
+  .VPHomeHero {
+    padding-top: 54px !important;
+  }
+
+  .VPHero .main {
+    max-width: 720px;
+  }
+
+  .VPDoc .content-container {
+    max-width: 780px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -460,33 +468,164 @@ body {
     justify-content: center;
   }
 
-  .VPFeature { min-height: auto; }
-  .guide-grid { grid-template-columns: 1fr; }
+  .VPFeature {
+    min-height: auto;
+  }
+
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
 
   .vp-doc {
     font-size: 16px;
     line-height: 1.7;
   }
 
-  .vp-doc h1 { font-size: 33px; }
-  .vp-doc h2 { margin-top: 38px; font-size: 25px; }
-  .vp-doc h3 { font-size: 20px; }
-  .vp-doc table { display: block; overflow-x: auto; white-space: normal; }
-  .vp-doc img { border-radius: 8px; }
-  .custom-block { padding: 15px 16px; }
+  .vp-doc h1 {
+    font-size: 33px;
+  }
+
+  .vp-doc h2 {
+    margin-top: 38px;
+    font-size: 25px;
+  }
+
+  .vp-doc h3 {
+    font-size: 20px;
+  }
+
+  .vp-doc table {
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
+  }
+
+  .vp-doc img {
+    border-radius: 8px;
+  }
+
+  .custom-block {
+    padding: 15px 16px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     scroll-behavior: auto !important;
     transition-duration: .01ms !important;
   }
 }
 
 @media print {
-  .VPNav, .VPSidebar, .VPDocAside, .VPDocFooter { display: none !important; }
-  .VPContent { padding: 0 !important; }
-  .VPDoc .content-container { max-width: none; }
-  .vp-doc { color: #111; font-size: 11pt; }
+
+  .VPNav,
+  .VPSidebar,
+  .VPDocAside,
+  .VPDocFooter {
+    display: none !important;
+  }
+
+  .VPContent {
+    padding: 0 !important;
+  }
+
+  .VPDoc .content-container {
+    max-width: none;
+  }
+
+  .vp-doc {
+    color: #111;
+    font-size: 11pt;
+  }
 }
 
+/* --- Mermaid Diagram Custom Styling --- */
+.mermaid {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.mermaid svg {
+  display: block;
+  margin: 0 auto;
+  width: 100% !important;
+  max-width: 13.75rem !important;
+  height: auto !important;
+}
+
+/* Style the nodes to look modern, clean, and beautiful */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node polygon,
+.mermaid .node path,
+.mermaid .node .node-bkg {
+  fill: var(--vp-c-bg-elv) !important;
+  stroke: var(--vp-c-brand-2) !important;
+  stroke-width: 1.5px !important;
+  rx: 8px !important;
+  ry: 8px !important;
+  transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+/* Node hover styles */
+.mermaid .node:hover rect,
+.mermaid .node:hover circle,
+.mermaid .node:hover polygon,
+.mermaid .node:hover path,
+.mermaid .node:hover .node-bkg {
+  fill: var(--vp-c-brand-soft) !important;
+  stroke: var(--vp-c-brand-1) !important;
+}
+
+/* Node labels (text) */
+.mermaid .node .label,
+.mermaid .node .label text,
+.mermaid .node foreignObject {
+  font-family: var(--vp-font-family-base) !important;
+  color: var(--vp-c-text-1) !important;
+  fill: var(--vp-c-text-1) !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+}
+
+/* Connector lines */
+.mermaid .edgePath .path {
+  stroke: var(--vp-c-text-3) !important;
+  stroke-width: 1.5px !important;
+}
+
+/* Arrowheads */
+.mermaid .marker {
+  fill: var(--vp-c-text-3) !important;
+  stroke: none !important;
+}
+
+/* Edge labels */
+.mermaid .edgeLabel rect {
+  fill: var(--vp-c-bg) !important;
+  rx: 4px !important;
+  ry: 4px !important;
+}
+
+.mermaid .edgeLabel .label,
+.mermaid .edgeLabel .label text {
+  font-family: var(--vp-font-family-base) !important;
+  font-size: 11.5px !important;
+  color: var(--vp-c-text-2) !important;
+  fill: var(--vp-c-text-2) !important;
+}
+
+/* --- Mermaid Cluster (Groups) --- */
+.mermaid .cluster rect {
+  fill: var(--vp-c-bg-soft) !important;
+  stroke: var(--vp-c-divider) !important;
+  stroke-width: 1.5px !important;
+  stroke-dasharray: 4 4 !important;
+  rx: 8px !important;
+  ry: 8px !important;
+}
