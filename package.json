@@ -9,8 +9,9 @@
     "docs:check": "node scripts/check-doc-links.mjs"
   },
   "devDependencies": {
+    "mermaid": "^11.16.0",
     "vitepress": "^1.2.3",
+    "vitepress-plugin-mermaid": "^2.0.17",
     "vue": "^3.4.0"
   }
 }
-
