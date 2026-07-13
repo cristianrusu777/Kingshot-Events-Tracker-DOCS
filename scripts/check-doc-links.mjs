@@ -31,7 +31,7 @@ for (const file of walk(root)) {
   const content = fs.readFileSync(file, 'utf8')
   const matches = [
     ...content.matchAll(/!?\[[^\]]*\]\(([^)]+)\)/g),
-    ...content.matchAll(/(?:src|href)=["']([^"']+)["']/g)
+    ...content.matchAll(/(?<!:)(?:src|href)=["']([^"']+)["']/g)
   ]
 
   for (const match of matches) {
@@ -50,4 +50,3 @@ if (problems.length) {
 }
 
 console.log(`Checked ${walk(root).length} Markdown files: all local links and images resolve.`)
-
