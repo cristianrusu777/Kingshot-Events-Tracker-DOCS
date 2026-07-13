@@ -1,11 +1,5 @@
 # Current Screenshot Gallery — 13 July 2026
 
-All screenshots below are current, sanitized captures used by the guides. They were captured after the interface had settled. Sensitive, private, or unapproved raw captures are not published.
-
-## Documentation home
-
-![Documentation home with Latest Updates](../images/current/2026-07-13/docs-homepage-latest-updates-current.png)
-
 ## Mobile and tablet
 
 ### Mobile dashboard
@@ -19,10 +13,6 @@ All screenshots below are current, sanitized captures used by the guides. They w
 ### Tablet users
 
 ![Tablet Users view](../images/current/2026-07-13/tablet-users-current.png)
-
-### Tablet analytics
-
-![Tablet analytics view](../images/current/2026-07-13/tablet-analytics-current.png)
 
 ## Image processing
 
