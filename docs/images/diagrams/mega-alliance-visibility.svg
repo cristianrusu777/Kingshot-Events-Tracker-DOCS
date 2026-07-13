@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">Mega-alliance analytics visibility rule</title>
+  <desc id="desc">An accepted premium grant and King-enabled setting allow leaders to view another granted alliance's analytics only, without edit permissions.</desc>
+  <style>text{font-family:Arial,sans-serif;fill:#17324d}.h{font-size:23px;font-weight:700}.b{font-size:16px}.s{font-size:14px;fill:#47647f}.box{stroke:#5b7db1;stroke-width:2;rx:16}.yes{stroke:#2e8b57;stroke-width:3;fill:none;marker-end:url(#a)}.no{stroke:#ba5050;stroke-width:3;fill:none;marker-end:url(#a)}</style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#54738e"/></marker></defs>
+  <rect width="1200" height="390" fill="#f8fafc"/>
+  <text x="55" y="45" class="h">King-controlled mega-alliance analytics: view-only rule</text>
+  <rect x="55" y="90" width="230" height="110" class="box" fill="#edf4ff"/><text x="78" y="130" class="h">Premium Kingdom</text><text x="78" y="163" class="s">Required plan feature active</text>
+  <rect x="350" y="90" width="230" height="110" class="box" fill="#edf4ff"/><text x="375" y="130" class="h">Accepted Grant</text><text x="375" y="163" class="s">Alliance grant is active</text>
+  <rect x="645" y="90" width="230" height="110" class="box" fill="#edf4ff"/><text x="670" y="130" class="h">King Toggle</text><text x="670" y="163" class="s">Sharing explicitly enabled</text>
+  <rect x="940" y="90" width="205" height="110" class="box" fill="#edf4ff"/><text x="965" y="130" class="h">Leader Role</text><text x="965" y="163" class="s">Granted leader/co-leader</text>
+  <path d="M285 145 H340 M580 145 H635 M875 145 H930" class="yes"/>
+  <rect x="325" y="265" width="550" height="85" class="box" fill="#e7f6f2"/><text x="355" y="302" class="h">Read-only per-alliance analytics and comparisons</text><text x="355" y="329" class="s">No imports, edits, deletes, restores, rewards, subscriptions, or user management</text>
+  <path d="M1040 200 V255 H875" class="yes"/><text x="1048" y="236" class="b">all true</text>
+  <path d="M760 200 V255 H245" class="no"/><text x="100" y="282" class="b">Any condition false: own-alliance analytics only</text>
+</svg>
