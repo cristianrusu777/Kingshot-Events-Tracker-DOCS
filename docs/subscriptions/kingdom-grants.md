@@ -11,6 +11,8 @@ If your **kingdom** has a premium plan, you can share it with alliances inside y
 
 ![Grant and allocation manager on the kingdom page](../images/subs-grants-king.png)
 
+![Current grant allocation and analytics-visibility setting](../images/current/2026-07-13/mega-alliance-visibility-current.png)
+
 ## How many alliances can I grant to?
 
 The number of grant "slots" you have **comes from your kingdom's plan** — it isn't a fixed universal number. A free kingdom plan has none; a premium kingdom plan includes a set number of slots.
@@ -72,6 +74,25 @@ Revoking a grant does **not** affect your normal ability to manage the alliance 
 ## Sharing limits, not just features
 
 A grant lets several alliances draw on your kingdom plan. If you want to control how much of the kingdom's limits each granted alliance can use, set **[allocations](allocations.md)** — per-alliance slices of your kingdom's quotas.
+
+## Optional cross-alliance analytics
+
+The Kingdom Subscription Allocation panel has an **Allow granted alliances to view each other's analytics** setting. It is off by default and applies only to analytics visibility.
+
+![Mega-alliance analytics visibility rule](../images/diagrams/mega-alliance-visibility.svg)
+
+```mermaid
+flowchart LR
+  A[King premium plan] --> B[Offer grant]
+  B --> C{Alliance accepts?}
+  C -- No --> D[No shared analytics]
+  C -- Yes --> E{King enables visibility?}
+  E -- No --> F[Alliance sees only its analytics]
+  E -- Yes --> G[Leader or co-leader can view granted analytics]
+  G --> H[Read-only per-alliance comparison]
+```
+
+Leaders cannot edit players or results, import screenshots, delete/restore data, change rewards, administer users, or manage subscriptions for another alliance. This setting does not merge alliances or alter ordinary tenant permissions.
 
 ## Where to go next
 

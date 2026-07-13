@@ -7,7 +7,7 @@ Choose a category first, then pick one processor from the compact selector insid
 ## Free
 
 - **Terra Processor** is local, fast, and requires no setup. It now pushes more suspicious OCR rows into review instead of presenting them as confident data.
-- **Henod Processor** is the free platform-managed AI option. It never accepts a user key. The app checks both the active runtime environment and the workspace `.env`, so a newly added `OPENROUTER_API_KEY` can be detected without restarting Docker.
+- **Henod Processor** is the free platform-managed option. It never accepts a user key. Its availability is managed by the platform and shown consistently wherever a processor can be selected.
 
 ## With Keys
 
@@ -18,7 +18,7 @@ Choose a category first, then pick one processor from the compact selector insid
 **Premium Processor** is available only when all of these are true:
 
 - An admin enabled Premium Processor
-- The current kingdom or alliance has the `premium_processing` entitlement
+- The current kingdom or alliance includes Premium Processing
 - The platform-managed Premium service is configured
 - The service is healthy
 

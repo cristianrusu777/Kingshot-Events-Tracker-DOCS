@@ -4,14 +4,16 @@
 
 Processing Services is the configuration and health dashboard for image-processing providers. It is separate from Processing Console.
 
+![Current Processing Services](../images/current/2026-07-13/desktop-processing-services-current.png)
+
 ## Purpose
 
 Use this page for:
 
 - provider health;
 - admin enable/disable toggles;
-- runtime key/config status;
-- sanitized diagnostics;
+- safe service readiness status;
+- user-safe diagnostics;
 - queue and usage metrics;
 - last success/error information;
 - Henod re-check action.
@@ -19,28 +21,21 @@ Use this page for:
 ## What changed in the responsive pass
 
 - Status cards stack on mobile and tablet.
-- Long env/config diagnostics wrap safely instead of overflowing.
-- Normal users never see secret/env details.
-- Supreme Admins see expected env names, detected source, restart hint, and sanitized last errors.
+- Long status messages wrap safely instead of overflowing.
+- Normal users never see sensitive service details.
+- Supreme Admins see safe readiness, health, and recent-error information.
 
 ## Provider diagnostics
 
 | Field | Meaning |
 |---|---|
 | Admin enabled | Whether the platform toggle allows this provider. |
-| Configured | Whether runtime config is visible to the backend. |
-| Detected source | Sanitized source such as `HENOD_API_KEY:process_env`; secret values are hidden. |
-| Restart hint | Whether a backend restart may be needed after env changes. |
+| Ready | Whether the service can currently accept work. |
+| Availability reason | A safe explanation for an unavailable service. |
+| Recovery guidance | Whether an administrator should re-check the service or schedule maintenance. |
 | Metrics | Running jobs, success rate, duration, last success/error. |
 
 ## Processing Services vs consoles
-
-```mermaid
-flowchart LR
-  A[Processing Services] -->|Configuration and health| B[Provider status cards]
-  C[Processing Console] -->|Live processing events| D[OCR/import stream]
-  E[Platform Console] -->|Global ops terminal| F[Logins, sessions, activity, commands]
-```
 
 ## Operating boundary
 

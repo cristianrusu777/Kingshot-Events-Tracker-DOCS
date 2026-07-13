@@ -6,7 +6,7 @@ Reprocessing is the area where the original plan was more ambitious than the cur
 
 The app does **not** currently support a live "reprocess this existing import in place" workflow.
 
-Instead, the code path for reprocessing an existing saved import is not implemented yet. If you hit the dedicated reprocess endpoint, it returns a not-implemented result.
+Reprocessing an existing saved import is not active yet. Use a new upload when you need to process a screenshot again.
 
 ## What to do instead
 

@@ -4,6 +4,8 @@
 
 Kingshot Event Tracker now includes a responsive web pass for phones, tablets, and desktop. The app keeps the same visual identity, but dense screens adapt with a drawer menu, stacked cards, scrollable tables, touch-friendly forms, and collapsible analytics sections.
 
+![Current mobile dashboard](../images/current/2026-07-13/mobile-dashboard-current-safe.png)
+
 ## Supported viewport groups
 
 | Viewport | Expected behavior |
@@ -17,6 +19,8 @@ Kingshot Event Tracker now includes a responsive web pass for phones, tablets, a
 ## Navigation on mobile
 
 Phones and tablets use a **Menu** button. It opens a left-side drawer with the same role-aware navigation as desktop.
+
+![Current mobile navigation drawer](../images/current/2026-07-13/mobile-navigation-drawer-current.png)
 
 ```mermaid
 flowchart TD

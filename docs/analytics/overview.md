@@ -4,9 +4,9 @@ The **Analytics** area is where the app turns saved results into trends, ranking
 
 If this is your first premium analytics page, see [Premium Features](../subscriptions/premium-features.md) for how locked and active premium tabs behave.
 
-![Analytics kingdom](../images/analytics-kingdom.png)
->
-![Analytics alliance](../images/analytics-alliance.png)
+![Current analytics overview](../images/current/2026-07-13/analytics-overview-current-safe.png)
+
+![Current tablet analytics](../images/current/2026-07-13/tablet-analytics-current.png)
 
 ## What the tabs are
 
@@ -41,6 +41,33 @@ Inside the page:
 - the **Alliance** tab can include an alliance picker when you are allowed to manage more than one alliance
 - the **Player** tab opens from a search box or by selecting a player from another analytics tab
 - the **Custom** tab applies whatever filters you choose to the data you are already allowed to see
+
+## Mega-alliance analytics visibility
+
+![Mega-alliance analytics visibility rule](../images/diagrams/mega-alliance-visibility.svg)
+
+Kingdom Premium can create a view-only analytics group across accepted grants. The King enables **Allow granted alliances to view each other's analytics** from the kingdom's **Subscription & Usage** allocation area. It is disabled by default.
+
+![Current King analytics-visibility control](../images/current/2026-07-13/mega-alliance-visibility-current.png)
+
+All of these conditions are required:
+
+1. The kingdom has an active plan that includes the sharing feature.
+2. The alliance has an active, accepted grant from that kingdom.
+3. The King has enabled the setting.
+4. The viewer is a leader or co-leader of a granted alliance.
+
+This is analytics-only. A viewer can select another granted alliance or an explicit comparison, but cannot import, edit, delete, restore, reward, manage subscriptions, or manage users for that alliance. Data stays separate by alliance unless a comparison is explicitly selected.
+
+```mermaid
+flowchart TD
+  A[Premium kingdom] --> B[Accepted alliance grant]
+  B --> C{King enables analytics sharing?}
+  C -- No --> D[Own-alliance analytics only]
+  C -- Yes --> E[Granted leader or co-leader]
+  E --> F[Read-only alliance selector]
+  F --> G[Per-alliance view or explicit comparison]
+```
 
 ## Recalculate analytics
 

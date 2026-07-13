@@ -1,8 +1,10 @@
 # Permissions
 
-> **Admin-only.** Permissions are enforced by the backend; this page makes them understandable and reviewable.
+> **Admin-only.** Permissions are enforced by the platform; this page makes them understandable and reviewable.
 
 The Permissions page groups privileges by category, adds plain-language descriptions and risk guidance, and supports searching and comparing roles. Technical permission codes remain available as references, but they are not the primary interface.
+
+![Current Permissions page](../images/current/2026-07-13/desktop-permissions-current.png)
 
 ## How to use it
 
@@ -28,7 +30,7 @@ flowchart LR
   A[Permission category] --> B[Plain-language definition]
   B --> C[Risk guidance]
   C --> D[Role comparison]
-  D --> E[Scoped backend enforcement]
+  D --> E[Scoped access rules]
 ```
 
 ## Related

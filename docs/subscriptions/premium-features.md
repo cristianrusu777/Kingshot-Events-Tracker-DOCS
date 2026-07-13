@@ -41,20 +41,25 @@ Until then, the feature appears **locked** — usually as a tab or card labelled
 | **Premium Report Exports** | Richer export options and premium report packaging. |
 | **Larger Storage** | Bigger screenshot and import storage limits. This one works through your plan's limits rather than a button you press — a premium plan simply has more room. |
 
+## Premium Processing
+
+**Premium Processing** is an implemented processor service for eligible plans. It is available only when your effective plan includes the feature, an administrator has enabled the service, and the service is healthy.
+
+If the service is temporarily unavailable, Image Processing shows a safe status message. Supreme Admins can inspect the service status in **Processing Services**. See [Choose an Image Processor](../imports/choose-provider.md) for the user-facing selection flow.
+
 ## Kingdom-to-alliance sharing
 
 | Feature | What it unlocks |
 |---|---|
 | **Granted Kingdom Analytics** | Lets an alliance that **accepted a kingdom grant** view aggregate kingdom analytics. This only appears if the accepted grant specifically carries this feature — see the note under [Accept a Premium Offer](accept-grant.md). |
 
-## Coming soon (not active yet)
+## Roadmap-only features
 
-These appear in the app but aren't switched on yet. You may be able to **register interest**, but they don't unlock anything today:
+These are not active yet and do not unlock anything today:
 
 | Feature | Status |
 |---|---|
-| **Premium Processing** | Coming soon — improved screenshot/image processing. In the image-processing settings it may show as unavailable, and on the Support & Plans page you can register interest. |
-| **Priority Imports** | Coming soon — future priority handling for imports. Roadmap only for now. |
+| **Priority Imports** | Future priority handling for imports. Roadmap only for now. |
 
 ## Which plan carries which features
 

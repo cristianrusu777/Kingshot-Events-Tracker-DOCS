@@ -4,6 +4,8 @@
 
 Platform Console is the external/global operations terminal for the platform. It is not the same page as Processing Console.
 
+![Current Platform Console terminal](../images/current/2026-07-13/platform-console-current-safe.png)
+
 ## What it shows
 
 - live platform audit/activity stream;
@@ -30,16 +32,7 @@ On tablet:
 
 ## Command flow
 
-```mermaid
-flowchart TD
-  A[Supreme Admin opens Platform Console] --> B[AuthGate verifies /auth/me]
-  B --> C{Supreme Admin?}
-  C -- No --> D[Access denied]
-  C -- Yes --> E[Live event stream starts]
-  E --> F[Run read-only command]
-  F --> G[Command output persists locally]
-  E --> H[Polling refreshes events only]
-```
+Only Supreme Admins can open the console. Its live activity view and command area are read-only.
 
 ## Available commands
 
@@ -47,16 +40,8 @@ flowchart TD
 
 `clear` clears only local terminal output. It does not delete audit logs.
 
-## Visual model
-
-```mermaid
-flowchart LR
-  A[Event stream] --> D[Platform Console]
-  B[Session and page activity] --> D
-  C[Read-only command endpoint] --> D
-  D --> E[Persistent command history]
-  D --> F[Selected event detail]
-  D --> G[Live health indicator]
-```
+::: warning Current UI state
+The current captured console build presents the command input as disabled. The read-only command catalogue is retained as the supported command contract, but the screenshot matrix records that no interactive command output was captured from this UI state.
+:::
 
 The event stream refreshes independently from the command pane. A refresh adds new events without clearing command output, typed input, filters, selected detail, or local command history.

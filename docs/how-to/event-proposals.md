@@ -26,7 +26,7 @@ For each proposal, reviewers can:
 - **Accept**
 - **Refuse**
 
-The backend also supports a review note, so teams can keep a short reason for the decision.
+You can also add a review note so teams can keep a short reason for the decision.
 
 ## Good practice
 

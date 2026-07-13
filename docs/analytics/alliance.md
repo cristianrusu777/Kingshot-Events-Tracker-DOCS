@@ -2,6 +2,8 @@
 
 The **Alliance** tab is the main analytics view for day-to-day leadership work. It shows how one alliance is performing across tracked events and which players may need attention.
 
+![Current alliance analytics tab](../images/current/2026-07-13/desktop-alliance-analytics-current.png)
+
 If this is your first premium analytics page, see [Premium Features](../subscriptions/premium-features.md) for the locked/active pattern used by premium-only parts of analytics.
 
 ![Analytics alliance](../images/analytics-alliance.png)

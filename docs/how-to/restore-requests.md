@@ -4,6 +4,8 @@ This guide explains the restore-request flow for users who cannot restore someth
 
 `King`, `Alliance Leader`, and `Supreme Admin` users are the usual approvers. Other users may only be able to file the request.
 
+![Current Restore Requests queue](../images/current/2026-07-13/desktop-restore-requests-current.png)
+
 ## The short version
 
 If you can see a deleted item but do not have restore permission, use **Request restore**. An approver reviews it and either restores the item or rejects the request.

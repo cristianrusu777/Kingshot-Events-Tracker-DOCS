@@ -19,18 +19,16 @@ That means:
 1. Open **Image Processing Settings**.
 2. Choose **Gemini**.
 3. Paste your API key.
-4. Confirm or change the model.
-5. Select **Test connection**.
-6. Select **Save locally**.
+4. Select **Test connection**.
+5. Select **Save locally**.
 
-The page shows whether your browser key is saved and whether a global key also exists.
+The page shows whether your browser key is saved.
 
 ## When to use a browser key
 
 Use your own browser key when:
 
 - you want Gemini quality right now
-- the platform is not using a shared global key for your workflow
 - you are working on a device you control
 
 ## If Gemini still looks unavailable
@@ -39,7 +37,7 @@ Check these common reasons:
 
 - Gemini is disabled by admin
 - the key was not saved in this browser
-- the key or model test failed
+- the key test failed
 
 ## Related
 
