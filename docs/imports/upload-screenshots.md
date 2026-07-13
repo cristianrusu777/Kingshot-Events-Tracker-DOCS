@@ -1,4 +1,4 @@
-# Upload Screenshots
+﻿# Upload Screenshots
 
 Upload screenshots from the **Imports** page when you want the app to detect rows for review.
 
@@ -48,6 +48,20 @@ If your role allows it, choose:
 
 The page also links straight to image-processing settings when you need to switch providers or add a Gemini key.
 
+## Private screenshot access
+
+Uploaded screenshots are private tenant data. The app no longer exposes them through public static `/uploads` links. In-app previews use an authenticated API route that checks the import's kingdom/alliance scope before returning the file.
+
+Expected behavior:
+
+- not logged in: blocked
+- wrong kingdom or alliance scope: blocked
+- correct scoped reviewer: allowed
+- Supreme Admin: allowed
+- deleted imports: file preview is blocked until the import is restored
+
+The response is not stored in shared caches and does not leak the file URL through the `Referer` header.
+
 ## What happens after upload
 
 After a successful upload:
@@ -61,3 +75,4 @@ After a successful upload:
 - [Choose an Image-Processing Provider](choose-provider.md)
 - [Review Import Rows](review-rows.md)
 - [How Screenshot Imports Work](overview.md)
+

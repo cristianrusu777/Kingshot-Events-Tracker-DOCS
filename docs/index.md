@@ -1,4 +1,4 @@
----
+﻿---
 layout: home
 
 title: Kingshot Event Tracker Documentation
@@ -7,17 +7,17 @@ titleTemplate: false
 hero:
   name: "Kingshot Event Tracker"
   text: "Command the data. Understand every event."
-  tagline: "Practical guides for players, alliance teams, Kings, import reviewers, and platform administrators."
+  tagline: "Practical guides for players, alliance teams, Kings, import reviewers, and platform administrators. Now updated for mobile and tablet workflows."
   actions:
     - theme: brand
       text: Start with the basics
       link: /getting-started/what-is-the-tracker
     - theme: alt
+      text: Mobile & tablet guide
+      link: /roadmap/mobile-responsive-web
+    - theme: alt
       text: Review an import
       link: /imports/overview
-    - theme: alt
-      text: Browse the roadmap
-      link: /roadmap/README
 
 features:
   - icon: "⚔️"
@@ -25,11 +25,11 @@ features:
     details: Learn the tracker vocabulary, sign in, understand your dashboard, and find the right workflow.
     link: /getting-started/what-is-the-tracker
     linkText: Begin the quick start
-  - icon: "👑"
-    title: Choose Your Role
-    details: Follow a focused path for Supreme Admin, King, Alliance Leader, Co-Leader, or Alliance Player.
-    link: /roles/overview
-    linkText: Compare role guides
+  - icon: "📱"
+    title: Mobile & Tablet Ready
+    details: Use drawer navigation, stacked cards, scrollable tables, touch-friendly forms, and responsive consoles on phones and tablets.
+    link: /roadmap/mobile-responsive-web
+    linkText: Read responsive guide
   - icon: "🔎"
     title: Imports & OCR
     details: Upload screenshots safely, review detected rows, resolve conflicts, and apply only trusted data.
@@ -52,6 +52,50 @@ features:
     linkText: Find a solution
 ---
 
+## Latest Updates
+
+### Patch 2026-07-13 — Secure Upload Access, Spreadsheet Safety, Accessibility & Operations
+
+- Private screenshots and import assets are no longer served from public `/uploads` URLs. They now load through authenticated, scope-checked API routes.
+- Spreadsheet imports now enforce stricter safety limits: file size, row count, column count, cell length, no formulas, no macros, no external links, and no legacy `.xls` files.
+- Import previews and spreadsheet uploads are checked against the user's current kingdom/alliance scope before processing.
+- Dialogs and high-use icon-only controls received accessibility improvements: dialog semantics, focus behavior, Escape handling, and explicit labels.
+- The standalone Platform Console now ships the Glass TTY VT220 terminal font with readable monospace fallbacks; it no longer depends on a font being installed on the administrator's machine.
+- Security dependency cleanup now reports `npm audit` with 0 vulnerabilities.
+
+See:
+
+- [Upload Screenshots](/imports/upload-screenshots)
+- [Import a Spreadsheet](/how-to/spreadsheet-import)
+- [Privacy, Security & Fair-Use Boundaries](/roadmap/privacy-security-and-fair-use)
+- [Full 13 July patch notes](/updates/2026-07-13)
+
+### Patch 2026-07-13 — Responsive UI, Admin Usability, and Console Updates
+
+- Added mobile and tablet responsive layouts for dashboards, admin pages, analytics, imports, forms, modals, processor pages, and consoles.
+- Replaced the mobile sidebar behavior with a touch-friendly menu drawer.
+- Improved dense tables with horizontal-scroll affordances, stronger wrapping, and full-width admin layouts where needed.
+- Reworked Users management into a full-width page with clearer create, filter, sort, pagination, and action areas.
+- Made Processing Services, Processing Console, and Platform Console readable on phones and tablets.
+- Updated processor diagnostics behavior: normal users see safe messages; Supreme Admins see sanitized runtime/config diagnostics.
+- Updated documentation for responsive navigation, mobile import review, processor selection, console concepts, and admin workflows.
+
+See:
+
+- [Mobile & Tablet Guide](/roadmap/mobile-responsive-web)
+- [Finding Your Way Around](/getting-started/navigating)
+- [Choose an Image-Processing Provider](/imports/choose-provider)
+- [Processing Services](/admin/processing-services)
+- [Processing Console](/imports/processing-console)
+- [Platform Console](/admin/platform-console)
+- [Create and manage users](/how-to/create-user)
+
+### Visual guide
+
+The documentation uses sanitized real interface captures where they represent the current workflow and diagrams for cross-page architecture, permissions, and data flows. Screenshots never contain API keys, session data, or private upload content.
+
+![Import review screen](./images/import-review-before.png)
+
 ## Most-used guides
 
 <div class="guide-grid">
@@ -73,6 +117,7 @@ features:
 | Co-Leader or import reviewer | [Co-Leader Guide](/roles/co-leader) → [Imports & OCR](/imports/overview) |
 | Alliance Player | [Alliance Player Guide](/roles/viewer) |
 | Subscription administrator | [Subscriptions & Usage Manager](/admin/subscriptions-dashboard) |
+| Phone or tablet user | [Mobile & Tablet Guide](/roadmap/mobile-responsive-web) |
 
 ## Import screenshot flow
 
@@ -88,3 +133,6 @@ Uploading does not immediately write player results. The review screen is the sa
 ## Plans, support, and the future
 
 Use [Subscriptions & Usage](/subscriptions/overview) for current plan behavior and [Troubleshooting](/troubleshooting/faq) when something is blocked. The [Future Roadmap](/roadmap/README) is clearly separated from current features and contains planning ideas only.
+
+
+

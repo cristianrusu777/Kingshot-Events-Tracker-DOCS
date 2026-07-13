@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Kingshot Event Tracker</title>
+  <desc id="desc">A gold crown over an emerald shield.</desc>
+  <path fill="#047857" d="M32 3 55 12v18c0 14-8.8 25.8-23 31C17.8 55.8 9 44 9 30V12L32 3Z"/>
+  <path fill="#f59e0b" d="m18 22 7 6 7-13 7 13 7-6-3 17H21l-3-17Zm5 21h18v5H23v-5Z"/>
+</svg>
+

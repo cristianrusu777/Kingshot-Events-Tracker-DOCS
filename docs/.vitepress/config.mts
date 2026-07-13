@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+﻿import { defineConfig } from 'vitepress'
 import { createSidebar } from './sidebar.mts'
 
 const repository = process.env.GITHUB_REPOSITORY?.split('/')[1]
@@ -15,11 +15,18 @@ export default defineConfig({
   cleanUrls: false,
   ignoreDeadLinks: false,
   head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
+    ['link', { rel: 'apple-touch-icon', href: `${base}favicon.svg` }],
     ['meta', { name: 'theme-color', content: '#047857' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }]
   ],
   markdown: {
     lineNumbers: true
+  },
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 1400
+    }
   },
   themeConfig: {
     logo: '/images/app-mark.svg',
@@ -68,3 +75,4 @@ export default defineConfig({
     darkModeSwitchTitle: 'Use dark theme'
   }
 })
+

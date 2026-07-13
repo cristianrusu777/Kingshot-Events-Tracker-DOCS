@@ -1,16 +1,46 @@
-# Processing Console
+﻿# Processing Console
 
-The **Processing Console** is the processor-specific live feed. It stays focused on screenshot processing and provider health.
+Processing Console is the live processing event stream. It is separate from Processing Services.
 
-Use it to watch:
+## Purpose
 
-- processor selection
-- processing start and finish events
-- import review creation
-- provider failures
-- Henod health checks
-- recent Terra, Henod, Gemini, OpenAI, and Premium activity
+Use it to inspect:
 
-The console refreshes automatically, can be paused, filtered, searched, and copied for support. It does not replace the broader platform activity feed.
+- OCR/import processing events;
+- processor messages;
+- recent job errors;
+- import IDs and durations;
+- filtered processor/severity streams.
 
-For cross-platform activity such as auth, settings, subscriptions, imports, and admin actions, use the separate [Platform Console](../admin/platform-console.md).
+Configuration belongs in [Processing Services](../admin/processing-services.md), not here.
+
+## Responsive behavior
+
+On mobile and tablet:
+
+- filters stack vertically;
+- event rows wrap safely;
+- copy buttons remain touch-friendly;
+- the console does not horizontally overflow the page.
+
+## Processing event flow
+
+```mermaid
+flowchart TD
+  A[Upload or reprocess screenshot] --> B[Processor job starts]
+  B --> C[Processing Console receives event]
+  C --> D{Warning or error?}
+  D -- No --> E[Keep watching stream]
+  D -- Yes --> F[Open import/review diagnostics]
+```
+
+## Visual boundary
+
+```mermaid
+flowchart LR
+  A[Processing Services] -->|configure or check| B[Provider runtime]
+  B -->|jobs and events| C[Processing Console]
+  D[Authentication, sessions, audit activity] --> E[Platform Console]
+```
+
+This separation keeps an operational health check from looking like a log terminal, while preserving a dedicated live stream for processing work.
