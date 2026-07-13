@@ -2,8 +2,6 @@
 
 The **Player** tab follows one player across many tracked event instances. It is a premium view aimed at alliance leadership.
 
-![Current player analytics tab](../images/current/2026-07-13/desktop-player-comparison-current.png)
-
 For the general locked/active premium behavior, see [Premium Features](../subscriptions/premium-features.md). This page shows what that pattern looks like specifically for the Player tab.
 
 ## Locked state

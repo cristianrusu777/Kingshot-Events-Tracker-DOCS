@@ -4,8 +4,6 @@
 
 Processing Services is the configuration and health dashboard for image-processing providers. It is separate from Processing Console.
 
-![Current Processing Services](../images/current/2026-07-13/desktop-processing-services-current.png)
-
 ## Purpose
 
 Use this page for:

@@ -4,8 +4,6 @@
 
 Badges currently provide a visual preview of role, reward-eligibility, review-state, player-attribute, and subscription/status labels. They are not yet a dedicated badge assignment or CRUD feature.
 
-![Current Badges page](../images/current/2026-07-13/desktop-badges-current.png)
-
 ## What is active today
 
 - Player attributes and statuses can create badge-like labels in relevant player and analytics views.
