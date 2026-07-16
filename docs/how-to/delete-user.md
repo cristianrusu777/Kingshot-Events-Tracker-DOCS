@@ -16,6 +16,8 @@ Deleting a user here means disabling the account so it stops working in normal u
 
 After deletion, the account is shown as disabled and can no longer be used normally.
 
+Disabled users are hidden from normal user visibility and their existing credentials no longer provide normal access. Preserve the account where later restoration may be needed; use the authorised user-management path to reactivate it. This is separate from deleting a player record in the Recycle Bin.
+
 ## Messages that block deletion
 
 This page follows the same safety rules already documented elsewhere. The most important messages are:

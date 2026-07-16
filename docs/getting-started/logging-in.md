@@ -12,6 +12,8 @@ This guide covers signing in, what to do if the login screen stops accepting att
 
 If your details are correct, you land on your [dashboard](dashboard-tour.md). What you see there depends on your [role](../roles/overview.md).
 
+Use login only to verify an existing account. It should not ask for registration-only details. A Castle Position application may offer account verification beside separate application details; see [Applying for a Castle Position](../castle-positions/applying.md).
+
 ## If you don't have an account yet
 
 You can't create your own account from the login screen alone — accounts are approved by an admin. See **[Request an Account](registering.md)**. If your kingdom doesn't allow self‑registration, ask your King or Alliance Leader to create your account for you.

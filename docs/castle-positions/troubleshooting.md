@@ -1,29 +1,29 @@
 # Castle Positions troubleshooting
 
-## I cannot open Castle Positions
+## I cannot open an admin page
 
-Applicants need the public link or their player overview. Administrators need King, Minister of Justice, or Supreme Admin access in the correct Kingdom. Ask the King or Supreme Admin to confirm access.
+Check that you are a King, Minister of Justice or Supreme Admin and that the selected kingdom is correct. Ordinary players can use the public link and their own overview, not candidate review or scheduling. See [Roles](roles-and-access.md).
 
-## I cannot submit
+## I cannot submit an application
 
-Confirm applications are open, required fields are complete, resources are valid, General allocation does not exceed the total, and an opted-in email is available.
+Check that the application window is open, required fields and chosen times are valid, General allocation does not exceed the total, and the account mode matches what you intend. Login should not ask for registration-only information. Do not share passwords with the kingdom team.
 
-## Login or registration asks for unexpected information
+## My application is standby or needs review
 
-The flow distinguishes guest contact from verified accounts. Use guest contact only for notifications, or verify the existing account when asked. Registration passwords must meet the form's current rules.
+Standby normally means player identity or a required identifier needs resolving. Needs review means a reviewer needs more information or a decision. Check the details supplied and contact the team through its approved route.
 
-## Needs review, no link, full preferred time, or accepted but not scheduled
+## A candidate is not suggested or remains unplaced
 
-The team must resolve identity/information, or capacity and eligibility prevent placement. Check the selected player and contact the King or Minister about alternatives.
+Confirm eligibility, player link, placeable status, active position, requested-time compatibility, capacity and appointment overlaps. A full requested time does not force a fallback. Read [Selection algorithm](automatic-placement.md).
 
-## I cannot drag a player / a stage has no positions
+## I cannot save or move a slot
 
-Only schedule administrators can edit. The stage needs a date and active positions; capacity and conflicts can also block a move.
+The stage needs a date and active positions. Saving rejects duplicate cells/applications, invalid position choices, duplicate manual players and overlapping appointments. Reload if a revision-conflict message indicates someone else changed the board.
 
-## I did not receive email / schedule says draft
+## I did not receive email
 
-Check My Castle Positions. Email can be disabled, opted out, missing, filtered, or failed. Draft and finalized schedules are not published.
+Check My Castle Positions first. Sender mode may be disabled, no opted-in contact may exist, or delivery may have failed/been filtered. An email attempt is not guaranteed delivery; see [Notifications](notifications-and-email.md).
 
-## Resource image, deleted/disabled user, page loading, or usage details
+## The page is loading or usage details are missing
 
-Refresh once, then report the Kingdom, page, and time to a Supreme Admin. Usage details load on demand and can temporarily show a loading or error state.
+Refresh once and report the kingdom, page and visible error to a Supreme Admin. Subscription/usage detail views load on demand and can show an error state when their data cannot be retrieved.

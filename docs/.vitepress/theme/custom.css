@@ -629,3 +629,15 @@ body {
   rx: 8px !important;
   ry: 8px !important;
 }
+/* Castle-position decision diagrams retain readable labels on smaller screens. */
+.castle-diagram {
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  padding: .25rem 0 .75rem;
+}
+.castle-diagram .mermaid {
+  min-width: 42rem;
+}
+@media (max-width: 700px) {
+  .castle-diagram .mermaid { min-width: 34rem; }
+}

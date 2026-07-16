@@ -34,6 +34,10 @@ Where you find it:
 - **Alliance Leader / Co-Leader** — on the **[My Alliance](../how-to/my-alliance.md)** page.
 - **Supreme Admin** — everywhere, plus a platform-wide manager (covered in the admin section).
 
+## Loading and large lists
+
+Usage details are loaded when you open the relevant detail view rather than all at once. Large administrative lists use pagination. While a panel is loading, wait for the subject name and usage state to appear before acting; if it shows an error, refresh once and report the visible message plus kingdom/alliance scope to a Supreme Admin. See [Quota & Suspension Problems](../troubleshooting/quotas.md).
+
 ## Two ways to get premium
 
 There are exactly two paths to unlocking premium, and both are covered step by step in this section:

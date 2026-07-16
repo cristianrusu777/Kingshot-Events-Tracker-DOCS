@@ -1,29 +1,29 @@
 # Castle Positions FAQ
 
-## Is it KvK Prep?
+## Is this KvK Prep?
 
-No. [KvK Prep](../how-to/kvk-prep.md) compares power; Castle Positions manages applications and appointments.
+No. [KvK Prep](../how-to/kvk-prep.md) compares power. Castle Positions handles applications, appointment planning and publication.
 
-## Do players need an account? Can they use email?
+## Does acceptance guarantee a position?
 
-Not always. The public flow can use guest contact or verify an existing account; the available option depends on Kingdom setup.
+No. Accepted means a reviewer approved the application for consideration. Capacity, compatible time, eligibility, overlapping appointments and a final administrator decision still determine the schedule.
 
-## Which timezone is used? Can I edit?
+## Does the system appoint players automatically?
 
-Availability is UTC; the overview also shows a local display time. You can update an application while the cycle is open.
+No. It creates deterministic suggestions only. An authorized schedule team reviews, can edit, saves, finalizes and publishes them. See [Selection algorithm](automatic-placement.md).
 
-## Does acceptance guarantee a slot? What if my time is full?
+## What timezone is used?
 
-No. Capacity and schedule review decide placement. The team may use an alternative, nearby, or other available time, or leave a candidate unplaced.
+Availability and planner slots use UTC. Enter the time you can attend in UTC, then check the published appointment.
 
-## Who sees resource information? Can a Minister manage another Kingdom?
+## Can a Minister manage another kingdom?
 
-In-scope Castle Positions administrators see resources for review. A Minister of Justice is restricted to the assigned Kingdom.
+No. Minister access is restricted to the assigned kingdom. Ask a King or Supreme Admin to handle the correct scope.
 
-## Can a published schedule change? Are players notified?
+## Why am I accepted but not scheduled?
 
-Yes. The team can reopen and publish a new version. Notifications are attempted only when the Kingdom sender and opted-in contact are available.
+Your preferred time may be full, you may have no compatible fallback, a position may be unavailable, or the team may need a manual decision. Read [Statuses](application-statuses.md).
 
-## What are Standby, Needs review, and Changed?
+## Will I get an email when a schedule changes?
 
-Standby means identity needs resolution; Needs review means information or eligibility needs checking; Changed means the application or appointment needs attention in the current schedule.
+The system may attempt it if the kingdom sender, mode, contact preference and delivery all permit it. Always check My Castle Positions. See [Notifications](notifications-and-email.md).
