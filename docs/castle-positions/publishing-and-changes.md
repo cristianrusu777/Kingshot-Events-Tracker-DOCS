@@ -2,6 +2,11 @@
 
 ## Draft to published lifecycle
 
+<figure class="castle-screenshot castle-screenshot--wide">
+  <a href="/images/castle-positions/castle-schedule-planner-dark.png" target="_blank"><img src="/images/castle-positions/castle-schedule-planner-dark.png" alt="Castle Positions draft schedule controls and published state indicator" loading="lazy"></a>
+  <figcaption>The planner exposes draft state and the review surface used before a schedule is finalized and published.</figcaption>
+</figure>
+
 <div class="castle-diagram">
 
 ```mermaid

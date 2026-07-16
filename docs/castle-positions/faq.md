@@ -10,7 +10,7 @@ No. Accepted means a reviewer approved the application for consideration. Capaci
 
 ## Does the system appoint players automatically?
 
-No. It creates deterministic suggestions only. An authorized schedule team reviews, can edit, saves, finalizes and publishes them. See [Selection algorithm](automatic-placement.md).
+No. It creates deterministic suggestions only. An authorized schedule team reviews, can edit, saves, finalizes and publishes them. See [Candidate Selection and Scheduling Logic](selection-algorithm.md).
 
 ## What timezone is used?
 

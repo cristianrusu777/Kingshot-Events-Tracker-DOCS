@@ -14,7 +14,7 @@ Standby normally means player identity or a required identifier needs resolving.
 
 ## A candidate is not suggested or remains unplaced
 
-Confirm eligibility, player link, placeable status, active position, requested-time compatibility, capacity and appointment overlaps. A full requested time does not force a fallback. Read [Selection algorithm](automatic-placement.md).
+Confirm eligibility, player link, placeable status, active position, requested-time compatibility, capacity and appointment overlaps. A full requested time does not force a fallback. Read [Candidate Selection and Scheduling Logic](selection-algorithm.md).
 
 ## I cannot save or move a slot
 

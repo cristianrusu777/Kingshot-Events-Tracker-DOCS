@@ -25,6 +25,11 @@ Castle Positions & KvK Applications is now a kingdom workflow for public applica
 
 ## Castle Positions and KvK applications
 
+<figure class="castle-screenshot castle-screenshot--wide">
+  <a href="/images/castle-positions/castle-dashboard-dark.png" target="_blank"><img src="/images/castle-positions/castle-dashboard-dark.png" alt="Castle Positions release dashboard in dark mode" loading="lazy"></a>
+  <figcaption>Castle Positions is the principal feature of this update: the dashboard connects kingdom-scoped applications with review and scheduling workflows.</figcaption>
+</figure>
+
 Players can use a public kingdom application flow, provide stage availability in UTC, resources and comments, and return to their own overview to follow status and published appointments. The platform now supports player identity linking, stages, configurable positions, time slots, capacity, review, drafts, schedule versions and publication. Kings and Ministers operate only within their kingdom; Supreme Admins select the relevant kingdom for wider corrections.
 
 Automatic placement is a **reviewable suggestion preview**, not automatic final assignment. It filters to eligible linked applications in placeable statuses, preserves locked assignments, honours unavailable times, compares time compatibility and configured ranking, and reports unplaced candidates. A schedule still needs an authorized reviewer to save, finalize and publish. See [Selection algorithm](../castle-positions/automatic-placement.md).
@@ -99,7 +104,7 @@ The platform does not independently choose the “best” player. It can calcula
 | Apply and choose UTC times/resources | [Applying](../castle-positions/applying.md) |
 | Understand standby, review, accepted and scheduled | [Application statuses](../castle-positions/application-statuses.md) |
 | Review candidates and resource rules | [Reviewing](../castle-positions/reviewing.md) and [Stages, positions and resources](../castle-positions/stages-positions-resources.md) |
-| Verify exactly how suggestions decide | [Selection and scheduling algorithm](../castle-positions/automatic-placement.md) |
+| Verify exactly how suggestions decide | [Candidate Selection and Scheduling Logic](../castle-positions/selection-algorithm.md) |
 | Build, publish and revise a schedule | [Schedule planner](../castle-positions/schedule-planner.md) and [Publishing](../castle-positions/publishing-and-changes.md) |
 | Resolve account/email/access issues | [Castle troubleshooting](../castle-positions/troubleshooting.md), [Login troubleshooting](../troubleshooting/login.md), and [Email settings](../admin/email-settings.md) |
 
