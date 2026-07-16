@@ -12,6 +12,7 @@ const sectionDefinitions: Section[] = [
   { text: 'Latest Updates', collapsed: false, match: d => d.relative.startsWith('updates/') || /^repair-pass-\d{4}-\d{2}-\d{2}\.md$/i.test(d.relative) },
   { text: 'Getting Started', match: d => d.relative.startsWith('getting-started/') },
   { text: 'Role Guides', match: d => d.relative.startsWith('roles/') },
+  { text: 'Castle Positions', collapsed: false, match: d => d.relative.startsWith('castle-positions/') },
   { text: 'Players', match: d => /^how-to\/(add-player|edit-player|delete-restore-player|kick-player|manual-players|nicknames|player-profile|player-sync|players-directory)\.md$/i.test(d.relative) },
   { text: 'Kingdoms & Alliances', match: d => /^how-to\/(manage-kingdoms|manage-alliances|my-alliance|kvk-prep)\.md$/i.test(d.relative) },
   { text: 'Events & Default Events', match: d => d.relative.startsWith('events/') },

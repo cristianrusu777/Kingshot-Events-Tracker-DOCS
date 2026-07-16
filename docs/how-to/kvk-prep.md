@@ -2,6 +2,8 @@
 
 KvK Prep is the dedicated before-and-after power workflow for **Kingdom of Power**. It is separate from normal event-result imports.
 
+> Looking for KvK castle appointment applications and schedules? Use [Castle Positions](../castle-positions/overview.md), not KvK Prep.
+
 ![Kvk prep](../images/kvk-prep.png)
 
 ## What this page is for
