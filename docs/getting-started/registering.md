@@ -14,6 +14,8 @@ New members usually join by **requesting an account**, which an admin then appro
 
 Your request is now **pending** — it has been sent to your kingdom's admins for review. You cannot log in yet.
 
+Use registration only for a new account. If you already have one, return to login rather than re-entering registration information. A Castle Position application can use its own account/contact choice; that does not make login a new registration.
+
 ## What "pending" means
 
 A pending request is simply waiting for a decision. Nobody has rejected you; an admin just hasn't acted on it yet. There are three things that can happen next:

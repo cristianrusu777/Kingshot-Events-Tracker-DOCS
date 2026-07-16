@@ -1,17 +1,57 @@
 # Applying for a Castle Position
 
-Use the Kingdom's public link while applications are open, then choose the correct Kingdom and cycle.
+Use the public Castle Positions link supplied by your kingdom while applications are open. Choose the correct kingdom and cycle before entering information.
 
-## Complete the application
+## Before you start
 
-1. Find and select your Kingshot player name.
-2. For each active stage, choose a specific **UTC** time, any available time, or not available. `18:00 UTC` is UTC, not your local phone time.
-3. Enter resources. Construction, Technology, Training, and General Speedups are entered in **days**. General Speedups can be allocated between eligible speedup types and cannot exceed the total.
-4. Enter **True Gold** as an amount. It is not days and is not part of the General Speedup pool.
-5. Complete any Kingdom-configured fields, then review and submit.
+- Have your player identity and, where required, player identifier ready.
+- Know your preferred times in **UTC**. UTC is not the time shown on your phone unless your phone is set to UTC.
+- Gather the resources requested by your kingdom. Speedups are entered in days; True Gold is an amount.
 
-The flow can offer guest contact or verified-account options. Guest applicants can opt into a notification email when the Kingdom sender is available. A signed-in account uses its account email. The form checks whether a guest email is already in use.
+## Applicant workflow
 
-After submission, the selected time remains a request until published. Return to **My Castle Positions** to view application status, provisional appointments, published appointments, and history. You can update an existing application while the cycle remains open.
+<div class="castle-diagram">
 
-**Example:** 12 Construction days plus 3 allocated General days equals 15 Construction days. `4,500` True Gold remains an amount.
+```mermaid
+flowchart TD
+ A[Open public link] --> B[Login or register if needed]
+ B --> C[Confirm player and contact]
+ C --> D[Choose UTC availability]
+ D --> E[Enter resources and comments]
+ E --> F[Review and submit]
+ F --> G[Track status]
+ G --> H[See published appointment or change]
+```
+
+</div>
+
+1. Open the public application link and select the applicable kingdom/cycle.
+2. Choose the account option presented. **Login** verifies an existing account; **registration** collects new-account information. Login does not require registration-only details.
+3. Select or confirm your player identity. Existing-account linking is verified; an unresolved identity may place the application on standby for review.
+4. For each active stage, choose one or more preferred UTC times, acceptable alternatives, **any available time**, or unavailable times.
+5. Enter requested resources and any comments or configured questions.
+6. Review the summary and correct validation messages. The stepper takes you back to the incomplete step instead of silently submitting partial data.
+7. Submit. The confirmation means the request was received; it is not a scheduled appointment.
+8. Open **My Castle Positions** later to see the current status, provisional information, published appointment and history.
+
+::: tip
+Use alternatives honestly. A time marked unavailable is never used by automatic suggestions, even if it was also selected elsewhere.
+:::
+
+## Account, email and password behavior
+
+An existing account can use its account identity. Guest contact is optional where the kingdom enables it; it is for communication, not proof of an appointment. A guest email is checked for validity and availability. Account email and Castle contact email can be different; notification delivery uses the available opted-in contact path, not a promise of delivery.
+
+For registration, enter a password only when the form asks to create or change one. Returning to a review step should not require you to re-enter plaintext password information unnecessarily. See [Logging in](../getting-started/logging-in.md), [Registering](../getting-started/registering.md), and [Forgot password](../getting-started/forgot-password.md).
+
+## Resource example
+
+Mira enters 12 Construction days and allocates 3 General days to Construction: the displayed construction comparison is 15 days. She enters `4,500` True Gold separately; it is not a number of days and cannot be taken from the General pool.
+
+## What happens next
+
+The request may be linked immediately or placed on standby if the player identity needs review. A reviewer can accept it for consideration, request review, reject it, or later schedule it. Read [Application statuses](application-statuses.md) and [Notifications](notifications-and-email.md) next.
+
+## Troubleshooting
+
+If submission fails, check the application window, required fields, selected UTC time, valid resource values, General allocation total and account choice. If you cannot resolve it, send the kingdom team the kingdom, cycle and visible validation message—never your password. See [Castle troubleshooting](troubleshooting.md).

@@ -41,6 +41,10 @@ The app sends email only for a small set of **account events** — all tied to l
 
 **No email is sent** for anything else. In particular, the app does **not** email on: a registration request being *rejected* or marked *needs more info*, subscription/quota/suspension changes, imports, event or player changes, or reports. Those are shown in the app only.
 
+## Castle appointment emails
+
+Castle Positions can use a kingdom-specific sender and notification mode for published appointment changes. These notifications are conditional: sender availability, mode, opted-in contact and delivery can cause a message to be sent, skipped, disabled or fail. They are not a delivery guarantee. See [Castle notifications](../castle-positions/notifications-and-email.md). Registration requests rejected or marked *needs more info*, subscription/quota/suspension changes, imports, event/player changes and reports remain in-app outcomes rather than general email broadcasts.
+
 ## Good practice
 
 - use Mock Email in development or test setups
