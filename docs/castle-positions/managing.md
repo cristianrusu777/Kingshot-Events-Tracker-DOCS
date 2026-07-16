@@ -2,6 +2,16 @@
 
 This is the end-to-end Minister of Justice and King workflow.
 
+<figure class="castle-screenshot castle-screenshot--standard">
+  <a href="/images/castle-positions/castle-entry-media-dark.png" target="_blank"><img src="/images/castle-positions/castle-entry-media-dark.png" alt="Castle Positions media library in dark mode" loading="lazy"></a>
+  <figcaption>The management surface includes a kingdom-scoped media library for Castle resource and hero artwork.</figcaption>
+</figure>
+
+<figure class="castle-screenshot castle-screenshot--standard">
+  <a href="/images/castle-positions/castle-email-state-dark.png" target="_blank"><img src="/images/castle-positions/castle-email-state-dark.png" alt="Castle Positions email configuration state in dark mode" loading="lazy"></a>
+  <figcaption>Email configuration is a separate read-only management surface; delivery attempts do not replace the in-app schedule state.</figcaption>
+</figure>
+
 <div class="castle-diagram">
 
 ```mermaid
@@ -34,3 +44,5 @@ flowchart TD
 Supreme Admin work is limited here to selecting the correct kingdom, correcting access/role or platform-level email configuration, and resolving cross-kingdom issues. It is not necessary to use global access for ordinary kingdom scheduling.
 
 Related: [Roles](roles-and-access.md), [Reviewing](reviewing.md), [Planner](schedule-planner.md), and [Publishing](publishing-and-changes.md).
+
+Before recalculating, read [Candidate Selection and Scheduling Logic](selection-algorithm.md) so the team can explain suggestion results consistently.

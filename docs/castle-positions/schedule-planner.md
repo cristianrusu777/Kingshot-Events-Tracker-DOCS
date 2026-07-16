@@ -4,6 +4,16 @@ The planner is a UTC time-by-position board for one stage. A cell represents a r
 
 ## Minister / King procedure
 
+<figure class="castle-screenshot castle-screenshot--wide">
+  <a href="/images/castle-positions/castle-schedule-planner-dark.png" target="_blank"><img src="/images/castle-positions/castle-schedule-planner-dark.png" alt="Castle Positions schedule planner with candidate cards and slots in dark mode" loading="lazy"></a>
+  <figcaption>The planner combines candidate groups, suggestion status, an editable draft, slot capacity and visible assignment cards.</figcaption>
+</figure>
+
+<figure class="castle-screenshot castle-screenshot--wide">
+  <a href="/images/castle-positions/castle-schedule-planner-detail-dark.png" target="_blank"><img src="/images/castle-positions/castle-schedule-planner-detail-dark.png" alt="Castle Positions planner slot details with mock assignments in dark mode" loading="lazy"></a>
+  <figcaption>The lower planner view keeps the populated slot board, mock assignments, placeholders and gap guidance visible for review.</figcaption>
+</figure>
+
 1. Confirm the kingdom, cycle and stage. A stage date and active positions are required.
 2. Review the candidate list: identity, status, eligibility, requested times, resource information and unplaced reasons.
 3. Recalculate suggestions if configuration or applications changed. Check its state; an error or stale result is not a current recommendation.
@@ -38,4 +48,4 @@ flowchart TD
 
 The placement preview itself keeps each position column gapless: it does not jump past an empty early slot to fill a later one. Administrators should review exceptions rather than treating a blank later cell as an error automatically.
 
-Related: [Selection algorithm](automatic-placement.md), [Stages and resources](stages-positions-resources.md), [Troubleshooting](troubleshooting.md).
+Related: [Candidate Selection and Scheduling Logic](selection-algorithm.md), [Automatic placement suggestions](automatic-placement.md), [Stages and resources](stages-positions-resources.md), [Troubleshooting](troubleshooting.md).

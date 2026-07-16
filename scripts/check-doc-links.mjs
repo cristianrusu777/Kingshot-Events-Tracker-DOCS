@@ -22,6 +22,10 @@ function candidates(source, target) {
   const absolute = target.startsWith('/')
     ? path.join(root, target.slice(1))
     : path.resolve(path.dirname(source), target)
+  const publicAsset = target.startsWith('/')
+    ? path.join(root, 'public', target.slice(1))
+    : null
+  if (publicAsset && path.extname(publicAsset)) return [absolute, publicAsset]
   if (path.extname(absolute)) return [absolute]
   return [absolute, `${absolute}.md`, path.join(absolute, 'index.md'), path.join(absolute, 'README.md')]
 }

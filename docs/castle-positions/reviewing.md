@@ -2,6 +2,11 @@
 
 ## Review procedure
 
+<figure class="castle-screenshot castle-screenshot--standard">
+  <a href="/images/castle-positions/castle-review-list-dark.png" target="_blank"><img src="/images/castle-positions/castle-review-list-dark.png" alt="Castle Positions application review list in dark mode" loading="lazy"></a>
+  <figcaption>The review list keeps the kingdom and cycle scope visible while exposing status filters and candidate actions.</figcaption>
+</figure>
+
 1. Confirm the correct kingdom and cycle. Ministers cannot review another kingdom’s candidates.
 2. Filter the list by status, stage, eligibility or availability, then open the candidate detail.
 3. Verify the player link, required identifier where configured, alliance/context, stage choices, resources, True Gold, custom answers and contact preference.
@@ -20,3 +25,5 @@ For a contested slot, review the time match and unplaced reason alongside score.
 ## Escalation
 
 Ask the King or Supreme Admin to resolve wrong kingdom scope, missing platform-level settings, sender configuration or access-denied problems. Do not use a resource value or a comment as proof of account identity.
+
+Next: [Candidate Selection and Scheduling Logic](selection-algorithm.md) explains exactly how eligible candidates are compared.

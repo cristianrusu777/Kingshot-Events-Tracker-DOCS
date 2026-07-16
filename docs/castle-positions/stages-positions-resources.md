@@ -22,6 +22,26 @@ A stage has its own date and can contain active positions. Each position is a pl
 
 ## Configuration procedure
 
+<figure class="castle-screenshot castle-screenshot--standard">
+  <a href="/images/castle-positions/castle-stage-configuration-dark.png" target="_blank"><img src="/images/castle-positions/castle-stage-configuration-dark.png" alt="Castle Positions stages configuration in dark mode" loading="lazy"></a>
+  <figcaption>Stage configuration begins with the cycle instance and anchor date; the stage editor remains empty until a cycle is selected.</figcaption>
+</figure>
+
+<figure class="castle-screenshot castle-screenshot--standard">
+  <a href="/images/castle-positions/castle-resource-mapping-dark.png" target="_blank"><img src="/images/castle-positions/castle-resource-mapping-dark.png" alt="Castle Positions resource catalogue in dark mode" loading="lazy"></a>
+  <figcaption>The resource catalogue distinguishes duration-based speedups from count-based True Gold and supports the configured stage inputs.</figcaption>
+</figure>
+
+<figure class="castle-screenshot castle-screenshot--wide">
+  <a href="/images/castle-positions/castle-position-configuration-dark.png" target="_blank"><img src="/images/castle-positions/castle-position-configuration-dark.png" alt="Castle Positions selected stage and position navigation in dark mode" loading="lazy"></a>
+  <figcaption>After the cycle is selected, the scheduling surface exposes the configured stage tabs and the position board entry point.</figcaption>
+</figure>
+
+<figure class="castle-screenshot castle-screenshot--wide">
+  <a href="/images/castle-positions/castle-stage-configuration-detail-dark.png" target="_blank"><img src="/images/castle-positions/castle-stage-configuration-detail-dark.png" alt="Castle Positions stage configuration details with mock data in dark mode" loading="lazy"></a>
+  <figcaption>The lower stage configuration view shows the selected cycle’s configured stage data and controls.</figcaption>
+</figure>
+
 1. Confirm you are in the right kingdom and open the cycle.
 2. Set each stage date and UTC timing before planning.
 3. Activate the positions required for that stage, then set order, duration, slots and capacity.
@@ -48,4 +68,4 @@ Resource icons may use the kingdom’s configured default or custom image. Repla
 
 ## Current limits
 
-The planner needs a stage date and active positions. Legacy schedules may need an administrator to identify the correct position before a multi-position board can save them. Read [Selection algorithm](automatic-placement.md) for how configured eligibility, score and time choices are used, then [Schedule planner](schedule-planner.md).
+The planner needs a stage date and active positions. Legacy schedules may need an administrator to identify the correct position before a multi-position board can save them. Read [Candidate Selection and Scheduling Logic](selection-algorithm.md) for how configured eligibility, score and time choices are used, then [Schedule planner](schedule-planner.md).

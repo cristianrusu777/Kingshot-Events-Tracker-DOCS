@@ -8,6 +8,11 @@ The system creates **placement suggestions**, not automatic final appointments. 
 
 ## Start here
 
+<figure class="castle-screenshot castle-screenshot--standard">
+  <a href="/images/castle-positions/castle-dashboard-dark.png" target="_blank"><img src="/images/castle-positions/castle-dashboard-dark.png" alt="Castle Positions dashboard in dark mode" loading="lazy"></a>
+  <figcaption>The dashboard shows the selected kingdom, cycle status, application count and the navigation into review, scheduling, stages and resources.</figcaption>
+</figure>
+
 | You are | Start with | Then |
 | --- | --- | --- |
 | Applicant | [Apply for a position](applying.md) | [Track your status](application-statuses.md) |
@@ -43,3 +48,5 @@ flowchart TD
 - **Draft** and **finalized** schedules are not the published player-facing result.
 
 Next step: applicants should read [Applying](applying.md); schedule teams should start with [Managing Castle Positions](managing.md).
+
+For the verified automatic decision process, read [Candidate Selection and Scheduling Logic](selection-algorithm.md). See also the [15–16 July system update](../updates/2026-07-15-16-system-update.md).

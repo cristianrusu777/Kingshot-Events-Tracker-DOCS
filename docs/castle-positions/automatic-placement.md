@@ -2,6 +2,11 @@
 
 ## Plain-language explanation
 
+<figure class="castle-screenshot castle-screenshot--wide">
+  <a href="/images/castle-positions/castle-schedule-planner-dark.png" target="_blank"><img src="/images/castle-positions/castle-schedule-planner-dark.png" alt="Castle Positions automatic placement area in the schedule planner" loading="lazy"></a>
+  <figcaption>The live planner exposes the suggestion result beside candidate cards and slot state; the screenshot is the practical interface, while the algorithm guide describes the decision logic.</figcaption>
+</figure>
+
 The planner is an **automatic suggestion engine**. It does not make final appointments or publish a schedule. For each position column it works from the earliest slot downwards and fills a slot with the best compatible candidate. A candidate who named that exact time is preferred to one who merely accepts an alternative, a nearby time, or any time. The process preserves administrator-locked assignments and prevents an applicant or player being placed twice in an overlapping appointment.
 
 ::: warning
@@ -17,7 +22,7 @@ An applicant must be eligible, linked to a player, and in a placeable status (`a
 5. For the current slot, exclude candidates already assigned, not allowed in that position, unavailable at that time, or overlapping another appointment.
 6. Classify remaining availability: **exact preferred**, **alternative**, **within the configured nearby-time window** (60 minutes by default), or **any available time**.
 7. Choose the contender using the stage’s strategy. The normal balanced strategy compares: time match, higher score, fewer named usable times, earlier submission, then application ID.
-8. Fill the cell up to its configured capacity. If nobody accepts an otherwise empty cell, stop filling later slots in that position column; this keeps assignments contiguous rather than leaving a gap.
+8. Fill the cell up to its configured capacity. If a preferred cell is unavailable, report the gap and continue considering later candidates and compatible cells; the live candidate-driven engine does not silently stop all later assignments merely because one preferred slot is unavailable.
 9. List eligible linked candidates not placed with a reason and suggested next action. An administrator decides whether to move someone, waitlist, add a placeholder, or approve a requested-slot override.
 10. The administrator reviews, edits if needed, saves the draft, finalizes and publishes separately.
 
@@ -71,4 +76,4 @@ flowchart TD
 
 Suggestions can be changed by authorized schedule administrators. Saving still rejects duplicate grid cells, duplicate applications within a stage, overlapping player appointments, invalid positions and invalid manual-player assignments. A manual assignment can therefore differ from the suggestion, but cannot bypass those structural checks. A manual move also does not publish by itself; it remains a draft change until finalization and publication.
 
-Related: [Reviewing](reviewing.md), [Planner](schedule-planner.md), and [Publishing](publishing-and-changes.md).
+Related: [Candidate Selection and Scheduling Logic](selection-algorithm.md), [Reviewing](reviewing.md), [Planner](schedule-planner.md), and [Publishing](publishing-and-changes.md).
