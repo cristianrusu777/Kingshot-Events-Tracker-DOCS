@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: Review an import
       link: /imports/overview
+    - theme: alt
+      text: Explore Castle Positions
+      link: /castle-positions/overview
 
 features:
   - icon: "⚔️"
@@ -25,6 +28,11 @@ features:
     details: Learn the tracker vocabulary, sign in, understand your dashboard, and find the right workflow.
     link: /getting-started/what-is-the-tracker
     linkText: Begin the quick start
+  - icon: "🏰"
+    title: "New Feature: Castle Positions & KvK Applications"
+    details: Public player applications, UTC time choices, speedups and True Gold, Kingdom review, candidate comparison, slot scheduling, publication, and schedule changes.
+    link: /castle-positions/overview
+    linkText: Plan Castle appointments
   - icon: "📱"
     title: Mobile & Tablet Ready
     details: Use drawer navigation, stacked cards, scrollable tables, touch-friendly forms, and responsive consoles on phones and tablets.
@@ -57,6 +65,16 @@ import { withBase } from 'vitepress'
 </script>
 
 ## Latest Updates
+
+### 15–16 July 2026 System Update — Castle Positions and platform patches
+
+::: tip New Feature
+**Castle Positions & KvK Applications** gives a Kingdom one workflow for public applications, preferred UTC times, resource information, Minister/King review, suggestion-based candidate comparison, stage/position/time-slot planning, draft and published schedules, revisions, and conditional communication.
+:::
+
+The same update corrects login versus registration behavior, account/contact-email handling, password-reset matching, disabled-user visibility, Minister of Justice access, and subscription/usage loading and pagination.
+
+[Read the complete 15–16 July 2026 System Update](/updates/2026-07-15-16-system-update) · [Open Castle Positions](/castle-positions/overview)
 
 ### Patch 2026-07-13 — Last 24h Platform, Security, Analytics, Console, Admin & Responsive Update
 
