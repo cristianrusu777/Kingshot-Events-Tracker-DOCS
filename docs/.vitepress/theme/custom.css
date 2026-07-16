@@ -542,20 +542,17 @@ body {
   }
 }
 
-/* --- Mermaid Diagram Custom Styling --- */
-.mermaid {
+/* Mermaid diagrams retain their generated natural size. */
+.vp-doc .mermaid {
   display: block;
-  width: 100%;
-  overflow-x: auto;
   margin: 1.5rem 0;
 }
 
-.mermaid svg {
+.vp-doc .mermaid svg {
   display: block;
+  max-width: 100%;
+  height: auto;
   margin: 0 auto;
-  width: 100% !important;
-  max-width: 13.75rem !important;
-  height: auto !important;
 }
 
 /* Style the nodes to look modern, clean, and beautiful */
@@ -629,15 +626,18 @@ body {
   rx: 8px !important;
   ry: 8px !important;
 }
-/* Castle-position decision diagrams retain readable labels on smaller screens. */
+/* Castle diagrams are vertical by default. Use --wide only for a genuinely
+   wide chart; this avoids site-wide fixed dimensions or page overflow. */
 .castle-diagram {
-  overflow-x: auto;
   margin: 1.25rem 0;
-  padding: .25rem 0 .75rem;
+  padding: .25rem 0;
 }
-.castle-diagram .mermaid {
-  min-width: 42rem;
+
+.castle-diagram--wide {
+  overflow-x: auto;
+  padding-bottom: .75rem;
 }
-@media (max-width: 700px) {
-  .castle-diagram .mermaid { min-width: 34rem; }
+
+.castle-diagram--wide .mermaid {
+  min-width: 46rem;
 }
