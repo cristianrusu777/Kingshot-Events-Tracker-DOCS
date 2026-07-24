@@ -64,9 +64,12 @@ export function createSidebar(): DefaultTheme.SidebarItem[] {
   const groups: DefaultTheme.SidebarItem[] = []
 
   for (const definition of sectionDefinitions) {
-    const items = [...remaining.values()].filter(definition.match)
+    let items = [...remaining.values()].filter(definition.match)
     if (!items.length) continue
     items.forEach(item => remaining.delete(item.relative))
+    if (definition.text === 'Latest Updates') {
+      items.sort((a, b) => b.relative.localeCompare(a.relative, 'en'))
+    }
     groups.push({
       text: definition.text,
       collapsed: definition.collapsed ?? true,
