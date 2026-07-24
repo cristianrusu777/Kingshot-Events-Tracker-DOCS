@@ -108,6 +108,7 @@ graph TD
 
 ---
 
+## Paid Reforge Policy
 
 Administrative settings can control whether advanced paid reforge recommendations are accessible to users:
 
