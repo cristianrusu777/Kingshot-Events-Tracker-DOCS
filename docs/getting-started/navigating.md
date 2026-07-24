@@ -1,4 +1,4 @@
-﻿# Finding Your Way Around
+# Finding Your Way Around
 
 Once you're logged in, the app has three main areas: navigation, the top bar, and the main work area. What you see is shaped by your [role](../roles/overview.md) — lower roles simply have fewer menu items.
 
@@ -46,6 +46,18 @@ On mobile, some labels collapse so controls stay touch-friendly.
 ## The context banner
 
 The context banner tells you which kingdom/alliance and role your actions apply to. If a player or event seems missing, check this context first.
+
+## Custom 404 Page & Deep Route Handling
+
+If you navigate to an invalid or unavailable path:
+- **Custom 404 Page**: The platform displays a styled 404 NotFound page with direct navigation buttons to return to your active dashboard.
+- **SPA Base Path Support**: Navigating under custom deployment paths (such as `/games/kingshot/`) resolves all deep links, static assets, and sub-routes seamlessly.
+
+## Standardized Loading States (`RouteLoading`)
+
+During page transitions and initial data fetching:
+- **RouteLoading Indicator**: An animated loading panel communicates active data fetching without layout flickering.
+- **LoadingPanel**: Component placeholders preserve page layout structure until server data completes loading.
 
 ## Related
 

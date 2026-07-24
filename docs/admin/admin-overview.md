@@ -10,7 +10,10 @@ The admin area is where you manage the platform across all kingdoms.
 
 The most important parts are:
 
+- [Platform Console Observability](platform-console.md)
 - [Subscriptions & Usage Manager](subscriptions-dashboard.md)
+- [Manage Roles & Access Control](manage-roles.md)
+- [Permissions Catalog](permissions.md)
 - [Create & Edit Plans](manage-plans.md)
 - [Assign Plans Directly](assign-plans.md)
 - [Suspend & Unsuspend](suspend-subjects.md)
@@ -19,6 +22,15 @@ The most important parts are:
 - [Email Settings](email-settings.md)
 - [Theme Settings](theme-settings.md)
 - [Registration Settings](registration-settings.md)
+
+## Admin Dashboard Design & Layout
+
+The Admin Portal features a tabbed navigation system and responsive administration UI:
+
+- **Tabbed Dashboard Navigation**: Seamlessly toggle between Users, Roles, Subscriptions, Platform Observability, and System Configuration.
+- **User Creation Modal**: Streamlined modal overlay for creating and provisioning new administrator and user accounts.
+- **Dynamic Tool Counter**: Real-time counter displaying total active tool suites, background processors, and operational modules.
+- **Responsive Mobile/Tablet Views**: User management lists transform automatically into responsive action cards on mobile viewports.
 
 You also have the broader senior-admin tools already documented elsewhere:
 

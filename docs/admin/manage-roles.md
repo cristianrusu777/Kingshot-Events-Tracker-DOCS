@@ -20,13 +20,27 @@ Use the Roles area when you need to:
 
 ## System roles vs custom roles
 
-The app has five built-in system roles:
+The app includes built-in system roles:
 
-- `Supreme Admin`
-- `King`
-- `Alliance Leader`
-- `Co-Leader`
-- `Alliance Player`
+- `Supreme Admin` (Platform-wide global access)
+- `Moderator` (Scoped content & user moderation privileges)
+- `King` (Kingdom-scoped administration)
+- `Alliance Leader` & `Co-Leader` (Alliance management)
+- `Alliance Player` (Standard player access)
+
+## AttributeBadge Component & UI Display
+
+Roles are displayed across user management tables, profiles, and administrative headers using the visual **AttributeBadge Component**. 
+
+Attribute badges dynamically render role badges with distinct color themes, scope indicators (`Global`, `Kingdom`, `Alliance`), and priority flags for clear visual identification.
+
+## Automatic Session Revocation
+
+When a user's role permissions, assigned roles, or credentials are modified:
+
+- **Immediate Session Invalidation**: Active sessions for the affected user are automatically revoked across all devices and active browsers.
+- **Re-Authentication Prompt**: The affected user is prompted to sign in again to receive their updated access token and refreshed permission context.
+- **Tenant Scope Protection**: Kingdom and alliance administrators are strictly prevented from assigning roles outside their authorized tenant boundary.
 
 Important rules:
 

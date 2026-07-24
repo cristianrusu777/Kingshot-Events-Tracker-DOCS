@@ -2,7 +2,14 @@
 
 Screenshot imports are built to be safe first. Uploading a screenshot does **not** immediately save live player results. It creates an import and a set of review rows that you check before accepting.
 
-![Imports page](../images/imports-page.png)
+## Modernized Imports UI & Features
+
+The Imports interface received major usability and visual hierarchy improvements:
+
+- **Enhanced Provider Cards**: Visual provider cards categorized into *Free*, *With Keys*, and *Premium* tiers with live status indicators and real-time advisory handling.
+- **Processor Advisory Banners**: Instant contextual alerts displaying provider warnings, schema validation errors, and rate limit notices before processing starts.
+- **Interactive Screenshot Preview**: Embedded `ScreenshotPreview` component offering zoom controls, image inspection, and row-to-screenshot bounding box alignment.
+- **Responsive Mobile Card Grids**: Import queues and review tables transform into clean, touch-friendly cards on smaller viewports.
 
 ## The import lifecycle
 

@@ -1,16 +1,13 @@
-﻿# Processing Console
+# Processing Console
 
-Processing Console is the live processing event stream. It is separate from Processing Services.
+## Purpose & Enhanced Capabilities
 
-## Purpose
+Use the Processing Console to inspect:
 
-Use it to inspect:
-
-- OCR/import processing events;
-- processor messages;
-- recent job errors;
-- import IDs and durations;
-- filtered processor/severity streams.
+- **Live Processing Event Stream**: Real-time event logging across all active OCR and spreadsheet processing jobs.
+- **Processor Advisory Handling**: Integrated advisory alerts highlighting key quota warnings, image parsing issues, and worker timeouts.
+- **Job Diagnostics & Performance**: Detailed execution timings, import IDs, and exact error stack traces for failed jobs.
+- **Filterable Severity Streams**: Multi-select filtering by processor provider (Terra, Henod, Gemini, OpenAI) and log severity level (Info, Warning, Error).
 
 Configuration belongs in [Processing Services](../admin/processing-services.md), not here.
 
