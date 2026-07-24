@@ -46,10 +46,6 @@ export default withMermaid(
         { text: 'Subscriptions', link: '/subscriptions/overview' },
         { text: 'Roadmap', link: '/roadmap/README' },
         {
-          text: 'Open Tracker',
-          link: 'https://ralyvora.com/games/kingshot/'
-        },
-        {
           text: 'Ralyvora',
           link: 'https://ralyvora.com/'
         }
