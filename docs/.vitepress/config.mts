@@ -41,6 +41,7 @@ export default withMermaid(
         { text: 'Start Here', link: '/getting-started/what-is-the-tracker' },
         { text: 'User Guides', link: '/how-to/players-directory' },
         { text: 'Castle Positions', link: '/castle-positions/overview' },
+        { text: 'Simulators & Lab', link: '/simulators/overview' },
         { text: 'Imports & OCR', link: '/imports/overview' },
         { text: 'Subscriptions', link: '/subscriptions/overview' },
         { text: 'Roadmap', link: '/roadmap/README' },

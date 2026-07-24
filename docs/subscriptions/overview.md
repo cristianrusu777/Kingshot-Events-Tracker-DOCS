@@ -28,6 +28,8 @@ Wherever you manage a kingdom or alliance, there's a **Subscription & Usage** pa
 
 ![Usage panel with warnings and exceeded limits](../images/subs-usage-warning.png)
 
+## Plan Catalog & Support View
+
 Where you find it:
 
 - **King** — on the kingdom's detail page (via **Kingdoms**).

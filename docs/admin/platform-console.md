@@ -1,4 +1,4 @@
-﻿# Platform Console
+# Platform Console
 
 > Supreme Admin only. Standalone app at `platform-console/`.
 
@@ -15,6 +15,19 @@ The image above is rendered with fixed sample activity. It demonstrates the comp
 - current page/activity tracking;
 - processor/import/subscription summaries;
 - read-only command output.
+
+## Observability Sections
+
+The Platform Console includes specialized monitoring sections:
+
+| Section | Description | Key Indicators Tracked |
+| --- | --- | --- |
+| **System Configuration** | Global settings, environment variables, base path support | Active base path (`/games/kingshot/`), feature toggles, environment state |
+| **Providers** | External AI & OCR service integration health | Gemini/OpenAI key status, Henod worker status, error rates |
+| **Audit Log** | Immutable administrative activity stream | User actions, role changes, configuration edits, timestamps |
+| **Security Events** | Real-time security telemetry & session state | Failed authentication, CSRF exemptions, instant session revocations |
+| **Subscriptions & Usage** | Real-time plan usage & quota tracking | Active kingdom/alliance grants, quota warnings, plan suspensions |
+| **Bear Data & ML** | Machine Learning model performance monitoring | Inference latency, prediction variance, dataset drift for `/bear-ml/predict` |
 
 Commands remain read-only. They must not expose API keys, tokens, passwords, or secret env values.
 
