@@ -108,13 +108,12 @@ graph TD
 
 ---
 
-## Account Progress Planner & Paid Reforge Policy
+## Paid Reforge Policy
 
 Administrative settings can control whether advanced paid reforge recommendations are accessible to users:
 
 ```mermaid
 flowchart TD
-    Req[User Requests Reforge Step Plan] --> Guard{Account Progress Planner Enabled?}
     Guard -- Yes --> OpenPlan[Display Free & Paid Resource Optimization Options]
     Guard -- No --> RestrictPlan[Restrict to Free In-Game Reforge Paths Only]
     RestrictPlan --> Banner[Show Policy Notice Banner]

@@ -10,16 +10,16 @@ The **Strategy & Simulators Suite** is now live, introducing high-precision Bear
 
 ## At a Glance: Key Changes & Before/After Operational Matrix
 
-| Functional Area | Previous State | Current Capabilities | Primary Benefit |
-| --- | --- | --- | --- |
-| **Bear Trap Events** | Rough manual estimation | 4-scope composition map, Truegold troop effects, verified skill evidence, ML predictions | Accurate damage modeling & optimal rally setup |
-| **Hero Gear Reforging** | Unclear XP recycling losses | Precise donor XP recovery math, color-coded delta metrics, slot filtering | Zero wasted XP when upgrading equipment |
-| **Admin Observability** | Basic system logs | Multi-tab Platform Console: Security events, Bear ML telemetry, System Config, Audit Logs | Real-time platform visibility & monitoring |
-| **Access Control & Roles** | Simple role lists | Refactored role management, `AttributeBadge` display, tenant scope, session revocation | Granular security & immediate permission enforcement |
-| **Global Banners** | Unconstrained banner edits | Hardened publication logic, uniqueness constraints, transactional integrity | Secure & policy-compliant banner management |
-| **Subscription Catalog** | Basic plan display | Visual hierarchy redesign, dedicated `PlanCatalog` support page, clear feature cards | Streamlined plan selection & support |
-| **Routing & UX** | Generic error fallbacks | Custom responsive 404 page, SPA Base Path support, standardized `RouteLoading` UI | Polished navigation & seamless sub-path deployment |
-| **Castle Positions** | Admin list only, no player self-service | Dashboard KPIs & search, player-linked overview, public application flow with account creation/login, split menu navigation | Full self-service application cycle for players |
+| Functional Area            | Previous State                          | Current Capabilities                                                                                                        | Primary Benefit                                      |
+| -------------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| **Bear Trap Events**       | Rough manual estimation                 | 4-scope composition map, Truegold troop effects, verified skill evidence, ML predictions                                    | Accurate damage modeling & optimal rally setup       |
+| **Hero Gear Reforging**    | Unclear XP recycling losses             | Precise donor XP recovery math, color-coded delta metrics, slot filtering                                                   | Zero wasted XP when upgrading equipment              |
+| **Admin Observability**    | Basic system logs                       | Multi-tab Platform Console: Security events, Bear ML telemetry, System Config, Audit Logs                                   | Real-time platform visibility & monitoring           |
+| **Access Control & Roles** | Simple role lists                       | Refactored role management, `AttributeBadge` display, tenant scope, session revocation                                      | Granular security & immediate permission enforcement |
+| **Global Banners**         | Unconstrained banner edits              | Hardened publication logic, uniqueness constraints, transactional integrity                                                 | Secure & policy-compliant banner management          |
+| **Subscription Catalog**   | Basic plan display                      | Visual hierarchy redesign, dedicated `PlanCatalog` support page, clear feature cards                                        | Streamlined plan selection & support                 |
+| **Routing & UX**           | Generic error fallbacks                 | Custom responsive 404 page, SPA Base Path support, standardized `RouteLoading` UI                                           | Polished navigation & seamless sub-path deployment   |
+| **Castle Positions**       | Admin list only, no player self-service | Dashboard KPIs & search, player-linked overview, public application flow with account creation/login, split menu navigation | Full self-service application cycle for players      |
 
 ---
 
@@ -34,7 +34,6 @@ The platform now features a dedicated Strategy & Simulators bounded context:
 - **[Hero Gear & Reforge Simulator](../simulators/hero-gear-reforge.md)**:
   - **Donor Piece Detection & XP Recovery Math**: Computes exact net recoverable experience from donor gear minus dismantling penalties.
   - **Enhanced Gear Comparison**: Color-coded delta metrics (<span style="color: #10b981;">+green</span> for gains, <span style="color: #ef4444;">-red</span> for drops), hero class & equipment slot filtering.
-  - **Paid Reforge Policy Guard**: Restricts paid reforge recommendations when account progress planner feature toggles are administrative-disabled.
 
 ---
 
@@ -95,14 +94,14 @@ User experience and deployment flexibility have been polished:
 
 ## Documentation Quick Links
 
-| Topic | Guide |
-| --- | --- |
-| Simulators Overview | [Strategy & Simulators Overview](../simulators/overview.md) |
-| Bear Trap Strategy Lab | [Bear Trap Strategy Lab & Engine](../simulators/bear-trap-lab.md) |
-| Hero Gear & Reforge | [Hero Gear & Reforge Simulator](../simulators/hero-gear-reforge.md) |
-| Admin Portal & Console | [Platform Console Guide](../admin/platform-console.md) |
-| Managing Roles | [Manage Roles & Access](../admin/manage-roles.md) |
-| Subscriptions | [Subscriptions Overview](../subscriptions/overview.md) |
+| Topic                  | Guide                                                               |
+| ---------------------- | ------------------------------------------------------------------- |
+| Simulators Overview    | [Strategy & Simulators Overview](../simulators/overview.md)         |
+| Bear Trap Strategy Lab | [Bear Trap Strategy Lab & Engine](../simulators/bear-trap-lab.md)   |
+| Hero Gear & Reforge    | [Hero Gear & Reforge Simulator](../simulators/hero-gear-reforge.md) |
+| Admin Portal & Console | [Platform Console Guide](../admin/platform-console.md)              |
+| Managing Roles         | [Manage Roles & Access](../admin/manage-roles.md)                   |
+| Subscriptions          | [Subscriptions Overview](../subscriptions/overview.md)              |
 
 ---
 
