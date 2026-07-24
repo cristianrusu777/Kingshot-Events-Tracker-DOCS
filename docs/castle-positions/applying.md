@@ -86,4 +86,4 @@ Want to know how requested times are compared after review? Read [Candidate Sele
 
 ## Troubleshooting
 
-If submission fails, check the application window, required fields, selected UTC time, valid resource values, General allocation total and account choice. If you cannot resolve it, send the kingdom team the kingdom, cycle and visible validation message—never your password. See [Castle troubleshooting](troubleshooting.md).
+If submission fails, check the application window, required fields, selected UTC time, valid resource values, General allocation total and account choice. If you cannot resolve it, send the kingdom team the kingdom, cycle and visible validation message - never your password. See [Castle troubleshooting](troubleshooting.md).

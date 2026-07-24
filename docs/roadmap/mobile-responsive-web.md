@@ -10,10 +10,10 @@ Kingshot Event Tracker now includes a responsive web pass for phones, tablets, a
 
 | Viewport | Expected behavior |
 |---|---|
-| Small mobile, 360–430px | Drawer navigation, single-column forms/cards, horizontally scrollable dense tables, full-width modal/bottom-sheet behavior. |
-| Large mobile, 431–767px | Same as small mobile with slightly roomier cards and toolbar controls. |
-| Tablet portrait, 768–900px | Drawer/compact navigation, one or two-column cards, readable scrollable tables. |
-| Tablet landscape, 901–1199px | Multi-column cards where safe, wider admin layouts, charts in two columns. |
+| Small mobile, 360-430px | Drawer navigation, single-column forms/cards, horizontally scrollable dense tables, full-width modal/bottom-sheet behavior. |
+| Large mobile, 431-767px | Same as small mobile with slightly roomier cards and toolbar controls. |
+| Tablet portrait, 768-900px | Drawer/compact navigation, one or two-column cards, readable scrollable tables. |
+| Tablet landscape, 901-1199px | Multi-column cards where safe, wider admin layouts, charts in two columns. |
 | Desktop, 1200px+ | Full dashboard layout with sidebar and dense tables. |
 
 ## Navigation on mobile

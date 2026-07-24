@@ -1,6 +1,6 @@
 # Safety Rules You'll Run Into
 
-The app has a set of built‑in guardrails that block certain dangerous actions — even for admins. They exist so nobody can accidentally lock everyone out, delete the wrong account, or destroy a shared default. When one of these kicks in, you'll see a clear message and the action is stopped.
+The app has a set of built‑in guardrails that block certain dangerous actions - even for admins. They exist so nobody can accidentally lock everyone out, delete the wrong account, or destroy a shared default. When one of these kicks in, you'll see a clear message and the action is stopped.
 
 None of these are bugs. This page explains each rule, the message you'll see, and the right way to get what you wanted.
 
@@ -26,7 +26,7 @@ None of these are bugs. This page explains each rule, the message you'll see, an
 
 ## 3. You can't remove your own last critical role
 
-**What's blocked:** taking away your *own* final senior role when it would leave you without the access you need — the app calls this being "locked out."
+**What's blocked:** taking away your *own* final senior role when it would leave you without the access you need - the app calls this being "locked out."
 
 **Message you'll see:** *"You cannot remove your own role because it would lock you out."*
 
@@ -54,11 +54,11 @@ Kings have a strict **ownership** boundary. A King can manage their kingdom, but
 - The alliance was **created independently** (self‑service).
   *Message:* "You cannot delete alliances that were created independently."
 
-**Why:** it keeps a King from removing people or groups they don't own — protecting self‑registered members, other admins' work, and independent alliances.
+**Why:** it keeps a King from removing people or groups they don't own - protecting self‑registered members, other admins' work, and independent alliances.
 
 **What to do instead:** ask the Supreme Admin, who isn't bound by the ownership rule, to handle removals that fall outside what you created.
 
-> **Note on grants and kingdom access:** a King's authority is confined to their **own** kingdom. Kingdom‑level actions — including offering premium plan **grants** to alliances — only work for the kingdom the King runs; trying to reach another kingdom is refused. How many alliances a King can grant to is decided by the kingdom's plan, not a fixed number. Grants are covered fully in the subscriptions section.
+> **Note on grants and kingdom access:** a King's authority is confined to their **own** kingdom. Kingdom‑level actions - including offering premium plan **grants** to alliances - only work for the kingdom the King runs; trying to reach another kingdom is refused. How many alliances a King can grant to is decided by the kingdom's plan, not a fixed number. Grants are covered fully in the subscriptions section.
 
 ## 5. Default events can be edited but not deleted
 
@@ -72,10 +72,10 @@ Kings have a strict **ownership** boundary. A King can manage their kingdom, but
 
 ## What these rules have in common
 
-Every rule above answers the same question — *"what if someone does the one thing that can't be undone?"* — by simply not allowing it. If you hit one of these messages, you haven't done anything wrong; the app is protecting the platform. The path forward is almost always **"have the right person do it"** or **"set up a replacement first."**
+Every rule above answers the same question - *"what if someone does the one thing that can't be undone?"* - by simply not allowing it. If you hit one of these messages, you haven't done anything wrong; the app is protecting the platform. The path forward is almost always **"have the right person do it"** or **"set up a replacement first."**
 
 ## Related
 
-- ["You don't have access"](../getting-started/access-denied.md) — other refusals and what they mean.
-- [What "Delete" Really Does](../reference/soft-delete.md) — why most "deletes" are recoverable anyway.
-- [Roles Explained](overview.md) — who sits where.
+- ["You don't have access"](../getting-started/access-denied.md) - other refusals and what they mean.
+- [What "Delete" Really Does](../reference/soft-delete.md) - why most "deletes" are recoverable anyway.
+- [Roles Explained](overview.md) - who sits where.

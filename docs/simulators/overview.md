@@ -82,5 +82,5 @@ Access to advanced simulation features is governed by tenant policy and subscrip
 
 ## Recommended Next Steps
 
-- **[Bear Trap Strategy Lab Guide](./bear-trap-lab.md)** — Master rally composition, stat sources, and damage calculations.
-- **[Hero Gear & Reforge Guide](./hero-gear-reforge.md)** — Learn how to maximize combat power and optimize donor piece dismantling.
+- **[Bear Trap Strategy Lab Guide](./bear-trap-lab.md)** - Master rally composition, stat sources, and damage calculations.
+- **[Hero Gear & Reforge Guide](./hero-gear-reforge.md)** - Learn how to maximize combat power and optimize donor piece dismantling.

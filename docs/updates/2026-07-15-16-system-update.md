@@ -1,6 +1,6 @@
-# 15–16 July 2026 System Update
+# 15-16 July 2026 System Update
 
-This update covers the Castle Positions release and the related account, email, access, user-lifecycle, subscription/usage and usability corrections delivered across 15–16 July 2026. It describes what users see now, not planned behavior.
+This update covers the Castle Positions release and the related account, email, access, user-lifecycle, subscription/usage and usability corrections delivered across 15-16 July 2026. It describes what users see now, not planned behavior.
 
 ::: tip New Feature
 Castle Positions & KvK Applications is now a kingdom workflow for public applications, preferred UTC times, resource information, reviewer decisions, suggestion-based planning, published schedules and controlled changes.

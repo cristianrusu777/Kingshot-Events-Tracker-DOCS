@@ -25,15 +25,15 @@ Use a password you don't reuse elsewhere. If you were given a temporary password
 
 ## If you were forced to change your password
 
-Sometimes an admin creates your account with a temporary password and requires you to set your own the first time you log in. If so, you'll be sent to the password step automatically — just choose a new password and save.
+Sometimes an admin creates your account with a temporary password and requires you to set your own the first time you log in. If so, you'll be sent to the password step automatically - just choose a new password and save.
 
 ## What you can't change here
 
-- **Your role** — roles are set by admins, not on your own profile. See [Roles Explained](../roles/overview.md).
-- **Which kingdom or alliance you belong to** — that's also managed by admins.
+- **Your role** - roles are set by admins, not on your own profile. See [Roles Explained](../roles/overview.md).
+- **Which kingdom or alliance you belong to** - that's also managed by admins.
 
 If any of those need to change, contact your Alliance Leader, King, or Supreme Admin.
 
 ## Forgot your current password?
 
-If you can't sign in at all, use [Reset a Forgotten Password](forgot-password.md) instead — the profile page requires you to already be logged in.
+If you can't sign in at all, use [Reset a Forgotten Password](forgot-password.md) instead - the profile page requires you to already be logged in.

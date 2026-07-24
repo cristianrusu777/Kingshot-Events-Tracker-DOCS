@@ -27,7 +27,7 @@ Use **Send test email** after saving to confirm the current setup can send mail 
 
 ## Which system emails are sent
 
-The app sends email only for a small set of **account events** — all tied to logging in. There are exactly three automatic messages, plus the manual test email:
+The app sends email only for a small set of **account events** - all tied to logging in. There are exactly three automatic messages, plus the manual test email:
 
 | Event that triggers it | Who receives it | What it contains |
 |---|---|---|

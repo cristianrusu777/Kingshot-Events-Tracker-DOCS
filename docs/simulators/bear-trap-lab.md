@@ -84,7 +84,7 @@ graph LR
 | **Alliance Scope** | Defines alliance-wide rally capacity, alliance science buffs, and rally joiner distribution rules. | Rally Hall Cap, Alliance Attack % |
 | **Kingdom Scope** | Accounts for kingdom-level executive titles (e.g., King, Supreme Commander) and kingdom event buffs. | Global Attack %, Kingdom Skill Bonus |
 | **Personal Scope** | Represents individual player profile stats, active hero widgets, gear pieces, and troop march limits. | Personal March Cap, Hero Widget Levels |
-| **Target Scope** | Configures the Bear Trap level, defense multiplier, and target combat attributes. | Bear Trap Level (1–30), Bear Defense Base |
+| **Target Scope** | Configures the Bear Trap level, defense multiplier, and target combat attributes. | Bear Trap Level (1-30), Bear Defense Base |
 
 ---
 

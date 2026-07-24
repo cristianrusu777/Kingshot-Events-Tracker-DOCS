@@ -71,7 +71,7 @@ import { withBase } from 'vitepress'
 
 ## Latest Updates
 
-### 24 July 2026 System Update — Strategy & Simulators, Admin Observability, and Platform Refactor
+### 24 July 2026 System Update - Strategy & Simulators, Admin Observability, and Platform Refactor
 
 ::: tip Major Feature Release
 **Strategy & Simulators Suite** is now live! Featuring high-precision **Bear Trap combat modeling**, **4-scope rally composition maps** (Alliance, Kingdom, Personal, Target), **Hero Gear reforge XP recovery calculation**, **color-coded gear comparison diffs**, and **Bear ML damage predictions** (`/bear-ml/predict`).
@@ -81,7 +81,7 @@ The 24 July update also introduces Platform Console Observability modules (Secur
 
 [Read the complete 24 July 2026 System Update](/updates/2026-07-24-system-update) · [Explore Strategy & Simulators](/simulators/overview) · [Open Bear Trap Strategy Lab](/simulators/bear-trap-lab) · [Open Hero Gear Simulator](/simulators/hero-gear-reforge)
 
-### 15–16 July 2026 System Update — Castle Positions and platform patches
+### 15-16 July 2026 System Update - Castle Positions and platform patches
 
 ::: tip New Feature
 **Castle Positions & KvK Applications** gives a Kingdom one workflow for public applications, preferred UTC times, resource information, Minister/King review, suggestion-based candidate comparison, stage/position/time-slot planning, draft and published schedules, revisions, and conditional communication.
@@ -89,11 +89,11 @@ The 24 July update also introduces Platform Console Observability modules (Secur
 
 The same update corrects login versus registration behavior, account/contact-email handling, password-reset matching, disabled-user visibility, Minister of Justice access, and subscription/usage loading and pagination.
 
-[Read the complete 15–16 July 2026 System Update](/updates/2026-07-15-16-system-update) · [Open Castle Positions](/castle-positions/overview)
+[Read the complete 15-16 July 2026 System Update](/updates/2026-07-15-16-system-update) · [Open Castle Positions](/castle-positions/overview)
 
-### Patch 2026-07-13 — Last 24h Platform, Security, Analytics, Console, Admin & Responsive Update
+### Patch 2026-07-13 - Last 24h Platform, Security, Analytics, Console, Admin & Responsive Update
 
-**Coverage:** the complete 12–13 July 2026 change window. This release updates responsive workflows, all processor categories and safe diagnostics, Processing Services/Console, the standalone Platform Console, analytics and premium visibility, administration, terms/privacy, upload safety, spreadsheet safety, accessibility, and documentation navigation.
+**Coverage:** the complete 12-13 July 2026 change window. This release updates responsive workflows, all processor categories and safe diagnostics, Processing Services/Console, the standalone Platform Console, analytics and premium visibility, administration, terms/privacy, upload safety, spreadsheet safety, accessibility, and documentation navigation.
 
 - Private screenshots and import assets are available only to signed-in people with the correct scope.
 - Spreadsheet imports now enforce stricter safety limits: file size, row count, column count, cell length, no formulas, no macros, no external links, and no legacy `.xls` files.
@@ -112,7 +112,7 @@ See:
 - [Current screenshot matrix](/updates/screenshot-matrix-2026-07-13)
 - [Privacy and safety safeguards](/reference/security-and-deployment)
 
-### Patch 2026-07-13 — Responsive UI, Admin Usability, and Console Updates
+### Patch 2026-07-13 - Responsive UI, Admin Usability, and Console Updates
 
 - Added mobile and tablet responsive layouts for dashboards, admin pages, analytics, imports, forms, modals, processor pages, and consoles.
 - Replaced the mobile sidebar behavior with a touch-friendly menu drawer.

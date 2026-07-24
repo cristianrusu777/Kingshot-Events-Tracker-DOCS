@@ -14,7 +14,7 @@ That means:
 
 ## Basic steps
 
-1. Create a key at [OpenAI API keys](https://platform.openai.com/api-keys). Copy it once — treat it like a password.
+1. Create a key at [OpenAI API keys](https://platform.openai.com/api-keys). Copy it once - treat it like a password.
 2. In the tracker, open **Settings → Image Processing**.
 3. Choose **OpenAI**.
 4. Paste your API key.
