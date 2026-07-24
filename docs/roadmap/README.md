@@ -1,6 +1,6 @@
 # Future Roadmap
 
-> **Status: Planned / Future — not implemented yet.**
+> **Status: Planned / Future - not implemented yet.**
 
 This section collects product ideas for possible future versions of Kingshot Event Tracker. It is planning material, not a promise, release announcement, entitlement, or description of the current application.
 

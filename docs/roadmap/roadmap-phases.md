@@ -4,7 +4,7 @@
 
 Phases describe dependencies, not committed dates. Research, privacy review, and data quality may change their order or scope.
 
-## Phase A — Mobile responsive web foundation
+## Phase A - Mobile responsive web foundation
 
 - **Goal:** Make core workflows usable at phone and tablet widths.
 - **Features:** Responsive navigation, forms, tables, uploads, review, and usage panels.
@@ -15,7 +15,7 @@ Phases describe dependencies, not committed dates. Research, privacy review, and
 - **Risks:** Hiding critical columns or actions.
 - **Acceptance:** Core dashboard and upload/review journeys require no horizontal page scrolling.
 
-## Phase B — User-friendly redesign and guided flows
+## Phase B - User-friendly redesign and guided flows
 
 - **Goal:** Make next actions, scope, and consequences obvious.
 - **Features:** Setup and event wizards, review assistant, safer dialogs, useful empty states, plain-language settings.
@@ -26,7 +26,7 @@ Phases describe dependencies, not committed dates. Research, privacy review, and
 - **Risks:** Disrupting experienced users.
 - **Acceptance:** Representative users complete setup and a first import with minimal outside help.
 
-## Phase C — Advanced analytics foundation
+## Phase C - Advanced analytics foundation
 
 - **Goal:** Establish trustworthy metrics and comparisons.
 - **Features:** Coverage indicators, event/player trends, stage comparison, KvK before/after, custom-query foundation.
@@ -37,7 +37,7 @@ Phases describe dependencies, not committed dates. Research, privacy review, and
 - **Risks:** Invalid comparisons and slow queries.
 - **Acceptance:** Every metric exposes scope, window, definition, and data coverage.
 
-## Phase D — Smart suggestions and recommendations
+## Phase D - Smart suggestions and recommendations
 
 - **Goal:** Turn trustworthy analytics into explainable follow-up ideas.
 - **Features:** Reminders, attention lists, reward candidates, event warnings, alliance health components.
@@ -48,7 +48,7 @@ Phases describe dependencies, not committed dates. Research, privacy review, and
 - **Risks:** False positives, stigma, and automation bias.
 - **Acceptance:** Every suggestion shows evidence, confidence, corrective actions, and dismissal controls.
 
-## Phase E — Advanced screenshot/OCR improvements
+## Phase E - Advanced screenshot/OCR improvements
 
 - **Goal:** Improve source quality before adding video.
 - **Features:** Region detection, field confidence, deduplication, source trace, recurring-error analysis.
@@ -59,7 +59,7 @@ Phases describe dependencies, not committed dates. Research, privacy review, and
 - **Risks:** Language/device bias and overconfident OCR.
 - **Acceptance:** Measured quality improves while uncertain rows remain reviewable drafts.
 
-## Phase F — Video OCR processor
+## Phase F - Video OCR processor
 
 - **Goal:** Convert short recordings into deduplicated review rows.
 - **Features:** Frame sampling, table detection, frame dedupe, row merge, conflicts, confidence, review table.
@@ -70,7 +70,7 @@ Phases describe dependencies, not committed dates. Research, privacy review, and
 - **Risks:** Duplicate results, cost, privacy, and device variability.
 - **Acceptance:** Duplicate frames do not duplicate results and nothing saves before acceptance.
 
-## Phase G — Premium reports and exports
+## Phase G - Premium reports and exports
 
 - **Goal:** Package trusted analytics for recurring decisions.
 - **Features:** Weekly alliance, monthly kingdom, player, event, reward, quality, and usage reports.
@@ -81,7 +81,7 @@ Phases describe dependencies, not committed dates. Research, privacy review, and
 - **Risks:** Stale exports and oversharing.
 - **Acceptance:** Reports include scope, filters, generation time, coverage, and permission-safe content.
 
-## Phase H — Discord notifications and summaries
+## Phase H - Discord notifications and summaries
 
 - **Goal:** Deliver approved reminders and summaries outside the app.
 - **Features:** Opt-in rules, previews, channel allowlists, quiet hours, delivery audit.
@@ -92,7 +92,7 @@ Phases describe dependencies, not committed dates. Research, privacy review, and
 - **Risks:** Spam, wrong-channel delivery, and privacy leaks.
 - **Acceptance:** External delivery is permission-checked, previewable, rate-limited, and auditable.
 
-## Phase I — Premium mobile companion app MVP
+## Phase I - Premium mobile companion app MVP
 
 - **Goal:** Provide a safe, user-initiated capture queue.
 - **Features:** Pairing, screenshot capture/import, event modes, encrypted drafts, upload handoff, notifications.
@@ -103,7 +103,7 @@ Phases describe dependencies, not committed dates. Research, privacy review, and
 - **Risks:** Account security, capture permissions, and app-store policy.
 - **Acceptance:** Capture is explicit, drafts are revocable, and no gameplay automation exists.
 
-## Phase J — Companion video capture and offline queue
+## Phase J - Companion video capture and offline queue
 
 - **Goal:** Extend the companion to controlled video and resilient offline drafts.
 - **Features:** Short recording queue, local dedupe hints, upload resume, retention controls, web review handoff.

@@ -83,7 +83,7 @@ The planner compares UTC slot start times. An explicit unavailable time always w
 | Any | The player chose any available time | Last |
 | None | Unavailable or not selected/tolerated | Never proposed |
 
-The default nearby window is **60 minutes**, but an administrator can request 0–720 minutes for a suggestion calculation. Nearby means either earlier or later within that symmetric UTC range; the nearer cell is preferred. The algorithm does not separately prefer “one hour before” or “one hour after.” Because comparisons use actual UTC timestamps, crossing midnight is simply another earlier/later UTC interval; local device timezone never changes the decision.
+The default nearby window is **60 minutes**, but an administrator can request 0-720 minutes for a suggestion calculation. Nearby means either earlier or later within that symmetric UTC range; the nearer cell is preferred. The algorithm does not separately prefer “one hour before” or “one hour after.” Because comparisons use actual UTC timestamps, crossing midnight is simply another earlier/later UTC interval; local device timezone never changes the decision.
 
 <div class="castle-diagram castle-diagram--standard">
 

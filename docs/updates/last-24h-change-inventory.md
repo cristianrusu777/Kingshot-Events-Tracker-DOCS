@@ -1,6 +1,6 @@
 # Last 24-Hour Change Inventory
 
-> **Coverage window:** 12–13 July 2026.
+> **Coverage window:** 12-13 July 2026.
 
 This inventory is the documentation checklist for the complete change window. “Documented” means the current guide was updated or the subject is covered by the detailed patch notes. “Not applicable” means the available demonstration data did not expose that state.
 

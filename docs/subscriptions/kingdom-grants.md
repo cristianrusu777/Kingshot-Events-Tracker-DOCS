@@ -2,7 +2,7 @@
 
 If your **kingdom** has a premium plan, you can share it with alliances inside your kingdom by offering them a **[grant](../getting-started/glossary.md#grant)**. A grant lets an alliance use the kingdom's premium plan (and eligible features) without buying its own. This guide is for **Kings** (and Supreme Admins acting on a kingdom).
 
-> A grant is an **offer**. It only takes effect once the alliance **accepts** it — see [Accept a Premium Offer](accept-grant.md). Offering a grant does not, by itself, make an alliance premium.
+> A grant is an **offer**. It only takes effect once the alliance **accepts** it - see [Accept a Premium Offer](accept-grant.md). Offering a grant does not, by itself, make an alliance premium.
 
 ## Before you start
 
@@ -15,9 +15,9 @@ If your **kingdom** has a premium plan, you can share it with alliances inside y
 
 ## How many alliances can I grant to?
 
-The number of grant "slots" you have **comes from your kingdom's plan** — it isn't a fixed universal number. A free kingdom plan has none; a premium kingdom plan includes a set number of slots.
+The number of grant "slots" you have **comes from your kingdom's plan** - it isn't a fixed universal number. A free kingdom plan has none; a premium kingdom plan includes a set number of slots.
 
-**To see your limit, check your Subscription & Usage panel** — the grant slots appear there as one of your resources, showing how many you've used and how many you have. If you try to offer more grants than your plan allows, the app stops you with a "grant limit reached" message.
+**To see your limit, check your Subscription & Usage panel** - the grant slots appear there as one of your resources, showing how many you've used and how many you have. If you try to offer more grants than your plan allows, the app stops you with a "grant limit reached" message.
 
 ## Offering a grant
 
@@ -25,7 +25,7 @@ The number of grant "slots" you have **comes from your kingdom's plan** — it i
 2. Choose the **alliance** to grant to.
 3. Confirm the offer.
 
-The offer is now **pending** — waiting for that alliance's leader (or co-leader) to accept. Nothing changes for the alliance until they do.
+The offer is now **pending** - waiting for that alliance's leader (or co-leader) to accept. Nothing changes for the alliance until they do.
 
 ## The life of a grant
 
@@ -57,23 +57,23 @@ A grant moves through a clear set of states:
         └──────────────────────┘
 ```
 
-- **Pending** — offered, not yet answered.
-- **Active** — the alliance accepted; the kingdom plan now counts as their [effective plan](effective-plan.md) (shown as "Accepted kingdom grant").
-- **Rejected** — the alliance declined. No effect.
-- **Ended** — a previously active grant was revoked, either by you (the King) or given back by the alliance. It also ends if it expires.
+- **Pending** - offered, not yet answered.
+- **Active** - the alliance accepted; the kingdom plan now counts as their [effective plan](effective-plan.md) (shown as "Accepted kingdom grant").
+- **Rejected** - the alliance declined. No effect.
+- **Ended** - a previously active grant was revoked, either by you (the King) or given back by the alliance. It also ends if it expires.
 
 ## Revoking a grant
 
 You can revoke a grant you offered. The alliance can also give a grant back from their side. Either way, when a grant ends:
 
-- The alliance **loses the granted premium** — its [effective plan](effective-plan.md) drops back to whatever it has on its own (its direct plan, or the free tier).
+- The alliance **loses the granted premium** - its [effective plan](effective-plan.md) drops back to whatever it has on its own (its direct plan, or the free tier).
 - Any **[allocations](allocations.md)** you set for that alliance are removed.
 
-Revoking a grant does **not** affect your normal ability to manage the alliance as its King — it only removes the granted premium and its allocations.
+Revoking a grant does **not** affect your normal ability to manage the alliance as its King - it only removes the granted premium and its allocations.
 
 ## Sharing limits, not just features
 
-A grant lets several alliances draw on your kingdom plan. If you want to control how much of the kingdom's limits each granted alliance can use, set **[allocations](allocations.md)** — per-alliance slices of your kingdom's quotas.
+A grant lets several alliances draw on your kingdom plan. If you want to control how much of the kingdom's limits each granted alliance can use, set **[allocations](allocations.md)** - per-alliance slices of your kingdom's quotas.
 
 ## Optional cross-alliance analytics
 
@@ -96,6 +96,6 @@ Leaders cannot edit players or results, import screenshots, delete/restore data,
 
 ## Where to go next
 
-- [Accept a Premium Offer](accept-grant.md) — the alliance's side of this flow.
-- [Share Kingdom Quotas with Allocations](allocations.md) — divide your limits among granted alliances.
-- [Which Plan Applies to You](effective-plan.md) — how a grant fits the plan hierarchy.
+- [Accept a Premium Offer](accept-grant.md) - the alliance's side of this flow.
+- [Share Kingdom Quotas with Allocations](allocations.md) - divide your limits among granted alliances.
+- [Which Plan Applies to You](effective-plan.md) - how a grant fits the plan hierarchy.

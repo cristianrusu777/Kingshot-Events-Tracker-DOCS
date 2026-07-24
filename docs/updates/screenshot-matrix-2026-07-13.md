@@ -1,4 +1,4 @@
-# Current Screenshot Gallery — 13 July 2026
+# Current Screenshot Gallery - 13 July 2026
 
 ## Mobile and tablet
 

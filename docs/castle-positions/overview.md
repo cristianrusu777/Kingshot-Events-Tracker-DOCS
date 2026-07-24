@@ -49,4 +49,4 @@ flowchart TD
 
 Next step: applicants should read [Applying](applying.md); schedule teams should start with [Managing Castle Positions](managing.md).
 
-For the verified automatic decision process, read [Candidate Selection and Scheduling Logic](selection-algorithm.md). See also the [15–16 July system update](../updates/2026-07-15-16-system-update.md).
+For the verified automatic decision process, read [Candidate Selection and Scheduling Logic](selection-algorithm.md). See also the [15-16 July system update](../updates/2026-07-15-16-system-update.md).

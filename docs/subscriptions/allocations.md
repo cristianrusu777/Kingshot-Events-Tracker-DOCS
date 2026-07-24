@@ -1,6 +1,6 @@
 # Share Kingdom Quotas with Allocations
 
-When a King [grants](kingdom-grants.md) the kingdom's premium plan to several alliances, they all draw on the **same** kingdom limits. **Allocations** let a King divide those limits up — giving each granted alliance its own slice — so one alliance can't use up everything. This guide is for **Kings** (and Supreme Admins).
+When a King [grants](kingdom-grants.md) the kingdom's premium plan to several alliances, they all draw on the **same** kingdom limits. **Allocations** let a King divide those limits up - giving each granted alliance its own slice - so one alliance can't use up everything. This guide is for **Kings** (and Supreme Admins).
 
 ## What an allocation is
 
@@ -41,5 +41,5 @@ Revoking a grant removes that alliance's allocations along with it. If you re-gr
 
 ## Where to go next
 
-- [Kingdom Grants](kingdom-grants.md) — offering premium to alliances in the first place.
-- [Quota Warnings](quota-warnings.md) — what a granted alliance sees as it approaches its allocated limits.
+- [Kingdom Grants](kingdom-grants.md) - offering premium to alliances in the first place.
+- [Quota Warnings](quota-warnings.md) - what a granted alliance sees as it approaches its allocated limits.

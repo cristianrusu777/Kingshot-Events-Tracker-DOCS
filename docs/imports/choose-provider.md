@@ -47,8 +47,8 @@ Normal users see a safe message if Henod is temporarily unavailable. Supreme Adm
 
 Use your own personal processor key when you choose a With Keys option.
 
-- **Gemini** — see [Set Up Your Gemini API Key](gemini-key.md)
-- **OpenAI** — see [Set Up Your OpenAI API Key](openai-key.md)
+- **Gemini** - see [Set Up Your Gemini API Key](gemini-key.md)
+- **OpenAI** - see [Set Up Your OpenAI API Key](openai-key.md)
 
 ## Premium
 

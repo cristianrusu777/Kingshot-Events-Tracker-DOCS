@@ -8,7 +8,7 @@ The future analytics system should help users understand *what changed, why it m
 
 | Analytics idea | Purpose | Who benefits | Data used | What the user would see | Tier | Complexity | Main risks | Phase |
 |---|---|---|---|---|---|---|---|---|
-| Alliance health score | Summarize participation, reliability, growth, review debt, and roster stability | Leaders, Kings | Accepted results, attendance, roster changes, unresolved rows | 0–100 score, five sub-scores, trend, evidence | Premium Both | High | Oversimplification; unfair comparison | D |
+| Alliance health score | Summarize participation, reliability, growth, review debt, and roster stability | Leaders, Kings | Accepted results, attendance, roster changes, unresolved rows | 0-100 score, five sub-scores, trend, evidence | Premium Both | High | Oversimplification; unfair comparison | D |
 | Player activity score | Show recent involvement without equating absence with misconduct | Leaders | Attendance, accepted activity, recency | Score band, recent evidence, “insufficient data” state | Premium Alliance | Medium | Stigmatizing players | C |
 | Player reliability score | Estimate how consistently a player appears in expected events | Leaders | Eligible instances, accepted participation, manual corrections | Reliability percentage and event breakdown | Premium Alliance | Medium | Missing OCR mistaken for absence | C |
 | Event participation trends | Reveal attendance changes over time | All roles | Eligible players and accepted participation | Trend line, coverage, comparison window | Free summary; Premium detail | Medium | Eligibility changes distort trend | C |
@@ -44,7 +44,7 @@ Users should be able to open each component, see the exact window and evidence, 
 
 ## Player behavior insights
 
-Future behavior views may highlight attendance streaks, recurring misses, recovery after inactivity, event preferences, score volatility, and power-versus-participation patterns. These are observations about tracker records—not claims about motivation, character, or conduct.
+Future behavior views may highlight attendance streaks, recurring misses, recovery after inactivity, event preferences, score volatility, and power-versus-participation patterns. These are observations about tracker records - not claims about motivation, character, or conduct.
 
 ## Custom analytics builder
 

@@ -1,6 +1,6 @@
 # Finding Your Way Around
 
-Once you're logged in, the app has three main areas: navigation, the top bar, and the main work area. What you see is shaped by your [role](../roles/overview.md) — lower roles simply have fewer menu items.
+Once you're logged in, the app has three main areas: navigation, the top bar, and the main work area. What you see is shaped by your [role](../roles/overview.md) - lower roles simply have fewer menu items.
 
 ![Sidebar for a leader vs. a supreme admin](../images/nav-comparison.png)
 
@@ -8,7 +8,7 @@ The capture above is a sanitized navigation reference. On smaller screens the sa
 
 ## Desktop navigation
 
-On desktop, the sidebar appears on the left and groups pages into sections. You'll only see the sections your role can use, so your sidebar may be shorter than a colleague's — that's normal, not a bug.
+On desktop, the sidebar appears on the left and groups pages into sections. You'll only see the sections your role can use, so your sidebar may be shorter than a colleague's - that's normal, not a bug.
 
 | Section | What lives here | Who typically sees it |
 |---|---|---|

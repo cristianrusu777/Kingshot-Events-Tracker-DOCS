@@ -2,7 +2,7 @@
 
 When your King shares the kingdom's premium plan with your alliance, it arrives as a **[grant](../getting-started/glossary.md#grant)** offer that you must **accept** before it does anything. This guide is for **Alliance Leaders and Co-Leaders**.
 
-> **Your alliance does not become premium automatically just because your kingdom is premium.** The King has to offer a grant, and you have to accept it. Until you accept, your alliance stays on whatever plan it already has (its own, or the free tier). This is the single most common point of confusion — see [Which Plan Applies to You](effective-plan.md).
+> **Your alliance does not become premium automatically just because your kingdom is premium.** The King has to offer a grant, and you have to accept it. Until you accept, your alliance stays on whatever plan it already has (its own, or the free tier). This is the single most common point of confusion - see [Which Plan Applies to You](effective-plan.md).
 
 ## Finding your offer
 
@@ -28,9 +28,9 @@ If you don't want the offer, select **Reject**. Nothing changes for your allianc
 
 ## Which features do I actually get?
 
-A grant passes down only the **shareable** premium features the kingdom plan carries — not necessarily everything. So a granted alliance may get a subset of what a directly-subscribed premium alliance would have. Check your Subscription & Usage panel and the [Premium Features](premium-features.md) page to see what's active for you.
+A grant passes down only the **shareable** premium features the kingdom plan carries - not necessarily everything. So a granted alliance may get a subset of what a directly-subscribed premium alliance would have. Check your Subscription & Usage panel and the [Premium Features](premium-features.md) page to see what's active for you.
 
-One feature worth calling out: **Granted Kingdom Analytics** (the ability to see aggregate kingdom analytics) only appears if the grant you accepted specifically includes that feature. If your kingdom's plan doesn't carry it, accepting a grant won't unlock the kingdom analytics view — and that's expected, not a bug.
+One feature worth calling out: **Granted Kingdom Analytics** (the ability to see aggregate kingdom analytics) only appears if the grant you accepted specifically includes that feature. If your kingdom's plan doesn't carry it, accepting a grant won't unlock the kingdom analytics view - and that's expected, not a bug.
 
 ## Giving a grant back
 
@@ -51,6 +51,6 @@ Check these in order:
 
 ## Where to go next
 
-- [Which Plan Applies to You](effective-plan.md) — confirm the grant took effect.
-- [Premium Features](premium-features.md) — what unlocked.
-- [Direct Alliance Subscriptions](direct-alliance-subscription.md) — the alternative: your own plan.
+- [Which Plan Applies to You](effective-plan.md) - confirm the grant took effect.
+- [Premium Features](premium-features.md) - what unlocked.
+- [Direct Alliance Subscriptions](direct-alliance-subscription.md) - the alternative: your own plan.
