@@ -56,6 +56,8 @@ function readDocs(): Doc[] {
       }
     })
     .filter(doc => !['index.md', 'README.md'].includes(doc.relative))
+    // spend-optimizer is not a published feature - never surface in navigation
+    .filter(doc => !/spend-optimizer/i.test(doc.relative))
     .sort((a, b) => a.title.localeCompare(b.title, 'en'))
 }
 

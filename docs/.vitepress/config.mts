@@ -14,6 +14,8 @@ export default withMermaid(
     base,
     lastUpdated: true,
     cleanUrls: false,
+    // spend-optimizer is not a published feature - exclude permanently
+    srcExclude: ['**/spend-optimizer*.md', '**/simulators/spend-optimizer*.md'],
     ignoreDeadLinks: false,
 
     head: [
