@@ -1,1 +1,1 @@
-﻿# Kingshot-Events-Tracker-DOCS  
+# Kingshot Event Tracker Documentation

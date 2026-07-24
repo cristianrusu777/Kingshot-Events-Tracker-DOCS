@@ -82,19 +82,6 @@ export default withMermaid(
         }
       },
 
-      editLink: {
-        pattern:
-          'https://github.com/cristianrusu777/Kingshot-Events-Tracker-DOCS/edit/main/docs/:path',
-        text: 'Suggest a correction on GitHub'
-      },
-
-      socialLinks: [
-        {
-          icon: 'github',
-          link: 'https://github.com/cristianrusu777/Kingshot-Events-Tracker-DOCS'
-        }
-      ],
-
       footer: {
         message: 'Built for the Kingshot Event Tracker community.',
         copyright: 'Created by CRON #1625'
