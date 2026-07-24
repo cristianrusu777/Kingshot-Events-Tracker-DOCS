@@ -71,15 +71,15 @@ import { withBase } from 'vitepress'
 
 ## Latest Updates
 
-### 24 July 2026 System Update - Strategy & Simulators, Admin Observability, and Platform Refactor
+### 24 July 2026 - Castle Position Dashboard, Player Overview, Application Flow, and Fixes
 
-::: tip Major Feature Release
-**Strategy & Simulators Suite** is now live! Featuring high-precision **Bear Trap combat modeling**, **4-scope rally composition maps** (Alliance, Kingdom, Personal, Target), **Hero Gear reforge XP recovery calculation**, **color-coded gear comparison diffs**, and **Bear ML damage predictions** (`/bear-ml/predict`).
+::: tip Latest Changes
+**Castle Position** improvements are live today: admin dashboard search and KPI metrics, player-linked application flow with account creation/login, split navigation menu entries for players, Personal Analytics page improvements, and a documentation link in the app footer.
 :::
 
-The 24 July update also introduces Platform Console Observability modules (Security Events, Bear ML telemetry, Subscriptions & Usage monitoring), role refactoring with `AttributeBadge` integration, Moderator role, tenant scope guards, hardened global banner publication rules, Subscription Plan Catalog redesign, custom responsive 404 page, and SPA Base Path routing.
+Earlier today the **Strategy & Simulators Suite** launched with high-precision **Bear Trap combat modeling**, **4-scope rally composition maps** (Alliance, Kingdom, Personal, Target), **Hero Gear reforge XP recovery calculation**, **color-coded gear comparison diffs**, and **Bear ML damage predictions** (`/bear-ml/predict`). The update also covers Platform Console Observability, role refactoring with `AttributeBadge` integration, Moderator role, tenant scope guards, hardened global banner publication rules, Subscription Plan Catalog redesign, custom 404 page, and SPA Base Path routing.
 
-[Read the complete 24 July 2026 System Update](/updates/2026-07-24-system-update) · [Explore Strategy & Simulators](/simulators/overview) · [Open Bear Trap Strategy Lab](/simulators/bear-trap-lab) · [Open Hero Gear Simulator](/simulators/hero-gear-reforge)
+[Read the complete 24 July 2026 System Update](/updates/2026-07-24-system-update) · [Open Castle Positions](/castle-positions/overview) · [Explore Strategy & Simulators](/simulators/overview)
 
 ### 15-16 July 2026 System Update - Castle Positions and platform patches
 
@@ -109,7 +109,6 @@ See:
 - [Privacy, Security & Fair-Use Boundaries](/roadmap/privacy-security-and-fair-use)
 - [Full 13 July patch notes](/updates/2026-07-13)
 - [Complete 24-hour inventory](/updates/last-24h-change-inventory)
-- [Current screenshot matrix](/updates/screenshot-matrix-2026-07-13)
 - [Privacy and safety safeguards](/reference/security-and-deployment)
 
 ### Patch 2026-07-13 - Responsive UI, Admin Usability, and Console Updates

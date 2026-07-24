@@ -27,8 +27,8 @@ This inventory is the documentation checklist for the complete change window. â€
 | Account and browser safety | Protected account/session behavior and browser safety safeguards | Documented: [Privacy and Safety](/reference/security-and-deployment) |
 | Upload privacy | Private, scope-checked screenshot and import access | Documented: [Upload Screenshots](/imports/upload-screenshots), [Privacy and Safety](/reference/security-and-deployment) |
 | Spreadsheet safety | Supported formats and strict safety limits | Documented: [Spreadsheet Import](/how-to/spreadsheet-import), [Privacy and Safety](/reference/security-and-deployment) |
-| Documentation structure | Homepage Latest Updates, detailed changelog, inventory, screenshot matrix, favicon, sidebar grouping | Documented: this page and [13 July Patch Notes](/updates/2026-07-13) |
+| Documentation structure | Homepage Latest Updates, detailed changelog, inventory, favicon, sidebar grouping | Documented: this page and [13 July Patch Notes](/updates/2026-07-13) |
 
 ## Screenshot disposition
 
-Changed surfaces are represented by the sanitized screenshots shown in the [Screenshot Gallery](/updates/screenshot-matrix-2026-07-13).
+Changed surfaces are represented by the sanitized screenshots embedded throughout the patch notes.
