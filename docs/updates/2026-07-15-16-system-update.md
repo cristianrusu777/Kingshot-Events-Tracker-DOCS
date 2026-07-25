@@ -26,7 +26,7 @@ Castle Positions & KvK Applications is now a kingdom workflow for public applica
 ## Castle Positions and KvK applications
 
 <figure class="castle-screenshot castle-screenshot--wide">
-  <a href="/images/castle-positions/castle-dashboard-dark.png" target="_blank"><img src="/images/castle-positions/castle-dashboard-dark.png" alt="Castle Positions release dashboard in dark mode" loading="lazy"></a>
+  
   <figcaption>Castle Positions is the principal feature of this update: the dashboard connects kingdom-scoped applications with review and scheduling workflows.</figcaption>
 </figure>
 

@@ -3,7 +3,7 @@
 ## Plain-language explanation
 
 <figure class="castle-screenshot castle-screenshot--wide">
-  <a href="/images/castle-positions/castle-schedule-planner-dark.png" target="_blank"><img src="/images/castle-positions/castle-schedule-planner-dark.png" alt="Castle Positions automatic placement area in the schedule planner" loading="lazy"></a>
+  
   <figcaption>The live planner exposes the suggestion result beside candidate cards and slot state; the screenshot is the practical interface, while the algorithm guide describes the decision logic.</figcaption>
 </figure>
 
@@ -28,14 +28,14 @@ An applicant must be eligible, linked to a player, and in a placeable status (`a
 
 ## Decision table
 
-| Condition | System response | Administrator action |
-| --- | --- | --- |
-| Not eligible, unlinked, or non-placeable status | Not included in the automatic contest | Resolve identity or review the application |
-| Exact preferred slot is available | Eligible contender can be suggested | Confirm or adjust the draft |
-| Preferred slot is full | Compare compatible contenders; consider alternatives/nearby time | Review the conflict and unplaced reasons |
-| Slot is explicitly unavailable | Never suggest that slot | Choose another compatible time or keep unplaced |
-| Locked/manual assignment exists | Preserve it; consume capacity | Change it manually only if policy permits |
-| No compatible slot is free | Candidate remains unplaced | Waitlist, move another player, or make a manual decision |
+| Condition                                       | System response                                                  | Administrator action                                     |
+| ----------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------- |
+| Not eligible, unlinked, or non-placeable status | Not included in the automatic contest                            | Resolve identity or review the application               |
+| Exact preferred slot is available               | Eligible contender can be suggested                              | Confirm or adjust the draft                              |
+| Preferred slot is full                          | Compare compatible contenders; consider alternatives/nearby time | Review the conflict and unplaced reasons                 |
+| Slot is explicitly unavailable                  | Never suggest that slot                                          | Choose another compatible time or keep unplaced          |
+| Locked/manual assignment exists                 | Preserve it; consume capacity                                    | Change it manually only if policy permits                |
+| No compatible slot is free                      | Candidate remains unplaced                                       | Waitlist, move another player, or make a manual decision |
 
 ## Selection tree
 

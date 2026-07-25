@@ -5,12 +5,12 @@ The planner is a UTC time-by-position board for one stage. A cell represents a r
 ## Minister / King procedure
 
 <figure class="castle-screenshot castle-screenshot--wide">
-  <a href="/images/castle-positions/castle-schedule-planner-dark.png" target="_blank"><img src="/images/castle-positions/castle-schedule-planner-dark.png" alt="Castle Positions schedule planner with candidate cards and slots in dark mode" loading="lazy"></a>
+  
   <figcaption>The planner combines candidate groups, suggestion status, an editable draft, slot capacity and visible assignment cards.</figcaption>
 </figure>
 
 <figure class="castle-screenshot castle-screenshot--wide">
-  <a href="/images/castle-positions/castle-schedule-planner-detail-dark.png" target="_blank"><img src="/images/castle-positions/castle-schedule-planner-detail-dark.png" alt="Castle Positions planner slot details with mock assignments in dark mode" loading="lazy"></a>
+  
   <figcaption>The lower planner view keeps the populated slot board, mock assignments, placeholders and gap guidance visible for review.</figcaption>
 </figure>
 
