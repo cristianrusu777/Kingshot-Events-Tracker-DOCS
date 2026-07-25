@@ -9,16 +9,16 @@ The system creates **placement suggestions**, not automatic final appointments. 
 ## Start here
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-dashboard-dark.png" target="_blank"><img src="/images/castle-positions/castle-dashboard-dark.png" alt="Castle Positions dashboard in dark mode" loading="lazy"></a>
+  
   <figcaption>The dashboard shows the selected kingdom, cycle status, application count and the navigation into review, scheduling, stages and resources.</figcaption>
 </figure>
 
-| You are | Start with | Then |
-| --- | --- | --- |
-| Applicant | [Apply for a position](applying.md) | [Track your status](application-statuses.md) |
-| Minister of Justice | [Management guide](managing.md) | [Review candidates](reviewing.md) and [plan a stage](schedule-planner.md) |
-| King | [Roles and access](roles-and-access.md) | Follow the Minister workflow in your own kingdom |
-| Supreme Admin | [Roles and access](roles-and-access.md) | Select the kingdom before making a platform-level correction |
+| You are             | Start with                              | Then                                                                      |
+| ------------------- | --------------------------------------- | ------------------------------------------------------------------------- |
+| Applicant           | [Apply for a position](applying.md)     | [Track your status](application-statuses.md)                              |
+| Minister of Justice | [Management guide](managing.md)         | [Review candidates](reviewing.md) and [plan a stage](schedule-planner.md) |
+| King                | [Roles and access](roles-and-access.md) | Follow the Minister workflow in your own kingdom                          |
+| Supreme Admin       | [Roles and access](roles-and-access.md) | Select the kingdom before making a platform-level correction              |
 
 ## Lifecycle
 
