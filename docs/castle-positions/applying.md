@@ -11,32 +11,32 @@ Use the public Castle Positions link supplied by your kingdom while applications
 ## Applicant workflow
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-application-entry-dark.png" target="_blank"><img src="/images/castle-positions/castle-application-entry-dark.png" alt="Castle Positions public application entry in dark mode" loading="lazy"></a>
+  
   <figcaption>The public entry screen identifies the kingdom and cycle, shows the application steps, and indicates when a published schedule already exists.</figcaption>
 </figure>
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-player-identity-dark.png" target="_blank"><img src="/images/castle-positions/castle-player-identity-dark.png" alt="Castle Positions populated player identity step in dark mode" loading="lazy"></a>
+  
   <figcaption>The identity step uses the existing mock player name and player number before resources and time preferences are reviewed.</figcaption>
 </figure>
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-login-register-dark.png" target="_blank"><img src="/images/castle-positions/castle-login-register-dark.png" alt="Castle Positions account entry step in dark mode" loading="lazy"></a>
+  
   <figcaption>The populated form keeps the account journey in a numbered stepper so applicants can distinguish identity, account, resources and time preferences.</figcaption>
 </figure>
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-account-dark.png" target="_blank"><img src="/images/castle-positions/castle-account-dark.png" alt="Castle Positions account step in dark mode" loading="lazy"></a>
+ 
   <figcaption>The account step is part of the same saved mock application flow and precedes the resource fields.</figcaption>
 </figure>
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-resource-fields-dark.png" target="_blank"><img src="/images/castle-positions/castle-resource-fields-dark.png" alt="Castle Positions populated resource fields in dark mode" loading="lazy"></a>
+  
   <figcaption>The populated resource step shows the duration-based speedups and True Gold inputs used by the stage configuration.</figcaption>
 </figure>
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-preferred-time-dark.png" target="_blank"><img src="/images/castle-positions/castle-preferred-time-dark.png" alt="Castle Positions populated UTC time preferences in dark mode" loading="lazy"></a>
+  
   <figcaption>The time-preference step shows the applicant’s actual UTC choices before the final review step.</figcaption>
 </figure>
 

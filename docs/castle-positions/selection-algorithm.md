@@ -44,7 +44,7 @@ flowchart TD
 ## What the suggestion engine receives
 
 <figure class="castle-screenshot castle-screenshot--wide">
-  <a href="/images/castle-positions/castle-schedule-planner-dark.png" target="_blank"><img src="/images/castle-positions/castle-schedule-planner-dark.png" alt="Real Castle Positions planner information used by the selection engine" loading="lazy"></a>
+  
   <figcaption>The diagrammed rules operate on the real planner data shown here: candidate status, score, preferred times, capacity, protected assignments and the editable draft.</figcaption>
 </figure>
 

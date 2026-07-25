@@ -3,7 +3,7 @@
 ## Review procedure
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-review-list-dark.png" target="_blank"><img src="/images/castle-positions/castle-review-list-dark.png" alt="Castle Positions application review list in dark mode" loading="lazy"></a>
+  
   <figcaption>The review list keeps the kingdom and cycle scope visible while exposing status filters and candidate actions.</figcaption>
 </figure>
 

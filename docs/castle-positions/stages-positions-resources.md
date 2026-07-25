@@ -23,22 +23,22 @@ A stage has its own date and can contain active positions. Each position is a pl
 ## Configuration procedure
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-stage-configuration-dark.png" target="_blank"><img src="/images/castle-positions/castle-stage-configuration-dark.png" alt="Castle Positions stages configuration in dark mode" loading="lazy"></a>
+  
   <figcaption>Stage configuration begins with the cycle instance and anchor date; the stage editor remains empty until a cycle is selected.</figcaption>
 </figure>
 
 <figure class="castle-screenshot castle-screenshot--standard">
-  <a href="/images/castle-positions/castle-resource-mapping-dark.png" target="_blank"><img src="/images/castle-positions/castle-resource-mapping-dark.png" alt="Castle Positions resource catalogue in dark mode" loading="lazy"></a>
+  
   <figcaption>The resource catalogue distinguishes duration-based speedups from count-based True Gold and supports the configured stage inputs.</figcaption>
 </figure>
 
 <figure class="castle-screenshot castle-screenshot--wide">
-  <a href="/images/castle-positions/castle-position-configuration-dark.png" target="_blank"><img src="/images/castle-positions/castle-position-configuration-dark.png" alt="Castle Positions selected stage and position navigation in dark mode" loading="lazy"></a>
+  
   <figcaption>After the cycle is selected, the scheduling surface exposes the configured stage tabs and the position board entry point.</figcaption>
 </figure>
 
 <figure class="castle-screenshot castle-screenshot--wide">
-  <a href="/images/castle-positions/castle-stage-configuration-detail-dark.png" target="_blank"><img src="/images/castle-positions/castle-stage-configuration-detail-dark.png" alt="Castle Positions stage configuration details with mock data in dark mode" loading="lazy"></a>
+  
   <figcaption>The lower stage configuration view shows the selected cycle’s configured stage data and controls.</figcaption>
 </figure>
 
