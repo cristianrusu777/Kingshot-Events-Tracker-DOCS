@@ -14,6 +14,7 @@ const sectionDefinitions: Section[] = [
   { text: 'Role Guides', match: d => d.relative.startsWith('roles/') },
   { text: 'Castle Positions', collapsed: false, match: d => d.relative.startsWith('castle-positions/') },
   { text: 'Strategy & Simulators', collapsed: false, match: d => d.relative.startsWith('simulators/') },
+  { text: 'Knowledge Hub', collapsed: false, match: d => d.relative.startsWith('knowledge/') },
   { text: 'Players', match: d => /^how-to\/(add-player|edit-player|delete-restore-player|kick-player|manual-players|nicknames|player-profile|player-sync|players-directory)\.md$/i.test(d.relative) },
   { text: 'Kingdoms & Alliances', match: d => /^how-to\/(manage-kingdoms|manage-alliances|my-alliance|kvk-prep)\.md$/i.test(d.relative) },
   { text: 'Events & Default Events', match: d => d.relative.startsWith('events/') },

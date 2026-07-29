@@ -1,6 +1,6 @@
 # Reset a Forgotten Password
 
-If you can't remember your password, you can ask for it to be reset. **This app does not send an automatic reset link** - instead, an admin reviews and approves your request. That keeps accounts secure in a shared kingdom.
+If you cannot remember your password, request a one-time reset link. A deployment can send the link through self-service or require an administrator to approve the request first.
 
 ## Requesting a reset
 
@@ -10,24 +10,26 @@ If you can't remember your password, you can ask for it to be reset. **This app 
 2. Enter the details asked for (such as your username or email).
 3. Submit the request.
 
-Your request now goes to your kingdom's admins. You'll keep using your old password until the reset is approved (or you'll be given a new temporary one).
+The public response does not confirm whether an account exists. If the request is eligible, the next step depends on the deployment's reset mode.
 
 ## What happens next
 
-- An admin (Supreme Admin or King) sees your request in their **Password Requests** list.
-- They either **approve** it - after which you'll be able to sign in with a new or temporary password - or **reject** it if something doesn't look right.
-- Once approved, log in and, if prompted, set a new password of your own on the [profile page](your-profile.md).
+- **Self-service mode:** the system emails a one-time reset link to the eligible account.
+- **Administrator approval mode:** an authorized administrator reviews the request and then sends the one-time link or rejects the request.
+- Open the link within one hour and choose a new password.
+- A used, expired, or revoked link cannot be reused.
 
-## Why there's no instant email link
+## Why approval can be required
 
-Because kingdoms share administration, password resets are handled by a trusted person rather than automatically. This prevents someone from resetting an account that isn't theirs. The trade‑off is that a reset takes a little longer - it depends on an admin being available.
+Some communities keep administrator review enabled because the account identity may need manual verification. The public form still avoids account enumeration, and the email link remains one-time.
 
 ## If you're in a hurry
 
-- Contact your Alliance Leader or King directly and let them know you've filed a reset request.
+- If approval is enabled, contact the authorized account administrator and mention that you filed a request.
 - Double‑check you're using the right username first - sometimes it's not the password that's the problem.
 
 ## Related
 
 - [Log In & Out](logging-in.md) - including the "too many attempts" cooldown.
 - [Edit Your Profile & Password](your-profile.md) - changing your password once you're in.
+- [Account Security, Role Requests, and Player Links](account-security-and-player-links.md)

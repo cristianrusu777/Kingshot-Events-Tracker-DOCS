@@ -1,6 +1,6 @@
 # Edit Your Profile & Password
 
-Your profile is where you update your own display name, email, and password. Every logged‑in user has one, whatever their role.
+Your profile is where you update your display name, email, password, active sessions, and linked Kingshot player profiles. Every signed-in user has one, whatever their role.
 
 ## Opening your profile
 
@@ -33,6 +33,14 @@ Sometimes an admin creates your account with a temporary password and requires y
 - **Which kingdom or alliance you belong to** - that's also managed by admins.
 
 If any of those need to change, contact your Alliance Leader, King, or Supreme Admin.
+
+## Sessions and linked players
+
+Use the session controls to revoke an unfamiliar session, log out other sessions, or log out all sessions.
+
+Linked players are separate from your account role. You can select an active player context, choose a primary profile, request another link, or revoke a link you no longer use. Ownership conflicts require scoped administrator review.
+
+See [Account Security, Role Requests, and Player Links](account-security-and-player-links.md).
 
 ## Forgot your current password?
 

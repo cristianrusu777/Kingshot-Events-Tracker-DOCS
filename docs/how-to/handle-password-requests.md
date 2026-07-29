@@ -1,6 +1,6 @@
 # Handle Password Reset Requests
 
-The forgot-password flow in this tracker is admin-reviewed. Users submit a request, and an authorized admin decides whether to approve or reject it.
+The forgot-password flow can be admin-reviewed or self-service. This page covers the review queue used when administrator approval is enabled.
 
 ## Open the request list
 
@@ -14,6 +14,7 @@ The list shows:
 - the email address
 - the request message
 - the current status
+- pagination and a status filter
 
 ## Review a request
 
@@ -23,16 +24,18 @@ The list shows:
 
 From the detail page, you can:
 
-- **Approve and email temporary password**
+- resolve or correct the matched account
+- **Approve and email one-time reset link**
 - **Reject request**
 
 ## If you approve
 
 The system:
 
-- creates a fresh temporary password
-- forces the user to change it at next login
-- emails the temporary password to the matched user's saved email address
+- revokes older unused reset tokens
+- creates a hashed one-time password action token
+- emails a reset link that expires after one hour
+- returns the request to a retryable pending state if email delivery fails
 
 Approval only works when the request can be matched to a user account that has an email address.
 
@@ -45,6 +48,8 @@ The request is marked rejected. If the matched user has an email address, the sy
 - Approve only when you are comfortable that the request belongs to the real account owner.
 - Use the resolution note when the request was unusual or needed manual verification.
 - If the account itself needs cleanup, update the user profile after finishing the password request.
+- Do not approve your own request.
+- Confirm that the target account is inside your permitted review scope.
 
 ## Related
 

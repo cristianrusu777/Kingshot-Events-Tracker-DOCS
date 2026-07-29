@@ -23,6 +23,11 @@ hero:
       link: /castle-positions/overview
 
 features:
+  - icon: "📚"
+    title: "New: Knowledge, Privacy, and Platform Updates"
+    details: Read and publish structured Knowledge guides, manage privacy choices and data rights, follow public releases, and use safer account and player-link workflows.
+    link: /updates/2026-07-25-29-system-update
+    linkText: Read the complete 25-29 July update
   - icon: "🎯"
     title: "New Feature: Strategy & Simulators Suite"
     details: High-precision Bear Trap damage modeling, 4-scope rally composition maps, Hero Gear reforge XP recovery math, color-coded gear diffs, and Bear ML damage prediction.
@@ -70,6 +75,16 @@ import { withBase } from 'vitepress'
 </script>
 
 ## Latest Updates
+
+### 29 July 2026 - Knowledge Hub, Privacy, Identity, Analytics, Bear Trap, and Event Settings
+
+::: tip Major System Update
+The complete 25-29 July release adds the **Kingshot Knowledge Hub**, versioned **Legal Center and privacy controls**, revocable sessions and one-time password links, role and player-link review, public platform updates, first-party analytics, a deeper Bear Trap model, and a redesigned Event Settings workspace.
+:::
+
+The release was reviewed across its user-visible behavior, administration workflows, accessibility, and reliability changes. New guides explain Knowledge reading and publishing, assets/imports/AI, account security and selected player context, legal and data-rights administration, and update publication with analytics.
+
+[Read the complete 25-29 July 2026 System Update](/updates/2026-07-25-29-system-update) · [Open the Knowledge Hub guide](/knowledge/overview) · [Review account security and player links](/getting-started/account-security-and-player-links)
 
 ### 24 July 2026 - Castle Position Dashboard, Player Overview, Application Flow, and Fixes
 

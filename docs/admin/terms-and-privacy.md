@@ -39,3 +39,11 @@ flowchart TD
 ```
 
 Open **Terms & Conditions** from the sign-in/registration flow or platform footer for the current in-product text.
+
+## Unified Legal Center update
+
+The current platform uses a versioned Legal Center with product supplements for the platform, Portal, and Kingshot Events. Terms acceptance, Privacy Notice acknowledgement, and optional privacy choices are recorded as separate actions.
+
+The Legal Center also exposes code-backed technology and processor inventories, regional privacy controls, a data-rights request builder, signed-in request tracking, and a Supreme Admin fulfillment queue.
+
+Read [Legal, Consent, and Data Rights Administration](legal-consent-and-data-rights.md) for the current workflow and readiness rules.

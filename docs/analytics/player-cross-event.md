@@ -33,6 +33,19 @@ The active Player tab shows:
 
 There is also a **Full profile** button to jump to the player's main profile page.
 
+## Personal analytics workspace update
+
+The signed-in **My Analytics** workspace now combines:
+
+- selected linked-player identity and profile switching;
+- recorded coverage and missing-data warnings;
+- score, participation, attendance, and consistency trends;
+- deterministic insights with source, period, and confidence;
+- rewards, goals, upcoming events, preparation, notifications, and Castle Position status;
+- an Alliance Hub with permitted resources and announcements.
+
+Alliance comparison data appears only when the visibility policy and minimum cohort size are satisfied. Comparisons are anonymized, and unknown records are not treated as zero scores.
+
 ## What this tab is best for
 
 Use it when you need to answer questions like:
