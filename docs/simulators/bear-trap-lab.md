@@ -130,15 +130,148 @@ Administrators can monitor ML prediction health directly within the **Platform C
 
 ---
 
-## User Interface & Step-by-Step Workflow
+## Atomic scenario model
 
-### Using the Strategy Lab
+The current scenario separates every input source instead of flattening the setup into one damage multiplier.
 
-1. **Select Bear Trap Level**: Choose the target Bear Trap level (e.g., Level 1 to 30) from the target scope dropdown.
-2. **Configure Rally Leader**: Select your primary hero march (e.g., Amadeus / Helga / Marlin / Zoe), hero gear profile, and widget levels.
-3. **Set Alliance Composition**: Input participant march sizes and hero joiner setups across the alliance scope.
-4. **Run Simulation**: Click **Calculate Damage** to view:
-   - Expected Total Bear Damage score.
-   - Individual participant contribution percentages.
-   - Specific recommendations to improve total score (e.g., swapping joiner hero positions or adjusting troop ratios).
-5. **Save Snapshot**: Save your configuration to compare performance against future Bear Trap runs.
+| Area | Stored detail |
+|---|---|
+| Mode | workflow, calculation scope, rally role, result unit |
+| Troops | owner, Infantry/Cavalry/Archer type, normal tier, True Gold level, quantity |
+| Effective stats | attack, lethality, defense, and health by troop type |
+| Leader | three hero slots, widget state, Expedition skills, Hero Gear |
+| Joiners | captain hero, first skill, level, join order, and march composition |
+| Rally | leader march, total capacity, submitted troops, accepted troops, active skill slots |
+| Effects | Bear level, Master Valora/Cassia sources, alliance effects, temporary effects |
+| Evidence | source type, confidence, report totals, assumptions, and detailed snapshots |
+
+Legacy Bear presets are normalized into this schema before simulation.
+
+## Formation and hero-lineup optimization
+
+The optimizer evaluates troop composition and leader heroes together:
+
+1. calculate the current scenario;
+2. search valid Infantry, Cavalry, and Archer allocations at the configured resolution;
+3. evaluate candidate hero swaps;
+4. re-optimize formation for each candidate;
+5. compare the best candidate with the original result;
+6. return the damage change and resulting formation.
+
+A hero is not recommended only because it scores well with the old formation.
+
+The leader search respects troop-role slots and the configured hero generation. It can report the best valid trio and explain why a rejected candidate was not selected.
+
+## Joiner captain selection
+
+The joiner audit models the first Expedition skill of each captain.
+
+- Only Bear-relevant offensive effects compete for active slots.
+- The four strongest eligible first skills are selected.
+- Join order resolves equal-ranked skills.
+- Defensive or enemy-offense reduction skills do not consume a Bear slot.
+- Repeated stacking families are evaluated together.
+- Chance-based skills show expected value and a variability warning.
+- Master Cassia is supported as a named source.
+
+## Hero star and slice progression
+
+Hero progression uses completed stars plus slices toward the next star.
+
+| Value | Range and rule |
+|---|---|
+| Completed stars | 0 to 5 |
+| Slices toward next star | 0 to 5 |
+| Five-star slices | Always normalized to 0 |
+| Skill levels | Stored independently from star slices |
+| Upgrade cost | Verified per-slice shard table |
+
+A slice does not invent an intermediate Expedition skill level. Upgrade recommendations compare the next full star that changes the supported skill state.
+
+## Squad stats and report evidence
+
+Profiles can now store squad-wide attack, defense, health, and lethality bonuses. These are added once to each troop-type line when effective stats are resolved.
+
+Experience capture supports bonus overviews, rally-leader reports, beast reports, and manual sources. Joiner detail can be exact, estimated, or unknown.
+
+Validation checks:
+
+- troop types sum to march and rally totals;
+- percentages allocate deterministically;
+- marches do not exceed known capacities;
+- exact joiner detail includes total and every troop type;
+- leader and joiner Heroes exist in the supported catalog;
+- Heroes stay within the declared generation;
+- repeated rally rows and extreme scores are quarantined for review;
+- submitted role declarations match the rally rows.
+
+---
+
+## User Interface - Guided Editor (2026-07-26)
+
+The Bear Trap Simulator uses a 9-step guided workflow that mirrors the Hero Gear Optimizer layout.
+
+### Step Rail
+
+A sticky step rail on the left (horizontal on mobile) navigates between sections:
+
+| Step | Section | Purpose |
+|------|---------|---------|
+| 1 | Setup | Rally capacity, joiner count, workflow, role |
+| 2 | Troops | Leader and joiner troop stacks (type, tier, TG, quantity) |
+| 3 | Stats | Effective attack/lethality/defense/health per troop type |
+| 4 | Heroes | Three leader hero slots with skills, widget, and Hero Gear |
+| 5 | Joiners | Four joiner cards with captain hero and skill level |
+| 6 | Effects | Bear Trap level, Master Valora, alliance and temporary buffs |
+| 7 | Review | Color-coded readiness summary (green = ok, amber = needs attention) |
+| 8 | Simulate | **The Run button** - appears here, after Review, with an animated CTA |
+| 9 | Results | Damage total, contributions, recommendations, formation surface |
+
+### Status Bar
+
+The Setup section shows four compact status pills that update in real time:
+
+- **Troops** - total assigned troop count (green if > 0)
+- **Joiners** - joined marches with active skill count
+- **Heroes** - configured leader heroes (3/3 turns green)
+- **Ready** - green when the simulation is unlocked
+
+### Simulate Gate
+
+The Run button is placed as a full-width gate section after Review:
+- **Ready state** - violet gradient border, pulsing Zap icon, "Run Bear Simulation" button
+- **Blocked state** - amber border, warning icon, blocking message
+
+### Captain Skills Card
+
+Displays 4 slots with large (3rem) hero portrait, skill name, and level badge. Empty slots show a dashed placeholder.
+
+### Review Cards
+
+Color-coded left-border cards:
+- Green left border + `CircleCheck` icon = section complete
+- Amber left border + `CircleX` icon = needs attention
+
+### Results
+
+When results appear, a slide-up animation reveals:
+- Damage total tile
+- Per-troop-type contribution breakdown
+- Formation surface ternary plot
+- Ranked recommendations with action items
+- Captain skill audit table (with hero avatars in each row)
+
+### Share Your Experience
+
+A dedicated CTA section with:
+- Animated Flame icon (encourages contribution)
+- Glow + scale hover effect on the Share button
+- Shows login/register buttons when unauthenticated
+
+### Responsive Design
+
+| Viewport | Layout |
+|----------|--------|
+| ≥ 60rem | 3-column hero grid, 4-column joiner grid, full rail |
+| 36 to 60rem | 2-column hero/joiner grids, icon-only rail |
+| < 36rem | 1-column everything, simulate gate stacks vertically |

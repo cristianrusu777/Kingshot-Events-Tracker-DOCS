@@ -28,6 +28,9 @@ The Platform Console includes specialized monitoring sections:
 | **Security Events** | Real-time security telemetry & session state | Failed authentication, CSRF exemptions, instant session revocations |
 | **Subscriptions & Usage** | Real-time plan usage & quota tracking | Active kingdom/alliance grants, quota warnings, plan suspensions |
 | **Bear Data & ML** | Machine Learning model performance monitoring | Inference latency, prediction variance, dataset drift for `/bear-ml/predict` |
+| **Platform Analytics** | First-party traffic, engagement, feature, conversion, live-presence, and reliability reporting | Period comparison, active users, routes, features, 4xx/5xx rates, p50/p95 latency |
+| **Platform Updates** | Audited release drafting, publication, scheduling, and announcement management | Status, revision, audience, impressions, dismissals, clicks |
+| **Legal & Privacy** | Policy publication readiness and code-backed inventories | Documents, technologies, processors, retention, unresolved facts |
 
 Commands remain read-only. They must not expose API keys, tokens, passwords, or secret env values.
 
@@ -56,3 +59,5 @@ Only Supreme Admins can open the console. Its live activity view and command are
 `clear` clears only local terminal output. It does not delete audit logs.
 
 The event stream refreshes independently from the command pane. A refresh adds new events without clearing command output, typed input, filters, selected detail, or local command history.
+
+See [Platform Updates and Analytics](platform-updates-and-analytics.md) for publication states, announcement targeting, metric semantics, and privacy safeguards. See [Legal, Consent, and Data Rights Administration](legal-consent-and-data-rights.md) for legal readiness.

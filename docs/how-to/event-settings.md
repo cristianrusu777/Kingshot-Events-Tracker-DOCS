@@ -6,7 +6,17 @@ Use **Event Settings** when you want to control how an event behaves beyond its 
 
 ## What is in the interface today
 
-The current settings page lets you configure these real, visible controls:
+The page opens as a template manager with:
+
+- total, multi-stage/multi-day, and custom-template summary counts;
+- search by event name or category;
+- type and duration filters;
+- selected-row state;
+- Template Library, Configure Event, Score Rules, and Recommended Presets tabs.
+
+The selected event stays active when you move between configuration and rules.
+
+The configuration page lets you edit:
 
 - name, category, icon, badge label, colors, and image URL
 - description and instructions
@@ -21,6 +31,16 @@ The current settings page lets you configure these real, visible controls:
 - leave policy
 - visibility toggles for dashboard, player analytics, event analytics, activity, and rewards
 - score-threshold rules
+
+## Apply a recommended preset
+
+1. Open **Recommended Presets** or choose a preset from the configuration form.
+2. Select the matching default event.
+3. Apply the preset.
+4. Review the copied identity, scoring, stage, membership, visibility, analytics, and reward settings.
+5. Select **Save Event Configuration**.
+
+Applying a preset changes the editor state first. It does not bypass review or save automatically.
 
 ## Membership and policy settings
 
