@@ -251,6 +251,35 @@ The standalone shell provides:
 - JSON-LD article metadata;
 - Knowledge sitemap and SEO routes.
 
+### Wiki retirement and Knowledge continuity
+
+The former Wiki is now retired in favor of the Knowledge Hub. Existing
+bookmarks remain useful: all 26 known Wiki routes have an explicit permanent,
+single-step redirect to the matching Knowledge collection, Hero, Event,
+Mechanic, or researched guide. Unknown Wiki links return visitors safely to the
+Knowledge home page.
+
+The migration prepares 12 reviewed guides covering:
+
+- Hero Widgets and shared resource planning;
+- Hero Gear, Governor Gear, and Governor Charms;
+- Kingdom timeline planning;
+- Bear Trap, Strongest Governor, and Kingdom versus Kingdom preparation;
+- combat statistics and formations;
+- rally effects and joiner planning;
+- responsible deterministic simulation.
+
+Canonical Hero, Event, and Mechanic facts continue to come from the shared game
+catalogs, so editors do not have to maintain duplicate copies of patch-sensitive
+data. Each guide keeps its research references, related game entities, tags,
+category, and verified repository artwork.
+
+Publication is protected by a versioned migration check. It previews every
+change, refuses slug or editorial conflicts, preserves newer manual drafts,
+prevents concurrent runs, and verifies the resulting public content before a
+release can become active. This repository update prepares that production
+migration; it does not claim that production execution has already occurred.
+
 ### Studio, review, import, assets, and AI
 
 The Studio includes:
