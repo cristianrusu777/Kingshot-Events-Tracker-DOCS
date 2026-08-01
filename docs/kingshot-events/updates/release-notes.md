@@ -27,3 +27,11 @@ Release notes describe user-visible changes only. Product behavior shown in the 
 
 - [kingshot events](/kingshot-events/)
 - [feature availability](/kingshot-events/overview/feature-availability)
+
+## Practical depth
+
+### Use a release note as a change map
+
+A release note identifies the reader area, visible change, and required action. The full dated guide remains the authority for roles, scopes, statuses, prerequisites, and the complete workflow.
+
+For use a release note as a change map, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.

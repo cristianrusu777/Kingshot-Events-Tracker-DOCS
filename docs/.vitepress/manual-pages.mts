@@ -1,0 +1,66 @@
+// Hand-authored publication records for mechanism-specific pages added after the portal redesign.
+const page = (title: string, path: string, navigationSection: string, audience: string, sortOrder: number) => ({
+  product: 'kingshot-events', title, path: `/kingshot-events/${path.replace(/\/index$/, '')}`,
+  navigationSection, audience, experienceLevel: 'Advanced', featureArea: navigationSection,
+  publicationStatus: 'published', sortOrder, lastReviewedDate: '2026-08-01', file: `kingshot-events/${path}.md`
+})
+
+export const manualPages = [
+  page('Hierarchy and Scope Switching', 'scopes-and-communities/hierarchy-and-switching', 'Scopes and Communities', 'Members, alliance leaders, and kingdom managers', 200),
+  page('Profile, Identity, Activity, and History', 'players/profile-and-history', 'Players', 'Players and roster managers', 210),
+  page('Event Instances, Record Batches, and Corrections', 'events/record-batches-and-corrections', 'Events and Results', 'Result contributors and reviewers', 220),
+  page('Screenshot Reconciliation and Row Decisions', 'imports/row-statuses-and-decisions', 'Imports and Data Entry', 'Import contributors and reviewers', 230),
+  page('Analytics Aggregation and Reward Decisions', 'analytics/reward-rules', 'Analytics and Rewards', 'Analytics viewers and reward managers', 240),
+  page('Castle Candidate Ranking and Schedule Suggestions', 'castle-positions/planner-controls', 'Castle Positions', 'Kings and Ministers of Justice', 250),
+  page('Knowledge Access, Publication, and Reading Verification', 'knowledge-hub/reading-sessions', 'Knowledge Hub', 'Readers, authors, reviewers, and session managers', 260),
+  page('Lab Profiles, Autosave, and Optimization Order', 'lab/profiles-and-autosave', 'Simulations and Optimizations', 'Lab users', 270),
+  page('Hero Gear Optimization Logic', 'lab/hero-gear', 'Simulations and Optimizations', 'Hero Gear planner users', 271),
+  page('Governor Gear Optimization Logic', 'lab/governor-gear', 'Simulations and Optimizations', 'Governor Gear planner users', 272),
+  page('Charm Optimization Logic', 'lab/charms', 'Simulations and Optimizations', 'Charm planner users', 273),
+  page('Bear Trap Calculation and Result Anatomy', 'lab/bear-trap', 'Simulations and Optimizations', 'Rally leaders and scenario reviewers', 274),
+  page('Plans, Grants, Quotas, and Effective Access', 'subscriptions/plans-and-effective-access', 'Subscriptions and Usage', 'Members and community owners', 280),
+  ...[
+    ['accounts-and-access/index', 'getting-started/access-and-navigation'],
+    ['accounts-and-access/multi-role-access', 'scopes-and-communities/hierarchy-and-switching'],
+    ['accounts-and-access/password-and-security', 'getting-started/first-visit'],
+    ['accounts-and-access/player-link-review', 'players/profile-and-history'],
+    ['accounts-and-access/registration-and-approval', 'getting-started/first-visit'],
+    ['analytics/filters-and-recalculation', 'analytics/reward-rules'],
+    ['analytics/index', 'analytics/reward-rules'],
+    ['analytics/recommendations-and-missing-data', 'analytics/reward-rules'],
+    ['castle-positions/notifications-and-versions', 'castle-positions/planner-controls'],
+    ['castle-positions/resources-and-eligibility', 'castle-positions/planner-controls'],
+    ['events/custom-events-and-proposals', 'events/record-batches-and-corrections'],
+    ['events/default-event-patterns', 'events/record-batches-and-corrections'],
+    ['events/index', 'events/record-batches-and-corrections'],
+    ['events/instances-and-locks', 'events/record-batches-and-corrections'],
+    ['events/templates-and-settings', 'events/record-batches-and-corrections'],
+    ['getting-started/index', 'getting-started/first-visit'],
+    ['getting-started/navigation-and-saved-context', 'getting-started/access-and-navigation'],
+    ['getting-started/ten-minute-first-session', 'getting-started/first-visit'],
+    ['imports/apply-and-history', 'imports/row-statuses-and-decisions'],
+    ['imports/index', 'imports/row-statuses-and-decisions'],
+    ['imports/providers-and-processing', 'imports/row-statuses-and-decisions'],
+    ['imports/rollback-and-restore', 'imports/row-statuses-and-decisions'],
+    ['imports/spreadsheet-and-structured-input', 'imports/row-statuses-and-decisions'],
+    ['knowledge-hub/blocks-and-media', 'knowledge-hub/reading-sessions'],
+    ['knowledge-hub/index', 'knowledge-hub/reading-sessions'],
+    ['knowledge-hub/revisions-and-review', 'knowledge-hub/reading-sessions'],
+    ['lifecycles/notifications-and-reports', 'events/record-batches-and-corrections'],
+    ['lifecycles/recycle-bin-and-restore-requests', 'players/profile-and-history'],
+    ['players/filters-and-columns', 'players/profile-and-history'],
+    ['players/index', 'players/profile-and-history'],
+    ['scopes-and-communities/cross-scope-visibility', 'scopes-and-communities/hierarchy-and-switching'],
+    ['scopes-and-communities/index', 'scopes-and-communities/hierarchy-and-switching'],
+    ['scopes-and-communities/membership-and-management', 'scopes-and-communities/hierarchy-and-switching'],
+    ['subscriptions/grants-and-allocations', 'subscriptions/plans-and-effective-access'],
+    ['subscriptions/quotas-and-limited-mode', 'subscriptions/plans-and-effective-access'],
+    ['subscriptions/requests-and-payment', 'subscriptions/plans-and-effective-access'],
+    ['troubleshooting/index', 'troubleshooting/access-problems']
+  ].map(([source, target], index) => ({
+    product: 'kingshot-events', title: `Redirect: ${source}`, path: `/kingshot-events/${source.replace(/\/index$/, '')}`,
+    navigationSection: 'Redirects', audience: 'Legacy visitors', experienceLevel: 'All levels', featureArea: 'Redirect',
+    publicationStatus: 'redirect', sortOrder: 1200 + index, lastReviewedDate: '2026-08-01',
+    file: `kingshot-events/${source}.md`, redirectTo: `/kingshot-events/${target}`
+  }))
+]

@@ -5,6 +5,7 @@ import PortalHero from './components/PortalHero.vue'
 import RolePerspective from './components/RolePerspective.vue'
 import VisualReference from './components/VisualReference.vue'
 import LinkGrid from './components/LinkGrid.vue'
+import CategoryHero from './components/CategoryHero.vue'
 import './custom.css'
 
 export default {
@@ -15,5 +16,6 @@ export default {
     app.component('RolePerspective', RolePerspective)
     app.component('VisualReference', VisualReference)
     app.component('LinkGrid', LinkGrid)
+    app.component('CategoryHero', CategoryHero)
   }
 } satisfies Theme

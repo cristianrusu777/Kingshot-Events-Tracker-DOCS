@@ -8,6 +8,10 @@ featureArea: 'Lab'
 lastReviewed: '2026-08-01'
 ---
 
+<CategoryHero category="lab" icon="flask" eyebrow="Explore before committing resources" title="Lab Overview and Profiles">
+Save account assumptions, compare upgrade paths, and interpret every result as a scenario rather than a guaranteed outcome.
+</CategoryHero>
+
 # Lab Overview and Profiles
 
 The **Lab** contains profiles, progression planners, optimizers, combat simulators, and supporting game data. Module cards show whether a tool is public, requires sign-in, is beta, or is currently unavailable.
