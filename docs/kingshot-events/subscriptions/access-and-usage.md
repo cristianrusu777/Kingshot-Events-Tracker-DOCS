@@ -46,3 +46,7 @@ Use the current feature summary, not a plan name alone.
 </VisualReference>
 
 Related: [Feature Availability](/kingshot-events/overview/feature-availability) and [Analytics Sharing](/kingshot-events/analytics/sharing-and-troubleshooting).
+
+## Purpose, controls, roles, and worked decision
+
+The page explains effective feature access and current usage for the selected alliance or kingdom. Visible controls can include request, grant acceptance, allocation, and permitted cleanup according to role. Resolution checks direct alliance plan, accepted grant, kingdom plan, Free, feature eligibility, quota, limited mode, and suspension. **Example:** An accepted grant provides processing, but the alliance allocation is exhausted. Reading and supported cleanup remain; another upload is blocked. Increasing allocation or cleanup can recover usage, while acceptance alone cannot add quota or management rights. Report scope, source label, grant status, resource, allocation, usage, operation, and message.

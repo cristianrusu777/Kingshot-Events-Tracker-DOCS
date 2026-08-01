@@ -40,4 +40,8 @@ Ask for help when the issue depends on role assignment, community scope, review 
 
 Compare account approval, player link, membership, scope, role, plan or grant, quota, and the exact access message. Reopen from current navigation before reporting the page, action, community, and time.
 
-For evidence that resolves access issues, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Worked example, recovery, and limitations
+
+**What you see:** Analytics appears in navigation, but a kingdom view says access is unavailable. **Checks:** Verify the signed-in account, active kingdom, matching assignment, accepted grant state, effective feature, and any suspension or quota message. **Decision:** If the grant is pending, acceptance is the recovery; if it is accepted but the user lacks a matching scope, an authorized manager must correct the assignment. **Output:** Access either resolves for the intended read-only view or the responsible gate is named. A subscription cannot add management permission, and a role cannot bypass a disabled feature. Include the page, scope, role label, grant state, and exact message in support evidence. Never include credentials.
+
+Use the scope switcher, account status, assignment label, feature message, and usage panel as diagnostic controls. A visible denial cannot reveal private permission internals and does not guarantee that another scope will qualify.

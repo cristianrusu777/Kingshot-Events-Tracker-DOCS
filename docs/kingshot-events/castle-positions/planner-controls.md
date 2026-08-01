@@ -52,3 +52,47 @@ Suggestion calculation can become stale or fail while the previous projection re
 ## Limitations
 
 The ranking is a scheduling aid, not proof of the fairest political decision or a guaranteed globally optimal schedule. It can compare only submitted preferences, resolved identities, configured resources, and the current grid. Offline agreements and missing availability are invisible until a manager records them. Preserve locks and review every reported gap before publication.
+
+## Application and publication lifecycles
+
+### Castle application lifecycle
+
+```mermaid
+stateDiagram-v2
+  [*] --> DraftApplication
+  DraftApplication --> Submitted: applicant submits
+  Submitted --> NeedsReview: identity or eligibility uncertain
+  Submitted --> Eligible: checks pass
+  NeedsReview --> Eligible: manager resolves
+  NeedsReview --> Rejected: review fails
+  Eligible --> Scheduled: placed in draft
+  Eligible --> Standby: no compatible open placement
+  Scheduled --> Published: schedule validates and publishes
+```
+
+*Castle application lifecycle. Review, eligibility, scheduling, standby, and publication are distinct states.*
+
+**Accessible summary:** Submitted applications can require review, become eligible or rejected, then move to a draft placement or standby before an eligible placement is published.
+
+### Draft schedule, publication, and later changes
+
+```mermaid
+flowchart TD
+  D["Draft schedule with manual placements and locks"] --> V{"All rows valid and conflicts resolved?"}
+  V -- "No" --> C["Return to planner with gaps and conflicts"]
+  C --> D
+  V -- "Yes" --> P["Publish a version"]
+  P --> N["Create participant-facing schedule and notices"]
+  N --> Q{"Later change needed?"}
+  Q -- "No" --> H["Keep published version authoritative"]
+  Q -- "Yes" --> R["Create controlled change from current version"]
+  R --> V
+```
+
+*Draft-to-publish and change flow. Later changes pass validation and produce a controlled version instead of mutating published history silently.*
+
+**Accessible summary:** Invalid drafts return to planning, valid drafts publish with notices, and later changes re-enter validation before a new authoritative version.
+
+## Scope-aware planner workflow
+
+The planner always belongs to one kingdom cycle. Start by confirming that kingdom and cycle, then load submitted applications and resolve linked-player or eligibility review. Candidate generation removes wrong-position, incompatible-time, ineligible, conflicting, and already-placed options before ranking the remainder. Managers compare the suggestion with resource relevance and declared preferences, preserve manual locks, place or hold standby candidates, and inspect gaps and full rows. Publish validation checks the whole draft, not merely the last edited row. The output is an identifiable kingdom schedule version plus participant notices. Alliance membership can inform candidate context, but switching alliance does not move the kingdom planner or its draft.

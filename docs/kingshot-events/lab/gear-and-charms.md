@@ -44,3 +44,11 @@ Move from profile and inventory to objectives, plan, and optional profile update
 </VisualReference>
 
 Optimizer order is a modeled recommendation and can change with game data or objectives. See [Interpreting Results](/kingshot-events/lab/interpreting-results).
+
+## Choose the correct mechanism
+
+Hero Gear uses enhancement, mastery, milestone bundles, optional reforge, and its own material set. Governor Gear uses six item states, three materials, and set-effect deltas. Charms use 18 slots with Guides and Designs. All three read personal profile inputs, locks, troop and stat weights, and strategy, but their candidate generation and costs are not interchangeable.
+
+**Worked example:** A user says "chief gear" but opens Hero Gear. The visible slots and materials do not match the intended Governor Gear system. No run should be interpreted until the correct module is selected. In Governor Gear, a set-completing delta can change candidate order; in Charms, one exhausted Design can stop many slots; in Hero Gear, Mithril or a milestone bundle can be decisive.
+
+Each optimizer produces ordered steps, before and after state, spending, and leftovers. None changes the game or guarantees global optimality. If output is wrong, confirm module, active profile, visible saved state, slot levels, locks, weights, inventory, objective, and dataset version, then rerun one copied scenario. Continue to [Hero Gear](/kingshot-events/lab/hero-gear), [Governor Gear](/kingshot-events/lab/governor-gear), or [Charms](/kingshot-events/lab/charms).

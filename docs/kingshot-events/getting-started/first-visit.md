@@ -47,3 +47,7 @@ Public navigation changes after authentication and assignment resolution.
 </VisualReference>
 
 Next: [Account and Profile](/kingshot-events/getting-started/account-and-profile) and [Choosing Scope and Access](/kingshot-events/getting-started/access-and-navigation).
+
+## Purpose, decision path, and first-session example
+
+The workflow separates registration, approval, sign-in, password state, player link, and scope so one success is not mistaken for all access. **Example:** Ivo registers and can sign in, but management navigation is absent. Account state passes; his alliance assignment has not been approved. He can use permitted member views while the responsible manager reviews the assignment. The output is a usable account with limited actions, not a failed registration. Account recovery cannot grant a role or premium plan. If blocked, preserve the public status, approximate time, and account identifier, never the password.

@@ -32,3 +32,11 @@ Row count is the number of contributing records, not necessarily the number of u
 An empty result usually means the selected event and dates have no eligible data in the active scope. Clear the event or widen the dates, then check the source event history. A locked notice means the subscription feature is unavailable, not that the current filters are wrong.
 
 Custom analytics is read-only. Correct source data from the relevant event, import, or player workflow, then return and reload the view.
+
+## Complete view behavior and worked example
+
+Custom Analytics lets an eligible premium viewer combine supported dimensions and filters without becoming an unrestricted data query. Inputs remain current accepted player results. The user selects an authorized scope, event set, stage or result type where available, inclusive dates, and supported grouping, participation, attribute, or sorting controls. Eligibility and filters run before grouping; the result cannot pull records from an unauthorized kingdom or alliance.
+
+The output names active controls so another viewer can reproduce it, and drill-down preserves those boundaries. Recalculation replaces derived output after source or rule changes. A shared or granted viewer qualifies only when the effective feature and sharing rules allow it, and remains read-only. Premium access never supplies management authority.
+
+**Worked example:** A viewer groups by alliance for two events and filters to one attribute. Red appears empty. Clearing only that attribute reveals Red, proving scope, dates, and events were valid. The empty output reflected attribute eligibility, not deleted results. Custom combinations can be precise but misleading when filters are forgotten; they cannot infer missing rows or guarantee statistical significance. Preserve every filter, scope, feature state, grouping, and one missing source identity for troubleshooting.

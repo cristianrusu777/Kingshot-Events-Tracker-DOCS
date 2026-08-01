@@ -47,3 +47,50 @@ If access appears wrong, compare the selected alliance, source label, grant stat
 ## Limitations and recovery
 
 An effective-plan label does not override role or scope checks, and a quota warning does not itself identify which operation consumed usage. If a write is blocked, confirm the resource named in the message, current allocation, accepted-grant dates, and suspension state. Cleanup may reduce usage, but it does not reactivate an expired plan or grant management rights.
+
+## Grant and quota lifecycles
+
+### Kingdom grant lifecycle
+
+```mermaid
+stateDiagram-v2
+  [*] --> Offered
+  Offered --> Accepted: alliance accepts current offer
+  Offered --> Declined: alliance declines
+  Accepted --> Allocated: eligible resources assigned
+  Allocated --> Effective: dates, plan, and feature qualify
+  Effective --> Expired: validity ends
+  Offered --> Revoked: kingdom withdraws
+  Accepted --> Revoked: kingdom withdraws
+```
+
+*Grant lifecycle. An offer does not unlock access; acceptance, allocation where needed, dates, and eligible features determine effectiveness.*
+
+**Accessible summary:** Grants move from offer to acceptance and allocation before becoming effective, and can instead be declined, revoked, or expire.
+
+### Quota warning and limited-mode lifecycle
+
+```mermaid
+stateDiagram-v2
+  [*] --> Normal
+  Normal --> Warning: usage reaches 80 percent
+  Warning --> Critical: usage reaches 95 percent
+  Critical --> Exceeded: usage reaches 100 percent
+  Exceeded --> LimitedMode: quota-consuming write attempted
+  LimitedMode --> Critical: eligible cleanup lowers usage
+  Normal --> Suspended: active suspension
+  Warning --> Suspended: active suspension
+  Critical --> Suspended: active suspension
+```
+
+*Quota and limited-mode lifecycle. Warnings precede the hard boundary; limited mode preserves permitted reading and cleanup while blocking consuming writes.*
+
+**Accessible summary:** Usage advances through normal, warning, critical, and exceeded states; a blocked write enters limited mode, while cleanup can lower usage and suspension can independently restrict access.
+
+## Purpose, controls, roles, and full workflow
+
+Effective-access resolution solves the difference between a displayed plan name and what one scoped user can actually do. The visible controls include plan or request selection, kingdom grant offer and acceptance, per-alliance allocation, feature availability, current usage, and permitted cleanup. Owners and authorized subscription managers can offer, allocate, or review where their role applies; an ordinary member can accept only supported offers or view the resulting access. None of these controls creates roster, event, or Knowledge management permission.
+
+The workflow resolves direct alliance plan first, then an accepted current grant, then direct kingdom plan, then Free. It checks whether the requested feature is included and grant-eligible, applies allocation and quota state, then applies suspension or limited-mode restrictions. The output names effective source, feature result, usage warning, and allowed next action.
+
+**Pending-grant example:** Alliance Aster has no direct plan and receives a kingdom grant, but has not accepted it. The grant remains Offered and unlocks nothing, so Free is effective. After acceptance and an eligible allocation, the grant can become effective. If usage is already at the allocation, a new consuming write is blocked in limited mode while permitted reading and cleanup remain. Acceptance changes entitlement, never leadership authority.

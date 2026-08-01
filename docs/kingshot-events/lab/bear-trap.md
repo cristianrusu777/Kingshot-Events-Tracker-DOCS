@@ -35,3 +35,42 @@ When an observed result is entered, prediction error is the difference between o
 ## Limitations
 
 The engine can explain modeled stages and evidence sources, but it cannot guarantee an optimal rally or exact live damage. In-game rounding, undocumented effects, timing, and incomplete observations remain uncertainty. Record the actual formation and source state before changing assumptions to fit an outcome.
+
+## Input resolution and result anatomy
+
+```mermaid
+flowchart TD
+  P["Active profile"] --> O["Scenario overrides"]
+  O --> C{"Leader and joiner counts fit capacities?"}
+  C -- "No" --> X["Validation result; no estimate"]
+  C -- "Yes" --> T["Resolve troop class, actual tier, and Truegold"]
+  T --> H["Resolve leader heroes, joiner captains, and active skill slots"]
+  H --> B["Apply account bonuses and temporary buffs"]
+  B --> F["Final resolved scenario input"]
+```
+
+*Bear Trap input resolution. Scenario values override profile defaults, then capacity, troops, heroes, skills, and bonuses are validated in order.*
+
+**Accessible summary:** Profile defaults are overridden by scenario values, invalid capacity stops the run, and valid troops, Truegold, heroes, skills, and buffs form the calculation input.
+
+```mermaid
+flowchart TD
+  D["Game-displayed input values"] --> R["Resolved leader and joiner contributions"]
+  V["Verified catalog values"] --> R
+  C["Community-observed mechanics"] --> R
+  R --> E["Derived estimated damage"]
+  E --> S["Estimated event score"]
+  O["Optional observed result"] --> P["Prediction error"]
+  E --> P
+  U["Unresolved mechanics"] --> L["Named limitation, not hidden certainty"]
+```
+
+*Bear Trap result anatomy and evidence classes. Displayed, verified, community-observed, derived, estimated, and unresolved information remain distinguishable.*
+
+**Accessible summary:** Resolved contributions combine supported evidence into estimated damage and score; an observed result produces prediction error, while unresolved mechanics remain explicit limitations.
+
+## Purpose, workflow, scope, and recovery
+
+The Bear Trap model solves comparison, not live-game control: it lets a rally leader or scenario reviewer explain how one declared leader march and a bounded set of joiners become personal contribution, rally contribution, estimated damage, event score, and prediction error. The workflow is to select the active profile, enter scenario overrides, validate rally size and joiner count, resolve formations and active skills, calculate deterministic supported effects, label probabilistic or unresolved effects, and compare the estimate with any observed result. The scenario remains personal Lab data; kingdom and alliance scope do not turn it into an official event record.
+
+**Incomplete-joiner example:** One joiner has troop counts but no confirmed captain or active skill slots. The platform can use the declared troops and other supported inputs, but it must not silently assume a best captain. The output should expose the incomplete assumption and wider uncertainty. Add the observed captain only when known, rerun, and compare prediction error. If damage remains far apart, check actual tier, Truegold, capacities, temporary buffs, formation, and evidence labels before reporting an unresolved mechanic.

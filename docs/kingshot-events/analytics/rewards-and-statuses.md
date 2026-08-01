@@ -40,3 +40,24 @@ Read the rule and source records beside the outcome.
 </VisualReference>
 
 Related: [Reviewing Results and Event History](/kingshot-events/events/review-and-history) and [Player Lifecycle](/kingshot-events/players/lifecycle).
+
+## Decision workflow
+
+Reward evaluation starts from current eligible results in the applicable player, alliance, event, and date context. Participation and score rules use only metrics and boundaries they declare. Missing evidence does not automatically become zero. When several enabled scoped rules match, configured priority and visible matching reasons determine output. A later manual handled state records human follow-up without rewriting why calculation matched.
+
+```mermaid
+flowchart TD
+  R["Eligible current result rows"] --> M["Calculate participation, score, points, and event metrics"]
+  M --> E["Evaluate enabled scoped rules in priority order"]
+  E --> C{"Every declared boundary passes?"}
+  C -- "No" --> N["Not eligible with available reason"]
+  C -- "Yes" --> Y["Eligible status and reason"]
+  Y --> H["Optional manual handled state"]
+  N --> Q["Correct source or rule, then recalculate when evidence is wrong"]
+```
+
+*Reward eligibility decision. Declared boundaries determine eligibility, while human handling remains a later state.*
+
+**Accessible summary:** Eligible rows form metrics, prioritized rules test their boundaries, matches create eligibility, and manual handling follows without changing the reason.
+
+**Worked example:** A player has enough score but too few tracked events for a rule declaring both boundaries. Score passes and event count fails, so the player is not eligible. A duplicate score would not fix the failing condition. Correct a missing applied event row or have an authorized reward manager change the visible scoped rule. Preserve rule, priority, metrics, filters, source events, reason, and recalculation time. Reward output cannot guarantee an unrecorded activity occurred.

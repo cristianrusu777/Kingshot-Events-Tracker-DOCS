@@ -551,15 +551,6 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "navigationSection": "Simulations and Optimizations",
-    "audience": "Lab users",
-    "experienceLevel": "Intermediate",
-    "publicationStatus": "published",
-    "sortOrder": 101,
-    "lastReviewedDate": "2026-08-01",
-  },
-  {
-    "product": "kingshot-events",
     "title": "Hero Gear, Governor Gear, and Charms",
     "path": "/kingshot-events/lab/gear-and-charms",
     "navigationSection": "Simulations and Optimizations",

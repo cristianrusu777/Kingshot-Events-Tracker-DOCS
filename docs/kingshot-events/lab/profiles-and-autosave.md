@@ -53,3 +53,9 @@ Hero Gear may optionally reforge eligible unlocked enhancement levels to recover
 ## Limitations and conflict recovery
 
 The plan is deterministic for the same inputs and dataset, but it is not a proof of the globally best in-game build. Wrong inventory, weights, catalog assumptions, or temporary buffs produce a precise answer to the wrong scenario. On a stale-save conflict, copy any unsaved values, reload the newer workspace version, and reapply only the intended changes. Do not keep retrying the stale tab: its version cannot overwrite the newer save.
+
+## Purpose, roles, and profile boundaries
+
+Profiles solve the problem of re-entering shared progression and combat inputs for every Lab module. Any eligible Lab user can create and switch personal profiles; sharing or management roles do not turn a profile into an alliance record. The active profile supplies shared values, while each module adds its own gear, charm, rally, or scenario controls. A visible pending state means the debounce has not completed; saved confirms the current version; failed requires correction or retry; conflict means another tab or newer save won. Switching profiles changes the source for later module runs and must cancel or isolate an older pending write so it cannot overwrite the newly active profile.
+
+**Worked profile switch:** A user edits troop bonuses in Profile A and immediately opens Profile B. The pending A save remains associated with A. Profile B loads its own values and save version. When the older response returns, stale-write protection prevents it from replacing B. The next optimizer output therefore names Profile B and its module inputs. If the label or values disagree, stop, copy unsaved edits, reload, and verify the active profile before running again.

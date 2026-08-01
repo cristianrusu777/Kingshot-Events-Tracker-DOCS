@@ -57,4 +57,37 @@ Treat space, draft state, and published state as separate decisions.
 </template>
 </VisualReference>
 
+## Purpose and editorial workflow
+
+Knowledge Studio solves the problem of changing shared guidance without silently altering what readers already relied on. An authorized author chooses the intended global, kingdom, or alliance space and access policy, creates a structured draft from supported blocks, adds safe media, and watches the visible autosave state. Explicit save is used before important transitions. Preview renders the proposed reader experience but does not publish it.
+
+```mermaid
+stateDiagram-v2
+  [*] --> Draft
+  Draft --> Saved: autosave or explicit save
+  Saved --> InReview: submit revision
+  InReview --> ChangesRequested: reviewer returns
+  ChangesRequested --> Draft: author revises
+  InReview --> Approved: reviewer approves
+  Approved --> Published: publish revision
+  Published --> Draft: edit starts next revision
+  Published --> Archived: authorized archive
+```
+
+*Knowledge authoring, review, publication, and revision lifecycle. Reader-visible publication is distinct from draft saving and approval.*
+
+**Accessible summary:** Authors save drafts, submit them, respond to requested changes, and publish only after approval; later edits begin a new revision.
+
+## Inputs, decisions, and worked example
+
+Important inputs are title, summary, source language, space, audience policy, premium feature where supported, blocks, media, and revision note. Validation rejects unsupported or unsafe structure, missing required context, and publication states that have not satisfied review. Reviewers judge accuracy, scope, public safety, and reader usability. Structured import and AI assistance may propose blocks or edits, but human author and reviewer remain responsible and the assistance cannot bypass workflow state.
+
+**Worked example:** A published alliance guide needs a new event step. The author opens the article in Studio, starts the next draft revision, adds the step, previews mobile layout, saves, and submits. A reviewer requests a clearer limitation. The author revises and resubmits; approval then permits publication. Readers continue seeing the previous published revision until the new one publishes, after which history identifies both versions.
+
+If autosave conflicts with a newer tab, copy unsaved text, reload the current draft, and reapply the intended edit. Do not retry a stale version repeatedly. Publication is not guaranteed when access, media, structure, or review validation fails; preserve the visible message and revision state for support.
+
+## Limitations and troubleshooting boundary
+
+Studio cannot guarantee that imported or AI-assisted prose is correct, appropriately sourced, safe for its audience, or visually usable. Human review remains mandatory. It cannot recover a draft after retention or an irreversible removal boundary, publish without the required review state, or make a scoped article visible to an unauthorized reader. Troubleshoot at the current revision: record article, space, revision, save indicator, review state, media or block involved, and exact validation message. Never paste private source code, provider credentials, raw permission identifiers, or protected reader data into an article or support request.
+
 Related: [Reading and Finding Knowledge](/kingshot-events/knowledge-hub/reading-and-finding) and [Editorial Policy](/editorial-policy).

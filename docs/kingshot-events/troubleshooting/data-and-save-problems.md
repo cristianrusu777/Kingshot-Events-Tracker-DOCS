@@ -40,4 +40,8 @@ Ask for help when the issue depends on role assignment, community scope, review 
 
 Wait for saved confirmation, reopen the record, clear filters, and verify scope. Draft, review, locked, published, removed, and restored states intentionally offer different controls.
 
-For separate view state from record state, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Worked example, recovery, and limitations
+
+**What you see:** A renamed player seems to disappear after save. **Checks:** Wait for the visible saved state, clear the directory filters, confirm alliance scope, search both current and former nickname, and inspect the external player ID. **Decision:** If the old nickname appears in history on the same player, no new record is needed. If the player is soft-deleted, use the eligible restore path. **Output:** The existing identity returns to the directory or a manager receives a precise restore request. Synchronization can later replace supported display fields, so a manual edit cannot guarantee permanent precedence. Include player ID, before and after nickname, alliance, save state, and time.
+
+This recovery preserves one identity and its history. It cannot guarantee restoration after retention expires or override a newer synchronized value without resolving its source.

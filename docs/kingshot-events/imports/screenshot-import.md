@@ -53,6 +53,18 @@ Verify the context summary before selecting a processor or image.
 </template>
 </VisualReference>
 
+## Purpose, controls, decision order, and review boundary
+
+Screenshot import solves high-volume transcription while keeping the source image and every row decision traceable. Authorized contributors choose import type, kingdom or alliance scope, event, event date, supported image, and an available processor or provider. The file must pass supported type, size, quota, and repeated-file checks before processing. A selected event or date takes precedence over a detected guess; disagreement becomes a visible review reason rather than an automatic context change.
+
+After extraction, names and values are normalized only within supported rules. Matching considers current player names and nickname history in context. One strong match can stage a row; no match, several matches, low confidence, missing score, warning, duplicate identity, or conflict requires review. The processor never has authority to accept, reject, create a player, overwrite a non-cumulative result, or apply a batch on its own. Reviewers control those decisions according to role and lock state.
+
+**Worked example:** A same-date screenshot contains eight existing players, one former nickname, and one unknown name. Eight rows stage against current players. The former nickname stages with history evidence for confirmation. The unknown remains unmatched. The reviewer confirms the former identity, intentionally rejects the unknown row because the image is cropped, accepts the nine supported rows, and applies the eligible batch. The output is a linked import, applied records, and recalculation; the rejected row remains visible in review history.
+
+## Limitations and recovery
+
+OCR can confuse digits, punctuation, ordering, or cropped names. Reprocess only through the visible confirmed action; repeated upload can create another artifact without fixing context. A processing failure can leave an import history entry, so check history before retrying. Delete concerns the import artifact, rollback concerns applied results, and restore does not automatically reapply them. Include import, scope, event, date, provider label, processing state, warning, and affected row when requesting help.
+
 ## Do not continue when
 
 Stop before accepting rows if the alliance, event, date, stage, title, or screenshot type is wrong. Correcting the context before acceptance is safer than trying to repair many saved results later.

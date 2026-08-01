@@ -19,6 +19,21 @@ head:
 
 <PlatformSelector />
 
+```mermaid
+flowchart TD
+  A["Ralyvora Docs"] --> B{"Which platform do you need?"}
+  B -- "Kingshot Events" --> C["Open the Kingshot Events knowledge system"]
+  C --> D{"How do you want to discover?"}
+  D -- "Product area" --> E["Choose category and mechanism"]
+  D -- "Task" --> F["Use I need to... finder"]
+  D -- "Role" --> G["Open a role journey"]
+  B -- "Another Ralyvora platform" --> H["No public product manual is currently listed"]
+```
+
+*Ralyvora platform selection. The portal selects a documented platform before offering category, task, and role discovery.*
+
+**Accessible summary:** Ralyvora Docs currently routes Kingshot Events readers into product-area, task, or role discovery and does not pretend that another platform manual exists.
+
 ## Featured starting points
 
 <LinkGrid :items="[

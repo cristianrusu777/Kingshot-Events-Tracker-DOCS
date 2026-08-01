@@ -48,4 +48,36 @@ Read stage, positions, times, and publication state together.
 </template>
 </VisualReference>
 
+## Purpose and decision workflow
+
+Planning turns reviewed eligible applications into one conflict-checked kingdom schedule. A Minister of Justice, King, or other authorized planner selects the kingdom cycle, reviews the slot grid, preserves locked manual placements, and asks for suggestions only from candidates who remain eligible for that position and compatible with the open time. Candidate order can consider review state, preferred time, resource relevance, application priority, current placements, and the configured public-safe ranking rules. A full row, incompatible time, conflict, lock, or missing eligible candidate produces a gap or standby outcome rather than an invented placement.
+
+```mermaid
+flowchart TD
+  A["Reviewed eligible applications"] --> G["Load kingdom planner grid"]
+  G --> L["Preserve locked and valid manual placements"]
+  L --> C{"Open row has compatible candidates?"}
+  C -- "No" --> S["Leave gap or record standby"]
+  C -- "Yes" --> R["Rank supported candidates and suggest"]
+  R --> M["Manager accepts, changes, or keeps manual placement"]
+  M --> V{"Whole draft passes validation?"}
+  V -- "No" --> G
+  V -- "Yes" --> P["Publish immutable schedule version"]
+  P --> N["Notify affected participants"]
+```
+
+*Planner structure and draft-to-publish decision. Suggestions do not bypass manager review or whole-draft validation.*
+
+**Accessible summary:** Eligible applications enter a grid, locks are preserved, compatible candidates may be suggested, a manager decides placements, and only a fully valid draft publishes.
+
+## Worked example, later change, and recovery
+
+**Starting situation:** A preferred-time row becomes full before candidate Ilya is placed. Ilya is otherwise eligible. The planner eliminates the full row, finds no other compatible time, and leaves Ilya on standby. The manager does not widen Ilya's availability. After publication, another participant withdraws. The manager starts a controlled change from the current version, rechecks Ilya and all locks, places Ilya if the new slot qualifies, validates, and publishes the next version. The previous version remains historical and affected participants receive the supported notice.
+
+The planner cannot see offline agreements, unsubmitted availability, or unrecorded resources. If publication fails, record cycle, row, position, conflict, locks, candidate state, and draft version. Resolve the source application or placement; do not duplicate the schedule.
+
+## Limitations
+
+Suggestion order cannot guarantee political fairness or a globally optimal schedule. It evaluates only recorded applications, resolved identity, eligibility, time choices, resources, locks, grid capacity, and configured ordering. Human reviewers remain responsible for exceptional context and for documenting a manual placement. Publishing validates product constraints, not an external promise that every participant will attend.
+
 See [Statuses and Changes](/kingshot-events/castle-positions/statuses-and-changes) for the participant result and [Castle Position Problems](/kingshot-events/troubleshooting/castle-position-problems) for save or visibility issues.
