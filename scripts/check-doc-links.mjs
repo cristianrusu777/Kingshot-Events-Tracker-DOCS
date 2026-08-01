@@ -1,56 +1,29 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { publicationManifest } from '../docs/.vitepress/publication-manifest.mts'
 
-const root = path.resolve('docs')
-const ignoredDirectories = new Set(['.vitepress', 'node_modules'])
-
-function walk(directory) {
-  return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
-    if (entry.isDirectory() && ignoredDirectories.has(entry.name)) return []
-    const full = path.join(directory, entry.name)
-    return entry.isDirectory() ? walk(full) : entry.isFile() && entry.name.toLowerCase().endsWith('.md') ? [full] : []
-  })
-}
-
-function stripTarget(value) {
-  const clean = value.trim().replace(/^<|>$/g, '')
-  const withoutTitle = clean.match(/^(\S+)(?:\s+["'].+["'])?$/)?.[1] ?? clean
-  return decodeURI(withoutTitle.split('#')[0].split('?')[0])
-}
-
-function candidates(source, target) {
-  const absolute = target.startsWith('/')
-    ? path.join(root, target.slice(1))
-    : path.resolve(path.dirname(source), target)
-  const publicAsset = target.startsWith('/')
-    ? path.join(root, 'public', target.slice(1))
-    : null
-  if (publicAsset && path.extname(publicAsset)) return [absolute, publicAsset]
-  if (path.extname(absolute)) return [absolute]
-  return [absolute, `${absolute}.md`, path.join(absolute, 'index.md'), path.join(absolute, 'README.md')]
-}
-
-const problems = []
-for (const file of walk(root)) {
-  const content = fs.readFileSync(file, 'utf8')
-  const matches = [
-    ...content.matchAll(/!?\[[^\]]*\]\(([^)]+)\)/g),
-    ...content.matchAll(/(?<!:)(?:src|href)=["']([^"']+)["']/g)
-  ]
-
-  for (const match of matches) {
-    const raw = match[1]
-    if (!raw || /^(?:https?:|mailto:|tel:|data:|#)/i.test(raw)) continue
-    const target = stripTarget(raw)
-    if (!target || candidates(file, target).some(candidate => fs.existsSync(candidate))) continue
-    problems.push(`${path.relative(root, file)} -> ${raw}`)
+const root = path.resolve(import.meta.dirname, '..')
+const docs = path.join(root, 'docs')
+const routes = new Set(publicationManifest.map((entry) => entry.path))
+const errors = []
+for (const entry of publicationManifest) {
+  const file = path.join(docs, entry.file)
+  const source = fs.readFileSync(file, 'utf8')
+  for (const match of source.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)) {
+    const href = match[1].trim().split('#')[0]
+    if (!href || /^(https?:|mailto:|#)/.test(href)) continue
+    if (href.startsWith('/')) {
+      const normalized = href || '/'
+      if (!routes.has(normalized)) errors.push(`${path.relative(root, file)} -> ${href}`)
+    } else {
+      const target = path.resolve(path.dirname(file), href)
+      if (![target, `${target}.md`, path.join(target, 'index.md')].some(fs.existsSync)) errors.push(`${path.relative(root, file)} -> ${href}`)
+    }
+  }
+  for (const match of source.matchAll(/['"](\/[-a-z0-9/]+\/?)[\'"]/gi)) {
+    const href = match[1]
+    if (!routes.has(href) && !href.startsWith('/images/') && !href.startsWith('/assets/')) errors.push(`${path.relative(root, file)} -> embedded route ${href}`)
   }
 }
-
-if (problems.length) {
-  console.error(`Found ${problems.length} broken local documentation link(s):`)
-  problems.forEach(problem => console.error(`- ${problem}`))
-  process.exit(1)
-}
-
-console.log(`Checked ${walk(root).length} Markdown files: all local links and images resolve.`)
+if (errors.length) { console.error(`Broken links:\n${errors.join('\n')}`); process.exit(1) }
+console.log(`Link check OK: ${publicationManifest.length} classified pages.`)
