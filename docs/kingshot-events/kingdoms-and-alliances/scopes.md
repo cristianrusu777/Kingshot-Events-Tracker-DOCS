@@ -22,14 +22,15 @@ Player creation, imports, event records, analytics, reward review, Knowledge con
 ## Visibility
 
 Authorized kingdom users may see cross-alliance views. Alliance managers normally work only with assigned alliances. Players see personal or specifically shared information. Changing the selected scope changes the records shown; it does not move records between communities.
-<VisualReference title="How Scopes Work orientation">
-Use the current page labels and confirm context before acting.
+<VisualReference title="Kingdom and alliance scope landmarks">
+Confirm the community context in both the application shell and the page-level selector.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Active kingdom with server code and available alliance selector.
+- Locked selector when an assignment fixes the viewer to one scope.
+- Page context banner on Players, Events, Imports, Analytics, or Castle Positions.
+- Empty, forbidden, or missing-assignment feedback after a scope change.
 
 </template>
 </VisualReference>

@@ -1,42 +1,48 @@
 ---
 title: 'Subscription Troubleshooting'
-description: 'Resolve missing plan access, grant, request, or usage states.'
+description: 'Resolve a locked feature, pending request, missing grant, quota, expiry, or scope mismatch.'
 product: 'kingshot-events'
 audience: 'Members and managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Subscriptions'
 lastReviewed: '2026-08-01'
-head:
-  - - meta
-    - name: 'robots'
-      content: 'index,follow'
 ---
 
 # Subscription Troubleshooting
-## What you see
 
-A premium action is locked, a grant is missing, a request is still pending, or a quota warning appears.
+## A premium tab is locked
 
-## Safe checks
+Check the exact feature in the current effective-plan summary. Player and Custom Analytics are separate features. Confirm the active alliance, reload after a recent grant, and use **Request Subscription** only when no request is pending.
 
-Confirm the active alliance, effective plan, request status, grant acceptance, and whether the feature is enabled. Refresh after a recent change. Do not submit repeated requests or payments.
+## A kingdom grant is missing
 
-## Contact support
+Confirm the manager allocated it to the intended alliance and that any alliance acceptance step completed. A grant to another alliance cannot be transferred by switching player context. Ask the kingdom subscription manager to review the visible grant status.
 
-Include the account email only through the approved support form, the affected kingdom or alliance label, visible request status, feature name, and approximate time. Never include payment secrets, passwords, or tokens.
-<VisualReference title="Subscription Troubleshooting orientation">
-Use the current page labels and confirm context before acting.
+## A request is still pending
+
+The request remains **submitted** or **under review** until an authorized reviewer acts. Follow the configured support instructions and do not duplicate payment or request submissions.
+
+## Quota exceeded
+
+Read the feature, used amount, limit, and reset information. Wait for reset, use an enabled alternative, or ask the subscription manager about plan capacity. Deleting prior records does not necessarily restore usage.
+
+## Access stopped after a move or expiry
+
+Alliance access belongs to the alliance. A moved player can lose the former alliance's direct or granted features. Expired, revoked, or suspended plans also lock new actions. Confirm the current scope and effective dates.
+
+## What to send support
+
+Use the approved support route and include the affected community label, feature name, visible request or grant status, usage message, and approximate time. Never include passwords, reset links, payment secrets, or provider keys.
+
+<VisualReference title="Subscription problem checkpoints">
+Capture the effective state without exposing private payment data.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Active community and effective-plan source.
+- Locked feature name or premium label.
+- Request or grant timeline and acceptance state.
+- Usage warning with limit and reset, plus configured support action.
 
 </template>
 </VisualReference>
-
-## Related guides
-
-- [support](/support)
-- [access and usage](/kingshot-events/subscriptions/access-and-usage)

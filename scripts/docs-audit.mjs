@@ -1,7 +1,7 @@
 import { spawnSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 const checks = [
-  'audit-documentation-inventory.mjs', 'check-publication-manifest.mjs',
+  'audit-documentation-inventory.mjs', 'audit-documentation-semantic-coverage.mjs', 'check-publication-manifest.mjs',
   'check-doc-links.mjs', 'check-doc-images.mjs', 'check-doc-content.mjs',
   'audit-documentation-leaks.mjs'
 ]

@@ -1,40 +1,48 @@
 ---
 title: 'Interpreting Lab Results and Limitations'
-description: 'Use modeled output responsibly and diagnose surprising recommendations.'
+description: 'Validate input summaries, compare controlled scenarios, and use modeled output responsibly.'
 product: 'kingshot-events'
 audience: 'All Lab users'
 experienceLevel: 'Intermediate'
 featureArea: 'Lab results'
 lastReviewed: '2026-08-01'
-head:
-  - - meta
-    - name: 'robots'
-      content: 'index,follow'
 ---
 
 # Interpreting Lab Results and Limitations
-Read the input summary before the recommendation. A result is useful only when the profile, resources, formation, and selected mode match the intended scenario.
 
-## What results can tell you
+Read the input summary before the recommendation. A result is useful only when the active profile, current levels, inventory, formation, roles, and selected mode match the intended scenario.
 
-Results can compare supported options, identify modeled bottlenecks, show an upgrade order, or summarize distributions and sensitivity. They cannot predict player behavior, unmodeled game changes, connection conditions, or every hidden interaction.
+## What results can show
+
+Depending on the module, output can include an upgrade order, target checkpoints, resource consumption, remaining inventory, bottlenecks, expected damage, uncertainty range, comparison, sensitivity, or repeated-run distribution. These values compare supported choices under one model.
+
+## What results cannot guarantee
+
+The Lab cannot predict player execution, connection conditions, undocumented game changes, every interaction, future prices, or live opponent behavior. Beta modules and data revisions can change an output even when saved inputs did not change. A narrow uncertainty range describes the model, not certainty about the game.
 
 ## When a result looks wrong
 
-Recheck starting levels, inventory, selected troop or mode, captain and joiner roles, and profile freshness. Compare one controlled change at a time. Report the visible tool name, input summary, and unexpected output without sharing account credentials.
-<VisualReference title="Interpreting Lab Results and Limitations orientation">
-Use the current page labels and confirm context before acting.
+1. Confirm the correct profile and save state.
+2. Recheck every starting level and owned resource.
+3. Verify Infantry, Cavalry, and Archer formation totals and capacity.
+4. Confirm captain versus joiner roles, hero skills, widgets, and combat context.
+5. Check whether current equipment is already included in the entered stats.
+6. Compare one controlled change at a time.
+7. Rerun only after the input summary matches the intended scenario.
+
+If profile edits did not appear, save them, reopen the module, and select the profile again. A previously saved run retains its own input snapshot and does not silently become a result for the newest profile state.
+
+<VisualReference title="Lab result review landmarks">
+Compare input summary, result, and assumptions as one record.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Tool name, module availability or beta label, active profile, and saved-input timestamp.
+- Complete input summary with mode, objective, formation, roles, equipment, and inventory.
+- Main recommendation or modeled result with comparison, range, or resource detail.
+- Assumptions, limitations, data version, save or share action, and rerun controls.
 
 </template>
 </VisualReference>
 
-## Related guides
-
-- [Lab overview](/kingshot-events/lab/)
-- [simulator problems](/kingshot-events/troubleshooting/simulator-problems)
+When reporting a problem, provide the tool, public input summary, module version information shown, and unexpected output. Remove account credentials and private community data.

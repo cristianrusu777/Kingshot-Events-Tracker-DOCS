@@ -20,14 +20,15 @@ Alliance work brings together the roster, manual input, imports, event results, 
 Confirm the alliance, review current members, resolve duplicates or link requests, enter or import event information, and verify results before using them for rewards or reports. Co-leaders see only the actions granted to their assignment.
 
 Do not use an alliance screen to infer access to another alliance in the same kingdom. Ask a kingdom manager when a cross-alliance correction is needed.
-<VisualReference title="Working Inside an Alliance orientation">
-Use the current page labels and confirm context before acting.
+<VisualReference title="Alliance manager workspace landmarks">
+Check the selected alliance before changing roster or event records.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Alliance tag and name in the active context.
+- Player roster with status, attributes, participation, and result indicators.
+- Event instances, manual entry, screenshot imports, and review queues for that alliance.
+- Alliance Analytics, rewards, and subscription state with role-dependent actions.
 
 </template>
 </VisualReference>
