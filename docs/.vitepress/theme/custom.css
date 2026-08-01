@@ -48,3 +48,37 @@ body { background-image: radial-gradient(circle at 88% 2%, rgba(8,117,99,.08), t
 .visual-reference__items ul { margin: .4rem 0 0; }
 @media (max-width: 700px) { .link-grid { grid-template-columns: 1fr; } .platform-card, .visual-reference { grid-template-columns: 1fr; } .platform-card__mark { width: 52px; height: 52px; } .portal-hero { border-radius: 18px; } }
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+.category-hero { --category-accent: #087563; --category-soft: rgba(8,117,99,.12); display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; margin: 1.2rem 0 2.4rem; padding: clamp(1.25rem,4vw,2rem); border: 1px solid color-mix(in srgb,var(--category-accent) 42%,var(--vp-c-border)); border-left: 7px solid var(--category-accent); border-radius: 18px; background: repeating-linear-gradient(135deg,var(--category-soft) 0 2px,transparent 2px 15px),var(--vp-c-bg-soft); }
+.category-hero__icon { display: grid; place-items: center; width: 72px; height: 72px; color: var(--category-accent); }
+.category-hero__icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.category-hero__frame { fill: color-mix(in srgb,var(--category-accent) 10%,var(--vp-c-bg)); stroke-width: 1.5; }
+.category-hero__eyebrow,.category-hero__label { margin: 0; color: var(--category-accent); font-size: .72rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.category-hero__description p { margin: .45rem 0 .7rem; max-width: 760px; color: var(--vp-c-text-2); font-size: 1.08rem; }
+.category-hero__label { display: inline-block; padding: .25rem .5rem; border: 1px solid currentColor; border-radius: 999px; }
+.category-hero[data-category="accounts-and-access"] { --category-accent:#7551a6; --category-soft:rgba(117,81,166,.11); }
+.category-hero[data-category="scopes-and-communities"] { --category-accent:#286f9b; --category-soft:rgba(40,111,155,.11); }
+.category-hero[data-category="players"] { --category-accent:#a34f69; --category-soft:rgba(163,79,105,.1); }
+.category-hero[data-category="events"] { --category-accent:#a34d28; --category-soft:rgba(163,77,40,.1); }
+.category-hero[data-category="imports"] { --category-accent:#2d7180; --category-soft:rgba(45,113,128,.1); }
+.category-hero[data-category="analytics"] { --category-accent:#356d2d; --category-soft:rgba(53,109,45,.1); }
+.category-hero[data-category="castle-positions"] { --category-accent:#8b6512; --category-soft:rgba(139,101,18,.11); }
+.category-hero[data-category="knowledge-hub"] { --category-accent:#495baa; --category-soft:rgba(73,91,170,.1); }
+.category-hero[data-category="lab"] { --category-accent:#7d4a99; --category-soft:rgba(125,74,153,.1); }
+.category-hero[data-category="subscriptions"] { --category-accent:#176c69; --category-soft:rgba(23,108,105,.1); }
+.category-hero[data-category="lifecycles"] { --category-accent:#675b4f; --category-soft:rgba(103,91,79,.1); }
+.category-hero[data-category="troubleshooting"] { --category-accent:#a34040; --category-soft:rgba(163,64,64,.1); }
+.dark .category-hero { --category-accent:#6ee0c0; }
+.dark .category-hero[data-category="accounts-and-access"] { --category-accent:#c3a4ef; }
+.dark .category-hero[data-category="scopes-and-communities"] { --category-accent:#88c9ef; }
+.dark .category-hero[data-category="players"] { --category-accent:#efa8bd; }
+.dark .category-hero[data-category="events"] { --category-accent:#f1a47c; }
+.dark .category-hero[data-category="imports"] { --category-accent:#85c8d4; }
+.dark .category-hero[data-category="analytics"] { --category-accent:#99d18f; }
+.dark .category-hero[data-category="castle-positions"] { --category-accent:#e7c46b; }
+.dark .category-hero[data-category="knowledge-hub"] { --category-accent:#aeb9ff; }
+.dark .category-hero[data-category="lab"] { --category-accent:#d5a3ee; }
+.dark .category-hero[data-category="subscriptions"] { --category-accent:#83d5cf; }
+.dark .category-hero[data-category="lifecycles"] { --category-accent:#c7b8a7; }
+.dark .category-hero[data-category="troubleshooting"] { --category-accent:#f0a0a0; }
+@media (max-width:700px) { .category-hero { grid-template-columns:1fr; border-left-width:5px; } .category-hero__icon { width:58px; height:58px; } }

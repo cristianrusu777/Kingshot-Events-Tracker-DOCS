@@ -47,3 +47,11 @@ Read the active context from broadest to most specific.
 
 - [scopes](/kingshot-events/kingdoms-and-alliances/scopes)
 - [overview](/kingshot-events/events/overview)
+
+## Practical depth
+
+### Follow a record through the product
+
+Identity and community scope lead to a player record. Event instances collect manual or imported evidence. Accepted records feed analytics, rewards, reports, and planning. A source correction can change a later summary after recalculation.
+
+For follow a record through the product, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.

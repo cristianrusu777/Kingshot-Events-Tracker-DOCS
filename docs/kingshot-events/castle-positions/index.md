@@ -8,6 +8,10 @@ featureArea: 'Castle Positions'
 lastReviewed: '2026-08-01'
 ---
 
+<CategoryHero category="castle-positions" icon="crown" eyebrow="A fair, visible appointment cycle" title="Castle Positions Overview">
+Coordinate eligibility, applications, review, scheduling, publication, and later changes without losing the status of each applicant.
+</CategoryHero>
+
 # Castle Positions Overview
 
 Castle Positions coordinates player applications and a kingdom schedule. Players submit identity, stage availability, time choices, resources, and configured answers. Authorized kingdom managers review candidates, build a draft schedule, and publish the result participants can rely on.

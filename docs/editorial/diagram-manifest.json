@@ -1,0 +1,442 @@
+[
+  {
+    "id": "ke-getting-started-index",
+    "page": "kingshot-events/getting-started/index.md",
+    "title": "Start Here workflow",
+    "purpose": "Explain the visible sequence for start here.",
+    "audience": "All new users",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-getting-started-ten-minute-first-session",
+    "page": "kingshot-events/getting-started/ten-minute-first-session.md",
+    "title": "A Ten-Minute First Session workflow",
+    "purpose": "Explain the visible sequence for a ten-minute first session.",
+    "audience": "Newly approved users",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-getting-started-navigation-and-saved-context",
+    "page": "kingshot-events/getting-started/navigation-and-saved-context.md",
+    "title": "Navigation and Saved Context workflow",
+    "purpose": "Explain the visible sequence for navigation and saved context.",
+    "audience": "All signed-in users",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-accounts-and-access-index",
+    "page": "kingshot-events/accounts-and-access/index.md",
+    "title": "Accounts and Access workflow",
+    "purpose": "Explain the visible sequence for accounts and access.",
+    "audience": "All users",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-accounts-and-access-registration-and-approval",
+    "page": "kingshot-events/accounts-and-access/registration-and-approval.md",
+    "title": "Registration and Approval workflow",
+    "purpose": "Explain the visible sequence for registration and approval.",
+    "audience": "New users and approvers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-accounts-and-access-password-and-security",
+    "page": "kingshot-events/accounts-and-access/password-and-security.md",
+    "title": "Password and Sign-In Security workflow",
+    "purpose": "Explain the visible sequence for password and sign-in security.",
+    "audience": "All account holders",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-accounts-and-access-player-link-review",
+    "page": "kingshot-events/accounts-and-access/player-link-review.md",
+    "title": "Player Link Review workflow",
+    "purpose": "Explain the visible sequence for player link review.",
+    "audience": "Players and community managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-accounts-and-access-multi-role-access",
+    "page": "kingshot-events/accounts-and-access/multi-role-access.md",
+    "title": "Multi-Role Access workflow",
+    "purpose": "Explain the visible sequence for multi-role access.",
+    "audience": "Leaders with more than one responsibility",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-scopes-and-communities-index",
+    "page": "kingshot-events/scopes-and-communities/index.md",
+    "title": "Scopes and Communities workflow",
+    "purpose": "Explain the visible sequence for scopes and communities.",
+    "audience": "All signed-in users",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-scopes-and-communities-hierarchy-and-switching",
+    "page": "kingshot-events/scopes-and-communities/hierarchy-and-switching.md",
+    "title": "Hierarchy and Scope Switching workflow",
+    "purpose": "Explain the visible sequence for hierarchy and scope switching.",
+    "audience": "Members and managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-scopes-and-communities-membership-and-management",
+    "page": "kingshot-events/scopes-and-communities/membership-and-management.md",
+    "title": "Membership and Community Management workflow",
+    "purpose": "Explain the visible sequence for membership and community management.",
+    "audience": "Alliance and kingdom leaders",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-scopes-and-communities-cross-scope-visibility",
+    "page": "kingshot-events/scopes-and-communities/cross-scope-visibility.md",
+    "title": "Cross-Scope Visibility workflow",
+    "purpose": "Explain the visible sequence for cross-scope visibility.",
+    "audience": "Leaders and analytics viewers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-players-index",
+    "page": "kingshot-events/players/index.md",
+    "title": "Players Guide workflow",
+    "purpose": "Explain the visible sequence for players guide.",
+    "audience": "Players and roster managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-players-filters-and-columns",
+    "page": "kingshot-events/players/filters-and-columns.md",
+    "title": "Directory Filters and Columns workflow",
+    "purpose": "Explain the visible sequence for directory filters and columns.",
+    "audience": "Members and roster managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-players-profile-and-history",
+    "page": "kingshot-events/players/profile-and-history.md",
+    "title": "Profile, Attributes, and History workflow",
+    "purpose": "Explain the visible sequence for profile, attributes, and history.",
+    "audience": "Players and managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-events-and-results-index",
+    "page": "kingshot-events/events/index.md",
+    "title": "Events and Results Guide workflow",
+    "purpose": "Explain the visible sequence for events and results guide.",
+    "audience": "Participants and event managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-events-and-results-templates-and-settings",
+    "page": "kingshot-events/events/templates-and-settings.md",
+    "title": "Templates and Event Settings workflow",
+    "purpose": "Explain the visible sequence for templates and event settings.",
+    "audience": "Event managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-events-and-results-instances-and-locks",
+    "page": "kingshot-events/events/instances-and-locks.md",
+    "title": "Instances, Windows, and Locks workflow",
+    "purpose": "Explain the visible sequence for instances, windows, and locks.",
+    "audience": "Participants and event managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-events-and-results-custom-events-and-proposals",
+    "page": "kingshot-events/events/custom-events-and-proposals.md",
+    "title": "Custom Events and Proposals workflow",
+    "purpose": "Explain the visible sequence for custom events and proposals.",
+    "audience": "Community managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-events-and-results-record-batches-and-corrections",
+    "page": "kingshot-events/events/record-batches-and-corrections.md",
+    "title": "Record Batches and Corrections workflow",
+    "purpose": "Explain the visible sequence for record batches and corrections.",
+    "audience": "Result contributors and reviewers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-events-and-results-default-event-patterns",
+    "page": "kingshot-events/events/default-event-patterns.md",
+    "title": "Default Event Patterns workflow",
+    "purpose": "Explain the visible sequence for default event patterns.",
+    "audience": "Players and event managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-imports-and-data-entry-index",
+    "page": "kingshot-events/imports/index.md",
+    "title": "Imports and Data Entry Guide workflow",
+    "purpose": "Explain the visible sequence for imports and data entry guide.",
+    "audience": "Contributors and reviewers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-imports-and-data-entry-providers-and-processing",
+    "page": "kingshot-events/imports/providers-and-processing.md",
+    "title": "Providers and Processing workflow",
+    "purpose": "Explain the visible sequence for providers and processing.",
+    "audience": "Import contributors",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-imports-and-data-entry-row-statuses-and-decisions",
+    "page": "kingshot-events/imports/row-statuses-and-decisions.md",
+    "title": "Row Statuses and Decisions workflow",
+    "purpose": "Explain the visible sequence for row statuses and decisions.",
+    "audience": "Import reviewers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-imports-and-data-entry-apply-and-history",
+    "page": "kingshot-events/imports/apply-and-history.md",
+    "title": "Apply and Import History workflow",
+    "purpose": "Explain the visible sequence for apply and import history.",
+    "audience": "Contributors and managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-imports-and-data-entry-rollback-and-restore",
+    "page": "kingshot-events/imports/rollback-and-restore.md",
+    "title": "Rollback and Restore workflow",
+    "purpose": "Explain the visible sequence for rollback and restore.",
+    "audience": "Managers and restore reviewers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-imports-and-data-entry-spreadsheet-and-structured-input",
+    "page": "kingshot-events/imports/spreadsheet-and-structured-input.md",
+    "title": "Spreadsheet and Structured Input workflow",
+    "purpose": "Explain the visible sequence for spreadsheet and structured input.",
+    "audience": "Experienced contributors",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-analytics-and-rewards-index",
+    "page": "kingshot-events/analytics/index.md",
+    "title": "Analytics and Rewards Guide workflow",
+    "purpose": "Explain the visible sequence for analytics and rewards guide.",
+    "audience": "Players, leaders, and reward managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-analytics-and-rewards-filters-and-recalculation",
+    "page": "kingshot-events/analytics/filters-and-recalculation.md",
+    "title": "Filters and Recalculation workflow",
+    "purpose": "Explain the visible sequence for filters and recalculation.",
+    "audience": "Analytics viewers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-analytics-and-rewards-recommendations-and-missing-data",
+    "page": "kingshot-events/analytics/recommendations-and-missing-data.md",
+    "title": "Recommendations and Missing Data workflow",
+    "purpose": "Explain the visible sequence for recommendations and missing data.",
+    "audience": "Leaders and analysts",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-analytics-and-rewards-reward-rules",
+    "page": "kingshot-events/analytics/reward-rules.md",
+    "title": "Reward Rules and Outcomes workflow",
+    "purpose": "Explain the visible sequence for reward rules and outcomes.",
+    "audience": "Reward managers and players",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-castle-positions-resources-and-eligibility",
+    "page": "kingshot-events/castle-positions/resources-and-eligibility.md",
+    "title": "Resources, Eligibility, and Capacity workflow",
+    "purpose": "Explain the visible sequence for resources, eligibility, and capacity.",
+    "audience": "Applicants and position managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-castle-positions-planner-controls",
+    "page": "kingshot-events/castle-positions/planner-controls.md",
+    "title": "Planner Controls and Conflict Resolution workflow",
+    "purpose": "Explain the visible sequence for planner controls and conflict resolution.",
+    "audience": "Kings and Ministers of Justice",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-castle-positions-notifications-and-versions",
+    "page": "kingshot-events/castle-positions/notifications-and-versions.md",
+    "title": "Notifications and Published Versions workflow",
+    "purpose": "Explain the visible sequence for notifications and published versions.",
+    "audience": "Applicants and schedule managers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-knowledge-hub-index",
+    "page": "kingshot-events/knowledge-hub/index.md",
+    "title": "Knowledge Hub Guide workflow",
+    "purpose": "Explain the visible sequence for knowledge hub guide.",
+    "audience": "Readers, authors, and reviewers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-knowledge-hub-blocks-and-media",
+    "page": "kingshot-events/knowledge-hub/blocks-and-media.md",
+    "title": "Blocks, Media, and Structured Content workflow",
+    "purpose": "Explain the visible sequence for blocks, media, and structured content.",
+    "audience": "Knowledge authors",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-knowledge-hub-revisions-and-review",
+    "page": "kingshot-events/knowledge-hub/revisions-and-review.md",
+    "title": "Revisions and Review workflow",
+    "purpose": "Explain the visible sequence for revisions and review.",
+    "audience": "Authors and reviewers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-knowledge-hub-reading-sessions",
+    "page": "kingshot-events/knowledge-hub/reading-sessions.md",
+    "title": "Reading Sessions workflow",
+    "purpose": "Explain the visible sequence for reading sessions.",
+    "audience": "Session managers and readers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-simulations-and-optimizations-profiles-and-autosave",
+    "page": "kingshot-events/lab/profiles-and-autosave.md",
+    "title": "Profiles, Assumptions, and Autosave workflow",
+    "purpose": "Explain the visible sequence for profiles, assumptions, and autosave.",
+    "audience": "Lab users",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-simulations-and-optimizations-governor-gear",
+    "page": "kingshot-events/lab/governor-gear.md",
+    "title": "Governor Gear Planning workflow",
+    "purpose": "Explain the visible sequence for governor gear planning.",
+    "audience": "Players planning governor upgrades",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-simulations-and-optimizations-bear-trap",
+    "page": "kingshot-events/lab/bear-trap.md",
+    "title": "Bear Trap Planning workflow",
+    "purpose": "Explain the visible sequence for bear trap planning.",
+    "audience": "Alliance rally planners",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-subscriptions-and-usage-grants-and-allocations",
+    "page": "kingshot-events/subscriptions/grants-and-allocations.md",
+    "title": "Grants and Allocations workflow",
+    "purpose": "Explain the visible sequence for grants and allocations.",
+    "audience": "Kingdom and alliance owners",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-subscriptions-and-usage-quotas-and-limited-mode",
+    "page": "kingshot-events/subscriptions/quotas-and-limited-mode.md",
+    "title": "Quotas and Limited Mode workflow",
+    "purpose": "Explain the visible sequence for quotas and limited mode.",
+    "audience": "All users of limited features",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  },
+  {
+    "id": "ke-platform-lifecycles-recycle-bin-and-restore-requests",
+    "page": "kingshot-events/lifecycles/recycle-bin-and-restore-requests.md",
+    "title": "Recycle Bin and Restore Requests workflow",
+    "purpose": "Explain the visible sequence for recycle bin and restore requests.",
+    "audience": "Managers and restore reviewers",
+    "mobileStrategy": "vertical flow",
+    "status": "implemented",
+    "legacyDisposition": "rewritten or newly documented"
+  }
+]

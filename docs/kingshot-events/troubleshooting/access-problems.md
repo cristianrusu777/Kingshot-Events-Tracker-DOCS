@@ -33,3 +33,11 @@ Ask for help when the issue depends on role assignment, community scope, review 
 
 - [support](/support)
 - [feature availability](/kingshot-events/overview/feature-availability)
+
+## Practical depth
+
+### Evidence that resolves access issues
+
+Compare account approval, player link, membership, scope, role, plan or grant, quota, and the exact access message. Reopen from current navigation before reporting the page, action, community, and time.
+
+For evidence that resolves access issues, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.

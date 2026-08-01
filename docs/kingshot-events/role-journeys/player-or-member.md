@@ -31,3 +31,11 @@ Contact the community manager responsible for the current scope when information
 
 - [access and navigation](/kingshot-events/getting-started/access-and-navigation)
 - [access problems](/kingshot-events/troubleshooting/access-problems)
+
+## Practical depth
+
+### Your recurring path
+
+Keep the account linked, select the current community, enter results inside the active window, review personal history, follow Castle application statuses, and treat Lab outputs as planning assumptions rather than live records.
+
+For your recurring path, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
