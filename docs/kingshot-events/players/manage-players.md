@@ -48,3 +48,7 @@ The form sits between the directory filters and the roster table when the viewer
 ## If saving fails
 
 Confirm the required fields, active scope, and duplicate warning. If the profile ID belongs to another record, open that record instead. For an apparently missing player, enable **Show deleted** before creating a replacement.
+
+## Purpose, decision workflow, and worked example
+
+Management creates or corrects one local player without violating kingdom identity or alliance capacity. The workflow validates required name and scope, normalizes external ID, checks current-name and ID conflicts, verifies the destination alliance and role, then saves fields the manager controls. **Example:** A player moves into an alliance that already has 100 current members. The hard constraint rejects the claim; deleting an unrelated player is not a safe workaround. The manager resolves capacity or keeps the player unassigned. Output is a saved profile or a named validation failure. Troubleshoot with player ID, scope, destination, field, duplicate or capacity message, and current membership.

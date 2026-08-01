@@ -40,3 +40,7 @@ Read the active community and navigation before opening a shared workflow.
 </VisualReference>
 
 See [How Scopes Work](/kingshot-events/kingdoms-and-alliances/scopes) and [Access Problems](/kingshot-events/troubleshooting/access-problems).
+
+## Purpose, roles, and worked decision
+
+Navigation reflects the account's current scope, applicable stacked roles, feature state, and effective access. **Example:** A kingdom manager switches to a personal context and Castle planning disappears. The role remains assigned, but the active scope no longer matches the kingdom workflow. Switching back restores evaluation; it does not create or remove the role. A read-only grant may expose Analytics without edit controls. Troubleshoot by recording identity, selected scope, expected role, page, feature label, plan or grant state, and exact disabled wording. Scope selection cannot bypass assignment or suspension.

@@ -75,3 +75,40 @@ Cross-alliance analytics requires more than a visible kingdom. A viewer must be 
 ## Limitations
 
 The public interface explains the effective outcome, not raw permission identifiers. Some pages select the best available subscription-bearing context when no explicit scope is supplied, but writes still require an explicit valid tenant context. Platform-wide administration is outside this handbook.
+
+## Connected decision maps
+
+### Server, kingdom, alliance, and player hierarchy
+
+```mermaid
+flowchart TD
+  S["Server context"] --> K["Kingdom"]
+  K --> A1["Alliance A"]
+  K --> A2["Alliance B"]
+  A1 --> P1["Player records"]
+  A2 --> P2["Player records"]
+  K --> KW["Kingdom workflows"]
+  A1 --> AW["Alliance workflows"]
+```
+
+*Community hierarchy. Kingdom and alliance workflows read records from their matching branch.*
+
+**Accessible summary:** A kingdom contains alliances and their player records, with separate kingdom-wide and alliance workflows.
+
+### Role, scope, feature, and plan resolution
+
+```mermaid
+flowchart TD
+  U["Usable account and requested scope"] --> M{"Membership or assignment matches?"}
+  M -- "No" --> D["Deny scoped action"]
+  M -- "Yes" --> R["Stack applicable roles and ownership"]
+  R --> F{"Feature enabled?"}
+  F -- "No" --> X["Feature-disabled state"]
+  F -- "Yes" --> P{"Required plan or accepted grant effective?"}
+  P -- "No" --> L["Free, teaser, or limited result"]
+  P -- "Yes" --> A["Allow resolved view or action"]
+```
+
+*Role and access resolution. Scope, role, availability, and entitlement are separate gates.*
+
+**Accessible summary:** A matching assignment is followed by role stacking, feature availability, and premium checks before an action is allowed or limited.

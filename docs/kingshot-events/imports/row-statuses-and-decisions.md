@@ -58,3 +58,46 @@ Provider-specific credentials are passed only to the selected processing attempt
 ## Limitations
 
 An accepted row proves only that a reviewer chose to apply the staged evidence; it does not certify perfect extraction. A crop can omit players, a nickname can still be ambiguous, and rollback may be unavailable after retention expires or later dependent edits exist. Preserve the source image long enough to resolve review flags, then compare the resulting batch before treating analytics as final.
+
+## Row-state and matching maps
+
+### Import row-state lifecycle
+
+```mermaid
+stateDiagram-v2
+  [*] --> Extracted
+  Extracted --> Ready: context and match pass
+  Extracted --> NeedsReview: warning or uncertainty
+  Extracted --> Unmatched: no player match
+  Ready --> Accepted: reviewer confirms
+  NeedsReview --> Accepted: reviewer corrects
+  Unmatched --> Accepted: intentional rematch or create
+  Ready --> Ignored: reviewer excludes
+  Accepted --> Applied: batch apply succeeds
+  Ignored --> NeedsReview: restore for new evidence
+  Applied --> RolledBack: supported rollback
+```
+
+*Import row lifecycle. Apply and rollback occur after extraction and review decisions.*
+
+**Accessible summary:** Extracted rows become ready, uncertain, or unmatched, then accepted or ignored. Accepted rows can be applied and eligible applied work can be rolled back.
+
+### Player-name and nickname-history matching
+
+```mermaid
+flowchart TD
+  N["Normalized extracted name"] --> C{"One current-name match?"}
+  C -- "Yes" --> M["Stage against current player"]
+  C -- "No" --> H{"One nickname-history match?"}
+  H -- "Yes" --> R["Stage with former-name review evidence"]
+  H -- "No" --> U["Unmatched player"]
+  C -- "Several" --> A["Ambiguous: human review"]
+  H -- "Several" --> A
+  U --> I{"Intentional eligible creation?"}
+  I -- "Yes" --> P["Create and attach local player"]
+  I -- "No" --> X["Reject or keep unresolved"]
+```
+
+*Player-name matching. Name history assists review but never silently resolves ambiguity.*
+
+**Accessible summary:** Unique current matches stage directly, unique historical matches need confirmation, and absent or multiple matches require a reviewer.

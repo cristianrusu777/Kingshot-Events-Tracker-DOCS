@@ -70,3 +70,7 @@ Read the page from scope to filters to roster actions.
 - [Player linking and synchronization](/kingshot-events/players/linking-and-sync)
 - [Activity, attributes, removal, and restore](/kingshot-events/players/lifecycle)
 - [Player and roster problems](/kingshot-events/troubleshooting/data-and-save-problems)
+
+## Purpose, operating workflow, and example
+
+The directory helps members and roster managers find the intended identity before opening history or changing a record. Select kingdom and alliance, apply name, status, attribute, membership, or deleted filters, inspect columns, then open the profile. **Example:** Searching current name returns nothing, but the former nickname and Show deleted locate one soft-deleted player with the expected external ID. Restore is the recovery; creating another player would split results. Names and activity labels are not stable identity proof. If a row is missing, preserve filters, scope, current and former names, external ID, deletion state, and visible count.

@@ -38,4 +38,10 @@ Contact the community manager responsible for the current scope when information
 
 Review eligibility and capacity, record application decisions, resolve planner conflicts, publish one authoritative schedule version, and verify notices after any later change.
 
-For your recurring path, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+The Minister role is a Castle workflow responsibility, not a universal kingdom-administration role. Candidate actions depend on the current cycle, review state, time compatibility, position eligibility, row capacity, and planner locks.
+
+## Worked example and limits
+
+**Starting situation:** The suggested candidate cannot fit the preferred row because it is full. Inspect eligibility, compatible times, resource relevance, existing locks, and standby candidates. Keep valid manual placements, move or place an eligible alternative in the draft, then run publish validation. Publishing creates the participant-facing version and its notifications; it should not silently mutate a prior immutable version. If no eligible candidate fits, preserve the visible gap or standby outcome and record the reason. Do not weaken eligibility or alter an application solely to fill a row. Escalate with cycle, position, time, candidate state, conflict wording, and draft version.
+
+Limitations include unsubmitted availability, offline agreements, and incomplete resource evidence. Troubleshooting remains inside the application, review, planner, version, and participant-notice workflow.

@@ -44,3 +44,44 @@ A manual handled state records a later human action without rewriting why the ca
 ## Limits
 
 Configurable thresholds are intentionally not hard-coded in this handbook. A recommendation or eligibility result is only as current as its accepted rows and last recalculation. Shared analytics does not change ownership of source data.
+
+## Filtering and sharing maps
+
+### Analytics filter order
+
+```mermaid
+flowchart TD
+  R["Current non-deleted results"] --> S["Keep active scope"]
+  S --> D["Apply inclusive date boundaries"]
+  D --> E["Apply event, stage, and result-type filters"]
+  E --> A["Apply participation or attribute filters"]
+  A --> G{"Selected view"}
+  G -->|Kingdom| K["Group eligible child alliances"]
+  G -->|Alliance| L["Group one alliance"]
+  G -->|Player| P["Group one player across selected events"]
+  G -->|Custom| C["Apply supported custom grouping"]
+```
+
+*Analytics filtering. Source eligibility and boundaries are resolved before view-specific grouping.*
+
+**Accessible summary:** Results pass scope, date, event, and attribute filters before being grouped into kingdom, alliance, player, or custom output.
+
+### Analytics grant and edit boundary
+
+```mermaid
+flowchart TD
+  V["Viewer requests Analytics"] --> O{"Own role and scope permit view?"}
+  O -- "Yes" --> A["Open authorized view"]
+  O -- "No" --> G{"Accepted current grant permits sharing?"}
+  G -- "No" --> D["Deny or show access guidance"]
+  G -- "Yes" --> R["Open granted read-only view"]
+  R --> X["Source corrections remain with owning manager"]
+```
+
+*Analytics sharing. A grant can add read visibility without moving source ownership or edit rights.*
+
+**Accessible summary:** Direct scope authority opens Analytics; otherwise an accepted eligible grant can open a read-only view whose records remain owned elsewhere.
+
+## End-to-end workflow and troubleshooting
+
+Begin with the requested kingdom, alliance, player, or custom view. Confirm effective access, then name the event set and inclusive date boundaries. The platform filters current eligible rows, groups them, calculates participation, score, and internal-point metrics, evaluates scoped status and reward rules, and returns totals with contributing records and reasons. A viewer interprets the output by drilling down before changing a filter. If a number appears wrong, compare missing versus Unknown participation, scored versus unscored rows, cumulative snapshots, rule priority, and last recalculation. Correct the source batch or configured rule through an authorized manager; never add a duplicate row to force the summary.

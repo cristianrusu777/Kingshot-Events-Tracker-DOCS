@@ -37,3 +37,11 @@ Alliance leaders and other assigned viewers normally see their alliance. Kingdom
 No members means the selected alliance has no visible player records. No event summary means the date and type filters matched no eligible instances. A member can show low participation because missing and unknown rows are distinct states; inspect the underlying events rather than assuming absence.
 
 Related: [Player analytics](/kingshot-events/analytics/player) and [event review and history](/kingshot-events/events/review-and-history).
+
+## Complete view behavior and worked example
+
+Alliance Analytics reads eligible current results belonging to one selected alliance. Event, stage, participation or attribute, and inclusive date filters apply before grouping. The output can show participation, scores, internal points, status or reward context, trends, and player drill-down. An alliance manager can trace a value to its source, while a granted viewer may receive only read access. Premium availability affects the view, not who owns results.
+
+**Starting situation:** The alliance average changes after the end date adds one occurrence. Drill-down shows Unknown participation rows and no scores. Unknown enters tracked participation but is not Active; unscored rows do not reduce a score average as zeros. The output is explained by participation, not score. If rows are wrong, correct the event batch and recalculate. If the occurrence should be excluded, restore the former boundary rather than deleting evidence.
+
+The view cannot infer attendance from a missing row, rewrite a locked event, or change player identity. Preserve alliance, filters, event dates, result type, player, source batch, and calculation time when troubleshooting.

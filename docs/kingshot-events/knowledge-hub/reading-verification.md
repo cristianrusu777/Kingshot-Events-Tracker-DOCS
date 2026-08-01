@@ -53,4 +53,34 @@ Reader and manager views expose different controls.
 </template>
 </VisualReference>
 
+## Reader decision workflow
+
+A reader starts from one canonical published article and an applicable active assignment. The session pins the article context used for verification. The reader opens the assignment, encounters collapsed markers in the article, reveals them while reading, reaches article completion, and submits the requested evidence. The platform classifies the supported signals and submission into completion, retry, or manual-review outcomes. Opening an article alone is not completion, and knowing a reading code does not bypass article access or audience scope.
+
+```mermaid
+flowchart TD
+  A["Canonical article and reader identity"] --> S{"Applicable active session and assignment?"}
+  S -- "No" --> N["Normal reading or unavailable assignment"]
+  S -- "Yes" --> R["Open assigned article"]
+  R --> M["Reveal applicable collapsed markers"]
+  M --> E["Reach article completion"]
+  E --> U["Submit requested evidence"]
+  U --> C{"Classification"}
+  C -- "Complete" --> D["Assignment completed"]
+  C -- "Retry allowed" --> T["Return to eligible retry"]
+  C -- "Human judgment needed" --> H["Manual review"]
+```
+
+*Reading Verification reader flow. Session applicability precedes marker, completion, submission, and classification states.*
+
+**Accessible summary:** Applicable readers reveal markers, finish the article, submit, and receive complete, retry, or manual-review outcomes.
+
+## Scope, manager decisions, and worked example
+
+The manager selects a canonical article and permitted audience, creates assignments, opens the session, observes progress and signals, reviews submissions requiring judgment, then closes and archives the session. Report access follows creator and authorized tenant-management relationships, with documented privileged oversight where applicable; unrelated users are denied.
+
+**Worked example:** A reader reveals every assigned marker and reaches the article end, but the submitted fragment is classified for manual review. The assignment remains review-required rather than automatically failed. The session manager compares the supported signals and submission, records a completion or retry outcome, and preserves the reason in the report. If the session closes first, the reader cannot manufacture a new assignment to change history. Recovery requires an authorized manager and the existing session.
+
+Browser translation can alter displayed wording but not canonical marker identity. Reading Verification records the visible workflow signals; it cannot prove attention or comprehension beyond them. Include article, session, assignment state, and exact public message when troubleshooting, never another reader's response.
+
 If an assignment cannot be restored or reopened, create a new authorized session rather than altering a closed historical result.

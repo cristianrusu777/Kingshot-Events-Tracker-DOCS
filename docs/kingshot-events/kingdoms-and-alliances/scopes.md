@@ -46,4 +46,8 @@ Confirm the community context in both the application shell and the page-level s
 
 Read the switcher, page heading, and record owner together. A kingdom view can combine alliances while an alliance view can offer more detailed controls for its own roster. Filters refine a scope; they do not move records.
 
-For check scope before shared work, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Controls, workflow, and worked example
+
+Use the scope switcher to choose only available kingdom or alliance contexts, then verify the label before opening or saving shared work. Roles are evaluated within that context. **Example:** A leader sees two alliances but is assigned to edit only one. Switching changes visible records; edit controls appear only for the matching assignment. The other alliance can remain read-only or unavailable. Scope switching cannot move players or grant access. Troubleshoot with account, selected context, expected assignment, page, and visible message.
+
+The decision output is an active personal, alliance, or kingdom context plus the actions resolved there. Controls never broaden the assignment. Limitations include inactive membership, feature-disabled state, read-only sharing, premium boundaries, quota, and suspension. The safe workflow returns to an available scope rather than forcing a hidden route.

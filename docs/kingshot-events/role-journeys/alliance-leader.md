@@ -38,4 +38,8 @@ Contact the community manager responsible for the current scope when information
 
 Maintain membership and activity, prepare event work, review imports, close corrections, reproduce analytics with named filters, make reward rules visible, and confirm member-facing outcomes.
 
-For your recurring path, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+An alliance leader normally carries the broad alliance assignment; a co-leader receives only the actions configured for that assignment. Both remain bounded to the selected alliance unless a separate kingdom responsibility applies.
+
+## Worked example and limits
+
+**Starting situation:** A reviewed screenshot has one conflicting player row. Confirm alliance, event, date, and current event lock. Resolve the one row against the existing result, apply only eligible rows, then verify event history and Alliance Analytics. The state moves from reviewed proposals to an applied batch; the visible output is the corrected history and recalculated total. A co-leader without overwrite or unlock authority must leave the conflict for the alliance leader or kingdom reviewer. Neither role should change scope, create a duplicate event, or delete the player to force acceptance. Report the batch, row, current state, and exact message when escalation is required.

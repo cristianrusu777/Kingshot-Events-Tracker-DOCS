@@ -670,27 +670,6 @@
     "status": "needed"
   },
   {
-    "visualId": "ke-033",
-    "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/lab/account-progress-planner",
-    "sectionHeading": "Account Progress Planner landmarks",
-    "visualType": "anonymized interface capture",
-    "safeDescription": "Review included systems and inventory before calculating.",
-    "requiredVisibleElements": [
-      "Active profile and included progression-system cards.",
-      "Starting state, owned inventory, optional budget or pack assumptions, and objective controls.",
-      "Validation for missing or inconsistent prerequisites.",
-      "Allocation, checkpoints, resource use, remaining inventory, bottlenecks, and save or apply action."
-    ],
-    "elementsToRedact": [
-      "real names and email addresses",
-      "player identifiers and private community records",
-      "credentials, provider keys, tokens, and payment details"
-    ],
-    "recommendedAltText": "Account Progress Planner interface showing Active profile and included progression-system cards.; Starting state, owned inventory, optional budget or pack assumptions, and objective controls.; Validation for missing or inconsistent prerequisites..",
-    "status": "needed"
-  },
-  {
     "visualId": "ke-034",
     "product": "Kingshot Events",
     "pagePath": "/kingshot-events/lab/gear-and-charms",

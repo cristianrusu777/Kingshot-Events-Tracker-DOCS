@@ -65,3 +65,40 @@ A locked instance rejects manual and imported writes. A manager must reopen or f
 ## Limitations
 
 Autosave applies only where the interface explicitly shows it; the manual batch form commits through Apply All. Templates changed later do not retroactively rewrite completed evidence. Aggregate analytics are downstream views, not correction surfaces.
+
+## Same-date and lock decisions
+
+### Same-date duplicate, refresh, and conflict decision
+
+```mermaid
+flowchart TD
+  N["Incoming row has same event, scope, player, date, stage, and type"] --> V{"Same value?"}
+  V -- "Yes" --> D["Duplicate: keep one result"]
+  V -- "No" --> C{"Cumulative snapshot?"}
+  C -- "Yes" --> R["Review old-to-new snapshot refresh"]
+  C -- "No" --> F["Conflict requiring correction intent"]
+  N2["Different effective date"] --> S["Separate valid dated snapshot"]
+```
+
+*Same-date behavior. Value equality and event mode determine duplicate, refresh, or conflict.*
+
+**Accessible summary:** Identical same-identity rows are duplicates; changed cumulative values can refresh a snapshot; changed non-cumulative values remain conflicts.
+
+### Event lock and correction lifecycle
+
+```mermaid
+stateDiagram-v2
+  [*] --> Writable
+  Writable --> Locked: authorized lock
+  Writable --> Corrected: valid correction
+  Corrected --> Writable: recalculation completes
+  Locked --> ReviewRequired: correction requested
+  ReviewRequired --> Locked: rejected
+  ReviewRequired --> Writable: authorized reopen
+```
+
+*Lock and correction flow. A lock sends changes through review instead of accepting a direct write.*
+
+**Accessible summary:** Writable events accept valid corrections; locked events remain locked after rejection or reopen through an authorized decision.
+
+The complete workflow ends by reopening the saved batch, confirming every intended row and status, and reproducing the downstream view with the same scope, event, stage, and date boundaries. That verification distinguishes a successful source correction from a stale Analytics display.

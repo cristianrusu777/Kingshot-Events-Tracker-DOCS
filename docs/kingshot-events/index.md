@@ -15,6 +15,40 @@ head:
 # Kingshot Events
 Kingshot Events helps communities keep player and event information structured across kingdoms and alliances. It combines data entry, review, reporting, Castle Position coordination, shared knowledge, and planning tools. Automation assists some tasks, but contributors and managers still review important information.
 
+<ProductFinder />
+
+## Explore by product area
+
+<LinkGrid :items='[
+  {"title":"Getting Started","description":"Identity, player link, scope, and a useful first task.","href":"/kingshot-events/getting-started/"},
+  {"title":"Accounts and Access","description":"Approval, roles, assignments, availability, grants, and access outcomes.","href":"/kingshot-events/accounts-and-access/"},
+  {"title":"Scopes and Communities","description":"Server, kingdom, alliance, player hierarchy, and cross-scope visibility.","href":"/kingshot-events/scopes-and-communities/"},
+  {"title":"Players","description":"Directory, identity, linking, sync, status, membership, removal, and restore.","href":"/kingshot-events/players/"},
+  {"title":"Events and Results","description":"Templates, instances, dates, stages, batches, locks, and corrections.","href":"/kingshot-events/events/"},
+  {"title":"Imports and Data Entry","description":"Manual, screenshot, and structured entry with reconciliation and rollback.","href":"/kingshot-events/imports/"},
+  {"title":"Analytics and Rewards","description":"Kingdom, alliance, player, and custom views plus reward decisions.","href":"/kingshot-events/analytics/"},
+  {"title":"Castle Positions","description":"Applications, review, candidate logic, planning, publication, and changes.","href":"/kingshot-events/castle-positions/"},
+  {"title":"Knowledge Hub","description":"Reading access, translation, authoring, review, revisions, and verification.","href":"/kingshot-events/knowledge-hub/"},
+  {"title":"Simulations and Optimizations","description":"Saved profiles, progression optimizers, Bear Trap, and result limits.","href":"/kingshot-events/lab/"},
+  {"title":"Subscriptions and Usage","description":"Plans, accepted grants, allocations, quotas, limited mode, and suspension.","href":"/kingshot-events/subscriptions/"},
+  {"title":"Shared Lifecycles","description":"Notifications, reports, deletion, recycle bin, and restoration.","href":"/kingshot-events/lifecycles/recycle-bin-and-restore-requests"},
+  {"title":"Role Journeys","description":"Task paths shaped around player, alliance, kingdom, editorial, and session roles.","href":"/kingshot-events/role-journeys/player-or-member"},
+  {"title":"Troubleshooting","description":"Symptoms, safe checks, recovery, and support evidence.","href":"/kingshot-events/troubleshooting/"},
+  {"title":"Updates","description":"User-facing changes and documentation impact.","href":"/kingshot-events/updates/release-notes"}
+]' />
+
+## Choose your role
+
+<LinkGrid :items='[
+  {"title":"Player or member","description":"Profile, personal results, rewards, applications, articles, and Lab tools.","href":"/kingshot-events/role-journeys/player-or-member"},
+  {"title":"Alliance leader","description":"Roster, entry, imports, corrections, Analytics, and rewards.","href":"/kingshot-events/role-journeys/alliance-leader"},
+  {"title":"Co-leader","description":"Delegated alliance tasks and leader handoff boundaries.","href":"/kingshot-events/role-journeys/co-leader"},
+  {"title":"King or kingdom manager","description":"Cross-alliance views, shared access, and kingdom workflows.","href":"/kingshot-events/role-journeys/kingdom-manager"},
+  {"title":"Minister of Justice","description":"Castle applications, conflicts, schedule drafts, and publication.","href":"/kingshot-events/role-journeys/minister-of-justice"},
+  {"title":"Knowledge author or reviewer","description":"Drafts, blocks, review decisions, publication, and revisions.","href":"/kingshot-events/role-journeys/knowledge-author"},
+  {"title":"Reading-session manager","description":"Assignments, progress, classification, reports, close, and archive.","href":"/kingshot-events/role-journeys/reading-session-manager"}
+]' />
+
 ## Problems it helps solve
 
 - Maintain player records without relying on scattered sheets and message threads.
@@ -27,13 +61,30 @@ Kingshot Events helps communities keep player and event information structured a
 ## How the parts work together
 
 ```mermaid
-flowchart LR
-  A["Choose the correct scope"]
-  B["Add or review information"]
-  C["Confirm the result"]
-  D["Use analytics, rewards, schedules, or guides"]
-  A --> B --> C --> D
+flowchart TD
+  I["Account, player link, roles, and active scope"] --> P["Players and community structure"]
+  P --> E["Event templates and dated instances"]
+  E --> M{"Information entry path"}
+  M -- "Manual" --> B["Validated record batch"]
+  M -- "Screenshot or structured import" --> R["Reconciliation and human review"]
+  R --> B
+  B --> A["Analytics, activity, and reward decisions"]
+  I --> C["Castle applications, review, and scheduling"]
+  C --> CP["Validated published schedule"]
+  I --> K["Knowledge reading, authoring, and verification"]
+  I --> L["Saved Lab profiles and modeled plans"]
+  I --> S["Plans, grants, quotas, and feature availability"]
+  S --> A
+  S --> K
+  S --> L
+  B --> N["Notifications, reports, deletion, and recovery"]
+  CP --> N
+  K --> N
 ```
+
+*Complete Kingshot Events product map. Identity and scope feed records and specialized workflows; subscriptions affect feature access; shared lifecycles preserve downstream state and recovery.*
+
+**Accessible summary:** Account and scope lead to player, event, Castle, Knowledge, and Lab workflows. Reviewed batches feed Analytics and rewards, subscriptions affect availability, and shared lifecycles handle notices and recovery.
 
 
 Player information belongs to an alliance and kingdom context. Event results connect a player to a configured event occurrence. Reviews and reports use that same context so authorized users see the intended community data.
