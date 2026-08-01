@@ -37,3 +37,11 @@ Kingdom-level actions must repeat the selected kingdom and affected alliance whe
 
 - [review workflow](/kingshot-events/castle-positions/review-workflow)
 - [minister of justice](/kingshot-events/role-journeys/minister-of-justice)
+
+## Practical depth
+
+### Coordinate without erasing alliance context
+
+Use kingdom scope for comparison and shared planning, then follow corrections back to the alliance source. Review missing data and filters before drawing conclusions across communities.
+
+For coordinate without erasing alliance context, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.

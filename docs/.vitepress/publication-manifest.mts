@@ -1,5 +1,8 @@
+import { manualPages } from './manual-pages.mts'
+
 // Authoritative publication registry. Navigation, search inclusion, route checks, and sitemap output derive from this list.
 export const publicationManifest = [
+  ...manualPages,
   {
     "product": "ralyvora-docs",
     "title": "Ralyvora Docs",

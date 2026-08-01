@@ -1,0 +1,1255 @@
+[
+  {
+    "file": "kingshot-events/getting-started/index.md",
+    "pageType": "category landing",
+    "complexity": "overview",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Ready",
+      "Needs approval",
+      "Limited"
+    ],
+    "requiredRoles": [
+      "All new users"
+    ],
+    "requiredDiagrams": [
+      "ke-getting-started-index"
+    ]
+  },
+  {
+    "file": "kingshot-events/getting-started/ten-minute-first-session.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Signed in",
+      "Scoped",
+      "Ready"
+    ],
+    "requiredRoles": [
+      "Newly approved users"
+    ],
+    "requiredDiagrams": [
+      "ke-getting-started-ten-minute-first-session"
+    ]
+  },
+  {
+    "file": "kingshot-events/getting-started/navigation-and-saved-context.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Current",
+      "Remembered",
+      "Reset"
+    ],
+    "requiredRoles": [
+      "All signed-in users"
+    ],
+    "requiredDiagrams": [
+      "ke-getting-started-navigation-and-saved-context"
+    ]
+  },
+  {
+    "file": "kingshot-events/accounts-and-access/index.md",
+    "pageType": "category landing",
+    "complexity": "overview",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Public",
+      "Pending",
+      "Active",
+      "Restricted"
+    ],
+    "requiredRoles": [
+      "All users"
+    ],
+    "requiredDiagrams": [
+      "ke-accounts-and-access-index"
+    ]
+  },
+  {
+    "file": "kingshot-events/accounts-and-access/registration-and-approval.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Submitted",
+      "Pending approval",
+      "Approved",
+      "Declined"
+    ],
+    "requiredRoles": [
+      "New users",
+      "approvers"
+    ],
+    "requiredDiagrams": [
+      "ke-accounts-and-access-registration-and-approval"
+    ]
+  },
+  {
+    "file": "kingshot-events/accounts-and-access/password-and-security.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Signed out",
+      "Active session",
+      "Expired"
+    ],
+    "requiredRoles": [
+      "All account holders"
+    ],
+    "requiredDiagrams": [
+      "ke-accounts-and-access-password-and-security"
+    ]
+  },
+  {
+    "file": "kingshot-events/accounts-and-access/player-link-review.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Unlinked",
+      "Pending",
+      "Linked",
+      "Rejected"
+    ],
+    "requiredRoles": [
+      "Players",
+      "community managers"
+    ],
+    "requiredDiagrams": [
+      "ke-accounts-and-access-player-link-review"
+    ]
+  },
+  {
+    "file": "kingshot-events/accounts-and-access/multi-role-access.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Visible",
+      "Read-only",
+      "Editable",
+      "Unavailable"
+    ],
+    "requiredRoles": [
+      "Leaders with more than one responsibility"
+    ],
+    "requiredDiagrams": [
+      "ke-accounts-and-access-multi-role-access"
+    ]
+  },
+  {
+    "file": "kingshot-events/scopes-and-communities/index.md",
+    "pageType": "category landing",
+    "complexity": "overview",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Personal",
+      "Alliance",
+      "Kingdom"
+    ],
+    "requiredRoles": [
+      "All signed-in users"
+    ],
+    "requiredDiagrams": [
+      "ke-scopes-and-communities-index"
+    ]
+  },
+  {
+    "file": "kingshot-events/scopes-and-communities/hierarchy-and-switching.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Selected",
+      "Available",
+      "Unavailable"
+    ],
+    "requiredRoles": [
+      "Members",
+      "managers"
+    ],
+    "requiredDiagrams": [
+      "ke-scopes-and-communities-hierarchy-and-switching"
+    ]
+  },
+  {
+    "file": "kingshot-events/scopes-and-communities/membership-and-management.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Invited",
+      "Active",
+      "Inactive",
+      "Removed"
+    ],
+    "requiredRoles": [
+      "Alliance",
+      "kingdom leaders"
+    ],
+    "requiredDiagrams": [
+      "ke-scopes-and-communities-membership-and-management"
+    ]
+  },
+  {
+    "file": "kingshot-events/scopes-and-communities/cross-scope-visibility.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Included",
+      "Filtered",
+      "Hidden"
+    ],
+    "requiredRoles": [
+      "Leaders",
+      "analytics viewers"
+    ],
+    "requiredDiagrams": [
+      "ke-scopes-and-communities-cross-scope-visibility"
+    ]
+  },
+  {
+    "file": "kingshot-events/players/index.md",
+    "pageType": "category landing",
+    "complexity": "overview",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Active",
+      "Inactive",
+      "Removed",
+      "Restored"
+    ],
+    "requiredRoles": [
+      "Players",
+      "roster managers"
+    ],
+    "requiredDiagrams": [
+      "ke-players-index"
+    ]
+  },
+  {
+    "file": "kingshot-events/players/filters-and-columns.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Included",
+      "Filtered",
+      "No match"
+    ],
+    "requiredRoles": [
+      "Members",
+      "roster managers"
+    ],
+    "requiredDiagrams": [
+      "ke-players-filters-and-columns"
+    ]
+  },
+  {
+    "file": "kingshot-events/players/profile-and-history.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Current",
+      "Historical",
+      "Missing"
+    ],
+    "requiredRoles": [
+      "Players",
+      "managers"
+    ],
+    "requiredDiagrams": [
+      "ke-players-profile-and-history"
+    ]
+  },
+  {
+    "file": "kingshot-events/events/index.md",
+    "pageType": "category landing",
+    "complexity": "overview",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Draft",
+      "Open",
+      "Locked",
+      "Complete"
+    ],
+    "requiredRoles": [
+      "Participants",
+      "event managers"
+    ],
+    "requiredDiagrams": [
+      "ke-events-and-results-index"
+    ]
+  },
+  {
+    "file": "kingshot-events/events/templates-and-settings.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Draft",
+      "Active",
+      "Retired"
+    ],
+    "requiredRoles": [
+      "Event managers"
+    ],
+    "requiredDiagrams": [
+      "ke-events-and-results-templates-and-settings"
+    ]
+  },
+  {
+    "file": "kingshot-events/events/instances-and-locks.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Upcoming",
+      "Open",
+      "Locked",
+      "Complete"
+    ],
+    "requiredRoles": [
+      "Participants",
+      "event managers"
+    ],
+    "requiredDiagrams": [
+      "ke-events-and-results-instances-and-locks"
+    ]
+  },
+  {
+    "file": "kingshot-events/events/custom-events-and-proposals.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Proposed",
+      "Accepted",
+      "Declined",
+      "Active"
+    ],
+    "requiredRoles": [
+      "Community managers"
+    ],
+    "requiredDiagrams": [
+      "ke-events-and-results-custom-events-and-proposals"
+    ]
+  },
+  {
+    "file": "kingshot-events/events/record-batches-and-corrections.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Pending",
+      "Applied",
+      "Corrected",
+      "Reverted"
+    ],
+    "requiredRoles": [
+      "Result contributors",
+      "reviewers"
+    ],
+    "requiredDiagrams": [
+      "ke-events-and-results-record-batches-and-corrections"
+    ]
+  },
+  {
+    "file": "kingshot-events/events/default-event-patterns.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Scheduled",
+      "In progress",
+      "Final"
+    ],
+    "requiredRoles": [
+      "Players",
+      "event managers"
+    ],
+    "requiredDiagrams": [
+      "ke-events-and-results-default-event-patterns"
+    ]
+  },
+  {
+    "file": "kingshot-events/imports/index.md",
+    "pageType": "category landing",
+    "complexity": "overview",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Queued",
+      "Processing",
+      "Review",
+      "Applied"
+    ],
+    "requiredRoles": [
+      "Contributors",
+      "reviewers"
+    ],
+    "requiredDiagrams": [
+      "ke-imports-and-data-entry-index"
+    ]
+  },
+  {
+    "file": "kingshot-events/imports/providers-and-processing.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Queued",
+      "Reading",
+      "Ready",
+      "Failed"
+    ],
+    "requiredRoles": [
+      "Import contributors"
+    ],
+    "requiredDiagrams": [
+      "ke-imports-and-data-entry-providers-and-processing"
+    ]
+  },
+  {
+    "file": "kingshot-events/imports/row-statuses-and-decisions.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "New",
+      "Matched",
+      "Warning",
+      "Skipped"
+    ],
+    "requiredRoles": [
+      "Import reviewers"
+    ],
+    "requiredDiagrams": [
+      "ke-imports-and-data-entry-row-statuses-and-decisions"
+    ]
+  },
+  {
+    "file": "kingshot-events/imports/apply-and-history.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Reviewed",
+      "Applying",
+      "Applied",
+      "Partly applied"
+    ],
+    "requiredRoles": [
+      "Contributors",
+      "managers"
+    ],
+    "requiredDiagrams": [
+      "ke-imports-and-data-entry-apply-and-history"
+    ]
+  },
+  {
+    "file": "kingshot-events/imports/rollback-and-restore.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Applied",
+      "Rollback requested",
+      "Restored",
+      "Declined"
+    ],
+    "requiredRoles": [
+      "Managers",
+      "restore reviewers"
+    ],
+    "requiredDiagrams": [
+      "ke-imports-and-data-entry-rollback-and-restore"
+    ]
+  },
+  {
+    "file": "kingshot-events/imports/spreadsheet-and-structured-input.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Unmapped",
+      "Valid",
+      "Warning",
+      "Ready"
+    ],
+    "requiredRoles": [
+      "Experienced contributors"
+    ],
+    "requiredDiagrams": [
+      "ke-imports-and-data-entry-spreadsheet-and-structured-input"
+    ]
+  },
+  {
+    "file": "kingshot-events/analytics/index.md",
+    "pageType": "category landing",
+    "complexity": "overview",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Current",
+      "Incomplete",
+      "Recalculated"
+    ],
+    "requiredRoles": [
+      "Players, leaders,",
+      "reward managers"
+    ],
+    "requiredDiagrams": [
+      "ke-analytics-and-rewards-index"
+    ]
+  },
+  {
+    "file": "kingshot-events/analytics/filters-and-recalculation.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Unfiltered",
+      "Filtered",
+      "Recalculating",
+      "Ready"
+    ],
+    "requiredRoles": [
+      "Analytics viewers"
+    ],
+    "requiredDiagrams": [
+      "ke-analytics-and-rewards-filters-and-recalculation"
+    ]
+  },
+  {
+    "file": "kingshot-events/analytics/recommendations-and-missing-data.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Complete",
+      "Partial",
+      "Insufficient"
+    ],
+    "requiredRoles": [
+      "Leaders",
+      "analysts"
+    ],
+    "requiredDiagrams": [
+      "ke-analytics-and-rewards-recommendations-and-missing-data"
+    ]
+  },
+  {
+    "file": "kingshot-events/analytics/reward-rules.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Draft",
+      "Eligible",
+      "Ineligible",
+      "Awarded"
+    ],
+    "requiredRoles": [
+      "Reward managers",
+      "players"
+    ],
+    "requiredDiagrams": [
+      "ke-analytics-and-rewards-reward-rules"
+    ]
+  },
+  {
+    "file": "kingshot-events/castle-positions/resources-and-eligibility.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Eligible",
+      "Ineligible",
+      "Full",
+      "Available"
+    ],
+    "requiredRoles": [
+      "Applicants",
+      "position managers"
+    ],
+    "requiredDiagrams": [
+      "ke-castle-positions-resources-and-eligibility"
+    ]
+  },
+  {
+    "file": "kingshot-events/castle-positions/planner-controls.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Unplaced",
+      "Planned",
+      "Conflict",
+      "Resolved"
+    ],
+    "requiredRoles": [
+      "Kings",
+      "Ministers of Justice"
+    ],
+    "requiredDiagrams": [
+      "ke-castle-positions-planner-controls"
+    ]
+  },
+  {
+    "file": "kingshot-events/castle-positions/notifications-and-versions.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Draft",
+      "Published",
+      "Superseded",
+      "Notified"
+    ],
+    "requiredRoles": [
+      "Applicants",
+      "schedule managers"
+    ],
+    "requiredDiagrams": [
+      "ke-castle-positions-notifications-and-versions"
+    ]
+  },
+  {
+    "file": "kingshot-events/knowledge-hub/index.md",
+    "pageType": "category landing",
+    "complexity": "overview",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Draft",
+      "In review",
+      "Published",
+      "Archived"
+    ],
+    "requiredRoles": [
+      "Readers, authors,",
+      "reviewers"
+    ],
+    "requiredDiagrams": [
+      "ke-knowledge-hub-index"
+    ]
+  },
+  {
+    "file": "kingshot-events/knowledge-hub/blocks-and-media.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Editing",
+      "Saved",
+      "Needs media",
+      "Ready"
+    ],
+    "requiredRoles": [
+      "Knowledge authors"
+    ],
+    "requiredDiagrams": [
+      "ke-knowledge-hub-blocks-and-media"
+    ]
+  },
+  {
+    "file": "kingshot-events/knowledge-hub/revisions-and-review.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Draft",
+      "In review",
+      "Changes requested",
+      "Approved"
+    ],
+    "requiredRoles": [
+      "Authors",
+      "reviewers"
+    ],
+    "requiredDiagrams": [
+      "ke-knowledge-hub-revisions-and-review"
+    ]
+  },
+  {
+    "file": "kingshot-events/knowledge-hub/reading-sessions.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Assigned",
+      "Opened",
+      "Verified",
+      "Expired"
+    ],
+    "requiredRoles": [
+      "Session managers",
+      "readers"
+    ],
+    "requiredDiagrams": [
+      "ke-knowledge-hub-reading-sessions"
+    ]
+  },
+  {
+    "file": "kingshot-events/lab/profiles-and-autosave.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Unsaved",
+      "Saving",
+      "Saved",
+      "Duplicate"
+    ],
+    "requiredRoles": [
+      "Lab users"
+    ],
+    "requiredDiagrams": [
+      "ke-simulations-and-optimizations-profiles-and-autosave"
+    ]
+  },
+  {
+    "file": "kingshot-events/lab/hero-gear.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Current",
+      "Planned",
+      "Affordable",
+      "Shortfall"
+    ],
+    "requiredRoles": [
+      "Players planning hero upgrades"
+    ],
+    "requiredDiagrams": []
+  },
+  {
+    "file": "kingshot-events/lab/governor-gear.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Current",
+      "Planned",
+      "Ready",
+      "Shortfall"
+    ],
+    "requiredRoles": [
+      "Players planning governor upgrades"
+    ],
+    "requiredDiagrams": [
+      "ke-simulations-and-optimizations-governor-gear"
+    ]
+  },
+  {
+    "file": "kingshot-events/lab/charms.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Current",
+      "Planned",
+      "Balanced",
+      "Shortfall"
+    ],
+    "requiredRoles": [
+      "Players planning charm upgrades"
+    ],
+    "requiredDiagrams": []
+  },
+  {
+    "file": "kingshot-events/lab/bear-trap.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Draft",
+      "Comparable",
+      "Preferred",
+      "Archived"
+    ],
+    "requiredRoles": [
+      "Alliance rally planners"
+    ],
+    "requiredDiagrams": [
+      "ke-simulations-and-optimizations-bear-trap"
+    ]
+  },
+  {
+    "file": "kingshot-events/subscriptions/plans-and-effective-access.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Included",
+      "Granted",
+      "Allocated",
+      "Unavailable"
+    ],
+    "requiredRoles": [
+      "Members",
+      "community owners"
+    ],
+    "requiredDiagrams": []
+  },
+  {
+    "file": "kingshot-events/subscriptions/grants-and-allocations.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Available",
+      "Allocated",
+      "Revoked",
+      "Exhausted"
+    ],
+    "requiredRoles": [
+      "Kingdom",
+      "alliance owners"
+    ],
+    "requiredDiagrams": [
+      "ke-subscriptions-and-usage-grants-and-allocations"
+    ]
+  },
+  {
+    "file": "kingshot-events/subscriptions/requests-and-payment.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Requested",
+      "Awaiting payment",
+      "Active",
+      "Declined"
+    ],
+    "requiredRoles": [
+      "Requesters",
+      "community owners"
+    ],
+    "requiredDiagrams": []
+  },
+  {
+    "file": "kingshot-events/subscriptions/quotas-and-limited-mode.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Available",
+      "Near limit",
+      "Limited",
+      "Reset"
+    ],
+    "requiredRoles": [
+      "All users of limited features"
+    ],
+    "requiredDiagrams": [
+      "ke-subscriptions-and-usage-quotas-and-limited-mode"
+    ]
+  },
+  {
+    "file": "kingshot-events/lifecycles/notifications-and-reports.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Unread",
+      "Read",
+      "Generating",
+      "Ready"
+    ],
+    "requiredRoles": [
+      "All signed-in users"
+    ],
+    "requiredDiagrams": []
+  },
+  {
+    "file": "kingshot-events/lifecycles/recycle-bin-and-restore-requests.md",
+    "pageType": "focused guide",
+    "complexity": "substantive",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Removed",
+      "Restore requested",
+      "Restored",
+      "Permanently unavailable"
+    ],
+    "requiredRoles": [
+      "Managers",
+      "restore reviewers"
+    ],
+    "requiredDiagrams": [
+      "ke-platform-lifecycles-recycle-bin-and-restore-requests"
+    ]
+  },
+  {
+    "file": "kingshot-events/troubleshooting/index.md",
+    "pageType": "category landing",
+    "complexity": "overview",
+    "requiredConcepts": [
+      "scope",
+      "role",
+      "status",
+      "controls",
+      "save or review behavior",
+      "troubleshooting"
+    ],
+    "requiredStatuses": [
+      "Observed",
+      "Isolated",
+      "Resolved",
+      "Escalated"
+    ],
+    "requiredRoles": [
+      "All users"
+    ],
+    "requiredDiagrams": []
+  }
+]
