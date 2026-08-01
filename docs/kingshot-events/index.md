@@ -38,6 +38,30 @@ flowchart LR
 
 Player information belongs to an alliance and kingdom context. Event results connect a player to a configured event occurrence. Reviews and reports use that same context so authorized users see the intended community data.
 
+Information enters the platform through manager forms, manual result entry, spreadsheet or screenshot imports, Castle Position applications, Knowledge drafts, and Lab profiles. Each path has its own review boundary. Import rows are proposals until accepted, Castle Position applications are requests until reviewed and published, Knowledge edits remain drafts until publication, and Lab inputs remain planning assumptions until the user confirms them.
+
+After review, the same scoped records support downstream work:
+
+- Saved player and event results feed player history, alliance and kingdom Analytics, activity status, and reward eligibility.
+- Reviewed Castle Position applications feed the candidate workspace and draft planner; publication produces the participant schedule.
+- Published Knowledge revisions become searchable for their intended public, kingdom, alliance, or premium audience.
+- Saved Lab profiles supply consistent inputs to progression and combat modules, but never update the game account.
+
+## Where to begin
+
+| You want to... | Start here | Then continue to... |
+| --- | --- | --- |
+| Join and find your personal information | [Your First Visit](/kingshot-events/getting-started/first-visit) | Account profile, player link, My Analytics, rewards, or appointments |
+| Maintain an alliance roster | [Player Directory](/kingshot-events/players/directory-and-profiles) | Add or sync players, lifecycle actions, then alliance analytics |
+| Record an event | [Event Tracking](/kingshot-events/events/overview) | Manual entry or screenshot import, review, history, analytics, and rewards |
+| Coordinate Castle Positions | [Castle Positions](/kingshot-events/castle-positions/) | Applicant or review guide, planner, publication, and participant changes |
+| Read or publish a guide | [Knowledge Hub reading](/kingshot-events/knowledge-hub/reading-and-finding) | Access, Reading Verification, or Studio authoring |
+| Compare progression or combat choices | [Lab Overview](/kingshot-events/lab/) | Select a profile, complete inputs, run a module, and review limitations |
+
+## Review and correction are part of the workflow
+
+The product keeps source context so managers can trace a value. A result can lead back to an event instance, import, or record batch. An analytics surprise should be corrected at that source. A schedule change should be saved and published through Castle Positions. A Knowledge correction should become a reviewed revision. A Lab result should be rerun from a corrected profile. Avoid creating a second player, event instance, application, article, or profile merely to hide a correction problem.
+
 ## Who uses the platform
 
 - Players and alliance members view personal activity, rewards, appointments, guides, and available tools.

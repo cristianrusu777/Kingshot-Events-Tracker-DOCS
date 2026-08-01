@@ -1,36 +1,43 @@
 ---
 title: 'Lab Overview and Profiles'
-description: 'Choose an available tool and understand saved or device-only profiles.'
+description: 'Choose a Lab module, manage reusable inputs, and understand device or signed-in persistence.'
 product: 'kingshot-events'
 audience: 'All Lab users'
 experienceLevel: 'Intermediate'
 featureArea: 'Lab'
 lastReviewed: '2026-08-01'
-head:
-  - - meta
-    - name: 'robots'
-      content: 'index,follow'
 ---
 
 # Lab Overview and Profiles
-The Lab contains planners, optimizers, simulators, profiles, and game-data reference material. Available tools appear in **Simulators**. A tool may be public, require sign-in, be temporarily unavailable, or carry a beta label.
 
-Visitors can use a profile saved only in the current browser. Signed-in users can use cloud profiles when available. A profile stores supported inputs for reuse; verify it before every analysis because in-game progression can change.
+The **Lab** contains profiles, progression planners, optimizers, combat simulators, and supporting game data. Module cards show whether a tool is public, requires sign-in, is beta, or is currently unavailable.
 
-All outputs are modeled guidance. They depend on entered values, supported data, and stated assumptions.
-<VisualReference title="Lab Overview and Profiles orientation">
-Use the current page labels and confirm context before acting.
+## Profiles and saved inputs
+
+A profile stores reusable supported inputs such as account stats, troop bonuses, formations, Hero Gear, Governor Gear, Charms, heroes, widgets, and owned resources. It is not a live connection to the game account. Update it after every relevant in-game change.
+
+Visitors can use a device-saved profile. Clearing site data, changing browsers, or using private browsing can remove or isolate it. Signed-in users can create and select saved profiles where cloud persistence is available. Always check the active profile name before editing or running a module.
+
+Some tools can apply an accepted plan back to the selected Lab profile. Applying changes the stored planning state, not the game account. Review the target levels and consumed resources before confirming.
+
+## Choose a module
+
+- **Hero Gear Optimizer**, **Governor Gear Optimizer**, and **Charm Optimizer** plan progression with current slots and inventory.
+- **Bear Trap Simulator** models a rally against the Bear with captain, joiners, formation, and stats.
+- **Rally Simulator** compares supported captain, joiner, formation, and stacking choices.
+- **Battle Simulator** runs a configured attacker and defender scenario.
+
+<VisualReference title="Lab and profile landmarks">
+Select the profile before the module and review persistence feedback after saving.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Module cards with public, sign-in, beta, premium, or unavailable state.
+- Active profile selector, create, rename, duplicate, save, or delete actions where available.
+- Profile sections for account stats, troops, equipment, heroes, widgets, formations, and inventory.
+- Freshness or missing-input feedback and links to each compatible optimizer or simulator.
 
 </template>
 </VisualReference>
 
-## Related guides
-
-- [gear and charms](/kingshot-events/lab/gear-and-charms)
-- [interpreting results](/kingshot-events/lab/interpreting-results)
+All Lab outputs are modeled guidance. Continue with [Interpreting Results and Limitations](/kingshot-events/lab/interpreting-results).

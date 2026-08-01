@@ -1,44 +1,42 @@
 ---
-title: 'Account and Profile'
-description: 'Maintain account details and understand player links.'
+title: 'Account, Profile, and Player Link'
+description: 'Maintain account settings, connect the correct player identity, and understand review states.'
 product: 'kingshot-events'
 audience: 'All signed-in users'
 experienceLevel: 'Beginner'
 featureArea: 'Accounts and profiles'
 lastReviewed: '2026-08-01'
-head:
-  - - meta
-    - name: 'robots'
-      content: 'index,follow'
 ---
 
-# Account and Profile
-Your account identifies you to the platform. A player link connects that account to a player record used by personal views. The two are related but not interchangeable.
+# Account, Profile, and Player Link
 
-## Profile workflow
+Your account controls sign-in and personal settings. A player link connects that account to one shared kingdom player so personal analytics, rewards, appointments, and reading assignments can resolve the correct identity. The account and shared player remain separate records.
 
-Open **Profile**, review the displayed identity and linked player, make supported changes, and save. Wait for the success result before leaving. Some changes or link requests may require review by an authorized manager.
+## Update account settings
 
-## Player links
+Open **Profile**, review the displayed identity, locale or other supported preferences, and current player link. Change the available fields and choose **Save**. Wait for success feedback before leaving. Profile settings do not silently rewrite a player's alliance, event history, power, or public game profile.
 
-A requested link may be pending, accepted, or unavailable. Linking does not give broad management access; it allows the platform to connect eligible personal views to the correct player. If the wrong player is linked, use the visible correction or support path rather than creating a duplicate player.
+## Request a player link
 
-## Account safety
+Search or select the existing player that represents you. Compare kingdom, alliance, current or former name, and Kingshot profile ID. The link can be accepted immediately or show pending review when identity confirmation is required. A pending link can limit personal features until an authorized reviewer accepts or rejects it.
 
-Use a unique password, do not share sign-in details, and use the password recovery flow when needed. Never send passwords or access tokens in a support request.
-<VisualReference title="Account and Profile orientation">
-Use the current page labels and confirm context before acting.
+If the wrong player is linked, use the visible correction path or ask the link reviewer. Do not create a duplicate player. Managers should correct the account-to-player association while preserving both player histories.
+
+## Security and recovery
+
+Use a unique password and sign out on shared devices. Use **Forgot password** when access is lost. Never send passwords, reset links, session tokens, or provider keys in support messages.
+
+<VisualReference title="Account profile and link landmarks">
+Account settings and shared player identity are displayed as separate sections.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Account identity and editable profile preferences with **Save** feedback.
+- Linked-player card with kingdom, alliance, name, and profile ID context.
+- Player search or link-request action and pending, accepted, rejected, or missing-link state.
+- Password recovery and sign-out routes without exposing credentials.
 
 </template>
 </VisualReference>
 
-## Related guides
-
-- [linking and sync](/kingshot-events/players/linking-and-sync)
-- [access problems](/kingshot-events/troubleshooting/access-problems)
+Related: [Player Linking and Synchronization](/kingshot-events/players/linking-and-sync) and [Access Problems](/kingshot-events/troubleshooting/access-problems).

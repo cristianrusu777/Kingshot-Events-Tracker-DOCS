@@ -1,51 +1,46 @@
 ---
 title: 'Hero Gear, Governor Gear, and Charms'
-description: 'Use the progression optimizers with complete current inputs.'
+description: 'Enter complete equipment and inventory state, compare upgrade plans, and apply a reviewed plan to a Lab profile.'
 product: 'kingshot-events'
 audience: 'Lab users'
 experienceLevel: 'Intermediate'
 featureArea: 'Progression optimizers'
 lastReviewed: '2026-08-01'
-head:
-  - - meta
-    - name: 'robots'
-      content: 'index,follow'
 ---
 
 # Hero Gear, Governor Gear, and Charms
-The **Hero Gear Optimizer** models twelve supported gear pieces and resources such as enhancement, mastery, reforge, or imbuement inputs. The **Governor Gear Optimizer** models six gear pieces, tiers, stars, and supported set effects. The **Charm Optimizer** models charm slots across troop types.
 
-For each tool, select or create a profile, enter the current state of every relevant slot, add only resources actually available for the plan, and run the optimization. Review the before-and-after steps and confirm that no prerequisite was omitted.
+These optimizers compare supported upgrades from the exact profile and inventory you provide. They do not inspect the game account, buy packs, or apply upgrades in game.
 
-Optimizer order is a modeled recommendation. It does not guarantee combat results or future game balance.
+## Hero Gear Optimizer
 
-<RolePerspective>
+Confirm all twelve gear pieces across Infantry, Cavalry, and Archer heroes, including the supported enhancement, mastery, ascension, imbuement, or reforge state shown by the editor. Enter only owned enhancement XP, Forge Hammers, Mythic Shards, Mithril, and other listed resources. Choose the combat context and objective, then run the plan.
 
-### As a visitor
+Results show target pieces, before and after states, ordered actions, resource use, remaining inventory, and the reason a supported checkpoint was preferred. When combat stats already include current Hero Gear, select that state correctly so the tool does not count it twice.
 
-Use the device-saved profile carefully and remember that clearing browser data can remove it.
+## Governor Gear Optimizer
 
-### As a signed-in user
+Enter all six troop-related gear pieces and their current tier or star state, plus the listed materials. Review set breakpoints as well as individual piece gains. A recommendation can favor completing a set checkpoint instead of raising the visually weakest piece.
 
-Select the intended saved profile and update every changed in-game value before optimizing.
+## Charm Optimizer
 
-### What the platform does automatically
+Enter all charm slots for Infantry, Cavalry, and Archer and the available Charm Guides, Charm Designs, or other current inputs. Check every slot because a missing level can redirect the entire order.
 
-It compares supported upgrade paths from the provided state. It does not observe the account or apply changes in game.
+## Save or apply a plan
 
-</RolePerspective>
-<VisualReference title="Hero Gear, Governor Gear, and Charms orientation">
-Use the current page labels and confirm context before acting.
+Review resource consumption and prerequisites first. If **Apply to profile** is offered, confirm the selected profile and apply only the accepted target state. This updates the reusable Lab input. It does not confirm that the upgrades were made in game; update or revert the profile if the real purchase differs.
+
+<VisualReference title="Equipment optimizer landmarks">
+Move from profile and inventory to objectives, plan, and optional profile update.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Active Lab profile and complete piece or charm grid for Infantry, Cavalry, and Archer.
+- Current levels, tiers, stars, mastery or reforge state, and owned-resource inputs.
+- Objective or context controls and missing-input validation.
+- Ordered target plan, before and after states, resource usage, remaining inventory, and **Apply to profile** confirmation.
 
 </template>
 </VisualReference>
 
-## Related guides
-
-- [interpreting results](/kingshot-events/lab/interpreting-results)
+Optimizer order is a modeled recommendation and can change with game data or objectives. See [Interpreting Results](/kingshot-events/lab/interpreting-results).

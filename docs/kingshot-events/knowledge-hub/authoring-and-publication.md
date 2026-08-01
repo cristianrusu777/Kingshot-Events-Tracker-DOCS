@@ -1,52 +1,60 @@
 ---
-title: 'Knowledge Authoring, Review, and Publication'
-description: 'Prepare articles and move them through safe editorial states.'
+title: 'Knowledge Authoring, Imports, Review, and Publication'
+description: 'Create structured drafts, manage media and imports, review revisions, and publish safely.'
 product: 'kingshot-events'
 audience: 'Knowledge authors and reviewers'
 experienceLevel: 'Intermediate'
 featureArea: 'Knowledge authoring'
 lastReviewed: '2026-08-01'
-head:
-  - - meta
-    - name: 'robots'
-      content: 'index,follow'
 ---
 
-# Knowledge Authoring, Review, and Publication
-Authors use **Create** or **Studio** when their account has authoring access. Choose the intended space and audience, write the article, add safe media or structured imports when supported, and save a draft.
+# Knowledge Authoring, Imports, Review, and Publication
 
-Authorized reviewers use **Review** to assess accuracy, scope, readability, media, and access before publication. Publication makes the approved version available to its intended audience. Archive removes content from ordinary discovery without pretending it never existed.
+Authors work in **Create** or **Studio**. Each article belongs to an intended space and audience and moves through a draft-review-publication lifecycle. Editing a published article creates working changes; readers continue to see the prior published revision until the update is approved and published.
 
-Media should be anonymized and relevant. Never upload credentials, private rosters, internal routes, or screenshots containing sensitive controls.
+## Create and edit a draft
+
+Choose the correct public, kingdom, or alliance space. Enter a clear title and summary, then build the article from supported blocks. Blocks can include structured headings, paragraphs, lists, callouts, tables, media, references, and other current editor types. Reorder or remove a block deliberately and preview the complete reading flow.
+
+Use the media library for safe assets. Provide meaningful alt text and a caption or source when needed. Do not upload credentials, private rosters, sensitive manager controls, or material without publication rights.
+
+## Imports and writing assistance
+
+Structured import can turn supported source material into proposed blocks. Review every block, link, fact, audience setting, and media reference before applying it to the draft. Writing, research, simulation, or image assistance can prepare suggestions, but assisted output remains draft content until a human accepts and reviews it. Never place private provider keys or confidential orchestration details in the article.
+
+## Save, submit, and review
+
+Save keeps the working draft. Submit for review when the article is complete. Reviewers compare the proposed revision with the published version, including added, removed, modified, and moved blocks. They check factual accuracy, source quality, space and premium boundaries, privacy, accessibility, media, and reader safety.
+
+A reviewer can approve the revision or return it for changes. Publication makes the approved revision visible to its intended readers. Archive removes the article from ordinary discovery while preserving editorial history. A draft or archived article should not be treated as public merely because an author can open it.
 
 <RolePerspective>
 
 ### As a Knowledge author
 
-Choose the correct space and audience, save a complete draft, and respond to review feedback.
+Choose the intended space first, save a complete structured draft, disclose uncertain claims, and respond to review feedback.
 
 ### As a reviewer
 
-Check accuracy, access, privacy, media, and reading quality before publishing or returning the draft.
+Use the revision comparison, verify access and media, and block publication when claims or audience boundaries are unsafe.
 
 ### What the platform does automatically
 
-It preserves editorial states and exposes only the version allowed for the current reader.
+It preserves revision states and keeps the last published version available until an approved replacement is published.
 
 </RolePerspective>
-<VisualReference title="Knowledge Authoring, Review, and Publication orientation">
-Use the current page labels and confirm context before acting.
+
+<VisualReference title="Knowledge Studio landmarks">
+Treat space, draft state, and published state as separate decisions.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Space and audience selector, title, summary, slug or discovery details.
+- Structured block editor, reorder controls, preview, media library, and import action.
+- Draft save state, submit-for-review action, reviewer notes, and structured revision comparison.
+- Approve, return for changes, Publish, and Archive states with validation feedback.
 
 </template>
 </VisualReference>
 
-## Related guides
-
-- [reading and finding](/kingshot-events/knowledge-hub/reading-and-finding)
-- [editorial policy](/editorial-policy)
+Related: [Reading and Finding Knowledge](/kingshot-events/knowledge-hub/reading-and-finding) and [Editorial Policy](/editorial-policy).

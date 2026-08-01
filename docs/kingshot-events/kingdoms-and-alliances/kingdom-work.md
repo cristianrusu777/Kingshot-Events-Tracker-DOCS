@@ -20,14 +20,15 @@ Kingdom views support community-wide review where the assigned role allows it. T
 Use filters to narrow the working set, verify the source alliance before editing a player, and publish only after reviewing the final schedule or result set. A kingdom-level assignment does not make every platform-administration function public or appropriate.
 
 Ministers of Justice should use the Castle Position areas relevant to review and scheduling. Other kingdom settings appear only to users with the corresponding assignment.
-<VisualReference title="Working Inside a Kingdom orientation">
-Use the current page labels and confirm context before acting.
+<VisualReference title="Kingdom manager workspace landmarks">
+Kingdom-level actions must repeat the selected kingdom and affected alliance where relevant.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Kingdom name and server code with eligible alliance selector.
+- Alliance summaries and granted-analytics or subscription-allocation state.
+- Kingdom Analytics and cross-alliance drill-downs.
+- Castle Positions instance, candidate review, planner, and publication status.
 
 </template>
 </VisualReference>

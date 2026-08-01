@@ -80,7 +80,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Your First Visit",
+    "title": "Your First Visit, Registration, and Login",
     "path": "/kingshot-events/getting-started/first-visit",
     "navigationSection": "Getting Started",
     "audience": "New users",
@@ -93,7 +93,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Account and Profile",
+    "title": "Account, Profile, and Player Link",
     "path": "/kingshot-events/getting-started/account-and-profile",
     "navigationSection": "Getting Started",
     "audience": "All signed-in users",
@@ -210,7 +210,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Event Tracking Overview",
+    "title": "Event Templates, Instances, and Results",
     "path": "/kingshot-events/events/overview",
     "navigationSection": "Events and Results",
     "audience": "Players and managers",
@@ -223,7 +223,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Participation and Score Events",
+    "title": "Participation, Scores, Stages, and Cumulative Events",
     "path": "/kingshot-events/events/participation-and-scores",
     "navigationSection": "Events and Results",
     "audience": "Contributors and managers",
@@ -262,7 +262,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Event-Specific Behavior",
+    "title": "Event-Specific Behavior and Template Changes",
     "path": "/kingshot-events/events/event-specific-behavior",
     "navigationSection": "Events and Results",
     "audience": "Players and managers",
@@ -288,7 +288,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Reviewing Imported Data",
+    "title": "Reviewing and Applying Imported Data",
     "path": "/kingshot-events/imports/review-imported-data",
     "navigationSection": "Imports and Data Entry",
     "audience": "Contributors and alliance managers",
@@ -301,7 +301,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Duplicate, Date, and Overwrite Handling",
+    "title": "Duplicate, Date, Overwrite, and Restore Rules",
     "path": "/kingshot-events/imports/data-rules",
     "navigationSection": "Imports and Data Entry",
     "audience": "Contributors and managers",
@@ -327,7 +327,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Activity, Player, and Event Analytics",
+    "title": "War Room Analytics Overview",
     "path": "/kingshot-events/analytics/activity-and-results",
     "navigationSection": "Analytics and Rewards",
     "audience": "Players and managers",
@@ -340,6 +340,71 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
+    "title": "Kingdom Analytics",
+    "path": "/kingshot-events/analytics/kingdom",
+    "navigationSection": "Analytics and Rewards",
+    "audience": "Kings, kingdom managers, and granted analytics viewers",
+    "experienceLevel": "Intermediate",
+    "featureArea": "Analytics",
+    "publicationStatus": "published",
+    "sortOrder": 71,
+    "lastReviewedDate": "2026-08-01",
+    "file": "kingshot-events/analytics/kingdom.md"
+  },
+  {
+    "product": "kingshot-events",
+    "title": "Alliance Analytics",
+    "path": "/kingshot-events/analytics/alliance",
+    "navigationSection": "Analytics and Rewards",
+    "audience": "Alliance and kingdom analytics viewers",
+    "experienceLevel": "Intermediate",
+    "featureArea": "Analytics",
+    "publicationStatus": "published",
+    "sortOrder": 72,
+    "lastReviewedDate": "2026-08-01",
+    "file": "kingshot-events/analytics/alliance.md"
+  },
+  {
+    "product": "kingshot-events",
+    "title": "Player Cross-Event Analytics",
+    "path": "/kingshot-events/analytics/player",
+    "navigationSection": "Analytics and Rewards",
+    "audience": "Players and analytics viewers",
+    "experienceLevel": "Intermediate",
+    "featureArea": "Analytics",
+    "publicationStatus": "published",
+    "sortOrder": 73,
+    "lastReviewedDate": "2026-08-01",
+    "file": "kingshot-events/analytics/player.md"
+  },
+  {
+    "product": "kingshot-events",
+    "title": "Custom Analytics",
+    "path": "/kingshot-events/analytics/custom",
+    "navigationSection": "Analytics and Rewards",
+    "audience": "Premium analytics viewers",
+    "experienceLevel": "Advanced",
+    "featureArea": "Analytics",
+    "publicationStatus": "published",
+    "sortOrder": 74,
+    "lastReviewedDate": "2026-08-01",
+    "file": "kingshot-events/analytics/custom.md"
+  },
+  {
+    "product": "kingshot-events",
+    "title": "Analytics Sharing, Scope, and Troubleshooting",
+    "path": "/kingshot-events/analytics/sharing-and-troubleshooting",
+    "navigationSection": "Analytics and Rewards",
+    "audience": "Analytics viewers and managers",
+    "experienceLevel": "Intermediate",
+    "featureArea": "Analytics access",
+    "publicationStatus": "published",
+    "sortOrder": 75,
+    "lastReviewedDate": "2026-08-01",
+    "file": "kingshot-events/analytics/sharing-and-troubleshooting.md"
+  },
+  {
+    "product": "kingshot-events",
     "title": "Reward Eligibility and Statuses",
     "path": "/kingshot-events/analytics/rewards-and-statuses",
     "navigationSection": "Analytics and Rewards",
@@ -347,7 +412,7 @@ export const publicationManifest = [
     "experienceLevel": "Intermediate",
     "featureArea": "Rewards",
     "publicationStatus": "published",
-    "sortOrder": 71,
+    "sortOrder": 76,
     "lastReviewedDate": "2026-08-01",
     "file": "kingshot-events/analytics/rewards-and-statuses.md"
   },
@@ -405,7 +470,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Castle Position Statuses and Changes",
+    "title": "Castle Position Statuses, Changes, and Notifications",
     "path": "/kingshot-events/castle-positions/statuses-and-changes",
     "navigationSection": "Castle Positions",
     "audience": "Applicants and managers",
@@ -457,7 +522,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Knowledge Authoring, Review, and Publication",
+    "title": "Knowledge Authoring, Imports, Review, and Publication",
     "path": "/kingshot-events/knowledge-hub/authoring-and-publication",
     "navigationSection": "Knowledge Hub",
     "audience": "Knowledge authors and reviewers",
@@ -531,7 +596,7 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
-    "title": "Subscription Overview",
+    "title": "Subscriptions, Requests, and Kingdom Grants",
     "path": "/kingshot-events/subscriptions/",
     "navigationSection": "Subscriptions",
     "audience": "Members and community managers",

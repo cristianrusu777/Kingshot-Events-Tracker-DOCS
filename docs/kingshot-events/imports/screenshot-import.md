@@ -1,61 +1,60 @@
 ---
 title: 'Screenshot Import'
-description: 'Turn supported screenshots into reviewable structured data.'
+description: 'Choose a supported import context, process a clear image, and continue to row review.'
 product: 'kingshot-events'
 audience: 'Authorized contributors and managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Imports'
 lastReviewed: '2026-08-01'
-head:
-  - - meta
-    - name: 'robots'
-      content: 'index,follow'
 ---
 
 # Screenshot Import
-Screenshot import assists data entry; it does not guarantee correct recognition. Start from **Imports**, choose the correct scope and supported category, upload a clear image, and wait for the extracted rows.
 
+Screenshot import converts a supported leaderboard or roster image into proposed rows. Processing is assisted data entry: no extracted row is trustworthy until a person checks the context, match, values, and date.
+
+## Before uploading
+
+1. Open **Imports** inside the intended kingdom and alliance.
+2. Confirm the import category and target event or session. For multi-stage or cumulative events, confirm the stage and whether the screenshot contains a stage value or a cumulative total.
+3. Use an uncropped, readable screenshot with names, headings, and values visible. Remove chat overlays and avoid combining unrelated panels.
+4. Check that you are allowed to contribute to the selected scope and that its usage limit is available.
+
+## Processor choices
+
+The application groups available processors into **Free**, **With Keys**, and **Premium** choices. The cards show current availability and explain what setup is required. A browser-held provider key, when supported, remains a user setup choice and should never be pasted into documentation, support screenshots, or review notes. Premium processing appears only when the effective plan and quota allow it.
+
+Processor availability can change without changing the import workflow. Choose an available option, review its visible notice, and do not assume one provider is more accurate for every screenshot.
+
+## Upload and processing
+
+Choose a file, drag and drop it, or use the supported clipboard flow. Submit once. The import moves through visible states such as **draft**, **processing**, **review required**, **accepted**, **rejected**, **deleted**, or a failure state. Leave the record in history while it processes; repeated uploads can create duplicate review work.
+
+When processing completes, open **Import Review**. The page shows the source image, processor label, detected and assigned event context, and counts for **Detected**, **Matched**, **Saved**, and **Need review**. A warning appears when the detected screenshot title differs from the assigned event.
 
 ```mermaid
 flowchart LR
-  A["Select screenshot"]
-  B["Extract proposed information"]
-  C["Review and correct rows"]
-  D["Apply approved records"]
-  A --> B --> C --> D
+  A["Choose scope and import type"] --> B["Upload a supported image"]
+  B --> C["Processing"]
+  C --> D["Review rows and context"]
+  D --> E["Accept correct rows"]
+  E --> F["Saved records and analytics"]
 ```
 
-
-Never apply extracted information without reviewing player names, dates, stages, participation, and scores. Unsupported images, cropped labels, overlays, or low resolution can produce incomplete results.
-
-<RolePerspective>
-
-### As a contributor
-
-Select the correct scope, upload the supported image, and correct every proposed row before applying it.
-
-### As an alliance manager
-
-Confirm that the proposed players and event records belong to the intended alliance, then verify corrections against the source.
-
-### What the platform does automatically
-
-It processes the submitted image, prepares structured information, and surfaces a review step. It does not certify that recognition is correct.
-
-</RolePerspective>
-<VisualReference title="Screenshot Import orientation">
-Use the current page labels and confirm context before acting.
+<VisualReference title="Screenshot upload landmarks">
+Verify the context summary before selecting a processor or image.
 
 <template #items>
 
-- Active scope or profile.
-- Primary input and review area.
-- Visible save, submit, result, or status feedback.
+- Kingdom, alliance, event or session, import category, date, and stage or total controls when applicable.
+- Processor cards grouped by current availability, with setup or quota feedback.
+- File, drag-and-drop, or clipboard upload area and processing status.
+- Link to **Import Review** with the screenshot, context warning, and row summary.
 
 </template>
 </VisualReference>
 
-## Related guides
+## Do not continue when
 
-- [review imported data](/kingshot-events/imports/review-imported-data)
-- [import problems](/kingshot-events/troubleshooting/import-problems)
+Stop before accepting rows if the alliance, event, date, stage, title, or screenshot type is wrong. Correcting the context before acceptance is safer than trying to repair many saved results later.
+
+Next: [Reviewing Imported Data](/kingshot-events/imports/review-imported-data).

@@ -5,983 +5,812 @@
     "pagePath": "/kingshot-events/",
     "sectionHeading": "Kingshot Events orientation",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Kingshot Events.",
+    "safeDescription": "The main navigation changes with your access and with feature availability.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Confirm the selected kingdom or alliance near the top of the workspace.",
+      "Use Workspace for records and events, Input for contributions, and Discover for Knowledge Hub and Lab tools.",
+      "Use profile and support areas when your expected scope or feature is missing."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Kingshot Events interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Kingshot Events interface showing Confirm the selected kingdom or alliance near the top of the workspace.; Use Workspace for records and events, Input for contributions, and Discover for Knowledge Hub and Lab tools.; Use profile and support areas when your expected scope or feature is missing..",
     "status": "needed"
   },
   {
     "visualId": "ke-002",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/overview/problems-solved",
-    "sectionHeading": "Problems Kingshot Events Solves orientation",
+    "pagePath": "/kingshot-events/overview/platform-model",
+    "sectionHeading": "Scope model orientation",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Problems Kingshot Events Solves.",
+    "safeDescription": "Read the active context from broadest to most specific.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Server or kingdom identifier.",
+      "Selected alliance when the task is alliance-specific.",
+      "Player, event occurrence, or workflow item inside that scope."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Problems Kingshot Events Solves interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "How the Platform Fits Together interface showing Server or kingdom identifier.; Selected alliance when the task is alliance-specific.; Player, event occurrence, or workflow item inside that scope..",
     "status": "needed"
   },
   {
     "visualId": "ke-003",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/overview/platform-model",
-    "sectionHeading": "How the Platform Fits Together orientation",
+    "pagePath": "/kingshot-events/getting-started/first-visit",
+    "sectionHeading": "First-visit and sign-in landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for How the Platform Fits Together.",
+    "safeDescription": "Public navigation changes after authentication and assignment resolution.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Public home links to Login, registration, Knowledge Hub, Castle Positions, and available Lab tools.",
+      "Registration or account-request form with submitted or review feedback.",
+      "Login fields and Forgot password route with public recovery status.",
+      "Signed-in profile menu, active community context, role-based navigation, and missing-access message."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "How the Platform Fits Together interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Your First Visit, Registration, and Login interface showing Public home links to Login, registration, Knowledge Hub, Castle Positions, and available Lab tools.; Registration or account-request form with submitted or review feedback.; Login fields and Forgot password route with public recovery status..",
     "status": "needed"
   },
   {
     "visualId": "ke-004",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/overview/terminology",
-    "sectionHeading": "Product Terminology orientation",
+    "pagePath": "/kingshot-events/getting-started/account-and-profile",
+    "sectionHeading": "Account profile and link landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Product Terminology.",
+    "safeDescription": "Account settings and shared player identity are displayed as separate sections.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Account identity and editable profile preferences with Save feedback.",
+      "Linked-player card with kingdom, alliance, name, and profile ID context.",
+      "Player search or link-request action and pending, accepted, rejected, or missing-link state.",
+      "Password recovery and sign-out routes without exposing credentials."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Product Terminology interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Account, Profile, and Player Link interface showing Account identity and editable profile preferences with Save feedback.; Linked-player card with kingdom, alliance, name, and profile ID context.; Player search or link-request action and pending, accepted, rejected, or missing-link state..",
     "status": "needed"
   },
   {
     "visualId": "ke-005",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/overview/feature-availability",
-    "sectionHeading": "Feature Availability orientation",
+    "pagePath": "/kingshot-events/getting-started/access-and-navigation",
+    "sectionHeading": "Scope and access landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Feature Availability.",
+    "safeDescription": "Read the active community and navigation before opening a shared workflow.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Account menu and current kingdom or alliance context, including locked selectors.",
+      "Workspace, Discover, My Tools, Input, and any authorized management groups.",
+      "Page banner or context summary that repeats the selected community.",
+      "Forbidden, missing assignment, locked feature, unavailable module, or request-access feedback."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Feature Availability interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Choosing Scope and Understanding Access interface showing Account menu and current kingdom or alliance context, including locked selectors.; Workspace, Discover, My Tools, Input, and any authorized management groups.; Page banner or context summary that repeats the selected community..",
     "status": "needed"
   },
   {
     "visualId": "ke-006",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/getting-started/first-visit",
-    "sectionHeading": "Your First Visit orientation",
+    "pagePath": "/kingshot-events/players/directory-and-profiles",
+    "sectionHeading": "Player Directory landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Your First Visit.",
+    "safeDescription": "Read the page from scope to filters to roster actions.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Kingdom and alliance selectors, followed by Search players.",
+      "Status, attribute, reward-state, API-state, and Show deleted filters.",
+      "Sortable player table with link or sync text, status and attribute badges, participation, and result count.",
+      "Row actions for Open player, Sync Kingshot profile, Kick from alliance, Edit player, Delete player, or Restore, shown only when allowed."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Your First Visit interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Player Directory and Profiles interface showing Kingdom and alliance selectors, followed by Search players.; Status, attribute, reward-state, API-state, and Show deleted filters.; Sortable player table with link or sync text, status and attribute badges, participation, and result count..",
     "status": "needed"
   },
   {
     "visualId": "ke-007",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/getting-started/account-and-profile",
-    "sectionHeading": "Account and Profile orientation",
+    "pagePath": "/kingshot-events/players/manage-players",
+    "sectionHeading": "Add or edit player form",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Account and Profile.",
+    "safeDescription": "The form sits between the directory filters and the roster table when the viewer can manage players.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Required Kingdom and Player name controls and optional Alliance.",
+      "Kingshot profile ID with Sync, followed by profile and progression fields.",
+      "Alliance role, alliance status, and notes.",
+      "Add player or Save player, plus Cancel while editing."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Account and Profile interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Adding and Updating Players interface showing Required Kingdom and Player name controls and optional Alliance.; Kingshot profile ID with Sync, followed by profile and progression fields.; Alliance role, alliance status, and notes..",
     "status": "needed"
   },
   {
     "visualId": "ke-008",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/getting-started/access-and-navigation",
-    "sectionHeading": "Choosing Scope and Understanding Access orientation",
+    "pagePath": "/kingshot-events/players/linking-and-sync",
+    "sectionHeading": "Player link and sync states",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Choosing Scope and Understanding Access.",
+    "safeDescription": "Compare the account link state with the shared profile's synchronization state.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Account profile player selector or link-review message.",
+      "Shared player identity with kingdom, alliance, and Kingshot profile ID.",
+      "Sync action, API linked or local only, and last synchronization time.",
+      "Nickname history and the Former or alternate nickname input on the player profile."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Choosing Scope and Understanding Access interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Player Linking and Synchronization interface showing Account profile player selector or link-review message.; Shared player identity with kingdom, alliance, and Kingshot profile ID.; Sync action, API linked or local only, and last synchronization time..",
     "status": "needed"
   },
   {
     "visualId": "ke-009",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/players/directory-and-profiles",
-    "sectionHeading": "Player Directory and Profiles orientation",
+    "pagePath": "/kingshot-events/players/lifecycle",
+    "sectionHeading": "Player lifecycle actions",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Player Directory and Profiles.",
+    "safeDescription": "Use row actions for roster changes and the profile for status details.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Primary status badge and attribute badges, including an override indicator.",
+      "Profile controls for manual attribute, reason, status override, and removing an override.",
+      "Directory actions Kick from alliance, Delete player, and the exact-name confirmation for a player with history.",
+      "Show deleted filter and Restore action on a deleted row."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Player Directory and Profiles interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Activity, Attributes, Removal, and Restore interface showing Primary status badge and attribute badges, including an override indicator.; Profile controls for manual attribute, reason, status override, and removing an override.; Directory actions Kick from alliance, Delete player, and the exact-name confirmation for a player with history..",
     "status": "needed"
   },
   {
     "visualId": "ke-010",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/players/manage-players",
-    "sectionHeading": "Adding and Updating Players orientation",
+    "pagePath": "/kingshot-events/kingdoms-and-alliances/scopes",
+    "sectionHeading": "Kingdom and alliance scope landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Adding and Updating Players.",
+    "safeDescription": "Confirm the community context in both the application shell and the page-level selector.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Active kingdom with server code and available alliance selector.",
+      "Locked selector when an assignment fixes the viewer to one scope.",
+      "Page context banner on Players, Events, Imports, Analytics, or Castle Positions.",
+      "Empty, forbidden, or missing-assignment feedback after a scope change."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Adding and Updating Players interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "How Scopes Work interface showing Active kingdom with server code and available alliance selector.; Locked selector when an assignment fixes the viewer to one scope.; Page context banner on Players, Events, Imports, Analytics, or Castle Positions..",
     "status": "needed"
   },
   {
     "visualId": "ke-011",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/players/linking-and-sync",
-    "sectionHeading": "Player Linking and Synchronization orientation",
+    "pagePath": "/kingshot-events/kingdoms-and-alliances/alliance-work",
+    "sectionHeading": "Alliance manager workspace landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Player Linking and Synchronization.",
+    "safeDescription": "Check the selected alliance before changing roster or event records.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Alliance tag and name in the active context.",
+      "Player roster with status, attributes, participation, and result indicators.",
+      "Event instances, manual entry, screenshot imports, and review queues for that alliance.",
+      "Alliance Analytics, rewards, and subscription state with role-dependent actions."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Player Linking and Synchronization interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Working Inside an Alliance interface showing Alliance tag and name in the active context.; Player roster with status, attributes, participation, and result indicators.; Event instances, manual entry, screenshot imports, and review queues for that alliance..",
     "status": "needed"
   },
   {
     "visualId": "ke-012",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/players/lifecycle",
-    "sectionHeading": "Activity, Attributes, Removal, and Restore orientation",
+    "pagePath": "/kingshot-events/kingdoms-and-alliances/kingdom-work",
+    "sectionHeading": "Kingdom manager workspace landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Activity, Attributes, Removal, and Restore.",
+    "safeDescription": "Kingdom-level actions must repeat the selected kingdom and affected alliance where relevant.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Kingdom name and server code with eligible alliance selector.",
+      "Alliance summaries and granted-analytics or subscription-allocation state.",
+      "Kingdom Analytics and cross-alliance drill-downs.",
+      "Castle Positions instance, candidate review, planner, and publication status."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Activity, Attributes, Removal, and Restore interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Working Inside a Kingdom interface showing Kingdom name and server code with eligible alliance selector.; Alliance summaries and granted-analytics or subscription-allocation state.; Kingdom Analytics and cross-alliance drill-downs..",
     "status": "needed"
   },
   {
     "visualId": "ke-013",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/kingdoms-and-alliances/scopes",
-    "sectionHeading": "How Scopes Work orientation",
+    "pagePath": "/kingshot-events/events/overview",
+    "sectionHeading": "Event workflow landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for How Scopes Work.",
+    "safeDescription": "Start with the event card or instance list, then follow the dated record into results.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Event template name, category, duration, score-entry mode, stage behavior, and analytics or reward settings.",
+      "Instance date or session, active kingdom or alliance, and status or lock indicator.",
+      "Manual entry and screenshot import actions with review feedback.",
+      "Instance detail, saved results, record history, analytics, and correction actions."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "How Scopes Work interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Event Templates, Instances, and Results interface showing Event template name, category, duration, score-entry mode, stage behavior, and analytics or reward settings.; Instance date or session, active kingdom or alliance, and status or lock indicator.; Manual entry and screenshot import actions with review feedback..",
     "status": "needed"
   },
   {
     "visualId": "ke-014",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/kingdoms-and-alliances/alliance-work",
-    "sectionHeading": "Working Inside an Alliance orientation",
+    "pagePath": "/kingshot-events/events/participation-and-scores",
+    "sectionHeading": "Event result-mode checkpoints",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Working Inside an Alliance.",
+    "safeDescription": "Match the template or instance banner to the entry controls.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Duration and score-entry description on the event or instance.",
+      "Stage selector for multi-stage events and date or session context for every entry.",
+      "Participation state and score fields supported by that event.",
+      "Save, accepted-row, lock, and recalculation feedback."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Working Inside an Alliance interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Participation, Scores, Stages, and Cumulative Events interface showing Duration and score-entry description on the event or instance.; Stage selector for multi-stage events and date or session context for every entry.; Participation state and score fields supported by that event..",
     "status": "needed"
   },
   {
     "visualId": "ke-015",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/kingdoms-and-alliances/kingdom-work",
-    "sectionHeading": "Working Inside a Kingdom orientation",
+    "pagePath": "/kingshot-events/events/manual-entry",
+    "sectionHeading": "Manual result entry landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Working Inside a Kingdom.",
+    "safeDescription": "Verify context before choosing the player or entering values.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Active kingdom or alliance and selected event instance with date.",
+      "Player selector and event-specific participation, score, stage, or position controls.",
+      "Existing-value or duplicate feedback when editing the same effective result.",
+      "Save result and visible success or validation message."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Working Inside a Kingdom interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Entering Results Manually interface showing Active kingdom or alliance and selected event instance with date.; Player selector and event-specific participation, score, stage, or position controls.; Existing-value or duplicate feedback when editing the same effective result..",
     "status": "needed"
   },
   {
     "visualId": "ke-016",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/events/overview",
-    "sectionHeading": "Event Tracking Overview orientation",
+    "pagePath": "/kingshot-events/events/review-and-history",
+    "sectionHeading": "Event review and history landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Event Tracking Overview.",
+    "safeDescription": "Follow a result from instance to source and back to the player.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Instance identity, date, stage, scope, status, and lock indicator.",
+      "Result rows with participation, score, source, and available edit action.",
+      "Player event history, record batch, or import link.",
+      "Save, delete-impact, restore, and recalculation feedback where authorized."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Event Tracking Overview interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Reviewing Results and Event History interface showing Instance identity, date, stage, scope, status, and lock indicator.; Result rows with participation, score, source, and available edit action.; Player event history, record batch, or import link..",
     "status": "needed"
   },
   {
     "visualId": "ke-017",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/events/participation-and-scores",
-    "sectionHeading": "Participation and Score Events orientation",
+    "pagePath": "/kingshot-events/events/event-specific-behavior",
+    "sectionHeading": "Event template settings landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Participation and Score Events.",
+    "safeDescription": "Read the summary before changing settings used by future instances.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Template name, category, icon, description, and default ordering.",
+      "Duration, score-entry mode, stage count or labels, and participation behavior.",
+      "Analytics and reward inclusion controls.",
+      "Save, proposal, review, or protected-default feedback."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Participation and Score Events interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Event-Specific Behavior and Template Changes interface showing Template name, category, icon, description, and default ordering.; Duration, score-entry mode, stage count or labels, and participation behavior.; Analytics and reward inclusion controls..",
     "status": "needed"
   },
   {
     "visualId": "ke-018",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/events/manual-entry",
-    "sectionHeading": "Entering Results Manually orientation",
+    "pagePath": "/kingshot-events/imports/screenshot-import",
+    "sectionHeading": "Screenshot upload landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Entering Results Manually.",
+    "safeDescription": "Verify the context summary before selecting a processor or image.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Kingdom, alliance, event or session, import category, date, and stage or total controls when applicable.",
+      "Processor cards grouped by current availability, with setup or quota feedback.",
+      "File, drag-and-drop, or clipboard upload area and processing status.",
+      "Link to Import Review with the screenshot, context warning, and row summary."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Entering Results Manually interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Screenshot Import interface showing Kingdom, alliance, event or session, import category, date, and stage or total controls when applicable.; Processor cards grouped by current availability, with setup or quota feedback.; File, drag-and-drop, or clipboard upload area and processing status..",
     "status": "needed"
   },
   {
     "visualId": "ke-019",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/events/review-and-history",
-    "sectionHeading": "Reviewing Results and Event History orientation",
+    "pagePath": "/kingshot-events/imports/review-imported-data",
+    "sectionHeading": "Import Review landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Reviewing Results and Event History.",
+    "safeDescription": "Keep the screenshot visible while working through the review rows.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "File, status, processor, event context, and Detected, Matched, Saved, and Need review counts.",
+      "Screenshot preview and title-mismatch or alliance-capacity warnings.",
+      "Review filters, proposed player match, editable values, row status, accept, reject, or ignore controls.",
+      "Saved results, record batches, and delete or restore actions available to authorized managers."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Reviewing Results and Event History interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Reviewing and Applying Imported Data interface showing File, status, processor, event context, and Detected, Matched, Saved, and Need review counts.; Screenshot preview and title-mismatch or alliance-capacity warnings.; Review filters, proposed player match, editable values, row status, accept, reject, or ignore controls..",
     "status": "needed"
   },
   {
     "visualId": "ke-020",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/events/event-specific-behavior",
-    "sectionHeading": "Event-Specific Behavior orientation",
+    "pagePath": "/kingshot-events/imports/import-troubleshooting",
+    "sectionHeading": "Import problem checkpoints",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Event-Specific Behavior.",
+    "safeDescription": "Use visible state and context before retrying.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Import list status, processor category, scope, event, date, and usage notice.",
+      "Review summary counts and any title, capacity, match, or conflict warning.",
+      "Row-level correction and accept or ignore controls.",
+      "Import delete, rollback, restore, and Saved results sections for authorized managers."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Event-Specific Behavior interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Import Troubleshooting interface showing Import list status, processor category, scope, event, date, and usage notice.; Review summary counts and any title, capacity, match, or conflict warning.; Row-level correction and accept or ignore controls..",
     "status": "needed"
   },
   {
     "visualId": "ke-021",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/imports/screenshot-import",
-    "sectionHeading": "Screenshot Import orientation",
+    "pagePath": "/kingshot-events/analytics/activity-and-results",
+    "sectionHeading": "War Room Analytics landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Screenshot Import.",
+    "safeDescription": "Start at the tab row, then verify any alliance, event, or date controls before reading the charts.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Kingdom, Alliance, Player, and Custom tabs, including premium labels or Granted Kingdom.",
+      "Alliance picker and date or event-category filters where the selected tab supports them.",
+      "KPI tiles, charts, leaderboards, expandable tables, and clickable player or alliance rows.",
+      "Locked-feature notice and Request Subscription action when a premium tab is unavailable."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Screenshot Import interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "War Room Analytics Overview interface showing Kingdom, Alliance, Player, and Custom tabs, including premium labels or Granted Kingdom.; Alliance picker and date or event-category filters where the selected tab supports them.; KPI tiles, charts, leaderboards, expandable tables, and clickable player or alliance rows..",
     "status": "needed"
   },
   {
     "visualId": "ke-022",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/imports/review-imported-data",
-    "sectionHeading": "Reviewing Imported Data orientation",
+    "pagePath": "/kingshot-events/analytics/rewards-and-statuses",
+    "sectionHeading": "Reward eligibility landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Reviewing Imported Data.",
+    "safeDescription": "Read the rule and source records beside the outcome.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Active reward scope, period, and event or rule selector.",
+      "Player, linked-profile, status, attribute, participation, and score context.",
+      "Eligible, not eligible, or needs-review result with contributing conditions.",
+      "Manager rule or review action and visible refresh after source correction."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Reviewing Imported Data interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Reward Eligibility and Statuses interface showing Active reward scope, period, and event or rule selector.; Player, linked-profile, status, attribute, participation, and score context.; Eligible, not eligible, or needs-review result with contributing conditions..",
     "status": "needed"
   },
   {
     "visualId": "ke-023",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/imports/data-rules",
-    "sectionHeading": "Duplicate, Date, and Overwrite Handling orientation",
+    "pagePath": "/kingshot-events/castle-positions/",
+    "sectionHeading": "Castle Positions lifecycle landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Duplicate, Date, and Overwrite Handling.",
+    "safeDescription": "The public application and manager planner show different parts of the same kingdom instance.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Application-period state, kingdom identity, stage cards, availability and requested time.",
+      "Candidate review pools with player identity, resources, preferences, conflicts, and review status.",
+      "Planner stage selector, position columns, time rows, player cards, suggestions, and locks.",
+      "Draft save, publish state, participant schedule, and changed-assignment notices."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Duplicate, Date, and Overwrite Handling interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Castle Positions Overview interface showing Application-period state, kingdom identity, stage cards, availability and requested time.; Candidate review pools with player identity, resources, preferences, conflicts, and review status.; Planner stage selector, position columns, time rows, player cards, suggestions, and locks..",
     "status": "needed"
   },
   {
     "visualId": "ke-024",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/imports/import-troubleshooting",
-    "sectionHeading": "Import Troubleshooting orientation",
+    "pagePath": "/kingshot-events/castle-positions/applicant-guide",
+    "sectionHeading": "Castle Position application landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Import Troubleshooting.",
+    "safeDescription": "Complete the step sequence and review the final UTC choices.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Kingdom and application-period banner with open, provisional, published, or closed state.",
+      "Player identity, configured resource fields, custom questions, and required-field feedback.",
+      "One availability or UTC time choice per stage, plus conflict or provisional notices.",
+      "Review summary, Submit or Update action, and Application received status."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Import Troubleshooting interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Castle Position Applicant Guide interface showing Kingdom and application-period banner with open, provisional, published, or closed state.; Player identity, configured resource fields, custom questions, and required-field feedback.; One availability or UTC time choice per stage, plus conflict or provisional notices..",
     "status": "needed"
   },
   {
     "visualId": "ke-025",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/analytics/activity-and-results",
-    "sectionHeading": "Activity, Player, and Event Analytics orientation",
+    "pagePath": "/kingshot-events/castle-positions/review-workflow",
+    "sectionHeading": "Castle candidate review landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Activity, Player, and Event Analytics.",
+    "safeDescription": "Use filters and candidate detail before changing a review outcome.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Instance and application-period context with candidate status filters.",
+      "Candidate pools for submitted, needs-review, accepted, rejected, and scheduled applications.",
+      "Player identity, requested stages and times, resources, custom answers, and conflict badges.",
+      "Review status, notes, selection controls, and action to continue to scheduling."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Activity, Player, and Event Analytics interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Castle Position Review Workflow interface showing Instance and application-period context with candidate status filters.; Candidate pools for submitted, needs-review, accepted, rejected, and scheduled applications.; Player identity, requested stages and times, resources, custom answers, and conflict badges..",
     "status": "needed"
   },
   {
     "visualId": "ke-026",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/analytics/rewards-and-statuses",
-    "sectionHeading": "Reward Eligibility and Statuses orientation",
+    "pagePath": "/kingshot-events/castle-positions/planning-and-publishing",
+    "sectionHeading": "Castle schedule planner landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Reward Eligibility and Statuses.",
+    "safeDescription": "Read stage, positions, times, and publication state together.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Instance and stage selector with stage date and slot configuration.",
+      "Position columns, time rows, available, occupied, and reserved cells, and player cards.",
+      "Candidate drawer, conflict badges, lock controls, suggestions, and gap actions.",
+      "Unsaved or Saved draft state, validation summary, Publish action, and published version feedback."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Reward Eligibility and Statuses interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Planning, Scheduling, and Publishing interface showing Instance and stage selector with stage date and slot configuration.; Position columns, time rows, available, occupied, and reserved cells, and player cards.; Candidate drawer, conflict badges, lock controls, suggestions, and gap actions..",
     "status": "needed"
   },
   {
     "visualId": "ke-027",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/castle-positions/",
-    "sectionHeading": "Castle Positions Overview orientation",
+    "pagePath": "/kingshot-events/castle-positions/statuses-and-changes",
+    "sectionHeading": "Castle status and change landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Castle Positions Overview.",
+    "safeDescription": "Distinguish the application badge from the schedule version.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Application-period banner and applicant review status.",
+      "Draft assignment state, slot state, lock, conflict, and unsaved or saved feedback.",
+      "Published version or schedule-published marker.",
+      "Participant assignment with stage, UTC time, position, and changed or removed notice."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Castle Positions Overview interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Castle Position Statuses, Changes, and Notifications interface showing Application-period banner and applicant review status.; Draft assignment state, slot state, lock, conflict, and unsaved or saved feedback.; Published version or schedule-published marker..",
     "status": "needed"
   },
   {
     "visualId": "ke-028",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/castle-positions/applicant-guide",
-    "sectionHeading": "Castle Position Applicant Guide orientation",
+    "pagePath": "/kingshot-events/knowledge-hub/reading-and-finding",
+    "sectionHeading": "Knowledge Hub reading landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Castle Position Applicant Guide.",
+    "safeDescription": "Search and browse operate within the visitor's current access.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Homepage search, category or space navigation, and public or scoped context.",
+      "Article cards with title, summary, topic, and access or publication indicator.",
+      "Article outline, structured content blocks, media, related reading, and updated details.",
+      "Premium lock, unavailable message, browser translation assistance, or Reading Verification marker when applicable."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Castle Position Applicant Guide interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Reading and Finding Knowledge interface showing Homepage search, category or space navigation, and public or scoped context.; Article cards with title, summary, topic, and access or publication indicator.; Article outline, structured content blocks, media, related reading, and updated details..",
     "status": "needed"
   },
   {
     "visualId": "ke-029",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/castle-positions/review-workflow",
-    "sectionHeading": "Castle Position Review Workflow orientation",
+    "pagePath": "/kingshot-events/knowledge-hub/access-and-translation",
+    "sectionHeading": "Knowledge access and translation landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Castle Position Review Workflow.",
+    "safeDescription": "Read the access state before treating a teaser as a full article.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Public, signed-in, community-space, or premium access indicator.",
+      "Locked, unavailable, draft, review, or archived message where appropriate.",
+      "Article source language and Browser translation assistance prompt.",
+      "Browser-specific guidance, dismiss-for-this-article action, and original content."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Castle Position Review Workflow interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Knowledge Access and Browser Translation Assistance interface showing Public, signed-in, community-space, or premium access indicator.; Locked, unavailable, draft, review, or archived message where appropriate.; Article source language and Browser translation assistance prompt..",
     "status": "needed"
   },
   {
     "visualId": "ke-030",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/castle-positions/planning-and-publishing",
-    "sectionHeading": "Planning, Scheduling, and Publishing orientation",
+    "pagePath": "/kingshot-events/knowledge-hub/reading-verification",
+    "sectionHeading": "Reading Verification landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Planning, Scheduling, and Publishing.",
+    "safeDescription": "Reader and manager views expose different controls.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Reader assignment route, in-article marker, submission field, attempts, and result message.",
+      "Manager session name, article, state, Open, Pause, Close, and Archive controls.",
+      "Metrics, player search, status filter, and per-reader result table.",
+      "Audited reveal-code action, reset attempts, and CSV export confirmation."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Planning, Scheduling, and Publishing interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Reading Verification interface showing Reader assignment route, in-article marker, submission field, attempts, and result message.; Manager session name, article, state, Open, Pause, Close, and Archive controls.; Metrics, player search, status filter, and per-reader result table..",
     "status": "needed"
   },
   {
     "visualId": "ke-031",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/castle-positions/statuses-and-changes",
-    "sectionHeading": "Castle Position Statuses and Changes orientation",
+    "pagePath": "/kingshot-events/knowledge-hub/authoring-and-publication",
+    "sectionHeading": "Knowledge Studio landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Castle Position Statuses and Changes.",
+    "safeDescription": "Treat space, draft state, and published state as separate decisions.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Space and audience selector, title, summary, slug or discovery details.",
+      "Structured block editor, reorder controls, preview, media library, and import action.",
+      "Draft save state, submit-for-review action, reviewer notes, and structured revision comparison.",
+      "Approve, return for changes, Publish, and Archive states with validation feedback."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Castle Position Statuses and Changes interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Knowledge Authoring, Imports, Review, and Publication interface showing Space and audience selector, title, summary, slug or discovery details.; Structured block editor, reorder controls, preview, media library, and import action.; Draft save state, submit-for-review action, reviewer notes, and structured revision comparison..",
     "status": "needed"
   },
   {
     "visualId": "ke-032",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/knowledge-hub/reading-and-finding",
-    "sectionHeading": "Reading and Finding Knowledge orientation",
+    "pagePath": "/kingshot-events/lab/",
+    "sectionHeading": "Lab and profile landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Reading and Finding Knowledge.",
+    "safeDescription": "Select the profile before the module and review persistence feedback after saving.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Module cards with public, sign-in, beta, premium, or unavailable state.",
+      "Active profile selector, create, rename, duplicate, save, or delete actions where available.",
+      "Profile sections for account stats, troops, equipment, heroes, widgets, formations, and inventory.",
+      "Freshness or missing-input feedback and links to each compatible optimizer or simulator."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Reading and Finding Knowledge interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Lab Overview and Profiles interface showing Module cards with public, sign-in, beta, premium, or unavailable state.; Active profile selector, create, rename, duplicate, save, or delete actions where available.; Profile sections for account stats, troops, equipment, heroes, widgets, formations, and inventory..",
     "status": "needed"
   },
   {
     "visualId": "ke-033",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/knowledge-hub/access-and-translation",
-    "sectionHeading": "Knowledge Access and Browser Translation Assistance orientation",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Knowledge Access and Browser Translation Assistance.",
+    "safeDescription": "Review included systems and inventory before calculating.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Active profile and included progression-system cards.",
+      "Starting state, owned inventory, optional budget or pack assumptions, and objective controls.",
+      "Validation for missing or inconsistent prerequisites.",
+      "Allocation, checkpoints, resource use, remaining inventory, bottlenecks, and save or apply action."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Knowledge Access and Browser Translation Assistance interface showing the main context, workflow, and result areas.",
     "status": "needed"
   },
   {
     "visualId": "ke-034",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/knowledge-hub/reading-verification",
-    "sectionHeading": "Reading Verification orientation",
+    "pagePath": "/kingshot-events/lab/gear-and-charms",
+    "sectionHeading": "Equipment optimizer landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Reading Verification.",
+    "safeDescription": "Move from profile and inventory to objectives, plan, and optional profile update.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Active Lab profile and complete piece or charm grid for Infantry, Cavalry, and Archer.",
+      "Current levels, tiers, stars, mastery or reforge state, and owned-resource inputs.",
+      "Objective or context controls and missing-input validation.",
+      "Ordered target plan, before and after states, resource usage, remaining inventory, and Apply to profile confirmation."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Reading Verification interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Hero Gear, Governor Gear, and Charms interface showing Active Lab profile and complete piece or charm grid for Infantry, Cavalry, and Archer.; Current levels, tiers, stars, mastery or reforge state, and owned-resource inputs.; Objective or context controls and missing-input validation..",
     "status": "needed"
   },
   {
     "visualId": "ke-035",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/knowledge-hub/authoring-and-publication",
-    "sectionHeading": "Knowledge Authoring, Review, and Publication orientation",
+    "pagePath": "/kingshot-events/lab/bear-rally-battle",
+    "sectionHeading": "Combat simulator landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Knowledge Authoring, Review, and Publication.",
+    "safeDescription": "Complete the guided input rail before interpreting the output.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Active profile, scenario or mode selector, and required-step status rail.",
+      "Infantry, Cavalry, and Archer formation, capacity, captain, joiner, hero, widget, and stat controls.",
+      "Review cards and disabled or active Simulate action.",
+      "Expected result, uncertainty or distribution, comparison, assumptions, and saved-run controls."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Knowledge Authoring, Review, and Publication interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Bear Trap, Rally, and Battle Simulators interface showing Active profile, scenario or mode selector, and required-step status rail.; Infantry, Cavalry, and Archer formation, capacity, captain, joiner, hero, widget, and stat controls.; Review cards and disabled or active Simulate action..",
     "status": "needed"
   },
   {
     "visualId": "ke-036",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/lab/",
-    "sectionHeading": "Lab Overview and Profiles orientation",
+    "pagePath": "/kingshot-events/lab/interpreting-results",
+    "sectionHeading": "Lab result review landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Lab Overview and Profiles.",
+    "safeDescription": "Compare input summary, result, and assumptions as one record.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Tool name, module availability or beta label, active profile, and saved-input timestamp.",
+      "Complete input summary with mode, objective, formation, roles, equipment, and inventory.",
+      "Main recommendation or modeled result with comparison, range, or resource detail.",
+      "Assumptions, limitations, data version, save or share action, and rerun controls."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Lab Overview and Profiles interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Interpreting Lab Results and Limitations interface showing Tool name, module availability or beta label, active profile, and saved-input timestamp.; Complete input summary with mode, objective, formation, roles, equipment, and inventory.; Main recommendation or modeled result with comparison, range, or resource detail..",
     "status": "needed"
   },
   {
     "visualId": "ke-037",
     "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/subscriptions/",
+    "sectionHeading": "Subscription request and effective-plan landmarks",
     "visualType": "anonymized interface capture",
+    "safeDescription": "Confirm the target scope before submitting or accepting a grant.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Active alliance or kingdom and current effective plan.",
+      "Plan cards with features, limits, and Request Subscription action.",
+      "Request status timeline and configured payment or support instructions.",
+      "Kingdom allocation or alliance grant state, acceptance action, and enabled-feature summary."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
+    "recommendedAltText": "Subscriptions, Requests, and Kingdom Grants interface showing Active alliance or kingdom and current effective plan.; Plan cards with features, limits, and Request Subscription action.; Request status timeline and configured payment or support instructions..",
     "status": "needed"
   },
   {
     "visualId": "ke-038",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/lab/gear-and-charms",
-    "sectionHeading": "Hero Gear, Governor Gear, and Charms orientation",
+    "pagePath": "/kingshot-events/subscriptions/access-and-usage",
+    "sectionHeading": "Subscription access and usage landmarks",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Hero Gear, Governor Gear, and Charms.",
+    "safeDescription": "Use the current feature summary, not a plan name alone.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Active scope and direct, allocated, or granted plan source.",
+      "Enabled and locked feature list with effective dates when shown.",
+      "Used, remaining, limit, reset, warning, or quota-exceeded feedback.",
+      "Accept grant, request change, or contact support route available to the current role."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Hero Gear, Governor Gear, and Charms interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Subscription Access, Scope, and Usage interface showing Active scope and direct, allocated, or granted plan source.; Enabled and locked feature list with effective dates when shown.; Used, remaining, limit, reset, warning, or quota-exceeded feedback..",
     "status": "needed"
   },
   {
     "visualId": "ke-039",
     "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/lab/bear-rally-battle",
-    "sectionHeading": "Bear Trap, Rally, and Battle Simulators orientation",
-    "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Bear Trap, Rally, and Battle Simulators.",
-    "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
-    ],
-    "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
-    ],
-    "recommendedAltText": "Bear Trap, Rally, and Battle Simulators interface showing the main context, workflow, and result areas.",
-    "status": "needed"
-  },
-  {
-    "visualId": "ke-040",
-    "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/lab/interpreting-results",
-    "sectionHeading": "Interpreting Lab Results and Limitations orientation",
-    "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Interpreting Lab Results and Limitations.",
-    "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
-    ],
-    "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
-    ],
-    "recommendedAltText": "Interpreting Lab Results and Limitations interface showing the main context, workflow, and result areas.",
-    "status": "needed"
-  },
-  {
-    "visualId": "ke-041",
-    "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/subscriptions/",
-    "sectionHeading": "Subscription Overview orientation",
-    "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Subscription Overview.",
-    "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
-    ],
-    "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
-    ],
-    "recommendedAltText": "Subscription Overview interface showing the main context, workflow, and result areas.",
-    "status": "needed"
-  },
-  {
-    "visualId": "ke-042",
-    "product": "Kingshot Events",
-    "pagePath": "/kingshot-events/subscriptions/access-and-usage",
-    "sectionHeading": "Subscription Access, Scope, and Usage orientation",
-    "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Subscription Access, Scope, and Usage.",
-    "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
-    ],
-    "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
-    ],
-    "recommendedAltText": "Subscription Access, Scope, and Usage interface showing the main context, workflow, and result areas.",
-    "status": "needed"
-  },
-  {
-    "visualId": "ke-043",
-    "product": "Kingshot Events",
     "pagePath": "/kingshot-events/subscriptions/troubleshooting",
-    "sectionHeading": "Subscription Troubleshooting orientation",
+    "sectionHeading": "Subscription problem checkpoints",
     "visualType": "anonymized interface capture",
-    "safeDescription": "An anonymized orientation view for Subscription Troubleshooting.",
+    "safeDescription": "Capture the effective state without exposing private payment data.",
     "requiredVisibleElements": [
-      "page title",
-      "scope or profile context when relevant",
-      "primary workflow area",
-      "visible outcome or status"
+      "Active community and effective-plan source.",
+      "Locked feature name or premium label.",
+      "Request or grant timeline and acceptance state.",
+      "Usage warning with limit and reset, plus configured support action."
     ],
     "elementsToRedact": [
-      "real names",
-      "email addresses",
-      "player identifiers",
-      "private community records",
-      "tokens and keys"
+      "real names and email addresses",
+      "player identifiers and private community records",
+      "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Subscription Troubleshooting interface showing the main context, workflow, and result areas.",
+    "recommendedAltText": "Subscription Troubleshooting interface showing Active community and effective-plan source.; Locked feature name or premium label.; Request or grant timeline and acceptance state..",
     "status": "needed"
   }
 ]
