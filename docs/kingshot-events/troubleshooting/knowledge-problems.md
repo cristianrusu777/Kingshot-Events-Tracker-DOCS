@@ -40,4 +40,10 @@ Ask for help when the issue depends on role assignment, community scope, review 
 
 Search results depend on space, access, terms, and article status. Authors may see drafts while readers see the last published version. Verification has separate assigned, opened, verified, and expired states.
 
-For check audience and publication state, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Worked example, recovery, and limitations
+
+**What you see:** A reading code opens the article but submission is unavailable. **Checks:** Confirm the canonical article, active session, audience scope, assignment, marker progress, article completion, and whether a prior submission is final or retryable. **Decision:** An inapplicable, closed, archived, expired, or already completed assignment cannot accept a new submission. **Recovery:** A session manager reviews the assignment and classification; the reader should not create another account or article copy. Browser translation does not change marker identity and may mistranslate instructions. Include article title, session, assignment state, visible code error, and time, but never the private response content of another reader.
+
+Use article access, source-language view, assignment progress, and session status as controls. Limitations include browser translation quality, closed-state immutability, and report access boundaries.
+
+These controls cannot expose protected blocks, reopen an archived assignment, or replace human review. The safe output is the correct full, teaser, denied, retry, complete, or manual-review state with a traceable article and session.

@@ -33,3 +33,15 @@ flowchart TD
 ## Limitations and recovery
 
 The plan is deterministic and constrained by the entered inventory, weights, locks, and catalog. It cannot account for an unentered purchase, incorrect level, future balance change, or an objective not represented by the chosen weights. The iterative result does not guarantee the globally best long-horizon sequence. If a troop class never appears, verify its locks and priorities and confirm that at least one next step is affordable and has positive weighted gain. Compare the before/after grid and leftovers before using the result.
+
+## Purpose, controls, roles, and scope
+
+Charm planning solves the choice among 18 next-slot upgrades when Guides and Designs are shared across Infantry, Cavalry, and Archer priorities. The controls are active Lab profile, each current Charm level, both material balances, troop and stat weights, strategy, and locks. They are personal scenario inputs. Alliance or kingdom selection does not change the cost catalog, and no leadership role gives authority over another user's saved profile or in-game inventory.
+
+The engine generates only the next valid catalog level for each unlocked non-maxed slot. It compares candidates, consumes live remaining materials, updates the chosen level and stats, and repeats. The ordered output names slot, step, gain, Guides and Designs spent, before and after levels, and leftovers. A target is reachable only through these sequential levels; the engine cannot skip an intermediate cost.
+
+**Worked scarcity edge case:** Two candidates each need one Design, but only one Design remains. The first selection uses it. Every next step that requires a Design becomes unaffordable even when Guides remain, so the optimizer may choose a Guide-only step or stop. The output reason is material exhaustion after an earlier decision. Correcting the inventory and rerunning is safe; manually inserting an impossible target is not.
+
+Charm planning is greedy and iterative rather than exhaustive. Determinism means identical inputs repeat, not that the plan is globally optimal.
+
+Before Run, verify every current-level field, the Guide and Design inventory inputs, each lock control, troop-class priority, stat weight, and strategy selector. After Run, inspect the ordered steps and both leftover materials, not only the final weighted gain. These controls belong to the profile owner; alliance and kingdom roles do not add authority or change catalog costs. To test a preference, save a separate scenario, change one weight or lock, rerun, and compare which branch consumed the scarce Design. This isolates the cause without editing the original saved assumptions.

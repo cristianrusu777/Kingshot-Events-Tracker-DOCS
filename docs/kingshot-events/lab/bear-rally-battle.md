@@ -44,3 +44,11 @@ Complete the guided input rail before interpreting the output.
 </VisualReference>
 
 If a result looks implausible, use [Interpreting Results and Limitations](/kingshot-events/lab/interpreting-results).
+
+## Workflow, scope, example, and recovery
+
+Bear Trap models a rally against the Bear; Rally and Battle tools model other supported attacker, defender, captain, joiner, formation, or stacking questions. Each begins with the active personal profile, then applies module-specific scenario input. Roles and kingdom or alliance scope do not make a scenario official or editable by another manager.
+
+The user validates leader and joiner capacities, exact troop counts, actual tier and Truegold, heroes or captains, active skill slots, account bonuses, temporary buffs, and opponent or observed result where supported. The engine resolves deterministic catalog effects, labels community-observed or estimated mechanics, produces contribution and damage output, and reports limitations or prediction error.
+
+**Worked example:** One Bear joiner lacks captain data. The run can use declared troops but must not assume an optimal captain. The output remains an estimate with an incomplete-input limitation. Add the confirmed captain, rerun from a copy, and compare only that controlled change. A large remaining error prompts checks of formation, tier, Truegold, capacity, skills, buffs, version, and unresolved mechanics. No single observed rally proves the model.

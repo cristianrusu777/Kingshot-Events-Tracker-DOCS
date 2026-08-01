@@ -40,4 +40,10 @@ Ask for help when the issue depends on role assignment, community scope, review 
 
 Record the provider, source, processing state, batch, row, and warning. Do not upload repeatedly while processing or overwrite a reviewed decision without new evidence.
 
-For keep source and decision together, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Worked example, recovery, and limitations
+
+**What you see:** A screenshot extracts only part of the ranking. **Checks:** Preserve the import, inspect processor status and warnings, compare crop and supported file type, then review every proposed row. **Decision:** Valid rows can proceed; ambiguous names remain unmatched or needs review; an unreadable score is corrected from the source or rejected. **Recovery:** Reprocess once only when the batch exposes that action and the image context is correct. Deleting the import does not roll back applied results, and restoring it does not reapply them. Include import identifier, event, date, scope, provider label, failed row, and exact warning without credentials or private exports.
+
+Extraction cannot guarantee complete rows, correct digits, or unique name matching. Keep the source and row decisions together until the applied batch is verified in event history.
+
+If the image has already been permanently removed after retention, neither reprocess nor Restore can reconstruct it. Use remaining batch history and authorized source correction, and document that limitation in the support request.

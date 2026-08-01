@@ -44,4 +44,8 @@ Kingdom-level actions must repeat the selected kingdom and affected alliance whe
 
 Use kingdom scope for comparison and shared planning, then follow corrections back to the alliance source. Review missing data and filters before drawing conclusions across communities.
 
-For coordinate without erasing alliance context, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Purpose, example, and limits
+
+Kingdom work coordinates cross-alliance visibility, grants, shared rules, and Castle scheduling without erasing alliance ownership. **Example:** A kingdom total is low because one alliance batch is unapplied. The manager traces the total to that alliance, routes the correction to its authorized owner, then verifies recalculation with unchanged filters. The aggregate is output, not an edit surface. Kingdom responsibility cannot bypass an alliance lock, private Knowledge space, or quota. Report kingdom, alliance, workflow, source state, filters, and expected outcome.
+
+Limitations include missing alliance evidence, read-only grants, cycle state, allocation, and immutable publications. Troubleshooting follows the owning alliance, event batch, application, schedule version, article revision, or grant rather than changing an aggregate. The kingdom role cannot reveal private platform-administration procedures.

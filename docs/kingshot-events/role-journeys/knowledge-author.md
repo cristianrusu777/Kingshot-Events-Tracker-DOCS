@@ -38,4 +38,10 @@ Contact the community manager responsible for the current scope when information
 
 Write for a defined reader and space, preview blocks and media at narrow width, save a draft, submit a revision, respond to review, and confirm the published reader view.
 
-For your recurring path, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+Authors control drafts they are allowed to edit; reviewers control the applicable review decision. Editing a published article creates a new draft revision while readers keep the previous published revision until replacement publication.
+
+## Worked example and limits
+
+**Starting situation:** A published kingdom guide contains an outdated instruction. Open it in Studio, create or continue the draft revision, change the relevant structured block, preview narrow and wide layouts, save, and submit for review. A requested-changes decision returns the revision to author work; approval allows publication. The output is a new identifiable published revision, not an in-place silent edit. Browser Translation Assistance does not create an official translated revision, and AI-assisted authoring cannot bypass source verification, access selection, or human review. If saving conflicts with a newer revision, preserve your text, reload the current draft, and reapply the intended change.
+
+Limitations include browser translation accuracy, imported content quality, media safety, and review authority. Troubleshoot with article, space, revision, block, save state, review decision, and public validation message.

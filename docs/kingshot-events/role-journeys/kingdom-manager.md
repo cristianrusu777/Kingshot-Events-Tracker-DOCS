@@ -38,4 +38,10 @@ Contact the community manager responsible for the current scope when information
 
 Maintain community structure, compare alliances from a named scope, coordinate shared access, trace corrections to source records, and publish conflict-checked Castle schedules with visible versions.
 
-For your recurring path, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+Kingdom context can aggregate permitted alliance data and host kingdom workflows, but it does not erase alliance ownership or turn a shared viewer into an editor.
+
+## Worked example and limits
+
+**Starting situation:** Kingdom Analytics shows a low total for Alliance Blue. Preserve the kingdom, event, and date filters, drill into the contributing alliance records, and identify the owning event batch. If a source result is missing, route the correction to an authorized owner rather than editing an aggregate. After correction, verify recalculation with the same filters. The state change occurs at the source record; the kingdom output changes downstream. Kingdom management does not bypass an immutable published revision, a closed Reading Verification assignment, or subscription quota. Escalate with the scope, source identity, filter set, expected total, and observed result, without platform-internal details.
+
+The purpose is coordination, not platform administration. Troubleshooting stops at user-visible scope, source, state, version, and recovery controls; private operator procedures remain outside this role journey.

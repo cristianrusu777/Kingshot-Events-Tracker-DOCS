@@ -40,4 +40,10 @@ Ask for help when the issue depends on role assignment, community scope, review 
 
 Compare kingdom, position, eligibility, capacity, application status, planner conflict, published version, and notice. A draft schedule is not authoritative.
 
-For check the appointment cycle, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Worked example, recovery, and limitations
+
+**What you see:** An eligible applicant is placed on standby. **Checks:** Confirm kingdom cycle, linked-player review state, requested position, preferred time, resource relevance, compatible slots, row capacity, existing locks, and current draft. **Decision:** A full or incompatible row can leave an otherwise eligible candidate on standby. **Recovery:** An authorized planner may choose another compatible slot, keep standby, or adjust an unlocked draft placement, then rerun publish validation. A draft is not participant-facing and a published version is not silently editable. Include cycle, applicant, position, time, row, conflict, and version when contacting the organizer.
+
+The output is a validated placement, explicit standby, gap, or conflict reason. Limitations include offline agreements and unsubmitted availability; never alter an applicant's declared inputs merely to fill capacity.
+
+The planner cannot guarantee a globally optimal or politically fair schedule. Human review remains responsible for exceptional context, manual placement, publication, and communication through the latest version.

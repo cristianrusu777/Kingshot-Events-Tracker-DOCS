@@ -56,3 +56,26 @@ Distinguish the application badge from the schedule version.
 </VisualReference>
 
 If an update is missing, reload the correct kingdom instance and confirm it was published, not merely saved as a draft.
+
+## State workflow and worked change
+
+Application and schedule labels answer different questions. An application can be submitted, needs review, eligible, rejected, scheduled, standby, or closed. A placement can exist in draft without being participant-facing. A published schedule version remains authoritative until a controlled validated change publishes a successor.
+
+```mermaid
+stateDiagram-v2
+  [*] --> Submitted
+  Submitted --> NeedsReview
+  Submitted --> Eligible
+  NeedsReview --> Eligible
+  NeedsReview --> Rejected
+  Eligible --> Standby
+  Eligible --> DraftPlacement
+  DraftPlacement --> PublishedPlacement
+  PublishedPlacement --> ChangedPlacement: later version
+```
+
+*Castle statuses and change lifecycle. Eligibility, draft placement, publication, standby, and later versions are distinct.*
+
+**Accessible summary:** Applicants pass review, may be rejected, standby, or placed in draft, and become participants only after publication.
+
+**Worked example:** A participant withdraws. The manager starts from the current version, keeps unaffected locks, checks a standby candidate, places that candidate in draft, validates the grid, and publishes. Notices point to the new version while the former remains history. The system cannot infer offline availability or guarantee message delivery. Troubleshoot with cycle, applicant, state, row, lock, version, notice, and conflict.

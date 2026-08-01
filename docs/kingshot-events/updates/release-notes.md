@@ -34,4 +34,12 @@ Release notes describe user-visible changes only. Product behavior shown in the 
 
 A release note identifies the reader area, visible change, and required action. The full dated guide remains the authority for roles, scopes, statuses, prerequisites, and the complete workflow.
 
-For use a release note as a change map, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Purpose, roles, and worked example
+
+Release notes help players and managers recognize a user-visible change and reach the revised guide; they are not a replacement manual. **Example:** A note announces that Castle schedule changes now publish a new version. A Minister follows the linked planner guide, validates a controlled change, and verifies participant notices. A player follows the same note to the latest participant view. The output is role-specific next action anchored in one dated change.
+
+## Limits and troubleshooting
+
+Notes cannot guarantee that an older screenshot, bookmark, or message reflects the current workflow. Use the linked guide and current interface controls. When a documented change seems absent, record product area, role, scope, feature availability, page version, visible status, and exact message. Do not include credentials or internal operator information.
+
+Players, alliance managers, kingdom managers, authors, and session managers may receive different actions from one change. Troubleshooting therefore compares the reader's role and current guide, not another user's controls. The release note output is orientation and a verified link, never private implementation detail.

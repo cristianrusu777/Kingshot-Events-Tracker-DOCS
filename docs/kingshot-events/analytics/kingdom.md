@@ -35,3 +35,11 @@ When a kingdom stops sharing granted analytics, the tab and shared summaries can
 Alliance comparisons are only as complete as the underlying events and results. A newly added alliance, an event excluded from analytics, or a period with missing imports can make rankings misleading. Aggregate access can intentionally omit player-level detail.
 
 See [sharing, access, and missing data](/kingshot-events/analytics/sharing-and-troubleshooting) when the tab is absent or an expected alliance is missing.
+
+## Complete view behavior and worked example
+
+Kingdom Analytics starts with current eligible participation and score results attached to the selected kingdom and its permitted child alliances. Event, stage, result type, and inclusive start and end boundaries are applied before grouping. Deleted rows and unapplied import proposals do not contribute. Missing rows are absent evidence, Unknown is a tracked participation state, and missing scores do not become zero.
+
+The view groups supported totals and rates across the kingdom, then exposes alliance or player drill-down where access permits. Recalculation replaces derived summaries after source correction. A direct kingdom role can qualify; an accepted eligible Analytics grant can instead provide a read-only view. The grant does not permit roster, result, or reward-rule edits. Premium state can control availability without changing source eligibility.
+
+**Worked example:** Alliance Red appears but Blue does not. Preserving event and date filters, the viewer finds Blue's screenshot rows are accepted but not applied. Reviewed proposals are not Analytics inputs. An authorized Blue manager applies the eligible batch and recalculation adds the rows. The shared viewer verifies output but cannot apply it. Troubleshoot with kingdom, event, dates, alliance, source batch state, access source, and recalculation time.
