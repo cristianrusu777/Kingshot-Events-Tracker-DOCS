@@ -82,3 +82,42 @@ body { background-image: radial-gradient(circle at 88% 2%, rgba(8,117,99,.08), t
 .dark .category-hero[data-category="lifecycles"] { --category-accent:#c7b8a7; }
 .dark .category-hero[data-category="troubleshooting"] { --category-accent:#f0a0a0; }
 @media (max-width:700px) { .category-hero { grid-template-columns:1fr; border-left-width:5px; } .category-hero__icon { width:58px; height:58px; } }
+
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.search-only-metadata { display:none !important; }
+.product-finder { margin:2rem 0 3rem; padding:clamp(1rem,3vw,1.6rem); border:1px solid var(--vp-c-border); border-radius:20px; background:var(--vp-c-bg-soft); }
+.product-finder__heading { display:flex; justify-content:space-between; gap:1rem; align-items:end; }
+.product-finder__heading h2 { margin:.15rem 0 .7rem; border:0; }
+.product-finder__eyebrow { margin:0; color:var(--vp-c-brand-1); text-transform:uppercase; letter-spacing:.12em; font-size:.72rem; font-weight:750; }
+.product-finder kbd { border:1px solid var(--vp-c-border); border-bottom-width:3px; border-radius:7px; padding:.3rem .5rem; color:var(--vp-c-text-2); background:var(--vp-c-bg); }
+.product-finder__search input { width:100%; min-height:52px; padding:.7rem 1rem; border:2px solid var(--vp-c-border); border-radius:12px; background:var(--vp-c-bg); color:var(--vp-c-text-1); font:inherit; font-size:1rem; }
+.product-finder__tasks { display:flex; gap:.45rem; overflow-x:auto; padding:.8rem 0 .25rem; scrollbar-width:thin; }
+.product-finder__tasks a { flex:0 0 auto; padding:.38rem .65rem; border:1px solid var(--vp-c-border); border-radius:999px; background:var(--vp-c-bg); color:var(--vp-c-text-1); text-decoration:none; font-size:.84rem; }
+.product-finder__tasks a:hover { border-color:var(--vp-c-brand-1); color:var(--vp-c-brand-1); }
+.product-finder__filters { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.7rem; margin:1rem 0; }
+.product-finder__filters label { display:grid; gap:.3rem; color:var(--vp-c-text-2); font-size:.78rem; font-weight:700; }
+.product-finder__filters select { width:100%; min-height:42px; padding:.45rem .55rem; border:1px solid var(--vp-c-border); border-radius:8px; background:var(--vp-c-bg); color:var(--vp-c-text-1); font:inherit; }
+.product-finder__count { margin:.65rem 0; color:var(--vp-c-text-2); font-size:.84rem; }
+.product-finder__results { display:grid; gap:.65rem; }
+.finder-result { --finder-accent:var(--vp-c-brand-1); display:grid; grid-template-columns:auto minmax(0,1fr) minmax(145px,.4fr); gap:.8rem; padding:1rem; border:1px solid var(--vp-c-border); border-left:5px solid var(--finder-accent); border-radius:12px; background:var(--vp-c-bg); color:var(--vp-c-text-1) !important; text-decoration:none !important; }
+.finder-result:hover { border-color:var(--finder-accent); }
+.finder-result__icon { width:28px; height:28px; border:2px solid var(--finder-accent); border-radius:9px; background:linear-gradient(135deg,color-mix(in srgb,var(--finder-accent) 25%,transparent) 50%,transparent 50%); }
+.finder-result__body { display:grid; gap:.25rem; }
+.finder-result__body > span,.finder-result__body small { color:var(--vp-c-text-2); }
+.finder-result__meta { display:flex; flex-wrap:wrap; align-content:start; justify-content:flex-end; gap:.3rem; }
+.finder-result__meta em { padding:.2rem .4rem; border:1px solid color-mix(in srgb,var(--finder-accent) 45%,var(--vp-c-border)); border-radius:999px; color:var(--finder-accent); font-size:.68rem; font-style:normal; }
+.finder-result[data-category="Players"] { --finder-accent:#a34f69; }.finder-result[data-category="Events and Results"] { --finder-accent:#a34d28; }.finder-result[data-category="Imports and Data Entry"] { --finder-accent:#2d7180; }.finder-result[data-category="Analytics and Rewards"] { --finder-accent:#356d2d; }.finder-result[data-category="Castle Positions"] { --finder-accent:#8b6512; }.finder-result[data-category="Knowledge Hub"] { --finder-accent:#495baa; }.finder-result[data-category="Simulations and Optimizations"] { --finder-accent:#7d4a99; }.finder-result[data-category="Troubleshooting"] { --finder-accent:#a34040; }
+.VPDoc .VPDocFooter { border-top:3px solid var(--vp-c-brand-soft); padding-top:1.2rem; }
+.VPSidebarItem.level-0 > .item .text { font-weight:800; letter-spacing:.01em; }
+@media (max-width:800px) { .product-finder__filters { grid-template-columns:repeat(2,minmax(0,1fr)); }.finder-result { grid-template-columns:auto 1fr; }.finder-result__meta { grid-column:2; justify-content:flex-start; } }
+@media (max-width:520px) { .product-finder__filters { grid-template-columns:1fr; }.product-finder__heading kbd { display:none; }.finder-result { grid-template-columns:1fr; }.finder-result__icon { width:24px; height:24px; }.finder-result__meta { grid-column:1; } }
+.page-context { --page-accent:var(--vp-c-brand-1); margin-bottom:1rem; }
+.docs-breadcrumbs { display:flex; flex-wrap:wrap; gap:.35rem; color:var(--vp-c-text-2); font-size:.78rem; }
+.docs-breadcrumbs a { color:var(--page-accent); text-decoration:none; }
+.page-context__badges { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.65rem; }
+.page-context__badges > span { display:inline-flex; align-items:center; gap:.35rem; padding:.2rem .45rem; border:1px solid var(--vp-c-border); border-radius:999px; color:var(--vp-c-text-2); font-size:.7rem; }
+.page-context__category { color:var(--page-accent) !important; border-color:color-mix(in srgb,var(--page-accent) 45%,var(--vp-c-border)) !important; }
+.page-context__category i { width:.58rem; height:.58rem; border:2px solid currentColor; border-radius:3px; transform:rotate(45deg); }
+.page-context[data-category="Players"] { --page-accent:#a34f69; }.page-context[data-category="Events and Results"] { --page-accent:#a34d28; }.page-context[data-category="Imports and Data Entry"] { --page-accent:#2d7180; }.page-context[data-category="Analytics and Rewards"] { --page-accent:#356d2d; }.page-context[data-category="Castle Positions"] { --page-accent:#8b6512; }.page-context[data-category="Knowledge Hub"] { --page-accent:#495baa; }.page-context[data-category="Simulations and Optimizations"] { --page-accent:#7d4a99; }.page-context[data-category="Troubleshooting"] { --page-accent:#a34040; }
+.link-card { border-top:4px solid var(--vp-c-brand-1); }
+.link-card[data-category="players"] { border-top-color:#a34f69; }.link-card[data-category="events"] { border-top-color:#a34d28; }.link-card[data-category="imports"] { border-top-color:#2d7180; }.link-card[data-category="analytics"] { border-top-color:#356d2d; }.link-card[data-category="castle-positions"] { border-top-color:#8b6512; }.link-card[data-category="knowledge-hub"] { border-top-color:#495baa; }.link-card[data-category="lab"] { border-top-color:#7d4a99; }.link-card[data-category="troubleshooting"] { border-top-color:#a34040; }

@@ -42,3 +42,7 @@ Search and browse operate within the visitor's current access.
 </VisualReference>
 
 If an expected article is absent, use [Knowledge Access and Translation](/kingshot-events/knowledge-hub/access-and-translation).
+
+## Purpose, controls, and worked result
+
+Knowledge search helps readers find the canonical published article they are permitted to know exists. Controls include search terms, category or space, source language, and visible article metadata. The decision order keeps unpublished material out of ordinary results, then applies identity, scope, and premium access. **Example:** A signed-out reader searches a premium title and receives the permitted teaser. After sign-in with effective access, the same slug opens full blocks. A members-only alliance article outside the reader's space remains unavailable rather than advertised. Search cannot bypass state or access. Troubleshoot with title, slug, search terms, identity state, active scope, access label, and exact message.

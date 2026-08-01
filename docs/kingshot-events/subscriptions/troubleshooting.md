@@ -46,3 +46,7 @@ Capture the effective state without exposing private payment data.
 
 </template>
 </VisualReference>
+
+## Decision checks, worked example, and limitations
+
+Use the effective source label, grant status and dates, feature name, allocation, usage state, limited-mode notice, and suspension message as controls for diagnosis. **Example:** A grant is Offered but not Accepted, so the alliance remains Free. Acceptance is the required state transition; refreshing or selecting another scope cannot make the pending grant effective. If accepted access still fails, verify the feature is grant-eligible and allocated quota remains. A plan cannot grant role authority, a zero or disabled hard limit is not an exceeded quota, and cleanup cannot revive an expired grant. Include scope, plan source, feature, grant, quota, operation, and exact error in troubleshooting.

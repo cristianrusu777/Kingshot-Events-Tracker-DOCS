@@ -38,4 +38,8 @@ Contact the community manager responsible for the current scope when information
 
 Keep the account linked, select the current community, enter results inside the active window, review personal history, follow Castle application statuses, and treat Lab outputs as planning assumptions rather than live records.
 
-For your recurring path, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+Your account may be linked to a player while an event result, reward decision, or Castle application remains managed by someone else. You can inspect the visible source and state, but do not create a second player or submission to hide a correction problem.
+
+## Worked example and limits
+
+**Starting situation:** Your personal Analytics omits yesterday's event. Confirm the linked external player ID, active alliance, event and date filters, then open the visible event history. If no accepted result exists, ask the alliance result manager to inspect the source batch. If a result exists but remains outside your chosen boundary, change the filter. The output should be either a visible contributing row or a precise source correction request. Player access cannot override locks, edit another manager's batch, or guarantee premium features. Include the player, event, date, scope, and visible status when asking for help, never credentials.

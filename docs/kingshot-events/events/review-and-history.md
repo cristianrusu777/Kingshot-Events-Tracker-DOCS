@@ -46,3 +46,7 @@ Follow a result from instance to source and back to the player.
 </VisualReference>
 
 Related: [Import data rules](/kingshot-events/imports/data-rules), [War Room Analytics](/kingshot-events/analytics/activity-and-results), and [Reward Eligibility](/kingshot-events/analytics/rewards-and-statuses).
+
+## Purpose, controls, and review workflow
+
+History lets players and managers distinguish a template, dated instance, source batch, player row, correction, and downstream summary. Select scope, event, date or stage, then open the batch or row before using correction controls. **Worked example:** Two same-date rows differ. History shows one cumulative snapshot and one incoming reviewed row. The reviewer confirms refresh rather than adding both; recalculation replaces the derived total. A locked instance routes to authorized review. History cannot guarantee the source image was complete, and aggregate output is not a correction control. Preserve event, instance, player, date, stage, batches, lock, values, and message when troubleshooting.

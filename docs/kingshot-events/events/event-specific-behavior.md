@@ -46,3 +46,13 @@ Read the summary before changing settings used by future instances.
 </VisualReference>
 
 See [Participation, Scores, Stages, and Cumulative Events](/kingshot-events/events/participation-and-scores) for the result meanings.
+
+## Decision order, states, and example
+
+The purpose of event-specific behavior is to preserve template meaning when an instance and rows are created. The platform resolves duration and score-entry mode, stage or total context, required position or custom fields, activity and reward inclusion, then applies date and duplicate rules. A later template change does not silently rewrite completed evidence.
+
+**Worked example:** A multi-stage cumulative event stores daily stage rows and a total snapshot. A second different total for the same player and date enters refresh review rather than adding both totals. For a non-cumulative event, the same identity becomes conflict. If locked, neither branch writes until authorized correction reopens it. Output stays traceable to instance and batch.
+
+## Limitations and troubleshooting
+
+Default protection, custom ownership, proposal review, and lock state restrict controls by role and scope. Do not duplicate a template or shift a date to bypass them. Record template, instance, event mode, stage or total, result type, scope, date, lock, source batch, and visible message, then compare [record batches and corrections](/kingshot-events/events/record-batches-and-corrections).

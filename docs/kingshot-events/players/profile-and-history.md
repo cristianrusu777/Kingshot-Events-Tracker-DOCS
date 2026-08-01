@@ -77,3 +77,45 @@ flowchart TD
 ## Limits and recovery
 
 An alliance supports at most 100 current members. An alliance-scoped manager may claim an outside or unassigned player only into their own alliance. If synchronization appears stale, verify the external ID and latest sync state before manually overwriting supported fields. If an activity label seems wrong, inspect which events count, missing or unknown rows, the calculated time, and any visible override reason.
+
+## Link, synchronization, and lifecycle maps
+
+### Player link and synchronization precedence
+
+```mermaid
+flowchart TD
+  A["Account requests player link"] --> B{"External ID resolves one eligible player?"}
+  B -- "No or ambiguous" --> C["Human link review"]
+  B -- "Yes" --> D["Activate account-to-player link"]
+  C -->|Approved| D
+  C -->|Rejected| X["Keep identities separate"]
+  D --> E["Refresh supported synchronized fields"]
+  E --> F["Preserve local attributes, membership history, and results"]
+  F --> G["Record nickname changes"]
+```
+
+*Player link and synchronization. External identity contributes only after unambiguous resolution or review.*
+
+**Accessible summary:** Ambiguous links require review; approved links synchronize supported values without erasing locally controlled history.
+
+### Kick, delete, restore, and retention
+
+```mermaid
+stateDiagram-v2
+  [*] --> Current
+  Current --> Unassigned: Kick
+  Unassigned --> Current: permitted alliance claim
+  Current --> Deleted: soft delete
+  Unassigned --> Deleted: soft delete
+  Deleted --> Current: authorized restore during retention
+  Deleted --> PurgeEligible: retention expires
+  PurgeEligible --> [*]
+```
+
+*Player lifecycle. Kick changes membership, while delete and restore change record visibility and retention state.*
+
+**Accessible summary:** Players can move between current and unassigned, enter soft deletion, return through restore, or become eligible for permanent removal after retention.
+
+## Purpose and complete operating workflow
+
+This mechanism solves the problem of keeping one durable player identity while names, alliance membership, synchronized values, activity evidence, and account relationships change. The safe workflow is: find the existing player by current name, nickname history, and external ID; verify kingdom and alliance; resolve or review the account link; allow supported synchronized fields to refresh; edit only locally controlled fields; inspect activity inputs and any manual override; then choose membership change, Kick, soft Delete, or Restore according to the intended state. Verify the output in the profile, directory, and history. If the result is wrong, recover at the link, sync, activity rule, or lifecycle source rather than creating another player.

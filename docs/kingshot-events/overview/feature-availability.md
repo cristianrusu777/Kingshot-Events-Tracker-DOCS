@@ -26,7 +26,7 @@ Not every user sees the same pages. Navigation reflects account status, assigned
 
 ## Current product areas
 
-Core account, scope, player, event, import, analytics, reward, report, Castle Position, Knowledge Hub, subscription support, and Lab routes exist in the current product. Exact visibility depends on access. The Lab currently includes Account Progress Planner, Hero Gear Optimizer, Governor Gear Optimizer, Charm Optimizer, Bear Trap Simulator, Rally Simulator, and Battle Simulator. Beta tools should be treated as estimates.
+Core account, scope, player, event, import, analytics, reward, report, Castle Position, Knowledge Hub, subscription support, and Lab routes exist in the current product. Exact visibility depends on access. The documented Lab includes Hero Gear Optimizer, Governor Gear Optimizer, Charm Optimizer, Bear Trap Simulator, Rally Simulator, and Battle Simulator. Beta tools should be treated as estimates.
 
 Knowledge Hub may display a building state. Individual articles may be public, scoped, premium, draft, archived, or unavailable to the current reader.
 
@@ -41,4 +41,6 @@ Knowledge Hub may display a building state. Individual articles may be public, s
 
 Account state, player link, membership, selected scope, role, plan, grant, allocation, quota, and record status can all affect an action. Passing one layer does not bypass the others.
 
-For check every access layer, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Purpose, controls, and worked decision
+
+Availability explains why a navigation item or Run control appears, disables, becomes read-only, or enters limited mode. **Example:** A member has the right alliance role and an accepted grant, but the module is disabled for that scope. Feature availability fails before the grant is used, so the action stays hidden or disabled. Enabling the feature can restore evaluation; the grant still cannot add management rights. Limitations include plan dates, quota, allocation, suspension, and page state. Troubleshoot with feature label, scope, assignment, effective source, usage state, and exact message.

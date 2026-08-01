@@ -46,3 +46,11 @@ Compare input summary, result, and assumptions as one record.
 </VisualReference>
 
 When reporting a problem, provide the tool, public input summary, module version information shown, and unexpected output. Remove account credentials and private community data.
+
+## Review workflow and worked interpretation
+
+First confirm the active profile and saved state. Then read input assumptions, validation warnings, model and dataset version, ordered steps or calculation stages, before and after values, consumed and leftover resources, evidence labels, and stated limitations. Roles and scope do not change the meaning of a personal scenario; shared screenshots should remove private account or community information.
+
+**Worked example:** A plan ends with a large resource balance. The user opens the ordered steps and sees another required resource reached zero. Every remaining candidate either needs that missing resource, is locked, is maximum, or has non-positive weighted gain. The correct output interpretation is a constrained stop, not a promise that the leftover resource has no game value. Correct a wrong inventory field and rerun; otherwise preserve the leftovers in the decision.
+
+Modeled output cannot guarantee live damage, future game balance, globally optimal progression, or accuracy of unentered mechanics. Troubleshoot by changing one assumption in a copied scenario. Report module, scenario, versions, input summary, warning, expected branch, observed result, and steps already checked.

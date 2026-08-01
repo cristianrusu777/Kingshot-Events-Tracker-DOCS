@@ -46,4 +46,6 @@ Lab tools model supported inputs for gear, charms, rallies, battles, and Bear Tr
 
 Connect dated event evidence to maintained player identities, then let reviewers resolve uncertainty before leaders use a result. Scope labels separate alliance work from kingdom comparisons, while correction history keeps later decisions explainable.
 
-For from scattered evidence to shared decisions, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Worked example, limits, and recovery
+
+An alliance replaces a screenshot thread with one reviewed import batch. The reviewer selects event, date, and scope, resolves one former nickname, rejects an unreadable row, and applies the rest. The output becomes traceable history and Analytics rather than competing chat claims. The platform cannot guarantee the screenshot was complete or settle an offline dispute. Troubleshoot at the import and batch, preserving the visible warning and source context without credentials.

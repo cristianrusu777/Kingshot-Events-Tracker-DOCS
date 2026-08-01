@@ -52,6 +52,37 @@ Start at the tab row, then verify any alliance, event, or date controls before r
 </template>
 </VisualReference>
 
+## Purpose and complete workflow
+
+War Room Analytics solves the problem of interpreting many scoped result rows without losing their event, date, participation, score, player, and source meaning. Start by selecting Kingdom, Alliance, Player, or Custom view. Confirm effective read access and active scope, then choose event, stage where relevant, and inclusive date boundaries. Eligible current results pass those filters before grouping. Participation metrics count tracked Active, Inactive, and Unknown rows; score totals and averages use scored rows; derived activity, internal points, recommendations, and rewards use their configured rules.
+
+The output is a summary with filters and drill-down, not a new source record. Kingdom groups permitted child-alliance information, Alliance remains within one alliance, Player compares one identity across eligible events, and Custom applies supported premium grouping. A shared or granted view remains read-only. Managers correct a surprising value at the player result, event batch, import, or configured rule, then reproduce the same view after recalculation.
+
+```mermaid
+flowchart TD
+  A["Choose authorized Analytics view"] --> F["Apply scope, event, stage, and date filters"]
+  F --> E{"Eligible source rows exist?"}
+  E -- "No" --> M["Show empty or missing-data interpretation"]
+  E -- "Yes" --> G["Group and calculate metrics"]
+  G --> D["Display totals, reasons, and drill-down"]
+  D --> Q{"Unexpected value?"}
+  Q -- "Yes" --> S["Trace and correct owning source"]
+  S --> G
+  Q -- "No" --> O["Use read-only output"]
+```
+
+*Analytics input-to-output and correction workflow. Filters and source eligibility precede summaries; corrections return to the owner.*
+
+**Accessible summary:** The view filters eligible rows, groups them, displays drill-down, and sends surprising values back to the source before recalculation.
+
+## Worked example, troubleshooting, and limitations
+
+**Starting situation:** Player Analytics has participation rows but no average score. Drill-down shows that the selected occurrences recorded participation only. Missing scores are excluded, not treated as zero. The correct output is participation metrics with no score average. Adding invented zeros would change meaning. If scored evidence exists elsewhere, verify event, result type, date, stage, scope, and apply state. Analytics cannot reconstruct unapplied imports, bypass access, or guarantee that an absent row means inactivity.
+
+## Limitations and troubleshooting boundary
+
+Analytics cannot guarantee that a missing row represents non-participation, that a nickname identifies the intended player, or that a community collected every event. It reports accepted current evidence under named filters. Troubleshoot by preserving the view and tracing one surprising value through drill-down to its player result and batch. If the source is correct but the summary remains stale, record the recalculation time and filters for an authorized manager. Shared viewers must request correction from the owning scope and should never receive edit access merely to resolve one total.
+
 ## Continue with the view you need
 
 - [Kingdom analytics](/kingshot-events/analytics/kingdom)

@@ -44,4 +44,8 @@ Check the selected alliance before changing roster or event records.
 
 Maintain roster identity before collecting evidence. Review warnings during input, inspect coverage after the event, correct source rows where necessary, and publish rewards or reports only from an agreed date window and rule set.
 
-For an alliance operating rhythm, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.
+## Purpose, example, and limits
+
+Alliance work keeps roster, entry, import review, correction, Analytics, and rewards within one assigned community. **Example:** A co-leader applies eligible rows but cannot resolve one locked conflict. The accepted rows remain staged and the locked row is handed to the alliance leader with batch, event, date, and message. The leader resolves and applies, then both verify Alliance Analytics. A role cannot cross into another alliance or turn shared Analytics into edit access. Troubleshoot at the owning player, event, or batch rather than duplicating it.
+
+Limitations include the alliance member cap, event locks, feature and plan state, source retention, and assignment-specific actions. The output remains scoped history and summaries; offline agreements or unrecorded activity are not inferred.

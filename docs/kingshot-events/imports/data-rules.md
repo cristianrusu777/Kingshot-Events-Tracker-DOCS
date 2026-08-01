@@ -43,3 +43,24 @@ Do not assume every import can be reprocessed in place. If no current reprocess 
 5. Reload Analytics after the saved correction and recalculation complete.
 
 Related: [Reviewing Imported Data](/kingshot-events/imports/review-imported-data) and [Import Troubleshooting](/kingshot-events/imports/import-troubleshooting).
+
+## Complete duplicate decision
+
+These rules keep one file or row from silently replacing another piece of evidence. The reviewer confirms scope, event, date, stage, result type, and player; the platform compares active file fingerprints and saved result identity.
+
+```mermaid
+flowchart TD
+  I["Incoming file and row"] --> F{"Same active file fingerprint?"}
+  F -- "Yes" --> R["Require confirmed reprocess"]
+  F -- "No" --> D{"Saved row owns same identity?"}
+  D -- "No" --> A["Continue validation"]
+  D -- "Same value" --> U["Duplicate"]
+  D -- "Changed cumulative value" --> S["Review snapshot refresh"]
+  D -- "Changed normal value" --> C["Conflict requiring correction intent"]
+```
+
+*Duplicate and same-date decision. File repetition and result identity are separate checks.*
+
+**Accessible summary:** Repeated files need confirmation; same values duplicate; changed values become cumulative refresh or normal conflict.
+
+**Worked example:** A cumulative row changes Nia from 25,000 to 28,000 on the same date. Acceptance refreshes the snapshot and preserves history. A normal score remains conflict until explicit overwrite. Delete, rollback, and Restore are different: deleting an import does not roll back results, and restoring it does not reapply rows. Limits include retention, dependent edits, locks, ambiguous identity, and quota. Include import, batch, scope, event, date, player, values, and state when troubleshooting.

@@ -65,3 +65,39 @@ The article keeps its original locale. The reader locale comes from saved prefer
 ## Limitations and recovery
 
 A teaser never implies that the hidden blocks are authorized. If access changes mid-session, reload the canonical article so identity, scope, entitlement, and pinned revision are resolved again. Browser translation is outside platform control and may alter terminology. Reading Verification establishes what the session recorded; it cannot prove attention beyond the visible marker, article-end, and submitted fragment signals. Manual Review requires an authorized manager rather than an automatic retry.
+
+## Article revision and review maps
+
+### Knowledge article review lifecycle
+
+```mermaid
+stateDiagram-v2
+  [*] --> Draft
+  Draft --> InReview: submit
+  InReview --> ChangesRequested: reviewer requests changes
+  ChangesRequested --> Draft: author edits
+  InReview --> Approved: reviewer approves
+  Approved --> Published: publish revision
+  Published --> Draft: edit creates next revision
+  Published --> Archived: authorized archive
+```
+
+*Knowledge article lifecycle. Review decisions act on a draft revision; editing published content starts the next draft.*
+
+**Accessible summary:** Drafts enter review, may return for changes, publish after approval, and later edits create another draft while published history remains identifiable.
+
+### Editing an already published article
+
+```mermaid
+flowchart TD
+  P["Published revision remains reader version"] --> E["Author starts new draft revision"]
+  E --> S["Autosave or explicit save blocks and media"]
+  S --> R{"Review outcome"}
+  R -- "Changes requested" --> E
+  R -- "Approved" --> N["Publish new revision"]
+  N --> H["Previous revision remains historical; new revision becomes canonical"]
+```
+
+*Published-article revision. Draft work does not silently replace the currently published reader version.*
+
+**Accessible summary:** A new draft is saved and reviewed while the old publication remains live; approval and publication switch the canonical reader revision.

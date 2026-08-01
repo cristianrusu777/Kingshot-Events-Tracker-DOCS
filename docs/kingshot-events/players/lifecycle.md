@@ -54,3 +54,23 @@ Use row actions for roster changes and the profile for status details.
 ## Avoid duplicates after a move
 
 Search all visible alliances, deleted records, old nicknames, and profile IDs. Restore or update the existing kingdom identity. Create a new player only when the identity is genuinely different.
+
+## Purpose, workflow, and worked recovery
+
+The lifecycle keeps identity and history intact while activity, overrides, attributes, membership, and visibility change. A manager identifies the player by stable ID and history, confirms active scope, inspects calculated activity and override, then chooses membership update, Kick, soft Delete, or Restore. Each produces a different state.
+
+```mermaid
+flowchart TD
+  P["Current player"] --> C{"Intended change"}
+  C -- "Leaves alliance" --> K["Kick: clear alliance standing, keep identity"]
+  C -- "Leaves active views" --> D["Soft Delete with retention"]
+  C -- "Status exception" --> O["Manual override with reason"]
+  O --> R["Remove override to resume calculation"]
+  D --> S["Authorized restore when eligible"]
+```
+
+*Player lifecycle decisions. Membership, status, deletion, and restoration remain separate.*
+
+**Accessible summary:** Kick preserves identity, Delete starts retention, an override temporarily wins calculation, and Restore returns an eligible record.
+
+**Worked example:** Sol moves alliances. Kick clears old alliance standing but preserves history; a permitted manager later claims Sol into the new alliance. Delete would hide the record, while recreating Sol would split history. Limits include retention expiry, name conflicts, the alliance member cap, and role-bound claim scope. Report player ID, before and after alliance, action, state, and time for recovery.

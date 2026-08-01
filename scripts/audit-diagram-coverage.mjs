@@ -19,15 +19,17 @@ for (const page of publishedPages.filter((p) => p.product === 'kingshot-events')
   const source = fs.readFileSync(path.join(docs, page.file), 'utf8')
   for (const [index, match] of [...source.matchAll(/```mermaid\s*([\s\S]*?)```/g)].entries()) {
     const body = match[1]
-    const before = source.slice(0, match.index).split('\n').reverse().find((line) => /^##?\s/.test(line))?.replace(/^#+\s*/, '') ?? page.title
+    const before = source.slice(0, match.index).split('\n').reverse().find((line) => /^#{1,3}\s/.test(line))?.replace(/^#+\s*/, '') ?? page.title
     const after = source.slice((match.index ?? 0) + match[0].length, (match.index ?? 0) + match[0].length + 700).replace(/<[^>]+>/g, ' ').trim()
     const nodeCount = new Set([...body.matchAll(/\b([A-Z][A-Z0-9]*)\s*(?:\[|\{|\()/g)].map((m) => m[1])).size
     const edgeCount = (body.match(/-->|==>|-.->/g) ?? []).length
     if (/\b(?:controller|repository|Prisma|database|API endpoint|token|middleware|worker)\b/i.test(body)) errors.push(`${page.file}: implementation language in ${before}`)
-    const meaningful = nodeCount >= 3 && edgeCount >= 2
-    const classification = meaningful ? (algorithmPages.has(page.file) ? 'meaningful_algorithm' : /status|state|lifecycle/i.test(before) ? 'meaningful_state_model' : 'meaningful_workflow') : 'decorative'
+    const stateTransitions = (body.match(/\b[A-Za-z][A-Za-z0-9]*\s*-->/g) ?? []).length
+    const meaningfulState = /^\s*stateDiagram/i.test(body) && stateTransitions >= 3
+    const meaningful = (nodeCount >= 3 && edgeCount >= 2) || meaningfulState
+    const classification = meaningful ? (meaningfulState ? 'meaningful_state_model' : algorithmPages.has(page.file) ? 'meaningful_algorithm' : /status|state|lifecycle/i.test(before) ? 'meaningful_state_model' : 'meaningful_workflow') : 'decorative'
     if (meaningful && after.length < 60) errors.push(`${page.file}: ${before} lacks nearby explanatory prose`)
-    diagrams.push({ id: `${page.file.replace(/[^a-z0-9]+/gi,'-').replace(/-md$/,'')}-${index+1}`, page: page.file, title: before, classification, rendered: true, nodeCount, edgeCount, mobileStrategy: body.includes('flowchart TD') ? 'vertical' : 'responsive horizontal', accessibilitySummary: after.slice(0, 300) })
+    diagrams.push({ id: `${page.file.replace(/[^a-z0-9]+/gi,'-').replace(/-md$/,'')}-${index+1}`, page: page.file, title: before, classification, rendered: true, nodeCount, edgeCount: Math.max(edgeCount, stateTransitions), mobileStrategy: body.includes('flowchart TD') || body.includes('stateDiagram') ? 'vertical' : 'responsive horizontal', accessibilitySummary: after.slice(0, 300) })
   }
 }
 const meaningful = diagrams.filter((d) => d.classification.startsWith('meaningful_'))

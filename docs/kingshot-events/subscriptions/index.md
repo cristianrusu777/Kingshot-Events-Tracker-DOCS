@@ -12,6 +12,8 @@ lastReviewed: '2026-08-01'
 Distinguish direct plans, kingdom allocations, request states, effective access, quotas, and the person responsible for the next step.
 </CategoryHero>
 
+<ProductFinder default-category="Subscriptions and Usage" />
+
 # Subscriptions, Requests, and Kingdom Grants
 
 Subscriptions control supported premium features and usage limits for a specific scope. Access can come from a direct alliance subscription or an accepted allocation from a kingdom entitlement.

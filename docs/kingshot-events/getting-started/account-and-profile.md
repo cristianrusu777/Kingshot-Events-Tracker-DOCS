@@ -40,3 +40,7 @@ Account settings and shared player identity are displayed as separate sections.
 </VisualReference>
 
 Related: [Player Linking and Synchronization](/kingshot-events/players/linking-and-sync) and [Access Problems](/kingshot-events/troubleshooting/access-problems).
+
+## Purpose, workflow, and worked example
+
+The account identifies the signed-in person; the local player carries roster and result history; the external profile supplies supported synchronized values. The workflow confirms account, searches by stable external ID, reviews ambiguous links, activates one eligible player link, and verifies synchronized versus manual fields. **Example:** Two players share a nickname. The external ID matches one, so the reviewer links that record and leaves the other separate. Output is one active link, not a name-based merge. Linking cannot grant management, rewrite event history, or guarantee every profile field synchronizes.

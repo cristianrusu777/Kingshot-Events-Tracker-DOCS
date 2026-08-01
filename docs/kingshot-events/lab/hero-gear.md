@@ -38,3 +38,13 @@ flowchart TD
 ## Limitations and recovery
 
 The output is deterministic for the same engine, dataset, and inputs. It is a planning estimate, not a guaranteed best build: the iterative choice does not search every possible future sequence. Verify current levels, locks, material counts, dataset version, and reforge choice before applying steps in game. If the result unexpectedly pulls a slot down, cancel the scenario and confirm that optional reforge is disabled or that the slot is locked.
+
+## Controls, scope, and output review
+
+The main controls are active profile, current enhancement and mastery per troop-class slot, resource inventory, combat-stat weights, strategy, slot locks, and optional reforge. These values belong to the user's saved Lab profile and scenario; alliance or kingdom scope does not change game catalog costs and no manager role can spend resources for another player. The current state is the baseline, the target is the ordered reachable state produced by the run, and the result lists each chosen slot, upgrade kind, material cost, before and after effect, total spending, and leftovers.
+
+**Worked exhaustion case:** The first two steps consume all Mithril while XP and Forge Hammers remain. Candidate generation repeats, but every remaining milestone that needs Mithril is now unaffordable. An ordinary enhancement can continue only if its full next-step cost is covered and its weighted gain stays positive. Otherwise the plan stops and leaves the other materials unspent. The correct interpretation is constrained exhaustion, not optimizer failure. Correct profile counts and rerun if the inventory was wrong.
+
+The engine is greedy with milestone bundles and optional staged reforge, not exhaustive. It compares valid next choices repeatedly and makes no unsupported optimality claim.
+
+Each input field should be confirmed against the game-displayed state before Run: enhancement, mastery, lock, weight, XP, Forge Hammers, Mythic Gear, and Mithril. The result controls let the user inspect the ordered plan and copy assumptions, but not mutate the game. If one field is uncertain, save a separate scenario, change only that value, and compare outputs. This sensitivity check reveals whether the recommendation depends on the uncertain inventory or milestone without pretending the alternative is authoritative.
