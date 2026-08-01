@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url'
 const checks = [
   'audit-documentation-inventory.mjs', 'audit-documentation-semantic-coverage.mjs', 'check-publication-manifest.mjs',
   'check-doc-links.mjs', 'check-doc-images.mjs', 'check-doc-content.mjs',
-  'audit-documentation-depth.mjs', 'audit-diagram-coverage.mjs',
+  'audit-actual-content-depth.mjs', 'audit-diagram-coverage.mjs',
   'audit-visual-distinction.mjs', 'audit-documentation-leaks.mjs'
 ]
 for (const check of checks) {

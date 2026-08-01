@@ -1,77 +1,35 @@
 ---
-title: 'Charm Planning'
-description: 'Enter charms|Set targets|Calculate needs|Adjust plan'
+title: 'Charm Optimization Logic'
+description: 'How six Charm slots per troop class compete for Guides and Designs under configured priorities and locks.'
 product: 'Kingshot Events'
-audience: 'Players planning charm upgrades'
-experienceLevel: 'Intermediate'
+audience: 'Charm planner users'
+experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
 lastReviewed: '2026-08-01'
 ---
 
-<CategoryHero category="lab" icon="flask" eyebrow="Explore before committing resources" title="Charm Planning">
-Save account assumptions, compare upgrade paths, and interpret planning results as scenarios rather than guarantees.
-</CategoryHero>
+# Charm Optimization Logic
 
-# Charm Planning
+Charm planning considers six slots for each of Infantry, Cavalry, and Archer. Inputs are current levels, Charm Guides, Charm Designs, troop and stat weights, and locked slots. For each unlocked slot below the catalog maximum, the engine generates the next upgrade and removes it when either required material is unavailable.
 
-Charm Planning is the focused guide for players planning charm upgrades. It explains the controls you can see, the states that change what you can do, and the confirmation that proves the task finished in the intended scope.
+Each remaining candidate receives weighted stat gain and cost normalized against the starting Guide and Design inventory. The best positive ratio is selected, materials are consumed, the level and combat stats advance, and the comparison repeats. The output is an ordered sequence rather than a target-only answer because early steps change what remains affordable.
 
-## What this guide helps you decide
+## Decision and resource flow
 
-The main decision is whether to **see where charm materials create the limiting step**. Start by reading the scope label and the record status. A control can be present but unavailable when your membership, role, plan access, current status, or selected community does not permit the change. That distinction is intentional: visibility helps you understand the workflow, while availability protects shared records.
+Start condition → the 18 current Charm levels and both material balances are loaded → each eligible slot proposes one next catalog level → locked, maximum, and unaffordable steps are removed → troop and stat priorities value each delta → Guide and Design scarcity normalizes cost → the best positive candidate consumes materials → levels and remaining balances update → comparison repeats → the plan returns before/after levels, steps, spending, and leftovers.
 
-Use this page when you need to set charm levels, targets, and resource constraints. It is not a promise that every account sees every action. Public pages, signed-in features, role-restricted controls, subscription-backed capabilities, and intentionally private administration are documented as different availability classes.
+Starting inventory is the normalization reference for the whole run. The comparison therefore recognizes which material was scarce at the start while the affordability gate still uses the live remaining balance on every iteration. A step can disappear after another choice spends its last required Design.
 
-## Before you begin
+```mermaid
+flowchart TD
+ A["18 charm slots, locks, weights, Guides, Designs"] --> B["Generate affordable next upgrades"]
+ B --> C["Calculate weighted stat gain"]
+ C --> D["Normalize by scarce materials"]
+ D --> E["Apply best step and repeat"]
+```
 
-- Confirm the signed-in identity and the player link shown in the account area.
-- Read the current kingdom, alliance, or personal scope before changing data.
-- Open the record itself instead of relying on a notification or an old browser tab.
-- Check whether the status is Current, Planned, Balanced, or Shortfall.
-- If the action affects other people, agree on the intended outcome before saving or publishing.
+**Example:** Two Archer slots have equal stat gain, but one consumes a larger share of the limited Designs. The lower normalized cost can win. After it consumes Guides, a Cavalry candidate may become the best remaining option. Changing troop priorities can change the sequence without changing the catalog costs.
 
-## Controls and information you will use
+## Limitations and recovery
 
-The relevant controls are: **Set charm levels, targets, and resource constraints**. Labels may be shortened on a narrow screen, but the scope name, status, primary action, and confirmation remain part of the same task. Filters change the current view; they do not silently move or rewrite the underlying record. A save changes a draft or editable record. Apply, approve, publish, restore, or award are separate decisions when the workflow requires review.
-
-<VisualReference title="Recognizing the Charm Planning workspace" :items="['scope and identity context', 'current status and availability', 'primary action with confirmation']">
-Look first for the category icon and lab label, then read the scope line above the working area. The center region presents set charm levels, targets, and resource constraints. A status treatment identifies current, planned, balanced, shortfall, while the final confirmation names the record and community affected.
-</VisualReference>
-
-## Complete the task
-
-1. **Enter charms.** Confirm the page title, signed-in identity, and selected scope before entering or changing anything.
-2. **Set targets.** Read existing values and status messages. If information is missing, stop and gather it rather than guessing.
-3. **Calculate needs.** Use the available control and review the preview, comparison, or warning. A disabled control usually points to a missing prerequisite.
-4. **Adjust plan.** Read the success message and reopen the affected record. For shared work, verify that the next responsible role can see the expected state.
-
-
-## Status and role differences
-
-| Status | What it means to the reader | Sensible next action |
-| --- | --- | --- |
-| **Current** | The task is at its starting or neutral state. | Continue with enter charms. |
-| **Planned** | Work has progressed but another check or decision remains. | Continue with set targets. |
-| **Balanced** | Work has progressed but another check or decision remains. | Continue with calculate needs. |
-| **Shortfall** | The workflow reached a final or constrained state. | Verify the outcome and history. |
-
-For charm planning, players planning charm upgrades see the records and outcomes their current responsibility permits. Alliance roles act within their alliance, while granted kingdom roles can coordinate across communities without silently taking ownership of every source record. Plan access can reveal simulations and optimizations capabilities, but it never replaces the role, status, and scope checks described above. Platform-wide administration remains outside this public handbook.
-
-## Saving, review, and history
-
-While working in charm planning, editable values should show a saved state before you leave. Review keeps set targets separate from the later decision to calculate needs. Applying or publishing makes the agreed outcome visible to its intended audience. If removal, rollback, or restore is supported here, authorized readers retain enough history to understand the change. Reopen the source record before repeating adjust plan.
-
-## If the result is not what you expected
-
-- **The charm planning action is missing:** confirm the selected scope, membership, role, and feature availability.
-- **The action is disabled:** inspect required fields and the current status; a locked or final record may need a correction or review path.
-- **The list looks unchanged:** clear view filters and reopen the source record before submitting again.
-- **Another person sees a different result:** compare scope, date window, role, and publication state.
-- **You need support:** record the page title, scope name, visible status, time, and safe steps to reproduce. Do not include passwords, payment details, or private screenshots.
-
-## Continue learning
-
-- [Profiles, Assumptions, and Autosave](/kingshot-events/lab/profiles-and-autosave)
-- [Hero Gear Planning](/kingshot-events/lab/hero-gear)
-- [Governor Gear Planning](/kingshot-events/lab/governor-gear)
-- [Bear Trap Planning](/kingshot-events/lab/bear-trap)
+The plan is deterministic and constrained by the entered inventory, weights, locks, and catalog. It cannot account for an unentered purchase, incorrect level, future balance change, or an objective not represented by the chosen weights. The iterative result does not guarantee the globally best long-horizon sequence. If a troop class never appears, verify its locks and priorities and confirm that at least one next step is affordable and has positive weighted gain. Compare the before/after grid and leftovers before using the result.

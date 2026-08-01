@@ -1,96 +1,46 @@
 ---
-title: 'Reward Rules and Outcomes'
-description: 'Choose rule set|Calculate status|Review exceptions|Publish outcome'
+title: 'Analytics Aggregation and Reward Decisions'
+description: 'How scoped result rows become player, alliance, and kingdom analytics and how reward rules reach a visible decision.'
 product: 'Kingshot Events'
-audience: 'Reward managers and players'
-experienceLevel: 'Intermediate'
+audience: 'Analytics viewers and reward managers'
+experienceLevel: 'Advanced'
 featureArea: 'Analytics and Rewards'
 lastReviewed: '2026-08-01'
 ---
 
-<CategoryHero category="analytics" icon="chart" eyebrow="Evidence for decisions" title="Reward Rules and Outcomes">
-Read scope-aware trends, find missing data, and turn agreed reward rules into explainable outcomes.
-</CategoryHero>
+# Analytics Aggregation and Reward Decisions
 
-# Reward Rules and Outcomes
+Analytics reads current, non-deleted player results whose events are also current. Filters are applied to eligible source rows before grouping. A player view groups by player and event; alliance and kingdom views group only rows inside the authorized scope. Date boundaries and event filters can therefore make two valid totals differ.
 
-Reward Rules and Outcomes is the focused guide for reward managers and players. It explains the controls you can see, the states that change what you can do, and the confirmation that proves the task finished in the intended scope.
+For each event, participation rate is Active rows divided by all tracked rows. Score totals, averages, best score, and latest score use only rows containing scores. Internal points add the event's configured Active, Inactive, or Unknown points plus the first score band, ordered by rule priority and then minimum score, whose bounds include the score. Recalculation replaces the derived player-event and player summary rather than stacking another summary.
 
-## What this guide helps you decide
-
-The main decision is whether to **explain each outcome from visible rules and evidence**. Start by reading the scope label and the record status. A control can be present but unavailable when your membership, role, plan access, current status, or selected community does not permit the change. That distinction is intentional: visibility helps you understand the workflow, while availability protects shared records.
-
-Use this page when you need to configure thresholds, exclusions, overrides, and outcome status. It is not a promise that every account sees every action. Public pages, signed-in features, role-restricted controls, subscription-backed capabilities, and intentionally private administration are documented as different availability classes.
-
-## Before you begin
-
-- Confirm the signed-in identity and the player link shown in the account area.
-- Read the current kingdom, alliance, or personal scope before changing data.
-- Open the record itself instead of relying on a notification or an old browser tab.
-- Check whether the status is Draft, Eligible, Ineligible, or Awarded.
-- If the action affects other people, agree on the intended outcome before saving or publishing.
-
-## Controls and information you will use
-
-The relevant controls are: **Configure thresholds, exclusions, overrides, and outcome status**. Labels may be shortened on a narrow screen, but the scope name, status, primary action, and confirmation remain part of the same task. Filters change the current view; they do not silently move or rewrite the underlying record. A save changes a draft or editable record. Apply, approve, publish, restore, or award are separate decisions when the workflow requires review.
-
-<VisualReference title="Recognizing the Reward Rules and Outcomes workspace" :items="['scope and identity context', 'current status and availability', 'primary action with confirmation']">
-Look first for the category icon and analytics label, then read the scope line above the working area. The center region presents configure thresholds, exclusions, overrides, and outcome status. A status treatment identifies draft, eligible, ineligible, awarded, while the final confirmation names the record and community affected.
-</VisualReference>
-
-## Complete the task
-
-1. **Choose rule set.** Confirm the page title, signed-in identity, and selected scope before entering or changing anything.
-2. **Calculate status.** Read existing values and status messages. If information is missing, stop and gather it rather than guessing.
-3. **Review exceptions.** Use the available control and review the preview, comparison, or warning. A disabled control usually points to a missing prerequisite.
-4. **Publish outcome.** Read the success message and reopen the affected record. For shared work, verify that the next responsible role can see the expected state.
-
-
-## Reward Rules and Outcomes workflow
-
-The reward rules and outcomes map follows the choices visible to reward managers and players and marks the confirmation that prevents work from continuing in the wrong state or scope.
-
-<!-- diagram: ke-analytics-and-rewards-reward-rules -->
 ```mermaid
-flowchart TD
-  S0["Choose rule set"]
-  S1["Calculate status"]
-  S2["Review exceptions"]
-  S3["Publish outcome"]
-  S0 --> S1
-  S1 --> S2
-  S2 --> S3
+flowchart LR
+ A["Current result rows"] --> B["Apply scope, date, event, and inclusion filters"]
+ B --> C["Group by player and event"]
+ C --> D["Calculate participation, score, and internal points"]
+ D --> E["Evaluate status and reward rules"]
+ E --> F["Player view"]
+ E --> G["Alliance aggregates"]
+ E --> H["Kingdom aggregates"]
 ```
 
-**Diagram summary:** Choose rule set, then Calculate status, then Review exceptions, then Publish outcome. Each step remains visible to the person doing the work, and the final step confirms the outcome.
+## Filter evaluation and sharing
 
-*Workflow caption: Reward Rules and Outcomes from first choice to confirmed outcome.*
+Start with resolved access, then scope, event, date range, participation or attribute filters, and finally grouping or sorting. A kingdom role can read kingdom-wide aggregates. Alliance leaders read their own alliance. Granted kingdom analytics can expose aggregate kingdom context to an accepted alliance when the kingdom enables it and the plan carries the eligible feature. Cross-alliance comparison requires both alliances to hold suitable accepted grants. It remains read-only and never grants roster or result editing.
 
-## Status and role differences
+Missing rows are not zeros. An Unknown participation row is tracked but not Active. A missing score is excluded from score averages. An absent player/event row means no accepted evidence was available for that identity and filter set. Recommendations may flag an alliance when participation is below 60% or inactive members reach at least three or 20% of membership, but that signal is a review prompt, not a disciplinary decision.
 
-| Status | What it means to the reader | Sensible next action |
-| --- | --- | --- |
-| **Draft** | The task is at its starting or neutral state. | Continue with choose rule set. |
-| **Eligible** | Work has progressed but another check or decision remains. | Continue with calculate status. |
-| **Ineligible** | Work has progressed but another check or decision remains. | Continue with review exceptions. |
-| **Awarded** | The workflow reached a final or constrained state. | Verify the outcome and history. |
+## Reward rule evaluation
 
-For reward rules and outcomes, reward managers and players see the records and outcomes their current responsibility permits. Alliance roles act within their alliance, while granted kingdom roles can coordinate across communities without silently taking ownership of every source record. Plan access can reveal analytics and rewards capabilities, but it never replaces the role, status, and scope checks described above. Platform-wide administration remains outside this public handbook.
+Reward rules are selected by their configured scope and enabled state. Each rule compares its declared boundaries with calculated metrics such as internal points, participation rate, tracked events, missed events, average score, and total score. Every boundary present on one rule must pass; a boundary not configured does not fail the rule. Multiple matching rules can produce multiple eligibility records. The displayed reason should come from the matching rule and its metrics, not from a hidden score.
 
-## Saving, review, and history
+A manual handled state records a later human action without rewriting why the calculated rule matched. Corrections or accepted imports recalculate affected players. Deleted source rows stop contributing after recalculation.
 
-While working in reward rules and outcomes, editable values should show a saved state before you leave. Review keeps calculate status separate from the later decision to review exceptions. Applying or publishing makes the agreed outcome visible to its intended audience. If removal, rollback, or restore is supported here, authorized readers retain enough history to understand the change. Reopen the source record before repeating publish outcome.
+**Worked aggregation:** Arin has three tracked rows in the selected period: Active with 100 points, Active with no score, and Inactive with 40 points. Participation is 67% after rounding; score total and average are both 140 because only two rows have scores. Internal points add the configured participation points and applicable score-band points for all three rows.
 
-## If the result is not what you expected
+**Worked missing-data case:** Bea appears to have zero event score in one chart but no row in drill-down. This is not evidence of a zero score. Remove event and date filters, check whether the batch was accepted, and inspect Unknown or missing rows before interpreting the comparison.
 
-- **The reward rules and outcomes action is missing:** confirm the selected scope, membership, role, and feature availability.
-- **The action is disabled:** inspect required fields and the current status; a locked or final record may need a correction or review path.
-- **The list looks unchanged:** clear view filters and reopen the source record before submitting again.
-- **Another person sees a different result:** compare scope, date window, role, and publication state.
-- **You need support:** record the page title, scope name, visible status, time, and safe steps to reproduce. Do not include passwords, payment details, or private screenshots.
+## Limits
 
-## Continue learning
-
-- [Analytics and Rewards Guide](/kingshot-events/analytics/)
-- [Filters and Recalculation](/kingshot-events/analytics/filters-and-recalculation)
-- [Recommendations and Missing Data](/kingshot-events/analytics/recommendations-and-missing-data)
+Configurable thresholds are intentionally not hard-coded in this handbook. A recommendation or eligibility result is only as current as its accepted rows and last recalculation. Shared analytics does not change ownership of source data.

@@ -1,95 +1,77 @@
 ---
 title: 'Hierarchy and Scope Switching'
-description: 'Open switcher|Choose kingdom|Choose alliance|Verify header'
+description: 'How Kingshot Events resolves kingdom and alliance context, combines roles, and separates analytics visibility from management access.'
 product: 'Kingshot Events'
-audience: 'Members and managers'
-experienceLevel: 'Intermediate'
+audience: 'Members, alliance leaders, and kingdom managers'
+experienceLevel: 'Advanced'
 featureArea: 'Scopes and Communities'
 lastReviewed: '2026-08-01'
 ---
 
 <CategoryHero category="scopes-and-communities" icon="network" eyebrow="Work in the right community" title="Hierarchy and Scope Switching">
-Move between kingdom, alliance, and personal contexts without mixing records or responsibilities.
+Scope decides which community owns a record. Role decides what you may do inside that scope. Analytics grants can add read-only visibility without adding management access.
 </CategoryHero>
 
 # Hierarchy and Scope Switching
 
-Hierarchy and Scope Switching is the focused guide for members and managers. It explains the controls you can see, the states that change what you can do, and the confirmation that proves the task finished in the intended scope.
+Kingshot Events models a server as a **kingdom**, a kingdom as the parent of its **alliances**, and an alliance as the current home of its **players**. A user account can hold several active assignments. Each assignment names a role and either a kingdom or an alliance. The active scope is resolved from the kingdom and alliance selected in the interface, not merely from the strongest role on the account.
 
-## What this guide helps you decide
+## Scope resolution order
 
-The main decision is whether to **prevent edits in a similarly named but different community**. Start by reading the scope label and the record status. A control can be present but unavailable when your membership, role, plan access, current status, or selected community does not permit the change. That distinction is intentional: visibility helps you understand the workflow, while availability protects shared records.
+When a page requests scoped data, the platform follows this order:
 
-Use this page when you need to use the scope switcher and hierarchy labels. It is not a promise that every account sees every action. Public pages, signed-in features, role-restricted controls, subscription-backed capabilities, and intentionally private administration are documented as different availability classes.
+1. Read the requested kingdom and alliance from the current page or scope selector.
+2. Compare that request with every active assignment on the signed-in account.
+3. Accept the most specific matching assignment. An alliance request must belong to the requested kingdom.
+4. Preserve a stronger applicable role when roles stack. A kingdom role is not narrowed merely because the same user also has an alliance assignment.
+5. Reject the request when no active assignment covers it. The page may disappear from navigation or return an access message.
+6. Apply the resolved kingdom and alliance to record queries and write validation.
 
-## Before you begin
-
-- Confirm the signed-in identity and the player link shown in the account area.
-- Read the current kingdom, alliance, or personal scope before changing data.
-- Open the record itself instead of relying on a notification or an old browser tab.
-- Check whether the status is Selected, Available, or Unavailable.
-- If the action affects other people, agree on the intended outcome before saving or publishing.
-
-## Controls and information you will use
-
-The relevant controls are: **Use the scope switcher and hierarchy labels**. Labels may be shortened on a narrow screen, but the scope name, status, primary action, and confirmation remain part of the same task. Filters change the current view; they do not silently move or rewrite the underlying record. A save changes a draft or editable record. Apply, approve, publish, restore, or award are separate decisions when the workflow requires review.
-
-<VisualReference title="Recognizing the Hierarchy and Scope Switching workspace" :items="['scope and identity context', 'current status and availability', 'primary action with confirmation']">
-Look first for the category icon and scopes-and-communities label, then read the scope line above the working area. The center region presents use the scope switcher and hierarchy labels. A status treatment identifies selected, available, unavailable, while the final confirmation names the record and community affected.
-</VisualReference>
-
-## Complete the task
-
-1. **Open switcher.** Confirm the page title, signed-in identity, and selected scope before entering or changing anything.
-2. **Choose kingdom.** Read existing values and status messages. If information is missing, stop and gather it rather than guessing.
-3. **Choose alliance.** Use the available control and review the preview, comparison, or warning. A disabled control usually points to a missing prerequisite.
-4. **Verify header.** Read the success message and reopen the affected record. For shared work, verify that the next responsible role can see the expected state.
-
-
-## Hierarchy and Scope Switching workflow
-
-The hierarchy and scope switching map follows the choices visible to members and managers and marks the confirmation that prevents work from continuing in the wrong state or scope.
-
-<!-- diagram: ke-scopes-and-communities-hierarchy-and-switching -->
 ```mermaid
 flowchart TD
-  S0["Open switcher"]
-  S1["Choose kingdom"]
-  S2["Choose alliance"]
-  S3["Verify header"]
-  S0 --> S1
-  S1 --> S2
-  S2 --> S3
+  A["Requested kingdom and alliance"] --> B{"Active assignment matches?"}
+  B -->|No| C["No scoped access"]
+  B -->|Yes| D["Choose the most specific matching context"]
+  D --> E["Preserve the strongest applicable role"]
+  E --> F["Restrict records to that context"]
+  F --> G{"Action allowed by role?"}
+  G -->|No| H["Read-only or hidden action"]
+  G -->|Yes| I["Validate and save in the active scope"]
 ```
 
-**Diagram summary:** Open switcher, then Choose kingdom, then Choose alliance, then Verify header. Each step remains visible to the person doing the work, and the final step confirms the outcome.
+**Diagram summary:** The selected community must match an active assignment. The resulting context restricts the records first; permissions are evaluated after that context is known.
 
-*Workflow caption: Hierarchy and Scope Switching from first choice to confirmed outcome.*
+## Membership, management, ownership, and sharing
 
-## Status and role differences
+These concepts are deliberately separate:
 
-| Status | What it means to the reader | Sensible next action |
+| Concept | What it grants | What it does not grant |
 | --- | --- | --- |
-| **Selected** | The task is at its starting or neutral state. | Continue with open switcher. |
-| **Available** | Work has progressed but another check or decision remains. | Continue with choose kingdom. |
-| **Unavailable** | The workflow reached a final or constrained state. | Verify the outcome and history. |
+| Membership | Access to member-facing records in that community | Leader controls or access to another alliance |
+| Management role | The actions assigned to that role inside its kingdom or alliance | Ownership of records in a different scope |
+| Record ownership | The community and source attached when the record was created | Authority based only on being able to see the record |
+| Analytics sharing | Aggregate or member-level analytics permitted by policy | Player editing, imports, event settings, or roster management |
+| Subscription grant | Eligible premium features for the granted alliance | A role, membership, or management permission |
 
-For hierarchy and scope switching, members and managers see the records and outcomes their current responsibility permits. Alliance roles act within their alliance, while granted kingdom roles can coordinate across communities without silently taking ownership of every source record. Plan access can reveal scopes and communities capabilities, but it never replaces the role, status, and scope checks described above. Platform-wide administration remains outside this public handbook.
+Cross-alliance analytics requires more than a visible kingdom. A viewer must be an alliance leader or co-leader in the viewing alliance, the kingdom must enable granted-alliance analytics, both alliances must have current accepted grants carrying the analytics feature, and both must be in the same kingdom. The result is read-only analytics visibility. It does not make the viewer a manager of the target alliance.
 
-## Saving, review, and history
+## Worked examples
 
-While working in hierarchy and scope switching, editable values should show a saved state before you leave. Review keeps choose kingdom separate from the later decision to choose alliance. Applying or publishing makes the agreed outcome visible to its intended audience. If removal, rollback, or restore is supported here, authorized readers retain enough history to understand the change. Reopen the source record before repeating verify header.
+**Alliance leader in their own alliance.** Mira has an active leader assignment for alliance Aster in kingdom 1625. Selecting 1625 and Aster resolves alliance scope. Mira can manage Aster records allowed by her role. Selecting alliance Brim does not succeed just because Brim appears in a kingdom comparison.
 
-## If the result is not what you expected
+**King viewing kingdom analytics.** Rowan has a kingdom-level assignment for 1625 with no alliance attached. Selecting kingdom 1625 resolves kingdom scope. The kingdom analytics view may combine Aster and Brim. A correction still belongs to the source result and alliance context; Rowan should follow the drill-down rather than editing an aggregate.
 
-- **The hierarchy and scope switching action is missing:** confirm the selected scope, membership, role, and feature availability.
-- **The action is disabled:** inspect required fields and the current status; a locked or final record may need a correction or review path.
-- **The list looks unchanged:** clear view filters and reopen the source record before submitting again.
-- **Another person sees a different result:** compare scope, date window, role, and publication state.
-- **You need support:** record the page title, scope name, visible status, time, and safe steps to reproduce. Do not include passwords, payment details, or private screenshots.
+**Granted read-only comparison.** Aster and Brim both accepted an eligible kingdom grant, and the king enabled granted-alliance analytics. Aster's leader can view the permitted Brim analytics. The Players and Imports actions remain scoped to Aster because sharing did not create a Brim management assignment.
 
-## Continue learning
+**Member without management.** Kai belongs to Aster as an ordinary member. Membership exposes member pages and Kai's linked-player information. It does not satisfy a management action, even when the same page is visible.
 
-- [Scopes and Communities](/kingshot-events/scopes-and-communities/)
-- [Membership and Community Management](/kingshot-events/scopes-and-communities/membership-and-management)
-- [Cross-Scope Visibility](/kingshot-events/scopes-and-communities/cross-scope-visibility)
+## Failure and recovery paths
+
+- If a selector is empty, confirm that the account has an active assignment for that level.
+- If a page disappears after switching alliance, the new assignment may not carry the required role or feature.
+- If analytics is visible but editing is not, check whether access comes from sharing rather than management.
+- If a record appears missing, clear filters and return to its owning scope. Never recreate it in a different alliance to bypass scope checks.
+
+## Limitations
+
+The public interface explains the effective outcome, not raw permission identifiers. Some pages select the best available subscription-bearing context when no explicit scope is supplied, but writes still require an explicit valid tenant context. Platform-wide administration is outside this handbook.
