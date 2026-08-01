@@ -1,96 +1,67 @@
 ---
-title: 'Reading Sessions'
-description: 'Create session|Assign readers|Read article|Verify completion'
+title: 'Knowledge Access, Publication, and Reading Verification'
+description: 'The article projection decision, revision lifecycle, browser translation guidance, and reader and manager verification flows.'
 product: 'Kingshot Events'
-audience: 'Session managers and readers'
-experienceLevel: 'Intermediate'
+audience: 'Readers, authors, reviewers, and session managers'
+experienceLevel: 'Advanced'
 featureArea: 'Knowledge Hub'
 lastReviewed: '2026-08-01'
 ---
 
-<CategoryHero category="knowledge-hub" icon="book" eyebrow="Knowledge people can trust" title="Reading Sessions">
-Find, author, review, publish, and verify guidance for the communities that need it.
-</CategoryHero>
+# Knowledge Access, Publication, and Reading Verification
 
-# Reading Sessions
+## What a reader receives
 
-Reading Sessions is the focused guide for session managers and readers. It explains the controls you can see, the states that change what you can do, and the confirmation that proves the task finished in the intended scope.
+Only Published articles enter normal reading and search. Public Free returns the full published blocks. Authenticated Free returns full content to a signed-in reader and a teaser otherwise. Feature Gated requires sign-in plus the named effective subscription feature; otherwise it returns only title, summary, cover, author, publication date, table of contents, limited preview, and upgrade action. Scope Members Only returns full content to a member of the article's kingdom or alliance scope and reveals nothing to an outsider.
 
-## What this guide helps you decide
-
-The main decision is whether to **distinguish opening an article from verified completion**. Start by reading the scope label and the record status. A control can be present but unavailable when your membership, role, plan access, current status, or selected community does not permit the change. That distinction is intentional: visibility helps you understand the workflow, while availability protects shared records.
-
-Use this page when you need to assign required reading and verify completion. It is not a promise that every account sees every action. Public pages, signed-in features, role-restricted controls, subscription-backed capabilities, and intentionally private administration are documented as different availability classes.
-
-## Before you begin
-
-- Confirm the signed-in identity and the player link shown in the account area.
-- Read the current kingdom, alliance, or personal scope before changing data.
-- Open the record itself instead of relying on a notification or an old browser tab.
-- Check whether the status is Assigned, Opened, Verified, or Expired.
-- If the action affects other people, agree on the intended outcome before saving or publishing.
-
-## Controls and information you will use
-
-The relevant controls are: **Assign required reading and verify completion**. Labels may be shortened on a narrow screen, but the scope name, status, primary action, and confirmation remain part of the same task. Filters change the current view; they do not silently move or rewrite the underlying record. A save changes a draft or editable record. Apply, approve, publish, restore, or award are separate decisions when the workflow requires review.
-
-<VisualReference title="Recognizing the Reading Sessions workspace" :items="['scope and identity context', 'current status and availability', 'primary action with confirmation']">
-Look first for the category icon and knowledge-hub label, then read the scope line above the working area. The center region presents assign required reading and verify completion. A status treatment identifies assigned, opened, verified, expired, while the final confirmation names the record and community affected.
-</VisualReference>
-
-## Complete the task
-
-1. **Create session.** Confirm the page title, signed-in identity, and selected scope before entering or changing anything.
-2. **Assign readers.** Read existing values and status messages. If information is missing, stop and gather it rather than guessing.
-3. **Read article.** Use the available control and review the preview, comparison, or warning. A disabled control usually points to a missing prerequisite.
-4. **Verify completion.** Read the success message and reopen the affected record. For shared work, verify that the next responsible role can see the expected state.
-
-
-## Reading Sessions workflow
-
-The reading sessions map follows the choices visible to session managers and readers and marks the confirmation that prevents work from continuing in the wrong state or scope.
-
-<!-- diagram: ke-knowledge-hub-reading-sessions -->
 ```mermaid
 flowchart TD
-  S0["Create session"]
-  S1["Assign readers"]
-  S2["Read article"]
-  S3["Verify completion"]
-  S0 --> S1
-  S1 --> S2
-  S2 --> S3
+ A["Article requested"] --> B{"Published?"}
+ B -->|No| C["Not in reader surface"]
+ B -->|Yes| D{"Access policy"}
+ D -->|Public Free| E["Full published revision"]
+ D -->|Authenticated Free| F{"Signed in?"}
+ D -->|Feature Gated| G{"Signed in and entitled?"}
+ D -->|Scope Members Only| H{"Member of article scope?"}
+ F -->|Yes| E
+ F -->|No| I["Teaser projection"]
+ G -->|Yes| E
+ G -->|No| I
+ H -->|Yes| E
+ H -->|No| C
 ```
 
-**Diagram summary:** Create session, then Assign readers, then Read article, then Verify completion. Each step remains visible to the person doing the work, and the final step confirms the outcome.
+Search uses published card fields. Public article bodies may contribute to indexing. Protected bodies are not sent and then hidden visually. A kingdom-level assignment can satisfy membership for alliance content in its kingdom; an unrelated or cross-tenant manager cannot.
 
-*Workflow caption: Reading Sessions from first choice to confirmed outcome.*
+## Editing and publication
 
-## Status and role differences
+Opening a published article in Studio creates a working revision from the published one when no separate draft exists. The published revision stays live while the draft is edited. Blocks can be added, reordered, previewed, and saved. The working revision moves through Draft, In Review, Changes Requested, Approved, and Published. Review compares the working revision with the published base. Publishing moves the approved revision to the reader surface; it does not mutate the previous published revision in place.
 
-| Status | What it means to the reader | Sensible next action |
-| --- | --- | --- |
-| **Assigned** | The task is at its starting or neutral state. | Continue with create session. |
-| **Opened** | Work has progressed but another check or decision remains. | Continue with assign readers. |
-| **Verified** | Work has progressed but another check or decision remains. | Continue with read article. |
-| **Expired** | The workflow reached a final or constrained state. | Verify the outcome and history. |
+**Worked authoring example:** An author opens the published Rally Basics article, adds a warning block, previews mobile layout, and submits revision 4. Readers continue seeing revision 3. A reviewer requests a clearer source note, the author edits revision 4, and approval followed by Publish makes revision 4 current. Revision 3 remains in history.
 
-For reading sessions, session managers and readers see the records and outcomes their current responsibility permits. Alliance roles act within their alliance, while granted kingdom roles can coordinate across communities without silently taking ownership of every source record. Plan access can reveal knowledge hub capabilities, but it never replaces the role, status, and scope checks described above. Platform-wide administration remains outside this public handbook.
+## Reading Verification
 
-## Saving, review, and history
+A session can target only an article with a published revision, and the session pins that exact revision. A reader opens the normal canonical article. When the applicable session resolves, a small marker appears at a safe point in the pinned content. Encountering it reveals the assigned fragment. Reaching the article end and submitting the player's name and fragment produces Correct, Almost Correct, Incorrect, Not Submitted, or Manual Review behavior as appropriate.
 
-While working in reading sessions, editable values should show a saved state before you leave. Review keeps assign readers separate from the later decision to read article. Applying or publishing makes the agreed outcome visible to its intended audience. If removal, rollback, or restore is supported here, authorized readers retain enough history to understand the change. Reopen the source record before repeating verify completion.
+The manager selects the published article and audience, creates the session, and then watches assignments appear as eligible readers open the article. Progress distinguishes Not Opened, Opened, Fragment Revealed, Article End Reached, and submission outcomes. The session creator and authorized tenant managers can read the report; an ordinary member and a manager from another tenant cannot. Platform-wide oversight exists but is not described as an operational public workflow.
 
-## If the result is not what you expected
+```mermaid
+flowchart LR
+ A["Manager pins published revision"] --> B["Eligible reader opens canonical article"]
+ B --> C["Assignment and progress begin"]
+ C --> D["Marker reveals fragment"]
+ D --> E["Reader reaches article end"]
+ E --> F["Name and fragment submitted"]
+ F --> G["Correct, almost, incorrect, or manual review"]
+ G --> H["Authorized report"]
+```
 
-- **The reading sessions action is missing:** confirm the selected scope, membership, role, and feature availability.
-- **The action is disabled:** inspect required fields and the current status; a locked or final record may need a correction or review path.
-- **The list looks unchanged:** clear view filters and reopen the source record before submitting again.
-- **Another person sees a different result:** compare scope, date window, role, and publication state.
-- **You need support:** record the page title, scope name, visible status, time, and safe steps to reproduce. Do not include passwords, payment details, or private screenshots.
+## Browser Translation Assistance
 
-## Continue learning
+The article keeps its original locale. The reader locale comes from saved preference, server preference, or browser language. `browser_default` and `always_suggest` can show guidance when normalized languages differ; `never_suggest` and an article-specific dismissal suppress it. The platform points to the browser's native translation control and stores no translated article copy. Code-like or explicitly protected content should remain untranslated. Browser translation can mistranslate game terms and does not change verification fragments or the stored source.
 
-- [Knowledge Hub Guide](/kingshot-events/knowledge-hub/)
-- [Blocks, Media, and Structured Content](/kingshot-events/knowledge-hub/blocks-and-media)
-- [Revisions and Review](/kingshot-events/knowledge-hub/revisions-and-review)
+**Premium example:** A signed-out reader may see a Feature Gated title and teaser but never the body blocks. Signing in is still insufficient if no active scope supplies the feature. A Scope Members Only alliance article does not appear at all to a member of another kingdom.
+
+## Limitations and recovery
+
+A teaser never implies that the hidden blocks are authorized. If access changes mid-session, reload the canonical article so identity, scope, entitlement, and pinned revision are resolved again. Browser translation is outside platform control and may alter terminology. Reading Verification establishes what the session recorded; it cannot prove attention beyond the visible marker, article-end, and submitted fragment signals. Manual Review requires an authorized manager rather than an automatic retry.

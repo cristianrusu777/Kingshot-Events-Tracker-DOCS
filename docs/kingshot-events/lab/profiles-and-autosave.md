@@ -1,97 +1,55 @@
 ---
-title: 'Profiles, Assumptions, and Autosave'
-description: 'Choose profile|Edit assumption|Wait for save|Compare scenario'
+title: 'Lab Profiles, Autosave, and Optimization Order'
+description: 'Workspace ownership, autosave conflicts, shared inputs, and the verified Hero Gear, Governor Gear, and Charm candidate-selection loop.'
 product: 'Kingshot Events'
 audience: 'Lab users'
-experienceLevel: 'Intermediate'
+experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
 lastReviewed: '2026-08-01'
 ---
 
-<CategoryHero category="lab" icon="flask" eyebrow="Explore before committing resources" title="Profiles, Assumptions, and Autosave">
-Save account assumptions, compare upgrade paths, and interpret planning results as scenarios rather than guarantees.
-</CategoryHero>
+# Lab Profiles, Autosave, and Optimization Order
 
-# Profiles, Assumptions, and Autosave
+A signed-in Lab workspace is owned by one account, optionally linked to a player, and stores validated gear, combat stats, priorities, inventory, budget, strategy, optimizer locks, and module overrides. A user can keep up to 50 workspaces per tool. Duplicating creates a separate state snapshot. Switching workspaces must load the selected identity before edits continue.
 
-Profiles, Assumptions, and Autosave is the focused guide for lab users. It explains the controls you can see, the states that change what you can do, and the confirmation that proves the task finished in the intended scope.
+Each save carries the last known concurrency version. If another tab or a delayed save changed the workspace first, the stale save is rejected with **This workspace was modified elsewhere. Reload and try again.** This prevents a slower autosave from overwriting newer work. Debouncing reduces save frequency but does not change that conflict rule. Module scenario overrides can sit above profile values; switching profile clears Bear scenario overrides so values from one player do not leak into another scenario.
 
-## What this guide helps you decide
-
-The main decision is whether to **keep scenarios separate from live account facts**. Start by reading the scope label and the record status. A control can be present but unavailable when your membership, role, plan access, current status, or selected community does not permit the change. That distinction is intentional: visibility helps you understand the workflow, while availability protects shared records.
-
-Use this page when you need to create profiles, edit assumptions, and read save state. It is not a promise that every account sees every action. Public pages, signed-in features, role-restricted controls, subscription-backed capabilities, and intentionally private administration are documented as different availability classes.
-
-## Before you begin
-
-- Confirm the signed-in identity and the player link shown in the account area.
-- Read the current kingdom, alliance, or personal scope before changing data.
-- Open the record itself instead of relying on a notification or an old browser tab.
-- Check whether the status is Unsaved, Saving, Saved, or Duplicate.
-- If the action affects other people, agree on the intended outcome before saving or publishing.
-
-## Controls and information you will use
-
-The relevant controls are: **Create profiles, edit assumptions, and read save state**. Labels may be shortened on a narrow screen, but the scope name, status, primary action, and confirmation remain part of the same task. Filters change the current view; they do not silently move or rewrite the underlying record. A save changes a draft or editable record. Apply, approve, publish, restore, or award are separate decisions when the workflow requires review.
-
-<VisualReference title="Recognizing the Profiles, Assumptions, and Autosave workspace" :items="['scope and identity context', 'current status and availability', 'primary action with confirmation']">
-Look first for the category icon and lab label, then read the scope line above the working area. The center region presents create profiles, edit assumptions, and read save state. A status treatment identifies unsaved, saving, saved, duplicate, while the final confirmation names the record and community affected.
-</VisualReference>
-
-## Complete the task
-
-1. **Choose profile.** Confirm the page title, signed-in identity, and selected scope before entering or changing anything.
-2. **Edit assumption.** Read existing values and status messages. If information is missing, stop and gather it rather than guessing.
-3. **Wait for save.** Use the available control and review the preview, comparison, or warning. A disabled control usually points to a missing prerequisite.
-4. **Compare scenario.** Read the success message and reopen the affected record. For shared work, verify that the next responsible role can see the expected state.
-
-
-## Profiles, Assumptions, and Autosave workflow
-
-The profiles, assumptions, and autosave map follows the choices visible to lab users and marks the confirmation that prevents work from continuing in the wrong state or scope.
-
-<!-- diagram: ke-simulations-and-optimizations-profiles-and-autosave -->
 ```mermaid
-flowchart TD
-  S0["Choose profile"]
-  S1["Edit assumption"]
-  S2["Wait for save"]
-  S3["Compare scenario"]
-  S0 --> S1
-  S1 --> S2
-  S2 --> S3
+flowchart LR
+ A["Select owned workspace"] --> B["Load versioned state"]
+ B --> C["Edit module inputs"]
+ C --> D["Debounced save with expected version"]
+ D --> E{"Stored version still matches?"}
+ E -->|Yes| F["Save and advance version"]
+ E -->|No| G["Reject stale save; reload"]
 ```
 
-**Diagram summary:** Choose profile, then Edit assumption, then Wait for save, then Compare scenario. Each step remains visible to the person doing the work, and the final step confirms the outcome.
+## Optimizer decision loop
 
-*Workflow caption: Profiles, Assumptions, and Autosave from first choice to confirmed outcome.*
+Hero Gear, Governor Gear, and Charms share a verified iterative pattern:
 
-## Status and role differences
+1. Read current item levels, combat-stat baseline, troop and stat weights, resource inventory, strategy, and locked slots.
+2. Generate every valid next upgrade in the selected tool. Remove locked, maximum-level, unaffordable, and out-of-scope candidates.
+3. Calculate the candidate's weighted stat gain. For additive mode, this is the sum of configured weight times stat delta. Combat mode values marginal improvement relative to the current baseline.
+4. Normalize cost against the starting available inventory. Hero Gear applies stronger penalties to irreversible materials and can bundle enhancement with mastery to cross a milestone. Governor Gear accounts for set changes. Charms evaluate six slots per troop class.
+5. Select the candidate with the best positive gain-to-normalized-cost value, consume its resources, update levels and stats, and repeat.
+6. Stop when no valid positive candidate remains. Return the ordered steps, before and after state, resources consumed, and inventory left.
 
-| Status | What it means to the reader | Sensible next action |
-| --- | --- | --- |
-| **Unsaved** | The task is at its starting or neutral state. | Continue with choose profile. |
-| **Saving** | Work has progressed but another check or decision remains. | Continue with edit assumption. |
-| **Saved** | Work has progressed but another check or decision remains. | Continue with wait for save. |
-| **Duplicate** | The workflow reached a final or constrained state. | Verify the outcome and history. |
+```mermaid
+flowchart TD
+ A["Current items, priorities, locks, inventory"] --> B["Generate valid next upgrades"]
+ B --> C["Remove unaffordable or constrained candidates"]
+ C --> D["Compare weighted gain with normalized cost"]
+ D --> E{"Positive candidate remains?"}
+ E -->|Yes| F["Choose step, consume resources, update state"]
+ F --> B
+ E -->|No| G["Ordered plan and unspent inventory"]
+```
 
-For profiles, assumptions, and autosave, lab users see the records and outcomes their current responsibility permits. Alliance roles act within their alliance, while granted kingdom roles can coordinate across communities without silently taking ownership of every source record. Plan access can reveal simulations and optimizations capabilities, but it never replaces the role, status, and scope checks described above. Platform-wide administration remains outside this public handbook.
+**Worked small example:** A user has materials for either one Governor Gear upgrade or two Charm steps and weights Archer lethality above other stats. The engine does not choose by item rarity alone. It evaluates every affordable next step, applies the configured weights and cost normalization, selects the current best candidate, subtracts its materials, then recalculates the remaining set. The second choice may change after the first consumes a shared material or activates a set effect.
 
-## Saving, review, and history
+Hero Gear may optionally reforge eligible unlocked enhancement levels to recover XP before planning. Locked items are never pulled down. Enhancement, mastery, milestone, rarity, and resource costs come from the versioned catalog.
 
-While working in profiles, assumptions, and autosave, editable values should show a saved state before you leave. Review keeps edit assumption separate from the later decision to wait for save. Applying or publishing makes the agreed outcome visible to its intended audience. If removal, rollback, or restore is supported here, authorized readers retain enough history to understand the change. Reopen the source record before repeating compare scenario.
+## Limitations and conflict recovery
 
-## If the result is not what you expected
-
-- **The profiles, assumptions, and autosave action is missing:** confirm the selected scope, membership, role, and feature availability.
-- **The action is disabled:** inspect required fields and the current status; a locked or final record may need a correction or review path.
-- **The list looks unchanged:** clear view filters and reopen the source record before submitting again.
-- **Another person sees a different result:** compare scope, date window, role, and publication state.
-- **You need support:** record the page title, scope name, visible status, time, and safe steps to reproduce. Do not include passwords, payment details, or private screenshots.
-
-## Continue learning
-
-- [Hero Gear Planning](/kingshot-events/lab/hero-gear)
-- [Governor Gear Planning](/kingshot-events/lab/governor-gear)
-- [Charm Planning](/kingshot-events/lab/charms)
-- [Bear Trap Planning](/kingshot-events/lab/bear-trap)
+The plan is deterministic for the same inputs and dataset, but it is not a proof of the globally best in-game build. Wrong inventory, weights, catalog assumptions, or temporary buffs produce a precise answer to the wrong scenario. On a stale-save conflict, copy any unsaved values, reload the newer workspace version, and reapply only the intended changes. Do not keep retrying the stale tab: its version cannot overwrite the newer save.

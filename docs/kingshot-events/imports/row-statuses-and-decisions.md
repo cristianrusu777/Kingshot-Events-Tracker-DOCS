@@ -1,98 +1,60 @@
 ---
-title: 'Row Statuses and Decisions'
-description: 'Read source|Compare match|Choose decision|Recheck row'
+title: 'Screenshot Reconciliation and Row Decisions'
+description: 'How screenshots become review rows, how names and duplicates are resolved, and what Accept, Ignore, reprocess, rollback, and restore mean.'
 product: 'Kingshot Events'
-audience: 'Import reviewers'
-experienceLevel: 'Intermediate'
+audience: 'Import contributors and reviewers'
+experienceLevel: 'Advanced'
 featureArea: 'Imports and Data Entry'
 lastReviewed: '2026-08-01'
 ---
 
-<CategoryHero category="imports" icon="upload" eyebrow="Fast input with human review" title="Row Statuses and Decisions">
-Turn screenshots and structured rows into reviewed records without hiding uncertainty or overwrite decisions.
-</CategoryHero>
+# Screenshot Reconciliation and Row Decisions
 
-# Row Statuses and Decisions
+The processor extracts candidates; it does not write trusted results. Every extracted row is normalized and staged for human review. Provider confidence is only one signal. Event context, player matching, duplicate identity, score range, and existing records can all force review.
 
-Row Statuses and Decisions is the focused guide for import reviewers. It explains the controls you can see, the states that change what you can do, and the confirmation that proves the task finished in the intended scope.
-
-## What this guide helps you decide
-
-The main decision is whether to **resolve uncertainty before records are changed**. Start by reading the scope label and the record status. A control can be present but unavailable when your membership, role, plan access, current status, or selected community does not permit the change. That distinction is intentional: visibility helps you understand the workflow, while availability protects shared records.
-
-Use this page when you need to accept, skip, correct, or defer each interpreted row. It is not a promise that every account sees every action. Public pages, signed-in features, role-restricted controls, subscription-backed capabilities, and intentionally private administration are documented as different availability classes.
-
-## Before you begin
-
-- Confirm the signed-in identity and the player link shown in the account area.
-- Read the current kingdom, alliance, or personal scope before changing data.
-- Open the record itself instead of relying on a notification or an old browser tab.
-- Check whether the status is New, Matched, Warning, or Skipped.
-- If the action affects other people, agree on the intended outcome before saving or publishing.
-
-## Controls and information you will use
-
-The relevant controls are: **Accept, skip, correct, or defer each interpreted row**. Labels may be shortened on a narrow screen, but the scope name, status, primary action, and confirmation remain part of the same task. Filters change the current view; they do not silently move or rewrite the underlying record. A save changes a draft or editable record. Apply, approve, publish, restore, or award are separate decisions when the workflow requires review.
-
-<VisualReference title="Recognizing the Row Statuses and Decisions workspace" :items="['scope and identity context', 'current status and availability', 'primary action with confirmation']">
-Look first for the category icon and imports label, then read the scope line above the working area. The center region presents accept, skip, correct, or defer each interpreted row. A status treatment identifies new, matched, warning, skipped, while the final confirmation names the record and community affected.
-</VisualReference>
-
-## Complete the task
-
-1. **Read source.** Confirm the page title, signed-in identity, and selected scope before entering or changing anything.
-2. **Compare match.** Read existing values and status messages. If information is missing, stop and gather it rather than guessing.
-3. **Choose decision.** Use the available control and review the preview, comparison, or warning. A disabled control usually points to a missing prerequisite.
-4. **Recheck row.** Read the success message and reopen the affected record. For shared work, verify that the next responsible role can see the expected state.
-
-
-## Row Statuses and Decisions workflow
-
-The row statuses and decisions map follows the choices visible to import reviewers and marks the confirmation that prevents work from continuing in the wrong state or scope.
-
-<!-- diagram: ke-imports-and-data-entry-row-statuses-and-decisions -->
 ```mermaid
 flowchart TD
-  S0["Read source"]
-  S1["Compare match"]
-  S2["Choose decision"]
-  S3["Recheck row"]
-  S0 --> S1
-  S1 --> S2
-  S2 --> S3
+ A["Image and chosen context"] --> B["Validate type, size, and quota"]
+ B --> C["Detect repeated file in same scope"]
+ C --> D["Processor extracts event and rows"]
+ D --> E["Normalize date, names, score, position, status"]
+ E --> F["Match current name or nickname history"]
+ F --> G["Classify ready, review, unmatched, duplicate, or conflict"]
+ G --> H["Reviewer corrects and accepts or ignores"]
+ H --> I["Apply accepted row and recalculate"]
 ```
 
-**Diagram summary:** Read source, then Compare match, then Choose decision, then Recheck row. Each step remains visible to the person doing the work, and the final step confirms the outcome.
+## Decision order
 
-*Workflow caption: Row Statuses and Decisions from first choice to confirmed outcome.*
+1. The image must satisfy file-type and size rules, and the selected scope must have upload, import, and storage capacity.
+2. A file fingerprint is checked against active imports with the same import type, scope, and event date. Reprocess requires explicit confirmation.
+3. The selected provider extracts an event title, date, and rows. A manually selected event or date takes precedence over detection. Missing dates fall back visibly and require review. A detected title that disagrees with the selected event also requires review.
+4. Names are cleaned and normalized. Blank or unclear names become `needs_review`.
+5. Matching considers current names and nickname history inside the selected context. No match becomes `unmatched_player`; accepting can create a player, while rematching connects the row to an existing one.
+6. Missing scores, low extraction or match confidence, processor warnings, out-of-range scores, and review flags prevent automatic trust.
+7. Within one import, a repeated player/event/date/stage/result-type identity becomes `duplicate`.
+8. Against saved data, an equivalent row becomes `duplicate`. A different non-cumulative row becomes `conflict`. A different cumulative snapshot becomes `ready` with an explicit old-to-new refresh note.
 
-## Status and role differences
-
-| Status | What it means to the reader | Sensible next action |
+| Row state | Meaning | Safe action |
 | --- | --- | --- |
-| **New** | The task is at its starting or neutral state. | Continue with read source. |
-| **Matched** | Work has progressed but another check or decision remains. | Continue with compare match. |
-| **Warning** | Work has progressed but another check or decision remains. | Continue with choose decision. |
-| **Skipped** | The workflow reached a final or constrained state. | Verify the outcome and history. |
+| Ready | Context and match are usable, but no result is written yet | Compare the image and accept |
+| Needs review | One or more values are uncertain | Correct the fields, then reassess |
+| Unmatched player | No current or historical name match | Rematch or intentionally create |
+| Low confidence | Extraction or player match confidence is weak | Read the source rather than trusting the guess |
+| Duplicate | Equivalent evidence already exists | Ignore unless the identity is wrong |
+| Conflict | A different result owns the same identity | Choose whether the incoming evidence should overwrite |
+| Ignored | Reviewer deliberately excluded the row | Restore to review only when evidence changes |
 
-For row statuses and decisions, import reviewers see the records and outcomes their current responsibility permits. Alliance roles act within their alliance, while granted kingdom roles can coordinate across communities without silently taking ownership of every source record. Plan access can reveal imports and data entry capabilities, but it never replaces the role, status, and scope checks described above. Platform-wide administration remains outside this public handbook.
+**Worked correction:** The image says `CRON 123,456,789`, but the roster now calls the player Horus. Nickname history matches CRON to Horus. The row is staged, the reviewer confirms the image and accepts, and the result attaches to Horus. No CRON player is created.
 
-## Saving, review, and history
+**Worked same-date case:** A cumulative event already stores 25,000 for Nia on August 1. A new screenshot reads 28,000 for the same date. The row says that accepting will refresh 25,000 to 28,000. For a normal score event, the same mismatch is a conflict and is not overwritten until accepted.
 
-While working in row statuses and decisions, editable values should show a saved state before you leave. Review keeps compare match separate from the later decision to choose decision. Applying or publishing makes the agreed outcome visible to its intended audience. If removal, rollback, or restore is supported here, authorized readers retain enough history to understand the change. Reopen the source record before repeating recheck row.
+## Failures and recovery
 
-## If the result is not what you expected
+Zero extracted rows, unsupported images, missing provider credits, or processing errors leave a visible failure or review state. Reprocessing creates another processing attempt only after confirmation; it does not prove the earlier rows were wrong. Deleting an import and rolling back applied records are different actions: deletion concerns the import artifact, while rollback concerns results created or changed from it. Use batch history to inspect impact before rollback. Restoration can return eligible soft-deleted records, but cannot reconstruct a source image that retention has permanently removed.
 
-- **The row statuses and decisions action is missing:** confirm the selected scope, membership, role, and feature availability.
-- **The action is disabled:** inspect required fields and the current status; a locked or final record may need a correction or review path.
-- **The list looks unchanged:** clear view filters and reopen the source record before submitting again.
-- **Another person sees a different result:** compare scope, date window, role, and publication state.
-- **You need support:** record the page title, scope name, visible status, time, and safe steps to reproduce. Do not include passwords, payment details, or private screenshots.
+Provider-specific credentials are passed only to the selected processing attempt and are not documented here. Extraction can misread names, digits, ordering, or cropping. Manual review remains mandatory.
 
-## Continue learning
+## Limitations
 
-- [Imports and Data Entry Guide](/kingshot-events/imports/)
-- [Providers and Processing](/kingshot-events/imports/providers-and-processing)
-- [Apply and Import History](/kingshot-events/imports/apply-and-history)
-- [Rollback and Restore](/kingshot-events/imports/rollback-and-restore)
-- [Spreadsheet and Structured Input](/kingshot-events/imports/spreadsheet-and-structured-input)
+An accepted row proves only that a reviewer chose to apply the staged evidence; it does not certify perfect extraction. A crop can omit players, a nickname can still be ambiguous, and rollback may be unavailable after retention expires or later dependent edits exist. Preserve the source image long enough to resolve review flags, then compare the resulting batch before treating analytics as final.

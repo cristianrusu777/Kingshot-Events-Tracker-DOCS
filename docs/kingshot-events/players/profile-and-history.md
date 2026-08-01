@@ -1,94 +1,79 @@
 ---
-title: 'Profile, Attributes, and History'
-description: 'Open profile|Check identity|Read attributes|Inspect history'
+title: 'Profile, Identity, Activity, and History'
+description: 'How accounts, local players, linked profiles, duplicate rules, activity status, Kick, Delete, and restore interact.'
 product: 'Kingshot Events'
-audience: 'Players and managers'
-experienceLevel: 'Intermediate'
+audience: 'Players and roster managers'
+experienceLevel: 'Advanced'
 featureArea: 'Players'
 lastReviewed: '2026-08-01'
 ---
 
-<CategoryHero category="players" icon="people" eyebrow="A dependable roster" title="Profile, Attributes, and History">
-Find, maintain, link, and recover player records while preserving history.
+<CategoryHero category="players" icon="people" eyebrow="A dependable roster" title="Profile, Identity, Activity, and History">
+One account can identify a person using the platform, while the player record preserves the in-game identity, alliance history, event results, and calculated status.
 </CategoryHero>
 
-# Profile, Attributes, and History
+# Profile, Identity, Activity, and History
 
-Profile, Attributes, and History is the focused guide for players and managers. It explains the controls you can see, the states that change what you can do, and the confirmation that proves the task finished in the intended scope.
+## Four identity layers
 
-## What this guide helps you decide
+1. **User account:** sign-in identity, preferences, and role assignments.
+2. **Local player:** the roster record used by events, imports, rewards, and Castle Positions.
+3. **Player link:** the verified relationship between an account and a local player.
+4. **External Kingshot identity:** an optional normalized in-game identifier used for synchronization.
 
-The main decision is whether to **separate current profile values from dated results**. Start by reading the scope label and the record status. A control can be present but unavailable when your membership, role, plan access, current status, or selected community does not permit the change. That distinction is intentional: visibility helps you understand the workflow, while availability protects shared records.
+Linking does not replace the local player. It connects the account to it. Synchronization may update fields supported by the external source, while manual attributes, review notes, event results, and local membership history remain controlled by Kingshot Events.
 
-Use this page when you need to read identity, attributes, memberships, and event history. It is not a promise that every account sees every action. Public pages, signed-in features, role-restricted controls, subscription-backed capabilities, and intentionally private administration are documented as different availability classes.
-
-## Before you begin
-
-- Confirm the signed-in identity and the player link shown in the account area.
-- Read the current kingdom, alliance, or personal scope before changing data.
-- Open the record itself instead of relying on a notification or an old browser tab.
-- Check whether the status is Current, Historical, or Missing.
-- If the action affects other people, agree on the intended outcome before saving or publishing.
-
-## Controls and information you will use
-
-The relevant controls are: **Read identity, attributes, memberships, and event history**. Labels may be shortened on a narrow screen, but the scope name, status, primary action, and confirmation remain part of the same task. Filters change the current view; they do not silently move or rewrite the underlying record. A save changes a draft or editable record. Apply, approve, publish, restore, or award are separate decisions when the workflow requires review.
-
-<VisualReference title="Recognizing the Profile, Attributes, and History workspace" :items="['scope and identity context', 'current status and availability', 'primary action with confirmation']">
-Look first for the category icon and players label, then read the scope line above the working area. The center region presents read identity, attributes, memberships, and event history. A status treatment identifies current, historical, missing, while the final confirmation names the record and community affected.
-</VisualReference>
-
-## Complete the task
-
-1. **Open profile.** Confirm the page title, signed-in identity, and selected scope before entering or changing anything.
-2. **Check identity.** Read existing values and status messages. If information is missing, stop and gather it rather than guessing.
-3. **Read attributes.** Use the available control and review the preview, comparison, or warning. A disabled control usually points to a missing prerequisite.
-4. **Inspect history.** Read the success message and reopen the affected record. For shared work, verify that the next responsible role can see the expected state.
-
-
-## Profile, Attributes, and History workflow
-
-The profile, attributes, and history map follows the choices visible to players and managers and marks the confirmation that prevents work from continuing in the wrong state or scope.
-
-<!-- diagram: ke-players-profile-and-history -->
 ```mermaid
-flowchart TD
-  S0["Open profile"]
-  S1["Check identity"]
-  S2["Read attributes"]
-  S3["Inspect history"]
-  S0 --> S1
-  S1 --> S2
-  S2 --> S3
+flowchart LR
+  A["User account"] --> B["Link request"]
+  B --> C{"Exact player identity available?"}
+  C -->|No| D["Review or reject"]
+  C -->|Yes| E["Active player link"]
+  E --> F["Local player record"]
+  G["External Kingshot identity"] --> H["Supported synchronized fields"]
+  H --> F
+  I["Manual attributes and event history"] --> F
 ```
 
-**Diagram summary:** Open profile, then Check identity, then Read attributes, then Inspect history. Each step remains visible to the person doing the work, and the final step confirms the outcome.
+**Diagram summary:** Linking selects the local record owned by the account. Synchronization contributes supported external values; it does not erase locally maintained history.
 
-*Workflow caption: Profile, Attributes, and History from first choice to confirmed outcome.*
+## Duplicate and name rules
 
-## Status and role differences
+Current players are checked for a normalized name collision **inside the same kingdom**. Alliance membership does not make two identical normalized names distinct. A nonblank external player ID is trimmed, normalized, and also checked within the kingdom. Soft-deleted players are excluded from the current-name duplicate check but remain recoverable during their retention window.
 
-| Status | What it means to the reader | Sensible next action |
-| --- | --- | --- |
-| **Current** | The task is at its starting or neutral state. | Continue with open profile. |
-| **Historical** | Work has progressed but another check or decision remains. | Continue with check identity. |
-| **Missing** | The workflow reached a final or constrained state. | Verify the outcome and history. |
+Nickname history helps imports match an older name to the same player. A nickname match is evidence for review, not permission to create a second record. Two genuinely different players with similar display names should be distinguished with their external identity and profile history.
 
-For profile, attributes, and history, players and managers see the records and outcomes their current responsibility permits. Alliance roles act within their alliance, while granted kingdom roles can coordinate across communities without silently taking ownership of every source record. Plan access can reveal players capabilities, but it never replaces the role, status, and scope checks described above. Platform-wide administration remains outside this public handbook.
+**Example:** A screenshot contains `CRON`, but that player was renamed `Horus`. The importer finds `CRON` in Horus's nickname history and stages the row against Horus. It does not create a new CRON player. If another current player in the kingdom already owns the same external ID, the link must be resolved before saving.
 
-## Saving, review, and history
+## Activity-status calculation
 
-While working in profile, attributes, and history, editable values should show a saved state before you leave. Review keeps check identity separate from the later decision to read attributes. Applying or publishing makes the agreed outcome visible to its intended audience. If removal, rollback, or restore is supported here, authorized readers retain enough history to understand the change. Reopen the source record before repeating inspect history.
+Only results whose event setting says **Counts toward activity status** enter the calculation. For those non-deleted results, the platform counts `active`, `inactive`, and `unknown` rows; sums configured participation and score points; calculates participation rate as active rows divided by all tracked rows; counts inactive rows as missed events; and calculates score totals and averages from rows that contain a score.
 
-## If the result is not what you expected
+Enabled attribute rules are loaded in priority order from global, kingdom, and alliance scope. A rule matches only when every configured boundary it declares is satisfied, such as minimum or maximum internal points, participation rate, tracked-event count, missed-event count, average score, or total score. The primary automatic status is the first matching default rule among Active, Semi-active, Inactive, and Unknown. Thresholds are configurable, so this handbook does not invent fixed percentages.
 
-- **The profile, attributes, and history action is missing:** confirm the selected scope, membership, role, and feature availability.
-- **The action is disabled:** inspect required fields and the current status; a locked or final record may need a correction or review path.
-- **The list looks unchanged:** clear view filters and reopen the source record before submitting again.
-- **Another person sees a different result:** compare scope, date window, role, and publication state.
-- **You need support:** record the page title, scope name, visible status, time, and safe steps to reproduce. Do not include passwords, payment details, or private screenshots.
+A manual status override has first precedence. When present, its referenced rule becomes primary even if the calculated metrics would select another default. Clearing the override does not select a replacement manually; the next recalculation returns control to the first matching automatic rule. Custom attributes can match alongside the primary status and may be manually assigned with an expiry, but they are not the activity status unless explicitly selected as the override.
 
-## Continue learning
+```mermaid
+flowchart TD
+  A["Non-deleted results"] --> B["Keep events marked for activity"]
+  B --> C["Calculate counts, rate, points, and score metrics"]
+  C --> D["Evaluate enabled rules in priority order"]
+  D --> E{"Manual status override exists?"}
+  E -->|Yes| F["Override rule is primary"]
+  E -->|No| G["First matching default status is primary"]
+  G --> H["Fallback to Unknown"]
+  F --> I["Save status and matching attributes"]
+  H --> I
+```
 
-- [Players Guide](/kingshot-events/players/)
-- [Directory Filters and Columns](/kingshot-events/players/filters-and-columns)
+**Worked example:** Nia has four tracked results: three Active and one Inactive. Participation is 75%, the missed-event count is one, and score metrics use only scored rows. Which label appears depends on the enabled scoped rules. If a manager temporarily overrides Nia to Semi-active with a reason, that label wins. Clearing it causes the next recalculation to evaluate the 75% metrics again.
+
+## Kick, Delete, and restore
+
+**Kick** removes the player from the alliance and clears alliance-standing fields such as role, rank, level, power, and alliance status. The player and kingdom history remain. **Delete** soft-deletes the player. Players with event results, import-review rows, reward records, nickname history, memberships, sync jobs, snapshots, or an external profile are treated as having history worth preserving. A dangerous kingdom-level deletion requires explicit confirmation using the exact player name. Deleted players are retained for seven days before becoming eligible for permanent purge.
+
+**Example:** Kicking Sol from Aster is appropriate when Sol changes alliance: the event history remains and Sol can later be claimed into another permitted alliance. Deleting Sol is appropriate only when the player record itself should leave current views. Recreating Sol would split the history; restore should be used while available.
+
+## Limits and recovery
+
+An alliance supports at most 100 current members. An alliance-scoped manager may claim an outside or unassigned player only into their own alliance. If synchronization appears stale, verify the external ID and latest sync state before manually overwriting supported fields. If an activity label seems wrong, inspect which events count, missing or unknown rows, the calculated time, and any visible override reason.

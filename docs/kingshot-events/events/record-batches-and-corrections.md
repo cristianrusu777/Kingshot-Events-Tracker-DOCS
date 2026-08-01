@@ -1,98 +1,67 @@
 ---
-title: 'Record Batches and Corrections'
-description: 'Open batch|Find row|Enter correction|Confirm history'
+title: 'Event Instances, Record Batches, and Corrections'
+description: 'The event data model, manual-entry validation, duplicate identity, same-date behavior, locks, correction, and recalculation.'
 product: 'Kingshot Events'
 audience: 'Result contributors and reviewers'
-experienceLevel: 'Intermediate'
+experienceLevel: 'Advanced'
 featureArea: 'Events and Results'
 lastReviewed: '2026-08-01'
 ---
 
-<CategoryHero category="events" icon="flag" eyebrow="From event setup to trusted results" title="Record Batches and Corrections">
-Follow each event from its reusable definition through participation, correction, review, and history.
-</CategoryHero>
+# Event Instances, Record Batches, and Corrections
 
-# Record Batches and Corrections
+An **event template** defines reusable behavior: scope, duration, stages, score-entry mode, required fields, activity participation, reward participation, and score rules. An **instance** is one dated run of that event. A **stage result** belongs to one stage or day; a **total result** stores the final or cumulative total. A **record batch** groups rows from one input action so reviewers can trace who entered them and which event, scope, date, session, stage, and source they used.
 
-Record Batches and Corrections is the focused guide for result contributors and reviewers. It explains the controls you can see, the states that change what you can do, and the confirmation that proves the task finished in the intended scope.
-
-## What this guide helps you decide
-
-The main decision is whether to **correct a result without losing its provenance**. Start by reading the scope label and the record status. A control can be present but unavailable when your membership, role, plan access, current status, or selected community does not permit the change. That distinction is intentional: visibility helps you understand the workflow, while availability protects shared records.
-
-Use this page when you need to inspect batches, amend rows, and preserve correction history. It is not a promise that every account sees every action. Public pages, signed-in features, role-restricted controls, subscription-backed capabilities, and intentionally private administration are documented as different availability classes.
-
-## Before you begin
-
-- Confirm the signed-in identity and the player link shown in the account area.
-- Read the current kingdom, alliance, or personal scope before changing data.
-- Open the record itself instead of relying on a notification or an old browser tab.
-- Check whether the status is Pending, Applied, Corrected, or Reverted.
-- If the action affects other people, agree on the intended outcome before saving or publishing.
-
-## Controls and information you will use
-
-The relevant controls are: **Inspect batches, amend rows, and preserve correction history**. Labels may be shortened on a narrow screen, but the scope name, status, primary action, and confirmation remain part of the same task. Filters change the current view; they do not silently move or rewrite the underlying record. A save changes a draft or editable record. Apply, approve, publish, restore, or award are separate decisions when the workflow requires review.
-
-<VisualReference title="Recognizing the Record Batches and Corrections workspace" :items="['scope and identity context', 'current status and availability', 'primary action with confirmation']">
-Look first for the category icon and events label, then read the scope line above the working area. The center region presents inspect batches, amend rows, and preserve correction history. A status treatment identifies pending, applied, corrected, reverted, while the final confirmation names the record and community affected.
-</VisualReference>
-
-## Complete the task
-
-1. **Open batch.** Confirm the page title, signed-in identity, and selected scope before entering or changing anything.
-2. **Find row.** Read existing values and status messages. If information is missing, stop and gather it rather than guessing.
-3. **Enter correction.** Use the available control and review the preview, comparison, or warning. A disabled control usually points to a missing prerequisite.
-4. **Confirm history.** Read the success message and reopen the affected record. For shared work, verify that the next responsible role can see the expected state.
-
-
-## Record Batches and Corrections workflow
-
-The record batches and corrections map follows the choices visible to result contributors and reviewers and marks the confirmation that prevents work from continuing in the wrong state or scope.
-
-<!-- diagram: ke-events-and-results-record-batches-and-corrections -->
 ```mermaid
-flowchart TD
-  S0["Open batch"]
-  S1["Find row"]
-  S2["Enter correction"]
-  S3["Confirm history"]
-  S0 --> S1
-  S1 --> S2
-  S2 --> S3
+flowchart LR
+  A["Template"] --> B["Dated instance"]
+  B --> C["Stage or total context"]
+  C --> D["Manual or import batch"]
+  D --> E["Player result rows"]
+  E --> F["Analytics and rewards recalculate"]
+  E --> G["Correction remains in batch history"]
 ```
 
-**Diagram summary:** Open batch, then Find row, then Enter correction, then Confirm history. Each step remains visible to the person doing the work, and the final step confirms the outcome.
+**Diagram summary:** Configuration becomes a dated instance; input is preserved as a batch; accepted player rows feed later calculations.
 
-*Workflow caption: Record Batches and Corrections from first choice to confirmed outcome.*
+## Result identity and precedence
 
-## Status and role differences
+A result is identified conceptually by the instance when present, player, event, effective result date, stage identity, kingdom, alliance, result scope, and result type. Two rows cannot occupy the same identity. A correction that would collide with another current row is rejected rather than merged silently.
 
-| Status | What it means to the reader | Sensible next action |
-| --- | --- | --- |
-| **Pending** | The task is at its starting or neutral state. | Continue with open batch. |
-| **Applied** | Work has progressed but another check or decision remains. | Continue with find row. |
-| **Corrected** | Work has progressed but another check or decision remains. | Continue with enter correction. |
-| **Reverted** | The workflow reached a final or constrained state. | Verify the outcome and history. |
+For a cumulative-total event, saving or accepting a different value on the same date refreshes that date's snapshot. It does not add the two totals. An identical value is a duplicate. For a non-cumulative event, a different same-context value is a conflict that requires an explicit overwrite decision. A new date creates or resolves a different snapshot inside the instance.
 
-For record batches and corrections, result contributors and reviewers see the records and outcomes their current responsibility permits. Alliance roles act within their alliance, while granted kingdom roles can coordinate across communities without silently taking ownership of every source record. Plan access can reveal events and results capabilities, but it never replaces the role, status, and scope checks described above. Platform-wide administration remains outside this public handbook.
+## Manual entry from start to finish
 
-## Saving, review, and history
+1. Select kingdom, then alliance. Role-bound selectors may be locked.
+2. Select the event and one `YYYY-MM-DD` result date. Stage events also select Stage Data or Total Data, a stage number, and optionally a stage date.
+3. Select an existing session or provide its start and end dates. The platform creates or reuses the compatible instance.
+4. The alliance roster loads. For each player, enter a numeric score or leave it empty, an optional position, and Active, Inactive, or Unknown participation.
+5. **Apply all changes** validates the batch quota, event visibility, writable instance, common date, player scope, numeric values, and duplicate identity.
+6. The platform creates or reuses one manual-input batch for the same scope, event, instance, date, stage, and result type. Rows are inserted or updated according to the event mode.
+7. A successful save opens the batch. Analytics recalculates for affected players.
 
-While working in record batches and corrections, editable values should show a saved state before you leave. Review keeps find row separate from the later decision to enter correction. Applying or publishing makes the agreed outcome visible to its intended audience. If removal, rollback, or restore is supported here, authorized readers retain enough history to understand the change. Reopen the source record before repeating confirm history.
+```mermaid
+flowchart TD
+  A["Select scope, event, date"] --> B["Resolve or create instance"]
+  B --> C{"Instance writable?"}
+  C -->|No| D["Stop: locked instance"]
+  C -->|Yes| E["Validate all rows share the date"]
+  E --> F{"Duplicate identity?"}
+  F -->|Identical cumulative snapshot| G["Keep one snapshot"]
+  F -->|Conflicting non-cumulative row| H["Require correction decision"]
+  F -->|No| I["Save batch rows"]
+  G --> I
+  I --> J["Recalculate affected players"]
+```
 
-## If the result is not what you expected
+**Worked participation example:** Aster records Viking Defense on 2026-08-01. Arin is Active with no score, Bea is Inactive, and Cato is Unknown. Apply All stores three participation rows in one batch. Activity calculations use them only if the template counts toward activity.
 
-- **The record batches and corrections action is missing:** confirm the selected scope, membership, role, and feature availability.
-- **The action is disabled:** inspect required fields and the current status; a locked or final record may need a correction or review path.
-- **The list looks unchanged:** clear view filters and reopen the source record before submitting again.
-- **Another person sees a different result:** compare scope, date window, role, and publication state.
-- **You need support:** record the page title, scope name, visible status, time, and safe steps to reproduce. Do not include passwords, payment details, or private screenshots.
+**Worked score example:** Alliance Mobilization uses cumulative totals. Nia has 25,000 on August 1 and 41,000 on August 2. Re-entering 43,000 for August 2 refreshes that snapshot; it does not produce 84,000. Re-entering 41,000 is treated as duplicate evidence.
 
-## Continue learning
+## Locks, correction, and recovery
 
-- [Events and Results Guide](/kingshot-events/events/)
-- [Templates and Event Settings](/kingshot-events/events/templates-and-settings)
-- [Instances, Windows, and Locks](/kingshot-events/events/instances-and-locks)
-- [Custom Events and Proposals](/kingshot-events/events/custom-events-and-proposals)
-- [Default Event Patterns](/kingshot-events/events/default-event-patterns)
+A locked instance rejects manual and imported writes. A manager must reopen or follow the authorized change path; changing the date to bypass a lock would create misleading history. Batch correction supports player, event, date, stage, score, position, custom fields, participation, review state, and ignored state, but validates the new identity before saving. After correction, affected analytics recalculate. If a save fails, no partial cross-date batch should be assumed: reopen the batch and verify which rows exist.
+
+## Limitations
+
+Autosave applies only where the interface explicitly shows it; the manual batch form commits through Apply All. Templates changed later do not retroactively rewrite completed evidence. Aggregate analytics are downstream views, not correction surfaces.

@@ -1,76 +1,49 @@
 ---
-title: 'Plans and Effective Access'
-description: 'Read plan|Check grant|Check allocation|Confirm scope'
+title: 'Plans, Grants, Quotas, and Effective Access'
+description: 'The exact precedence for alliance and kingdom plans, accepted grants, allocations, quota warnings, limited mode, and suspension.'
 product: 'Kingshot Events'
 audience: 'Members and community owners'
-experienceLevel: 'Intermediate'
+experienceLevel: 'Advanced'
 featureArea: 'Subscriptions and Usage'
 lastReviewed: '2026-08-01'
 ---
 
-<CategoryHero category="subscriptions" icon="layers" eyebrow="Know what access means" title="Plans and Effective Access">
-Distinguish plans, grants, allocations, quotas, requests, payments, and limited mode.
-</CategoryHero>
+# Plans, Grants, Quotas, and Effective Access
 
-# Plans and Effective Access
+For an alliance, effective plan source follows fixed precedence: **direct alliance plan**, then **accepted kingdom grant**, then **direct kingdom plan**, then **Free**. A pending grant unlocks nothing. An accepted grant exposes only features marked eligible for grants, not every feature on the kingdom plan. Free capabilities remain available because they are not premium-gated.
 
-Plans and Effective Access is the focused guide for members and community owners. It explains the controls you can see, the states that change what you can do, and the confirmation that proves the task finished in the intended scope.
+```mermaid
+flowchart TD
+ A["Alliance requests feature"] --> B{"Direct alliance plan active?"}
+ B -->|Yes| C["Use alliance plan features"]
+ B -->|No| D{"Accepted current kingdom grant?"}
+ D -->|Yes| E["Use grant-eligible kingdom features"]
+ D -->|No| F{"Direct kingdom plan applies?"}
+ F -->|Yes| G["Use kingdom plan features"]
+ F -->|No| H["Use Free capabilities"]
+ C --> I["Resolve quota and suspension"]
+ E --> I
+ G --> I
+ H --> I
+```
 
-## What this guide helps you decide
+An allocation is the granted alliance's per-resource share of a kingdom quota. Allocations may be made only to granted alliances, and their sum cannot exceed the kingdom limit. Accepting a grant changes entitlement source; it does not assign management roles. Analytics sharing likewise grants no edit access.
 
-The main decision is whether to **explain effective access without assuming plan alone decides it**. Start by reading the scope label and the record status. A control can be present but unavailable when your membership, role, plan access, current status, or selected community does not permit the change. That distinction is intentional: visibility helps you understand the workflow, while availability protects shared records.
+Quota percentage is used only when a positive hard limit is enabled: below 80% is Normal, 80% is Warning, 95% is Critical, and 100% is Exceeded. A granted alliance uses its allocation for that resource. A disabled or zero hard limit does not create an exceeded state. Limited mode preserves permitted read and cleanup behavior while blocking quota-consuming writes. Suspension can further restrict effective access even when a plan exists.
 
-Use this page when you need to compare plan, role, grant, allocation, and current scope. It is not a promise that every account sees every action. Public pages, signed-in features, role-restricted controls, subscription-backed capabilities, and intentionally private administration are documented as different availability classes.
+**Worked example:** Kingdom 1625 has a plan with grant-eligible premium processing and a player limit. It offers Aster a grant. Before Aster accepts, Aster remains on its direct alliance plan or Free. After acceptance, and only if no stronger direct alliance plan exists, the grant becomes effective. Aster receives the eligible features and its assigned player allocation. At 80% it sees a warning; at 100% a new quota-consuming write is blocked, while existing records and allowed cleanup remain accessible.
 
-## Before you begin
+## Questions answered
 
-- Confirm the signed-in identity and the player link shown in the account area.
-- Read the current kingdom, alliance, or personal scope before changing data.
-- Open the record itself instead of relying on a notification or an old browser tab.
-- Check whether the status is Included, Granted, Allocated, or Unavailable.
-- If the action affects other people, agree on the intended outcome before saving or publishing.
+- A direct alliance plan controls the alliance before any kingdom grant.
+- A kingdom grant has no effect until accepted and current.
+- Exhausted allocation limits that resource for the alliance; unused kingdom capacity is not silently borrowed.
+- Analytics sharing does not grant management access.
+- Limited mode does not mean all data disappears; the interface identifies the remaining safe actions.
+- A plan label alone is insufficient: source, feature eligibility, allocation, current usage, and suspension all contribute to the visible result.
 
-## Controls and information you will use
+If access appears wrong, compare the selected alliance, source label, grant status and dates, allocation, usage percentage, and suspension message before submitting another request.
 
-The relevant controls are: **Compare plan, role, grant, allocation, and current scope**. Labels may be shortened on a narrow screen, but the scope name, status, primary action, and confirmation remain part of the same task. Filters change the current view; they do not silently move or rewrite the underlying record. A save changes a draft or editable record. Apply, approve, publish, restore, or award are separate decisions when the workflow requires review.
+## Limitations and recovery
 
-<VisualReference title="Recognizing the Plans and Effective Access workspace" :items="['scope and identity context', 'current status and availability', 'primary action with confirmation']">
-Look first for the category icon and subscriptions label, then read the scope line above the working area. The center region presents compare plan, role, grant, allocation, and current scope. A status treatment identifies included, granted, allocated, unavailable, while the final confirmation names the record and community affected.
-</VisualReference>
-
-## Complete the task
-
-1. **Read plan.** Confirm the page title, signed-in identity, and selected scope before entering or changing anything.
-2. **Check grant.** Read existing values and status messages. If information is missing, stop and gather it rather than guessing.
-3. **Check allocation.** Use the available control and review the preview, comparison, or warning. A disabled control usually points to a missing prerequisite.
-4. **Confirm scope.** Read the success message and reopen the affected record. For shared work, verify that the next responsible role can see the expected state.
-
-
-## Status and role differences
-
-| Status | What it means to the reader | Sensible next action |
-| --- | --- | --- |
-| **Included** | The task is at its starting or neutral state. | Continue with read plan. |
-| **Granted** | Work has progressed but another check or decision remains. | Continue with check grant. |
-| **Allocated** | Work has progressed but another check or decision remains. | Continue with check allocation. |
-| **Unavailable** | The workflow reached a final or constrained state. | Verify the outcome and history. |
-
-For plans and effective access, members and community owners see the records and outcomes their current responsibility permits. Alliance roles act within their alliance, while granted kingdom roles can coordinate across communities without silently taking ownership of every source record. Plan access can reveal subscriptions and usage capabilities, but it never replaces the role, status, and scope checks described above. Platform-wide administration remains outside this public handbook.
-
-## Saving, review, and history
-
-While working in plans and effective access, editable values should show a saved state before you leave. Review keeps check grant separate from the later decision to check allocation. Applying or publishing makes the agreed outcome visible to its intended audience. If removal, rollback, or restore is supported here, authorized readers retain enough history to understand the change. Reopen the source record before repeating confirm scope.
-
-## If the result is not what you expected
-
-- **The plans and effective access action is missing:** confirm the selected scope, membership, role, and feature availability.
-- **The action is disabled:** inspect required fields and the current status; a locked or final record may need a correction or review path.
-- **The list looks unchanged:** clear view filters and reopen the source record before submitting again.
-- **Another person sees a different result:** compare scope, date window, role, and publication state.
-- **You need support:** record the page title, scope name, visible status, time, and safe steps to reproduce. Do not include passwords, payment details, or private screenshots.
-
-## Continue learning
-
-- [Grants and Allocations](/kingshot-events/subscriptions/grants-and-allocations)
-- [Requests and Payment States](/kingshot-events/subscriptions/requests-and-payment)
-- [Quotas and Limited Mode](/kingshot-events/subscriptions/quotas-and-limited-mode)
+An effective-plan label does not override role or scope checks, and a quota warning does not itself identify which operation consumed usage. If a write is blocked, confirm the resource named in the message, current allocation, accepted-grant dates, and suspension state. Cleanup may reduce usage, but it does not reactivate an expired plan or grant management rights.
