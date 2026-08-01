@@ -1,0 +1,991 @@
+[
+  {
+    "visualId": "ke-001",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/",
+    "sectionHeading": "Kingshot Events orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Kingshot Events.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Kingshot Events interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-002",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/overview/problems-solved",
+    "sectionHeading": "Problems Kingshot Events Solves orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Problems Kingshot Events Solves.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Problems Kingshot Events Solves interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-003",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/overview/platform-model",
+    "sectionHeading": "How the Platform Fits Together orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for How the Platform Fits Together.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "How the Platform Fits Together interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-004",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/overview/terminology",
+    "sectionHeading": "Product Terminology orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Product Terminology.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Product Terminology interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-005",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/overview/feature-availability",
+    "sectionHeading": "Feature Availability orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Feature Availability.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Feature Availability interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-006",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/getting-started/first-visit",
+    "sectionHeading": "Your First Visit orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Your First Visit.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Your First Visit interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-007",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/getting-started/account-and-profile",
+    "sectionHeading": "Account and Profile orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Account and Profile.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Account and Profile interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-008",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/getting-started/access-and-navigation",
+    "sectionHeading": "Choosing Scope and Understanding Access orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Choosing Scope and Understanding Access.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Choosing Scope and Understanding Access interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-009",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/players/directory-and-profiles",
+    "sectionHeading": "Player Directory and Profiles orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Player Directory and Profiles.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Player Directory and Profiles interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-010",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/players/manage-players",
+    "sectionHeading": "Adding and Updating Players orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Adding and Updating Players.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Adding and Updating Players interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-011",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/players/linking-and-sync",
+    "sectionHeading": "Player Linking and Synchronization orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Player Linking and Synchronization.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Player Linking and Synchronization interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-012",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/players/lifecycle",
+    "sectionHeading": "Activity, Attributes, Removal, and Restore orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Activity, Attributes, Removal, and Restore.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Activity, Attributes, Removal, and Restore interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-013",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/kingdoms-and-alliances/scopes",
+    "sectionHeading": "How Scopes Work orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for How Scopes Work.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "How Scopes Work interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-014",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/kingdoms-and-alliances/alliance-work",
+    "sectionHeading": "Working Inside an Alliance orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Working Inside an Alliance.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Working Inside an Alliance interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-015",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/kingdoms-and-alliances/kingdom-work",
+    "sectionHeading": "Working Inside a Kingdom orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Working Inside a Kingdom.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Working Inside a Kingdom interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-016",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/events/overview",
+    "sectionHeading": "Event Tracking Overview orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Event Tracking Overview.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Event Tracking Overview interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-017",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/events/participation-and-scores",
+    "sectionHeading": "Participation and Score Events orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Participation and Score Events.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Participation and Score Events interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-018",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/events/manual-entry",
+    "sectionHeading": "Entering Results Manually orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Entering Results Manually.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Entering Results Manually interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-019",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/events/review-and-history",
+    "sectionHeading": "Reviewing Results and Event History orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Reviewing Results and Event History.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Reviewing Results and Event History interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-020",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/events/event-specific-behavior",
+    "sectionHeading": "Event-Specific Behavior orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Event-Specific Behavior.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Event-Specific Behavior interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-021",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/imports/screenshot-import",
+    "sectionHeading": "Screenshot Import orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Screenshot Import.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Screenshot Import interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-022",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/imports/review-imported-data",
+    "sectionHeading": "Reviewing Imported Data orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Reviewing Imported Data.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Reviewing Imported Data interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-023",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/imports/data-rules",
+    "sectionHeading": "Duplicate, Date, and Overwrite Handling orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Duplicate, Date, and Overwrite Handling.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Duplicate, Date, and Overwrite Handling interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-024",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/imports/import-troubleshooting",
+    "sectionHeading": "Import Troubleshooting orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Import Troubleshooting.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Import Troubleshooting interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-025",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/analytics/activity-and-results",
+    "sectionHeading": "Activity, Player, and Event Analytics orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Activity, Player, and Event Analytics.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Activity, Player, and Event Analytics interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-026",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/analytics/rewards-and-statuses",
+    "sectionHeading": "Reward Eligibility and Statuses orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Reward Eligibility and Statuses.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Reward Eligibility and Statuses interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-027",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/castle-positions/",
+    "sectionHeading": "Castle Positions Overview orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Castle Positions Overview.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Castle Positions Overview interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-028",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/castle-positions/applicant-guide",
+    "sectionHeading": "Castle Position Applicant Guide orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Castle Position Applicant Guide.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Castle Position Applicant Guide interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-029",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/castle-positions/review-workflow",
+    "sectionHeading": "Castle Position Review Workflow orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Castle Position Review Workflow.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Castle Position Review Workflow interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-030",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/castle-positions/planning-and-publishing",
+    "sectionHeading": "Planning, Scheduling, and Publishing orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Planning, Scheduling, and Publishing.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Planning, Scheduling, and Publishing interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-031",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/castle-positions/statuses-and-changes",
+    "sectionHeading": "Castle Position Statuses and Changes orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Castle Position Statuses and Changes.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Castle Position Statuses and Changes interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-032",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/knowledge-hub/reading-and-finding",
+    "sectionHeading": "Reading and Finding Knowledge orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Reading and Finding Knowledge.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Reading and Finding Knowledge interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-033",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/knowledge-hub/access-and-translation",
+    "sectionHeading": "Knowledge Access and Browser Translation Assistance orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Knowledge Access and Browser Translation Assistance.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Knowledge Access and Browser Translation Assistance interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-034",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/knowledge-hub/reading-verification",
+    "sectionHeading": "Reading Verification orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Reading Verification.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Reading Verification interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-035",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/knowledge-hub/authoring-and-publication",
+    "sectionHeading": "Knowledge Authoring, Review, and Publication orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Knowledge Authoring, Review, and Publication.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Knowledge Authoring, Review, and Publication interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-036",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/lab/",
+    "sectionHeading": "Lab Overview and Profiles orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Lab Overview and Profiles.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Lab Overview and Profiles interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-037",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/lab/account-progress-planner",
+    "sectionHeading": "Account Progress Planner orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Account Progress Planner.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Account Progress Planner interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-038",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/lab/gear-and-charms",
+    "sectionHeading": "Hero Gear, Governor Gear, and Charms orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Hero Gear, Governor Gear, and Charms.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Hero Gear, Governor Gear, and Charms interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-039",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/lab/bear-rally-battle",
+    "sectionHeading": "Bear Trap, Rally, and Battle Simulators orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Bear Trap, Rally, and Battle Simulators.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Bear Trap, Rally, and Battle Simulators interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-040",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/lab/interpreting-results",
+    "sectionHeading": "Interpreting Lab Results and Limitations orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Interpreting Lab Results and Limitations.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Interpreting Lab Results and Limitations interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-041",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/subscriptions/",
+    "sectionHeading": "Subscription Overview orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Subscription Overview.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Subscription Overview interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-042",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/subscriptions/access-and-usage",
+    "sectionHeading": "Subscription Access, Scope, and Usage orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Subscription Access, Scope, and Usage.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Subscription Access, Scope, and Usage interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  },
+  {
+    "visualId": "ke-043",
+    "product": "Kingshot Events",
+    "pagePath": "/kingshot-events/subscriptions/troubleshooting",
+    "sectionHeading": "Subscription Troubleshooting orientation",
+    "visualType": "anonymized interface capture",
+    "safeDescription": "An anonymized orientation view for Subscription Troubleshooting.",
+    "requiredVisibleElements": [
+      "page title",
+      "scope or profile context when relevant",
+      "primary workflow area",
+      "visible outcome or status"
+    ],
+    "elementsToRedact": [
+      "real names",
+      "email addresses",
+      "player identifiers",
+      "private community records",
+      "tokens and keys"
+    ],
+    "recommendedAltText": "Subscription Troubleshooting interface showing the main context, workflow, and result areas.",
+    "status": "needed"
+  }
+]
