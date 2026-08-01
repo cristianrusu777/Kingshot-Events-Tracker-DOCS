@@ -37,3 +37,11 @@ Check the selected alliance before changing roster or event records.
 
 - [manage players](/kingshot-events/players/manage-players)
 - [review and history](/kingshot-events/events/review-and-history)
+
+## Practical depth
+
+### An alliance operating rhythm
+
+Maintain roster identity before collecting evidence. Review warnings during input, inspect coverage after the event, correct source rows where necessary, and publish rewards or reports only from an agreed date window and rule set.
+
+For an alliance operating rhythm, read the current status and confirmation on the source record before acting again. If two people see different results, compare identity, scope, role, filters, date window, and publication version. Preserve the record name, visible message, approximate time, and safe steps to reproduce. Note whether refreshing or reopening changed the observation, but do not repeat an irreversible action as a test. Never include credentials, payment information, private exports, or unrelated player data in support evidence.

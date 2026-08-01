@@ -2,10 +2,12 @@ import type { DefaultTheme } from 'vitepress'
 import { publishedPages } from './publication-manifest.mts'
 
 const productOrder = [
-  'Overview', 'Getting Started', 'Players', 'Kingdoms and Alliances',
+  'Overview', 'Getting Started', 'Accounts and Access', 'Scopes and Communities',
+  'Players', 'Kingdoms and Alliances',
   'Events and Results', 'Imports and Data Entry', 'Analytics and Rewards',
   'Castle Positions', 'Knowledge Hub', 'Simulations and Optimizations',
-  'Subscriptions', 'Role Journeys', 'Troubleshooting', 'Updates'
+  'Subscriptions and Usage', 'Subscriptions', 'Platform Lifecycles',
+  'Role Journeys', 'Troubleshooting', 'Updates'
 ]
 
 const trustPages = publishedPages.filter((page) => page.navigationSection === 'Support and Policies')
