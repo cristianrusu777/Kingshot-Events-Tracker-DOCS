@@ -27,7 +27,7 @@
     "visualType": "anonymized interface capture",
     "safeDescription": "Read the active context from broadest to most specific.",
     "requiredVisibleElements": [
-      "Server or kingdom identifier.",
+      "Server identifier and selected kingdom shown as distinct hierarchy levels.",
       "Selected alliance when the task is alliance-specific.",
       "Player, event occurrence, or workflow item inside that scope."
     ],
@@ -36,7 +36,7 @@
       "player identifiers and private community records",
       "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "How the Platform Fits Together interface showing Server or kingdom identifier.; Selected alliance when the task is alliance-specific.; Player, event occurrence, or workflow item inside that scope..",
+    "recommendedAltText": "How the Platform Fits Together interface showing a server containing a selected kingdom, then an alliance when the task is alliance-specific, followed by the player, event occurrence, or workflow item inside that scope.",
     "status": "needed"
   },
   {
@@ -194,7 +194,7 @@
     "visualType": "anonymized interface capture",
     "safeDescription": "Confirm the community context in both the application shell and the page-level selector.",
     "requiredVisibleElements": [
-      "Active kingdom with server code and available alliance selector.",
+      "Active server, selected kingdom, and available alliance selector as distinct controls.",
       "Locked selector when an assignment fixes the viewer to one scope.",
       "Page context banner on Players, Events, Imports, Analytics, or Castle Positions.",
       "Empty, forbidden, or missing-assignment feedback after a scope change."
@@ -204,7 +204,7 @@
       "player identifiers and private community records",
       "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "How Scopes Work interface showing Active kingdom with server code and available alliance selector.; Locked selector when an assignment fixes the viewer to one scope.; Page context banner on Players, Events, Imports, Analytics, or Castle Positions..",
+    "recommendedAltText": "How Scopes Work interface showing the active server, selected kingdom, and available alliance selector as separate hierarchy levels; a locked selector where an assignment fixes the viewer to one scope; and the page context banner.",
     "status": "needed"
   },
   {
@@ -236,7 +236,7 @@
     "visualType": "anonymized interface capture",
     "safeDescription": "Kingdom-level actions must repeat the selected kingdom and affected alliance where relevant.",
     "requiredVisibleElements": [
-      "Kingdom name and server code with eligible alliance selector.",
+      "Server context, kingdom name, and eligible alliance selector shown separately.",
       "Alliance summaries and granted-analytics or subscription-allocation state.",
       "Kingdom Analytics and cross-alliance drill-downs.",
       "Castle Positions instance, candidate review, planner, and publication status."
@@ -246,7 +246,7 @@
       "player identifiers and private community records",
       "credentials, provider keys, tokens, and payment details"
     ],
-    "recommendedAltText": "Working Inside a Kingdom interface showing Kingdom name and server code with eligible alliance selector.; Alliance summaries and granted-analytics or subscription-allocation state.; Kingdom Analytics and cross-alliance drill-downs..",
+    "recommendedAltText": "Working Inside a Kingdom interface showing server context, kingdom name, and eligible alliance selector separately, followed by alliance summaries, access state, Kingdom Analytics, and cross-alliance drill-downs.",
     "status": "needed"
   },
   {

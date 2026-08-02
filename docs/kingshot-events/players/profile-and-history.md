@@ -5,7 +5,9 @@ product: 'Kingshot Events'
 audience: 'Players and roster managers'
 experienceLevel: 'Advanced'
 featureArea: 'Players'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 <CategoryHero category="players" icon="people" eyebrow="A dependable roster" title="Profile, Identity, Activity, and History">
@@ -13,6 +15,8 @@ One account can identify a person using the platform, while the player record pr
 </CategoryHero>
 
 # Profile, Identity, Activity, and History
+
+The history timeline records the visible sequence of supported identity, scope, activity, and record changes without replacing the current profile.
 
 ## Four identity layers
 
@@ -65,6 +69,8 @@ flowchart TD
   F --> I["Save status and matching attributes"]
   H --> I
 ```
+
+**Accessible summary:** Activity uses current eligible results and prioritized rules; a manual override wins until cleared, after which the first matching rule or Unknown becomes primary.
 
 **Worked example:** Nia has four tracked results: three Active and one Inactive. Participation is 75%, the missed-event count is one, and score metrics use only scored rows. Which label appears depends on the enabled scoped rules. If a manager temporarily overrides Nia to Semi-active with a reason, that label wins. Clearing it causes the next recalculation to evaluate the 75% metrics again.
 

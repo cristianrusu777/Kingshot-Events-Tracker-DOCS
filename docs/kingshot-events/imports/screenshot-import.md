@@ -40,6 +40,8 @@ flowchart LR
   E --> F["Saved records and analytics"]
 ```
 
+**Accessible summary:** Select context, process an eligible image, review every candidate row, and accept only correct rows before records and analytics change.
+
 <VisualReference title="Screenshot upload landmarks">
 Verify the context summary before selecting a processor or image.
 

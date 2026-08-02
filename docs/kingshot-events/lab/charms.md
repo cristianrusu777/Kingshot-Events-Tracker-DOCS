@@ -5,7 +5,9 @@ product: 'Kingshot Events'
 audience: 'Charm planner users'
 experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Charm Optimization Logic
@@ -22,11 +24,17 @@ Starting inventory is the normalization reference for the whole run. The compari
 
 ```mermaid
 flowchart TD
- A["18 charm slots, locks, weights, Guides, Designs"] --> B["Generate affordable next upgrades"]
- B --> C["Calculate weighted stat gain"]
- C --> D["Normalize by scarce materials"]
- D --> E["Apply best step and repeat"]
+ A["18 charm slots, locks, weights, Guides, Designs"] --> B["Generate unlocked next upgrades"]
+ B --> C["Remove maximum or unaffordable candidates"]
+ C --> D["Calculate weighted stat gain"]
+ D --> E["Normalize by scarce materials"]
+ E --> F{"Positive candidate remains?"}
+ F -- "No" --> G["Return steps, spending, and leftovers"]
+ F -- "Yes" --> H["Apply best step and consume materials"]
+ H --> B
 ```
+
+**Accessible summary:** The optimizer filters next charm upgrades, compares their weighted gain against scarce materials, applies the best positive step, and repeats until no valid candidate remains.
 
 **Example:** Two Archer slots have equal stat gain, but one consumes a larger share of the limited Designs. The lower normalized cost can win. After it consumes Guides, a Cavalry candidate may become the best remaining option. Changing troop priorities can change the sequence without changing the catalog costs.
 

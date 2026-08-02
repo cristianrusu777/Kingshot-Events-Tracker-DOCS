@@ -5,7 +5,9 @@ product: 'Kingshot Events'
 audience: 'Members, alliance leaders, and kingdom managers'
 experienceLevel: 'Advanced'
 featureArea: 'Scopes and Communities'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 <CategoryHero category="scopes-and-communities" icon="network" eyebrow="Work in the right community" title="Hierarchy and Scope Switching">
@@ -14,7 +16,11 @@ Scope decides which community owns a record. Role decides what you may do inside
 
 # Hierarchy and Scope Switching
 
-Kingshot Events models a server as a **kingdom**, a kingdom as the parent of its **alliances**, and an alliance as the current home of its **players**. A user account can hold several active assignments. Each assignment names a role and either a kingdom or an alliance. The active scope is resolved from the kingdom and alliance selected in the interface, not merely from the strongest role on the account.
+Scope switching changes the active context used by scoped lists, actions, and summaries; it does not move records between levels.
+
+Kingshot Events treats **server** and **kingdom** as distinct levels. A server contains one or more kingdoms, a kingdom contains its **alliances**, and an alliance is the current home of its **players**. A user account can hold several active assignments. Each assignment names a role and a scope within that hierarchy. The active scope is resolved from the server, kingdom, and alliance when required, as selected in the interface, not merely from the strongest role on the account.
+
+Do not substitute “server” for “kingdom” when reporting a scope problem. Include both identifiers when they are visible: the server establishes the outer context, while the kingdom determines the community container used by kingdom-scoped records and assignments.
 
 ## Scope resolution order
 

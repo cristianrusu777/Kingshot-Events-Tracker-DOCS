@@ -27,6 +27,8 @@ flowchart LR
   E --> F["Participant view and change notices"]
 ```
 
+**Accessible summary:** Applications move through review and draft planning; only publication creates the participant schedule and later change notices.
+
 An accepted application is not a guaranteed assignment. A requested time is not confirmed until the published schedule contains the player. Suggestions do not appoint players automatically.
 
 ## Start by perspective

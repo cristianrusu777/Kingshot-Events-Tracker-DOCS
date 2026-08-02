@@ -5,7 +5,9 @@ product: 'Kingshot Events'
 audience: 'Rally leaders and scenario reviewers'
 experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Bear Trap Calculation and Result Anatomy
@@ -21,6 +23,8 @@ flowchart TD
  E --> F["Estimated rally damage and event score"]
  F --> G["Compare with observed result and prediction error"]
 ```
+
+**Accessible summary:** Validated profile and scenario inputs resolve supported troop, hero, skill, Truegold, and buff effects into contributions, estimated output, and optional prediction error.
 
 The calculation first validates capacities and formation totals. It then resolves the newest hero generation, troop tier actually sent, Truegold state, stat source, included progression layers, and temporary effects. Active hero skills are limited to the slots that actually apply to the march role. Troop intrinsic effects and Truegold effects carry evidence labels. Unsupported higher-tier effects are not silently invented.
 
