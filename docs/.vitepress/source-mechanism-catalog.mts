@@ -217,7 +217,44 @@ export const sourceMechanismCatalog = [
     ['SRC-147', 'reading session revision pinning', 'pins published revision', 'assignment'],
     ['SRC-148', 'reading session report boundary', 'Authorized report', 'manager']
   ])
-  ,...group('Subscriptions and Usage', 'kingshot-events/subscriptions/plans-and-effective-access.md', 'src/application/subscriptions; src/domain/subscriptions', [
+  ,...group('Product Orientation', 'kingshot-events/index.md', 'src/frontend/app/routes.ts; src/frontend/appPages; src/application; src/domain', [
+    ['SRC-151', 'complete product capability guide', 'Complete product capability guide', 'operating workspace'],
+    ['SRC-152', 'identity scope availability evidence chain', 'How to evaluate any feature', 'Identity'],
+    ['SRC-153', 'multi-path contribution intake', 'Screenshot, spreadsheet, and structured imports', 'reviewed subset'],
+    ['SRC-154', 'governed planning and publishing overview', 'Knowledge Hub is the governed publishing system', 'Lab is the planning and simulation workspace'],
+    ['SRC-155', 'lifecycle recovery orientation', 'Reports, notifications, deletion, and recovery', 'recovery is part of a reliable product']
+  ])
+  ,...group('Simulations and Optimizations', 'kingshot-events/lab/index.md', 'src/frontend/appPages/simulators; src/domain/simulators; src/domain/game-data; src/application/simulators', [
+    ['SRC-156', 'Lab hub state handling', 'Hub states and module availability', 'loading, unavailable, empty, ready, and error'],
+    ['SRC-157', 'profile library lifecycle', 'Profile library and persistence', 'create, select, rename, duplicate, update, and remove'],
+    ['SRC-158', 'profile troop and capacity model', 'march capacities and troop counts', 'Truegold'],
+    ['SRC-159', 'profile hero and skill model', 'selected heroes, skill levels', 'supported widgets'],
+    ['SRC-160', 'stat snapshot provenance', 'Stat snapshots, sources, and layers', 'Source labels'],
+    ['SRC-161', 'Hero Gear objective planning', 'Hero Gear planning and reforge', 'optimization objective'],
+    ['SRC-162', 'Governor Gear planning overview', 'Governor Gear', 'remaining resources'],
+    ['SRC-163', 'Charm candidate exclusion', 'Charm planning evaluates', 'candidate can disappear'],
+    ['SRC-164', 'Bear simulation and observed contribution split', 'Simulate and contribute', 'Share Your Bear Experience'],
+    ['SRC-165', 'Rally effect acceptance breakdown', 'accepted and rejected effects', 'resulting multipliers'],
+    ['SRC-166', 'repeat battle distribution', 'worker-backed repeated model', 'distribution across repeated runs'],
+    ['SRC-167', 'Game Data reference surface', 'Game Data is the reference surface', 'Search and category navigation'],
+    ['SRC-168', 'Lab evidence class labels', 'Result trust labels', 'Observed contribution']
+  ])
+  ,...group('Knowledge Hub', 'kingshot-events/knowledge-hub/index.md', 'src/frontend/appPages/knowledge/KnowledgeApp.tsx; src/frontend/appPages/knowledge/KnowledgeStudio.tsx; src/application/knowledge', [
+    ['SRC-169', 'Knowledge home and recommendations', 'Home, directories, and recommendations', 'canonical routes'],
+    ['SRC-170', 'typed Knowledge search', 'Search and structured databases', 'hero, event, and mechanic records'],
+    ['SRC-171', 'article reader presentation controls', 'adjustable font size', 'cover-image lightbox'],
+    ['SRC-172', 'server-selected access projection', 'Access policies, projections, and teasers', 'before delivery'],
+    ['SRC-173', 'Knowledge spaces', 'Spaces group material', 'editorial ownership'],
+    ['SRC-174', 'block-based Studio drafts', 'Studio drafts and the block library', 'validated blocks'],
+    ['SRC-175', 'managed Knowledge media', 'Media and Asset Picker', 'accessibility text'],
+    ['SRC-176', 'AI writing assistant modes', 'create a proposed passage', 'rewrite a selected passage'],
+    ['SRC-177', 'AI Structured Import editing', 'AI Structured Import', 'merge or move sections'],
+    ['SRC-178', 'revision comparison workflow', 'Review queue and Revision Diff', 'additions and removals'],
+    ['SRC-179', 'canonical publication lifecycle', 'Revision, publication, and archive lifecycle', 'canonical revision'],
+    ['SRC-180', 'browser-only translation assistance', 'Browser Translation Assistance', 'does not create, store, approve, or publish'],
+    ['SRC-181', 'Reading Verification guarded reveal', 'explicitly chooses **Open seal**', 'validates the session and assignment'],
+    ['SRC-182', 'Knowledge recovery map', 'Recovery map', 'Imported structure is wrong']
+  ])  ,...group('Subscriptions and Usage', 'kingshot-events/subscriptions/plans-and-effective-access.md', 'src/application/subscriptions; src/domain/subscriptions', [
     ['SRC-149', 'effective entitlement order', 'Direct alliance plan', 'kingdom grant'],
     ['SRC-150', 'quota limited mode', 'Limited mode', 'quota-consuming writes']
   ])
