@@ -80,7 +80,7 @@ Cross-alliance analytics requires more than a visible kingdom. A viewer must be 
 
 ## Limitations
 
-The public interface explains the effective outcome, not raw permission identifiers. Some pages select the best available subscription-bearing context when no explicit scope is supplied, but writes still require an explicit valid tenant context. Platform-wide administration is outside this handbook.
+The public interface explains the effective outcome, not raw permission identifiers. Some pages select the best available subscription-bearing context when no explicit scope is supplied, but writes still require an explicit valid tenant context. This handbook stops at user-visible scope, state, and recovery outcomes.
 
 ## Connected decision maps
 

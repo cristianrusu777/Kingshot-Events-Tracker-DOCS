@@ -42,7 +42,7 @@ stateDiagram-v2
 
 ## Reviewer boundary and recovery
 
-Authorized privacy reviewers have a separate management console for status work. A status label such as pending, in review, in progress, fulfilled, complete, rejected, or denied describes the request, not the underlying account's general access.
+Authorized privacy reviewers can update the request through its governed status workflow. A status label such as pending, in review, in progress, fulfilled, complete, rejected, or denied describes the request, not the underlying account's general access.
 
 **Example:** An account holder requests portability. They track the same request until it is fulfilled, then download the generated export from its record. They do not file a deletion request as a way to refresh the export.
 

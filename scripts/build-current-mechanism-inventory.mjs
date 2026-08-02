@@ -5,6 +5,7 @@ import { sourceMechanismCatalog } from '../docs/.vitepress/source-mechanism-cata
 const root = path.resolve(import.meta.dirname, '..')
 const docs = path.join(root, 'docs')
 const reports = path.join(root, 'reports')
+fs.mkdirSync(reports, { recursive: true })
 const normalized = (value) => value.toLocaleLowerCase('en-US').replace(/\s+/g, ' ')
 
 const records = sourceMechanismCatalog.map((item) => {

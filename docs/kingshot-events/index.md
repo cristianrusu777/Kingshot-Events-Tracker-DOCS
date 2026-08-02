@@ -149,6 +149,88 @@ Kingshot Events does not guarantee extracted text, identical permissions across 
 These boundaries make uncertainty visible and provide a safe next action instead of presenting automation as unquestionable truth.
 <ProductFinder />
 
+## Complete product capability guide
+
+Kingshot Events is not one isolated tracker. It is an operating workspace that connects identity, scoped collaboration, event preparation, contribution intake, review, analytics, knowledge, and planning. The list below is the fastest way to understand what the project can do and where each result comes from.
+
+### Dashboard and orientation
+
+The dashboard answers three questions first: **where am I working, what needs attention, and what can I do next?** The selected kingdom or alliance gives every card its context. Visible navigation depends on identity, role, plan, grants, quotas, and module availability. Empty states lead to setup or recovery instead of pretending that missing data is a zero.
+
+### Accounts, security, roles, and approvals
+
+Accounts establish identity; roles establish authority inside a scope. Registration, sign-in, verification, recovery, session management, and deletion are separate lifecycle operations. Invitations and join requests create reviewable membership changes. Elevated actions require the appropriate kingdom or alliance role and remain inside the documented community scope.
+
+### Server, kingdom, alliance, and player scopes
+
+Server records hold the broad game context. Kingdoms and alliances narrow ownership and collaboration. Players can move between alliances without losing the historical meaning of earlier contributions. Every important record should be read with its scope, owner, timestamp, and current state; a matching name alone is not enough evidence.
+
+### Players, identity, membership, and history
+
+Player records connect game identity to imports, event participation, rewards, and analytics. Membership history explains which alliance a player represented at a particular time. Aliases and identifiers help reconcile repeated imports without silently merging different people. Corrections remain deliberate so that a convenient edit cannot rewrite historical attribution unnoticed.
+
+### Events, templates, instances, sessions, and proposals
+
+A template describes reusable rules. An event instance places those rules into a kingdom or alliance schedule. Sessions divide collection or participation into operational windows. Proposals allow contributors to suggest changes that reviewers can accept, reject, or return. Status transitions distinguish draft preparation, active collection, completion, archive, and recovery.
+
+### Manual entry and correction
+
+Manual entry is the smallest trustworthy input path. The contributor selects the correct event and scope, enters the requested values, reviews validation feedback, and submits. Reviewers resolve duplicates or suspicious values before accepted data affects downstream views. A correction should preserve who changed what and why.
+
+### Screenshot, spreadsheet, and structured imports
+
+Bulk intake accelerates work but never removes review. Screenshot extraction proposes fields from an image. Spreadsheet import maps columns and previews rows. Structured import parses supported data into editable candidates. In every case, the operator confirms scope, resolves uncertain identities and duplicates, and commits only the reviewed subset.
+
+### Preparation and KvK workflows
+
+Preparation tools turn event rules into an actionable checklist: phases, objectives, timing, assignments, and expected contribution. KvK workflows preserve the relationship between preparation activity and its event context. They help coordinators organize work; they do not claim that the platform performs actions inside the game.
+
+### Analytics, activity, recommendations, and rewards
+
+Analytics summarize accepted evidence rather than raw submissions. Activity views show participation and change over time. Recommendations explain the inputs and assumptions behind a suggested next action. Reward tooling records rules, eligibility, calculations, approvals, and delivery state so that a final number can be traced back to its evidence.
+
+### Castle applications and schedules
+
+Castle workflows collect applications, availability, and scheduling decisions in one scoped process. The platform separates a player's request from the coordinator's decision and from the published schedule. Conflicts and changes remain visible so participants can understand the current assignment.
+
+### Knowledge Hub
+
+Knowledge Hub is the governed publishing system. It combines searchable guides, structured hero/event/mechanic references, spaces, rich block-based authoring, media assets, assisted drafting and import, review queues, revision comparison, publication, archive, access policies, translation assistance, and Reading Verification. Readers receive only the projection their identity and access permit.
+
+### Lab
+
+Lab is the planning and simulation workspace. Reusable profiles hold troops, heroes, skills, combat statistics, equipment, resources, and provenance. Hero Gear, Governor Gear, Charms, Bear Trap, Rally, Battle, and Game Data tools compare explicit scenarios and preserve their assumptions. Results are planning evidence, not promises of live-game outcomes.
+
+### Plans, grants, quotas, and support requests
+
+Effective access can come from a direct plan or an accepted grant. Quotas limit specific consuming operations without changing historical data. When expected access is missing, support and grant workflows provide a reviewable path instead of encouraging users to bypass policy.
+
+### Reports, notifications, deletion, and recovery
+
+Reports package authorized views for operational use. Notifications point users to changes that concern their scope. Deletion is a lifecycle with confirmation and retention boundaries, not an invisible disappearance. Archive, restore, retry, and support paths are documented beside the normal path because recovery is part of a reliable product.
+
+### Updates and module availability
+
+Release information explains what changed, while availability controls explain whether a module is enabled for the current environment and user. A navigation item may be absent because of scope, role, rollout, entitlement, or configuration. The correct response is to inspect availability and access, not to assume the underlying records were deleted.
+
+## How to evaluate any feature
+
+Use the same evidence chain throughout the product:
+
+| Question | What to verify |
+| --- | --- |
+| Identity | Which signed-in account performs the action? |
+| Scope | Which server, kingdom, alliance, player, event, or article owns the record? |
+| Availability | Is the module enabled and visible for this context? |
+| Input | Was the value entered manually, imported, selected from a profile, or derived? |
+| Validation | Which required fields, ranges, duplicates, and permissions were checked? |
+| Review | Does a proposal, import, publication, reward, or application need approval? |
+| State change | What moved from draft to submitted, accepted, published, completed, or archived? |
+| Output | Is the result a record, schedule, report, recommendation, simulation, or assignment? |
+| History | Can the user identify the revision, actor, timestamp, and source evidence? |
+| Recovery | Can the action be corrected, retried, restored, or escalated without inventing data? |
+
+This model is the thread connecting every guide. When a page describes a feature, it should explain not only the button path but also the evidence accepted, the state changed, the output produced, and the safe recovery route.
 ## Explore by product area
 
 <LinkGrid :items='[

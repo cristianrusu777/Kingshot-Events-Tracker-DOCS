@@ -364,6 +364,66 @@ export const searchIndex = [
         "text": "Search cards and teasers contain only permitted projection fields. Protected bodies must not be downloaded and hidden client-side. Browser Translation Assistance uses the browser and does not store a translated revision. Assisted import can propose content, but authors and reviewers remain responsible for accuracy, source quality, audience, and confidentiality. If an article is missing, troubleshoot published state, canonical route, identity, scope, premium access, search terms, and archive state. If publication fails, inspect block validation, media metadata, review status, and authority. If a seal remains collapsed, confirm session and assignment before selecting Open seal ; if reveal fails, never paste a fragment from another reader."
       },
       {
+        "heading": "Home, directories, and recommendations",
+        "text": "The Knowledge home page combines editorial entry points with the permitted content projection for the current reader. Directories organize articles and structured references without bypassing access rules. Recommendations provide the next relevant reading path; they are not a separate copy of protected content and must use the same publication and access decisions as canonical routes."
+      },
+      {
+        "heading": "Search and structured databases",
+        "text": "Search covers eligible articles plus supported hero, event, and mechanic records. Filters and result types help distinguish a guide from a structured entity. Search indexes only fields allowed for discovery. A protected body must not be shipped to the browser and merely hidden with styling. Structured databases give stable facts a queryable home while articles provide interpretation, procedures, examples, and policy."
+      },
+      {
+        "heading": "Article reader controls",
+        "text": "The reader surface supports practical long-form use: adjustable font size, reading theme, cover-image lightbox, share action, mobile or desktop table of contents, related recommendations, and return-to-top navigation. These controls change presentation or navigation, not the canonical revision. A shared link still passes through the recipient's own identity and access evaluation."
+      },
+      {
+        "heading": "Access policies, projections, and teasers",
+        "text": "Publication answers whether a revision is ready; access answers which projection a reader may receive. Policy can consider identity, scope, role, plan, and accepted grants. Public metadata or an allowed teaser may be returned when the body is restricted. The server selects that projection before delivery so restricted blocks do not exist in an unauthorized browser response."
+      },
+      {
+        "heading": "Spaces",
+        "text": "Spaces group material by purpose, team, program, or subject. They provide navigation and editorial ownership without replacing article-level state. Moving or featuring an article changes organization; it must not silently broaden its audience or rewrite its canonical revision."
+      },
+      {
+        "heading": "Studio drafts and the block library",
+        "text": "Knowledge Studio is the authoring workspace. A draft is separate from the currently published canonical revision. Authors build content from validated blocks such as headings, paragraphs, lists, callouts, media, tables, references, and supported interactive or verification markers. Block validation catches incomplete structure before review or publication."
+      },
+      {
+        "heading": "Media and Asset Picker",
+        "text": "The media library and Asset Picker let authors choose managed assets rather than paste untraceable references. Selection should preserve asset identity, metadata, accessibility text, and permitted usage. Replacing an asset in a draft is an editorial change; publication still determines which revision readers receive."
+      },
+      {
+        "heading": "AI writing assistant",
+        "text": "The writing assistant can create a proposed passage, rewrite a selected passage, or help derive metadata. Its output remains draft content. The author must verify accuracy, scope, sources, confidentiality, tone, and block placement, and reviewers see the resulting revision through the normal workflow. Assistance never grants publication authority."
+      },
+      {
+        "heading": "AI Structured Import",
+        "text": "Structured Import converts supported source material into editable article candidates. Before saving, the author can inspect proposed structure, merge or move sections, remove unwanted material, correct metadata, and resolve unsupported content. Import speed does not weaken provenance or review: the accepted draft still needs an accountable author and the same validation as manually written material."
+      },
+      {
+        "heading": "Review queue and Revision Diff",
+        "text": "The review queue separates items awaiting editorial decision from personal drafts and published articles. Revision Diff helps reviewers navigate changes between versions, inspect additions and removals, and focus on the affected blocks. A reviewer can approve, request changes, or reject according to authority; comparing revisions does not publish them automatically."
+      },
+      {
+        "heading": "Revision, publication, and archive lifecycle",
+        "text": "Edits create revision history. Review records editorial decisions. Publication selects the canonical revision for eligible readers. A later draft does not silently replace that published version. Archive removes material from normal discovery while preserving the governed record and recovery path. Restoration should re-evaluate current policy and canonical state."
+      },
+      {
+        "heading": "Homepage, spaces, and entity management",
+        "text": "Authorized editorial tools manage featured material, spaces, and structured hero, event, or mechanic records. These controls affect discovery and reference data, so they require the same care as article publication: validate ownership, scope, state, and downstream references before committing a change."
+      },
+      {
+        "heading": "Browser Translation Assistance",
+        "text": "Browser Translation Assistance helps a reader render content in another language using browser capabilities. It does not create, store, approve, or publish a translated Knowledge revision. Readers should treat the canonical article language as the governed source and report ambiguous translations instead of editing operational meaning from an automatic rendering."
+      },
+      {
+        "heading": "Reading Verification",
+        "text": "Reading Verification pins a published canonical revision to an authorized session and eligible assignments. A collapsed fragment stays protected until the assigned reader explicitly chooses Open seal and the server validates the session and assignment. Submission can produce correct, nearly correct, incorrect, retry-eligible, or manual-review outcomes. Managers use the scoped dashboard and report to follow progress, close, or archive the session."
+      },
+      {
+        "heading": "Recovery map",
+        "text": "Symptom Verify first Safe next action --- --- --- Article is missing Published state, canonical route, scope, identity, archive state Open the canonical directory or contact the space owner Only a teaser appears Effective access, plan, grant, and policy projection Resolve access, then reload the same canonical route Search cannot find it Eligibility, title terms, result type, publication state Refine filters; do not ask for a protected body copy Draft cannot publish Block validation, media metadata, review state, authority Correct the draft and return it through review Imported structure is wrong Proposed blocks, merges, moves, removals, metadata Edit the candidate before saving a governed draft Revision change is unclear Base revision, target revision, changed blocks Use Revision Diff and request author clarification Seal remains collapsed Session state, assignment, signed-in reader Sel"
+      },
+      {
         "heading": "Worked example",
         "text": "Starting situation: A kingdom-scoped premium article is published and a signed-in alliance member opens it without effective premium access. Rules: Published state passes; identity and kingdom scope pass; premium access fails. Branch: The reader receives the permitted teaser, not the body. State: The article remains published and unchanged. Output reason: Scope does not substitute for premium entitlement. Next action: The reader checks effective access or an accepted grant, then reloads the same canonical article after access changes. Use Knowledge access, publication, and Reading Verification for detailed decision tables, reader and manager flows, and recovery boundaries."
       }
@@ -597,7 +657,7 @@ export const searchIndex = [
       },
       {
         "heading": "Limitations",
-        "text": "The public interface explains the effective outcome, not raw permission identifiers. Some pages select the best available subscription-bearing context when no explicit scope is supplied, but writes still require an explicit valid tenant context. Platform-wide administration is outside this handbook."
+        "text": "The public interface explains the effective outcome, not raw permission identifiers. Some pages select the best available subscription-bearing context when no explicit scope is supplied, but writes still require an explicit valid tenant context. This handbook stops at user-visible scope, state, and recovery outcomes."
       },
       {
         "heading": "Server, kingdom, alliance, and player hierarchy",
@@ -1410,7 +1470,7 @@ export const searchIndex = [
       },
       {
         "heading": "Reviewer boundary and recovery",
-        "text": "Authorized privacy reviewers have a separate management console for status work. A status label such as pending, in review, in progress, fulfilled, complete, rejected, or denied describes the request, not the underlying account's general access. Example: An account holder requests portability. They track the same request until it is fulfilled, then download the generated export from its record. They do not file a deletion request as a way to refresh the export. If submission fails, preserve the selected request type and safe error text, then retry once after refreshing. If history is absent, confirm the signed-in identity. For legal interpretation, use the current privacy and data-rights pages; this guide explains product operation, not legal advice."
+        "text": "Authorized privacy reviewers can update the request through its governed status workflow. A status label such as pending, in review, in progress, fulfilled, complete, rejected, or denied describes the request, not the underlying account's general access. Example: An account holder requests portability. They track the same request until it is fulfilled, then download the generated export from its record. They do not file a deletion request as a way to refresh the export. If submission fails, preserve the selected request type and safe error text, then retry once after refreshing. If history is absent, confirm the signed-in identity. For legal interpretation, use the current privacy and data-rights pages; this guide explains product operation, not legal advice."
       },
       {
         "heading": "Limits and troubleshooting",
@@ -1596,41 +1656,6 @@ export const searchIndex = [
     ]
   },
   {
-    "title": "Processing Console and Provider Health",
-    "path": "/kingshot-events/imports/processing-console",
-    "category": "Imports and Data Entry",
-    "audience": "Import operators and processing administrators",
-    "level": "Advanced",
-    "contentType": "Task guide",
-    "featureArea": "Imports and Data Entry",
-    "aliases": [
-      "screenshot import",
-      "ocr import",
-      "duplicate screenshot",
-      "correct imported rows",
-      "partial extraction"
-    ],
-    "description": "Processing Console and Provider Health Image processing converts submitted evidence into candidate data. The Processing Console and provider-health views explain whether the configured processing services are available and how jobs progress",
-    "sections": [
-      {
-        "heading": "Introduction",
-        "text": "Processing Console and Provider Health Image processing converts submitted evidence into candidate data. The Processing Console and provider-health views explain whether the configured processing services are available and how jobs progress. Successful extraction is not approval to apply rows."
-      },
-      {
-        "heading": "Processing boundary",
-        "text": "Accessible summary: A healthy provider extracts candidates; a human review still decides what becomes product data. Provider status can be enabled, disabled, unavailable, misconfigured, or otherwise unhealthy as exposed by the console. Jobs can be queued, processing, completed, or failed. Use the exact current status rather than repeatedly uploading the same evidence."
-      },
-      {
-        "heading": "Operator procedure",
-        "text": "1. Check the processing category and provider status. 2. Open the existing job and read its error before retrying. 3. Retry only when the failure is transient or the corrected configuration is active. 4. Use manual entry when the product offers it and processing remains unavailable. 5. Review extracted names, dates, stages, values, and duplicates before apply. Example: A job fails because no provider is healthy. The operator does not create five duplicate imports. They confirm provider health, choose the supported manual path for urgent data, and later retry the original job only after service recovery. When escalating, include the job or import identifier, provider category, current status, safe error text, time, and whether a manual fallback was used. Never include provider secrets or protected image contents in a public report."
-      },
-      {
-        "heading": "Limits and troubleshooting",
-        "text": "Provider health does not guarantee correct extraction, and a failed health check does not prove that stored imports were lost. The console is diagnostic; row approval remains in the import review. If a job stays queued, confirm that an eligible provider is enabled for its category and inspect the existing job before retry. If a completed job has no candidates, verify the evidence format and processing output rather than applying an empty import."
-      }
-    ]
-  },
-  {
     "title": "Subscription and Support Requests",
     "path": "/kingshot-events/subscriptions/support-requests",
     "category": "Subscriptions and Usage",
@@ -1669,7 +1694,7 @@ export const searchIndex = [
     "title": "Updates and Module Availability",
     "path": "/kingshot-events/updates/module-availability",
     "category": "Updates",
-    "audience": "Users and platform administrators",
+    "audience": "Kingshot Events users",
     "level": "Advanced",
     "contentType": "Status reference",
     "featureArea": "Updates",
@@ -1764,6 +1789,74 @@ export const searchIndex = [
       {
         "heading": "What the project deliberately does not do",
         "text": "Kingshot Events does not guarantee extracted text, identical permissions across communities, an unchanging published schedule, perfect browser translation, or exact reproduction of undocumented live mechanics. It does not turn read visibility into edit authority and does not treat a dashboard count as the source record. These boundaries make uncertainty visible and provide a safe next action instead of presenting automation as unquestionable truth."
+      },
+      {
+        "heading": "Complete product capability guide",
+        "text": "Kingshot Events is not one isolated tracker. It is an operating workspace that connects identity, scoped collaboration, event preparation, contribution intake, review, analytics, knowledge, and planning. The list below is the fastest way to understand what the project can do and where each result comes from."
+      },
+      {
+        "heading": "Dashboard and orientation",
+        "text": "The dashboard answers three questions first: where am I working, what needs attention, and what can I do next? The selected kingdom or alliance gives every card its context. Visible navigation depends on identity, role, plan, grants, quotas, and module availability. Empty states lead to setup or recovery instead of pretending that missing data is a zero."
+      },
+      {
+        "heading": "Accounts, security, roles, and approvals",
+        "text": "Accounts establish identity; roles establish authority inside a scope. Registration, sign-in, verification, recovery, session management, and deletion are separate lifecycle operations. Invitations and join requests create reviewable membership changes. Elevated actions require the appropriate kingdom or alliance role and remain inside the documented community scope."
+      },
+      {
+        "heading": "Server, kingdom, alliance, and player scopes",
+        "text": "Server records hold the broad game context. Kingdoms and alliances narrow ownership and collaboration. Players can move between alliances without losing the historical meaning of earlier contributions. Every important record should be read with its scope, owner, timestamp, and current state; a matching name alone is not enough evidence."
+      },
+      {
+        "heading": "Players, identity, membership, and history",
+        "text": "Player records connect game identity to imports, event participation, rewards, and analytics. Membership history explains which alliance a player represented at a particular time. Aliases and identifiers help reconcile repeated imports without silently merging different people. Corrections remain deliberate so that a convenient edit cannot rewrite historical attribution unnoticed."
+      },
+      {
+        "heading": "Events, templates, instances, sessions, and proposals",
+        "text": "A template describes reusable rules. An event instance places those rules into a kingdom or alliance schedule. Sessions divide collection or participation into operational windows. Proposals allow contributors to suggest changes that reviewers can accept, reject, or return. Status transitions distinguish draft preparation, active collection, completion, archive, and recovery."
+      },
+      {
+        "heading": "Manual entry and correction",
+        "text": "Manual entry is the smallest trustworthy input path. The contributor selects the correct event and scope, enters the requested values, reviews validation feedback, and submits. Reviewers resolve duplicates or suspicious values before accepted data affects downstream views. A correction should preserve who changed what and why."
+      },
+      {
+        "heading": "Screenshot, spreadsheet, and structured imports",
+        "text": "Bulk intake accelerates work but never removes review. Screenshot extraction proposes fields from an image. Spreadsheet import maps columns and previews rows. Structured import parses supported data into editable candidates. In every case, the operator confirms scope, resolves uncertain identities and duplicates, and commits only the reviewed subset."
+      },
+      {
+        "heading": "Preparation and KvK workflows",
+        "text": "Preparation tools turn event rules into an actionable checklist: phases, objectives, timing, assignments, and expected contribution. KvK workflows preserve the relationship between preparation activity and its event context. They help coordinators organize work; they do not claim that the platform performs actions inside the game."
+      },
+      {
+        "heading": "Analytics, activity, recommendations, and rewards",
+        "text": "Analytics summarize accepted evidence rather than raw submissions. Activity views show participation and change over time. Recommendations explain the inputs and assumptions behind a suggested next action. Reward tooling records rules, eligibility, calculations, approvals, and delivery state so that a final number can be traced back to its evidence."
+      },
+      {
+        "heading": "Castle applications and schedules",
+        "text": "Castle workflows collect applications, availability, and scheduling decisions in one scoped process. The platform separates a player's request from the coordinator's decision and from the published schedule. Conflicts and changes remain visible so participants can understand the current assignment."
+      },
+      {
+        "heading": "Knowledge Hub",
+        "text": "Knowledge Hub is the governed publishing system. It combines searchable guides, structured hero/event/mechanic references, spaces, rich block-based authoring, media assets, assisted drafting and import, review queues, revision comparison, publication, archive, access policies, translation assistance, and Reading Verification. Readers receive only the projection their identity and access permit."
+      },
+      {
+        "heading": "Lab",
+        "text": "Lab is the planning and simulation workspace. Reusable profiles hold troops, heroes, skills, combat statistics, equipment, resources, and provenance. Hero Gear, Governor Gear, Charms, Bear Trap, Rally, Battle, and Game Data tools compare explicit scenarios and preserve their assumptions. Results are planning evidence, not promises of live-game outcomes."
+      },
+      {
+        "heading": "Plans, grants, quotas, and support requests",
+        "text": "Effective access can come from a direct plan or an accepted grant. Quotas limit specific consuming operations without changing historical data. When expected access is missing, support and grant workflows provide a reviewable path instead of encouraging users to bypass policy."
+      },
+      {
+        "heading": "Reports, notifications, deletion, and recovery",
+        "text": "Reports package authorized views for operational use. Notifications point users to changes that concern their scope. Deletion is a lifecycle with confirmation and retention boundaries, not an invisible disappearance. Archive, restore, retry, and support paths are documented beside the normal path because recovery is part of a reliable product."
+      },
+      {
+        "heading": "Updates and module availability",
+        "text": "Release information explains what changed, while availability controls explain whether a module is enabled for the current environment and user. A navigation item may be absent because of scope, role, rollout, entitlement, or configuration. The correct response is to inspect availability and access, not to assume the underlying records were deleted."
+      },
+      {
+        "heading": "How to evaluate any feature",
+        "text": "Use the same evidence chain throughout the product: Question What to verify --- --- Identity Which signed-in account performs the action? Scope Which server, kingdom, alliance, player, event, or article owns the record? Availability Is the module enabled and visible for this context? Input Was the value entered manually, imported, selected from a profile, or derived? Validation Which required fields, ranges, duplicates, and permissions were checked? Review Does a proposal, import, publication, reward, or application need approval? State change What moved from draft to submitted, accepted, published, completed, or archived? Output Is the result a record, schedule, report, recommendation, simulation, or assignment? History Can the user identify the revision, actor, timestamp, and source evidence? Recovery Can the action be corrected, retried, restored, or escalated without inventing data? "
       },
       {
         "heading": "Problems it helps solve",
@@ -3558,6 +3651,54 @@ export const searchIndex = [
         "text": "- No candidate: check locks, maximum levels, complete costs, positive weights, and every required material. - Sequence stops early: inspect leftovers and the first exhausted resource. - Rally effect rejected: check role, active slot, prerequisite, and stacking category. - Battle distribution extreme: verify both side assignments, counts, percentages, repeat count, and data version. - Different user result: compare profile, overrides, catalog and engine versions, and every control. - Save conflict: preserve values, reload the newer version, and reapply only intended changes. The Lab cannot guarantee global optimality or live results. Its value is a transparent, repeatable comparison whose limitations remain attached."
       },
       {
+        "heading": "Hub states and module availability",
+        "text": "The Lab landing page distinguishes loading, unavailable, empty, ready, and error states. Availability can depend on rollout, access, or configuration; an absent module is not evidence that a saved profile was deleted. Each module card should identify its question, required inputs, output type, and limitations before a user starts changing values."
+      },
+      {
+        "heading": "Profile library and persistence",
+        "text": "The profile library is the reusable source of planning inputs. Users can create, select, rename, duplicate, update, and remove profiles within their permitted scope. Autosave reduces repetitive work, but version checks prevent an older browser tab from silently overwriting newer data. A conflict should preserve local values long enough to compare and reapply the intended change."
+      },
+      {
+        "heading": "What a profile contains",
+        "text": "A complete profile can preserve: - identity and server or kingdom context; - march capacities and troop counts; - troop tier and Truegold-related values; - selected heroes, skill levels, active slots, and supported widgets; - combat-stat snapshots with source labels; - layered bonuses and effective combat values; - hero gear, governor gear, charms, and upgrade state; - shared resource balances used by optimization modules. Missing values remain missing. The Lab must not replace an unknown troop count, level, or source with a plausible-looking default and then present the result as verified."
+      },
+      {
+        "heading": "Stat snapshots, sources, and layers",
+        "text": "A snapshot records the values used by a scenario at a point in time. Source labels distinguish profile values, catalog values, explicit scenario overrides, and observed outcomes. Layer views explain how base values and bonuses combine. This makes two runs comparable and prevents a later profile edit from changing the meaning of an earlier result."
+      },
+      {
+        "heading": "Hero Gear planning and reforge",
+        "text": "Hero Gear supports objective-driven comparisons rather than a single unexplained score. A user selects eligible gear, locks items that must not change, supplies resource balances, chooses weights or an optimization objective, and reviews the proposed upgrade sequence. Reforge planning uses its own controls and cost constraints. Results should show consumed materials, leftovers, stat changes, stopping reason, and whether the plan can be applied back to the selected profile."
+      },
+      {
+        "heading": "Governor Gear",
+        "text": "Governor Gear compares upgrade candidates against shared material limits and the selected objective. It should expose prerequisites, item state, costs, proposed order, and remaining resources. The recommended sequence is a plan for the represented data version; it is not proof that every future catalog or game balance will produce the same order."
+      },
+      {
+        "heading": "Charms",
+        "text": "Charm planning evaluates current levels, eligible next levels, complete cost data, locks, and available materials. A candidate can disappear because it is already at maximum, lacks a valid next level, violates a lock, or needs a missing resource. The result must explain both selected upgrades and the first reason optimization stopped."
+      },
+      {
+        "heading": "Bear Trap: simulate and contribute",
+        "text": "Bear tools have two intentionally different modes. Simulate uses profile and scenario inputs to estimate formation or contribution outcomes and keeps the assumptions visible. Share Your Bear Experience records an observed result as contribution evidence when the signed-in flow permits it. Observed evidence can measure prediction error, but it must not silently rewrite the simulation profile or event history."
+      },
+      {
+        "heading": "Rally setup and effect resolution",
+        "text": "Rally planning separates leader and joiner contributions, active hero slots, troop composition, march capacity, role-specific effects, prerequisites, and stacking categories. Warnings identify invalid assignments or unsupported combinations. The effect breakdown should show accepted and rejected effects, widget or passive contributions, and the resulting multipliers so users can explain the final comparison."
+      },
+      {
+        "heading": "Battle simulation",
+        "text": "Battle simulation compares two explicitly configured sides using a worker-backed repeated model. Users review formations, heroes, counts, tiers, statistics, controls, repeat count, seed or repeatability information when available, and catalog or engine version. The output is a distribution across repeated runs; not a guaranteed live outcome; and should include enough controls to reproduce or challenge the comparison."
+      },
+      {
+        "heading": "Game Data",
+        "text": "Game Data is the reference surface for supported catalogs used by Lab modules. Search and category navigation help users locate heroes, skills, troops, gear, costs, and related records. Version and source labels matter: artwork, catalog completeness, and simulation support can have different statuses, so visual presence alone does not prove that a record participates in every engine."
+      },
+      {
+        "heading": "Result trust labels",
+        "text": "Label Meaning --- --- Profile input Persisted user-controlled planning value Scenario override Temporary value for the current comparison Catalog input Versioned application reference data Derived result Calculated from declared inputs and engine rules Observed contribution User-submitted real outcome with its own context Warning A limitation, missing prerequisite, unsupported combination, or uncertainty Applied plan Confirmed planning-state update; never an in-game action A trustworthy Lab result always lets the reader answer: which profile, which overrides, which catalog version, which controls, which engine assumptions, and which warnings produced this output."
+      },
+      {
         "heading": "Recommended reading order",
         "text": "Begin with Profiles, Autosave, and Optimization Order, then choose Hero Gear, Governor Gear, Charms, or Bear Trap. Finish with Interpreting Results and Simulator Problems."
       }
@@ -3937,7 +4078,7 @@ export const searchIndex = [
       },
       {
         "heading": "Worked example and limits",
-        "text": "Starting situation: Kingdom Analytics shows a low total for Alliance Blue. Preserve the kingdom, event, and date filters, drill into the contributing alliance records, and identify the owning event batch. If a source result is missing, route the correction to an authorized owner rather than editing an aggregate. After correction, verify recalculation with the same filters. The state change occurs at the source record; the kingdom output changes downstream. Kingdom management does not bypass an immutable published revision, a closed Reading Verification assignment, or subscription quota. Escalate with the scope, source identity, filter set, expected total, and observed result, without platform-internal details. The purpose is coordination, not platform administration. Troubleshooting stops at user-visible scope, source, state, version, and recovery controls; private operator procedures re"
+        "text": "Starting situation: Kingdom Analytics shows a low total for Alliance Blue. Preserve the kingdom, event, and date filters, drill into the contributing alliance records, and identify the owning event batch. If a source result is missing, route the correction to an authorized owner rather than editing an aggregate. After correction, verify recalculation with the same filters. The state change occurs at the source record; the kingdom output changes downstream. Kingdom management does not bypass an immutable published revision, a closed Reading Verification assignment, or subscription quota. Escalate with the scope, source identity, filter set, expected total, and observed result, without platform-internal details. The purpose is community coordination. Troubleshooting stops at user-visible scope, source, state, version, and recovery controls."
       }
     ]
   },
@@ -4389,7 +4530,7 @@ export const searchIndex = [
       },
       {
         "heading": "August 2026 documentation reconstruction",
-        "text": "Ralyvora Docs now uses a platform portal, a dedicated Kingshot Events namespace, curated navigation, role-based journeys, consolidated troubleshooting, and explicit publication controls. Technical repair notes, testing instructions, permission catalogs, private administrator material, and obsolete screenshots were removed from public documentation."
+        "text": "Ralyvora Docs now uses a platform portal, a dedicated Kingshot Events namespace, curated navigation, role-based journeys, consolidated troubleshooting, and explicit publication controls. Technical repair notes, testing instructions, raw permission catalogs, and obsolete screenshots were removed from public documentation."
       },
       {
         "heading": "July 2026 product direction",

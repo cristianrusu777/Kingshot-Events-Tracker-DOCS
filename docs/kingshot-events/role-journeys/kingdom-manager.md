@@ -44,4 +44,4 @@ Kingdom context can aggregate permitted alliance data and host kingdom workflows
 
 **Starting situation:** Kingdom Analytics shows a low total for Alliance Blue. Preserve the kingdom, event, and date filters, drill into the contributing alliance records, and identify the owning event batch. If a source result is missing, route the correction to an authorized owner rather than editing an aggregate. After correction, verify recalculation with the same filters. The state change occurs at the source record; the kingdom output changes downstream. Kingdom management does not bypass an immutable published revision, a closed Reading Verification assignment, or subscription quota. Escalate with the scope, source identity, filter set, expected total, and observed result, without platform-internal details.
 
-The purpose is coordination, not platform administration. Troubleshooting stops at user-visible scope, source, state, version, and recovery controls; private operator procedures remain outside this role journey.
+The purpose is community coordination. Troubleshooting stops at user-visible scope, source, state, version, and recovery controls.

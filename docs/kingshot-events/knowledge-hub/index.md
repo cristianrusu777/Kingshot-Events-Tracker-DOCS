@@ -114,6 +114,78 @@ This keeps reader choice, assignment eligibility, and reporting distinct. Reload
 Search cards and teasers contain only permitted projection fields. Protected bodies must not be downloaded and hidden client-side. Browser Translation Assistance uses the browser and does not store a translated revision. Assisted import can propose content, but authors and reviewers remain responsible for accuracy, source quality, audience, and confidentiality.
 
 If an article is missing, troubleshoot published state, canonical route, identity, scope, premium access, search terms, and archive state. If publication fails, inspect block validation, media metadata, review status, and authority. If a seal remains collapsed, confirm session and assignment before selecting **Open seal**; if reveal fails, never paste a fragment from another reader.
+## Detailed Knowledge feature catalog
+
+### Home, directories, and recommendations
+
+The Knowledge home page combines editorial entry points with the permitted content projection for the current reader. Directories organize articles and structured references without bypassing access rules. Recommendations provide the next relevant reading path; they are not a separate copy of protected content and must use the same publication and access decisions as canonical routes.
+
+### Search and structured databases
+
+Search covers eligible articles plus supported hero, event, and mechanic records. Filters and result types help distinguish a guide from a structured entity. Search indexes only fields allowed for discovery. A protected body must not be shipped to the browser and merely hidden with styling. Structured databases give stable facts a queryable home while articles provide interpretation, procedures, examples, and policy.
+
+### Article reader controls
+
+The reader surface supports practical long-form use: adjustable font size, reading theme, cover-image lightbox, share action, mobile or desktop table of contents, related recommendations, and return-to-top navigation. These controls change presentation or navigation, not the canonical revision. A shared link still passes through the recipient's own identity and access evaluation.
+
+### Access policies, projections, and teasers
+
+Publication answers whether a revision is ready; access answers which projection a reader may receive. Policy can consider identity, scope, role, plan, and accepted grants. Public metadata or an allowed teaser may be returned when the body is restricted. The server selects that projection before delivery so restricted blocks do not exist in an unauthorized browser response.
+
+### Spaces
+
+Spaces group material by purpose, team, program, or subject. They provide navigation and editorial ownership without replacing article-level state. Moving or featuring an article changes organization; it must not silently broaden its audience or rewrite its canonical revision.
+
+### Studio drafts and the block library
+
+Knowledge Studio is the authoring workspace. A draft is separate from the currently published canonical revision. Authors build content from validated blocks such as headings, paragraphs, lists, callouts, media, tables, references, and supported interactive or verification markers. Block validation catches incomplete structure before review or publication.
+
+### Media and Asset Picker
+
+The media library and Asset Picker let authors choose managed assets rather than paste untraceable references. Selection should preserve asset identity, metadata, accessibility text, and permitted usage. Replacing an asset in a draft is an editorial change; publication still determines which revision readers receive.
+
+### AI writing assistant
+
+The writing assistant can create a proposed passage, rewrite a selected passage, or help derive metadata. Its output remains draft content. The author must verify accuracy, scope, sources, confidentiality, tone, and block placement, and reviewers see the resulting revision through the normal workflow. Assistance never grants publication authority.
+
+### AI Structured Import
+
+Structured Import converts supported source material into editable article candidates. Before saving, the author can inspect proposed structure, merge or move sections, remove unwanted material, correct metadata, and resolve unsupported content. Import speed does not weaken provenance or review: the accepted draft still needs an accountable author and the same validation as manually written material.
+
+### Review queue and Revision Diff
+
+The review queue separates items awaiting editorial decision from personal drafts and published articles. Revision Diff helps reviewers navigate changes between versions, inspect additions and removals, and focus on the affected blocks. A reviewer can approve, request changes, or reject according to authority; comparing revisions does not publish them automatically.
+
+### Revision, publication, and archive lifecycle
+
+Edits create revision history. Review records editorial decisions. Publication selects the canonical revision for eligible readers. A later draft does not silently replace that published version. Archive removes material from normal discovery while preserving the governed record and recovery path. Restoration should re-evaluate current policy and canonical state.
+
+### Homepage, spaces, and entity management
+
+Authorized editorial tools manage featured material, spaces, and structured hero, event, or mechanic records. These controls affect discovery and reference data, so they require the same care as article publication: validate ownership, scope, state, and downstream references before committing a change.
+
+### Browser Translation Assistance
+
+Browser Translation Assistance helps a reader render content in another language using browser capabilities. It does not create, store, approve, or publish a translated Knowledge revision. Readers should treat the canonical article language as the governed source and report ambiguous translations instead of editing operational meaning from an automatic rendering.
+
+### Reading Verification
+
+Reading Verification pins a published canonical revision to an authorized session and eligible assignments. A collapsed fragment stays protected until the assigned reader explicitly chooses **Open seal** and the server validates the session and assignment. Submission can produce correct, nearly correct, incorrect, retry-eligible, or manual-review outcomes. Managers use the scoped dashboard and report to follow progress, close, or archive the session.
+
+### Recovery map
+
+| Symptom | Verify first | Safe next action |
+| --- | --- | --- |
+| Article is missing | Published state, canonical route, scope, identity, archive state | Open the canonical directory or contact the space owner |
+| Only a teaser appears | Effective access, plan, grant, and policy projection | Resolve access, then reload the same canonical route |
+| Search cannot find it | Eligibility, title terms, result type, publication state | Refine filters; do not ask for a protected body copy |
+| Draft cannot publish | Block validation, media metadata, review state, authority | Correct the draft and return it through review |
+| Imported structure is wrong | Proposed blocks, merges, moves, removals, metadata | Edit the candidate before saving a governed draft |
+| Revision change is unclear | Base revision, target revision, changed blocks | Use Revision Diff and request author clarification |
+| Seal remains collapsed | Session state, assignment, signed-in reader | Select Open seal only in the assigned workflow |
+| Translation is confusing | Canonical language and browser translation state | Return to the original and report the ambiguity |
+
+Knowledge Hub succeeds when readers can discover the right permitted material, authors can improve it without bypassing governance, and reviewers can explain exactly which revision became canonical.
 ## Worked example
 
 **Starting situation:** A kingdom-scoped premium article is published and a signed-in alliance member opens it without effective premium access. **Rules:** Published state passes; identity and kingdom scope pass; premium access fails. **Branch:** The reader receives the permitted teaser, not the body. **State:** The article remains published and unchanged. **Output reason:** Scope does not substitute for premium entitlement. **Next action:** The reader checks effective access or an accepted grant, then reloads the same canonical article after access changes.

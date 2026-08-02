@@ -88,7 +88,6 @@ const productSidebar: Item[] = [
     subgroup('Bring in data', [
       link('Screenshot import', 'imports/screenshot-import'),
       link('Providers and processing', 'imports/providers-and-processing'),
-      link('Processing console and provider health', 'imports/processing-console'),
       link('Structured input', 'imports/spreadsheet-and-structured-input')
     ]),
     subgroup('Reconcile and apply', [
