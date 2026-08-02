@@ -29,7 +29,7 @@ export const sourceMechanismCatalog = [
     ['SRC-017', 'privacy request history', 'historical requests log', 'signed-in identity'],
     ['SRC-018', 'privacy request status tracking', 'in progress', 'fulfilled'],
     ['SRC-019', 'data export download', 'export download', 'fulfilled request'],
-    ['SRC-020', 'privacy reviewer console', 'privacy reviewers', 'management console'],
+    ['SRC-020', 'privacy review workflow', 'privacy reviewers', 'governed status workflow'],
   ]),
   ...group('Scopes and Communities', 'kingshot-events/scopes-and-communities/hierarchy-and-switching.md', 'src/domain/kingdoms; src/domain/alliances; src/frontend/app', [
     ['SRC-021', 'server to kingdom hierarchy', 'Server', 'Kingdom'],
@@ -88,12 +88,12 @@ export const sourceMechanismCatalog = [
     ['SRC-060', 'import apply boundary', 'apply', 'review'],
     ['SRC-061', 'import history', 'history', 'import'],
   ]),
-  ...group('Imports and Data Entry', 'kingshot-events/imports/processing-console.md', 'src/frontend/pages/settings/processing-services/ProcessingServicesPage.tsx; src/frontend/appPages/SettingsPages.processing.tsx', [
-    ['SRC-062', 'processing provider health', 'provider status', 'healthy'],
-    ['SRC-063', 'processing jobs', 'processing job', 'queued'],
-    ['SRC-064', 'candidate extraction', 'extract', 'candidate'],
-    ['SRC-065', 'processing retry boundary', 'retry', 'failure'],
-    ['SRC-066', 'manual processing fallback', 'manual entry', 'alternate'],
+  ...group('Imports and Data Entry', 'kingshot-events/imports/row-statuses-and-decisions.md', 'src/frontend/appPages/ImportPages.review.tsx; src/application/imports', [
+    ['SRC-062', 'repeated-file detection', 'file fingerprint', 'same import type'],
+    ['SRC-063', 'selected context precedence', 'manually selected event or date takes precedence', 'detected title'],
+    ['SRC-064', 'candidate normalization pipeline', 'Names are cleaned and normalized', 'needs_review'],
+    ['SRC-065', 'historical nickname matching', 'nickname history', 'unmatched_player'],
+    ['SRC-066', 'cumulative refresh versus conflict', 'cumulative snapshot', 'old-to-new refresh note'],
   ]),
   ...group('Analytics and Rewards', 'kingshot-events/analytics/reward-rules.md', 'src/application/analytics; src/application/rewards', [
     ['SRC-067', 'analytics aggregation', 'aggregation', 'result'],

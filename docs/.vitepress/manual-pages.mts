@@ -44,9 +44,8 @@ export const manualPages = [
   page('Rally Simulator', 'lab/rally-simulator', 'Simulations and Optimizations', 'Rally planners', 294),
   page('Battle Simulator', 'lab/battle-simulator', 'Simulations and Optimizations', 'Battle planners', 295),
   page('Game Data and Calculation Inputs', 'lab/game-data-reference', 'Simulations and Optimizations', 'Lab users and reviewers', 296),
-  page('Processing Console and Provider Health', 'imports/processing-console', 'Imports and Data Entry', 'Import operators and processing administrators', 297),
   page('Subscription and Support Requests', 'subscriptions/support-requests', 'Subscriptions and Usage', 'Members and community owners', 298),
-  page('Updates and Module Availability', 'updates/module-availability', 'Updates', 'Users and platform administrators', 299),
+  page('Updates and Module Availability', 'updates/module-availability', 'Updates', 'Kingshot Events users', 299),
   ...[
     ['accounts-and-access/multi-role-access', 'scopes-and-communities/hierarchy-and-switching'],
     ['accounts-and-access/password-and-security', 'getting-started/first-visit'],
@@ -64,6 +63,7 @@ export const manualPages = [
     ['getting-started/ten-minute-first-session', 'getting-started/first-visit'],
     ['imports/apply-and-history', 'imports/row-statuses-and-decisions'],
     ['imports/providers-and-processing', 'imports/row-statuses-and-decisions'],
+    ['imports/processing-console', 'imports/screenshot-import'],
     ['imports/rollback-and-restore', 'imports/row-statuses-and-decisions'],
     ['imports/spreadsheet-and-structured-input', 'imports/row-statuses-and-decisions'],
     ['knowledge-hub/blocks-and-media', 'knowledge-hub/reading-sessions'],

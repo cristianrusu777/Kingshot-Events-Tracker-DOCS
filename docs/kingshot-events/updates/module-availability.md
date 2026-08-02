@@ -2,7 +2,7 @@
 title: 'Updates and Module Availability'
 description: 'Separate release-note communication from the live or under-construction status of product modules.'
 product: 'kingshot-events'
-audience: 'Users and platform administrators'
+audience: 'Kingshot Events users'
 experienceLevel: 'Intermediate'
 featureArea: 'Updates'
 lastReviewed: '2026-08-02'

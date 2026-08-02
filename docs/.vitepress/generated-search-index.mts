@@ -657,7 +657,7 @@ export const searchIndex = [
       },
       {
         "heading": "Limitations",
-        "text": "The public interface explains the effective outcome, not raw permission identifiers. Some pages select the best available subscription-bearing context when no explicit scope is supplied, but writes still require an explicit valid tenant context. Platform-wide administration is outside this handbook."
+        "text": "The public interface explains the effective outcome, not raw permission identifiers. Some pages select the best available subscription-bearing context when no explicit scope is supplied, but writes still require an explicit valid tenant context. This handbook stops at user-visible scope, state, and recovery outcomes."
       },
       {
         "heading": "Server, kingdom, alliance, and player hierarchy",
@@ -1470,7 +1470,7 @@ export const searchIndex = [
       },
       {
         "heading": "Reviewer boundary and recovery",
-        "text": "Authorized privacy reviewers have a separate management console for status work. A status label such as pending, in review, in progress, fulfilled, complete, rejected, or denied describes the request, not the underlying account's general access. Example: An account holder requests portability. They track the same request until it is fulfilled, then download the generated export from its record. They do not file a deletion request as a way to refresh the export. If submission fails, preserve the selected request type and safe error text, then retry once after refreshing. If history is absent, confirm the signed-in identity. For legal interpretation, use the current privacy and data-rights pages; this guide explains product operation, not legal advice."
+        "text": "Authorized privacy reviewers can update the request through its governed status workflow. A status label such as pending, in review, in progress, fulfilled, complete, rejected, or denied describes the request, not the underlying account's general access. Example: An account holder requests portability. They track the same request until it is fulfilled, then download the generated export from its record. They do not file a deletion request as a way to refresh the export. If submission fails, preserve the selected request type and safe error text, then retry once after refreshing. If history is absent, confirm the signed-in identity. For legal interpretation, use the current privacy and data-rights pages; this guide explains product operation, not legal advice."
       },
       {
         "heading": "Limits and troubleshooting",
@@ -1656,41 +1656,6 @@ export const searchIndex = [
     ]
   },
   {
-    "title": "Processing Console and Provider Health",
-    "path": "/kingshot-events/imports/processing-console",
-    "category": "Imports and Data Entry",
-    "audience": "Import operators and processing administrators",
-    "level": "Advanced",
-    "contentType": "Task guide",
-    "featureArea": "Imports and Data Entry",
-    "aliases": [
-      "screenshot import",
-      "ocr import",
-      "duplicate screenshot",
-      "correct imported rows",
-      "partial extraction"
-    ],
-    "description": "Processing Console and Provider Health Image processing converts submitted evidence into candidate data. The Processing Console and provider-health views explain whether the configured processing services are available and how jobs progress",
-    "sections": [
-      {
-        "heading": "Introduction",
-        "text": "Processing Console and Provider Health Image processing converts submitted evidence into candidate data. The Processing Console and provider-health views explain whether the configured processing services are available and how jobs progress. Successful extraction is not approval to apply rows."
-      },
-      {
-        "heading": "Processing boundary",
-        "text": "Accessible summary: A healthy provider extracts candidates; a human review still decides what becomes product data. Provider status can be enabled, disabled, unavailable, misconfigured, or otherwise unhealthy as exposed by the console. Jobs can be queued, processing, completed, or failed. Use the exact current status rather than repeatedly uploading the same evidence."
-      },
-      {
-        "heading": "Operator procedure",
-        "text": "1. Check the processing category and provider status. 2. Open the existing job and read its error before retrying. 3. Retry only when the failure is transient or the corrected configuration is active. 4. Use manual entry when the product offers it and processing remains unavailable. 5. Review extracted names, dates, stages, values, and duplicates before apply. Example: A job fails because no provider is healthy. The operator does not create five duplicate imports. They confirm provider health, choose the supported manual path for urgent data, and later retry the original job only after service recovery. When escalating, include the job or import identifier, provider category, current status, safe error text, time, and whether a manual fallback was used. Never include provider secrets or protected image contents in a public report."
-      },
-      {
-        "heading": "Limits and troubleshooting",
-        "text": "Provider health does not guarantee correct extraction, and a failed health check does not prove that stored imports were lost. The console is diagnostic; row approval remains in the import review. If a job stays queued, confirm that an eligible provider is enabled for its category and inspect the existing job before retry. If a completed job has no candidates, verify the evidence format and processing output rather than applying an empty import."
-      }
-    ]
-  },
-  {
     "title": "Subscription and Support Requests",
     "path": "/kingshot-events/subscriptions/support-requests",
     "category": "Subscriptions and Usage",
@@ -1729,7 +1694,7 @@ export const searchIndex = [
     "title": "Updates and Module Availability",
     "path": "/kingshot-events/updates/module-availability",
     "category": "Updates",
-    "audience": "Users and platform administrators",
+    "audience": "Kingshot Events users",
     "level": "Advanced",
     "contentType": "Status reference",
     "featureArea": "Updates",
@@ -1835,7 +1800,7 @@ export const searchIndex = [
       },
       {
         "heading": "Accounts, security, roles, and approvals",
-        "text": "Accounts establish identity; roles establish authority inside a scope. Registration, sign-in, verification, recovery, session management, and deletion are separate lifecycle operations. Invitations and join requests create reviewable membership changes. Elevated actions require the appropriate kingdom or alliance role, while platform administration remains distinct from community administration."
+        "text": "Accounts establish identity; roles establish authority inside a scope. Registration, sign-in, verification, recovery, session management, and deletion are separate lifecycle operations. Invitations and join requests create reviewable membership changes. Elevated actions require the appropriate kingdom or alliance role and remain inside the documented community scope."
       },
       {
         "heading": "Server, kingdom, alliance, and player scopes",
@@ -4113,7 +4078,7 @@ export const searchIndex = [
       },
       {
         "heading": "Worked example and limits",
-        "text": "Starting situation: Kingdom Analytics shows a low total for Alliance Blue. Preserve the kingdom, event, and date filters, drill into the contributing alliance records, and identify the owning event batch. If a source result is missing, route the correction to an authorized owner rather than editing an aggregate. After correction, verify recalculation with the same filters. The state change occurs at the source record; the kingdom output changes downstream. Kingdom management does not bypass an immutable published revision, a closed Reading Verification assignment, or subscription quota. Escalate with the scope, source identity, filter set, expected total, and observed result, without platform-internal details. The purpose is coordination, not platform administration. Troubleshooting stops at user-visible scope, source, state, version, and recovery controls; private operator procedures re"
+        "text": "Starting situation: Kingdom Analytics shows a low total for Alliance Blue. Preserve the kingdom, event, and date filters, drill into the contributing alliance records, and identify the owning event batch. If a source result is missing, route the correction to an authorized owner rather than editing an aggregate. After correction, verify recalculation with the same filters. The state change occurs at the source record; the kingdom output changes downstream. Kingdom management does not bypass an immutable published revision, a closed Reading Verification assignment, or subscription quota. Escalate with the scope, source identity, filter set, expected total, and observed result, without platform-internal details. The purpose is community coordination. Troubleshooting stops at user-visible scope, source, state, version, and recovery controls."
       }
     ]
   },
@@ -4565,7 +4530,7 @@ export const searchIndex = [
       },
       {
         "heading": "August 2026 documentation reconstruction",
-        "text": "Ralyvora Docs now uses a platform portal, a dedicated Kingshot Events namespace, curated navigation, role-based journeys, consolidated troubleshooting, and explicit publication controls. Technical repair notes, testing instructions, permission catalogs, private administrator material, and obsolete screenshots were removed from public documentation."
+        "text": "Ralyvora Docs now uses a platform portal, a dedicated Kingshot Events namespace, curated navigation, role-based journeys, consolidated troubleshooting, and explicit publication controls. Technical repair notes, testing instructions, raw permission catalogs, and obsolete screenshots were removed from public documentation."
       },
       {
         "heading": "July 2026 product direction",

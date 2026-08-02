@@ -15,7 +15,7 @@ head:
 # User-facing Release Notes
 ## August 2026 documentation reconstruction
 
-Ralyvora Docs now uses a platform portal, a dedicated Kingshot Events namespace, curated navigation, role-based journeys, consolidated troubleshooting, and explicit publication controls. Technical repair notes, testing instructions, permission catalogs, private administrator material, and obsolete screenshots were removed from public documentation.
+Ralyvora Docs now uses a platform portal, a dedicated Kingshot Events namespace, curated navigation, role-based journeys, consolidated troubleshooting, and explicit publication controls. Technical repair notes, testing instructions, raw permission catalogs, and obsolete screenshots were removed from public documentation.
 
 ## July 2026 product direction
 

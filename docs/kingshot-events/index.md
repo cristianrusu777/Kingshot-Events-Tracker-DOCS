@@ -159,7 +159,7 @@ The dashboard answers three questions first: **where am I working, what needs at
 
 ### Accounts, security, roles, and approvals
 
-Accounts establish identity; roles establish authority inside a scope. Registration, sign-in, verification, recovery, session management, and deletion are separate lifecycle operations. Invitations and join requests create reviewable membership changes. Elevated actions require the appropriate kingdom or alliance role, while platform administration remains distinct from community administration.
+Accounts establish identity; roles establish authority inside a scope. Registration, sign-in, verification, recovery, session management, and deletion are separate lifecycle operations. Invitations and join requests create reviewable membership changes. Elevated actions require the appropriate kingdom or alliance role and remain inside the documented community scope.
 
 ### Server, kingdom, alliance, and player scopes
 
