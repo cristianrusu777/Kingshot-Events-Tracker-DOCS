@@ -5,7 +5,7 @@ type Item = DefaultTheme.SidebarItem
 const link = (text: string, path: string): Item => ({ text, link: `/kingshot-events/${path}` })
 const subgroup = (text: string, items: Item[]): Item => ({ text, collapsed: true, items })
 const section = (text: string, icon: string, items: Item[], collapsed = true): Item => ({
-  text: `${icon} ${text}`,
+  text,
   collapsed,
   items
 })
@@ -16,7 +16,8 @@ const productSidebar: Item[] = [
     link('Problems solved', 'overview/problems-solved'),
     link('How the platform fits together', 'overview/platform-model'),
     link('Product terminology', 'overview/terminology'),
-    link('Feature availability', 'overview/feature-availability')
+    link('Feature availability', 'overview/feature-availability'),
+    link('Dashboard, alerts, and quick actions', 'overview/dashboard-and-alerts')
   ], false),
   section('Getting Started', '◇', [
     link('Your first visit', 'getting-started/first-visit'),
@@ -26,7 +27,9 @@ const productSidebar: Item[] = [
   section('Accounts and Access', '◉', [
     subgroup('Identity and approval', [
       link('Registration and login', 'getting-started/first-visit'),
-      link('Account and player link', 'getting-started/account-and-profile')
+      link('Account and player link', 'getting-started/account-and-profile'),
+      link('Roles, permissions, and approvals', 'accounts-and-access/roles-and-approvals'),
+      link('Privacy and data rights', 'accounts-and-access/privacy-and-data-rights')
     ]),
     subgroup('Access resolution', [
       link('Hierarchy and scope switching', 'scopes-and-communities/hierarchy-and-switching'),
@@ -42,6 +45,7 @@ const productSidebar: Item[] = [
       link('Cross-scope visibility', 'scopes-and-communities/cross-scope-visibility')
     ]),
     subgroup('Community work', [
+      link('Alliance Hub and management', 'scopes-and-communities/alliance-hub'),
       link('Working inside an alliance', 'kingdoms-and-alliances/alliance-work'),
       link('Working inside a kingdom', 'kingdoms-and-alliances/kingdom-work')
     ])
@@ -69,7 +73,9 @@ const productSidebar: Item[] = [
       link('Templates, instances, and results', 'events/overview'),
       link('Instances, batches, and corrections', 'events/record-batches-and-corrections'),
       link('Participation, scores, and stages', 'events/participation-and-scores'),
-      link('Event-specific behavior', 'events/event-specific-behavior')
+      link('Event-specific behavior', 'events/event-specific-behavior'),
+      link('Proposals, templates, and settings', 'events/proposals-and-settings'),
+      link('Preparation and KvK tracking', 'events/preparation-and-kvk')
     ]),
     subgroup('Record and review', [
       link('Enter results manually', 'events/manual-entry'),
@@ -82,6 +88,7 @@ const productSidebar: Item[] = [
     subgroup('Bring in data', [
       link('Screenshot import', 'imports/screenshot-import'),
       link('Providers and processing', 'imports/providers-and-processing'),
+      link('Processing console and provider health', 'imports/processing-console'),
       link('Structured input', 'imports/spreadsheet-and-structured-input')
     ]),
     subgroup('Reconcile and apply', [
@@ -104,6 +111,7 @@ const productSidebar: Item[] = [
     subgroup('Rules and interpretation', [
       link('Aggregation and reward decisions', 'analytics/reward-rules'),
       link('Reward eligibility and statuses', 'analytics/rewards-and-statuses'),
+      link('Reward workspace and personal rewards', 'analytics/reward-workspace'),
       link('Sharing, scope, and troubleshooting', 'analytics/sharing-and-troubleshooting')
     ])
   ]),
@@ -133,6 +141,7 @@ const productSidebar: Item[] = [
       link('Authoring and publication', 'knowledge-hub/authoring-and-publication'),
       link('Blocks and media', 'knowledge-hub/blocks-and-media'),
       link('Revisions and review', 'knowledge-hub/revisions-and-review'),
+      link('Studio workspaces', 'knowledge-hub/studio-workspaces'),
       link('Access, publication, and sessions', 'knowledge-hub/reading-sessions')
     ]),
     link('Knowledge problems', 'troubleshooting/knowledge-problems')
@@ -150,6 +159,9 @@ const productSidebar: Item[] = [
     ]),
     subgroup('Combat tools', [
       link('Bear Trap model', 'lab/bear-trap'),
+      link('Rally Simulator', 'lab/rally-simulator'),
+      link('Battle Simulator', 'lab/battle-simulator'),
+      link('Game data reference', 'lab/game-data-reference'),
       link('Bear rally and battle', 'lab/bear-rally-battle')
     ]),
     link('Simulator problems', 'troubleshooting/simulator-problems')
@@ -157,11 +169,13 @@ const productSidebar: Item[] = [
   section('Subscriptions and Usage', '◈', [
     link('Overview', 'subscriptions/'),
     link('Plans, grants, quotas, and access', 'subscriptions/plans-and-effective-access'),
+    link('Subscription and support requests', 'subscriptions/support-requests'),
     link('Access and usage', 'subscriptions/access-and-usage'),
     link('Subscription troubleshooting', 'subscriptions/troubleshooting')
   ]),
   section('Shared Lifecycles', '⟳', [
     link('Notifications and reports', 'lifecycles/notifications-and-reports'),
+    link('Reports and issue tracking', 'lifecycles/reports-and-issues'),
     link('Recycle bin and restore requests', 'lifecycles/recycle-bin-and-restore-requests')
   ]),
   section('Role Journeys', '◇', [
@@ -183,7 +197,7 @@ const productSidebar: Item[] = [
     link('Knowledge problems', 'troubleshooting/knowledge-problems'),
     link('Simulator problems', 'troubleshooting/simulator-problems')
   ]),
-  section('Updates', '◌', [link('User-facing release notes', 'updates/release-notes')])
+  section('Updates', '◌', [link('User-facing release notes', 'updates/release-notes'), link('Module availability', 'updates/module-availability')])
 ]
 
 export function createSidebar(): DefaultTheme.Sidebar {

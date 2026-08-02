@@ -5,7 +5,9 @@ product: 'Kingshot Events'
 audience: 'Hero Gear planner users'
 experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Hero Gear Optimization Logic
@@ -32,6 +34,8 @@ flowchart TD
  F --> C
  E -->|No| G["Ordered plan, before/after state, leftovers"]
 ```
+
+**Accessible summary:** The optimizer optionally recovers eligible XP, compares valid upgrade and milestone candidates, applies one affordable positive step at a time, and returns plan and leftovers.
 
 **Example:** An Archer lethality slot and an Infantry health slot are both affordable. Archer lethality has the higher configured weight, but crossing its milestone also needs Mithril. The engine compares the full bundle cost with the Infantry step, chooses the current best ratio, subtracts those materials, and reevaluates. Locking the Archer slot removes it entirely.
 

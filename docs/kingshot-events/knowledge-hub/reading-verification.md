@@ -5,7 +5,9 @@ product: 'kingshot-events'
 audience: 'Readers and session managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Reading Verification'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Reading Verification
@@ -40,6 +42,8 @@ flowchart LR
   E --> F["Manager reviews and closes session"]
 ```
 
+**Accessible summary:** The manager creates assignments and opens the session, readers submit evidence, and the manager reviews classifications before closing.
+
 <VisualReference title="Reading Verification landmarks">
 Reader and manager views expose different controls.
 
@@ -55,15 +59,18 @@ Reader and manager views expose different controls.
 
 ## Reader decision workflow
 
-A reader starts from one canonical published article and an applicable active assignment. The session pins the article context used for verification. The reader opens the assignment, encounters collapsed markers in the article, reveals them while reading, reaches article completion, and submits the requested evidence. The platform classifies the supported signals and submission into completion, retry, or manual-review outcomes. Opening an article alone is not completion, and knowing a reading code does not bypass article access or audience scope.
+A reader starts from one canonical published article and an applicable active assignment. The session pins the article context used for verification. The reader opens the assignment and reaches a collapsed seal in the article. Arrival alone does not reveal anything: the reader explicitly selects **Open seal**, after which the platform verifies ownership, requests the assigned fragment, and displays it. The reader then reaches article completion and submits the requested evidence. The platform classifies the supported signals and submission into completion, retry, or manual-review outcomes. Opening an article or merely reaching the seal is not completion, and knowing a reading code does not bypass article access or audience scope.
 
 ```mermaid
 flowchart TD
   A["Canonical article and reader identity"] --> S{"Applicable active session and assignment?"}
   S -- "No" --> N["Normal reading or unavailable assignment"]
   S -- "Yes" --> R["Open assigned article"]
-  R --> M["Reveal applicable collapsed markers"]
-  M --> E["Reach article completion"]
+  R --> M["Reach collapsed seal"]
+  M --> O["Select Open seal"]
+  O --> V["Verify assignment and request fragment"]
+  V --> F["Display assigned fragment"]
+  F --> E["Reach article completion"]
   E --> U["Submit requested evidence"]
   U --> C{"Classification"}
   C -- "Complete" --> D["Assignment completed"]
@@ -73,7 +80,7 @@ flowchart TD
 
 *Reading Verification reader flow. Session applicability precedes marker, completion, submission, and classification states.*
 
-**Accessible summary:** Applicable readers reveal markers, finish the article, submit, and receive complete, retry, or manual-review outcomes.
+**Accessible summary:** Applicable readers reach a collapsed seal, explicitly open it, receive the fragment only after the request succeeds, finish the article, submit, and receive complete, retry, or manual-review outcomes.
 
 ## Scope, manager decisions, and worked example
 

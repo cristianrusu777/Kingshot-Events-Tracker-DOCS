@@ -5,7 +5,9 @@ product: 'Kingshot Events'
 audience: 'Readers, authors, reviewers, and session managers'
 experienceLevel: 'Advanced'
 featureArea: 'Knowledge Hub'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Knowledge Access, Publication, and Reading Verification
@@ -31,6 +33,8 @@ flowchart TD
  H -->|No| C
 ```
 
+**Accessible summary:** Published state and article access policy decide whether a reader receives the full revision, a teaser, or no reader surface.
+
 Search uses published card fields. Public article bodies may contribute to indexing. Protected bodies are not sent and then hidden visually. A kingdom-level assignment can satisfy membership for alliance content in its kingdom; an unrelated or cross-tenant manager cannot.
 
 ## Editing and publication
@@ -41,7 +45,7 @@ Opening a published article in Studio creates a working revision from the publis
 
 ## Reading Verification
 
-A session can target only an article with a published revision, and the session pins that exact revision. A reader opens the normal canonical article. When the applicable session resolves, a small marker appears at a safe point in the pinned content. Encountering it reveals the assigned fragment. Reaching the article end and submitting the player's name and fragment produces Correct, Almost Correct, Incorrect, Not Submitted, or Manual Review behavior as appropriate.
+A session can target only an article with a published revision, and the session pins that exact revision. A reader opens the normal canonical article. When the applicable session resolves, a collapsed seal appears at a safe point in the pinned content. Merely reaching the seal does not request or display the assigned fragment. The reader must explicitly select **Open seal**; only then does the platform verify assignment ownership, request the fragment, and display it. Reaching the article end and submitting the player's name and fragment produces Correct, Almost Correct, Incorrect, Not Submitted, or Manual Review behavior as appropriate.
 
 The manager selects the published article and audience, creates the session, and then watches assignments appear as eligible readers open the article. Progress distinguishes Not Opened, Opened, Fragment Revealed, Article End Reached, and submission outcomes. The session creator and authorized tenant managers can read the report; an ordinary member and a manager from another tenant cannot. Platform-wide oversight exists but is not described as an operational public workflow.
 
@@ -49,12 +53,16 @@ The manager selects the published article and audience, creates the session, and
 flowchart LR
  A["Manager pins published revision"] --> B["Eligible reader opens canonical article"]
  B --> C["Assignment and progress begin"]
- C --> D["Marker reveals fragment"]
- D --> E["Reader reaches article end"]
+ C --> D["Reader selects Open seal"]
+ D --> V["Verify assignment and request fragment"]
+ V --> X["Display assigned fragment"]
+ X --> E["Reader reaches article end"]
  E --> F["Name and fragment submitted"]
  F --> G["Correct, almost, incorrect, or manual review"]
  G --> H["Authorized report"]
 ```
+
+**Accessible summary:** A manager pins a revision, an eligible reader explicitly opens the seal and submits assigned evidence, and the result enters the authorized report.
 
 ## Browser Translation Assistance
 

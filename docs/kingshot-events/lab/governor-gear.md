@@ -5,7 +5,9 @@ product: 'Kingshot Events'
 audience: 'Governor Gear planner users'
 experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Governor Gear Optimization Logic
@@ -21,13 +23,18 @@ Start condition → six current item states and three material balances are load
 Set effects are evaluated as deltas from the current set, not as permanent bonuses awarded to every candidate. Consequently, an item that completes a threshold can become valuable in one iteration, while the next upgrade on that same item may fall behind after the threshold has already been gained.
 
 ```mermaid
-flowchart LR
- A["Current six-item set state"] --> B["Affordable next levels"]
- B --> C["Stat and set-effect deltas"]
- C --> D["Weighted gain per normalized material cost"]
- D --> E["Apply best step"]
- E --> B
+flowchart TD
+ A["Current six-item set state"] --> B["Generate unlocked next levels"]
+ B --> C["Remove maximum or unaffordable candidates"]
+ C --> D["Calculate direct and set-effect deltas"]
+ D --> E{"Positive candidate remains?"}
+ E -- "No" --> F["Return steps, spending, and leftovers"]
+ E -- "Yes" --> G["Apply best normalized-value step"]
+ G --> H["Consume materials and refresh set state"]
+ H --> B
 ```
+
+**Accessible summary:** The optimizer repeatedly filters next-level candidates, applies the best positive affordable step, refreshes materials and set state, and stops when no valid positive candidate remains.
 
 **Example:** A Cavalry piece is individually efficient, but an Infantry upgrade completes a configured set threshold. The candidate comparison includes that set delta. After selection, the remaining Satin and the new set state determine the next step. A locked piece cannot be selected even when it would complete the set.
 

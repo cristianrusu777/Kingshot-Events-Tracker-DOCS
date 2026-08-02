@@ -25,7 +25,7 @@ Kingdom-level actions must repeat the selected kingdom and affected alliance whe
 
 <template #items>
 
-- Kingdom name and server code with eligible alliance selector.
+- Server context, kingdom name, and eligible alliance selector shown separately.
 - Alliance summaries and granted-analytics or subscription-allocation state.
 - Kingdom Analytics and cross-alliance drill-downs.
 - Castle Positions instance, candidate review, planner, and publication status.

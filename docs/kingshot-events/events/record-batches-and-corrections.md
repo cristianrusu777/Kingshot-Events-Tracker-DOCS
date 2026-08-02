@@ -5,7 +5,9 @@ product: 'Kingshot Events'
 audience: 'Result contributors and reviewers'
 experienceLevel: 'Advanced'
 featureArea: 'Events and Results'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Event Instances, Record Batches, and Corrections
@@ -53,6 +55,8 @@ flowchart TD
   G --> I
   I --> J["Recalculate affected players"]
 ```
+
+**Accessible summary:** Manual entry resolves a writable event instance, validates date and row identity, handles duplicates or conflicts, saves one batch, and recalculates affected players.
 
 **Worked participation example:** Aster records Viking Defense on 2026-08-01. Arin is Active with no score, Bea is Inactive, and Cato is Unknown. Apply All stores three participation rows in one batch. Activity calculations use them only if the template counts toward activity.
 
