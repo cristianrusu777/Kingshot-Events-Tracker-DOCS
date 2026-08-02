@@ -5,7 +5,15 @@ product: 'Kingshot Events'
 audience: 'Kings and Ministers of Justice'
 experienceLevel: 'Advanced'
 featureArea: 'Castle Positions'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
+verification:
+  sourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+  verifiedOn: '2026-08-02'
+  owner: 'Ralyvora product documentation'
+  engine: 'CastlePositionCompetitivePlacement'
+  dataVersion: 'runtime stage configuration'
 ---
 
 # Castle Candidate Ranking and Schedule Suggestions
@@ -20,30 +28,34 @@ Eligible applications rank by score descending, then True Gold amount, earliest 
 
 ## Placement order
 
-1. Remove applications that are ineligible, unresolved, or not in Accepted, Linked, Scheduled, or Changed state.
-2. Preserve every locked manual assignment and its occupied time.
-3. Walk each position column from its first time row downward so occupied cells form a contiguous prefix.
-4. For a cell, keep candidates eligible for that position who do not overlap another appointment.
-5. Classify time compatibility: explicit unavailable wins over all other declarations; exact preference beats alternative, then a time within the configured nearby window, then Any Time.
-6. Choose according to the selected strategy. Balanced considers compatibility, recommendation score, scarce availability, submission time, and stable identity. Highest Score changes the emphasis; Best Time Match favors exact matches.
-7. Stop a column at the first row with no compatible candidate. Surface trailing capacity, conflicts, gaps, displaced candidates, and waitlist actions.
-8. Require a manager to review and save the draft. Publish creates an explicit immutable version and notifies affected participants according to configured delivery.
+1. Classify applications by eligibility, resolved player, and placeable status: Accepted, Linked, Scheduled, or Changed. Ineligible and unresolved applications remain visible as unplaced with a reason instead of disappearing silently.
+2. Seed protected assignments first. Explicit locks, manager-placed players, and reserved notes are immovable and keep their occupied time.
+3. Build each candidate's ordered list of compatible cells. Exact preferences come first, then alternatives, nearby times ordered by distance, and finally Any Time; **Highest Score** deliberately uses chronological compatible cells instead.
+4. Process stronger candidates and let each propose to its next compatible cell. A free cell accepts the proposal. A contested cell keeps the stronger claim and sends the displaced candidate to its next option. A candidate cannot hold overlapping appointments.
+5. For **Balanced**, recommendation score wins a contested cell first; compatibility breaks a score tie, followed by scarcity, submission time, and stable application identity. **Highest Score** also makes score primary but drops preference ordering from the candidate's proposal list. **Best Time Match** makes compatibility primary, then score, scarcity, submission time, and identity.
+6. Stop only when every placeable candidate is assigned, exhausts compatible cells, or is blocked by stronger or protected assignments. Each candidate/cell pair is tried at most once, so the deterministic proposal loop terminates.
+7. Report exact, alternative, nearby, and Any Time placements; displacements; protected assignments; unplaced reasons; and gaps. The suggestion engine may leave an early empty cell to honor declared preferences. It does not pull a candidate into an unwanted early time merely to hide the gap.
+8. Require a manager to resolve reported gaps and review the draft. Finalization enforces the no-gap invariant; a draft with an empty cell before an occupied cell cannot finalize. Publishing then creates an explicit version and notifies affected participants according to configured delivery.
 
 ```mermaid
 flowchart TD
  A["Reviewed applications"] --> B["Eligibility and resolved-player gate"]
  B --> C["Resource ranking with visible breakdown"]
  C --> D["Preserve locked assignments"]
- D --> E["Walk position columns by time"]
- E --> F["Compare compatibility, score, scarcity, and submission"]
- F --> G["Suggestion with conflicts and gaps"]
- G --> H["Manager edits draft"]
- H --> I["Explicit published version"]
+ D --> E["Candidates propose to ordered compatible cells"]
+ E --> F["Contests displace weaker suggestions"]
+ F --> G["Suggestion reports placements, reasons, and gaps"]
+ G --> H["Manager resolves gaps and edits draft"]
+ H --> V{"Final no-gap and conflict validation passes?"}
+ V -- "No" --> H
+ V -- "Yes" --> I["Explicit published version"]
 ```
 
-**Example 1:** Ava requests 10:00 exactly and has score 80. Bo accepts Any Time with score 95. In Balanced or Best Time Match, Ava can win 10:00 because exact preference precedes Any Time. Bo remains available for another row. A lock at 10:00 prevents either from replacing the locked player.
+**Accessible summary:** Reviewed applications are ranked, protected placements are preserved, candidates compete for compatible cells, gaps return to editing, and only a validated draft can publish.
 
-**Example 2:** Cia requests only 12:00, but the 10:00 row has no candidate. The column stops rather than leaving a middle gap and placing Cia below it. A manager can change the grid, reserve the row explicitly, or place manually after understanding the gap.
+**Example 1:** Ava requests 10:00 exactly and has score 80. Bo accepts Any Time with score 95. In **Balanced**, Bo wins a direct contest for 10:00 because score is primary; compatibility breaks only a score tie. In **Best Time Match**, Ava wins because Exact outranks Any before score. In **Highest Score**, Bo proposes chronologically and remains the stronger claim. A protected assignment at 10:00 prevents either applicant from taking that cell.
+
+**Example 2:** Cia requests only 12:00, while the 10:00 row has no compatible candidate. The suggestion can place Cia at 12:00 and report the earlier gap instead of silently dragging her to 10:00. The manager must fill, reserve, or otherwise resolve the earlier cell before finalization, because final validation rejects a middle gap.
 
 ## Failure and change paths
 

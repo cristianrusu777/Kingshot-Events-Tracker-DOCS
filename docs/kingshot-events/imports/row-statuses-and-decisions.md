@@ -5,10 +5,14 @@ product: 'Kingshot Events'
 audience: 'Import contributors and reviewers'
 experienceLevel: 'Advanced'
 featureArea: 'Imports and Data Entry'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Screenshot Reconciliation and Row Decisions
+
+An unknown player decision must be resolved explicitly; an unrecognized name is not silently attached to the nearest player.
 
 The processor extracts candidates; it does not write trusted results. Every extracted row is normalized and staged for human review. Provider confidence is only one signal. Event context, player matching, duplicate identity, score range, and existing records can all force review.
 
@@ -23,6 +27,8 @@ flowchart TD
  G --> H["Reviewer corrects and accepts or ignores"]
  H --> I["Apply accepted row and recalculate"]
 ```
+
+**Accessible summary:** An eligible image is checked for repetition, processed into normalized candidates, matched to players, classified for review, and applied only after explicit row decisions.
 
 ## Decision order
 

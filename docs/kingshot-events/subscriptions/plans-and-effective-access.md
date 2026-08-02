@@ -5,7 +5,9 @@ product: 'Kingshot Events'
 audience: 'Members and community owners'
 experienceLevel: 'Advanced'
 featureArea: 'Subscriptions and Usage'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Plans, Grants, Quotas, and Effective Access
@@ -26,6 +28,8 @@ flowchart TD
  G --> I
  H --> I
 ```
+
+**Accessible summary:** Direct alliance access, an accepted eligible grant, a direct kingdom plan, and Free capabilities are checked before quota and suspension determine effective access.
 
 An allocation is the granted alliance's per-resource share of a kingdom quota. Allocations may be made only to granted alliances, and their sum cannot exceed the kingdom limit. Accepting a grant changes entitlement source; it does not assign management roles. Analytics sharing likewise grants no edit access.
 

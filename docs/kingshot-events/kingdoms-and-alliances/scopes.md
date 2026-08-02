@@ -27,7 +27,7 @@ Confirm the community context in both the application shell and the page-level s
 
 <template #items>
 
-- Active kingdom with server code and available alliance selector.
+- Active server, selected kingdom, and available alliance selector as distinct controls.
 - Locked selector when an assignment fixes the viewer to one scope.
 - Page context banner on Players, Events, Imports, Analytics, or Castle Positions.
 - Empty, forbidden, or missing-assignment feedback after a scope change.

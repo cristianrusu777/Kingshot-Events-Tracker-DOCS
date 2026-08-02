@@ -5,10 +5,14 @@ product: 'Kingshot Events'
 audience: 'Lab users'
 experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Lab Profiles, Autosave, and Optimization Order
+
+A visitor profile is saved in the current browser on that device. Signed-in users can use cloud profiles associated with their account when that capability is available.
 
 A signed-in Lab workspace is owned by one account, optionally linked to a player, and stores validated gear, combat stats, priorities, inventory, budget, strategy, optimizer locks, and module overrides. A user can keep up to 50 workspaces per tool. Duplicating creates a separate state snapshot. Switching workspaces must load the selected identity before edits continue.
 
@@ -23,6 +27,8 @@ flowchart LR
  E -->|Yes| F["Save and advance version"]
  E -->|No| G["Reject stale save; reload"]
 ```
+
+**Accessible summary:** A versioned workspace loads into the selected profile; valid saves advance its version, while a stale tab must reload instead of overwriting newer work.
 
 ## Optimizer decision loop
 
@@ -45,6 +51,8 @@ flowchart TD
  F --> B
  E -->|No| G["Ordered plan and unspent inventory"]
 ```
+
+**Accessible summary:** Each optimizer filters next upgrades, chooses one positive cost-normalized candidate, consumes resources, and repeats until it returns the plan and leftovers.
 
 **Worked small example:** A user has materials for either one Governor Gear upgrade or two Charm steps and weights Archer lethality above other stats. The engine does not choose by item rarity alone. It evaluates every affordable next step, applies the configured weights and cost normalization, selects the current best candidate, subtracts its materials, then recalculates the remaining set. The second choice may change after the first consumes a shared material or activates a set effect.
 

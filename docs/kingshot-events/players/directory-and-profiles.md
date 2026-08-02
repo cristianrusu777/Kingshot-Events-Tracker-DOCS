@@ -5,7 +5,9 @@ product: 'kingshot-events'
 audience: 'Members and managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Players'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 head:
   - - meta
     - name: 'robots'

@@ -1,6 +1,6 @@
 # Documentation repository instructions
 
-- Treat the internal source route `/simulators/spend-optimizer` and its implementation key `spend-optimizer` as confidential and excluded from documentation.
-- Never add that feature to published or draft documentation, navigation, search metadata, inventories, generated reports, screenshots, release notes, summaries, or examples.
-- Do not infer, describe, rename, or hint at the feature from source code. Keep it outside all documentation work unless the repository owner explicitly reverses this rule.
-- Run `npm run docs:check`; the confidential-exclusion gate must pass before handing off documentation changes.
+- Document only mechanisms that are intentionally reader-visible in the current product. A source route, registry entry, or implementation file is not evidence that a mechanism is public.
+- Classify source-inventory records with `documentationVisibility: public | internal | confidential`. Only `public` records may enter pages, navigation, search metadata, generated reports, screenshots, release notes, summaries, or examples.
+- Never expose or hint at the names, routes, identifiers, controls, or behavior of `internal` or `confidential` records. Keep inventories containing those records local and untracked.
+- Run `npm run docs:check`; the documentation-visibility gate must pass before handing off changes.

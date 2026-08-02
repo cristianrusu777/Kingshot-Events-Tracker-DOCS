@@ -5,10 +5,14 @@ product: 'Kingshot Events'
 audience: 'Analytics viewers and reward managers'
 experienceLevel: 'Advanced'
 featureArea: 'Analytics and Rewards'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Analytics Aggregation and Reward Decisions
+
+Decision precedence must remain visible when several reward rules apply. Missing data is not equivalent to a measured zero.
 
 Analytics reads current, non-deleted player results whose events are also current. Filters are applied to eligible source rows before grouping. A player view groups by player and event; alliance and kingdom views group only rows inside the authorized scope. Date boundaries and event filters can therefore make two valid totals differ.
 
@@ -24,6 +28,8 @@ flowchart LR
  E --> G["Alliance aggregates"]
  E --> H["Kingdom aggregates"]
 ```
+
+**Accessible summary:** Current rows pass filters and grouping before metrics, status rules, and reward rules produce player, alliance, or kingdom output.
 
 ## Filter evaluation and sharing
 

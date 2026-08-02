@@ -5,7 +5,9 @@ product: 'kingshot-events'
 audience: 'All Kingshot Events users'
 experienceLevel: 'Beginner'
 featureArea: 'Product overview'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-08-02'
+verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+sourceVerificationOwner: 'Ralyvora documentation'
 head:
   - - meta
     - name: 'robots'
@@ -15,6 +17,136 @@ head:
 # Kingshot Events
 Kingshot Events helps communities keep player and event information structured across kingdoms and alliances. It combines data entry, review, reporting, Castle Position coordination, shared knowledge, and planning tools. Automation assists some tasks, but contributors and managers still review important information.
 
+## What this project is for
+
+Kingshot communities coordinate people, event evidence, decisions, schedules, guides, and progression plans. Without one shared operating model, the same player can appear under several names, screenshots can be interpreted differently, a correction can be applied to the wrong event date, reward decisions can lose their evidence, and published schedules can drift away from the version participants received.
+
+Kingshot Events turns that scattered work into traceable workflows. It does not merely store totals. It gives each important piece of information an identity, scope, state, review boundary, and destination:
+
+- a player belongs to a server, kingdom, and alliance context and can preserve identity through name or membership changes;
+- an event definition is separated from the dated instance in which players participate;
+- manual and imported evidence becomes a record batch whose rows can be reviewed and corrected;
+- analytics and reward decisions derive from accepted source records instead of detached copied totals;
+- Castle Position applications remain requests until review, planning, validation, and publication produce an authoritative schedule;
+- Knowledge articles move through draft, review, publication, revision, archive, and optional reading-assignment workflows;
+- Lab profiles and scenarios make progression or combat assumptions reproducible without pretending to control the game account;
+- reports, notices, recycle-bin records, and restore requests preserve operational follow-up.
+
+The project solves two problems at once. It helps a user complete an immediate task and helps the community explain later what happened, under which scope, from which source, and through which decision.
+
+## The operating promise
+
+Every workflow is designed around five questions:
+
+1. **Who is acting?** The account, linked player, role, and approval state determine authority.
+2. **Where does the work belong?** Server, kingdom, alliance, and player context prevent drift.
+3. **What is the source?** A form, screenshot, spreadsheet, application, draft, or profile remains identifiable.
+4. **What decision changed the state?** Review, correction, approval, publication, rejection, archive, or restore is explicit.
+5. **What can the user verify?** The page exposes a record, status, history, report, schedule version, revision, or modeled result.
+
+```mermaid
+flowchart TD
+  U["Identity and permitted role"] --> S["Explicit server, kingdom, alliance, or player scope"]
+  S --> E["Source evidence or user input"]
+  E --> V{"Validation and review pass?"}
+  V -- "No" --> R["Correct, rematch, request changes, or reject"]
+  R --> E
+  V -- "Yes" --> C["Record an explicit state change"]
+  C --> O["Expose a verifiable output and history"]
+  O --> D["Feed only eligible downstream workflows"]
+```
+
+**Accessible summary:** Authorized users work in an explicit scope, provide source evidence, resolve review problems, record a state change, verify its output, and only then feed downstream workflows.
+
+## A complete demonstration: from community setup to trusted result
+
+The following fictional journey shows how the modules cooperate. Names and numbers are examples; workflow boundaries are the important part.
+
+### Step 1: establish identity and community context
+
+Mira confirms that her account is approved and linked to the intended player. The header shows server, kingdom, and alliance. She is an alliance leader in Aster, not a manager of every alliance visible in comparisons.
+
+Read-only analytics access does not automatically become roster or import authority. Every action still resolves assignment, role, module status, and plan.
+
+**Verifiable output:** account identity, player link, active scope, and available actions agree.
+
+### Step 2: build one durable player record
+
+Aster already contains Nia under a former nickname. Mira searches current names, nickname history, and supported external identity before creating a record. She opens the existing profile and updates only locally controlled fields.
+
+If Nia changes alliance, **Kick** changes membership without erasing history. **Delete** is different and enters recoverable soft deletion when supported. Recreating Nia would split results and rewards.
+
+**Verifiable output:** one profile preserves identity, membership history, activity evidence, and linked-account state.
+
+### Step 3: define the event context
+
+The community uses an approved template describing result type and stages. A manager selects the dated event instance. The instance, not the generic template, anchors participation.
+
+If no suitable template exists, a contributor proposes one. Approval creates reusable configuration; it does not rewrite older instances.
+
+**Verifiable output:** event, instance, date, stage, scope, and writable or locked state are visible before entry.
+
+### Step 4: bring in evidence
+
+Mira enters rows manually or uploads supported evidence. Screenshot processing validates file and quota conditions, detects repetition, extracts candidates, normalizes values, and tries to match current or historical player names.
+
+Extraction is not acceptance. Rows can be ready, uncertain, unmatched, duplicate, conflicting, ignored, accepted, or applied. An unfamiliar name stays unresolved until reviewed.
+
+**Verifiable output:** import review shows every row, context, status, reason, and intended player before apply.
+
+### Step 5: save a traceable record batch
+
+Accepted rows become a batch connected to the instance and date. Manual entry follows the same boundary: validate context, identify duplicates or conflicts, save rows, and preserve correction history.
+
+If a value is wrong, Mira corrects the source batch. She does not add another result to force analytics. Locked instances use correction or reopen decisions.
+
+**Verifiable output:** the batch contains intended players and values, and history explains corrections.
+
+### Step 6: interpret analytics and rewards
+
+Analytics applies access, scope, date, event, stage, type, participation, and attribute filters before grouping. Missing evidence is not zero. Unknown participation is not Active.
+
+Mira drills from an aggregate to contributing records. Reward decisions use eligible evidence and visible rule order; analytics rank itself is not an award.
+
+**Verifiable output:** totals trace to source rows, filters are reproducible, and a reward has a distinct state and reason.
+
+### Step 7: coordinate Castle Positions
+
+Applicants provide identity, availability, times, and supported resource information. Review resolves uncertainty. The planner preserves protected assignments and reports conflicts and gaps.
+
+A suggestion is not an appointment. Managers resolve gaps, validate, and explicitly publish. Later changes create a controlled successor.
+
+**Verifiable output:** an appointment exists only in the current published schedule version.
+
+### Step 8: publish shared knowledge
+
+An author creates a draft, previews it, resolves validation, and submits it. A reviewer inspects changes and full content, then requests changes, rejects, approves, or publishes. Editing a published guide creates a new draft while the prior publication remains live.
+
+If Reading Verification applies, the reader reaches a collapsed seal and explicitly chooses **Open seal** before assignment verification returns the fragment. Reaching the marker reveals nothing.
+
+**Verifiable output:** readers get the canonical permitted revision; managers get assignment progress without another article copy.
+
+### Step 9: compare plans in the Lab
+
+Mira selects the correct device or cloud profile and opens an optimizer or simulator. Profile data describes reusable assumptions; scenario fields describe this experiment. Versioned catalog data supplies costs and stats.
+
+Optimizers return ordered steps and leftovers. Rally and Battle expose participants, effects, sides, trials, and assumptions. Outputs are models, not game writes or guarantees.
+
+**Verifiable output:** the result preserves profile, scenario, version where exposed, steps or distribution, and limitations.
+
+### Step 10: recover and explain
+
+If something fails, return to the owning source: account for access, profile for identity, batch for results, import review for extraction, reward record for decisions, schedule version for appointments, article revision for Knowledge, or profile and scenario for Lab.
+
+Reports track issues; restore requests handle recoverable deletion. A resolved report does not restore data. Alerts point to records and are not authoritative state.
+
+**Verifiable output:** correction occurs in the owning workflow and downstream views refresh from the repaired source.
+
+## What the project deliberately does not do
+
+Kingshot Events does not guarantee extracted text, identical permissions across communities, an unchanging published schedule, perfect browser translation, or exact reproduction of undocumented live mechanics. It does not turn read visibility into edit authority and does not treat a dashboard count as the source record.
+
+These boundaries make uncertainty visible and provide a safe next action instead of presenting automation as unquestionable truth.
 <ProductFinder />
 
 ## Explore by product area

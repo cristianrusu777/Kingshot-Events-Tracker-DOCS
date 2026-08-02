@@ -36,7 +36,7 @@ Read the active context from broadest to most specific.
 
 <template #items>
 
-- Server or kingdom identifier.
+- Server identifier and selected kingdom as separate values.
 - Selected alliance when the task is alliance-specific.
 - Player, event occurrence, or workflow item inside that scope.
 
