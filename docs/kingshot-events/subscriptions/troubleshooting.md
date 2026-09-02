@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'Members and managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Subscriptions'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 ---
 
 # Subscription Troubleshooting
@@ -50,3 +50,9 @@ Capture the effective state without exposing private payment data.
 ## Decision checks, worked example, and limitations
 
 Use the effective source label, grant status and dates, feature name, allocation, usage state, limited-mode notice, and suspension message as controls for diagnosis. **Example:** A grant is Offered but not Accepted, so the alliance remains Free. Acceptance is the required state transition; refreshing or selecting another scope cannot make the pending grant effective. If accepted access still fails, verify the feature is grant-eligible and allocated quota remains. A plan cannot grant role authority, a zero or disabled hard limit is not an exceeded quota, and cleanup cannot revive an expired grant. Include scope, plan source, feature, grant, quota, operation, and exact error in troubleshooting.
+
+## Personal subscription does not look right
+
+If the current plan cannot load, retry from **Personal subscription** before starting a purchase. **Pricing not available** means the selected billing period is not ready to purchase; it is not a zero-price offer. A submitted request is not yet active access, and an expired personal plan returns to Free.
+
+Check that you are signed in to the account that made the request. A personal plan does not change alliance quotas or community roles. Continue in the existing payment conversation rather than creating repeated requests, and never send passwords or card details.

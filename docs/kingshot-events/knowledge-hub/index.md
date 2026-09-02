@@ -5,8 +5,8 @@ product: 'kingshot-events'
 audience: 'Readers, authors, reviewers, and session managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Knowledge Hub'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 keywords: ['knowledge article', 'draft', 'published', 'article locked', 'reading code', 'reading verification', 'browser translation']
 ---
@@ -191,3 +191,9 @@ Knowledge Hub succeeds when readers can discover the right permitted material, a
 **Starting situation:** A kingdom-scoped premium article is published and a signed-in alliance member opens it without effective premium access. **Rules:** Published state passes; identity and kingdom scope pass; premium access fails. **Branch:** The reader receives the permitted teaser, not the body. **State:** The article remains published and unchanged. **Output reason:** Scope does not substitute for premium entitlement. **Next action:** The reader checks effective access or an accepted grant, then reloads the same canonical article after access changes.
 
 Use [Knowledge access, publication, and Reading Verification](/kingshot-events/knowledge-hub/reading-sessions) for detailed decision tables, reader and manager flows, and recovery boundaries.
+
+## Recent reading and authoring improvements
+
+The library now offers clearer mobile navigation, a collapsible article outline, browser printing, multi-category organization, structured Hero and Master entries, and supported in-article tools. See [Reading and Finding Knowledge](/kingshot-events/knowledge-hub/reading-and-finding) for the reader workflow and [Knowledge Studio Workspaces](/kingshot-events/knowledge-hub/studio-workspaces) for contributor and space organization.
+
+Eligible personal Premium benefits are distinct from community access. Check the [personal-plan guide](/kingshot-events/subscriptions/personal-plans) before assuming a purchase unlocks every article or authoring control.

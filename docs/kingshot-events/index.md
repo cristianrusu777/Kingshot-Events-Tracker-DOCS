@@ -5,8 +5,8 @@ product: 'kingshot-events'
 audience: 'All Kingshot Events users'
 experienceLevel: 'Beginner'
 featureArea: 'Product overview'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 head:
   - - meta
@@ -367,3 +367,9 @@ The main navigation changes with your access and with feature availability.
 
 - [first visit](/kingshot-events/getting-started/first-visit)
 - [platform model](/kingshot-events/overview/platform-model)
+
+## Catch up with the latest workflows
+
+Start with the [September update overview](/kingshot-events/updates/release-notes) for a guided tour of what has changed since the August documentation refresh. New detailed guides cover the [guest Castle planner](/kingshot-events/castle-positions/local-planner), [temporary managed participants](/kingshot-events/castle-positions/temporary-participants), [KvK proof and points](/kingshot-events/castle-positions/kvk-resources-and-proof), [Ascension Path](/kingshot-events/lab/ascension-path), [screenshot build import](/kingshot-events/lab/screenshot-build-import), and [personal Free and Premium plans](/kingshot-events/subscriptions/personal-plans).
+
+The updated [notification guide](/kingshot-events/lifecycles/notifications-and-reports) explains why a red dot can clear after reading information yet remain when a decision is still needed.

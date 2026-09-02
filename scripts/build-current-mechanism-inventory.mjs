@@ -9,6 +9,7 @@ fs.mkdirSync(reports, { recursive: true })
 const normalized = (value) => value.toLocaleLowerCase('en-US').replace(/\s+/g, ' ')
 
 const records = sourceMechanismCatalog.map((item) => {
+  if (item.documentationVisibility !== 'public') throw new Error('Only explicitly public mechanisms may be included.')
   const file = path.join(docs, item.docsFile)
   const exists = fs.existsSync(file)
   const body = exists ? normalized(fs.readFileSync(file, 'utf8')) : ''

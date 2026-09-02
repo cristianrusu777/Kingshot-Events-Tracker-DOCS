@@ -5,8 +5,8 @@ product: 'Kingshot Events'
 audience: 'Members and community owners'
 experienceLevel: 'Advanced'
 featureArea: 'Subscriptions and Usage'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -98,3 +98,9 @@ Effective-access resolution solves the difference between a displayed plan name 
 The workflow resolves direct alliance plan first, then an accepted current grant, then direct kingdom plan, then Free. It checks whether the requested feature is included and grant-eligible, applies allocation and quota state, then applies suspension or limited-mode restrictions. The output names effective source, feature result, usage warning, and allowed next action.
 
 **Pending-grant example:** Alliance Aster has no direct plan and receives a kingdom grant, but has not accepted it. The grant remains Offered and unlocks nothing, so Free is effective. After acceptance and an eligible allocation, the grant can become effective. If usage is already at the allocation, a new consuming write is blocked in limited mode while permitted reading and cleanup remain. Acceptance changes entitlement, never leadership authority.
+
+## Personal plans are a separate layer
+
+The community precedence described above concerns alliance and kingdom access. A [personal subscription](/kingshot-events/subscriptions/personal-plans) belongs to the signed-in account and starts on Free unless active paid personal access applies. It may provide eligible personal reading benefits, but it does not become an alliance allocation or change community quotas.
+
+Check the current plan in the appropriate view: **Personal subscription** for yourself, and the community effective-access view for the selected kingdom or alliance. Never infer management permission from either plan name.

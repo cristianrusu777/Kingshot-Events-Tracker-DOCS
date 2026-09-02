@@ -116,6 +116,9 @@ const productSidebar: Item[] = [
   ]),
   section('Castle Positions', '♛', [
     link('Overview', 'castle-positions/'),
+    link('Local planner for guests', 'castle-positions/local-planner'),
+    link('Temporary participants', 'castle-positions/temporary-participants'),
+    link('KvK resources, proof, and points', 'castle-positions/kvk-resources-and-proof'),
     subgroup('Apply and review', [
       link('Applicant guide', 'castle-positions/applicant-guide'),
       link('Resources and eligibility', 'castle-positions/resources-and-eligibility'),
@@ -149,9 +152,11 @@ const productSidebar: Item[] = [
     link('Lab overview', 'lab/'),
     subgroup('Profiles and shared inputs', [
       link('Profiles and autosave', 'lab/profiles-and-autosave'),
+      link('Import a build from screenshots', 'lab/screenshot-build-import'),
       link('Interpret results', 'lab/interpreting-results')
     ]),
     subgroup('Progression optimizers', [
+      link('Ascension Path', 'lab/ascension-path'),
       link('Hero Gear logic', 'lab/hero-gear'),
       link('Governor Gear logic', 'lab/governor-gear'),
       link('Charm logic', 'lab/charms'),
@@ -167,6 +172,7 @@ const productSidebar: Item[] = [
   ]),
   section('Subscriptions and Usage', '◈', [
     link('Overview', 'subscriptions/'),
+    link('Personal Free and Premium plans', 'subscriptions/personal-plans'),
     link('Plans, grants, quotas, and access', 'subscriptions/plans-and-effective-access'),
     link('Subscription and support requests', 'subscriptions/support-requests'),
     link('Access and usage', 'subscriptions/access-and-usage'),

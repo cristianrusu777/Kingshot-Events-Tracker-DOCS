@@ -5,10 +5,18 @@ const root = path.resolve(import.meta.dirname, '..')
 const inventoryPath = path.join(root, 'reports', 'current-product-feature-inventory.json')
 const docsRoot = path.join(root, 'docs')
 const restricted = []
+if (!fs.existsSync(inventoryPath)) {
+  console.error('Documentation visibility inventory is missing. Run the inventory generator first.')
+  process.exit(1)
+}
 
 if (fs.existsSync(inventoryPath)) {
   const inventory = JSON.parse(fs.readFileSync(inventoryPath, 'utf8'))
   for (const item of inventory) {
+    if (!['public', 'internal', 'confidential'].includes(item.documentationVisibility)) {
+      console.error('Documentation visibility check failed: an inventory record is unclassified.')
+      process.exit(1)
+    }
     if (!['internal', 'confidential'].includes(item.documentationVisibility)) continue
     restricted.push(item.featureName, item.routeOrEntryPoint, ...(item.requiredDocumentationPages ?? []))
   }

@@ -5,8 +5,8 @@ product: 'kingshot-events'
 audience: 'Administrators and reviewers'
 experienceLevel: 'Advanced'
 featureArea: 'Accounts and Access'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -52,3 +52,9 @@ If access remains wrong, check account approval, player link where relevant, ass
 ## Limits and troubleshooting
 
 A visible administration page does not guarantee authority for every action inside it. Cached navigation can briefly outlive a permission change, but the server still decides the request. Avoid using a broad role as a diagnostic shortcut. When access differs between two users, compare approval state, assignments, roles, direct permissions, module status, and plan at the same scope. Record only the minimum safe identifiers needed for an administrator to reproduce the denial.
+
+## Follow requests through Notifications
+
+Registration, role, and player-link decisions can appear in the permitted recipient's notification inbox. Reviewers see actions for the responsibilities they actually hold; applicants receive their own updates. A notification is not a grant of additional access.
+
+Use **Review item** to open the appropriate request. Reading or marking it seen does not approve it. Once the required decision is complete, it should no longer keep that section's pending-action dot active. [Notifications and Reports](/kingshot-events/lifecycles/notifications-and-reports) explains the red dots and urgent view.

@@ -5,8 +5,8 @@ product: 'kingshot-events'
 audience: 'Account holders and privacy reviewers'
 experienceLevel: 'Intermediate'
 featureArea: 'Accounts and Access'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -51,3 +51,9 @@ If submission fails, preserve the selected request type and safe error text, the
 ## Limits and troubleshooting
 
 The control center cannot guarantee a particular legal outcome or response time. Changing optional consent does not automatically submit a formal deletion, access, or portability request. A fulfilled request without an export can be valid when the request type produces no downloadable file. If a download is unavailable, verify request type and status, then contact the privacy channel shown by the product. Never forward an export link or downloaded archive to another account.
+
+## Readable review and accurate completion notices
+
+The request-processing dialog uses readable light and dark theme colours, labelled controls, and keyboard dismissal when it is not saving. Review the response note before saving because it is visible to the requester.
+
+After a request is fulfilled, it should no longer be counted as a pending privacy action. A new informational response can still appear for the requester until it is read. A notification never replaces checking the request's status or the availability of an export.

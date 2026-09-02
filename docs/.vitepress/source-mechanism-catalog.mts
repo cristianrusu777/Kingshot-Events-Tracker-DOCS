@@ -1,10 +1,22 @@
 // Source-backed registry of reader-visible product mechanisms.
 // Every record must identify implementation evidence and words that must appear in its guide.
 const group = (productArea, docsFile, sourceEvidence, records) => records.map(([id, mechanismName, ...evidenceTerms]) => ({
-  id, productArea, mechanismName, docsFile, sourceEvidence, evidenceTerms
+  id, productArea, mechanismName, docsFile, sourceEvidence, evidenceTerms, documentationVisibility: 'public'
 }))
 
 export const sourceMechanismCatalog = [
+  ...group("Castle Positions", "kingshot-events/castle-positions/local-planner.md", "src/frontend/appPages/castlePositions/helper/LocalCastlePlannerPage.tsx; src/frontend/appPages/castlePositions/helper/LocalCastleBoard.tsx", [["SRC-183","guest local Castle helper","Guests","no server persistence"],["SRC-184","fixed half-hour local slots","30-minute","48"],["SRC-185","local resource budgeting","five days","over-budget"],["SRC-186","local backup boundary","Export backup","Import backup"]]),
+  ...group("Castle Positions", "kingshot-events/castle-positions/temporary-participants.md", "src/frontend/appPages/castlePositions/admin/CastleSchedulePlanner.tsx; src/infrastructure/persistence/prisma/castle-positions/PrismaCastlePositionServices.ts", [["SRC-187","schedule-local participants","temporary participant","without creating"],["SRC-188","reviewed roster identity","in-game ID","before approval"]]),
+  ...group("Castle Positions", "kingshot-events/castle-positions/kvk-resources-and-proof.md", "src/frontend/appPages/castlePositions/apply/ResourceProofPanel.tsx; src/frontend/appPages/castlePositions/admin/KvKScoringRegistryPanel.tsx", [["SRC-189","resource screenshot evidence","PNG","required"],["SRC-190","proof retention window","14-day","creation"],["SRC-191","day-specific scoring reference","Days 1 to 5","read-only"]]),
+  ...group("Simulations and Optimizations", "kingshot-events/lab/ascension-path.md", "src/frontend/appPages/simulators/AscensionPathPage.tsx", [["SRC-192","cross-system progression path","Hero Gear","Governor Gear","Charms"],["SRC-193","temporary resource routing","Analyze route","does not buy"],["SRC-194","forecast freshness","stale","Run again"]]),
+  ...group("Simulations and Optimizations", "kingshot-events/lab/screenshot-build-import.md", "src/frontend/appPages/simulators/imports/ScreenshotImportPanel.tsx", [["SRC-195","reviewed screenshot build import","six PNG","selected valid changes"],["SRC-196","uncertain build fields","uncertain","unselected"]]),
+  ...group("Subscriptions and Usage", "kingshot-events/subscriptions/personal-plans.md", "src/frontend/components/account/PersonalSubscriptionView.tsx", [["SRC-197","personal Free baseline","starts on","Free"],["SRC-198","account-only purchase","own account","not an immediate charge"],["SRC-199","manual activation and expiry","no automatic renewal","returns to Free"]]),
+  ...group("Platform Lifecycles", "kingshot-events/lifecycles/notifications-and-reports.md", "src/frontend/components/notifications/NotificationInbox.tsx; src/frontend/components/notifications/NotificationCenter.tsx; src/frontend/app/AppShell.tsx", [["SRC-200","notification workflow views","Unread","Action needed","pagination"],["SRC-201","section attention explanations","What's new here","Offscreen"],["SRC-202","reading versus required decision","does not approve","pending"],["SRC-203","restricted recent-activity tab","five minutes","not a public visitor directory"]]),
+  ...group("Accounts and Access", "kingshot-events/getting-started/account-and-profile.md", "src/frontend/components/account/AvatarEditor.tsx; src/frontend/components/ui/PremiumCronText.tsx", [["SRC-204","shared account avatar","Upload avatar","72-hour"],["SRC-205","cosmetic account appearance","gradient","cosmetic"]]),
+  ...group("Platform Lifecycles", "kingshot-events/lifecycles/recycle-bin-and-restore-requests.md", "src/frontend/appPages/admin/AdminRestoreRequestsPage.tsx", [["SRC-206","categorized recovery workspace","category","pagination"]]),
+  ...group("Knowledge Hub", "kingshot-events/knowledge-hub/reading-and-finding.md", "src/frontend/appPages/knowledge/ArticleReader.tsx; src/frontend/appPages/knowledge/KnowledgeApp.tsx", [["SRC-207","reader print and outline","Print or save as PDF","collapsible"],["SRC-208","structured discovery","Master","category"]]),
+  ...group("Knowledge Hub", "kingshot-events/knowledge-hub/studio-workspaces.md", "src/frontend/appPages/knowledge/KnowledgeStudio.tsx; src/frontend/appPages/knowledge/KnowledgeEditors.tsx", [["SRC-209","multi-category article organization","several relevant categories","one article"],["SRC-210","scoped editorial contributors","contributor management","named space"]]),
+  ...group("Simulations and Optimizations", "kingshot-events/lab/hero-gear.md", "src/frontend/appPages/simulators/heroGear/CombatContextControls.tsx; src/frontend/appPages/simulators/heroGear/HeroGearResults.tsx", [["SRC-211","total-stat priority protection","raw stat total","weighted useful value"],["SRC-212","account-context objective","Balanced for my account","stat source"]]),
   ...group('Dashboard', 'kingshot-events/overview/dashboard-and-alerts.md', 'src/frontend/appPages/DashboardPages.tsx', [
     ['SRC-001', 'scope-aware dashboard', 'scope heading', 'selected context'],
     ['SRC-002', 'action-needed queue', 'Action Needed', 'owning workspace'],
@@ -201,9 +213,9 @@ export const sourceMechanismCatalog = [
     ['SRC-137', 'Charm candidate loop', 'charm slots', 'Positive candidate'],
     ['SRC-138', 'Charm material constraints', 'Guides', 'Designs']
   ])
-  ,...group('Simulations and Optimizations', 'kingshot-events/lab/bear-trap.md', 'src/frontend/appPages/simulators/tabs/BearTab.tsx; src/domain/simulators/bearEngine.ts', [
+  ,...group('Simulations and Optimizations', 'kingshot-events/lab/bear-trap.md', 'src/frontend/appPages/simulators/bear/BearAtomicEditor.tsx; src/domain/simulators/spend-optimizer/bear/bearFormationOptimizer.ts', [
     ['SRC-139', 'Bear leader and joiner resolution', 'Leader contribution', 'Joiner contribution'],
-    ['SRC-140', 'Bear formation recommendation', 'minimum-infantry floor', 'squared coefficients'],
+    ['SRC-140', 'Bear formation recommendation', 'Formation Damage Map', 'limited search'],
     ['SRC-141', 'Bear prediction error', 'prediction error', 'observed result']
   ])
   ,...group('Knowledge Hub', 'kingshot-events/knowledge-hub/index.md', 'src/frontend/appPages/knowledge/KnowledgeApp.tsx; src/frontend/appPages/knowledge/KnowledgeStudio.tsx', [

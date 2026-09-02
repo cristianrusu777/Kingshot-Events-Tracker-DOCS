@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'Players and kingdom managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Castle Positions'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 ---
 
 <CategoryHero category="castle-positions" icon="crown" eyebrow="A fair, visible appointment cycle" title="Castle Positions Overview">
@@ -77,3 +77,11 @@ Common mistakes are treating submission as appointment, changing an applicant's 
 Read [Applicant Guide](/kingshot-events/castle-positions/applicant-guide), [Resources and Eligibility](/kingshot-events/castle-positions/resources-and-eligibility), [Review Workflow](/kingshot-events/castle-positions/review-workflow), [Candidate Ranking and Suggestions](/kingshot-events/castle-positions/planner-controls), [Planning and Publishing](/kingshot-events/castle-positions/planning-and-publishing), then [Statuses and Changes](/kingshot-events/castle-positions/statuses-and-changes). Use [Castle Position Problems](/kingshot-events/troubleshooting/castle-position-problems) for recovery.
 
 The system cannot see offline agreements, unsubmitted availability, or missing resource information. Human review remains responsible for exceptional context and fair communication.
+
+## New ways to prepare a schedule
+
+- [Local Castle Planner for Guests](/kingshot-events/castle-positions/local-planner): fixed half-hour slots and a five-day resource scratchpad, without registration or shared records.
+- [Temporary Participants and Reviewed Players](/kingshot-events/castle-positions/temporary-participants): include someone for one managed schedule, or approve a genuine roster identity.
+- [KvK Resources, Proof, and Points](/kingshot-events/castle-positions/kvk-resources-and-proof): understand supporting screenshots, retention, and day-specific estimates.
+
+Choose the local helper for small tasks. For full assignments, applications, and history, [register](https://ralyvora.com/games/kingshot/register) and work in the managed kingdom schedule with the appropriate access.

@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'All signed-in users'
 experienceLevel: 'Beginner'
 featureArea: 'Scope and access'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 ---
 
 # Choosing Scope and Understanding Access
@@ -44,3 +44,9 @@ See [How Scopes Work](/kingshot-events/kingdoms-and-alliances/scopes) and [Acces
 ## Purpose, roles, and worked decision
 
 Navigation reflects the account's current scope, applicable stacked roles, feature state, and effective access. **Example:** A kingdom manager switches to a personal context and Castle planning disappears. The role remains assigned, but the active scope no longer matches the kingdom workflow. Switching back restores evaluation; it does not create or remove the role. A read-only grant may expose Analytics without edit controls. Troubleshoot by recording identity, selected scope, expected role, page, feature label, plan or grant state, and exact disabled wording. Scope selection cannot bypass assignment or suspension.
+
+## Understand attention markers
+
+A section's red dot means there is new information or a pending action. Open the section to read **What's new here**. Informational dots clear after the visible update is seen; genuine review work stays highlighted until it is resolved. The Notifications indicator counts unread updates separately from pending actions.
+
+Use the [notification guide](/kingshot-events/lifecycles/notifications-and-reports) if a marker remains after reading. A saved kingdom choice, a name gradient, or a personal subscription never replaces the permission check for a requested action.

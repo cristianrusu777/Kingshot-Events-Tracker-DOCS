@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'All affected users'
 experienceLevel: 'Beginner'
 featureArea: 'Troubleshooting'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 head:
   - - meta
     - name: 'robots'
@@ -45,3 +45,9 @@ Confirm profile, save state, units, current levels, targets, resources, and scen
 **What you see:** A Hero Gear plan stops with Forge Hammers remaining. **Checks:** Confirm active profile, visible saved state, current levels, locks, strategy, weights, every material balance, and dataset version. **Decision:** Remaining Hammers alone may not fund any valid positive step if XP, Mythic Gear, or Mithril is exhausted, a slot is locked, or the next gain has non-positive configured value. **Recovery:** Correct the input, wait for saved confirmation, and rerun; compare before state, ordered steps, and leftovers. The iterative plan is deterministic but not a proof of global optimality or live-game outcome. Include module, scenario, dataset, save state, inputs changed, and unexpected output.
 
 The safe workflow changes one assumption in a copied scenario. It cannot guarantee future game balance, exact live damage, or recovery of a profile whose newer version legitimately won a save conflict.
+
+## A saved result changed after an update
+
+Hero Gear XP costs and reforge comparisons, Bear formation search, and account-stat handling have been refined. Re-run the same input under the current catalog and compare objective, profile, locks, formation, and stat source before comparing totals. A previous screenshot is a historical result, not the current calculation.
+
+If inputs changed after a run, use the tool's Run or Optimize action to refresh a stale result. If screenshot import misreads a field, leave it unselected and enter it manually. See [Screenshot Build Import](/kingshot-events/lab/screenshot-build-import) and [Ascension Path](/kingshot-events/lab/ascension-path) for safe input and scenario boundaries.

@@ -5,8 +5,8 @@ product: 'kingshot-events'
 audience: 'All Lab users'
 experienceLevel: 'Intermediate'
 featureArea: 'Lab'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -73,7 +73,7 @@ flowchart TD
 
 ## Decision mechanisms
 
-Hero Gear, Governor Gear, and Charm planning generate valid next candidates, remove locked, maximum, unaffordable, or out-of-scope choices, compare weighted gain with normalized cost, apply the best positive candidate, update resources, and repeat. The behavior is greedy and iterative, with system-specific staging such as Hero Gear milestone bundles and reforge or Governor Gear set deltas. It is not an exhaustive proof of global optimality.
+Hero Gear, Governor Gear, and Charm planning generate valid next candidates, remove locked, maximum, unaffordable, or out-of-scope choices, compare weighted gain with normalized cost, apply the best positive candidate, update resources, and repeat. The ordinary upgrade loop is greedy and iterative, with system-specific staging such as Hero Gear milestone bundles and reforge or Governor Gear set deltas. Hero Gear total-stat mode also compares alternate plans with its own priority protections; see its dedicated guide. It is not an exhaustive proof of global optimality.
 
 Bear Trap resolves the rally leader separately from joiners, validates capacity and formation, applies supported troop, Truegold, hero, captain, skill, stat, and temporary-buff effects, and distinguishes deterministic, probabilistic, estimated, and unresolved mechanics. Prediction error requires an observed result and helps diagnose assumptions; it does not validate every mechanic.
 
@@ -201,3 +201,11 @@ A trustworthy Lab result always lets the reader answer: which profile, which ove
 ## Recommended reading order
 
 Begin with [Profiles, Autosave, and Optimization Order](/kingshot-events/lab/profiles-and-autosave), then choose [Hero Gear](/kingshot-events/lab/hero-gear), [Governor Gear](/kingshot-events/lab/governor-gear), [Charms](/kingshot-events/lab/charms), or [Bear Trap](/kingshot-events/lab/bear-trap). Finish with [Interpreting Results](/kingshot-events/lab/interpreting-results) and [Simulator Problems](/kingshot-events/troubleshooting/simulator-problems).
+
+## Plan across systems, or enter a build faster
+
+**[Ascension Path](/kingshot-events/lab/ascension-path)** brings Hero Gear, Governor Gear, and Charms into one progression view. Check the current build, choose a combat focus, inspect the next target and forecast, and compare hypothetical resource offers without buying anything or changing the confirmed account.
+
+**[Screenshot build import](/kingshot-events/lab/screenshot-build-import)** lets you choose, drag, or paste relevant game screens and review recognized changes before applying selected values. This updates Lab inputs, not event results. Manual entry remains the fallback when an image is unclear or the import option is unavailable.
+
+The Lab's cards, stat-source explanations, result tables, charts, and mobile controls have been reorganized to make assumptions and next actions easier to find. Use the current result's labels and freshness notice rather than assuming an older screenshot describes the current calculation.

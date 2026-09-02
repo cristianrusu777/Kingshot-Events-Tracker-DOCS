@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'Players and managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Events'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 ---
 
 # Event Templates, Instances, and Results
@@ -50,3 +50,9 @@ Start with the event card or instance list, then follow the dated record into re
 </VisualReference>
 
 Continue with [Participation and Score Events](/kingshot-events/events/participation-and-scores), [Manual Entry](/kingshot-events/events/manual-entry), and [Review and History](/kingshot-events/events/review-and-history).
+
+## A clearer event workspace
+
+Event lists, sessions, manual entry, result batches, and proposal screens have refreshed layouts, icons, status presentation, and responsive controls. The purpose is to make the next action and current event context easier to recognize on large and small screens.
+
+The workflow boundaries are unchanged: selecting a card does not submit results, editing a draft does not publish a decision, and a notification does not approve a proposal. Confirm the event, date, selected community, and visible status before saving or reviewing work.

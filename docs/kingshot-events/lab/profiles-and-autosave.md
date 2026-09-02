@@ -5,8 +5,8 @@ product: 'Kingshot Events'
 audience: 'Lab users'
 experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -32,7 +32,7 @@ flowchart LR
 
 ## Optimizer decision loop
 
-Hero Gear, Governor Gear, and Charms share a verified iterative pattern:
+The ordinary upgrade loops in Hero Gear, Governor Gear, and Charms share this iterative pattern. Hero Gear total-stat mode additionally compares alternate plans under its priority protections:
 
 1. Read current item levels, combat-stat baseline, troop and stat weights, resource inventory, strategy, and locked slots.
 2. Generate every valid next upgrade in the selected tool. Remove locked, maximum-level, unaffordable, and out-of-scope candidates.
@@ -67,3 +67,11 @@ The plan is deterministic for the same inputs and dataset, but it is not a proof
 Profiles solve the problem of re-entering shared progression and combat inputs for every Lab module. Any eligible Lab user can create and switch personal profiles; sharing or management roles do not turn a profile into an alliance record. The active profile supplies shared values, while each module adds its own gear, charm, rally, or scenario controls. A visible pending state means the debounce has not completed; saved confirms the current version; failed requires correction or retry; conflict means another tab or newer save won. Switching profiles changes the source for later module runs and must cancel or isolate an older pending write so it cannot overwrite the newly active profile.
 
 **Worked profile switch:** A user edits troop bonuses in Profile A and immediately opens Profile B. The pending A save remains associated with A. Profile B loads its own values and save version. When the older response returns, stale-write protection prevents it from replacing B. The next optimizer output therefore names Profile B and its module inputs. If the label or values disagree, stop, copy unsaved edits, reload, and verify the active profile before running again.
+
+## Keep confirmed inputs separate from experiments
+
+Visitor work stays in the current browser. Signing in unlocks eligible account-saving features but should not be treated as proof that every local experiment was transferred. Confirm the selected profile and its save feedback after switching identity or workspace.
+
+Edits to actual gear, resources, or combat stats in the specialized optimizers can provide source information to [Ascension Path](/kingshot-events/lab/ascension-path). Hypothetical optimizer results are not automatically promoted to the owned build. Ascension temporary scenarios are for trying alternatives; use the confirmed-input controls when the actual account has changed.
+
+[Screenshot build import](/kingshot-events/lab/screenshot-build-import) also requires a deliberate confirmation. Review only the selected fields before applying them, then check saving and rerun any now-stale calculation.

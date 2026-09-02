@@ -1,54 +1,60 @@
 ---
 title: 'Hero Gear Optimization Logic'
-description: 'How enhancement, mastery, milestones, reforge, locks, priorities, and limited materials produce an ordered Hero Gear plan.'
-product: 'Kingshot Events'
+description: 'Choose a useful objective, protect important gear, and understand the trade-offs in a proposed upgrade or reforge plan.'
+product: 'kingshot-events'
 audience: 'Hero Gear planner users'
-experienceLevel: 'Advanced'
+experienceLevel: 'Intermediate'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Hero Gear Optimization Logic
 
-The optimizer starts from four Hero Gear slots for Infantry, Cavalry, and Archer, including enhancement and mastery levels. It combines those states with XP, Forge Hammers, Mythic Gear, Mithril, combat-stat priorities, locked slots, strategy, and the versioned cost catalog.
+The Hero Gear Optimizer helps you turn current equipment and available materials into a plan you can review before spending. It considers enhancement, mastery, milestone requirements, locks, and your chosen build priorities. It does not change your game account.
 
-For every unlocked slot it generates the next valid enhancement or mastery step. At milestone boundaries it can compare a combined mastery-plus-enhancement bundle rather than pretending the enhancement is reachable alone. Each candidate receives weighted stat value and a normalized resource cost. Irreversible materials receive a stronger cost penalty than reusable XP. The highest positive value-to-cost candidate that the inventory covers is applied; inventory, stats, and item level update; then candidates are regenerated. The process ends when no valid positive step remains.
+## Give the planner the right starting point
 
-Optional reforge runs before planning. It can pull recoverable XP from eligible unlocked enhancement levels, adjust the current stats, and add the XP back to inventory. It never reforges a locked slot and does not promise that every material is recoverable.
+Choose the active Lab profile, then check each troop's gear, enhancement and mastery levels, available XP, Forge Hammers, Mythic Gear, and Mithril. Lock anything you do not want the planner to change.
 
-## Decision and resource flow
+Next choose your build profile. A strategic profile describes which stats matter for your goal; it is not a claim that those weights are a rule of the game. The **Bear Trap Rally Damage** profile favors offense while retaining defensive value so a damage-focused plan does not treat useful all-mode gear as worthless.
 
-Start condition → current gear and inventory are loaded → optional reforge is evaluated → locked, maximum, unreachable, and unaffordable steps are removed → enhancement, mastery, and milestone bundles are compared → the best positive candidate consumes resources → item state and combat baseline change → candidates are regenerated → the ordered plan stops when none remains.
+## Choose the question you want answered
 
-The before state explains what the engine believed; each step names the affected slot and consumed resources; the after state shows accumulated effects; leftovers explain why a later candidate could not run. A missing step therefore does not mean the item has no value: a lock, catalog boundary, non-positive configured weight, or insufficient material may have removed it.
+| Objective | How to interpret it |
+| --- | --- |
+| Maximize Total Stat % | Searches for greater total gear stats while protecting build-profile priorities |
+| Balanced for my account | Values upgrades against your entered account stats and march formation |
+| Gear value only | Uses gear gains and build priorities without an account snapshot |
+| Match the published optimizer | Helps compare against the weighted reference method |
 
-```mermaid
-flowchart TD
- A["Levels, mastery, locks, priorities, materials"] --> B["Optional eligible XP reforge"]
- B --> C["Generate next steps and milestone bundles"]
- C --> D["Compare weighted gain with normalized cost"]
- D --> E{"Affordable positive candidate?"}
- E -->|Yes| F["Apply step and consume materials"]
- F --> C
- E -->|No| G["Ordered plan, before/after state, leftovers"]
-```
+For account-aware planning, enter the actual troop percentages, select where you read them, and confirm the formation. The stat source matters: some displayed totals already include Hero Gear. The tool accounts for that distinction so the same gear is not simply counted twice.
 
-**Accessible summary:** The optimizer optionally recovers eligible XP, compares valid upgrade and milestone candidates, applies one affordable positive step at a time, and returns plan and leftovers.
+If usable account context is missing, inspect the result's fallback explanation. A gear-only comparison is not the same answer as a calculation based on your whole account.
 
-**Example:** An Archer lethality slot and an Infantry health slot are both affordable. Archer lethality has the higher configured weight, but crossing its milestone also needs Mithril. The engine compares the full bundle cost with the Infantry step, chooses the current best ratio, subtracts those materials, and reevaluates. Locking the Archer slot removes it entirely.
+## Follow the plan, not just the headline
 
-## Limitations and recovery
+The planner compares affordable next steps and can evaluate an enhancement together with the mastery needed to cross a milestone. After choosing an upgrade it consumes the modeled resources and reevaluates the remaining options. Locked, unreachable, maximum-level, and unaffordable choices are excluded.
 
-The output is deterministic for the same engine, dataset, and inputs. It is a planning estimate, not a guaranteed best build: the iterative choice does not search every possible future sequence. Verify current levels, locks, material counts, dataset version, and reforge choice before applying steps in game. If the result unexpectedly pulls a slot down, cancel the scenario and confirm that optional reforge is disabled or that the slot is locked.
+The familiar candidate question is **Affordable positive candidate?** If none remains, the plan stops and leaves unused resources. This does not mean every item is finished; a different required material may have run out.
 
-## Controls, scope, and output review
+Review the ordered steps, affected troop and slot, before-and-after stats, material spending, and leftovers. Total stat percentage is a sum of stat gains, not the percentage by which you will win more battles or deal more damage.
 
-The main controls are active profile, current enhancement and mastery per troop-class slot, resource inventory, combat-stat weights, strategy, slot locks, and optional reforge. These values belong to the user's saved Lab profile and scenario; alliance or kingdom scope does not change game catalog costs and no manager role can spend resources for another player. The current state is the baseline, the target is the ordered reachable state produced by the run, and the result lists each chosen slot, upgrade kind, material cost, before and after effect, total spending, and leftovers.
+## Reforge without losing sight of your priorities
 
-**Worked exhaustion case:** The first two steps consume all Mithril while XP and Forge Hammers remain. Candidate generation repeats, but every remaining milestone that needs Mithril is now unaffordable. An ordinary enhancement can continue only if its full next-step cost is covered and its weighted gain stays positive. Otherwise the plan stops and leaves the other materials unspent. The correct interpretation is constrained exhaustion, not optimizer failure. Correct profile counts and rerun if the inventory was wrong.
+Optional **reforge** can recover invested enhancement XP from eligible gear and reuse it in the proposed plan. A locked item is protected. Profile-priority protection also prevents lower-priority gains from being used to justify losses in higher-priority groups in the total-stat comparison.
 
-The engine is greedy with milestone bundles and optional staged reforge, not exhaustive. It compares valid next choices repeatedly and makes no unsupported optimality claim.
+An empty XP bag does not necessarily mean there is nothing to compare: invested, recoverable XP can still be relevant. Conversely, recoverable XP is not free new inventory, and not every material is refunded.
 
-Each input field should be confirmed against the game-displayed state before Run: enhancement, mastery, lock, weight, XP, Forge Hammers, Mythic Gear, and Mithril. The result controls let the user inspect the ordered plan and copy assumptions, but not mutate the game. If one field is uncertain, save a separate scenario, change only that value, and compare outputs. This sensitivity check reveals whether the recommendation depends on the uncertain inventory or milestone without pretending the alternative is authoritative.
+For Maximize Total Stat %, a reforge must improve both raw stat total and weighted useful value over the no-reforge result before it is selected. Inspect that comparison and the actual donor items instead of assuming that a longer plan is better.
+
+**Example:** A proposed reforge would raise several secondary stats but reduce a higher-priority group. The larger raw sum alone is not sufficient. Keep the priority protection, compare the no-reforge alternative, or deliberately choose a different build strategy if your real goal has changed.
+
+## Why an older result may differ
+
+The XP cost table and reforge comparisons have been corrected, and account context is handled more consistently. Re-run a saved scenario after an update rather than relying on a copied old total. Compare the same input levels, inventory, objective, locks, and formation before deciding two results disagree.
+
+The planner searches supported choices; it does not prove a globally best build over every future upgrade. Treat predictions as conditional on the entered information and current catalog.
+
+Use [screenshot build import](/kingshot-events/lab/screenshot-build-import) to reduce data entry, [profiles and autosave](/kingshot-events/lab/profiles-and-autosave) to understand saving, and [Ascension Path](/kingshot-events/lab/ascension-path) for cross-system planning.
