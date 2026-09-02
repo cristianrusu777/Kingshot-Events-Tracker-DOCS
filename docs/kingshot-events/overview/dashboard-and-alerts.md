@@ -5,8 +5,8 @@ product: 'kingshot-events'
 audience: 'Signed-in users'
 experienceLevel: 'Beginner'
 featureArea: 'Dashboard'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -46,3 +46,9 @@ Quick actions can include importing screenshots, reviewing players, opening even
 **Example:** An import alert says review is required. Opening the alert reveals several rows awaiting decisions. The alert itself did not apply data; the reviewer resolves the rows, applies the import, and then checks the resulting batch.
 
 If a count looks stale, refresh the dashboard and then the destination page. If a destination is denied, record the current scope label, the action label, and the denial message. Do not infer authority from seeing a summary card.
+
+## A dedicated inbox for follow-up
+
+The bell and **Notifications** menu lead to a paginated inbox with unread, urgent, and action-needed views. Sidebar dots are explained by **What's new here** in the relevant section. Reading information clears its unread state, while actual decisions remain pending until completed in their owning workspace.
+
+This makes it possible to read everything without accidentally approving anything. See [Notifications and Reports](/kingshot-events/lifecycles/notifications-and-reports) for examples and recovery steps.

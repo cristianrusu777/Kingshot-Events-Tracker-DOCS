@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'Players'
 experienceLevel: 'Intermediate'
 featureArea: 'Castle Position applications'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 ---
 
 # Castle Position Applicant Guide
@@ -49,3 +49,11 @@ Complete the step sequence and review the final UTC choices.
 ## Problems
 
 If submission is blocked, check required fields, one choice per stage, application-period state, and player identity. If a prior application exists, update it. If your confirmation says **Needs review**, wait for the kingdom reviewer or provide the public application details they request.
+
+## KvK resources and supporting screenshots
+
+When the cycle requests resource evidence, the application clearly states whether **Resource Proof** is optional or required. A required upload must finish successfully before submission. Review the screenshot preview, amounts, and UTC preferences together.
+
+Proof images have limited retention and are not public schedule pictures. See [KvK Resources, Proof, and Points](/kingshot-events/castle-positions/kvk-resources-and-proof) for accepted images, expiry, and day-specific scoring.
+
+If your player is missing or has a changed name, provide the correct in-game ID and let the reviewer resolve the identity. Approval can create or update the appropriate roster player; submitting a name alone does not. For a quick personal schedule without applications, the [Local Castle Planner](/kingshot-events/castle-positions/local-planner) is also available to guests.

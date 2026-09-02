@@ -5,8 +5,8 @@ product: 'kingshot-events'
 audience: 'Authors, reviewers, and Knowledge managers'
 experienceLevel: 'Advanced'
 featureArea: 'Knowledge Hub'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -49,3 +49,15 @@ If a block cannot publish, inspect its required fields and source metadata. If a
 ## Limits and troubleshooting
 
 Saving a draft does not publish it, approval does not necessarily replace the explicit publish action, and archive is not deletion. Preview cannot guarantee access for every reader because final projection still considers publication state and audience. If a revision conflict appears, stop editing, compare the latest version, and reapply only intended changes. If review controls are absent, verify reviewer permission and article state rather than cloning the article into a new draft.
+
+## Organize a guide without duplicating it
+
+An article can be placed in several relevant categories. Use category and section management to organize discovery while keeping one article and its review history. Archiving a category hides it from readers; deleting a category unlinks its articles rather than deleting those articles.
+
+The block picker includes **Tool / Simulator Widget** for supported interactive content. Preview the widget, surrounding explanation, and article audience before submitting. Hero and Master database authoring supports more structured entries than a plain text description alone.
+
+## Work with a scoped editorial team
+
+Space and contributor management let permitted managers organize who can contribute to a kingdom or alliance library. A role in one community does not imply editorial control in another. Confirm the named space, audience, and available action before changing contributors or content.
+
+Keep draft saving, review, and publication separate. Review notifications help the right person find pending work, but reading one does not approve a revision. See [Notifications](/kingshot-events/lifecycles/notifications-and-reports) for the difference between new information and an unresolved action.

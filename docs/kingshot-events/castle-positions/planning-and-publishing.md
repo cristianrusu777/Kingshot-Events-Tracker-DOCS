@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'Authorized kingdom managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Castle Position scheduling'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 ---
 
 # Planning, Scheduling, and Publishing
@@ -81,3 +81,11 @@ The planner cannot see offline agreements, unsubmitted availability, or unrecord
 Suggestion order cannot guarantee political fairness or a globally optimal schedule. It evaluates only recorded applications, resolved identity, eligibility, time choices, resources, locks, grid capacity, and configured ordering. Human reviewers remain responsible for exceptional context and for documenting a manual placement. Publishing validates product constraints, not an external promise that every participant will attend.
 
 See [Statuses and Changes](/kingshot-events/castle-positions/statuses-and-changes) for the participant result and [Castle Position Problems](/kingshot-events/troubleshooting/castle-position-problems) for save or visibility issues.
+
+## Less interruption while arranging the board
+
+The scheduling workspace preserves the current administration context and refreshes data without repeatedly restarting the page. A valid kingdom selection is remembered, and the Points view uses that selected kingdom. Check the kingdom heading when returning from another area or account.
+
+You can include [temporary participants](/kingshot-events/castle-positions/temporary-participants) without first creating roster players. They still belong to the managed schedule and follow its draft and publication rules.
+
+The separate [Local Castle Planner](/kingshot-events/castle-positions/local-planner) reuses interactive slot cards for small guest or personal tasks. Its browser-only plan cannot replace this shared publication workflow.

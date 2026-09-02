@@ -5,8 +5,8 @@ product: 'Kingshot Events'
 audience: 'Charm planner users'
 experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -53,3 +53,11 @@ The engine generates only the next valid catalog level for each unlocked non-max
 Charm planning is greedy and iterative rather than exhaustive. Determinism means identical inputs repeat, not that the plan is globally optimal.
 
 Before Run, verify every current-level field, the Guide and Design inventory inputs, each lock control, troop-class priority, stat weight, and strategy selector. After Run, inspect the ordered steps and both leftover materials, not only the final weighted gain. These controls belong to the profile owner; alliance and kingdom roles do not add authority or change catalog costs. To test a preference, save a separate scenario, change one weight or lock, rerun, and compare which branch consumed the scarce Design. This isolates the cause without editing the original saved assumptions.
+
+## Choose a goal before comparing results
+
+The **Optimization Goal** changes what the planner values. The raw-stat choice focuses on additive stat gains; **Balanced troops** balances supported troop priorities; **Combat power** uses account context and favors offensive value while retaining some defensive value; the custom choice uses your saved priorities.
+
+For Combat power, enter the four percentages per troop from the in-game Bonus Overview. An account that already has a large amount of one stat can value an improvement differently from an account with a weaker multiplier. Keep the goal and stat source the same when comparing two inventories.
+
+Current item and inventory inputs can be reviewed in [Ascension Path](/kingshot-events/lab/ascension-path) alongside the other progression systems. A forecast does not mean the account has already bought or equipped its proposed upgrades.

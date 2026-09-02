@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'Kings, kingdom managers, and Ministers of Justice'
 experienceLevel: 'Intermediate'
 featureArea: 'Castle Position review'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 ---
 
 # Castle Position Review Workflow
@@ -60,3 +60,11 @@ Use filters and candidate detail before changing a review outcome.
 </VisualReference>
 
 Next: [Planning, Scheduling, and Publishing](/kingshot-events/castle-positions/planning-and-publishing).
+
+## Reviewed roster changes and temporary participants
+
+Approval now resolves an eligible player identity into the selected kingdom and alliance: it can create a missing player or update the name on the matching in-game ID. If identities conflict or more than one record matches, resolve that ambiguity before approving. A similar nickname alone is not a safe reason to merge people.
+
+For a participant who should not become a roster player, use a **temporary participant** in the managed schedule instead. That choice is marked as temporary and does not create a player or application. See [Temporary Participants and Reviewed Players](/kingshot-events/castle-positions/temporary-participants).
+
+Review resource screenshots only for their intended purpose, and use the appropriate day in [KvK Resources, Proof, and Points](/kingshot-events/castle-positions/kvk-resources-and-proof). An accepted identity still needs a compatible assignment and publication before its time is confirmed.

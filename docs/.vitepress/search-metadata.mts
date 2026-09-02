@@ -55,6 +55,13 @@ const typeOverrides: Record<string, SearchContentType> = {
 }
 
 const pageAliases: Record<string, string[]> = {
+  '/kingshot-events/castle-positions/local-planner': ['guest castle helper', 'local schedule', '30 minute slots', 'browser backup', 'resource calculator'],
+  '/kingshot-events/castle-positions/temporary-participants': ['non kingdom player', 'temporary player', 'missing roster'],
+  '/kingshot-events/castle-positions/kvk-resources-and-proof': ['resource proof', 'kvk points', 'scoring day'],
+  '/kingshot-events/lab/ascension-path': ['ascension path', 'upgrade forecast', 'resource routing'],
+  '/kingshot-events/lab/screenshot-build-import': ['import build', 'gear screenshot', 'review recognized values'],
+  '/kingshot-events/subscriptions/personal-plans': ['personal premium', 'free account', 'my subscription'],
+  '/kingshot-events/lifecycles/notifications-and-reports': ['red dot', 'unread notifications', 'action needed', 'online users'],
   '/kingshot-events/scopes-and-communities/hierarchy-and-switching': ['server versus kingdom', 'server kingdom difference', 'scope selector'],
   '/kingshot-events/players/profile-and-history': ['player missing', 'kick player', 'nickname history', 'restore player'],
   '/kingshot-events/events/record-batches-and-corrections': ['same date', 'locked result', 'correct batch'],

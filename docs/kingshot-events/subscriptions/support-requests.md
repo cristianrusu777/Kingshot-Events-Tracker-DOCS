@@ -5,8 +5,8 @@ product: 'kingshot-events'
 audience: 'Members and community owners'
 experienceLevel: 'Intermediate'
 featureArea: 'Subscriptions and Usage'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -51,3 +51,9 @@ If no plan is selectable, no active requestable plan may be available or creatio
 ## Limits and troubleshooting
 
 A completed support conversation does not guarantee access unless the effective plan or grant is visible on the target scope. External payment or donation links are configured channels, not automatic proof of entitlement. If submission is disabled, verify required subject, plan, target, request type, and creation access. If a reply fails, reload the same detail and check whether it was recorded before sending again.
+
+## Personal purchase requests
+
+The community request workflow above remains separate from buying for yourself. Start an account-only purchase from **Personal subscription**, where the target is your own account. Follow its existing private request for payment instructions and activation; do not select a kingdom or alliance as a workaround.
+
+See [Free and Premium Personal Plans](/kingshot-events/subscriptions/personal-plans) for pricing availability, billing periods, expiry, and the no-automatic-renewal workflow.

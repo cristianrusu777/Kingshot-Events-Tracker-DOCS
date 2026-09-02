@@ -9,6 +9,7 @@ const normalize = (value) => value.toLocaleLowerCase('en-US').replace(/\s+/g, ' 
 const files = new Map()
 
 for (const item of sourceMechanismCatalog) {
+  if (item.documentationVisibility !== 'public') { errors.push('Non-public mechanism found in tracked catalog'); continue }
   if (!/^SRC-\d{3}$/.test(item.id)) errors.push(`${item.id}: invalid stable mechanism ID`)
   if (!item.sourceEvidence?.trim()) errors.push(`${item.id}: missing implementation evidence`)
   if (!item.evidenceTerms?.length) errors.push(`${item.id}: missing documentation evidence terms`)

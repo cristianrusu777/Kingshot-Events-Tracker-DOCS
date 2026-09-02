@@ -1,45 +1,59 @@
 ---
 title: 'Notifications and Reports'
-description: 'How product events create user-visible notices and scoped reports, and how recipients should interpret them.'
+description: 'Understand unread dots, pending actions, urgent updates, and the next step in each workflow.'
 product: 'kingshot-events'
 audience: 'Members and managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Platform Lifecycles'
-lastReviewed: '2026-08-01'
-keywords: ['notification', 'report', 'schedule changed', 'reading report', 'audit information']
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Notifications and Reports
 
-Notifications tell a recipient that a user-visible workflow changed. Reports summarize a scoped workflow for an eligible viewer. Neither is the authoritative editing surface: follow the notice or report back to its player, event batch, Castle schedule, Knowledge session, subscription, or restore request.
+**Notifications** brings your updates and review requests into one inbox. Each card explains what changed, whether something needs doing, and where to go next. The record you open remains the place to confirm the current state.
 
-## Decision flow
+## Start with the right view
 
-```mermaid
-flowchart TD
-  E["User-visible workflow event"] --> A{"Audience and scope resolve?"}
-  A -- "No" --> X["Do not expose notice or report"]
-  A -- "Yes" --> N["Create permitted notification or report entry"]
-  N --> D["Recipient opens destination record"]
-  D --> S{"Destination still current?"}
-  S -- "Yes" --> V["Interpret current state and act if authorized"]
-  S -- "No" --> H["Follow version or history to current record"]
-```
+Use **All updates** for recent activity, **Unread** for new items, **Action needed** for unfinished work, or **Urgent** for higher-priority attention. The workflow filter narrows the list further. Pagination lets you move through the list and choose how many cards to show.
 
-*Notification and report resolution. Audience checks precede delivery, and the destination record remains authoritative.*
+Only notifications appropriate to your account and permitted responsibilities are shown. A reviewer and an applicant can see different messages about the same request. Opening a notice does not give access to another person's records or to a community you cannot manage.
 
-**Accessible summary:** A workflow event produces a notice or report only for an eligible audience. The recipient opens the source, then uses current state or history if the original destination was superseded.
+## What the red dots mean
 
-## What can produce output
+| Indicator | Meaning | When it clears |
+| --- | --- | --- |
+| Notifications or bell unread indicator | There are updates you have not seen | When the unread updates are acknowledged |
+| A section's red dot | That section has new information or an unresolved action | After its information is seen and its required actions are completed |
+| Urgent indicator | An urgent update is unread or still requires action | After it is read if informational, or resolved if action is required |
 
-Castle publication and later schedule changes can notify affected participants. Knowledge review decisions and Reading Verification assignments can create author, reader, or manager-facing updates. Subscription grants, requests, warnings, and quota or limited-mode changes can require attention. Restore requests and decisions can update the requester or reviewer. User-visible audit information may show actor, time, state transition, source, or version where the product exposes it.
+Opening a section with a dot shows **What's new here**, with the relevant cards. You should not have to guess which record caused the indicator. An informational card can remain visible after being marked seen so you can finish reading its explanation.
 
-A notification is not proof that the action completed exactly as expected. Verify the destination status. A report is read-only output and may be bounded by session, creator relationship, tenant management, scope, date, or current access. Export availability can be narrower than on-screen viewing.
+Cards that remain visibly on screen are acknowledged automatically. Offscreen cards, unopened pages, and a hidden browser tab are not treated as read just because the inbox was loaded. **Mark read** handles one card; **Mark this page read** explicitly acknowledges the current page, not every page in the inbox.
 
-## Worked example
+## Seen does not mean approved
 
-**Starting situation:** A participant receives a Castle schedule-change notice. **Input:** A manager produced a validated change from a published schedule. **Rules:** The recipient qualifies for the participant-facing update; the prior version remains historical. **State change:** A new schedule version becomes authoritative. **Output:** The notice links to the current appointment. **Next action:** The participant checks position and time in the latest published version, not the text of an older message. If the destination is unavailable, report cycle, schedule version, visible appointment, and notice time to the kingdom organizer.
+Reading a request does not approve it, change a role, restore an item, or activate a subscription. An action card can say **Seen · Still pending** until the relevant decision has been made.
 
-## Limits and recovery
+**Example:** A reviewer opens a new role request. Its unread indicator clears, but the account-review section still has a dot because a decision is required. The reviewer follows **Review item** and completes the permitted action. Once the updated status is reflected, that action no longer keeps the dot active.
 
-Delivery timing and external email behavior can vary, so the in-product destination and visible history are safer than assuming silence means no change. A recipient cannot use a notice to gain access to a source outside their scope. Duplicate notices do not imply duplicate records. If information conflicts, record the notice type and time, destination identity, visible version or status, active scope, and expected outcome. Never include private exports, credentials, or another user's protected report details.
+For an informational decision notice, reading is enough. If the applicant has no further action, its section dot clears without asking them to approve anything again.
+
+## Follow the next step
+
+Use **Review item** or **Open update** to reach the relevant request, report, Castle assignment, Knowledge item, or subscription conversation. Review work is reached directly from its notification or owning area; a separate general Moderation landing page is no longer needed.
+
+The inbox contains recent updates and pending work, not an unlimited historical archive. Older history remains in each workflow. A schedule-change notice is a prompt to check the latest published time, not authority to rely on an older appointment.
+
+## Online activity
+
+Eligible staff can see an **Online** tab. It lists recently active authenticated accounts with pagination. "Online" means activity within the last five minutes, not proof that someone is currently watching a page. The list is bounded to the 200 most recently active accounts and is not a public visitor directory.
+
+## If an indicator looks stuck
+
+Open the section and read its explanation. Check **Action needed** for unfinished work before assuming the dot is wrong. If only information remains, let the visible cards acknowledge or use **Mark read**. If acknowledgement fails, use the shown refresh or retry action.
+
+After completing a request, verify its actual status. A completed privacy request should not remain pending merely because it was fulfilled. If the indicator still disagrees, report the workflow, visible status, and approximate time without sharing private messages, exports, or another user's details.
+
+For issue reports and recovery, see [Reports and Scoped Issue Tracking](/kingshot-events/lifecycles/reports-and-issues) and [Recycle Bin and Restore Requests](/kingshot-events/lifecycles/recycle-bin-and-restore-requests).

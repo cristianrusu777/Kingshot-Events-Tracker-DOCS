@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'Members and community managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Subscriptions'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 ---
 
 <CategoryHero category="subscriptions" icon="layers" eyebrow="Know what access means" title="Subscriptions, Requests, and Kingdom Grants">
@@ -16,7 +16,7 @@ Distinguish direct plans, kingdom allocations, request states, effective access,
 
 # Subscriptions, Requests, and Kingdom Grants
 
-Subscriptions control supported premium features and usage limits for a specific scope. Access can come from a direct alliance subscription or an accepted allocation from a kingdom entitlement.
+Subscriptions are available for different purposes. A personal account starts on Free and can use an eligible paid personal plan. Community features and usage limits are managed separately through alliance and kingdom plans and supported grants.
 
 ## Request workflow
 
@@ -50,3 +50,9 @@ Confirm the target scope before submitting or accepting a grant.
 </VisualReference>
 
 Next: [Subscription Access, Scope, and Usage](/kingshot-events/subscriptions/access-and-usage).
+
+## Buying for yourself instead of a community
+
+Open **Personal subscription** for an account-only plan. Free is the default; Premium or other configured personal plans provide only the listed personal benefits. The purchase is for your own signed-in account, with a private payment request and confirmation rather than an immediate charge or automatic renewal.
+
+Personal plans do not grant roles, alliance quotas, kingdom membership, or subscriptions for other users. Read [Free and Premium Personal Plans](/kingshot-events/subscriptions/personal-plans) before purchasing.

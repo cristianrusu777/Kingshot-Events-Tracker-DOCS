@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'New users'
 experienceLevel: 'Beginner'
 featureArea: 'Account access'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 ---
 
 # Your First Visit, Registration, and Login
@@ -51,3 +51,9 @@ Next: [Account and Profile](/kingshot-events/getting-started/account-and-profile
 ## Purpose, decision path, and first-session example
 
 The workflow separates registration, approval, sign-in, password state, player link, and scope so one success is not mistaken for all access. **Example:** Ivo registers and can sign in, but management navigation is absent. Account state passes; his alliance assignment has not been approved. He can use permitted member views while the responsible manager reviews the assignment. The output is a usable account with limited actions, not a failed registration. Account recovery cannot grant a role or premium plan. If blocked, preserve the public status, approximate time, and account identifier, never the password.
+
+## Try a small Castle plan before registering
+
+Guests can open the [Local Castle Planner](/kingshot-events/castle-positions/local-planner) for interactive half-hour slots and resource budgeting. No account or kingdom membership is required. Its data stays in that browser and is not a shared or published kingdom schedule.
+
+Register when you need the managed workflow, account features, or eligible saved work. Registration starts your personal account on Free; protected community access and management roles still require the appropriate approval.

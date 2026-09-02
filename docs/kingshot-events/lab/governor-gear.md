@@ -5,8 +5,8 @@ product: 'Kingshot Events'
 audience: 'Governor Gear planner users'
 experienceLevel: 'Advanced'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-08-02'
-verifiedAgainstSourceCommit: '0238432f9a614513b1f28a43c438a994a0caaf8a'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
@@ -53,3 +53,11 @@ The target state is not typed independently: it emerges from repeated valid next
 This is a greedy iterative comparison with set-aware deltas, not an exhaustive search. Review the sequence before acting in game.
 
 Before Run, confirm each item-level field, lock control, troop and stat weight, strategy selector, and all three inventory inputs. After Run, inspect the step list rather than only the final total: it reveals when a set threshold entered the candidate delta and which field exhausted a material. A player uses these controls for personal planning; an alliance leader or kingdom manager has no extra optimizer authority. For sensitivity review, duplicate the scenario, change one lock or weight, and compare ordered output, spending, set state, and leftovers.
+
+## Choose a goal before comparing results
+
+The **Optimization Goal** changes what the planner values. The raw-stat choice focuses on additive stat gains; **Balanced troops** balances supported troop priorities; **Combat power** uses account context and favors offensive value while retaining some defensive value; the custom choice uses your saved priorities.
+
+For Combat power, enter the four percentages per troop from the in-game Bonus Overview. An account that already has a large amount of one stat can value an improvement differently from an account with a weaker multiplier. Keep the goal and stat source the same when comparing two inventories.
+
+Current item and inventory inputs can be reviewed in [Ascension Path](/kingshot-events/lab/ascension-path) alongside the other progression systems. A forecast does not mean the account has already bought or equipped its proposed upgrades.

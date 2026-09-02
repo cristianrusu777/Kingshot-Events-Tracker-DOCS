@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'All affected users'
 experienceLevel: 'Beginner'
 featureArea: 'Troubleshooting'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
 head:
   - - meta
     - name: 'robots'
@@ -47,3 +47,13 @@ Compare kingdom, position, eligibility, capacity, application status, planner co
 The output is a validated placement, explicit standby, gap, or conflict reason. Limitations include offline agreements and unsubmitted availability; never alter an applicant's declared inputs merely to fill capacity.
 
 The planner cannot guarantee a globally optimal or politically fair schedule. Human review remains responsible for exceptional context, manual placement, publication, and communication through the latest version.
+
+## Approved application still looks unresolved
+
+Check that approval completed and that any ambiguous player identity was resolved. Approval can now create or update the appropriate roster player, but it does not guarantee a slot. Reopen the candidate after the successful decision and check assignment and publication separately.
+
+The planner should keep the selected kingdom and refresh its data without repeatedly restarting the page. If the Points area requests a kingdom that is already shown, verify the account and selector, then use the page refresh action. Report the visible mismatch without including private proof screenshots.
+
+## A guest plan has disappeared
+
+The Local Castle Planner has no server recovery or account sync. Browser clearing or reset can remove its copy. Import your exported backup if you kept one. A temporary participant in a managed schedule is a different feature and follows that schedule's saving rules.

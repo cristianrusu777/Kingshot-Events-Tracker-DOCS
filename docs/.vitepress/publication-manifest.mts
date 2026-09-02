@@ -26,7 +26,7 @@ export const publicationManifest = [
     "featureArea": "Product overview",
     "publicationStatus": "published",
     "sortOrder": 10,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/index.md"
   },
   {
@@ -91,7 +91,7 @@ export const publicationManifest = [
     "featureArea": "Account access",
     "publicationStatus": "published",
     "sortOrder": 20,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/getting-started/first-visit.md"
   },
   {
@@ -104,7 +104,7 @@ export const publicationManifest = [
     "featureArea": "Accounts and profiles",
     "publicationStatus": "published",
     "sortOrder": 21,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/getting-started/account-and-profile.md"
   },
   {
@@ -117,7 +117,7 @@ export const publicationManifest = [
     "featureArea": "Scope and access",
     "publicationStatus": "published",
     "sortOrder": 22,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/getting-started/access-and-navigation.md"
   },
   {
@@ -221,7 +221,7 @@ export const publicationManifest = [
     "featureArea": "Events",
     "publicationStatus": "published",
     "sortOrder": 50,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/events/overview.md"
   },
   {
@@ -429,7 +429,7 @@ export const publicationManifest = [
     "featureArea": "Castle Positions",
     "publicationStatus": "published",
     "sortOrder": 80,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/castle-positions/index.md"
   },
   {
@@ -442,7 +442,7 @@ export const publicationManifest = [
     "featureArea": "Castle Position applications",
     "publicationStatus": "published",
     "sortOrder": 81,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/castle-positions/applicant-guide.md"
   },
   {
@@ -455,7 +455,7 @@ export const publicationManifest = [
     "featureArea": "Castle Position review",
     "publicationStatus": "published",
     "sortOrder": 82,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/castle-positions/review-workflow.md"
   },
   {
@@ -468,7 +468,7 @@ export const publicationManifest = [
     "featureArea": "Castle Position scheduling",
     "publicationStatus": "published",
     "sortOrder": 83,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/castle-positions/planning-and-publishing.md"
   },
   {
@@ -494,7 +494,7 @@ export const publicationManifest = [
     "featureArea": "Knowledge Hub",
     "publicationStatus": "published",
     "sortOrder": 90,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/knowledge-hub/reading-and-finding.md"
   },
   {
@@ -546,7 +546,7 @@ export const publicationManifest = [
     "featureArea": "Lab",
     "publicationStatus": "published",
     "sortOrder": 100,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/lab/index.md"
   },
   {
@@ -598,7 +598,7 @@ export const publicationManifest = [
     "featureArea": "Subscriptions",
     "publicationStatus": "published",
     "sortOrder": 110,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/subscriptions/index.md"
   },
   {
@@ -624,7 +624,7 @@ export const publicationManifest = [
     "featureArea": "Subscriptions",
     "publicationStatus": "published",
     "sortOrder": 112,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/subscriptions/troubleshooting.md"
   },
   {
@@ -754,7 +754,7 @@ export const publicationManifest = [
     "featureArea": "Troubleshooting",
     "publicationStatus": "published",
     "sortOrder": 134,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/troubleshooting/castle-position-problems.md"
   },
   {
@@ -780,7 +780,7 @@ export const publicationManifest = [
     "featureArea": "Troubleshooting",
     "publicationStatus": "published",
     "sortOrder": 136,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/troubleshooting/simulator-problems.md"
   },
   {
@@ -793,7 +793,7 @@ export const publicationManifest = [
     "featureArea": "Updates",
     "publicationStatus": "published",
     "sortOrder": 140,
-    "lastReviewedDate": "2026-08-01",
+    "lastReviewedDate": "2026-09-03",
     "file": "kingshot-events/updates/release-notes.md"
   },
   {

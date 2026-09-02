@@ -5,7 +5,9 @@ product: 'kingshot-events'
 audience: 'Managers and restore reviewers'
 experienceLevel: 'Intermediate'
 featureArea: 'Platform Lifecycles'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+sourceVerificationOwner: 'Ralyvora documentation'
 keywords: ['deleted', 'removed', 'recycle bin', 'restore', 'restore request', 'soft delete']
 ---
 
@@ -55,3 +57,11 @@ For a player, verify stable external ID and nickname history before restoring so
 **Conflict example:** A deleted local player and a newer current player now present the same normalized name. The reviewer must use external ID and history rather than approving blindly. If identity is the same, the current record may need correction before restore; if identities differ, the name conflict requires an authorized resolution. The output is either a safely restored original or a rejected request with an actionable reason. Restore is not a merge tool.
 
 Soft deletion preserves a recovery opportunity, not a guarantee. Retention can expire, dependent changes can block reversal, and a removed source file may no longer exist. Troubleshoot with the visible record and request states, not private storage or database details.
+
+## Find the right deleted item faster
+
+The Recycle Bin is organized into **Kingdoms**, **Alliances**, **Players**, **Events**, **Imports**, and **Results**. Choose the category first, then search within it. Each category keeps its own search and pagination settings, and newer deletions appear first.
+
+Read the item's label, deletion reason, and date before choosing **Restore** or **Request restore**, depending on your access. Restoring an eligible item returns it to its owning module; verify that outcome there. A restore request is only a request until it is approved and processed.
+
+Permanent deletion has a separate confirmation and cannot be reversed through the Recycle Bin. Do not use it to dismiss a notice or clear a search result. Related decisions can appear in [Notifications](/kingshot-events/lifecycles/notifications-and-reports), where reading them does not itself restore or delete anything.
