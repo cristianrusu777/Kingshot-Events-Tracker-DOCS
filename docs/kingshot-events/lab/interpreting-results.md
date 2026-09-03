@@ -5,7 +5,9 @@ product: 'kingshot-events'
 audience: 'All Lab users'
 experienceLevel: 'Intermediate'
 featureArea: 'Lab results'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Interpreting Lab Results and Limitations
@@ -19,6 +21,16 @@ Depending on the module, output can include an upgrade order, target checkpoints
 ## What results cannot guarantee
 
 The Lab cannot predict player execution, connection conditions, undocumented game changes, every interaction, future prices, or live opponent behavior. Beta modules and data revisions can change an output even when saved inputs did not change. A narrow uncertainty range describes the model, not certainty about the game.
+
+## Reading the Cyber interface and visual indicators
+
+The Cyber interface uses standardized visual markers across all optimizers and simulators:
+
+- **Semantic troop styling:** Results tag troop-specific gains with dedicated color bars: **Infantry** (cyan/blue), **Cavalry** (orange/amber), and **Archer** (green/emerald).
+- **Combat impact ratings:** Steps in Ascension Path classify returns into distinct impact tiers (`Very High`, `High`, `Medium`, `Low`, and `Marginal`), allowing quick identification of major milestones.
+- **Breakpoints:** Highlighted icons identify steps that unlock set bonuses, pass mastery gates, or complete red equipment imbuements.
+- **Comparative trade-offs:** Alternative comparison panels explain not only why the winning choice succeeded, but why the competing alternative lost.
+- **Asset resolution status:** Genuine game art displays when mapped. If an image is pending or loading, a semantic SVG category icon takes its place to prevent layout shifts.
 
 ## When a result looks wrong
 

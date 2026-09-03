@@ -58,3 +58,7 @@ Articles can appear in more than one relevant category. Hero and Master database
 Reader navigation, menus, and overlays have been refined for smaller screens and both colour themes. Author images use the account avatar where available. Publication and access rules still apply when following a category, printing, or opening a direct link.
 
 Eligible premium reading can come from a [personal plan](/kingshot-events/subscriptions/personal-plans), but private community material still has its own access requirements. An account's name styling is presentation, not an access badge.
+
+## If an older layout looks different
+
+Mobile menus, dropdown overlays, loading presentation, the article outline, statistics presentation, and space labels have been refined. Use the current category, space label, and table of contents to orient yourself. These changes do not publish a draft or make a protected article public. See the [fixed and replaced items](/kingshot-events/updates/release-notes#fixed) for the wider update.

@@ -51,3 +51,9 @@ The safe workflow changes one assumption in a copied scenario. It cannot guarant
 Hero Gear XP costs and reforge comparisons, Bear formation search, and account-stat handling have been refined. Re-run the same input under the current catalog and compare objective, profile, locks, formation, and stat source before comparing totals. A previous screenshot is a historical result, not the current calculation.
 
 If inputs changed after a run, use the tool's Run or Optimize action to refresh a stale result. If screenshot import misreads a field, leave it unselected and enter it manually. See [Screenshot Build Import](/kingshot-events/lab/screenshot-build-import) and [Ascension Path](/kingshot-events/lab/ascension-path) for safe input and scenario boundaries.
+
+## Input and layout fixes to know about
+
+Recent fixes cover the current-build selection and edit controls, battle stat labels, compact percentage inputs, dropdown chevrons, hover effects, and light-theme input contrast. If an old screenshot shows a different arrangement, use the current field label and the dedicated tool guide. Recheck the selected build before editing and rerun after changing calculation inputs.
+
+The [release notes](/kingshot-events/updates/release-notes#fixed) separate calculation fixes from presentation improvements so a layout change is not mistaken for a change to game mechanics.

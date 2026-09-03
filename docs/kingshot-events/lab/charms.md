@@ -54,10 +54,17 @@ Charm planning is greedy and iterative rather than exhaustive. Determinism means
 
 Before Run, verify every current-level field, the Guide and Design inventory inputs, each lock control, troop-class priority, stat weight, and strategy selector. After Run, inspect the ordered steps and both leftover materials, not only the final weighted gain. These controls belong to the profile owner; alliance and kingdom roles do not add authority or change catalog costs. To test a preference, save a separate scenario, change one weight or lock, rerun, and compare which branch consumed the scarce Design. This isolates the cause without editing the original saved assumptions.
 
-## Choose a goal before comparing results
+## Choose an Optimization Goal before comparing results
 
-The **Optimization Goal** changes what the planner values. The raw-stat choice focuses on additive stat gains; **Balanced troops** balances supported troop priorities; **Combat power** uses account context and favors offensive value while retaining some defensive value; the custom choice uses your saved priorities.
+The **Optimization Goal** controls how the charm optimizer ranks competing candidate upgrades:
 
-For Combat power, enter the four percentages per troop from the in-game Bonus Overview. An account that already has a large amount of one stat can value an improvement differently from an account with a weaker multiplier. Keep the goal and stat source the same when comparing two inventories.
+- **Maximum stats:** Flat weights (1.0 across all stats and troop classes). Selects upgrades that purchase the largest total stat gain per Guide or Design, without considering troop priorities.
+- **Combat power:** Offense-first ranking with a 20% defensive retention factor (Defense and Health weights are scaled to 0.20). Uses the Lanchester combat model to prioritize stats where the account suffers diminishing returns.
+- **Balanced troops:** Advances all troop types together. It balances each troop's aggregate weight up to match the highest-priority troop while preserving the relative stat mix within each troop class.
+- **My build:** Uses your saved profile troop and stat weights without modification.
+
+### Account stats and Bonus Overview
+
+For the **Combat power** goal, enter the four percentages per troop (Attack %, Defense %, Lethality %, and Health %) directly from the in-game Bonus Overview. The optimizer uses these percentages to favor upgrades in the specific attributes where your current account is weakest.
 
 Current item and inventory inputs can be reviewed in [Ascension Path](/kingshot-events/lab/ascension-path) alongside the other progression systems. A forecast does not mean the account has already bought or equipped its proposed upgrades.

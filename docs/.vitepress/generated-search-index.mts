@@ -149,27 +149,51 @@ export const searchIndex = [
       "upgrade forecast",
       "resource routing"
     ],
-    "description": "Ascension Path: Plan Your Next Upgrades Ascension Path helps answer a broader question than \"which item next?\": given your current build and resources, where should you focus across Hero Gear, Governor Gear, and Charms? Open Ascension Path ",
+    "description": "Ascension Path: Plan Your Next Upgrades Ascension Path unifies progression across Hero Gear, Governor Gear, and Charms into a single strategic workspace. Rather than asking which piece to upgrade within one isolated menu, the tool evaluates",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Ascension Path: Plan Your Next Upgrades Ascension Path helps answer a broader question than \"which item next?\": given your current build and resources, where should you focus across Hero Gear, Governor Gear, and Charms? Open Ascension Path from the Lab. Start with the Current Build rather than the headline recommendation. A convincing plan based on an old inventory is still the wrong plan for your account."
+        "text": "Ascension Path: Plan Your Next Upgrades Ascension Path unifies progression across Hero Gear, Governor Gear, and Charms into a single strategic workspace. Rather than asking which piece to upgrade within one isolated menu, the tool evaluates your entire account to determine where your next materials deliver the highest combat return. Open Ascension Path from the Lab. Start by reviewing the Current Build rather than the headline recommendation. A calculation based on outdated inventory or equipment levels produces the wrong sequence for your account."
       },
       {
-        "heading": "Start from confirmed inputs",
-        "text": "Review the current gear, combat stats, and resources. Source labels and update times help distinguish saved profile values, edits from specialized optimizers, and confirmed screenshot imports. Follow Edit into the relevant tool when the owned build itself is wrong. Be clear about stat meaning: do your current totals already include progression, or are they a baseline to which progression must be added? Counting the same gear bonus twice distorts comparisons. Choose a combat focus: Focus Useful when --- --- Overall Strength You want a broad comparison across supported combat stats KvK / PvP You want the plan to reflect saved troop and stat priorities Rally Leader Offensive rally value is the priority, with defensive gains still considered"
+        "heading": "Progression engine and search depth",
+        "text": "The planner is driven by Ascension Engine version 1.1.0. It applies a bounded beam search that evaluates progression up to 30 steps deep: - Cross-system scope: The search evaluates candidate steps across Hero Gear, Governor Gear, and Charms simultaneously. - Multi-resource balancing: It tracks nine distinct upgrade currencies: Hero Gear XP, Forge Hammers, Mythic Gear, Mithril, Satin, Gilded Threads, Artisan's Vision, Charm Guides, and Charm Designs. - Dominance rules: At each depth level, the engine prunes inferior candidate branches to find an optimal sequence within modeled constraints without slowing down the browser."
       },
       {
-        "heading": "Run and read the path",
-        "text": "Run the optimization after reviewing inputs. Start with the proposed next action, then inspect the ordered path, resource requirements, remaining inventory, and forecast charts. The recommendation should tell you both what is attractive and what prevents a later step from being affordable. Timing preferences include Strength First , Balanced , and Event Efficiency . Where available, supported event context helps frame timing. It is not a promise that the planner knows every future event, reward, or battle in your kingdom. Changing inputs makes an earlier result stale. Run again before using the recommendation; the previous chart is not recalculated merely because its original assumptions changed."
+        "heading": "Start from confirmed inputs and combat focus",
+        "text": "Review your current equipment levels, account combat stats, and resource balances: 1. Input provenance: Labels indicate whether a value originates from a confirmed profile, an isolated optimizer, a screenshot import, or a temporary scenario override. 2. Combat stat semantics: Select how your entered combat stats should be interpreted: - Observed total: Your entered stats already include your current equipment and progression bonuses. - Base plus progression: Your entered stats represent an unequipped baseline to which equipment bonuses are added. 3. Choose a combat focus: Combat Focus Strategic Objective --- --- Overall Strength Balances gains across all three troop classes and all combat stats equally. KvK / PvP Follows your saved profile troop and stat priorities for competitive combat. Rally Leader Prioritizes offensive stats while retaining defensive gains."
       },
       {
-        "heading": "Try a temporary scenario",
-        "text": "Open the temporary scenario controls to test different stats or resource amounts without changing the confirmed account inputs. Reset returns this what-if scenario to the confirmed build. In the resource-routing area, name a hypothetical shop or source, enter the currency you have, and add offers with their costs, contents, and purchase limits. Analyze route compares the configured offers against your progression needs. Apply resources to temporary scenario adds the suggested resources only to the what-if inventory. It does not buy anything, confirm that you own those materials, or apply an upgrade in game. Re-run the path after applying them to see the new sequence. Example: You are short of a material for the next milestone. Compare two offers using the same currency balance. Inspect both the materials acquired and the upgrades they enable, rather than choosing the bundle with the larg"
+        "heading": "Action recommendations and target milestones",
+        "text": "After running the calculation, the header surfaces a clear summary action: - UPGRADE NOW: You have sufficient resources to complete one or more high-value steps immediately. - SAVE: Your owned resources are insufficient for the next milestone, and spending them on secondary choices would waste materials. - COMPLETE: All supported items across all three systems have reached their maximum modeled levels."
       },
       {
-        "heading": "Save the right thing",
-        "text": "Confirmed profile inputs follow the Lab saving rules. Temporary scenario edits are not a substitute for updating the real owned build. The copy-summary control can help you keep a concise note of the proposed path; inspect it before sharing personal account assumptions. Ascension Path is a modeled planning aid, not a guarantee of the best possible long-term build, exact battle damage, future event points, or a real purchase. Use the specialized Hero Gear, Governor Gear, and Charm guides to understand a particular step."
+        "heading": "Milestone target cards",
+        "text": "Below the action banner, the Next Target and Following Target cards highlight upcoming milestones: - System and transition: Identifies the piece and target level (for example, Governor Ring Tier 4 - Tier 5). - Required materials: The full material cost for that milestone. - Sufficient resources: Quantities of materials you already hold in adequate amounts. - Missing resources: Exact shortages preventing you from reaching that milestone. - Recommendation badge: Tags whether you should actively target or save for that checkpoint."
+      },
+      {
+        "heading": "Step anatomy and alternative comparisons",
+        "text": "The plan displays an ordered sequence of recommended steps. Consecutive upgrades within the same system are grouped for clarity. You can filter steps by system ( All , Hero Gear , Governor Gear , Charms ) or search by keyword. Each step provides complete technical details: - System badge and transition: Indicates the system and the exact upgrade step. - Resource cost: Quantities consumed for that step and projected remaining balances. - Combat delta: The exact stat gains across Infantry , Cavalry , and Archer for Attack, Defense, Lethality, and Health. - Combat impact: Classified as Very High , High , Medium , Low , or Marginal . - Breakpoint indicator: Marks steps that activate a set bonus or cross a key gear threshold. - Why First: Explains the calculation reason this step was prioritized over competing candidates. - Alternative comparison: Shows the competing upgrade from another syst"
+      },
+      {
+        "heading": "Weak point analysis and opportunity scores",
+        "text": "The Weak Points section evaluates your three equipment systems to expose progression imbalances: - Priority classification: Each system is tagged as High Priority , High , Medium , or Healthy . - Opportunity score: A quantified score indicating the relative combat gain available per resource spent in that system. - System diagnosis: Text explanations detail why a system is lagging (for example, low charm levels relative to advanced governor gear) so you can direct future acquisitions effectively."
+      },
+      {
+        "heading": "Interactive forecast charts",
+        "text": "The forecast workbench visualizes your progression trajectory across two interactive charts: 1. Combat Stats Trajectory: Plots the projected growth of Attack (sky blue), Defense (amber), Lethality (pink), and Health (emerald) averages from your current baseline across each planned step. 2. Resource Depletion Curves: Multi-line chart tracking how all nine upgrade materials deplete step by step, showing which resource triggers a bottleneck. 3. Tabular Projection View: A structured data table listing cumulative stat gains and remaining resource tallies at every step. If inputs change, earlier charts become stale; select Run again to refresh all projections."
+      },
+      {
+        "heading": "Platform event timing decisions",
+        "text": "Progression timing matters as much as upgrade order. Ascension Path analyzes active platform event sessions to produce a timing recommendation: - UPGRADE NOW: An active event currently rewards points for spending your upgrade materials. - WAIT: A scheduled event offering point multipliers or spending milestones starts soon. - NO TIMING ADVANTAGE: No active or upcoming event provides bonuses for your required materials. The decision card links directly to the relevant event session and explains the modeled efficiency gain."
+      },
+      {
+        "heading": "Resource routing workbench and virtual shop",
+        "text": "The Resource Routing tool simulates hypothetical acquisitions to resolve material shortages: 1. Configure shop parameters: Define a virtual shop name, currency label, and your available currency balance. 2. Add offer bundles: Select from canonical resource packages or create custom offers with custom quantities, currency costs, and purchase limits. 3. Analyze route: The engine computes the optimal combination of purchases using return-on-investment ranking to clear your biggest progression bottlenecks. This calculation does not buy real items. 4. Apply to temporary scenario: Clicking this action adds the acquired materials directly into the temporary what-if inventory. It does not alter your confirmed profile inventory. Rerun the path to preview the new upgrade sequence enabled by those purchases."
+      },
+      {
+        "heading": "Saving and safe application",
+        "text": "Confirmed profile inputs follow the standard Lab saving rules. Edits made in the temporary scenario remain in the what-if sandbox until discarded or manually entered into your profile. Use the Copy summary button to export a clean text summary of your progression path for alliance discussion or personal planning."
       }
     ]
   },
@@ -1338,11 +1362,11 @@ export const searchIndex = [
       },
       {
         "heading": "Follow the plan, not just the headline",
-        "text": "The planner compares affordable next steps and can evaluate an enhancement together with the mastery needed to cross a milestone. After choosing an upgrade it consumes the modeled resources and reevaluates the remaining options. Locked, unreachable, maximum-level, and unaffordable choices are excluded. The familiar candidate question is Affordable positive candidate? If none remains, the plan stops and leaves unused resources. This does not mean every item is finished; a different required material may have run out. Review the ordered steps, affected troop and slot, before-and-after stats, material spending, and leftovers. Total stat percentage is a sum of stat gains, not the percentage by which you will win more battles or deal more damage."
+        "text": "The planner compares affordable next steps and evaluates enhancement together with the mastery needed to cross milestone gates. Direct mastery level inputs allow precise starting state entry. The total stats preview lets you inspect current and projected equipment stats across all three troop classes before confirming a calculation. After choosing an upgrade the engine consumes the modeled resources and reevaluates the remaining options. Locked, unreachable, maximum-level, and unaffordable choices are excluded. The familiar candidate question is Affordable positive candidate? If none remains, the plan stops and leaves unused resources. This does not mean every item is finished; a different required material may have run out. Review the ordered steps, affected troop and slot, before-and-after stats, material spending, and leftovers. The results display presents troop facts using dedicated"
       },
       {
         "heading": "Reforge without losing sight of your priorities",
-        "text": "Optional reforge can recover invested enhancement XP from eligible gear and reuse it in the proposed plan. A locked item is protected. Profile-priority protection also prevents lower-priority gains from being used to justify losses in higher-priority groups in the total-stat comparison. An empty XP bag does not necessarily mean there is nothing to compare: invested, recoverable XP can still be relevant. Conversely, recoverable XP is not free new inventory, and not every material is refunded. For Maximize Total Stat %, a reforge must improve both raw stat total and weighted useful value over the no-reforge result before it is selected. Inspect that comparison and the actual donor items instead of assuming that a longer plan is better. Example: A proposed reforge would raise several secondary stats but reduce a higher-priority group. The larger raw sum alone is not sufficient. Keep the pri"
+        "text": "Optional reforge can recover invested enhancement XP from eligible gear and reuse it in the proposed plan. A locked item is protected. In addition, profile priority locks prevent higher-priority gear from being selected as reforge donors: gear belonging to a higher-priority troop class cannot have its invested XP stripped to upgrade lower-priority items. An empty XP bag does not necessarily mean there is nothing to compare: invested, recoverable XP can still be relevant. Conversely, recoverable XP is not free new inventory, and not every material is refunded. For Maximize Total Stat %, a reforge must improve both raw stat total and weighted useful value over the no-reforge result before it is selected. Inspect that comparison and the actual donor items instead of assuming that a longer plan is better. Example: A proposed reforge would raise several secondary stats but reduce a higher-pri"
       },
       {
         "heading": "Why an older result may differ",
@@ -1387,8 +1411,12 @@ export const searchIndex = [
         "text": "Governor Gear planning solves the resource-allocation problem of choosing among six competing next item levels when direct stats, set thresholds, locks, and three inventories interact. The user selects an active Lab profile and controls current item catalog levels, Satin, Gilded Thread, Artisan Vision, troop and stat weights, strategy, and locked pieces. These are personal scenario inputs. Kingdom or alliance scope and management role do not alter upgrade costs, and the result never changes a live game account. The target state is not typed independently: it emerges from repeated valid next-level choices until no affordable positive candidate remains. Each output step identifies the slot, old and new level, direct or set delta, and consumed materials. Before and after set state explains why a threshold mattered; leftovers explain why planning stopped. Worked inventory edge case: A set-co"
       },
       {
-        "heading": "Choose a goal before comparing results",
-        "text": "The Optimization Goal changes what the planner values. The raw-stat choice focuses on additive stat gains; Balanced troops balances supported troop priorities; Combat power uses account context and favors offensive value while retaining some defensive value; the custom choice uses your saved priorities. For Combat power, enter the four percentages per troop from the in-game Bonus Overview. An account that already has a large amount of one stat can value an improvement differently from an account with a weaker multiplier. Keep the goal and stat source the same when comparing two inventories. Current item and inventory inputs can be reviewed in Ascension Path alongside the other progression systems. A forecast does not mean the account has already bought or equipped its proposed upgrades."
+        "heading": "Choose an Optimization Goal before comparing results",
+        "text": "The Optimization Goal controls how the planner ranks competing upgrades when costs are comparable: - Maximum stats: Flat weights (1.0 across all stats and troop classes). Maximizes raw total stat gains per consumed material, ignoring troop priority. - Combat power: Offense-first ranking with a 20% defensive retention factor (Defense and Health weights are scaled to 0.20). Uses the Lanchester combat objective to evaluate diminishing returns against your account stats. - Balanced troops: Advances all troop types together. It normalizes each troop's total weight to match the strongest troop's priority while preserving each troop's internal stat ratios. - My build: Uses your saved profile troop and stat weights without modification."
+      },
+      {
+        "heading": "Account stats and Bonus Overview",
+        "text": "For the Combat power goal, enter the four percentages per troop (Attack %, Defense %, Lethality %, and Health %) exactly as displayed in the in-game Bonus Overview. Because combat calculations experience diminishing returns when one stat outpaces another, the planner favors upgrades in the specific attributes where your account is weakest. Current item and inventory inputs can be reviewed in Ascension Path alongside the other progression systems. A forecast does not mean the account has already bought or equipped its proposed upgrades."
       }
     ]
   },
@@ -1429,8 +1457,12 @@ export const searchIndex = [
         "text": "Charm planning solves the choice among 18 next-slot upgrades when Guides and Designs are shared across Infantry, Cavalry, and Archer priorities. The controls are active Lab profile, each current Charm level, both material balances, troop and stat weights, strategy, and locks. They are personal scenario inputs. Alliance or kingdom selection does not change the cost catalog, and no leadership role gives authority over another user's saved profile or in-game inventory. The engine generates only the next valid catalog level for each unlocked non-maxed slot. It compares candidates, consumes live remaining materials, updates the chosen level and stats, and repeats. The ordered output names slot, step, gain, Guides and Designs spent, before and after levels, and leftovers. A target is reachable only through these sequential levels; the engine cannot skip an intermediate cost. Worked scarcity ed"
       },
       {
-        "heading": "Choose a goal before comparing results",
-        "text": "The Optimization Goal changes what the planner values. The raw-stat choice focuses on additive stat gains; Balanced troops balances supported troop priorities; Combat power uses account context and favors offensive value while retaining some defensive value; the custom choice uses your saved priorities. For Combat power, enter the four percentages per troop from the in-game Bonus Overview. An account that already has a large amount of one stat can value an improvement differently from an account with a weaker multiplier. Keep the goal and stat source the same when comparing two inventories. Current item and inventory inputs can be reviewed in Ascension Path alongside the other progression systems. A forecast does not mean the account has already bought or equipped its proposed upgrades."
+        "heading": "Choose an Optimization Goal before comparing results",
+        "text": "The Optimization Goal controls how the charm optimizer ranks competing candidate upgrades: - Maximum stats: Flat weights (1.0 across all stats and troop classes). Selects upgrades that purchase the largest total stat gain per Guide or Design, without considering troop priorities. - Combat power: Offense-first ranking with a 20% defensive retention factor (Defense and Health weights are scaled to 0.20). Uses the Lanchester combat model to prioritize stats where the account suffers diminishing returns. - Balanced troops: Advances all troop types together. It balances each troop's aggregate weight up to match the highest-priority troop while preserving the relative stat mix within each troop class. - My build: Uses your saved profile troop and stat weights without modification."
+      },
+      {
+        "heading": "Account stats and Bonus Overview",
+        "text": "For the Combat power goal, enter the four percentages per troop (Attack %, Defense %, Lethality %, and Health %) directly from the in-game Bonus Overview. The optimizer uses these percentages to favor upgrades in the specific attributes where your current account is weakest. Current item and inventory inputs can be reviewed in Ascension Path alongside the other progression systems. A forecast does not mean the account has already bought or equipped its proposed upgrades."
       }
     ]
   },
@@ -1471,11 +1503,15 @@ export const searchIndex = [
       },
       {
         "heading": "Compare formations on the same basis",
-        "text": "The Formation Damage Map and recommended-formation results compare the current formation and alternatives using the same scenario assumptions. Troop groups, locks, capacity, and the chosen comparison scope matter throughout the search. The search starts broadly and refines promising formations. Read the result state carefully: Result What it tells you --- --- Better candidate found A tested alternative improved the modeled result Current best in completed search No tested alternative in that completed search beat the current setup No better candidate in limited search The bounded search or constraints did not establish an improvement Insufficient data or search failed Correct the input or problem before drawing a conclusion None of these is a promise of the universally best live formation. In particular, an empty or heavily locked search should not be read as \"your current formation is p"
+        "text": "The Formation Damage Map and recommended-formation results compare the current formation and alternatives using the same scenario assumptions. Troop groups, locks, capacity, and the chosen comparison scope matter throughout the search. The optimizer applies multi-scale top-region refinement . It begins with a broad coarse search across possible troop mixes, then takes the top candidate anchors and refines them by geometrically reducing the step size by 4x on each pass down to single-troop integer resolution. This multi-pass refinement prevents small optimal proportions (such as a 1.7% Infantry frontline share) from getting trapped between wide coarse intervals. Read the result state carefully: Result What it tells you --- --- Better candidate found A tested alternative improved the modeled result Current best in completed search No tested alternative in that completed search beat the cur"
+      },
+      {
+        "heading": "Build weights and defensive reserves",
+        "text": "The Bear Trap Rally Damage preset is designed for offense while protecting equipment integrity: - Lethality and Attack weights: Set to 1.0 for Infantry and Cavalry , and 1.1 for Archer (capturing Archer's 10% Ranged Strike bonus against the Infantry Bear). - Defensive reserves: Health and Defense are assigned a 35% reserve (0.35 weight). Because the Bear does not attack back, offensive stats drive score, but the 35% defensive reserve ensures that durable all-mode gear is not treated as disposable reforge donors. - Legacy preset migration: Profiles saved under legacy Bear Trap weights with 0% or 25% reserves automatically upgrade to the standard 35% reserve when opened, while custom player weight matrices remain untouched."
       },
       {
         "heading": "Keep hero assumptions honest",
-        "text": "Hero progression, supported skill effects, troop-type applicability, and widget or star requirements can change a comparison. Use the recommendation's stated assumptions rather than assuming every effect applies equally to all troops or every hero setup. Profile prefill reduces typing, but inspect the values after selecting a different profile. A hypothetical hero recommendation is not proof that the account owns that hero or can meet its requirements. Example: You replay a rally and find the estimate much higher than the observed result. First confirm the actual captain skills, troop counts, stat source, tier, and temporary buffs. Correct one uncertain input at a time and rerun. Changing several values until the answer matches can hide the original mistake."
+        "text": "Hero progression, supported skill effects, troop-type applicability, and widget or star requirements can change a comparison. The simulation engine resolves skill effects by troop type: an Infantry skill factor multiplies only Infantry stacks, while Archer and Cavalry skills apply strictly to their matching troop types, rather than applying a blanket multiplier across all troops. Profile prefill reduces typing, but inspect the values after selecting a different profile. A hypothetical hero recommendation is not proof that the account owns that hero or can meet its requirements. Example: You replay a rally and find the estimate much higher than the observed result. First confirm the actual captain skills, troop counts, stat source, tier, and temporary buffs. Correct one uncertain input at a time and rerun. Changing several values until the answer matches can hide the original mistake."
       },
       {
         "heading": "What is saved or shared?",
@@ -1869,7 +1905,11 @@ export const searchIndex = [
       },
       {
         "heading": "Work with a scoped editorial team",
-        "text": "Space and contributor management let permitted managers organize who can contribute to a kingdom or alliance library. A role in one community does not imply editorial control in another. Confirm the named space, audience, and available action before changing contributors or content. Keep draft saving, review, and publication separate. Review notifications help the right person find pending work, but reading one does not approve a revision. See Notifications for the difference between new information and an unresolved action."
+        "text": "Space and contributor management let permitted managers organize who can contribute to a kingdom or alliance library. A role in one community does not imply editorial control in another. Confirm the named space, audience, and available action before changing contributors or content."
+      },
+      {
+        "heading": "Admin statistics and reader metrics",
+        "text": "Administrators have access to an in-depth Article statistics panel when viewing published articles. This panel summarizes technical and editorial metrics: - Total word and block counts - Structural breakdown: headings, referenced images, and interactive widgets - Estimated reading duration based on word count - Configured access policy, language locale, and applied tags - Publication and modification timestamps In addition, articles feature lightweight engagement counters to track reader views across public and community spaces without leaking reader identities. Keep draft saving, review, and publication separate. Review notifications help the right person find pending work, but reading one does not approve a revision. See Notifications for the difference between new information and an unresolved action."
       }
     ]
   },
@@ -1972,6 +2012,10 @@ export const searchIndex = [
       {
         "heading": "Three input layers",
         "text": "1. Catalog data supplies versioned costs, levels, stats, and supported entity definitions. 2. Profile data describes the selected account's current gear, materials, stats, and saved choices. 3. Scenario data contains temporary assumptions for the current optimizer or simulator run. Accessible summary: A result combines catalog, profile, and scenario inputs. All three must be known to reproduce it. When checking a cost, identify the system, item, starting level, destination level, and any tier or quality dimension. Do not copy the cost for one transition into another. When a tool and reference appear to disagree, first confirm that they use the same catalog version and that the optimizer is not summing multiple transitions. Example: A user expects the cost shown for level 4 → 5, but their plan upgrades level 3 → 5. The optimizer correctly includes both transitions. The user verifies each "
+      },
+      {
+        "heading": "Dataset version 1.0.1 and Hero Gear tables",
+        "text": "The Spend Optimizer relies on dataset version 1.0.1 . This version replaces older checkpoint interpolation with an exact 201-row per-level table for Hero Enhancement XP from level +0 through +200: - Cumulative XP total: Reaching level +200 requires exactly 575,320 Enhancement XP, correcting an earlier 574,370 estimate derived from linear checkpoint ramps. - Zero-XP milestones: Level 101 (Red gear ascension) requires two Mythic gear pieces and materials, but zero Enhancement XP. Subsequent imbuement milestones at levels 120, 140, 160, 180, and 200 similarly charge material costs rather than Enhancement XP. - Mastery enhancement caps: Equipment level progression is gated by Mastery Forging. Mastery below 10 caps gear enhancement at level 100. Mastery 10 caps at level 119; Mastery 11 at level 139; Mastery 12 at level 159; Mastery 13 at level 179; Mastery 14 at level 199; and Mastery 15 or h"
       },
       {
         "heading": "Roles, controls, workflow, and recovery",
@@ -3819,6 +3863,10 @@ export const searchIndex = [
       {
         "heading": "More comfortable reading and discovery",
         "text": "Long guides have a collapsible table of contents, and Print or save as PDF opens the browser's print workflow for the article you can currently read. Preview the output before saving or sharing; a printable copy is not permission to redistribute members-only content. Articles can appear in more than one relevant category. Hero and Master database entries provide structured game information alongside ordinary guides. Supported tool or simulator widgets can appear inside an article, bringing a relevant calculation closer to its explanation. Reader navigation, menus, and overlays have been refined for smaller screens and both colour themes. Author images use the account avatar where available. Publication and access rules still apply when following a category, printing, or opening a direct link. Eligible premium reading can come from a personal plan, but private community material still has"
+      },
+      {
+        "heading": "If an older layout looks different",
+        "text": "Mobile menus, dropdown overlays, loading presentation, the article outline, statistics presentation, and space labels have been refined. Use the current category, space label, and table of contents to orient yourself. These changes do not publish a draft or make a protected article public. See the fixed and replaced items for the wider update."
       }
     ]
   },
@@ -3930,7 +3978,11 @@ export const searchIndex = [
       },
       {
         "heading": "Create and edit a draft",
-        "text": "Choose the correct public, kingdom, or alliance space. Enter a clear title and summary, then build the article from supported blocks. Blocks can include structured headings, paragraphs, lists, callouts, tables, media, references, and other current editor types. Reorder or remove a block deliberately and preview the complete reading flow. Use the media library for safe assets. Provide meaningful alt text and a caption or source when needed. Do not upload credentials, private rosters, sensitive manager controls, or material without publication rights."
+        "text": "Choose the correct public, kingdom, or alliance space. Enter a clear title and summary, then build the article from supported blocks. Blocks can include structured headings, paragraphs, lists, callouts, tables, media, references, and interactive tool widgets. Reorder or remove a block deliberately and preview the complete reading flow. Use the media library for safe assets. Provide meaningful alt text and a caption or source when needed. Do not upload credentials, private rosters, sensitive manager controls, or material without publication rights."
+      },
+      {
+        "heading": "Content limits, media quotas, and formula sanitization",
+        "text": "The authoring workspace enforces clear technical limits to maintain reader performance and system reliability: - Revision block limit: Articles support up to 2,000 blocks per revision, accommodating comprehensive manuals and multi-part guides without premature truncation. - Article size boundaries: Titles allow up to 180 characters, summaries up to 1,000 characters, and total article body text up to 150,000 characters. - Media limits: An article revision can reference up to 60 images, with an article media cap of 120 MB. - Space storage quotas: Each knowledge space has a default 2 GB storage quota. The interface displays informational notices at 80% usage and warnings at 90% usage. At 100% capacity, new uploads are blocked until unused media is cleaned up or quota is expanded. - Upload batch rules: Image uploads allow up to 10 files per batch, 10 MB per individual file, and 50 MB total p"
       },
       {
         "heading": "Imports and writing assistance",
@@ -4076,7 +4128,15 @@ export const searchIndex = [
       },
       {
         "heading": "Result trust labels",
-        "text": "Label Meaning --- --- Profile input Persisted user-controlled planning value Scenario override Temporary value for the current comparison Catalog input Versioned application reference data Derived result Calculated from declared inputs and engine rules Observed contribution User-submitted real outcome with its own context Warning A limitation, missing prerequisite, unsupported combination, or uncertainty Applied plan Confirmed planning-state update; never an in-game action A trustworthy Lab result always lets the reader answer: which profile, which overrides, which catalog version, which controls, which engine assumptions, and which warnings produced this output."
+        "text": "Label Meaning --- --- Profile input Persisted user-controlled planning value Scenario override Temporary value for the current comparison Catalog input Versioned application reference data Derived result Calculated from declared inputs and engine rules Observed contribution User-submitted real outcome with its own context Applied plan Confirmed planning-state update; never an in-game action A trustworthy Lab result always lets the reader answer: which profile, which overrides, which catalog version, which controls, which engine assumptions, and which warnings produced this output."
+      },
+      {
+        "heading": "Visual architecture and Cyber design system",
+        "text": "The Lab uses a unified Cyber design system tailored for high-density strategic planning: - Ambient canvas backdrop: The interface features a subtle animated mesh background that provides visual depth without distracting from data entry or slowing down calculation rendering. - Card depth and button sheens: Tool cards use layered background gradients, soft inner borders, and constrained button sheen animations on hover to keep interactive controls distinct. - Compact battle cards and inputs: Input sections utilize compact number steppers and slim troop percentage bars to maximize visible screen space during complex multi-troop configurations. - Semantic troop styling: Every module enforces standardized color coding for troop classes: - Infantry: Blue / Cyan tones - Cavalry: Amber / Orange tones - Archer: Green / Emerald tones - Stat palette consistency: Stat gains and trajectories use matc"
+      },
+      {
+        "heading": "Authentic game entity artwork and asset fallbacks",
+        "text": "The Lab incorporates authentic game asset mapping to replace generic icons with recognizable in-game visuals: - Hero Gear: High-resolution assets distinguish standard Epic equipment from awakened Red tier gear across all twelve slots (helm, gloves, chest, and boots for each troop class). - Governor Gear: WebP illustrations reflect exact troop type, piece placement, rarity color, tier level, and star count. - Charms: Distinct level illustrations map progression across all 22 charm tiers for Infantry , Cavalry , and Archer . - Truegold Progression: Dedicated troop artwork renders Truegold tiers 1 through 8. - Skills and Exclusive Widgets: WebP icons illustrate hero battle skills and hero-exclusive widgets, supported by an alias dictionary to match varied item naming. - Structured fallback system: When an image is loading or unavailable, the engine displays semantic SVG category icons (Crow"
       },
       {
         "heading": "Recommended reading order",
@@ -4114,19 +4174,23 @@ export const searchIndex = [
       },
       {
         "heading": "Hero Gear Optimizer",
-        "text": "Confirm all twelve gear pieces across Infantry, Cavalry, and Archer heroes, including the supported enhancement, mastery, ascension, imbuement, or reforge state shown by the editor. Enter only owned enhancement XP, Forge Hammers, Mythic Shards, Mithril, and other listed resources. Choose the combat context and objective, then run the plan. Results show target pieces, before and after states, ordered actions, resource use, remaining inventory, and the reason a supported checkpoint was preferred. When combat stats already include current Hero Gear, select that state correctly so the tool does not count it twice."
+        "text": "Confirm all twelve gear pieces across Infantry, Cavalry, and Archer heroes, including the supported enhancement, mastery, ascension, imbuement, or reforge state shown by the editor. Authentic equipment visuals distinguish standard Epic pieces from awakened Red tier gear to help verify slot assignments. Enter only owned enhancement XP, Forge Hammers, Mythic Shards, Mithril, and other listed resources. Choose the combat context and objective, then run the plan. Results show target pieces, before and after states, ordered actions, resource use, remaining inventory, and the reason a supported checkpoint was preferred. When combat stats already include current Hero Gear, select that state correctly so the tool does not count it twice."
       },
       {
         "heading": "Governor Gear Optimizer",
-        "text": "Enter all six troop-related gear pieces and their current tier or star state, plus the listed materials. Review set breakpoints as well as individual piece gains. A recommendation can favor completing a set checkpoint instead of raising the visually weakest piece."
+        "text": "Enter all six troop-related gear pieces and their current tier or star state, plus the listed materials. Equipment art displays exact piece tiers and star configurations. Review set breakpoints as well as individual piece gains. A recommendation can favor completing a set checkpoint instead of raising the visually weakest piece."
       },
       {
         "heading": "Charm Optimizer",
-        "text": "Enter all charm slots for Infantry, Cavalry, and Archer and the available Charm Guides, Charm Designs, or other current inputs. Check every slot because a missing level can redirect the entire order."
+        "text": "Enter all charm slots for Infantry, Cavalry, and Archer and the available Charm Guides, Charm Designs, or other current inputs. Artwork renders all 22 charm progression levels. Check every slot because a missing level can redirect the entire order."
       },
       {
         "heading": "Save or apply a plan",
         "text": "Review resource consumption and prerequisites first. If Apply to profile is offered, confirm the selected profile and apply only the accepted target state. This updates the reusable Lab input. It does not confirm that the upgrades were made in game; update or revert the profile if the real purchase differs. Move from profile and inventory to objectives, plan, and optional profile update. - Active Lab profile and complete piece or charm grid for Infantry, Cavalry, and Archer. - Current levels, tiers, stars, mastery or reforge state, and owned-resource inputs. - Objective or context controls and missing-input validation. - Ordered target plan, before and after states, resource usage, remaining inventory, and Apply to profile confirmation. Optimizer order is a modeled recommendation and can change with game data or objectives. See Interpreting Results."
+      },
+      {
+        "heading": "Cross-system planning with Ascension Path",
+        "text": "When you want to know how Hero Gear, Governor Gear, and Charms compete against each other for overall combat value, use Ascension Path . It analyzes all three systems simultaneously using a 30-step beam search, identifies equipment weak points, and charts stat and resource trajectories."
       },
       {
         "heading": "Choose the correct mechanism",
@@ -4211,6 +4275,10 @@ export const searchIndex = [
       {
         "heading": "What results cannot guarantee",
         "text": "The Lab cannot predict player execution, connection conditions, undocumented game changes, every interaction, future prices, or live opponent behavior. Beta modules and data revisions can change an output even when saved inputs did not change. A narrow uncertainty range describes the model, not certainty about the game."
+      },
+      {
+        "heading": "Reading the Cyber interface and visual indicators",
+        "text": "The Cyber interface uses standardized visual markers across all optimizers and simulators: - Semantic troop styling: Results tag troop-specific gains with dedicated color bars: Infantry (cyan/blue), Cavalry (orange/amber), and Archer (green/emerald). - Combat impact ratings: Steps in Ascension Path classify returns into distinct impact tiers ( Very High , High , Medium , Low , and Marginal ), allowing quick identification of major milestones. - Breakpoints: Highlighted icons identify steps that unlock set bonuses, pass mastery gates, or complete red equipment imbuements. - Comparative trade-offs: Alternative comparison panels explain not only why the winning choice succeeded, but why the competing alternative lost. - Asset resolution status: Genuine game art displays when mapped. If an image is pending or loading, a semantic SVG category icon takes its place to prevent layout shifts."
       },
       {
         "heading": "When a result looks wrong",
@@ -4914,6 +4982,10 @@ export const searchIndex = [
       {
         "heading": "A saved result changed after an update",
         "text": "Hero Gear XP costs and reforge comparisons, Bear formation search, and account-stat handling have been refined. Re-run the same input under the current catalog and compare objective, profile, locks, formation, and stat source before comparing totals. A previous screenshot is a historical result, not the current calculation. If inputs changed after a run, use the tool's Run or Optimize action to refresh a stale result. If screenshot import misreads a field, leave it unselected and enter it manually. See Screenshot Build Import and Ascension Path for safe input and scenario boundaries."
+      },
+      {
+        "heading": "Input and layout fixes to know about",
+        "text": "Recent fixes cover the current-build selection and edit controls, battle stat labels, compact percentage inputs, dropdown chevrons, hover effects, and light-theme input contrast. If an old screenshot shows a different arrangement, use the current field label and the dedicated tool guide. Recheck the selected build before editing and rerun after changing calculation inputs. The release notes separate calculation fixes from presentation improvements so a layout change is not mistaken for a change to game mechanics."
       }
     ]
   },
@@ -4934,7 +5006,7 @@ export const searchIndex = [
       },
       {
         "heading": "September 2026: easier planning, clearer follow-up",
-        "text": "Since the August documentation update, Kingshot Events has gained new ways to prepare a schedule, compare an upgrade path, and keep track of work that needs attention. This guide brings those changes together so you can choose what is useful without reading a technical change log. These notes describe the product reviewed on September 3. Availability on the live site still depends on the deployed version, module state, account access, and configured plan. A feature described here does not promise that every account can use every control."
+        "text": "Since the August documentation update, Kingshot Events has gained new ways to prepare a schedule, compare an upgrade path, and keep track of work that needs attention. This guide brings those changes together so you can choose what is useful without reading a technical change log. The changes below are grouped into New , Improved , Fixed , and Removed or replaced , followed by links to the current workflows. These notes describe the product reviewed on September 3. Availability on the live site still depends on the deployed version, module state, account access, and configured plan. A feature described here does not promise that every account can use every control."
       },
       {
         "heading": "A Castle planner you can try without an account",
@@ -4957,20 +5029,40 @@ export const searchIndex = [
         "text": "Every registered account starts on Free . Personal paid plans, such as Premium, provide the benefits shown on their own plan cards, including eligible premium reading where configured. Personal plans are separate from alliance and kingdom subscriptions. They do not buy staff roles, community membership, alliance quotas, or access for another user. The current purchase flow creates a private request, with payment verification before activation and no automatic renewal. A plan without configured pricing cannot be purchased. Read Free and Premium Personal Plans."
       },
       {
+        "heading": "See a wider upgrade path in the Lab",
+        "text": "Ascension Path connects Hero Gear, Governor Gear, and Charms into one unified progression workspace. Powered by Ascension Engine version 1.1.0, it executes a 30-step bounded beam search across all nine progression materials to recommend optimal upgrade orders. The workspace delivers: - Action recommendations: Instant status banners ( UPGRADE NOW , SAVE , COMPLETE ) paired with Next Target and Following Target milestone cards displaying sufficient and missing resources. - Comparative step anatomy: Step cards detail exact combat deltas, impact ratings ( Very High to Marginal ), set breakpoints, the \"Why First\" optimization reason, and the competing \"Alternative\" showing why another system lost. - Weak point diagnostics: Evaluates equipment balance across all three systems, categorizing areas into High Priority , High , Medium , or Healthy with quantified opportunity scores. - Interactive f"
+      },
+      {
         "heading": "A more consistent account experience",
         "text": "Upload or remove your account avatar from Profile and use the same identity image across supported Event Tracker and Knowledge displays. Configured name gradients are also more consistent; they are styling, not proof of permission. The Recycle Bin now starts with clear record categories, search, and pagination. Privacy request review has readable light and dark theme controls, and fulfilled requests no longer linger as unfinished privacy actions. Read Account and Profile and Recycle Bin and Restore Requests."
       },
       {
-        "heading": "See a wider upgrade path in the Lab",
-        "text": "Ascension Path connects Hero Gear, Governor Gear, and Charms in one progression view. Review your confirmed build, choose a combat focus, inspect the next target and forecast, then try different resources in a temporary scenario. A resource-routing comparison helps explore configured offers without making a purchase. Where enabled, screenshot build import reduces setup work. Choose, drag, or paste game screens, review recognized values, and confirm only the fields you trust. It updates Lab planning inputs, not event results. Read Ascension Path and Import Your Lab Build from Screenshots."
-      },
-      {
-        "heading": "Better comparisons, clearer assumptions",
-        "text": "Hero Gear planning now offers clearer total-stat and account-aware comparisons, corrected XP accounting, and stronger protection for higher-priority gear during reforge comparisons. Governor Gear and Charm goals better distinguish raw stats, balanced troops, and combat-focused planning. Bear Trap formation comparisons preserve the chosen scenario and distinguish a better sampled result from a limited search or missing data. Refined hero and skill handling helps make those comparisons more meaningful. Results remain estimates: review the assumptions and rerun after changing inputs. Across the Lab, layouts, input contrast, stat labels, charts, and mobile result views have been refined to make the important information easier to read. Read Hero Gear, Governor Gear, Charms, and Bear Trap."
+        "heading": "Visual overhaul, authentic game assets, and sharper comparisons",
+        "text": "The entire Lab workspace has transitioned to the Cyber design system : - Ambient canvas backdrop: A dynamic animated mesh background adds visual depth to calculations. - Card depth and button sheens: Layered card surfaces, subtle borders, and contained button sheen hover animations create clear tactile hierarchy. - Compact battle cards and inputs: Space-efficient stepper controls and compact percentage bars maximize visible information. - Standardized color conventions: Universal troop styling ( Infantry in blue, Cavalry in amber, Archer in emerald) and stat colors (sky blue Attack, amber Defense, pink Lethality, emerald Health). - High-contrast accessibility: All inputs, dropdowns, and borders pass WCAG 4.5:1 contrast standards across both Dark and Light themes. - Responsive workspace rail: Collapsible navigation rail expands from 3.5rem to 14rem on desktop and adapts to a mobile toolba"
       },
       {
         "heading": "A more useful reading library and everyday workspace",
-        "text": "Knowledge Hub adds easier mobile navigation, a collapsible article outline, browser printing, multi-category articles, structured Hero and Master entries, and supported in-article tools. Scoped space and contributor management help editorial teams organize their work while keeping draft, review, and publication separate. Event lists, sessions, manual entry, result batches, and proposals also have refreshed presentation. These changes improve orientation without changing the need to confirm the correct community, record, and action before saving. Read Knowledge Hub and Events and Results."
+        "text": "Knowledge Hub supports up to 2,000 blocks per revision, default 2 GB space storage quotas with progressive warning thresholds, automatic LaTeX formula normalization, and embeddable tool widgets. Reader experiences add easier mobile navigation, a collapsible article outline, browser printing, multi-category articles, structured Hero and Master entries, view counters, and an in-depth administrative article statistics panel. Scoped space and contributor management help editorial teams organize their work while keeping draft, review, and publication separate. Event lists, sessions, manual entry, result batches, and proposals also have refreshed presentation. These changes improve orientation without changing the need to confirm the correct community, record, and action before saving. Read Knowledge Hub and Events and Results."
+      },
+      {
+        "heading": "Castle Positions",
+        "text": "- Scheduling data refreshes no longer repeatedly restart the page while you are arranging appointments. - A successful identity approval updates the candidate's review state and can resolve the corresponding roster player, instead of leaving the approved applicant looking unresolved. - Castle administration remembers a valid kingdom choice, and the Points view uses that selection rather than asking for a kingdom already selected. - Click-to-assign works in the local helper alongside the shared drag controls. Slots remain fixed at 30 minutes."
+      },
+      {
+        "heading": "Notifications, accounts, and privacy",
+        "text": "- Informational red dots clear after their visible updates are seen. A section explains which items caused its dot, and genuine unfinished actions remain highlighted. - Reading all available updates clears the Notifications unread indicator without silently approving pending requests. Offscreen cards and unopened pages remain unread. - Fulfilled privacy requests no longer count as unfinished actions. The request-processing dialog is readable in both light and dark themes. - The personal subscription page now distinguishes loading or pricing problems from Free access and active paid access. Personal plans stay separate from community purchases."
+      },
+      {
+        "heading": "Lab calculations and controls",
+        "text": "- Hero Gear XP costs and reforge accounting have been updated to dataset version 1.0.1, utilizing all 201 per-level values, zero-XP level 101 ascension, and Mastery enhancement caps (100, 119, 139, 159, 179, 199, 200). Reforge comparisons protect higher-priority gear and check both total and useful weighted gains against the no-reforge result. - Account-aware gear planning uses the declared stat source and formation more consistently, with an explicit fallback when usable account context is missing. - Bear formation comparisons evaluate the current setup and alternatives with multi-scale refinement down to single-troop steps; a constrained or incomplete search is no longer presented as proof of an ideal formation. Hero progression and troop-specific skill handling have also been refined. - Battle stat labels, percentage inputs, edit controls, current-build selection, dropdown appearance,"
+      },
+      {
+        "heading": "Knowledge reading",
+        "text": "- Mobile menus, dropdown overlays, loading presentation, the article outline, statistics presentation, and space labels have been refined so navigation and content remain easier to find. If an older saved calculation differs, rerun it with the same profile, inventory, objective, locks, formation, and stat source before comparing results. These are planning tools, not guarantees of a live game outcome."
+      },
+      {
+        "heading": "Removed or replaced",
+        "text": "- Standalone Moderation landing page and menu entry removed. Use Notifications or the owning workflow to reach a permitted review. Report review and other necessary review actions still exist. - Name-dependent gradient styling replaced by configured account appearance. Styling now follows the applicable account, role, or active personal-subscription configuration; a display name does not grant a benefit or permission. - Dense scoring and recovery lists replaced with organized views. KvK scoring uses day selectors, search, and readable formula cards. The Recycle Bin uses categories, search, and pagination. The underlying scoring reference and recovery actions were not removed. The managed Castle system remains available. The guest helper is an additional small-task tool, not its replacement. Personal plans likewise do not replace alliance or kingdom subscriptions."
       },
       {
         "heading": "August 2026 documentation foundation",

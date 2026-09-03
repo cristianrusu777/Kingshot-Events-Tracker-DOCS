@@ -194,10 +194,37 @@ Game Data is the reference surface for supported catalogs used by Lab modules. S
 | Catalog input | Versioned application reference data |
 | Derived result | Calculated from declared inputs and engine rules |
 | Observed contribution | User-submitted real outcome with its own context |
-| Warning | A limitation, missing prerequisite, unsupported combination, or uncertainty |
 | Applied plan | Confirmed planning-state update; never an in-game action |
 
 A trustworthy Lab result always lets the reader answer: which profile, which overrides, which catalog version, which controls, which engine assumptions, and which warnings produced this output.
+
+## Visual architecture and Cyber design system
+
+The Lab uses a unified Cyber design system tailored for high-density strategic planning:
+
+- **Ambient canvas backdrop:** The interface features a subtle animated mesh background that provides visual depth without distracting from data entry or slowing down calculation rendering.
+- **Card depth and button sheens:** Tool cards use layered background gradients, soft inner borders, and constrained button sheen animations on hover to keep interactive controls distinct.
+- **Compact battle cards and inputs:** Input sections utilize compact number steppers and slim troop percentage bars to maximize visible screen space during complex multi-troop configurations.
+- **Semantic troop styling:** Every module enforces standardized color coding for troop classes:
+  - **Infantry:** Blue / Cyan tones
+  - **Cavalry:** Amber / Orange tones
+  - **Archer:** Green / Emerald tones
+- **Stat palette consistency:** Stat gains and trajectories use matching color tokens across all charts and cards: Attack (sky blue), Defense (amber), Lethality (pink), and Health (emerald).
+- **Dual-theme accessibility:** All text, borders, and input controls meet WCAG contrast standards (greater than or equal to 4.5:1) in both Dark and Light themes.
+- **Responsive workspace rails:** The simulator navigation rail expands from a compact 3.5rem icon rail to a 14rem navigation panel on larger screens, while collapsing to a touch-friendly bottom bar on mobile viewports.
+
+## Authentic game entity artwork and asset fallbacks
+
+The Lab incorporates authentic game asset mapping to replace generic icons with recognizable in-game visuals:
+
+- **Hero Gear:** High-resolution assets distinguish standard Epic equipment from awakened Red tier gear across all twelve slots (helm, gloves, chest, and boots for each troop class).
+- **Governor Gear:** WebP illustrations reflect exact troop type, piece placement, rarity color, tier level, and star count.
+- **Charms:** Distinct level illustrations map progression across all 22 charm tiers for **Infantry**, **Cavalry**, and **Archer**.
+- **Truegold Progression:** Dedicated troop artwork renders Truegold tiers 1 through 8.
+- **Skills and Exclusive Widgets:** WebP icons illustrate hero battle skills and hero-exclusive widgets, supported by an alias dictionary to match varied item naming.
+- **Structured fallback system:** When an image is loading or unavailable, the engine displays semantic SVG category icons (Crown for heroes, Sparkles for skills, Zap for widgets, Shield for equipment, Coins for materials, Swords for troops, and Flame for buffs) to avoid layout shifts.
+- **Asset protection:** Game artwork is protected against accidental drag-and-drop operations and context-menu triggering during calculations.
+
 ## Recommended reading order
 
 Begin with [Profiles, Autosave, and Optimization Order](/kingshot-events/lab/profiles-and-autosave), then choose [Hero Gear](/kingshot-events/lab/hero-gear), [Governor Gear](/kingshot-events/lab/governor-gear), [Charms](/kingshot-events/lab/charms), or [Bear Trap](/kingshot-events/lab/bear-trap). Finish with [Interpreting Results](/kingshot-events/lab/interpreting-results) and [Simulator Problems](/kingshot-events/troubleshooting/simulator-problems).

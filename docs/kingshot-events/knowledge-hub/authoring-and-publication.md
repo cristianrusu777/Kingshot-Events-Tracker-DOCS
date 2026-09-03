@@ -5,7 +5,9 @@ product: 'kingshot-events'
 audience: 'Knowledge authors and reviewers'
 experienceLevel: 'Intermediate'
 featureArea: 'Knowledge authoring'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Knowledge Authoring, Imports, Review, and Publication
@@ -14,9 +16,21 @@ Authors work in **Create** or **Studio**. Each article belongs to an intended sp
 
 ## Create and edit a draft
 
-Choose the correct public, kingdom, or alliance space. Enter a clear title and summary, then build the article from supported blocks. Blocks can include structured headings, paragraphs, lists, callouts, tables, media, references, and other current editor types. Reorder or remove a block deliberately and preview the complete reading flow.
+Choose the correct public, kingdom, or alliance space. Enter a clear title and summary, then build the article from supported blocks. Blocks can include structured headings, paragraphs, lists, callouts, tables, media, references, and interactive tool widgets. Reorder or remove a block deliberately and preview the complete reading flow.
 
 Use the media library for safe assets. Provide meaningful alt text and a caption or source when needed. Do not upload credentials, private rosters, sensitive manager controls, or material without publication rights.
+
+## Content limits, media quotas, and formula sanitization
+
+The authoring workspace enforces clear technical limits to maintain reader performance and system reliability:
+
+- **Revision block limit:** Articles support up to 2,000 blocks per revision, accommodating comprehensive manuals and multi-part guides without premature truncation.
+- **Article size boundaries:** Titles allow up to 180 characters, summaries up to 1,000 characters, and total article body text up to 150,000 characters.
+- **Media limits:** An article revision can reference up to 60 images, with an article media cap of 120 MB.
+- **Space storage quotas:** Each knowledge space has a default 2 GB storage quota. The interface displays informational notices at 80% usage and warnings at 90% usage. At 100% capacity, new uploads are blocked until unused media is cleaned up or quota is expanded.
+- **Upload batch rules:** Image uploads allow up to 10 files per batch, 10 MB per individual file, and 50 MB total per batch, with a maximum image dimension of 6,000 pixels.
+- **LaTeX formula normalization:** Formula expressions in math and inline formula blocks undergo automatic normalization. Any redundant repeated backslashes introduced during data transfer are collapsed to single backslashes while preserving legitimate LaTeX line breaks.
+- **Interactive widgets:** Authors can insert the Tool / Simulator Widget block to embed live calculator modules directly into relevant instructional articles.
 
 ## Imports and writing assistance
 
