@@ -47,7 +47,15 @@ Read the result state carefully:
 
 None of these is a promise of the universally best live formation. In particular, an empty or heavily locked search should not be read as "your current formation is perfect."
 
-Where offered, compare the strongest sampled recommendation with the smaller-change alternative. A modest troop adjustment can be more practical than reorganizing the entire rally for a small modeled gain.
+Where offered, compare the strongest sampled recommendation with the smaller-change alternative. A modest troop adjustment can be more practical than reorganizing the entire rally for a small modeled gain. Recommendation cards specify the exact scope destination (`Apply to Leader`, `Apply to Joiners`, or `Apply to Draft`) to prevent accidental overwrites.
+
+### Ternary damage surface and locked stack detection
+
+The Bear Trap formation view includes a **Ternary Damage Heatmap** that maps modeled rally damage across every possible combination of **Infantry**, **Cavalry**, and **Archer**:
+
+- **Ternary Surface Heatmap:** Plots candidate compositions with interactive sample markers, color-coded damage density gradients, and complete support for both Light and Dark color themes with high-contrast text and border tokens.
+- **Locked Stack Restriction Callout:** When troop stacks have fixed quantities, the optimizer cannot freely vary those troops. A warning banner alerts the user (`Locked troop stacks are restricting the search`) and identifies whether Leader, Joiner, or Rally stacks are locked.
+- **One-Click Unlock Action:** The callout provides an **Unlock Stacks & Find Best Formation** button. Clicking this unlocks the relevant stacks, clears the optimizer evaluation cache, and immediately recalculates the optimal formation across all troop types.
 
 ## Build weights and defensive reserves
 

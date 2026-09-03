@@ -106,7 +106,14 @@ The entire Lab workspace has transitioned to the **Cyber design system**:
 
 **Authentic game entity artwork:** Generic placeholders have been replaced with a comprehensive asset resolution engine. The platform renders high-resolution artwork for Hero Gear (including awakened Red tier gear), Governor Gear (across piece, rarity, tier, and star levels), Charms (levels 1 through 22), Truegold troops (tiers 1 through 8), battle skills, and hero exclusive widgets, supported by semantic SVG category fallback icons.
 
-**Optimizer mechanics:** Hero Gear planning incorporates dataset version 1.0.1 (201 per-level XP rows totaling 575,320 XP, zero-XP level 101 ascension, and Mastery enhancement caps), reforge donor priority locks, direct mastery inputs, and total stats preview. Governor Gear and Charms add four distinct Optimization Goals (`Maximum stats`, `Combat power` with 20% defensive retention, `Balanced troops`, and `My build`). Bear Trap features the **Bear Trap Rally Damage** preset (1.0 Lethality for Infantry/Cavalry, 1.1 for Archer, 35% defensive reserve), automatic legacy reserve migration, multi-scale formation refinement down to single-troop steps, and troop-type scoped skill effects.
+**Optimizer mechanics:** Hero Gear planning incorporates dataset version 1.0.1 (201 per-level XP rows totaling 575,320 XP, zero-XP level 101 ascension, and Mastery enhancement caps), reforge donor priority locks, direct mastery inputs, and total stats preview. Governor Gear and Charms add four distinct Optimization Goals (`Maximum stats`, `Combat power` with 20% defensive retention, `Balanced troops`, and `My build`). Bear Trap features the **Bear Trap Rally Damage** preset (1.0 Lethality for Infantry/Cavalry, 1.1 for Archer, 35% defensive reserve), automatic legacy reserve migration, multi-scale formation refinement down to single-troop steps, troop-type scoped skill effects, the **Ternary Damage Heatmap** with Light and Dark theme palettes, and locked stack detection with one-click unlocking and cache clearing.
+
+### War Room command dashboard and scope management
+
+The administrative and player dashboards introduce the **War Room** command layout for Kingdom Pulse:
+- **Vanguard Leaderboard:** Consolidates Top Damage Dealers and Reward Contribution Leaders into an interactive tabbed view with live attendance metrics, alliance tags, and status badges.
+- **System Health and Imports:** Displays an "All Systems Operational" status widget when no alerts require intervention, alongside a recent imports feed with status pills (completed, review needed, pending).
+- **Granular Scope Management:** The User Assignments console adds scoped delegation controls, allowing administrators to configure user assignments at Global, Kingdom, or Alliance levels with dedicated scope badges and permission removal safeguards.
 
 Read [Hero Gear](/kingshot-events/lab/hero-gear), [Governor Gear](/kingshot-events/lab/governor-gear), [Charms](/kingshot-events/lab/charms), and [Bear Trap](/kingshot-events/lab/bear-trap).
 
