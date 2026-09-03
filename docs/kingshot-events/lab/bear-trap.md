@@ -34,7 +34,9 @@ Inputs changed after a run make the result stale. Use **Run Bear Simulation** ag
 
 The Formation Damage Map and recommended-formation results compare the current formation and alternatives using the same scenario assumptions. Troop groups, locks, capacity, and the chosen comparison scope matter throughout the search.
 
-The search starts broadly and refines promising formations. Read the result state carefully:
+The optimizer applies **multi-scale top-region refinement**. It begins with a broad coarse search across possible troop mixes, then takes the top candidate anchors and refines them by geometrically reducing the step size by 4x on each pass down to single-troop integer resolution. This multi-pass refinement prevents small optimal proportions (such as a 1.7% Infantry frontline share) from getting trapped between wide coarse intervals.
+
+Read the result state carefully:
 
 | Result | What it tells you |
 | --- | --- |
@@ -47,9 +49,17 @@ None of these is a promise of the universally best live formation. In particular
 
 Where offered, compare the strongest sampled recommendation with the smaller-change alternative. A modest troop adjustment can be more practical than reorganizing the entire rally for a small modeled gain.
 
+## Build weights and defensive reserves
+
+The **Bear Trap Rally Damage** preset is designed for offense while protecting equipment integrity:
+
+- **Lethality and Attack weights:** Set to 1.0 for **Infantry** and **Cavalry**, and 1.1 for **Archer** (capturing Archer's 10% Ranged Strike bonus against the Infantry Bear).
+- **Defensive reserves:** Health and Defense are assigned a 35% reserve (0.35 weight). Because the Bear does not attack back, offensive stats drive score, but the 35% defensive reserve ensures that durable all-mode gear is not treated as disposable reforge donors.
+- **Legacy preset migration:** Profiles saved under legacy Bear Trap weights with 0% or 25% reserves automatically upgrade to the standard 35% reserve when opened, while custom player weight matrices remain untouched.
+
 ## Keep hero assumptions honest
 
-Hero progression, supported skill effects, troop-type applicability, and widget or star requirements can change a comparison. Use the recommendation's stated assumptions rather than assuming every effect applies equally to all troops or every hero setup.
+Hero progression, supported skill effects, troop-type applicability, and widget or star requirements can change a comparison. The simulation engine resolves skill effects by troop type: an **Infantry** skill factor multiplies only Infantry stacks, while **Archer** and **Cavalry** skills apply strictly to their matching troop types, rather than applying a blanket multiplier across all troops.
 
 Profile prefill reduces typing, but inspect the values after selecting a different profile. A hypothetical hero recommendation is not proof that the account owns that hero or can meet its requirements.
 

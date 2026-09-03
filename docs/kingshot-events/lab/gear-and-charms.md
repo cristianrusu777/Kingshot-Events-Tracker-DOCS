@@ -5,7 +5,9 @@ product: 'kingshot-events'
 audience: 'Lab users'
 experienceLevel: 'Intermediate'
 featureArea: 'Progression optimizers'
-lastReviewed: '2026-08-01'
+lastReviewed: '2026-09-03'
+verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Hero Gear, Governor Gear, and Charms
@@ -14,17 +16,17 @@ These optimizers compare supported upgrades from the exact profile and inventory
 
 ## Hero Gear Optimizer
 
-Confirm all twelve gear pieces across Infantry, Cavalry, and Archer heroes, including the supported enhancement, mastery, ascension, imbuement, or reforge state shown by the editor. Enter only owned enhancement XP, Forge Hammers, Mythic Shards, Mithril, and other listed resources. Choose the combat context and objective, then run the plan.
+Confirm all twelve gear pieces across Infantry, Cavalry, and Archer heroes, including the supported enhancement, mastery, ascension, imbuement, or reforge state shown by the editor. Authentic equipment visuals distinguish standard Epic pieces from awakened Red tier gear to help verify slot assignments. Enter only owned enhancement XP, Forge Hammers, Mythic Shards, Mithril, and other listed resources. Choose the combat context and objective, then run the plan.
 
 Results show target pieces, before and after states, ordered actions, resource use, remaining inventory, and the reason a supported checkpoint was preferred. When combat stats already include current Hero Gear, select that state correctly so the tool does not count it twice.
 
 ## Governor Gear Optimizer
 
-Enter all six troop-related gear pieces and their current tier or star state, plus the listed materials. Review set breakpoints as well as individual piece gains. A recommendation can favor completing a set checkpoint instead of raising the visually weakest piece.
+Enter all six troop-related gear pieces and their current tier or star state, plus the listed materials. Equipment art displays exact piece tiers and star configurations. Review set breakpoints as well as individual piece gains. A recommendation can favor completing a set checkpoint instead of raising the visually weakest piece.
 
 ## Charm Optimizer
 
-Enter all charm slots for Infantry, Cavalry, and Archer and the available Charm Guides, Charm Designs, or other current inputs. Check every slot because a missing level can redirect the entire order.
+Enter all charm slots for Infantry, Cavalry, and Archer and the available Charm Guides, Charm Designs, or other current inputs. Artwork renders all 22 charm progression levels. Check every slot because a missing level can redirect the entire order.
 
 ## Save or apply a plan
 
@@ -44,6 +46,10 @@ Move from profile and inventory to objectives, plan, and optional profile update
 </VisualReference>
 
 Optimizer order is a modeled recommendation and can change with game data or objectives. See [Interpreting Results](/kingshot-events/lab/interpreting-results).
+
+## Cross-system planning with Ascension Path
+
+When you want to know how Hero Gear, Governor Gear, and Charms compete against each other for overall combat value, use **[Ascension Path](/kingshot-events/lab/ascension-path)**. It analyzes all three systems simultaneously using a 30-step beam search, identifies equipment weak points, and charts stat and resource trajectories.
 
 ## Choose the correct mechanism
 

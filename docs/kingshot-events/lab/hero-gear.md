@@ -35,21 +35,23 @@ If usable account context is missing, inspect the result's fallback explanation.
 
 ## Follow the plan, not just the headline
 
-The planner compares affordable next steps and can evaluate an enhancement together with the mastery needed to cross a milestone. After choosing an upgrade it consumes the modeled resources and reevaluates the remaining options. Locked, unreachable, maximum-level, and unaffordable choices are excluded.
+The planner compares affordable next steps and evaluates enhancement together with the mastery needed to cross milestone gates. Direct mastery level inputs allow precise starting state entry. The total stats preview lets you inspect current and projected equipment stats across all three troop classes before confirming a calculation.
+
+After choosing an upgrade the engine consumes the modeled resources and reevaluates the remaining options. Locked, unreachable, maximum-level, and unaffordable choices are excluded.
 
 The familiar candidate question is **Affordable positive candidate?** If none remains, the plan stops and leaves unused resources. This does not mean every item is finished; a different required material may have run out.
 
-Review the ordered steps, affected troop and slot, before-and-after stats, material spending, and leftovers. Total stat percentage is a sum of stat gains, not the percentage by which you will win more battles or deal more damage.
+Review the ordered steps, affected troop and slot, before-and-after stats, material spending, and leftovers. The results display presents troop facts using dedicated semantic colors for **Infantry**, **Cavalry**, and **Archer**. Net troop gain tracking details the exact stat gain achieved for each troop class. Total stat percentage is a sum of stat gains, not the percentage by which you will win more battles or deal more damage.
 
 ## Reforge without losing sight of your priorities
 
-Optional **reforge** can recover invested enhancement XP from eligible gear and reuse it in the proposed plan. A locked item is protected. Profile-priority protection also prevents lower-priority gains from being used to justify losses in higher-priority groups in the total-stat comparison.
+Optional **reforge** can recover invested enhancement XP from eligible gear and reuse it in the proposed plan. A locked item is protected. In addition, **profile priority locks** prevent higher-priority gear from being selected as reforge donors: gear belonging to a higher-priority troop class cannot have its invested XP stripped to upgrade lower-priority items.
 
 An empty XP bag does not necessarily mean there is nothing to compare: invested, recoverable XP can still be relevant. Conversely, recoverable XP is not free new inventory, and not every material is refunded.
 
 For Maximize Total Stat %, a reforge must improve both raw stat total and weighted useful value over the no-reforge result before it is selected. Inspect that comparison and the actual donor items instead of assuming that a longer plan is better.
 
-**Example:** A proposed reforge would raise several secondary stats but reduce a higher-priority group. The larger raw sum alone is not sufficient. Keep the priority protection, compare the no-reforge alternative, or deliberately choose a different build strategy if your real goal has changed.
+**Example:** A proposed reforge would raise several secondary stats but reduce a higher-priority group. The larger raw sum alone is not sufficient. Priority protection prevents higher-priority gear from being used as donors, while keeping the no-reforge alternative visible for comparison.
 
 ## Why an older result may differ
 

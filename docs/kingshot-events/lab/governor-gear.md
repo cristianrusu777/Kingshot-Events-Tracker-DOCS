@@ -54,10 +54,17 @@ This is a greedy iterative comparison with set-aware deltas, not an exhaustive s
 
 Before Run, confirm each item-level field, lock control, troop and stat weight, strategy selector, and all three inventory inputs. After Run, inspect the step list rather than only the final total: it reveals when a set threshold entered the candidate delta and which field exhausted a material. A player uses these controls for personal planning; an alliance leader or kingdom manager has no extra optimizer authority. For sensitivity review, duplicate the scenario, change one lock or weight, and compare ordered output, spending, set state, and leftovers.
 
-## Choose a goal before comparing results
+## Choose an Optimization Goal before comparing results
 
-The **Optimization Goal** changes what the planner values. The raw-stat choice focuses on additive stat gains; **Balanced troops** balances supported troop priorities; **Combat power** uses account context and favors offensive value while retaining some defensive value; the custom choice uses your saved priorities.
+The **Optimization Goal** controls how the planner ranks competing upgrades when costs are comparable:
 
-For Combat power, enter the four percentages per troop from the in-game Bonus Overview. An account that already has a large amount of one stat can value an improvement differently from an account with a weaker multiplier. Keep the goal and stat source the same when comparing two inventories.
+- **Maximum stats:** Flat weights (1.0 across all stats and troop classes). Maximizes raw total stat gains per consumed material, ignoring troop priority.
+- **Combat power:** Offense-first ranking with a 20% defensive retention factor (Defense and Health weights are scaled to 0.20). Uses the Lanchester combat objective to evaluate diminishing returns against your account stats.
+- **Balanced troops:** Advances all troop types together. It normalizes each troop's total weight to match the strongest troop's priority while preserving each troop's internal stat ratios.
+- **My build:** Uses your saved profile troop and stat weights without modification.
+
+### Account stats and Bonus Overview
+
+For the **Combat power** goal, enter the four percentages per troop (Attack %, Defense %, Lethality %, and Health %) exactly as displayed in the in-game Bonus Overview. Because combat calculations experience diminishing returns when one stat outpaces another, the planner favors upgrades in the specific attributes where your account is weakest.
 
 Current item and inventory inputs can be reviewed in [Ascension Path](/kingshot-events/lab/ascension-path) alongside the other progression systems. A forecast does not mean the account has already bought or equipped its proposed upgrades.

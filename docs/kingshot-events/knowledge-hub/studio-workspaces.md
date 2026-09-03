@@ -60,4 +60,16 @@ The block picker includes **Tool / Simulator Widget** for supported interactive 
 
 Space and contributor management let permitted managers organize who can contribute to a kingdom or alliance library. A role in one community does not imply editorial control in another. Confirm the named space, audience, and available action before changing contributors or content.
 
+## Admin statistics and reader metrics
+
+Administrators have access to an in-depth **Article statistics** panel when viewing published articles. This panel summarizes technical and editorial metrics:
+
+- Total word and block counts
+- Structural breakdown: headings, referenced images, and interactive widgets
+- Estimated reading duration based on word count
+- Configured access policy, language locale, and applied tags
+- Publication and modification timestamps
+
+In addition, articles feature lightweight engagement counters to track reader views across public and community spaces without leaking reader identities.
+
 Keep draft saving, review, and publication separate. Review notifications help the right person find pending work, but reading one does not approve a revision. See [Notifications](/kingshot-events/lifecycles/notifications-and-reports) for the difference between new information and an unresolved action.
