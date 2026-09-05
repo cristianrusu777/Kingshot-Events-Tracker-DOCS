@@ -12,6 +12,69 @@ sourceVerificationOwner: 'Ralyvora documentation'
 
 # User-facing Release Notes
 
+## September 5, 2026: Strict Scoping, 1-Click Provisioning, Self-Service Requests, and Optimizer Precision
+
+Since the September 3 update, Kingshot Events has introduced strict tenant scoping safeguards, holding realm isolation, automatic overflow alliance management for free tier kingdoms, mandatory in-game ID tracking, a self-service space for registered user access requests, 1-click provisioning of suggested kingdoms and alliances, full-stack castle position application review summaries and cycle management, exact Knapsack Pareto gear optimization, and Recycle Bin support for event sessions.
+
+### New
+
+#### Strict tenant scoping and Holding Realm isolation
+- **Zero unplaced global accounts:** No user can register directly with global scope. Every user assignment is strictly bound to a verified kingdom context.
+- **Holding Realm quarantine (Server 0):** When a user registers before their requested kingdom is created or approved, they are quarantined in the designated holding realm:
+  - **Server Code:** `0`
+  - **Kingdom:** `Holding Realm (Pending Placement)`
+  - **Alliance:** `[UNA] Pending Assignment`
+  Users in the holding realm receive safe, restricted viewer capabilities while awaiting leadership approval. When the kingdom is accepted and provisioned, the user is automatically transitioned into the newly created kingdom and alliance without losing their account history.
+
+#### 10-Alliance limit protection and overflow alliance
+- **Subscription alliance cap guard:** Free tier kingdoms can track up to 10 active alliances. When a player registers for an unlisted alliance or the kingdom has reached capacity, they are automatically placed into the kingdom's designated overflow alliance:
+  - **Alliance Tag:** `[UNA]`
+  - **Alliance Name:** `General Kingdom Members`
+- **Preserved alliance identity:** The player's actual requested alliance tag and alliance name are recorded in their profile notes and request history. Players receive immediate kingdom-level access without violating subscription limits.
+
+#### Self-service space for user access requests
+- **Dedicated request workspace:** Registered users can navigate to `/access-requests` (also accessible via `/requests` or from their Profile) to request:
+  - **All-in-One:** Simultaneous Kingdom creation, Alliance creation, and Role elevation.
+  - **Kingdom Creation:** Numeric kingdom server code and suggested kingdom name.
+  - **Alliance Creation:** Alliance tag and alliance name within their kingdom.
+  - **Role Elevation:** Requests for Alliance Admin, Kingdom Admin, Co-Leader, or Moderator standing.
+- **Live status tracking:** Users can view their submission history with real-time status badges (`Pending`, `Approved`, `Rejected`), submitted In-Game IDs, and administrator review notes.
+- **Holding Realm awareness:** A prominent status banner alerts users when they are in the Holding Realm, explaining their current viewer access and next steps.
+- **Accelerated review contact card:** Informs users how to contact kingdom leadership (such as Discord, Telegram, or support routes) for expedited request handling.
+
+#### Mandatory In-Game ID tracking
+- **Cross-system player identification:** The player's numeric or alphanumeric In-Game ID (`inGameId`) is captured during registration, user requests, and role elevation forms.
+- **Administrative clarity:** In-Game IDs appear on candidate summary cards, review drawers, and request tables, allowing managers to verify the player's true in-game identity before granting roles or creating communities.
+
+#### 1-Click kingdom and alliance provisioning
+- **Self-registration with unlisted communities:** Registrants can select existing kingdoms/alliances or specify non-existing numeric kingdom server codes and suggested alliance tags/names.
+- **Dedicated review tabs:** The Admin Registration Requests dashboard features three dedicated filter tabs:
+  1. `All Requests`
+  2. `Player Requests (No Elevation)`: dedicated queue for accepting and provisioning player registrations without role elevations.
+  3. `Uncreated Entities (Suggestions)`: highlights pending requests that require kingdom or alliance creation.
+- **Search and server pagination:** Includes full text search by player name, email, server code, or alliance tag, alongside server-side pagination with item counters.
+- **Suggestion badges and instant provisioning:** Uncreated entities display distinct badges (`🆕 New #999` and `🆕 New [TAG]`). A single click on `Accept & Provision` creates the kingdom and alliance atomically and approves the user. Role elevation drawers include matching 1-click provisioning buttons.
+
+#### Exact Knapsack Pareto solver for Hero Gear
+- **Multi-dimensional Pareto frontier knapsack solver:** The Hero Gear engine computes exact optimal upgrade paths by evaluating multi-dimensional trade-offs between enhancement XP, mastery stones, and stat gain curves.
+- **Optimizer Policy and Combat Context controls:** Dedicated control panels allow players to configure enhancement policies, priority locks, and specific combat contexts (offensive, defensive, or balanced).
+
+#### Event session soft deletion and restoration
+- **Recycle Bin integration:** Event instances and sessions can be safely soft-deleted and restored through the Recycle Bin with audit logging, protecting historical score data from accidental deletion.
+
+### Improved
+- **Castle Positions application review:** The application workflow adds an `Application Review` step, presenting a full summary of governor identity, position selections, cycle preferences, and proof requirements before final submission.
+- **Castle board and cycle management:** Organizers can rename cycles, toggle active cycle states, manage temporary participants, and configure proof verification rules directly from the board interface.
+- **Notifications read-on-visible:** The notification center automatically marks cards as read as they scroll into view using intersection observers, while preserving unfinished action items.
+- **Registration settings contact message:** Administrators can customize an accelerated review message with contact instructions that appear to applicants upon registration and on their access requests page.
+
+### Fixed
+- **Strict tenant boundaries:** Eliminated any scenario where self-registering users could obtain unassigned global scope, preventing unauthorized cross-tenant data visibility.
+- **Privacy request dialog theming:** Corrected modal contrast and button visibility across both Light and Dark themes.
+- **Pagination and filter state:** Fixed filter tab counters and pagination bounds on administrative registration and recovery queues.
+
+
+
 ## September 2026: easier planning, clearer follow-up
 
 Since the August documentation update, Kingshot Events has gained new ways to prepare a schedule, compare an upgrade path, and keep track of work that needs attention. This guide brings those changes together so you can choose what is useful without reading a technical change log.

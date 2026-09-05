@@ -22,6 +22,33 @@ Kingshot Events treats **server** and **kingdom** as distinct levels. A server c
 
 Do not substitute “server” for “kingdom” when reporting a scope problem. Include both identifiers when they are visible: the server establishes the outer context, while the kingdom determines the community container used by kingdom-scoped records and assignments.
 
+## Holding Realm and strict tenant isolation
+
+Kingshot Events enforces strict tenant isolation: **no registered user account ever holds global scope**. Every user assignment must resolve to a specific kingdom.
+
+When a user self-registers before their target kingdom has been approved or provisioned, they are quarantined in the **Holding Realm (Pending Placement)**:
+- **Server Code:** `0`
+- **Holding Alliance:** `[UNA] Pending Assignment`
+
+Users in the holding realm receive safe, scoped viewer permissions without access to other kingdoms' rosters or private records. Once leadership reviews and provisions the kingdom and alliance, the user's assignment is automatically updated to the live community.
+
+## Free subscription 10-alliance cap and overflow alliance
+
+Free tier kingdoms are capped at tracking 10 active alliances. When a player registers for an unlisted alliance or the kingdom has reached this limit:
+1. The player's actual requested alliance tag and name are recorded in their registration notes.
+2. The user is placed into the kingdom's designated overflow alliance: **[UNA] General Kingdom Members**.
+3. This overflow alliance has unlimited player capacity (bounded only by the kingdom's total user cap), allowing governors to participate in kingdom events without violating subscription boundaries.
+
+## Registered user access requests
+
+Authenticated users can request community adjustments at any time via the **Access Requests** workspace (`/access-requests`):
+- **Kingdom Creation:** Submit an unlisted numeric server code and kingdom name.
+- **Alliance Creation:** Propose a new alliance tag and name under the current kingdom.
+- **Role Elevation:** Request operational standing such as Alliance Admin or Kingdom Admin.
+- **All-in-One:** Bundle kingdom, alliance, and role elevation into one reviewable package.
+
+Submissions appear in the user's request history with status badges and reviewer notes, while alerting administrators in the registration and role elevation queues.
+
 ## Scope resolution order
 
 When a page requests scoped data, the platform follows this order:

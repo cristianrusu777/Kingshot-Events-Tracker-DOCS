@@ -16,6 +16,16 @@ The public home explains the available product areas. Public Knowledge articles,
 
 Choose the visible registration action and complete the required identity fields. Registration behavior is configured for the platform: the account can be created immediately or remain an account request for an authorized reviewer. Keep the confirmation and do not submit duplicates while a request is pending.
 
+### Community selection and unlisted kingdoms
+- **Select existing or enter new:** Choose an existing Kingdom from the list, or select the option to enter an unlisted numeric Kingdom (such as `104` or `1625`) and optional suggested kingdom name.
+- **Alliance tag and name:** Select an existing alliance or enter your alliance's TAG and name if it is not yet registered.
+- **In-Game ID:** Enter your player In-Game ID in the kingdom. This allows administrators to accurately connect your account with your governor record.
+
+### Holding Realm isolation and overflow protection
+- **Holding Realm quarantine (Server 0):** No user is ever granted direct global access. If your requested Kingdom has not yet been accepted or created by an administrator, your account is placed safely in **Holding Realm (Pending Placement)** on Server `0` with alliance `[UNA] Pending Assignment`. This gives you safe viewer access to product tools while your kingdom request is reviewed. When leadership accepts and provisions the kingdom, your account is automatically reassigned.
+- **10-Alliance limit overflow:** Free subscription kingdoms are capped at 10 tracked alliances. If you belong to an unlisted alliance or the kingdom is at capacity, the platform places you into the kingdom's designated overflow alliance (**[UNA] General Kingdom Members**) while saving your specific alliance in notes. You receive immediate kingdom member access within subscription limits.
+- **Accelerated review instructions:** If kingdom leadership configured accelerated review instructions, a contact message will appear upon registration explaining how to contact administrators (such as via Discord or Telegram) for fast approval.
+
 If registration is unavailable, use the configured support or community onboarding route. Do not ask another player to share an account.
 
 ## Sign in
@@ -32,6 +42,15 @@ Choose **Forgot password** and follow the public recovery instructions. Dependin
 2. Check the active kingdom and alliance.
 3. Open a personal page such as **My Analytics**, **My Rewards**, or **My Appointments** when visible.
 4. For shared work, confirm the scope again before Save, Accept, or Publish.
+
+## Self-service access and kingdom requests
+
+Once signed in, registered users can open **Access Requests** (`/access-requests`) from the navigation menu or Profile. This dedicated space allows you to:
+- Request creation of a new Kingdom by providing the numeric server code and suggested kingdom name.
+- Request creation of a new Alliance by providing its tag and name.
+- Request role elevation to Alliance Admin, Kingdom Admin, Co-Leader, or Moderator.
+- Request all three together in an All-in-One submission.
+- Track review status in real time with status badges and administrator notes.
 
 <VisualReference title="First-visit and sign-in landmarks">
 Public navigation changes after authentication and assignment resolution.

@@ -33,6 +33,14 @@ For account-aware planning, enter the actual troop percentages, select where you
 
 If usable account context is missing, inspect the result's fallback explanation. A gear-only comparison is not the same answer as a calculation based on your whole account.
 
+## Knapsack Pareto frontier solver and optimizer controls
+
+To find exact optimal upgrade configurations, the Hero Gear calculation engine utilizes a multi-dimensional **Pareto frontier knapsack solver**:
+- **Multi-dimensional trade-offs:** Evaluates the trade-offs between enhancement XP investment, mastery stone milestone requirements, and non-linear stat gain curves across all equipment slots simultaneously.
+- **Optimizer Policy Controls:** Configure enhancement policies, reforge donor priority rules, and threshold cutoffs to match your strategic priorities.
+- **Combat Context Controls:** Align calculations with your primary combat focus (offensive damage, balanced troop resilience, or specialized march formations).
+- **Account-Aware Context:** Evaluates troop percentage snapshots and formation ratios from your account profile, ensuring stat gains reflect effective combat value rather than simple equipment totals.
+
 ## Follow the plan, not just the headline
 
 The planner compares affordable next steps and evaluates enhancement together with the mastery needed to cross milestone gates. Direct mastery level inputs allow precise starting state entry. The total stats preview lets you inspect current and projected equipment stats across all three troop classes before confirming a calculation.

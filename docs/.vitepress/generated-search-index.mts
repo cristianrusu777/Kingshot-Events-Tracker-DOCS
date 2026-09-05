@@ -910,7 +910,7 @@ export const searchIndex = [
       },
       {
         "heading": "Find the right deleted item faster",
-        "text": "The Recycle Bin is organized into Kingdoms , Alliances , Players , Events , Imports , and Results . Choose the category first, then search within it. Each category keeps its own search and pagination settings, and newer deletions appear first. Read the item's label, deletion reason, and date before choosing Restore or Request restore , depending on your access. Restoring an eligible item returns it to its owning module; verify that outcome there. A restore request is only a request until it is approved and processed. Permanent deletion has a separate confirmation and cannot be reversed through the Recycle Bin. Do not use it to dismiss a notice or clear a search result. Related decisions can appear in Notifications, where reading them does not itself restore or delete anything."
+        "text": "The Recycle Bin is organized into Kingdoms , Alliances , Players , Events , Event Sessions , Imports , and Results . Choose the category first, then search within it. Each category keeps its own search and pagination settings, and newer deletions appear first. Read the item's label, deletion reason, and date before choosing Restore or Request restore , depending on your access. Restoring an eligible item returns it to its owning module; verify that outcome there. A restore request is only a request until it is approved and processed. Permanent deletion has a separate confirmation and cannot be reversed through the Recycle Bin. Do not use it to dismiss a notice or clear a search result. Related decisions can appear in Notifications, where reading them does not itself restore or delete anything."
       }
     ]
   },
@@ -938,6 +938,18 @@ export const searchIndex = [
       {
         "heading": "Introduction",
         "text": "Scope decides which community owns a record. Role decides what you may do inside that scope. Analytics grants can add read-only visibility without adding management access. Hierarchy and Scope Switching Scope switching changes the active context used by scoped lists, actions, and summaries; it does not move records between levels. Kingshot Events treats server and kingdom as distinct levels. A server contains one or more kingdoms, a kingdom contains its alliances , and an alliance is the current home of its players . A user account can hold several active assignments. Each assignment names a role and a scope within that hierarchy. The active scope is resolved from the server, kingdom, and alliance when required, as selected in the interface, not merely from the strongest role on the account. Do not substitute “server” for “kingdom” when reporting a scope problem. Include both identifiers"
+      },
+      {
+        "heading": "Holding Realm and strict tenant isolation",
+        "text": "Kingshot Events enforces strict tenant isolation: no registered user account ever holds global scope . Every user assignment must resolve to a specific kingdom. When a user self-registers before their target kingdom has been approved or provisioned, they are quarantined in the Holding Realm (Pending Placement) : - Server Code: 0 - Holding Alliance: [UNA] Pending Assignment Users in the holding realm receive safe, scoped viewer permissions without access to other kingdoms' rosters or private records. Once leadership reviews and provisions the kingdom and alliance, the user's assignment is automatically updated to the live community."
+      },
+      {
+        "heading": "Free subscription 10-alliance cap and overflow alliance",
+        "text": "Free tier kingdoms are capped at tracking 10 active alliances. When a player registers for an unlisted alliance or the kingdom has reached this limit: 1. The player's actual requested alliance tag and name are recorded in their registration notes. 2. The user is placed into the kingdom's designated overflow alliance: [UNA] General Kingdom Members . 3. This overflow alliance has unlimited player capacity (bounded only by the kingdom's total user cap), allowing governors to participate in kingdom events without violating subscription boundaries."
+      },
+      {
+        "heading": "Registered user access requests",
+        "text": "Authenticated users can request community adjustments at any time via the Access Requests workspace ( /access-requests ): - Kingdom Creation: Submit an unlisted numeric server code and kingdom name. - Alliance Creation: Propose a new alliance tag and name under the current kingdom. - Role Elevation: Request operational standing such as Alliance Admin or Kingdom Admin. - All-in-One: Bundle kingdom, alliance, and role elevation into one reviewable package. Submissions appear in the user's request history with status badges and reviewer notes, while alerting administrators in the registration and role elevation queues."
       },
       {
         "heading": "Scope resolution order",
@@ -1359,6 +1371,10 @@ export const searchIndex = [
       {
         "heading": "Choose the question you want answered",
         "text": "Objective How to interpret it --- --- Maximize Total Stat % Searches for greater total gear stats while protecting build-profile priorities Balanced for my account Values upgrades against your entered account stats and march formation Gear value only Uses gear gains and build priorities without an account snapshot Match the published optimizer Helps compare against the weighted reference method For account-aware planning, enter the actual troop percentages, select where you read them, and confirm the formation. The stat source matters: some displayed totals already include Hero Gear. The tool accounts for that distinction so the same gear is not simply counted twice. If usable account context is missing, inspect the result's fallback explanation. A gear-only comparison is not the same answer as a calculation based on your whole account."
+      },
+      {
+        "heading": "Knapsack Pareto frontier solver and optimizer controls",
+        "text": "To find exact optimal upgrade configurations, the Hero Gear calculation engine utilizes a multi-dimensional Pareto frontier knapsack solver : - Multi-dimensional trade-offs: Evaluates the trade-offs between enhancement XP investment, mastery stone milestone requirements, and non-linear stat gain curves across all equipment slots simultaneously. - Optimizer Policy Controls: Configure enhancement policies, reforge donor priority rules, and threshold cutoffs to match your strategic priorities. - Combat Context Controls: Align calculations with your primary combat focus (offensive damage, balanced troop resilience, or specialized march formations). - Account-Aware Context: Evaluates troop percentage snapshots and formation ratios from your account profile, ensuring stat gains reflect effective combat value rather than simple equipment totals."
       },
       {
         "heading": "Follow the plan, not just the headline",
@@ -1857,7 +1873,11 @@ export const searchIndex = [
       },
       {
         "heading": "Administration surfaces",
-        "text": "- Roles defines named permission bundles; role detail shows the bundle being edited. - Permissions provides the permission catalog and assignment view available to administrators. - User assignments connects a user to the permitted kingdom, alliance, or operational responsibility. - Registration requests reviews accounts awaiting approval; registration settings control the exposed registration policy. - Player-link reviews accepts or rejects requested account-to-player identity links. - Password requests tracks supported recovery or reset requests. Accessible summary: Approval, scope, permissions, and availability are all checked before a control is authorized."
+        "text": "- Roles defines named permission bundles; role detail shows the bundle being edited. - Permissions provides the permission catalog and assignment view available to administrators. - User assignments connects a user to the permitted kingdom, alliance, or operational responsibility. - Registration requests reviews accounts awaiting approval, manages registration policy, and provides 1-click provisioning for suggested kingdoms and alliances. - Player-link reviews accepts or rejects requested account-to-player identity links. - Password requests tracks supported recovery or reset requests. Accessible summary: Approval, scope, permissions, and availability are all checked before a control is authorized."
+      },
+      {
+        "heading": "Registration queue, filter tabs, and 1-click provisioning",
+        "text": "The Registration Requests console provides tools to manage incoming applicants: - Filter tabs with live counters: - All Requests: Complete list of applicants. - Player Requests (No Elevation): Dedicated view for approving ordinary player accounts without elevated role permissions. - Uncreated Entities (Suggestions): Isolates requests where the kingdom or alliance does not yet exist. - Search and server pagination: Fast search across player names, email addresses, server codes, and alliance tags, with configurable page sizes. - Suggestion badges: Uncreated kingdoms and alliances are marked with prominent visual badges (such as 🆕 New 999 and 🆕 New [TAG] ). - 1-Click Accept & Provision: Reviewers can click Accept & Provision on any suggestion. In a single atomic action, the platform creates the suggested kingdom and alliance, transitions the user from the holding realm into the newly crea"
       },
       {
         "heading": "Safe change procedure",
@@ -2461,7 +2481,15 @@ export const searchIndex = [
       },
       {
         "heading": "Register or request an account",
-        "text": "Choose the visible registration action and complete the required identity fields. Registration behavior is configured for the platform: the account can be created immediately or remain an account request for an authorized reviewer. Keep the confirmation and do not submit duplicates while a request is pending. If registration is unavailable, use the configured support or community onboarding route. Do not ask another player to share an account."
+        "text": "Choose the visible registration action and complete the required identity fields. Registration behavior is configured for the platform: the account can be created immediately or remain an account request for an authorized reviewer. Keep the confirmation and do not submit duplicates while a request is pending."
+      },
+      {
+        "heading": "Community selection and unlisted kingdoms",
+        "text": "- Select existing or enter new: Choose an existing Kingdom from the list, or select the option to enter an unlisted numeric Kingdom (such as 104 or 1625 ) and optional suggested kingdom name. - Alliance tag and name: Select an existing alliance or enter your alliance's TAG and name if it is not yet registered. - In-Game ID: Enter your player In-Game ID in the kingdom. This allows administrators to accurately connect your account with your governor record."
+      },
+      {
+        "heading": "Holding Realm isolation and overflow protection",
+        "text": "- Holding Realm quarantine (Server 0): No user is ever granted direct global access. If your requested Kingdom has not yet been accepted or created by an administrator, your account is placed safely in Holding Realm (Pending Placement) on Server 0 with alliance [UNA] Pending Assignment . This gives you safe viewer access to product tools while your kingdom request is reviewed. When leadership accepts and provisions the kingdom, your account is automatically reassigned. - 10-Alliance limit overflow: Free subscription kingdoms are capped at 10 tracked alliances. If you belong to an unlisted alliance or the kingdom is at capacity, the platform places you into the kingdom's designated overflow alliance ( [UNA] General Kingdom Members ) while saving your specific alliance in notes. You receive immediate kingdom member access within subscription limits. - Accelerated review instructions: If ki"
       },
       {
         "heading": "Sign in",
@@ -2473,7 +2501,11 @@ export const searchIndex = [
       },
       {
         "heading": "First signed-in checks",
-        "text": "1. Confirm account details and the linked player or pending-link state. 2. Check the active kingdom and alliance. 3. Open a personal page such as My Analytics , My Rewards , or My Appointments when visible. 4. For shared work, confirm the scope again before Save, Accept, or Publish. Public navigation changes after authentication and assignment resolution. - Public home links to Login, registration, Knowledge Hub, Castle Positions, and available Lab tools. - Registration or account-request form with submitted or review feedback. - Login fields and Forgot password route with public recovery status. - Signed-in profile menu, active community context, role-based navigation, and missing-access message. Next: Account and Profile and Choosing Scope and Access."
+        "text": "1. Confirm account details and the linked player or pending-link state. 2. Check the active kingdom and alliance. 3. Open a personal page such as My Analytics , My Rewards , or My Appointments when visible. 4. For shared work, confirm the scope again before Save, Accept, or Publish."
+      },
+      {
+        "heading": "Self-service access and kingdom requests",
+        "text": "Once signed in, registered users can open Access Requests ( /access-requests ) from the navigation menu or Profile. This dedicated space allows you to: - Request creation of a new Kingdom by providing the numeric server code and suggested kingdom name. - Request creation of a new Alliance by providing its tag and name. - Request role elevation to Alliance Admin, Kingdom Admin, Co-Leader, or Moderator. - Request all three together in an All-in-One submission. - Track review status in real time with status badges and administrator notes. Public navigation changes after authentication and assignment resolution. - Public home links to Login, registration, Knowledge Hub, Castle Positions, and available Lab tools. - Registration or account-request form with submitted or review feedback. - Login fields and Forgot password route with public recovery status. - Signed-in profile menu, active commu"
       },
       {
         "heading": "Purpose, decision path, and first-session example",
@@ -3670,6 +3702,10 @@ export const searchIndex = [
       {
         "heading": "Submit an application",
         "text": "1. Confirm the kingdom and player identity. Sign in or use the supported public identity flow shown by the form. 2. Review the configured application instructions and required fields. 3. Enter resource values and custom answers requested for the available stages. 4. For each stage, choose one primary availability: Not available , Any available time , or one offered UTC time. 5. Review the summary, including identity, resources, answers, and time preferences. 6. Submit once and keep the confirmation. The form validates required answers and incompatible time choices. Times are shown with UTC context in the final review. Some times can be provisionally taken; when the page permits it, you may request one with a note, but the manager must resolve the conflict."
+      },
+      {
+        "heading": "Application Review summary step",
+        "text": "Before final confirmation, the form presents an Application Review step. This review screen summarizes: - Selected kingdom and verified governor identity. - Target castle positions and stage availability choices. - Configured resource commitments and custom questions. - Attached resource proof screenshots and upload status. Review all details carefully before submitting to avoid duplicate or conflicting applications."
       },
       {
         "heading": "Confirmation and statuses",
@@ -5007,6 +5043,22 @@ export const searchIndex = [
       {
         "heading": "Introduction",
         "text": "User-facing Release Notes"
+      },
+      {
+        "heading": "September 5, 2026: Strict Scoping, 1-Click Provisioning, Self-Service Requests, and Optimizer Precision",
+        "text": "Since the September 3 update, Kingshot Events has introduced strict tenant scoping safeguards, holding realm isolation, automatic overflow alliance management for free tier kingdoms, mandatory in-game ID tracking, a self-service space for registered user access requests, 1-click provisioning of suggested kingdoms and alliances, full-stack castle position application review summaries and cycle management, exact Knapsack Pareto gear optimization, and Recycle Bin support for event sessions."
+      },
+      {
+        "heading": "New",
+        "text": "Strict tenant scoping and Holding Realm isolation - Zero unplaced global accounts: No user can register directly with global scope. Every user assignment is strictly bound to a verified kingdom context. - Holding Realm quarantine (Server 0): When a user registers before their requested kingdom is created or approved, they are quarantined in the designated holding realm: - Server Code: 0 - Kingdom: Holding Realm (Pending Placement) - Alliance: [UNA] Pending Assignment Users in the holding realm receive safe, restricted viewer capabilities while awaiting leadership approval. When the kingdom is accepted and provisioned, the user is automatically transitioned into the newly created kingdom and alliance without losing their account history. 10-Alliance limit protection and overflow alliance - Subscription alliance cap guard: Free tier kingdoms can track up to 10 active alliances. When a play"
+      },
+      {
+        "heading": "Improved",
+        "text": "- Castle Positions application review: The application workflow adds an Application Review step, presenting a full summary of governor identity, position selections, cycle preferences, and proof requirements before final submission. - Castle board and cycle management: Organizers can rename cycles, toggle active cycle states, manage temporary participants, and configure proof verification rules directly from the board interface. - Notifications read-on-visible: The notification center automatically marks cards as read as they scroll into view using intersection observers, while preserving unfinished action items. - Registration settings contact message: Administrators can customize an accelerated review message with contact instructions that appear to applicants upon registration and on their access requests page."
+      },
+      {
+        "heading": "Fixed",
+        "text": "- Strict tenant boundaries: Eliminated any scenario where self-registering users could obtain unassigned global scope, preventing unauthorized cross-tenant data visibility. - Privacy request dialog theming: Corrected modal contrast and button visibility across both Light and Dark themes. - Pagination and filter state: Fixed filter tab counters and pagination bounds on administrative registration and recovery queues."
       },
       {
         "heading": "September 2026: easier planning, clearer follow-up",
