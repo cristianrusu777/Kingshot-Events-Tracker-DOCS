@@ -19,7 +19,7 @@ Access is resolved from identity, account state, scoped assignments, roles and p
 - **Roles** defines named permission bundles; role detail shows the bundle being edited.
 - **Permissions** provides the permission catalog and assignment view available to administrators.
 - **User assignments** connects a user to the permitted kingdom, alliance, or operational responsibility.
-- **Registration requests** reviews accounts awaiting approval; registration settings control the exposed registration policy.
+- **Registration requests** reviews accounts awaiting approval, manages registration policy, and provides 1-click provisioning for suggested kingdoms and alliances.
 - **Player-link reviews** accepts or rejects requested account-to-player identity links.
 - **Password requests** tracks supported recovery or reset requests.
 
@@ -36,6 +36,19 @@ flowchart TD
 ```
 
 **Accessible summary:** Approval, scope, permissions, and availability are all checked before a control is authorized.
+
+## Registration queue, filter tabs, and 1-click provisioning
+
+The Registration Requests console provides tools to manage incoming applicants:
+- **Filter tabs with live counters:**
+  - **All Requests:** Complete list of applicants.
+  - **Player Requests (No Elevation):** Dedicated view for approving ordinary player accounts without elevated role permissions.
+  - **Uncreated Entities (Suggestions):** Isolates requests where the kingdom or alliance does not yet exist.
+- **Search and server pagination:** Fast search across player names, email addresses, server codes, and alliance tags, with configurable page sizes.
+- **Suggestion badges:** Uncreated kingdoms and alliances are marked with prominent visual badges (such as `🆕 New #999` and `🆕 New [TAG]`).
+- **1-Click Accept & Provision:** Reviewers can click **Accept & Provision** on any suggestion. In a single atomic action, the platform creates the suggested kingdom and alliance, transitions the user from the holding realm into the newly created scope, and approves the account.
+- **In-Game ID verification:** Displays the player's In-Game ID on the request card for cross-checking against game rosters.
+- **Accelerated review contact message:** Registration Settings allows administrators to publish contact instructions (such as a Discord server link or Telegram handle) displayed to applicants for accelerated review.
 
 ## Safe change procedure
 

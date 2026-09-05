@@ -60,7 +60,7 @@ Soft deletion preserves a recovery opportunity, not a guarantee. Retention can e
 
 ## Find the right deleted item faster
 
-The Recycle Bin is organized into **Kingdoms**, **Alliances**, **Players**, **Events**, **Imports**, and **Results**. Choose the category first, then search within it. Each category keeps its own search and pagination settings, and newer deletions appear first.
+The Recycle Bin is organized into **Kingdoms**, **Alliances**, **Players**, **Events**, **Event Sessions**, **Imports**, and **Results**. Choose the category first, then search within it. Each category keeps its own search and pagination settings, and newer deletions appear first.
 
 Read the item's label, deletion reason, and date before choosing **Restore** or **Request restore**, depending on your access. Restoring an eligible item returns it to its owning module; verify that outcome there. A restore request is only a request until it is approved and processed.
 

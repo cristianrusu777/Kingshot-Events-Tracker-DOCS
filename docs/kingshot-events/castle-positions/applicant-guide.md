@@ -23,6 +23,15 @@ Open the Castle Positions application for the intended kingdom. The page states 
 
 The form validates required answers and incompatible time choices. Times are shown with UTC context in the final review. Some times can be provisionally taken; when the page permits it, you may request one with a note, but the manager must resolve the conflict.
 
+### Application Review summary step
+Before final confirmation, the form presents an **Application Review** step. This review screen summarizes:
+- Selected kingdom and verified governor identity.
+- Target castle positions and stage availability choices.
+- Configured resource commitments and custom questions.
+- Attached resource proof screenshots and upload status.
+
+Review all details carefully before submitting to avoid duplicate or conflicting applications.
+
 ## Confirmation and statuses
 
 After submission, **Application received** shows **Submitted**, **Needs review**, **Under review**, or **Updated**. **Standby** or **needs review** can mean an administrator must confirm the player identity. **Linked** means the application was connected to the player and submitted.
