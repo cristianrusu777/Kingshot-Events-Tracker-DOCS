@@ -37,6 +37,14 @@ flowchart TD
 
 **Accessible summary:** Approval, scope, permissions, and availability are all checked before a control is authorized.
 
+### Minister of Justice requests and Server King review
+
+The **Minister of Justice** (`minister_of_justice`) is a specialized kingdom-scoped office responsible for castle position coordination and court management.
+
+- **Submission:** Authenticated users can request elevation to Minister of Justice via `/access-requests` under the Role Elevation tab, specifying their target kingdom and In-Game ID.
+- **Review authority:** In addition to Supreme Administrators, the **Server King** (`kingdom_admin`) possesses verified administrative authority to review, approve, or reject Minister of Justice applications for their kingdom.
+- **Security isolation:** This role is unavailable on the public self-registration page to prevent unauthenticated role hoarding, and Server Kings cannot elevate other users to Server King without supreme admin elevation.
+
 ## Registration queue, filter tabs, and 1-click provisioning
 
 The Registration Requests console provides tools to manage incoming applicants:
