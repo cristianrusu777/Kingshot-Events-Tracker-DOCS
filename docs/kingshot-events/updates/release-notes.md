@@ -32,6 +32,11 @@ Since the September 3 update, Kingshot Events has introduced strict tenant scopi
   - **Alliance Name:** `General Kingdom Members`
 - **Preserved alliance identity:** The player's actual requested alliance tag and alliance name are recorded in their profile notes and request history. Players receive immediate kingdom-level access without violating subscription limits.
 
+#### Minister of Justice role elevation and Server King approvals
+- **Kingdom court elevation:** Governors can now request the **Minister of Justice** role via the self-service Access Requests workspace (`/access-requests`).
+- **Controlled registration boundary:** Minister of Justice is strictly prohibited on the public self-registration form to safeguard against privilege escalation; only authenticated governors can apply.
+- **Server King authorization:** Both the Server King (`kingdom_admin`) and Supreme Administrators can review and approve Minister of Justice applications for their specific kingdom directly from the role request queue.
+
 #### Self-service space for user access requests
 - **Dedicated request workspace:** Registered users can navigate to `/access-requests` (also accessible via `/requests` or from their Profile) to request:
   - **All-in-One:** Simultaneous Kingdom creation, Alliance creation, and Role elevation.
@@ -63,6 +68,8 @@ Since the September 3 update, Kingshot Events has introduced strict tenant scopi
 - **Recycle Bin integration:** Event instances and sessions can be safely soft-deleted and restored through the Recycle Bin with audit logging, protecting historical score data from accidental deletion.
 
 ### Improved
+- **In-game name and username clarity:** The topbar user chip and account profiles now clearly display both the player in-game name and account username (with a dedicated `@username` badge), ensuring players always know their exact login credentials.
+- **Universal updates availability:** Governors in holding realm or unassigned scopes have uninterrupted access to platform updates and announcements.
 - **Castle Positions application review:** The application workflow adds an `Application Review` step, presenting a full summary of governor identity, position selections, cycle preferences, and proof requirements before final submission.
 - **Castle board and cycle management:** Organizers can rename cycles, toggle active cycle states, manage temporary participants, and configure proof verification rules directly from the board interface.
 - **Notifications read-on-visible:** The notification center automatically marks cards as read as they scroll into view using intersection observers, while preserving unfinished action items.
