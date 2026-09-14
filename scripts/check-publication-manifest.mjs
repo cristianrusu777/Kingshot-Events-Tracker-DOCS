@@ -20,7 +20,7 @@ for (const entry of publicationManifest) {
   }
   if (!['published','draft','archived','redirect'].includes(entry.publicationStatus)) errors.push(`Invalid publication status: ${entry.file}`)
   if (entry.publicationStatus === 'redirect' && !entry.redirectTo) errors.push(`Redirect missing destination: ${entry.file}`)
-  if (entry.publicationStatus === 'redirect' && /<script|\bwindow\./i.test(fs.readFileSync(path.join(docs, entry.file), 'utf8'))) errors.push(`Redirect contains browser-only script: ${entry.file}`)
+  if (entry.publicationStatus === 'redirect' && files.includes(entry.file) && /<script|\bwindow\./i.test(fs.readFileSync(path.join(docs, entry.file), 'utf8'))) errors.push(`Redirect contains browser-only script: ${entry.file}`)
 }
 const duplicatePaths = publicationManifest.filter((entry, index, all) => all.findIndex((other) => other.path === entry.path) !== index)
 if (duplicatePaths.length) errors.push(`Duplicate manifest paths: ${duplicatePaths.map((entry) => entry.path).join(', ')}`)
