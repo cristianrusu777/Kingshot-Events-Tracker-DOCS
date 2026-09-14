@@ -20,27 +20,31 @@ export const searchIndex = [
       "browser backup",
       "resource calculator"
     ],
-    "description": "Local Castle Planner for Guests Need to arrange a few appointments without setting up a kingdom roster? The Local Castle Planner is a small, independent scratchpad. Guests and signed-in users can use it without kingdom membership. ::: warni",
+    "description": "Local Castle Planner for Guests The Local Castle Planner is a browser-only scratchpad for Guests and signed-in users. It is useful for a small personal schedule that does not need applications, account roles, or an official published versio",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Local Castle Planner for Guests Need to arrange a few appointments without setting up a kingdom roster? The Local Castle Planner is a small, independent scratchpad. Guests and signed-in users can use it without kingdom membership. ::: warning A helper, not your official schedule There is no server persistence or account sync. A copy is saved in this browser only. Clearing site data, resetting the plan, or losing this browser can remove your work. Export a backup if you need to keep it. For shared applications, review, published appointments, and retained history, register for Kingshot Events and use the managed Castle workflow. :::"
+        "text": "Local Castle Planner for Guests The Local Castle Planner is a browser-only scratchpad for Guests and signed-in users. It is useful for a small personal schedule that does not need applications, account roles, or an official published version. ::: warning No server persistence The plan has no server persistence or account sync. Clearing site data, resetting the plan, or changing browsers can remove it. Use Export backup when the plan matters, and keep the exported file private. :::"
       },
       {
-        "heading": "Build your first small schedule",
-        "text": "1. Open Local Castle Planner and give the plan a recognizable name. 2. Choose a day and position. Each day has 48 fixed 30-minute slots , displayed in UTC. Slot duration is not adjustable. 3. Add participants using a name, optional origin label, and an available character image. These entries do not create or update players in a kingdom or alliance. 4. Assign a participant through the slot controls or drag their card onto an open slot. You can move cards and swap occupied slots. 5. Reserve a slot when it should not be assigned yet. Release the reservation before adding someone there. 6. Review the day and position, then choose Export backup . The planner reuses the managed board's interactive cards and drag controls. It also offers click-based assignment, compact or comfortable density, placeholders, and undo for recent board changes. Undo is not a long-term history or a replacement for "
+        "heading": "Build the schedule",
+        "text": "1. Open Local Castle Planner and name the plan. 2. Choose one of five days and a Castle Position. 3. Add local participants. 4. Assign with Assign next , click controls, or drag and drop. 5. Reserve any slot that should remain unavailable. 6. Review availability conflicts and resource context. 7. Choose Export backup . Every day has 48 fixed 30-minute slots in UTC. Slot duration cannot be changed. You can add up to six local positions and 200 local participants. An assignment can be moved or swapped. A reserved destination must be released first. The same participant cannot occupy simultaneous slots across positions."
+      },
+      {
+        "heading": "Add participant details",
+        "text": "A local participant can include: - display name and avatar; - alliance or origin label; - kingdom and game ID; - an optional planner note; - available resource values; - availability for each of the five days; - a preferred UTC time and day-specific note. Availability can be Any time , Specific time , or Not available . A specific choice must include a preferred UTC slot before the participant can be saved. Assign next uses the preferred slot when it is free, otherwise it finds another open slot. The planner marks an assignment that conflicts with a participant's unavailable day or specific-time preference. The warning does not silently move the person. These participants are local labels. They do not create or update a server player, alliance, kingdom, application, or official Castle record."
       },
       {
         "heading": "Plan resources across five days",
-        "text": "Open Resources & calculators , choose a resource card, and enter the stock you actually have. Allocate that stock across Days 1 to 5. The available, allocated, and remaining totals make overspending visible. For speedups, the days/hours/minutes converter turns a duration into minutes. General speedups share one budget: do not count the same minutes again as construction, research, and training stock. Use Add custom resource for something not already listed. Give it a name, choose items or minutes, select a resource image, and optionally enter your own points rate. Estimates use that entered rate, not automatic game scoring. When a resource scores differently on different days, use separate rows and divide the real stock between them so it is not counted twice. Example: You have 600 minutes of general speedups. Allocating 240 minutes to Day 1 and 360 to Day 2 leaves zero. Adding another 6"
+        "text": "Open Resources & calculators , choose a resource, and enter the real stock. Allocate it across the five days. Available, allocated, and remaining totals make an over-budget plan visible. Speedups use minutes internally. The days, hours, and minutes converter helps enter them. General speedups are one shared budget, so do not count the same minutes as construction, research, and training stock. Use a custom resource for an unlisted item. Choose items or minutes and optionally enter a points rate. Participant-level resource values appear on their planner cards and help compare candidates, but they do not change the plan-wide stock automatically."
       },
       {
-        "heading": "Keep, move, or clear your plan",
-        "text": "Export backup downloads a copy. Import backup loads a compatible exported plan; check the current work before replacing it. Treat exports as personal files because they contain the names, notes, and amounts you entered. Do not include contact details, passwords, or other private information in a shared plan. Reset clears the local plan and calculator after confirmation. Signing in does not turn this scratchpad into a shared kingdom schedule, and staff cannot recover its browser-only copy."
+        "heading": "Back up, restore, or reset",
+        "text": "Export backup downloads the current browser plan. Import backup replaces the local plan with a compatible exported file, so inspect the current work before importing. Backups can contain names, IDs, notes, availability, and resource amounts. Do not put passwords, private messages, or unrelated personal data in the plan. Reset clears the browser plan and calculator after confirmation. Staff cannot recover a cleared local plan."
       },
       {
-        "heading": "Which Castle tool should I use?",
-        "text": "Need Choose --- --- A quick personal plan, without registration Local Castle Planner A shared schedule with applications and review Managed Castle Positions An occasional participant missing from the roster A temporary participant in the managed planner See temporary participants and reviewed players before choosing how to handle someone outside your roster."
+        "heading": "Choose the right Castle tool",
+        "text": "Need Tool --- --- A quick personal schedule without registration Local Castle Planner Applications, review, shared scheduling, and publication Managed Castle Positions Someone in the managed schedule who should not become a roster player Temporary participant"
       }
     ]
   },
@@ -149,51 +153,47 @@ export const searchIndex = [
       "upgrade forecast",
       "resource routing"
     ],
-    "description": "Ascension Path: Plan Your Next Upgrades Ascension Path unifies progression across Hero Gear, Governor Gear, and Charms into a single strategic workspace. Rather than asking which piece to upgrade within one isolated menu, the tool evaluates",
+    "description": "Ascension Path: Plan Your Next Upgrades Ascension Path compares Hero Gear, Governor Gear, and Charms in one progression workspace. It recommends an ordered path under the nine separate material balances in your selected account profile or t",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Ascension Path: Plan Your Next Upgrades Ascension Path unifies progression across Hero Gear, Governor Gear, and Charms into a single strategic workspace. Rather than asking which piece to upgrade within one isolated menu, the tool evaluates your entire account to determine where your next materials deliver the highest combat return. Open Ascension Path from the Lab. Start by reviewing the Current Build rather than the headline recommendation. A calculation based on outdated inventory or equipment levels produces the wrong sequence for your account."
+        "text": "Ascension Path: Plan Your Next Upgrades Ascension Path compares Hero Gear, Governor Gear, and Charms in one progression workspace. It recommends an ordered path under the nine separate material balances in your selected account profile or temporary scenario. The tool never spends resources or changes your game account. It uses Ascension Engine version 1.3.0 and a bounded beam search, so its result is not a guaranteed global optimum."
       },
       {
-        "heading": "Progression engine and search depth",
-        "text": "The planner is driven by Ascension Engine version 1.1.0. It applies a bounded beam search that evaluates progression up to 30 steps deep: - Cross-system scope: The search evaluates candidate steps across Hero Gear, Governor Gear, and Charms simultaneously. - Multi-resource balancing: It tracks nine distinct upgrade currencies: Hero Gear XP, Forge Hammers, Mythic Gear, Mithril, Satin, Gilded Threads, Artisan's Vision, Charm Guides, and Charm Designs. - Dominance rules: At each depth level, the engine prunes inferior candidate branches to find an optimal sequence within modeled constraints without slowing down the browser."
+        "heading": "Review Current Build first",
+        "text": "Open Ascension Path from the Lab and inspect Current Build before running. The source cards show whether each input came from a saved profile, an owning optimizer, a confirmed screenshot import, or a temporary override. Confirm: - all twelve Hero Gear pieces and their Mastery state; - all six Governor Gear pieces; - all eighteen Charm slots; - Attack, Defense, Lethality, and Health for Infantry, Cavalry, and Archer; - all nine progression-material balances; - the selected locks and combat focus. Choose the meaning of your combat stats: - Observed total: the entered totals already include current equipment, so the projection adds only the modeled change; - Base plus progression: the entered values are a baseline before the modeled Hero Gear, Governor Gear, and Charm contributions."
       },
       {
-        "heading": "Start from confirmed inputs and combat focus",
-        "text": "Review your current equipment levels, account combat stats, and resource balances: 1. Input provenance: Labels indicate whether a value originates from a confirmed profile, an isolated optimizer, a screenshot import, or a temporary scenario override. 2. Combat stat semantics: Select how your entered combat stats should be interpreted: - Observed total: Your entered stats already include your current equipment and progression bonuses. - Base plus progression: Your entered stats represent an unequipped baseline to which equipment bonuses are added. 3. Choose a combat focus: Combat Focus Strategic Objective --- --- Overall Strength Balances gains across all three troop classes and all combat stats equally. KvK / PvP Follows your saved profile troop and stat priorities for competitive combat. Rally Leader Prioritizes offensive stats while retaining defensive gains."
+        "heading": "Resolve readiness before running",
+        "text": "The calculation stays off while you edit. The readiness panel validates equipment, locks, priorities, resource balances, and all twelve combat-stat values. Values must be finite and nonnegative. An explicit resource value of zero is valid. It means none of that material is currently owned. It does not make the profile incomplete. For Observed total , the tool warns when an entered combat total is below the modeled contribution from current equipment. It preserves the entered value so you can verify the source instead of silently replacing it. Correct blockers in the named Current Build section. Warnings can still allow a run, but review them before acting on the result."
       },
       {
-        "heading": "Action recommendations and target milestones",
-        "text": "After running the calculation, the header surfaces a clear summary action: - UPGRADE NOW: You have sufficient resources to complete one or more high-value steps immediately. - SAVE: Your owned resources are insufficient for the next milestone, and spending them on secondary choices would waste materials. - COMPLETE: All supported items across all three systems have reached their maximum modeled levels."
+        "heading": "Choose a combat focus",
+        "text": "Combat focus What it prioritizes --- --- Overall Strength Balances supported troops and combat stats KvK / PvP Uses the active profile's competitive troop and stat priorities Rally Leader Emphasizes offensive value while retaining defensive contribution The focus changes candidate value. It does not change upgrade costs or claim that one play style is universally best."
       },
       {
-        "heading": "Milestone target cards",
-        "text": "Below the action banner, the Next Target and Following Target cards highlight upcoming milestones: - System and transition: Identifies the piece and target level (for example, Governor Ring Tier 4 - Tier 5). - Required materials: The full material cost for that milestone. - Sufficient resources: Quantities of materials you already hold in adequate amounts. - Missing resources: Exact shortages preventing you from reaching that milestone. - Recommendation badge: Tags whether you should actively target or save for that checkpoint."
+        "heading": "How the path is built",
+        "text": "The engine searches legal checkpoints across all three progression systems. A checkpoint includes every required intermediate step, material cost, Mastery gate, set transition, or Red milestone needed to reach it. Each selected step contains: - the system, piece, and exact transition; - resources consumed and projected balances; - combat deltas across the affected troop and stats; - a breakpoint indicator when a set or gear threshold is crossed; - an impact label and Why First explanation; - the strongest available alternative and why it ranked lower. The Alternative comparison explains which competing checkpoint was available from the same state and why it lost under the selected focus and resource budgets. The search keeps a limited candidate beam for browser performance. Its technical diagnostics disclose the strategy, states evaluated, checkpoint depth, and termination reason. Use th"
       },
       {
-        "heading": "Step anatomy and alternative comparisons",
-        "text": "The plan displays an ordered sequence of recommended steps. Consecutive upgrades within the same system are grouped for clarity. You can filter steps by system ( All , Hero Gear , Governor Gear , Charms ) or search by keyword. Each step provides complete technical details: - System badge and transition: Indicates the system and the exact upgrade step. - Resource cost: Quantities consumed for that step and projected remaining balances. - Combat delta: The exact stat gains across Infantry , Cavalry , and Archer for Attack, Defense, Lethality, and Health. - Combat impact: Classified as Very High , High , Medium , Low , or Marginal . - Breakpoint indicator: Marks steps that activate a set bonus or cross a key gear threshold. - Why First: Explains the calculation reason this step was prioritized over competing candidates. - Alternative comparison: Shows the competing upgrade from another syst"
+        "heading": "Read UPGRADE NOW, SAVE, and COMPLETE",
+        "text": "- UPGRADE NOW: at least one recommended path step is affordable with the entered inventory. - SAVE: a modeled next checkpoint exists, but the complete material requirement is not currently affordable. - COMPLETE: no supported progression target remains in the selected scope. Next Target shows required, sufficient, and missing materials. Following Target is conditional: it assumes you acquire exactly the first target's missing materials, complete that target, then evaluate what comes next. It does not assume other future income."
       },
       {
-        "heading": "Weak point analysis and opportunity scores",
-        "text": "The Weak Points section evaluates your three equipment systems to expose progression imbalances: - Priority classification: Each system is tagged as High Priority , High , Medium , or Healthy . - Opportunity score: A quantified score indicating the relative combat gain available per resource spent in that system. - System diagnosis: Text explanations detail why a system is lagging (for example, low charm levels relative to advanced governor gear) so you can direct future acquisitions effectively."
+        "heading": "Inspect weak points, forecast, and Projected Build",
+        "text": "Weak point analysis assigns an Opportunity score and a status such as High Priority, Medium, or Healthy to each supported system. Weak Points ranks the three systems by their strongest current marginal opportunity under your focus and budgets. A low rank can mean that no affordable step remains, not that the system is permanently unimportant. The forecast workbench includes: - Combat Stats Trajectory across the displayed path; - Resource Depletion Curves for the nine progression materials; - a tabular step-by-step projection. The Projected Build section shows all twelve before and after combat values and the physical Hero Gear, Governor Gear, and Charm changes that create them. Combat changes are percentage points. Review this section with the ordered steps before copying anything into the game. Changing an input makes the old result stale. Choose Run again before interpreting the charts"
       },
       {
-        "heading": "Interactive forecast charts",
-        "text": "The forecast workbench visualizes your progression trajectory across two interactive charts: 1. Combat Stats Trajectory: Plots the projected growth of Attack (sky blue), Defense (amber), Lethality (pink), and Health (emerald) averages from your current baseline across each planned step. 2. Resource Depletion Curves: Multi-line chart tracking how all nine upgrade materials deplete step by step, showing which resource triggers a bottleneck. 3. Tabular Projection View: A structured data table listing cumulative stat gains and remaining resource tallies at every step. If inputs change, earlier charts become stale; select Run again to refresh all projections."
+        "heading": "Event timing",
+        "text": "When eligible event sessions are available, Ascension Path can compare the path with their timing: - UPGRADE NOW when immediate strength is preferred or an important battle comes first; - WAIT when a known upcoming event preserves the modeled path while adding a configured efficiency benefit; - NO TIMING ADVANTAGE when no relevant active or upcoming event changes the decision. This timing card depends on recorded event information. It does not discover unconfigured Kingshot schedules."
       },
       {
-        "heading": "Platform event timing decisions",
-        "text": "Progression timing matters as much as upgrade order. Ascension Path analyzes active platform event sessions to produce a timing recommendation: - UPGRADE NOW: An active event currently rewards points for spending your upgrade materials. - WAIT: A scheduled event offering point multipliers or spending milestones starts soon. - NO TIMING ADVANTAGE: No active or upcoming event provides bonuses for your required materials. The decision card links directly to the relevant event session and explains the modeled efficiency gain."
+        "heading": "Resource Routing is temporary",
+        "text": "Use Resource Routing to test a hypothetical virtual shop or other resource source: 1. name the source and currency; 2. enter the currency balance; 3. add canonical or custom bundles with quantities, costs, and purchase limits; 4. choose Analyze route ; 5. review the suggested combination and its projected path; 6. optionally apply the acquired resources to the temporary scenario. The routing tool does not buy anything. Applying a route changes only the temporary scenario, leaves the confirmed profile untouched, and marks the previous calculation stale."
       },
       {
-        "heading": "Resource routing workbench and virtual shop",
-        "text": "The Resource Routing tool simulates hypothetical acquisitions to resolve material shortages: 1. Configure shop parameters: Define a virtual shop name, currency label, and your available currency balance. 2. Add offer bundles: Select from canonical resource packages or create custom offers with custom quantities, currency costs, and purchase limits. 3. Analyze route: The engine computes the optimal combination of purchases using return-on-investment ranking to clear your biggest progression bottlenecks. This calculation does not buy real items. 4. Apply to temporary scenario: Clicking this action adds the acquired materials directly into the temporary what-if inventory. It does not alter your confirmed profile inventory. Rerun the path to preview the new upgrade sequence enabled by those purchases."
-      },
-      {
-        "heading": "Saving and safe application",
-        "text": "Confirmed profile inputs follow the standard Lab saving rules. Edits made in the temporary scenario remain in the what-if sandbox until discarded or manually entered into your profile. Use the Copy summary button to export a clean text summary of your progression path for alliance discussion or personal planning."
+        "heading": "Saving and limitations",
+        "text": "Confirmed account facts follow Lab profile saving rules. Temporary combat stats, resources, and routing results remain scenario overrides until you deliberately update the owning profile or optimizer. Ascension Path is limited to the current supported catalogs, entered balances, selected locks, and modeled combat objective. It cannot know future game releases, an unentered purchase, or personal priorities that are not represented in the profile. Use Copy summary for discussion, then verify every cost and level in Kingshot before spending."
       }
     ]
   },
@@ -1297,7 +1297,7 @@ export const searchIndex = [
     ]
   },
   {
-    "title": "Lab Profiles, Autosave, and Optimization Order",
+    "title": "Lab Profiles, Shared Inputs, and Saving",
     "path": "/kingshot-events/lab/profiles-and-autosave",
     "category": "Simulations and Optimizations",
     "audience": "Lab users",
@@ -1316,27 +1316,39 @@ export const searchIndex = [
       "profile autosave",
       "stale save"
     ],
-    "description": "Lab Profiles, Autosave, and Optimization Order A visitor profile is saved in the current browser on that device. Signed-in users can use cloud profiles associated with their account when that capability is available. A signed-in Lab workspa",
+    "description": "Lab Profiles, Shared Inputs, and Saving An account profile is the shared description of one Kingshot account. Hero Gear, Governor Gear, Charms, combat-stat snapshots, resources, heroes, troops, and march capacities can be entered once and r",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Lab Profiles, Autosave, and Optimization Order A visitor profile is saved in the current browser on that device. Signed-in users can use cloud profiles associated with their account when that capability is available. A signed-in Lab workspace is owned by one account, optionally linked to a player, and stores validated gear, combat stats, priorities, inventory, budget, strategy, optimizer locks, and module overrides. A user can keep up to 50 workspaces per tool. Duplicating creates a separate state snapshot. Switching workspaces must load the selected identity before edits continue. Each save carries the last known concurrency version. If another tab or a delayed save changed the workspace first, the stale save is rejected with This workspace was modified elsewhere. Reload and try again. This prevents a slower autosave from overwriting newer work. Debouncing reduces save frequency but doe"
+        "text": "Lab Profiles, Shared Inputs, and Saving An account profile is the shared description of one Kingshot account. Hero Gear, Governor Gear, Charms, combat-stat snapshots, resources, heroes, troops, and march capacities can be entered once and reused by compatible Lab tools. Tool-specific questions stay outside the account profile. A temporary budget, optimization objective, formation experiment, opponent, battle side, or Warboard roster belongs to that tool's scenario and does not become an account fact."
       },
       {
-        "heading": "Optimizer decision loop",
-        "text": "The ordinary upgrade loops in Hero Gear, Governor Gear, and Charms share this iterative pattern. Hero Gear total-stat mode additionally compares alternate plans under its priority protections: 1. Read current item levels, combat-stat baseline, troop and stat weights, resource inventory, strategy, and locked slots. 2. Generate every valid next upgrade in the selected tool. Remove locked, maximum-level, unaffordable, and out-of-scope candidates. 3. Calculate the candidate's weighted stat gain. For additive mode, this is the sum of configured weight times stat delta. Combat mode values marginal improvement relative to the current baseline. 4. Normalize cost against the starting available inventory. Hero Gear applies stronger penalties to irreversible materials and can bundle enhancement with mastery to cross a milestone. Governor Gear accounts for set changes. Charms evaluate six slots per "
+        "heading": "Create and manage profiles",
+        "text": "Sign in, open Profiles from the Lab, then choose Create profile . Use separate profiles for separate game accounts or genuinely different owned builds. The profile editor is divided into: - Account: profile identity, kingdom, server, and linked-player context; - Capacities: leader march, rally total, typical joiner capacity, troop tiers, Truegold levels, and troop quantities; - Heroes: owned heroes, progression, skill levels, and supported widgets; - Stat snapshots: named combat-stat readings with their source and included layers; - Equipment: the Hero Gear, Mastery, Governor Gear, and Charm state maintained through the matching optimizers; - Resources: shared material balances used by progression tools. Use the profile selector on a Lab page to switch the active profile. You can create, rename, or delete profiles from the selector. At least one signed-in profile must remain. Deleting th"
       },
       {
-        "heading": "Limitations and conflict recovery",
-        "text": "The plan is deterministic for the same inputs and dataset, but it is not a proof of the globally best in-game build. Wrong inventory, weights, catalog assumptions, or temporary buffs produce a precise answer to the wrong scenario. On a stale-save conflict, copy any unsaved values, reload the newer workspace version, and reapply only the intended changes. Do not keep retrying the stale tab: its version cannot overwrite the newer save."
+        "heading": "What compatible tools reuse",
+        "text": "The active profile supplies reusable facts to Hero Gear, Governor Gear, Charms, Ascension Path, Bear Trap, Rally, and other compatible Lab surfaces. Shared account fact Typical consumers --- --- Hero Gear Enhancement and Mastery levels Hero Gear, Ascension Path, Bear Trap Governor Gear levels Governor Gear, Ascension Path Charm levels Charms, Ascension Path Shared material balances Progression optimizers and Ascension Path Default combat-stat snapshot and included layers Account-aware optimizers and combat tools March capacities, troop progression, and owned heroes Bear Trap and Rally planning Switching profiles while a tool is open refreshes the shared inputs and clears results that were calculated for the previous profile. Rerun the tool before interpreting a result."
       },
       {
-        "heading": "Purpose, roles, and profile boundaries",
-        "text": "Profiles solve the problem of re-entering shared progression and combat inputs for every Lab module. Any eligible Lab user can create and switch personal profiles; sharing or management roles do not turn a profile into an alliance record. The active profile supplies shared values, while each module adds its own gear, charm, rally, or scenario controls. A visible pending state means the debounce has not completed; saved confirms the current version; failed requires correction or retry; conflict means another tab or newer save won. Switching profiles changes the source for later module runs and must cancel or isolate an older pending write so it cannot overwrite the newly active profile. Worked profile switch: A user edits troop bonuses in Profile A and immediately opens Profile B. The pending A save remains associated with A. Profile B loads its own values and save version. When the older"
+        "heading": "What remains tool-specific",
+        "text": "The following examples do not automatically change the saved account profile: - optimization goal, strategy, locks, and what-if budget; - a temporary Ascension resource-routing result; - Bear Trap formation or rally experiment; - Battle Simulator attacker and defender setup; - Championship Warboard rosters, opponent intelligence, and lane plans. Applying a supported optimizer result is a separate confirmation. Review the projected equipment and resource values before choosing the apply action. A calculation alone changes nothing."
       },
       {
-        "heading": "Keep confirmed inputs separate from experiments",
-        "text": "Visitor work stays in the current browser. Signing in unlocks eligible account-saving features but should not be treated as proof that every local experiment was transferred. Confirm the selected profile and its save feedback after switching identity or workspace. Edits to actual gear, resources, or combat stats in the specialized optimizers can provide source information to Ascension Path. Hypothetical optimizer results are not automatically promoted to the owned build. Ascension temporary scenarios are for trying alternatives; use the confirmed-input controls when the actual account has changed. Screenshot build import also requires a deliberate confirmation. Review only the selected fields before applying them, then check saving and rerun any now-stale calculation."
+        "heading": "Stat snapshots and double-count protection",
+        "text": "A stat snapshot stores all four displayed percentages for Infantry, Cavalry, and Archer, plus a source and the progression layers already included in those numbers. Select one snapshot as the default used by compatible tools. Source meaning matters. For example, Bonus Overview values already include current Hero Gear. An account-aware Hero Gear plan subtracts the current gear contribution before adding the proposed gear, so the same bonus is not counted twice. If a source excludes gear, the tool can add the modeled contribution once. Create a new snapshot when you need to preserve a different situation. Edit or delete an old snapshot when its source or numbers are no longer useful. Deleting the default snapshot selects another remaining snapshot or leaves no default."
+      },
+      {
+        "heading": "Saving and conflicts",
+        "text": "Edits show Unsaved changes until you choose Save profile . The saved state appears only after the server confirms the write. Every signed-in save includes the version that was loaded. If another tab saved a newer version first, the older write is rejected. Copy any unsaved values you need, reload the profile, and apply the intended edit to the latest version. The profile editor uses an explicit save action. Other Lab workspaces can use autosave for their own scenario state, but autosave never turns a tool-specific experiment into a shared account fact. Rapid profile switching is isolated: a late response for Profile B cannot overwrite Profile A after you switch back. Unsaved draft values from one profile are discarded when another profile is selected, preventing cross-profile data leakage."
+      },
+      {
+        "heading": "Visitors and older saved data",
+        "text": "Visitors can run public Lab tools with device-local state, but the Profiles management page requires sign-in. Visitor data is limited to the current browser. It is not saved to the account cloud and is not available on another device. Older per-tool visitor saves are merged into the shared local Lab state on first use when compatible values can be recovered. Older signed-in profile payloads are normalized with safe defaults for fields that did not exist yet. Existing equipment values are preserved. Hero Gear also performs a one-time settings migration for older saves: the Red Gear strategy changes to the safer Complete milestones only default. A later explicit strategy choice is preserved."
+      },
+      {
+        "heading": "Bear Trap prefill boundary",
+        "text": "A new Bear scenario can start from the active profile's Bonus Overview combat stats and the selected heroes' Hero Gear. A previously saved Bear draft takes priority on initial load. When the active profile later changes, Bear refreshes the mapped profile facts and invalidates the old result. Bear what-if edits do not write back to the account profile. Save actual account changes in Profiles or the owning optimizer, then rerun Bear. For the Hero Gear application boundary, see Hero Gear Optimization Logic. For cross-system temporary planning, see Ascension Path."
       }
     ]
   },
@@ -1358,35 +1370,35 @@ export const searchIndex = [
       "autosave",
       "profile autosave"
     ],
-    "description": "Hero Gear Optimization Logic The Hero Gear Optimizer helps you turn current equipment and available materials into a plan you can review before spending. It considers enhancement, mastery, milestone requirements, locks, and your chosen buil",
+    "description": "Hero Gear Optimization Logic The Hero Gear Optimizer allocates owned Enhancement XP, Forgehammers, Mythic Gear, and Mithril across all twelve Hero Gear pieces. It compares upgrading with the current bag against an optional Enhancement Refor",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Hero Gear Optimization Logic The Hero Gear Optimizer helps you turn current equipment and available materials into a plan you can review before spending. It considers enhancement, mastery, milestone requirements, locks, and your chosen build priorities. It does not change your game account."
+        "text": "Hero Gear Optimization Logic The Hero Gear Optimizer allocates owned Enhancement XP, Forgehammers, Mythic Gear, and Mithril across all twelve Hero Gear pieces. It compares upgrading with the current bag against an optional Enhancement Reforge, then provides an ordered plan you can review before making irreversible changes in Kingshot. The calculation does not change your game account. Applying a plan updates only the selected Ralyvora profile after a separate confirmation."
       },
       {
-        "heading": "Give the planner the right starting point",
-        "text": "Choose the active Lab profile, then check each troop's gear, enhancement and mastery levels, available XP, Forge Hammers, Mythic Gear, and Mithril. Lock anything you do not want the planner to change. Next choose your build profile. A strategic profile describes which stats matter for your goal; it is not a claim that those weights are a rule of the game. The Bear Trap Rally Damage profile favors offense while retaining defensive value so a damage-focused plan does not treat useful all-mode gear as worthless."
+        "heading": "Enter the current state",
+        "text": "Select the active account profile and verify every piece for Infantry, Cavalry, and Archer. Each troop has four pieces: Helm, Gloves, Chest, and Boots. Enter these dimensions separately: - Enhancement: the + level on the piece and the source of its normal primary-stat progression; - Mastery Forging: the Mastery level, which increases the piece's Enhancement stat and gates later Red levels; - Red Gear and Imbuement: Red progression after the ascension boundary, including milestone bonuses that can grant a separate Expedition Attack or Defense stat; - Resources: Enhancement XP, Forgehammers, Mythic Gear, and Mithril currently owned; - Protection: locks for pieces the optimizer must not upgrade or use as Reforge donors. Normal gear primary stats and Imbuement milestone bonuses are not one stat model. A piece's Enhancement can raise its primary Health or Lethality line, while a Red milestone"
       },
       {
-        "heading": "Choose the question you want answered",
-        "text": "Objective How to interpret it --- --- Maximize Total Stat % Searches for greater total gear stats while protecting build-profile priorities Balanced for my account Values upgrades against your entered account stats and march formation Gear value only Uses gear gains and build priorities without an account snapshot Match the published optimizer Helps compare against the weighted reference method For account-aware planning, enter the actual troop percentages, select where you read them, and confirm the formation. The stat source matters: some displayed totals already include Hero Gear. The tool accounts for that distinction so the same gear is not simply counted twice. If usable account context is missing, inspect the result's fallback explanation. A gear-only comparison is not the same answer as a calculation based on your whole account."
+        "heading": "Choose the objective and combat context",
+        "text": "Choose the question you want the plan to answer: Objective What it values --- --- Maximize Total Stat % A higher raw sum of Hero Gear percentage points, while retaining profile-priority safeguards Balanced for my account Marginal combat value relative to the entered account snapshot and march formation Gear value only The selected build-profile weights without requiring account combat stats Match the published optimizer A linear weighted reference comparison for spreadsheet-style verification For account-aware planning, choose the source of the percentages and enter all four values for every troop: Attack, Defense, Lethality, and Health. Enter a displayed 650.5% as 650.5 . Bonus Overview already contains current Hero Gear. The optimizer subtracts the current Hero Gear contribution before applying the proposed gear, so it is counted once. A source that excludes Hero Gear is handled differ"
       },
       {
-        "heading": "Knapsack Pareto frontier solver and optimizer controls",
-        "text": "To find exact optimal upgrade configurations, the Hero Gear calculation engine utilizes a multi-dimensional Pareto frontier knapsack solver : - Multi-dimensional trade-offs: Evaluates the trade-offs between enhancement XP investment, mastery stone milestone requirements, and non-linear stat gain curves across all equipment slots simultaneously. - Optimizer Policy Controls: Configure enhancement policies, reforge donor priority rules, and threshold cutoffs to match your strategic priorities. - Combat Context Controls: Align calculations with your primary combat focus (offensive damage, balanced troop resilience, or specialized march formations). - Account-Aware Context: Evaluates troop percentage snapshots and formation ratios from your account profile, ensuring stat gains reflect effective combat value rather than simple equipment totals."
+        "heading": "Understand Mastery and Red checkpoints",
+        "text": "The optimizer can bundle the steps needed to reach a valid checkpoint. A later Enhancement target may require Mastery first, and a Red milestone may require both the Mastery gate and its separate Imbuement materials. The cost breakdown keeps these categories separate: - Enhancement XP used for Enhancement; - Forgehammers and any Mastery-specific Mythic Gear used for Mastery Forging; - Mythic Gear and Mithril used for Red ascension or Imbuement. The recommendation shows the exact milestone stat gain, including a milestone that has zero value under the selected objective. A zero-valued Defense milestone, for example, can still be a real required cost on the path to a later target. The default Red policy is Complete milestones only . It avoids spending into an intermediate Red level unless the plan can complete the supported milestone. Older unversioned saves are migrated to this safer defa"
       },
       {
-        "heading": "Follow the plan, not just the headline",
-        "text": "The planner compares affordable next steps and evaluates enhancement together with the mastery needed to cross milestone gates. Direct mastery level inputs allow precise starting state entry. The total stats preview lets you inspect current and projected equipment stats across all three troop classes before confirming a calculation. After choosing an upgrade the engine consumes the modeled resources and reevaluates the remaining options. Locked, unreachable, maximum-level, and unaffordable choices are excluded. The familiar candidate question is Affordable positive candidate? If none remains, the plan stops and leaves unused resources. This does not mean every item is finished; a different required material may have run out. Review the ordered steps, affected troop and slot, before-and-after stats, material spending, and leftovers. The results display presents troop facts using dedicated"
+        "heading": "Reforge eligibility and protection",
+        "text": "Optional Enhancement Reforge resets eligible non-Red pieces to +0 and returns their invested Enhancement XP. Mastery levels are preserved. Forgehammers, Mythic Gear, Mithril, and other irreversible materials are not refunded. The Reforge panel separates: - XP already in the inventory; - recoverable XP invested in eligible pieces; - XP locked in protected or Red pieces; - XP available if the recommended Reforge is performed. Only pieces with recoverable Enhancement XP can be donors. A Red piece is ineligible, and its invested XP remains irreversible. Manual piece locks and profile priority locks also keep important gear out of the set of Reforge donors. Higher-priority gear cannot be stripped merely to improve lower-priority gear. Allow Reforging lets the optimizer compare the best legal Reforge plan with the no-Reforge plan. Do Not Reforge restricts the plan to bag XP. Advanced settings "
       },
       {
-        "heading": "Reforge without losing sight of your priorities",
-        "text": "Optional reforge can recover invested enhancement XP from eligible gear and reuse it in the proposed plan. A locked item is protected. In addition, profile priority locks prevent higher-priority gear from being selected as reforge donors: gear belonging to a higher-priority troop class cannot have its invested XP stripped to upgrade lower-priority items. An empty XP bag does not necessarily mean there is nothing to compare: invested, recoverable XP can still be relevant. Conversely, recoverable XP is not free new inventory, and not every material is refunded. For Maximize Total Stat %, a reforge must improve both raw stat total and weighted useful value over the no-reforge result before it is selected. Inspect that comparison and the actual donor items instead of assuming that a longer plan is better. Example: A proposed reforge would raise several secondary stats but reduce a higher-pri"
+        "heading": "Read and execute the result",
+        "text": "Start with the verdict, then review the ordered execution plan. Reversible Enhancement changes appear before Mastery and Red actions. Red ascension and later checkpoints are explicitly marked irreversible. Check these result sections: - the troop that receives resources and the comparison across all three troops; - raw gear-stat change, build-profile value, full-objective value, and formation context; - before and after account totals when the selected stat source supports them; - each piece's starting and projected Enhancement, Mastery, and Red state; - recovered, preserved, spent, irreversible, and remaining XP; - separate Mastery and Imbuement material costs; - sensitivity notes showing how strongly weights affected the answer. If the plan recommends a Reforge, compare the XP in Kingshot's confirmation with the displayed recovered XP before continuing. Stop if the values differ. After"
       },
       {
-        "heading": "Why an older result may differ",
-        "text": "The XP cost table and reforge comparisons have been corrected, and account context is handled more consistently. Re-run a saved scenario after an update rather than relying on a copied old total. Compare the same input levels, inventory, objective, locks, and formation before deciding two results disagree. The planner searches supported choices; it does not prove a globally best build over every future upgrade. Treat predictions as conditional on the entered information and current catalog. Use screenshot build import to reduce data entry, profiles and autosave to understand saving, and Ascension Path for cross-system planning."
+        "heading": "Limitations",
+        "text": "- The planner uses the supported catalog and the account data you entered. It does not know future game changes. - Account-aware value is conditional on the selected stat source, formation, build weights, and current snapshot. - A bounded plan is not proof of the globally best build across every future resource drop. - A copied result can become stale after a profile, inventory, lock, objective, or formation change. - Reforge recovery must be checked against the live Kingshot confirmation before execution. Use Profiles and Shared Inputs to understand what is reused, Screenshot Build Import to reduce manual entry, and Ascension Path for cross-system planning."
       }
     ]
   },
@@ -1503,39 +1515,35 @@ export const searchIndex = [
       "bear damage",
       "prediction error"
     ],
-    "description": "Bear Trap Calculation and Result Anatomy The Bear Trap Simulator is most useful when you compare a real setup with a controlled alternative. It helps explain the contribution of troops, account stats, heroes, and eligible skills without pre",
+    "description": "Bear Trap Calculation and Result Anatomy The Bear Trap Simulator compares a configured rally with controlled alternatives. It models leader and joiner contributions, eligible hero and widget effects, formations, and uncertainty. It does not",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Bear Trap Calculation and Result Anatomy The Bear Trap Simulator is most useful when you compare a real setup with a controlled alternative. It helps explain the contribution of troops, account stats, heroes, and eligible skills without presenting a prediction as a guaranteed live result."
+        "text": "Bear Trap Calculation and Result Anatomy The Bear Trap Simulator compares a configured rally with controlled alternatives. It models leader and joiner contributions, eligible hero and widget effects, formations, and uncertainty. It does not guarantee a live score."
       },
       {
-        "heading": "Choose your role and workflow",
-        "text": "Start with Build setup to explore a scenario or Replay rally to work from a real rally. Choose Leader or Joiner , then verify the relevant march and rally capacities. Enter actual troop counts, troop tier and Truegold level, leader heroes, joiner captains, skill levels, account combat stats, and temporary effects. Confirm the stat source and included progression layers so a bonus is not counted again merely because it also appears in a profile. Your own march, the average joiner, and the total rally are different comparison scopes. Many players may contribute troops, but only the eligible active captain-skill slots affect the modeled rally. Do not equate the number of joiners with the number of active rally skills."
+        "heading": "Choose the workflow",
+        "text": "Use Build setup for a what-if scenario or Replay rally for a real result. Select the Leader or Joiner perspective, then enter the relevant capacities, troop stacks, heroes, skills, widgets, account stats, and temporary effects. Replay mode requires at least one observed score. Keep observed results separate from values you are trying to estimate. The editor checks important constraints before running: - at least one leader or joiner troop stack; - leader march and effective rally capacities; - accepted troops within rally capacity; - average joiner formation totaling exactly 100%; - active joiner skills within the configured skill slots; - valid hero, troop-tier, and Truegold inputs. If a leader formation exceeds march capacity, the editor can fit it to the available capacity and tells you what was adjusted. Generated average joiner troops are capped to the remaining rally capacity."
       },
       {
-        "heading": "Read a result in three parts",
-        "text": "Leader contribution explains the leader's modeled damage and applicable effects. Joiner contribution explains the supported joiner setup. The total combines those contributions into the displayed rally estimate and event-score view. The result distinguishes supported inputs, estimates, and unresolved assumptions. If you enter an observed result, prediction error shows the disagreement between that observation and the model. A small error in one rally is useful evidence, not proof that every future rally will match. Inputs changed after a run make the result stale. Use Run Bear Simulation again before interpreting the numbers below."
+        "heading": "Profile prefill and scenario ownership",
+        "text": "The active account profile can supply two kinds of starting facts: - Bonus Overview Attack, Defense, Lethality, and Health for each troop type; - the selected heroes' Hero Gear Enhancement and Mastery levels. A brand-new empty scenario can be seeded from those values. A previously saved Bear draft wins on initial load so its deliberate what-if choices are not silently overwritten. When you switch or update the active profile, Bear refreshes the mapped profile facts and clears a result calculated from the previous profile. Run the simulation again. Bear scenario edits never write back to the account profile. Change actual account facts in Profiles or the owning optimizer. Use Bear fields only for the rally being modeled."
+      },
+      {
+        "heading": "Read leader, joiner, and total results",
+        "text": "Leader contribution explains the leader's modeled damage and applicable effects. Joiner contribution explains the supported joiner environment. The total combines them into the displayed rally estimate and event-score view. Only eligible active captain-skill slots affect the model. The engine resolves skill effects by troop type: Infantry effects apply to Infantry, while Cavalry and Archer effects apply to their matching troop stacks. If an observed result was entered, prediction error shows the difference between the observation and the model. One close rally is useful evidence, not proof that every future rally will match."
       },
       {
         "heading": "Compare formations on the same basis",
-        "text": "The Formation Damage Map and recommended-formation results compare the current formation and alternatives using the same scenario assumptions. Troop groups, locks, capacity, and the chosen comparison scope matter throughout the search. The optimizer applies multi-scale top-region refinement . It begins with a broad coarse search across possible troop mixes, then takes the top candidate anchors and refines them by geometrically reducing the step size by 4x on each pass down to single-troop integer resolution. This multi-pass refinement prevents small optimal proportions (such as a 1.7% Infantry frontline share) from getting trapped between wide coarse intervals. Read the result state carefully: Result What it tells you --- --- Better candidate found A tested alternative improved the modeled result Current best in completed search No tested alternative in that completed search beat the cur"
+        "text": "The Formation Damage Map compares the current formation with alternatives under the same scenario assumptions. Open the Leader, average Joiner, or total Rally scope deliberately, because an Apply action targets only the named scope. The optimizer uses multi-scale top-region refinement . It starts with a broad search, refines the strongest regions by geometrically reducing the step size, and continues to single-troop resolution. Locks, troop quantities, and capacity still bound what can be tested. Result Meaning --- --- Better candidate found A tested alternative improved the modeled result Current best in completed search No tested alternative in that completed search was better No better candidate in limited search The bounded search did not establish an improvement Insufficient data or search failed Correct the setup before drawing a conclusion The ternary damage heatmap maps sampled I"
       },
       {
-        "heading": "Ternary damage surface and locked stack detection",
-        "text": "The Bear Trap formation view includes a Ternary Damage Heatmap that maps modeled rally damage across every possible combination of Infantry , Cavalry , and Archer : - Ternary Surface Heatmap: Plots candidate compositions with interactive sample markers, color-coded damage density gradients, and complete support for both Light and Dark color themes with high-contrast text and border tokens. - Locked Stack Restriction Callout: When troop stacks have fixed quantities, the optimizer cannot freely vary those troops. A warning banner alerts the user ( Locked troop stacks are restricting the search ) and identifies whether Leader, Joiner, or Rally stacks are locked. - One-Click Unlock Action: The callout provides an Unlock Stacks & Find Best Formation button. Clicking this unlocks the relevant stacks, clears the optimizer evaluation cache, and immediately recalculates the optimal formation acro"
+        "heading": "Bear Trap Rally Damage profile",
+        "text": "The Bear Trap Rally Damage build profile favors offense while keeping a defensive reserve: - Attack and Lethality use a 1.0 baseline for Infantry and Cavalry; - Archer offense uses 1.1 to represent the supported Ranged Strike assumption; - Health and Defense keep a 35% reserve so useful all-mode gear is not treated as disposable. Older saved Bear weights with the former standard reserves are migrated to the 35% reserve. Custom weight matrices remain custom. The suggested 5 / 25 / 70 formation is a starting assumption for the profile, not a universal answer. Compare nearby formations with your actual heroes, capacities, and account stats."
       },
       {
-        "heading": "Build weights and defensive reserves",
-        "text": "The Bear Trap Rally Damage preset is designed for offense while protecting equipment integrity: - Lethality and Attack weights: Set to 1.0 for Infantry and Cavalry , and 1.1 for Archer (capturing Archer's 10% Ranged Strike bonus against the Infantry Bear). - Defensive reserves: Health and Defense are assigned a 35% reserve (0.35 weight). Because the Bear does not attack back, offensive stats drive score, but the 35% defensive reserve ensures that durable all-mode gear is not treated as disposable reforge donors. - Legacy preset migration: Profiles saved under legacy Bear Trap weights with 0% or 25% reserves automatically upgrade to the standard 35% reserve when opened, while custom player weight matrices remain untouched."
-      },
-      {
-        "heading": "Keep hero assumptions honest",
-        "text": "Hero progression, supported skill effects, troop-type applicability, and widget or star requirements can change a comparison. The simulation engine resolves skill effects by troop type: an Infantry skill factor multiplies only Infantry stacks, while Archer and Cavalry skills apply strictly to their matching troop types, rather than applying a blanket multiplier across all troops. Profile prefill reduces typing, but inspect the values after selecting a different profile. A hypothetical hero recommendation is not proof that the account owns that hero or can meet its requirements. Example: You replay a rally and find the estimate much higher than the observed result. First confirm the actual captain skills, troop counts, stat source, tier, and temporary buffs. Correct one uncertain input at a time and rerun. Changing several values until the answer matches can hide the original mistake."
-      },
-      {
-        "heading": "What is saved or shared?",
-        "text": "The scenario is personal Lab planning data, not an official kingdom event record. Profile inputs follow the Lab saving rules. Sharing a Bear experience is a separate contribution action; review any submitted details before sending them. For different questions, use the Rally Simulator, Battle Simulator, or Hero Gear Optimizer."
+        "heading": "Saving and limitations",
+        "text": "The Bear scenario is personal Lab planning data. It is not a kingdom event record. A saved local draft and the active account profile have different ownership, and a contribution to the shared Bear experience flow is a separate explicit action. Important limits: - hidden or unsupported game effects remain outside the model; - a wrong stat source can double-count effects; - a constrained search cannot prove the current formation is perfect; - profile prefill reduces typing but does not prove a hero is owned or available for this rally; - changing any input makes the displayed result stale until you rerun. See Profiles and Shared Inputs for saving boundaries, Rally Simulator for effect stacking, and Hero Gear Optimizer for account progression."
       }
     ]
   },
@@ -1876,6 +1884,10 @@ export const searchIndex = [
         "text": "- Roles defines named permission bundles; role detail shows the bundle being edited. - Permissions provides the permission catalog and assignment view available to administrators. - User assignments connects a user to the permitted kingdom, alliance, or operational responsibility. - Registration requests reviews accounts awaiting approval, manages registration policy, and provides 1-click provisioning for suggested kingdoms and alliances. - Player-link reviews accepts or rejects requested account-to-player identity links. - Password requests tracks supported recovery or reset requests. Accessible summary: Approval, scope, permissions, and availability are all checked before a control is authorized."
       },
       {
+        "heading": "Minister of Justice requests and Server King review",
+        "text": "The Minister of Justice ( minister of justice ) is a specialized kingdom-scoped office responsible for castle position coordination and court management. - Submission: Authenticated users can request elevation to Minister of Justice via /access-requests under the Role Elevation tab, specifying their target kingdom and In-Game ID. - Review authority: In addition to Supreme Administrators, the Server King ( kingdom admin ) possesses verified administrative authority to review, approve, or reject Minister of Justice applications for their kingdom. - Security isolation: This role is unavailable on the public self-registration page to prevent unauthenticated role hoarding, and Server Kings cannot elevate other users to Server King without supreme admin elevation."
+      },
+      {
         "heading": "Registration queue, filter tabs, and 1-click provisioning",
         "text": "The Registration Requests console provides tools to manage incoming applicants: - Filter tabs with live counters: - All Requests: Complete list of applicants. - Player Requests (No Elevation): Dedicated view for approving ordinary player accounts without elevated role permissions. - Uncreated Entities (Suggestions): Isolates requests where the kingdom or alliance does not yet exist. - Search and server pagination: Fast search across player names, email addresses, server codes, and alliance tags, with configurable page sizes. - Suggestion badges: Uncreated kingdoms and alliances are marked with prominent visual badges (such as 🆕 New 999 and 🆕 New [TAG] ). - 1-Click Accept & Provision: Reviewers can click Accept & Provision on any suggestion. In a single atomic action, the platform creates the suggested kingdom and alliance, transitions the user from the holding realm into the newly crea"
       },
@@ -2048,6 +2060,52 @@ export const searchIndex = [
       {
         "heading": "Limits and troubleshooting",
         "text": "The reference does not guarantee that every live-game value is known or unchanged. A catalog update can make an older saved result non-reproducible unless its version was preserved. Clear search and filters before concluding that a row is absent. When reporting a discrepancy, provide the system, entity key, transition, displayed cost or stat, expected value, and catalog version; do not edit a personal profile to compensate for suspected catalog data."
+      }
+    ]
+  },
+  {
+    "title": "Championship Warboard",
+    "path": "/kingshot-events/lab/championship-warboard",
+    "category": "Simulations and Optimizations",
+    "audience": "Alliance Championship planners",
+    "level": "Intermediate",
+    "contentType": "Algorithm and decision logic",
+    "featureArea": "Simulations and Optimizations",
+    "aliases": [
+      "lab",
+      "hero gear",
+      "governor gear",
+      "chief gear",
+      "charm",
+      "bear joiners",
+      "autosave",
+      "profile autosave"
+    ],
+    "description": "Championship Warboard The Championship Warboard is a four-step, three-lane Alliance Championship planning tool. It compares your roster with several plausible opponent layouts, then produces deployment options designed for different levels ",
+    "sections": [
+      {
+        "heading": "Introduction",
+        "text": "Championship Warboard The Championship Warboard is a four-step, three-lane Alliance Championship planning tool. It compares your roster with several plausible opponent layouts, then produces deployment options designed for different levels of risk. It is a decision-support model, not an official Kingshot formula or a guaranteed match result. Open Championship Warboard from the Lab. The tool is available to visitors and does not require a tracked Ralyvora alliance."
+      },
+      {
+        "heading": "1. Build both rosters",
+        "text": "Set the Championship week, opponent name, and current round. Add your alliance and the opponent independently by using any of these methods: - add and edit players one at a time; - paste rows copied from Excel or Google Sheets; - paste CSV, tab-separated, or aligned text; - paste a single column of AC Squad Power values; - paste three AC columns headed as the three lanes; - use the screenshot prompt to convert screenshots with an external AI assistant, then review and paste its CSV output. The standard multi-column import accepts player name, real account Power, Town Center or Truegold context, AC Squad Power, and an optional player ID. AC Squad Power is the value the battle model uses to order and compare fighters. Real Power and Town Center are supporting context and do not replace observed AC when it is known. Imports open as a preview. Apply the valid rows and keep invalid or duplica"
+      },
+      {
+        "heading": "2. Review opponent intelligence",
+        "text": "Exact opponent AC is optional. When a player has real Power but no observed AC, the Warboard estimates AC from the Power and AC pairs entered in the current board. Every estimate is labeled, includes a likely range and confidence, and stays distinct from observed AC. ::: warning Estimates are planning inputs The calibration is based on the evidence in this Warboard. It is not an official game conversion formula. Sparse data, outliers, and estimates outside the observed Power range widen uncertainty. ::: For Round 1, you can run a blind plan without an opponent roster. The tool produces balanced, aggressive, and safer two-lane options from your own AC roster. If you add an opponent roster, the default Round 1 assumption treats the strongest modeled players as candidates, not confirmed participants. For Rounds 2 to 5, record only what was actually observed in earlier battles: - newly obser"
+      },
+      {
+        "heading": "3. Run and compare strategies",
+        "text": "Select the expected opponent lineup and a strategy, then choose Run Warboard . The run is explicit, so editing a roster or assumption marks older results stale until you run again. Results compare several deployment styles, including balanced, robust, aggressive, underdog, sweep, minimum-change, and manual plans when applicable. Each plan shows: - expected round-win outlook and a robust floor; - expected lane wins across plausible opponent layouts; - individual lane matchups, likely knockouts, and confidence; - the AC distribution and ordered fighter curve for both sides; - the assumptions and model evidence behind the recommendation. Alliance Championship battles are modeled as ordered lane duels, with weaker fighters entering before stronger fighters and a fighter retiring after two knockouts. A high total lane AC is useful context, but the result is calculated from the ordered individ"
+      },
+      {
+        "heading": "4. Save, update, and export",
+        "text": "Choose Save scenario to store the current week, opponent, round, rosters, observations, and predictions. Saved scenarios are keyed by week, opponent, and round. Warboard saves are browser-local and separated between a visitor and a signed-in user on the same browser. They are not cloud profiles, alliance records, or shared sessions. Clearing site data or changing browsers can remove them. After choosing a plan, you can: - copy formatted lane instructions for Discord; - download a CSV containing lane, order, player name, AC, estimate status, and lock state; - record the forecast before battle, then link later observations to review accuracy; - save a baseline board so later plans can minimize moves."
+      },
+      {
+        "heading": "Limitations",
+        "text": "- Hidden registration and hidden lane assignments remain uncertain until observed. - Confidence describes the model evidence in this board, not a promise of a win frequency. - Estimated AC should be replaced with observed AC when reliable evidence becomes available. - The tool does not submit a lineup to Kingshot or update tracked Player records. - Browser-local scenarios are not a substitute for an alliance backup or an official in-game roster. For reusable account equipment and combat facts in other Lab tools, see Profiles and autosave. For individual combat distributions rather than Championship lane planning, use the Battle Simulator."
       }
     ]
   },
@@ -3693,35 +3751,31 @@ export const searchIndex = [
       "applicant",
       "schedule row full"
     ],
-    "description": "Castle Position Applicant Guide Open the Castle Positions application for the intended kingdom. The page states whether applications are open, provisionally filled, published, or closed.",
+    "description": "Castle Position Applicant Guide Open the public Castle Positions link for the intended kingdom and application cycle. The form is available without a platform account and can be switched among the supported languages from the application pa",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Castle Position Applicant Guide Open the Castle Positions application for the intended kingdom. The page states whether applications are open, provisionally filled, published, or closed."
+        "text": "Castle Position Applicant Guide Open the public Castle Positions link for the intended kingdom and application cycle. The form is available without a platform account and can be switched among the supported languages from the application page."
       },
       {
-        "heading": "Submit an application",
-        "text": "1. Confirm the kingdom and player identity. Sign in or use the supported public identity flow shown by the form. 2. Review the configured application instructions and required fields. 3. Enter resource values and custom answers requested for the available stages. 4. For each stage, choose one primary availability: Not available , Any available time , or one offered UTC time. 5. Review the summary, including identity, resources, answers, and time preferences. 6. Submit once and keep the confirmation. The form validates required answers and incompatible time choices. Times are shown with UTC context in the final review. Some times can be provisionally taken; when the page permits it, you may request one with a note, but the manager must resolve the conflict."
+        "heading": "Submit a new application",
+        "text": "1. Confirm the kingdom and alliance. If your alliance is not listed, use the visible unlisted-alliance option and enter the requested label. 2. Identify the governor. A signed-in linked player may be suggested, while a guest provides the required public identity details. 3. Enter the requested resources and custom answers. True Gold is entered and displayed as an item count, while configured speedup resources can use effective days. 4. Upload resource proof when the cycle marks it required. Wait for the upload to finish. 5. For every stage, choose Not available , Any available time , or a specific UTC time. 6. Review identity, resources, proof, answers, and every stage choice. 7. Submit once and keep the confirmation details. The form shows step errors after you attempt to continue. It does not leave the time step until every stage has a valid choice. An occupied time is not automaticall"
       },
       {
-        "heading": "Application Review summary step",
-        "text": "Before final confirmation, the form presents an Application Review step. This review screen summarizes: - Selected kingdom and verified governor identity. - Target castle positions and stage availability choices. - Configured resource commitments and custom questions. - Attached resource proof screenshots and upload status. Review all details carefully before submitting to avoid duplicate or conflicting applications."
+        "heading": "Keep the guest secret access code",
+        "text": "A guest submission can return a Guest Secret Access Code . Copy and store it privately. The browser also remembers the code for convenience, but browser storage is not a reliable backup. The code reopens that exact application from the public Castle page. Treat it like a secret link: anyone with it may be able to view or edit the associated application while changes are allowed. An ordinary new-application link does not silently open a remembered application. Enter the code or use the exact edit link when you intend to return to an existing record."
       },
       {
-        "heading": "Confirmation and statuses",
-        "text": "After submission, Application received shows Submitted , Needs review , Under review , or Updated . Standby or needs review can mean an administrator must confirm the player identity. Linked means the application was connected to the player and submitted. The confirmation repeats requested stages and times. These are requests. A manager reviews eligible applications and the assignment becomes authoritative only in the published schedule."
+        "heading": "Edit one application or create another",
+        "text": "Use Edit application from the confirmation or return with the exact application link or guest code. An edit updates that application; it does not create a duplicate. When the cycle permits multiple applications, Create another application starts from step one with a clean identity and form. It deliberately ignores the previous draft and guest key so the earlier application is not overwritten. Do not use create-another mode merely to correct a time or resource amount. Edit the intended application instead. If the system detects a duplicate, the review team decides whether to use the latest submission or keep the existing one. Repeated clicks while a submission is already in progress are suppressed. Wait for the result before trying again."
       },
       {
-        "heading": "Update behavior",
-        "text": "When the application period and current status allow edits, reopen the same application and submit the changed availability or resources. The result shows Updated and retains the same application identity. Once applications close or a schedule is published, ordinary editing can be unavailable. Contact an authorized kingdom manager rather than submitting a second identity. Complete the step sequence and review the final UTC choices. - Kingdom and application-period banner with open, provisional, published, or closed state. - Player identity, configured resource fields, custom questions, and required-field feedback. - One availability or UTC time choice per stage, plus conflict or provisional notices. - Review summary, Submit or Update action, and Application received status."
+        "heading": "Understand status and leadership changes",
+        "text": "- Submitted or Updated: received and ready for review; - Needs review , Under review , or Standby: identity, eligibility, or another detail needs attention; - Accepted: eligible for scheduling, but not guaranteed a slot; - Rejected: not included unless leadership reopens and reviews it again. Leadership can correct an application record after checking the source evidence. The applicant status view identifies an adjusted record, shows the note and changed fields, and preserves the original submission for comparison. Requested times are not appointments. A slot becomes authoritative only when it appears in the published schedule."
       },
       {
-        "heading": "Problems",
-        "text": "If submission is blocked, check required fields, one choice per stage, application-period state, and player identity. If a prior application exists, update it. If your confirmation says Needs review , wait for the kingdom reviewer or provide the public application details they request."
-      },
-      {
-        "heading": "KvK resources and supporting screenshots",
-        "text": "When the cycle requests resource evidence, the application clearly states whether Resource Proof is optional or required. A required upload must finish successfully before submission. Review the screenshot preview, amounts, and UTC preferences together. Proof images have limited retention and are not public schedule pictures. See KvK Resources, Proof, and Points for accepted images, expiry, and day-specific scoring. If your player is missing or has a changed name, provide the correct in-game ID and let the reviewer resolve the identity. Approval can create or update the appropriate roster player; submitting a name alone does not. For a quick personal schedule without applications, the Local Castle Planner is also available to guests."
+        "heading": "Proof and privacy",
+        "text": "Proof screenshots have limited retention and are not public schedule images. Upload only the requested evidence. Do not include passwords, unrelated conversations, or unnecessary personal information. See KvK Resources, Proof, and Points for proof rules, Statuses and Changes for application and publication states, and Local Castle Planner for a browser-only personal schedule."
       }
     ]
   },
@@ -3740,31 +3794,31 @@ export const searchIndex = [
       "applicant",
       "schedule row full"
     ],
-    "description": "Castle Position Review Workflow Review converts submitted applications into a reliable candidate pool. It does not schedule the player by itself.",
+    "description": "Castle Position Review Workflow Review turns submitted applications into a reliable candidate pool. Acceptance makes a player eligible for scheduling. It does not assign or publish a Castle Position.",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Castle Position Review Workflow Review converts submitted applications into a reliable candidate pool. It does not schedule the player by itself."
+        "text": "Castle Position Review Workflow Review turns submitted applications into a reliable candidate pool. Acceptance makes a player eligible for scheduling. It does not assign or publish a Castle Position."
+      },
+      {
+        "heading": "Find the application",
+        "text": "Select the correct kingdom cycle, then use the Applications workspace to: - search by player identity; - filter by status; - show or hide rejected records; - compare total, accepted, pending, and rejected counts; - open an application's submitted details and resource proof. On a narrow screen, filters stack and the table scrolls within its container. Keep the selected kingdom and cycle visible before changing a status."
       },
       {
         "heading": "Review procedure",
-        "text": "1. Select the kingdom instance and confirm its application period. 2. Filter candidate pools by current status, stage, conflict, or other visible review controls. 3. Open a candidate and verify the shared player match, alliance context, requested stages and times, resources, and custom answers. 4. Resolve standby or identity-review cases before comparing candidates. 5. Mark the application with the supported review outcome and record a useful note when needed. 6. Send accepted or eligible candidates to the planner; keep rejected or unresolved candidates out of automatic placement. Candidate cards can distinguish scheduled and unscheduled pools. No applications yet means none were submitted to the selected instance. No candidates match these filters means the filters hid the available applications."
+        "text": "1. Verify the governor, in-game ID, kingdom, and alliance context. 2. Review requested stages, UTC choices, occupied-slot notes, resources, custom answers, and contact preference. 3. Open proof only when the cycle requests it and confirm that it supports the declared values. 4. Resolve missing or conflicting roster identity. Approval can link an existing player, correct a confirmed name, create an eligible missing player, or use a temporary participant when no roster record should be created. 5. Mark the supported outcome: accept, reject, or needs review. 6. Send accepted candidates to scheduling. Keep unresolved or rejected applications out of automated placement. True Gold is a count, not a duration. Other configured resources can be shown as effective days. Do not read a True Gold value as 0d merely because both types appear in the same application."
       },
       {
-        "heading": "Interpret indicators",
-        "text": "- Submitted : received and waiting for review. - Standby or Needs review : identity or eligibility needs confirmation. - Accepted : eligible for planning, not guaranteed a slot. - Rejected : not included unless a manager deliberately changes the review outcome. - Scheduled : currently placed in the draft or published schedule. - Conflict indicators: requested time, duplicate placement, overlap, capacity, or another visible constraint needs manager attention. Resources and configured eligibility checks help reviewers compare candidates. They do not replace judgment or prove that a value is accurate. The suggestion and ranking mechanism is intentionally not documented as a public algorithm."
+        "heading": "Correct a submitted record",
+        "text": "Authorized leadership can adjust a submitted application after verifying the source. Enter a note that explains the correction. The status view then shows: - an adjusted badge and adjustment count; - who changed the record and when; - the review note; - each field's old and new value; - the original applicant submission for comparison. Use this for a verified correction, not to hide a disagreement or rewrite an applicant's history. Applicants can see leadership modifications on their status view."
       },
       {
-        "heading": "As a Minister of Justice or kingdom manager",
-        "text": "Work only in the assigned kingdom, confirm each candidate's source information, and separate application review from final scheduling."
+        "heading": "Resolve duplicates and rejected applications",
+        "text": "When two submissions represent the same application scope, use the duplicate-resolution action to keep the existing record or use the latest submission. Do not schedule both as separate candidates. A rejected application can be reopened to Needs review , corrected or rechecked, and then accepted when appropriate. Reopening is an explicit status change and does not assign a slot."
       },
       {
-        "heading": "What the platform does automatically",
-        "text": "It groups candidates, displays configured eligibility and conflicts, and can prepare suggestions. The manager owns acceptance and placement decisions. Use filters and candidate detail before changing a review outcome. - Instance and application-period context with candidate status filters. - Candidate pools for submitted, needs-review, accepted, rejected, and scheduled applications. - Player identity, requested stages and times, resources, custom answers, and conflict badges. - Review status, notes, selection controls, and action to continue to scheduling. Next: Planning, Scheduling, and Publishing."
-      },
-      {
-        "heading": "Reviewed roster changes and temporary participants",
-        "text": "Approval now resolves an eligible player identity into the selected kingdom and alliance: it can create a missing player or update the name on the matching in-game ID. If identities conflict or more than one record matches, resolve that ambiguity before approving. A similar nickname alone is not a safe reason to merge people. For a participant who should not become a roster player, use a temporary participant in the managed schedule instead. That choice is marked as temporary and does not create a player or application. See Temporary Participants and Reviewed Players. Review resource screenshots only for their intended purpose, and use the appropriate day in KvK Resources, Proof, and Points. An accepted identity still needs a compatible assignment and publication before its time is confirmed."
+        "heading": "Interpret review states",
+        "text": "- Submitted: waiting for review; - Needs review or Standby: identity, eligibility, or another conflict needs attention; - Accepted: eligible for the planner; - Rejected: excluded until deliberately reopened; - Scheduled: currently placed in a draft or published schedule, so publication state still matters. Candidate ranking and suggestions consider recorded inputs only. They cannot see offline agreements or verify an unsupported resource claim. The manager remains responsible for the final review decision. Next: Planning, Scheduling, and Publishing. For a participant who should not become a roster player, see Temporary Participants and Reviewed Players."
       }
     ]
   },
@@ -3783,39 +3837,35 @@ export const searchIndex = [
       "applicant",
       "schedule row full"
     ],
-    "description": "Planning, Scheduling, and Publishing The planner turns reviewed candidates into a dated schedule. Select the correct kingdom instance and stage before placing anyone.",
+    "description": "Planning, Scheduling, and Publishing The scheduling workspace turns reviewed candidates into a dated Castle Position schedule. Select the correct kingdom, application cycle, and stage before moving anyone.",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Planning, Scheduling, and Publishing The planner turns reviewed candidates into a dated schedule. Select the correct kingdom instance and stage before placing anyone."
+        "text": "Planning, Scheduling, and Publishing The scheduling workspace turns reviewed candidates into a dated Castle Position schedule. Select the correct kingdom, application cycle, and stage before moving anyone."
       },
       {
-        "heading": "Read the planner",
-        "text": "The stage navigator changes the active scheduling segment. Position columns represent configured castle positions; time rows represent stage slots. A cell can be available , occupied , or reserved . Player cards show the assigned candidate and visible fit or conflict information. If a stage has no slots, set its date and slot count before scheduling. An empty earlier slot followed by a filled later slot produces a gap warning; saving can preserve an available gap, or the manager can compact or reserve it."
+        "heading": "Choose grid, list, or focused work",
+        "text": "The grid shows configured Castle Positions as columns and UTC times as rows. A cell can be available, occupied, reserved, or locked. Candidate cards show identity, priority, relevant resources, preferred time, notes, and visible conflicts. The chronological list view shows assigned appointments with UTC time, local-time context, player, position, time fit, lock state, and actions to move earlier or later. It is useful on narrow screens and for reviewing the stage in time order. Copy the list when you need a plain-text working view. Use focused full-screen mode for a larger scheduling surface. On mobile, toolbars and actions stack, tables remain horizontally scrollable, and primary actions stay reachable. A small screen does not change validation or publication rules."
       },
       {
         "heading": "Build and save a draft",
-        "text": "1. Confirm stage dates, slot count, positions, and any required resources. 2. Place accepted candidates only into compatible times and positions. 3. Inspect overlap, duplicate, capacity, locked-slot, and availability feedback. 4. Lock an assignment that should not be moved by later suggestions. 5. Use suggestions as reviewable proposals. Apply, ignore, or replace them deliberately. 6. Save the draft and wait for the saved state. Unsaved changes remain a manager workspace and are not a participant schedule. Automatic suggestions use configured candidate inputs and constraints, but managers remain responsible for identity, availability, fairness, and conflicts. The private scoring or placement algorithm is not public documentation."
+        "text": "1. Confirm stage date, positions, slots, and required resources. 2. Review accepted candidates and their recorded availability. 3. Place a compatible candidate by click or drag controls. 4. Inspect overlap, capacity, duplicate, time-fit, and eligibility feedback. 5. Reserve a slot that must remain intentionally empty, or add a named temporary participant where supported. 6. Lock an assignment that suggestions and ordinary moves must preserve. 7. Use suggestions as proposals, then accept, change, or ignore each result. 8. Save the draft and wait for the saved state. An empty earlier slot followed by a filled later slot can produce a gap warning. Resolve, reserve, or deliberately keep the gap according to the visible controls. A draft is not participant-facing merely because it was saved."
       },
       {
-        "heading": "Publish",
-        "text": "Run the visible validation or review summary. Resolve invalid or ambiguous assignments, then choose Publish when the complete draft is ready. Publication makes that version visible to participants and can trigger configured notifications. It does not lock every future change permanently. After publication, make changes through the same planner. Save and republish or use the visible change workflow so participants see the new assignment. Moving, removing, or changing a time can produce a changed state and notification. Treat the latest published schedule as authoritative. Read stage, positions, times, and publication state together. - Instance and stage selector with stage date and slot configuration. - Position columns, time rows, available, occupied, and reserved cells, and player cards. - Candidate drawer, conflict badges, lock controls, suggestions, and gap actions. - Unsaved or Saved"
+        "heading": "Read time fit and conflicts",
+        "text": "Time fit compares the slot with the application's recorded choice. A preferred or compatible time is different from a distant or conflicting assignment. Do not widen an applicant's availability because it would make the board easier to fill. Locked assignments cannot be moved earlier or later until unlocked. Reserved slots must be released before a participant can replace them. If a participant would overlap another appointment, correct the conflict before publishing."
       },
       {
-        "heading": "Purpose and decision workflow",
-        "text": "Planning turns reviewed eligible applications into one conflict-checked kingdom schedule. A Minister of Justice, King, or other authorized planner selects the kingdom cycle, reviews the slot grid, preserves locked manual placements, and asks for suggestions only from candidates who remain eligible for that position and compatible with the open time. Candidate order can consider review state, preferred time, resource relevance, application priority, current placements, and the configured public-safe ranking rules. A full row, incompatible time, conflict, lock, or missing eligible candidate produces a gap or standby outcome rather than an invented placement. Planner structure and draft-to-publish decision. Suggestions do not bypass manager review or whole-draft validation. Accessible summary: Eligible applications enter a grid, locks are preserved, compatible candidates may be suggested, a"
+        "heading": "Suggestions and minimum-change planning",
+        "text": "Suggestions use only reviewed candidates, recorded availability, eligibility, resources, locks, current placements, and configured ordering. They do not know offline agreements and cannot guarantee political fairness. Preserve valid manual placements and locks before requesting suggestions. Use a minimum-change approach when a published or agreed board already exists and unnecessary moves would create confusion."
       },
       {
-        "heading": "Worked example, later change, and recovery",
-        "text": "Starting situation: A preferred-time row becomes full before candidate Ilya is placed. Ilya is otherwise eligible. The planner eliminates the full row, finds no other compatible time, and leaves Ilya on standby. The manager does not widen Ilya's availability. After publication, another participant withdraws. The manager starts a controlled change from the current version, rechecks Ilya and all locks, places Ilya if the new slot qualifies, validates, and publishes the next version. The previous version remains historical and affected participants receive the supported notice. The planner cannot see offline agreements, unsubmitted availability, or unrecorded resources. If publication fails, record cycle, row, position, conflict, locks, candidate state, and draft version. Resolve the source application or placement; do not duplicate the schedule."
+        "heading": "Validate and publish",
+        "text": "Run the visible validation or review summary. Resolve invalid assignments and ambiguous conflicts, then choose Publish when the complete draft is ready. Publication creates the participant-facing schedule version and can trigger configured notices. It does not make future correction impossible. For a later change: 1. start from the current board; 2. preserve unaffected locks; 3. make the smallest supported correction; 4. save and validate; 5. publish the successor version; 6. verify the affected participant view. The latest published version is authoritative. Email is a convenience and can fail or arrive late, so it is not the schedule record."
       },
       {
-        "heading": "Limitations",
-        "text": "Suggestion order cannot guarantee political fairness or a globally optimal schedule. It evaluates only recorded applications, resolved identity, eligibility, time choices, resources, locks, grid capacity, and configured ordering. Human reviewers remain responsible for exceptional context and for documenting a manual placement. Publishing validates product constraints, not an external promise that every participant will attend. See Statuses and Changes for the participant result and Castle Position Problems for save or visibility issues."
-      },
-      {
-        "heading": "Less interruption while arranging the board",
-        "text": "The scheduling workspace preserves the current administration context and refreshes data without repeatedly restarting the page. A valid kingdom selection is remembered, and the Points view uses that selected kingdom. Check the kingdom heading when returning from another area or account. You can include temporary participants without first creating roster players. They still belong to the managed schedule and follow its draft and publication rules. The separate Local Castle Planner reuses interactive slot cards for small guest or personal tasks. Its browser-only plan cannot replace this shared publication workflow."
+        "heading": "Application adjustments remain visible",
+        "text": "If leadership corrects an applicant's identity, resource, or time information, review the adjustment history and note before scheduling. The original submission remains available for comparison. A correction does not bypass eligibility or publication validation. For application decisions, see Review Workflow. For applicant-facing states, see Statuses and Changes. The Local Castle Planner is browser-only and cannot publish this shared schedule."
       }
     ]
   },
@@ -4076,115 +4126,47 @@ export const searchIndex = [
       "autosave",
       "profile autosave"
     ],
-    "description": "Save account assumptions, compare upgrade paths, and interpret every result as a scenario rather than a guaranteed outcome. Lab Overview and Profiles The Lab contains profiles, progression planners, optimizers, combat simulators, and suppor",
+    "description": "Save account assumptions, compare upgrade or battle scenarios, and treat every output as modeled guidance. Lab Overview and Profiles The Lab contains account profiles, progression planners, optimizers, combat simulators, the Championship Wa",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Save account assumptions, compare upgrade paths, and interpret every result as a scenario rather than a guaranteed outcome. Lab Overview and Profiles The Lab contains profiles, progression planners, optimizers, combat simulators, and supporting game data. Module cards show whether a tool is public, requires sign-in, is beta, or is currently unavailable."
-      },
-      {
-        "heading": "Profiles and saved inputs",
-        "text": "A profile stores reusable supported inputs such as account stats, troop bonuses, formations, Hero Gear, Governor Gear, Charms, heroes, widgets, and owned resources. It is not a live connection to the game account. Update it after every relevant in-game change. Visitors can use a device-saved profile. Clearing site data, changing browsers, or using private browsing can remove or isolate it. Signed-in users can create and select saved profiles where cloud persistence is available. Always check the active profile name before editing or running a module. Some tools can apply an accepted plan back to the selected Lab profile. Applying changes the stored planning state, not the game account. Review the target levels and consumed resources before confirming."
-      },
-      {
-        "heading": "Choose a module",
-        "text": "- Hero Gear Optimizer , Governor Gear Optimizer , and Charm Optimizer plan progression with current slots and inventory. - Bear Trap Simulator models a rally against the Bear with captain, joiners, formation, and stats. - Rally Simulator compares supported captain, joiner, formation, and stacking choices. - Battle Simulator runs a configured attacker and defender scenario. Select the profile before the module and review persistence feedback after saving. - Module cards with public, sign-in, beta, premium, or unavailable state. - Active profile selector, create, rename, duplicate, save, or delete actions where available. - Profile sections for account stats, troops, equipment, heroes, widgets, formations, and inventory. - Freshness or missing-input feedback and links to each compatible optimizer or simulator. All Lab outputs are modeled guidance. Continue with Interpreting Results and Lim"
-      },
-      {
-        "heading": "How profiles and modules relate",
-        "text": "The active profile supplies shared account assumptions. Module-specific fields then describe a progression or combat scenario. Debounced autosave shows pending, saved, failed, or conflict state; switching profiles must not let an older pending response overwrite the newly active profile. Running a module uses the resolved saved and typed inputs at that moment. The output belongs to the scenario and never changes a live game account. Lab feature map. A profile supplies shared inputs; each module adds controls and produces a versioned scenario result only after validation. Accessible summary: Users select a profile, add progression or combat inputs, resolve invalid or unsaved state, run the model, and interpret its output and limitations."
-      },
-      {
-        "heading": "Decision mechanisms",
-        "text": "Hero Gear, Governor Gear, and Charm planning generate valid next candidates, remove locked, maximum, unaffordable, or out-of-scope choices, compare weighted gain with normalized cost, apply the best positive candidate, update resources, and repeat. The ordinary upgrade loop is greedy and iterative, with system-specific staging such as Hero Gear milestone bundles and reforge or Governor Gear set deltas. Hero Gear total-stat mode also compares alternate plans with its own priority protections; see its dedicated guide. It is not an exhaustive proof of global optimality. Bear Trap resolves the rally leader separately from joiners, validates capacity and formation, applies supported troop, Truegold, hero, captain, skill, stat, and temporary-buff effects, and distinguishes deterministic, probabilistic, estimated, and unresolved mechanics. Prediction error requires an observed result and helps "
-      },
-      {
-        "heading": "Worked example and common mistakes",
-        "text": "Starting situation: A Charm plan leaves Guides unused after Designs reach zero. Rules: Every candidate must cover all required materials. Branch: Design-requiring candidates are removed; a Guide-only positive candidate may continue, otherwise the plan stops. Output: Ordered steps and leftovers explain the stop. Next action: Correct the inventory only if it was entered incorrectly, then rerun from the same profile. Avoid running from the wrong profile, leaving an autosave pending, mixing game-displayed and estimated values, treating a modeled target as an in-game save, or claiming global optimality. If output surprises you, compare one controlled input change in a copied scenario."
+        "text": "Save account assumptions, compare upgrade or battle scenarios, and treat every output as modeled guidance. Lab Overview and Profiles The Lab contains account profiles, progression planners, optimizers, combat simulators, the Championship Warboard, and supporting Game Data. The Hub states and module availability distinguish loading, unavailable, empty, ready, and error conditions. A tool can also be public, require sign-in, be beta, or be temporarily disabled."
       },
       {
         "heading": "Why the Lab exists",
-        "text": "The Lab turns a vague question such as “what should I upgrade?” or “why did this rally behave differently?” into a reproducible scenario. Its purpose is not one impressive number. Its purpose is to expose assumptions, constraints, candidate choices, resource use, and uncertainty so alternatives can be compared. The Lab is useful when a decision has interacting inputs: shared resources, locks, set thresholds, troop priorities, leader and joiner roles, formation capacity, stacking rules, or repeated battle variation. Outputs keep ordered steps, before-and-after state, leftovers, rejected effects, distributions, and limitations close to the scenario."
+        "text": "The Lab turns a broad question into a reproducible scenario. It exposes the account facts, scenario fields, locks, material limits, catalog version, model assumptions, and uncertainty used to produce an answer. Every calculation changes planning state only. It cannot spend game resources, equip gear, register an Alliance Championship lineup, publish a Castle schedule, or prove a live outcome."
+      },
+      {
+        "heading": "Shared profiles and scenario fields",
+        "text": "Signed-in users can create account profiles that are available on their account. The Profile library and persistence lets an owner create, select, rename, duplicate, update, and remove profiles. The active profile can reuse: - march capacities and troop counts, tiers, and Truegold progression; - selected heroes, skill levels, and supported widgets; - Hero Gear, Mastery, Governor Gear, and Charms; - shared material balances; - named combat-stat snapshots. Stat snapshots, sources, and layers record all twelve combat percentages and what is already included. Source labels help a tool avoid adding the same equipment or widget contribution twice. Tool-specific scenario fields remain separate. Examples include an optimization objective, temporary budget, Bear formation, Battle opponent, or Warboard roster. Switching profiles refreshes shared facts and clears results that belong to the earlier "
       },
       {
         "heading": "Module purpose and output map",
-        "text": "Module Question it answers Important inputs Output to inspect --- --- --- --- Profiles Which account assumptions should every tool reuse? Gear, stats, materials, formations, heroes, widgets Active profile, saved state, freshness, version Hero Gear Which valid enhancement or mastery step offers the best current value? Levels, mastery, locks, weights, materials, optional reforge Ordered steps, milestone bundles, spending, leftovers Governor Gear How do six pieces compete when set effects and three inventories interact? Item levels, locks, weights, Satin, Thread, Vision Direct and set deltas, before/after set state Charms Which next levels best use Guides and Designs across troop priorities? Eighteen slots, locks, weights, Guides, Designs Slot upgrades, weighted gains, leftovers Bear Trap How do leader and joiner inputs resolve into modeled contribution and damage? Troops, tier, Truegold, c"
+        "text": "Module Question it answers Inputs to verify Output to inspect --- --- --- --- Profiles Which account facts should compatible tools reuse? Equipment, stats, resources, capacities, heroes Active profile, source, saved state Ascension Path Which cross-system checkpoint should come next? Hero Gear, Governor Gear, Charms, nine resources Ordered path, target shortages, Projected Build Hero Gear How should four resources be allocated across twelve pieces? Enhancement, Mastery, Red state, context, locks Reforge verdict, milestones, costs, before and after Governor Gear Which next levels best use Satin, Gilded Thread, and Artisan Vision? Six levels, set state, objective, locks Ordered steps, set deltas, remaining resources Charms Which next charm levels best use Guides and Designs? Eighteen slots, priorities, locks Ordered upgrades, stopping reason, leftovers Bear Trap How do leader, joiner, form"
       },
       {
-        "heading": "Demonstration: one profile, three questions",
-        "text": "Assume Nia''s profile contains current gear, troop stats, a 100,000 march capacity, materials, and heroes. 1. In Hero Gear , the optimizer generates next steps, removes locked and unaffordable candidates, values gain against normalized cost, applies one step, consumes resources, and recalculates. The answer is an ordered plan, not a target typed in advance. 2. In Rally , the same profile supplies base assumptions, but Nia configures a leader and joiners for one scenario. The tool separates roles and classifies effects. It does not spend profile materials. 3. In Battle , Nia configures both sides and a repeat count. The tool reports modeled variation. It does not update Rally and does not claim the most favorable trial will occur live. Shared profiles reduce re-entry, while scenario fields keep unrelated experiments separate."
+        "heading": "Progression planning",
+        "text": "Hero Gear planning and reforge distinguishes Enhancement, Mastery Forging, Red ascension, Imbuement milestones, profile locks, and recoverable versus irreversible XP. Select an optimization objective and inspect the no-Reforge comparison before acting. Governor Gear evaluates direct and set changes under three resource limits. Charm planning evaluates valid next levels across eighteen slots. A candidate can disappear because it is locked, at maximum, unaffordable, missing a valid catalog step, or has no positive value under the current objective. Ascension Path combines the three systems, keeps their nine material budgets separate, and shows the projected physical build behind the numeric result."
       },
       {
-        "heading": "Input ownership and safe application",
-        "text": "Profile values, scenario overrides, catalog values, and observed outcomes are different evidence classes. An override should not silently rewrite a profile. A catalog correction should not be simulated by falsifying material balance. An observed Bear result can measure prediction error but must not mutate event history. When a plan can be applied to a profile, confirmation should identify target profile, new levels, and consumed resources. It updates planning state only. The user still performs any real upgrade in game and refreshes the profile from the actual result."
+        "heading": "Combat and Championship planning",
+        "text": "Bear Trap has two different boundaries: Simulate and contribute . Simulation uses profile and scenario inputs. Share Your Bear Experience is a separate explicit flow for an observed result and never silently rewrites the profile. Rally separates leader and joiner effects, prerequisites, and stacking categories. Battle uses a worker-backed repeated model and keeps attacker and defender sources independent. Championship Warboard accepts manual, spreadsheet, and AC-only roster input, works with partial opponent intelligence, and compares several three-lane strategies. Saved scenarios and observations stay in the current browser. Read Championship Warboard."
       },
       {
-        "heading": "Failure diagnosis by module",
-        "text": "- No candidate: check locks, maximum levels, complete costs, positive weights, and every required material. - Sequence stops early: inspect leftovers and the first exhausted resource. - Rally effect rejected: check role, active slot, prerequisite, and stacking category. - Battle distribution extreme: verify both side assignments, counts, percentages, repeat count, and data version. - Different user result: compare profile, overrides, catalog and engine versions, and every control. - Save conflict: preserve values, reload the newer version, and reapply only intended changes. The Lab cannot guarantee global optimality or live results. Its value is a transparent, repeatable comparison whose limitations remain attached."
-      },
-      {
-        "heading": "Hub states and module availability",
-        "text": "The Lab landing page distinguishes loading, unavailable, empty, ready, and error states. Availability can depend on rollout, access, or configuration; an absent module is not evidence that a saved profile was deleted. Each module card should identify its question, required inputs, output type, and limitations before a user starts changing values."
-      },
-      {
-        "heading": "Profile library and persistence",
-        "text": "The profile library is the reusable source of planning inputs. Users can create, select, rename, duplicate, update, and remove profiles within their permitted scope. Autosave reduces repetitive work, but version checks prevent an older browser tab from silently overwriting newer data. A conflict should preserve local values long enough to compare and reapply the intended change."
-      },
-      {
-        "heading": "What a profile contains",
-        "text": "A complete profile can preserve: - identity and server or kingdom context; - march capacities and troop counts; - troop tier and Truegold-related values; - selected heroes, skill levels, active slots, and supported widgets; - combat-stat snapshots with source labels; - layered bonuses and effective combat values; - hero gear, governor gear, charms, and upgrade state; - shared resource balances used by optimization modules. Missing values remain missing. The Lab must not replace an unknown troop count, level, or source with a plausible-looking default and then present the result as verified."
-      },
-      {
-        "heading": "Stat snapshots, sources, and layers",
-        "text": "A snapshot records the values used by a scenario at a point in time. Source labels distinguish profile values, catalog values, explicit scenario overrides, and observed outcomes. Layer views explain how base values and bonuses combine. This makes two runs comparable and prevents a later profile edit from changing the meaning of an earlier result."
-      },
-      {
-        "heading": "Hero Gear planning and reforge",
-        "text": "Hero Gear supports objective-driven comparisons rather than a single unexplained score. A user selects eligible gear, locks items that must not change, supplies resource balances, chooses weights or an optimization objective, and reviews the proposed upgrade sequence. Reforge planning uses its own controls and cost constraints. Results should show consumed materials, leftovers, stat changes, stopping reason, and whether the plan can be applied back to the selected profile."
-      },
-      {
-        "heading": "Governor Gear",
-        "text": "Governor Gear compares upgrade candidates against shared material limits and the selected objective. It should expose prerequisites, item state, costs, proposed order, and remaining resources. The recommended sequence is a plan for the represented data version; it is not proof that every future catalog or game balance will produce the same order."
-      },
-      {
-        "heading": "Charms",
-        "text": "Charm planning evaluates current levels, eligible next levels, complete cost data, locks, and available materials. A candidate can disappear because it is already at maximum, lacks a valid next level, violates a lock, or needs a missing resource. The result must explain both selected upgrades and the first reason optimization stopped."
-      },
-      {
-        "heading": "Bear Trap: simulate and contribute",
-        "text": "Bear tools have two intentionally different modes. Simulate uses profile and scenario inputs to estimate formation or contribution outcomes and keeps the assumptions visible. Share Your Bear Experience records an observed result as contribution evidence when the signed-in flow permits it. Observed evidence can measure prediction error, but it must not silently rewrite the simulation profile or event history."
-      },
-      {
-        "heading": "Rally setup and effect resolution",
-        "text": "Rally planning separates leader and joiner contributions, active hero slots, troop composition, march capacity, role-specific effects, prerequisites, and stacking categories. Warnings identify invalid assignments or unsupported combinations. The effect breakdown should show accepted and rejected effects, widget or passive contributions, and the resulting multipliers so users can explain the final comparison."
-      },
-      {
-        "heading": "Battle simulation",
-        "text": "Battle simulation compares two explicitly configured sides using a worker-backed repeated model. Users review formations, heroes, counts, tiers, statistics, controls, repeat count, seed or repeatability information when available, and catalog or engine version. The output is a distribution across repeated runs; not a guaranteed live outcome; and should include enough controls to reproduce or challenge the comparison."
-      },
-      {
-        "heading": "Game Data",
-        "text": "Game Data is the reference surface for supported catalogs used by Lab modules. Search and category navigation help users locate heroes, skills, troops, gear, costs, and related records. Version and source labels matter: artwork, catalog completeness, and simulation support can have different statuses, so visual presence alone does not prove that a record participates in every engine."
+        "heading": "Game Data and visual references",
+        "text": "Game Data is the reference surface for supported costs, heroes, skills, troops, gear, and other catalog records. Search and category navigation help locate an entry. An image existing in the interface does not prove the entry participates in every calculation. The Lab uses a Cyber design system with an Ambient canvas backdrop, Compact battle cards, semantic troop and stat colors, and mobile navigation. Its authentic game asset mapping includes supported equipment artwork such as awakened Red tier gear. A Structured fallback system keeps a labeled category icon visible when a specific image is missing."
       },
       {
         "heading": "Result trust labels",
-        "text": "Label Meaning --- --- Profile input Persisted user-controlled planning value Scenario override Temporary value for the current comparison Catalog input Versioned application reference data Derived result Calculated from declared inputs and engine rules Observed contribution User-submitted real outcome with its own context Applied plan Confirmed planning-state update; never an in-game action A trustworthy Lab result always lets the reader answer: which profile, which overrides, which catalog version, which controls, which engine assumptions, and which warnings produced this output."
+        "text": "Label Meaning --- --- Profile input Saved account fact controlled by the profile owner Scenario override Temporary value for one comparison Catalog input Versioned application reference data Derived result Calculated from declared inputs and model rules Observed contribution User-submitted real outcome with its own context Applied plan Confirmed planning-state update, never an in-game action"
       },
       {
-        "heading": "Visual architecture and Cyber design system",
-        "text": "The Lab uses a unified Cyber design system tailored for high-density strategic planning: - Ambient canvas backdrop: The interface features a subtle animated mesh background that provides visual depth without distracting from data entry or slowing down calculation rendering. - Card depth and button sheens: Tool cards use layered background gradients, soft inner borders, and constrained button sheen animations on hover to keep interactive controls distinct. - Compact battle cards and inputs: Input sections utilize compact number steppers and slim troop percentage bars to maximize visible screen space during complex multi-troop configurations. - Semantic troop styling: Every module enforces standardized color coding for troop classes: - Infantry: Blue / Cyan tones - Cavalry: Amber / Orange tones - Archer: Green / Emerald tones - Stat palette consistency: Stat gains and trajectories use matc"
+        "heading": "Safe application",
+        "text": "When an optimizer offers Apply , review the target profile, projected levels, and consumed resources. Safe application updates the supported profile fields only. It does not apply combat totals, unrelated scenario settings, or anything inside Kingshot. Screenshot import follows the same boundary: review recognized values and apply only selected valid changes. Uncertain fields remain unselected."
       },
       {
-        "heading": "Authentic game entity artwork and asset fallbacks",
-        "text": "The Lab incorporates authentic game asset mapping to replace generic icons with recognizable in-game visuals: - Hero Gear: High-resolution assets distinguish standard Epic equipment from awakened Red tier gear across all twelve slots (helm, gloves, chest, and boots for each troop class). - Governor Gear: WebP illustrations reflect exact troop type, piece placement, rarity color, tier level, and star count. - Charms: Distinct level illustrations map progression across all 22 charm tiers for Infantry , Cavalry , and Archer . - Truegold Progression: Dedicated troop artwork renders Truegold tiers 1 through 8. - Skills and Exclusive Widgets: WebP icons illustrate hero battle skills and hero-exclusive widgets, supported by an alias dictionary to match varied item naming. - Structured fallback system: When an image is loading or unavailable, the engine displays semantic SVG category icons (Crow"
-      },
-      {
-        "heading": "Recommended reading order",
-        "text": "Begin with Profiles, Autosave, and Optimization Order, then choose Hero Gear, Governor Gear, Charms, or Bear Trap. Finish with Interpreting Results and Simulator Problems."
-      },
-      {
-        "heading": "Plan across systems, or enter a build faster",
-        "text": "Ascension Path brings Hero Gear, Governor Gear, and Charms into one progression view. Check the current build, choose a combat focus, inspect the next target and forecast, and compare hypothetical resource offers without buying anything or changing the confirmed account. Screenshot build import lets you choose, drag, or paste relevant game screens and review recognized changes before applying selected values. This updates Lab inputs, not event results. Manual entry remains the fallback when an image is unclear or the import option is unavailable. The Lab's cards, stat-source explanations, result tables, charts, and mobile controls have been reorganized to make assumptions and next actions easier to find. Use the current result's labels and freshness notice rather than assuming an older screenshot describes the current calculation."
+        "heading": "Failure diagnosis by module",
+        "text": "- No candidate: inspect locks, levels, prerequisites, weights, and every required material. - Sequence stops early: find the first exhausted resource and read the leftovers. - Account totals look wrong: verify the stat source and included layers. - Bear or Rally effect is missing: verify role, active slot, troop type, and prerequisites. - Battle distribution is extreme: compare both side assignments, stats, formations, seed, and repeat count. - Warboard result is weak: add observed AC or round evidence, then review the confidence range. - Stale result: rerun after changing a profile or scenario. - Save conflict: preserve your typed values, reload the newer profile version, and reapply only the intended change. Continue with Interpreting Results, the guide for the selected tool, or Simulator Problems."
       }
     ]
   },
@@ -5045,6 +5027,10 @@ export const searchIndex = [
         "text": "User-facing Release Notes"
       },
       {
+        "heading": "September 14, 2026: Championship Warboard and connected planning",
+        "text": "This release adds the public Championship Warboard, expands shared Lab profiles, and improves the explanation and safety boundaries in Hero Gear, Ascension Path, and Bear Trap. Castle Position applicants can return through private guest access codes, provide resources and availability, and request occupied slots with context. Reviewers gain clearer filters, proof review, and audited adjustments. Schedulers can use focused, chronological, and mobile-friendly planning views. The Local Castle Planner now keeps richer participant details in its browser-only workspace. The standalone importer-ready announcement is maintained at the documentation repository root as ralyvora-update-2026-09-14.md ."
+      },
+      {
         "heading": "September 5, 2026: Strict Scoping, 1-Click Provisioning, Self-Service Requests, and Optimizer Precision",
         "text": "Since the September 3 update, Kingshot Events has introduced strict tenant scoping safeguards, holding realm isolation, automatic overflow alliance management for free tier kingdoms, mandatory in-game ID tracking, a self-service space for registered user access requests, 1-click provisioning of suggested kingdoms and alliances, full-stack castle position application review summaries and cycle management, exact Knapsack Pareto gear optimization, and Recycle Bin support for event sessions."
       },
@@ -5054,7 +5040,7 @@ export const searchIndex = [
       },
       {
         "heading": "Improved",
-        "text": "- Castle Positions application review: The application workflow adds an Application Review step, presenting a full summary of governor identity, position selections, cycle preferences, and proof requirements before final submission. - Castle board and cycle management: Organizers can rename cycles, toggle active cycle states, manage temporary participants, and configure proof verification rules directly from the board interface. - Notifications read-on-visible: The notification center automatically marks cards as read as they scroll into view using intersection observers, while preserving unfinished action items. - Registration settings contact message: Administrators can customize an accelerated review message with contact instructions that appear to applicants upon registration and on their access requests page."
+        "text": "- In-game name and username clarity: The topbar user chip and account profiles now clearly display both the player in-game name and account username (with a dedicated @username badge), ensuring players always know their exact login credentials. - Universal updates availability: Governors in holding realm or unassigned scopes have uninterrupted access to platform updates and announcements. - Castle Positions application review: The application workflow adds an Application Review step, presenting a full summary of governor identity, position selections, cycle preferences, and proof requirements before final submission. - Castle board and cycle management: Organizers can rename cycles, toggle active cycle states, manage temporary participants, and configure proof verification rules directly from the board interface. - Notifications read-on-visible: The notification center automatically mark"
       },
       {
         "heading": "Fixed",

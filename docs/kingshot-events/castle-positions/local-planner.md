@@ -1,62 +1,75 @@
 ---
 title: 'Local Castle Planner for Guests'
-description: 'Build a small Castle schedule with browser-only participants, half-hour slots, and resource budgets.'
+description: 'Build a browser-only Castle schedule with participant availability, resources, fixed half-hour slots, and backups.'
 product: 'kingshot-events'
 audience: 'Guests and signed-in planners'
 experienceLevel: 'Intermediate'
 featureArea: 'Castle Positions'
-lastReviewed: '2026-09-03'
-verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+lastReviewed: '2026-09-14'
+verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Local Castle Planner for Guests
 
-Need to arrange a few appointments without setting up a kingdom roster? The **Local Castle Planner** is a small, independent scratchpad. Guests and signed-in users can use it without kingdom membership.
+The **Local Castle Planner** is a browser-only scratchpad for Guests and signed-in users. It is useful for a small personal schedule that does not need applications, account roles, or an official published version.
 
-::: warning A helper, not your official schedule
-There is no server persistence or account sync. A copy is saved in this browser only. Clearing site data, resetting the plan, or losing this browser can remove your work. Export a backup if you need to keep it.
-
-For shared applications, review, published appointments, and retained history, [register for Kingshot Events](https://ralyvora.com/games/kingshot/register) and use the [managed Castle workflow](/kingshot-events/castle-positions/).
+::: warning No server persistence
+The plan has no server persistence or account sync. Clearing site data, resetting the plan, or changing browsers can remove it. Use **Export backup** when the plan matters, and keep the exported file private.
 :::
 
-## Build your first small schedule
+## Build the schedule
 
-1. Open [Local Castle Planner](https://ralyvora.com/games/kingshot/castle-positions/helper) and give the plan a recognizable name.
-2. Choose a day and position. Each day has **48 fixed 30-minute slots**, displayed in UTC. Slot duration is not adjustable.
-3. Add participants using a name, optional origin label, and an available character image. These entries do not create or update players in a kingdom or alliance.
-4. Assign a participant through the slot controls or drag their card onto an open slot. You can move cards and swap occupied slots.
-5. Reserve a slot when it should not be assigned yet. Release the reservation before adding someone there.
-6. Review the day and position, then choose **Export backup**.
+1. Open [Local Castle Planner](https://ralyvora.com/games/kingshot/castle-positions/helper) and name the plan.
+2. Choose one of five days and a Castle Position.
+3. Add local participants.
+4. Assign with **Assign next**, click controls, or drag and drop.
+5. Reserve any slot that should remain unavailable.
+6. Review availability conflicts and resource context.
+7. Choose **Export backup**.
 
-The planner reuses the managed board's interactive cards and drag controls. It also offers click-based assignment, compact or comfortable density, placeholders, and undo for recent board changes. Undo is not a long-term history or a replacement for an export.
+Every day has **48** fixed **30-minute** slots in UTC. Slot duration cannot be changed. You can add up to six local positions and 200 local participants.
 
-A participant cannot occupy simultaneous slots across positions in the same local plan. If a move is refused, clear the conflicting assignment first. A local name is simply your label; it does not verify a person's in-game identity.
+An assignment can be moved or swapped. A reserved destination must be released first. The same participant cannot occupy simultaneous slots across positions.
+
+## Add participant details
+
+A local participant can include:
+
+- display name and avatar;
+- alliance or origin label;
+- kingdom and game ID;
+- an optional planner note;
+- available resource values;
+- availability for each of the five days;
+- a preferred UTC time and day-specific note.
+
+Availability can be **Any time**, **Specific time**, or **Not available**. A specific choice must include a preferred UTC slot before the participant can be saved. **Assign next** uses the preferred slot when it is free, otherwise it finds another open slot.
+
+The planner marks an assignment that conflicts with a participant's unavailable day or specific-time preference. The warning does not silently move the person.
+
+These participants are local labels. They do not create or update a server player, alliance, kingdom, application, or official Castle record.
 
 ## Plan resources across five days
 
-Open **Resources & calculators**, choose a resource card, and enter the stock you actually have. Allocate that stock across Days 1 to 5. The available, allocated, and remaining totals make overspending visible.
+Open **Resources & calculators**, choose a resource, and enter the real stock. Allocate it across the five days. Available, allocated, and remaining totals make an over-budget plan visible.
 
-For speedups, the days/hours/minutes converter turns a duration into minutes. General speedups share one budget: do not count the same minutes again as construction, research, and training stock.
+Speedups use minutes internally. The days, hours, and minutes converter helps enter them. General speedups are one shared budget, so do not count the same minutes as construction, research, and training stock.
 
-Use **Add custom resource** for something not already listed. Give it a name, choose items or minutes, select a resource image, and optionally enter your own points rate. Estimates use that entered rate, not automatic game scoring. When a resource scores differently on different days, use separate rows and divide the real stock between them so it is not counted twice.
+Use a custom resource for an unlisted item. Choose items or minutes and optionally enter a points rate. Participant-level resource values appear on their planner cards and help compare candidates, but they do not change the plan-wide stock automatically.
 
-**Example:** You have 600 minutes of general speedups. Allocating 240 minutes to Day 1 and 360 to Day 2 leaves zero. Adding another 60 minutes on Day 3 produces an over-budget warning; it does not create more resources.
+## Back up, restore, or reset
 
-Changing a resource's unit resets its quantity, allocations, and points rate after confirmation. Review the unit before entering a large plan.
+**Export backup** downloads the current browser plan. **Import backup** replaces the local plan with a compatible exported file, so inspect the current work before importing.
 
-## Keep, move, or clear your plan
+Backups can contain names, IDs, notes, availability, and resource amounts. Do not put passwords, private messages, or unrelated personal data in the plan.
 
-**Export backup** downloads a copy. **Import backup** loads a compatible exported plan; check the current work before replacing it. Treat exports as personal files because they contain the names, notes, and amounts you entered. Do not include contact details, passwords, or other private information in a shared plan.
+**Reset** clears the browser plan and calculator after confirmation. Staff cannot recover a cleared local plan.
 
-**Reset** clears the local plan and calculator after confirmation. Signing in does not turn this scratchpad into a shared kingdom schedule, and staff cannot recover its browser-only copy.
+## Choose the right Castle tool
 
-## Which Castle tool should I use?
-
-| Need | Choose |
+| Need | Tool |
 | --- | --- |
-| A quick personal plan, without registration | Local Castle Planner |
-| A shared schedule with applications and review | Managed Castle Positions |
-| An occasional participant missing from the roster | A temporary participant in the managed planner |
-
-See [temporary participants and reviewed players](/kingshot-events/castle-positions/temporary-participants) before choosing how to handle someone outside your roster.
+| A quick personal schedule without registration | Local Castle Planner |
+| Applications, review, shared scheduling, and publication | [Managed Castle Positions](/kingshot-events/castle-positions/) |
+| Someone in the managed schedule who should not become a roster player | [Temporary participant](/kingshot-events/castle-positions/temporary-participants) |

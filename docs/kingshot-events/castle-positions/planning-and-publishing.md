@@ -1,91 +1,69 @@
 ---
 title: 'Planning, Scheduling, and Publishing'
-description: 'Build a Castle Position draft with stages, positions, slots, locks, suggestions, and publication checks.'
+description: 'Build a Castle Position draft with grid or list controls, validate assignments, and publish the participant schedule.'
 product: 'kingshot-events'
 audience: 'Authorized kingdom managers'
 experienceLevel: 'Intermediate'
 featureArea: 'Castle Position scheduling'
-lastReviewed: '2026-09-03'
+lastReviewed: '2026-09-14'
+verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Planning, Scheduling, and Publishing
 
-The planner turns reviewed candidates into a dated schedule. Select the correct kingdom instance and stage before placing anyone.
+The scheduling workspace turns reviewed candidates into a dated Castle Position schedule. Select the correct kingdom, application cycle, and stage before moving anyone.
 
-## Read the planner
+## Choose grid, list, or focused work
 
-The stage navigator changes the active scheduling segment. Position columns represent configured castle positions; time rows represent stage slots. A cell can be **available**, **occupied**, or **reserved**. Player cards show the assigned candidate and visible fit or conflict information.
+The grid shows configured Castle Positions as columns and UTC times as rows. A cell can be available, occupied, reserved, or locked. Candidate cards show identity, priority, relevant resources, preferred time, notes, and visible conflicts.
 
-If a stage has no slots, set its date and slot count before scheduling. An empty earlier slot followed by a filled later slot produces a gap warning; saving can preserve an available gap, or the manager can compact or reserve it.
+The chronological list view shows assigned appointments with UTC time, local-time context, player, position, time fit, lock state, and actions to move earlier or later. It is useful on narrow screens and for reviewing the stage in time order. Copy the list when you need a plain-text working view.
+
+Use focused full-screen mode for a larger scheduling surface. On mobile, toolbars and actions stack, tables remain horizontally scrollable, and primary actions stay reachable. A small screen does not change validation or publication rules.
 
 ## Build and save a draft
 
-1. Confirm stage dates, slot count, positions, and any required resources.
-2. Place accepted candidates only into compatible times and positions.
-3. Inspect overlap, duplicate, capacity, locked-slot, and availability feedback.
-4. Lock an assignment that should not be moved by later suggestions.
-5. Use suggestions as reviewable proposals. Apply, ignore, or replace them deliberately.
-6. Save the draft and wait for the saved state. Unsaved changes remain a manager workspace and are not a participant schedule.
+1. Confirm stage date, positions, slots, and required resources.
+2. Review accepted candidates and their recorded availability.
+3. Place a compatible candidate by click or drag controls.
+4. Inspect overlap, capacity, duplicate, time-fit, and eligibility feedback.
+5. Reserve a slot that must remain intentionally empty, or add a named temporary participant where supported.
+6. Lock an assignment that suggestions and ordinary moves must preserve.
+7. Use suggestions as proposals, then accept, change, or ignore each result.
+8. Save the draft and wait for the saved state.
 
-Automatic suggestions use configured candidate inputs and constraints, but managers remain responsible for identity, availability, fairness, and conflicts. The private scoring or placement algorithm is not public documentation.
+An empty earlier slot followed by a filled later slot can produce a gap warning. Resolve, reserve, or deliberately keep the gap according to the visible controls. A draft is not participant-facing merely because it was saved.
 
-## Publish
+## Read time fit and conflicts
 
-Run the visible validation or review summary. Resolve invalid or ambiguous assignments, then choose **Publish** when the complete draft is ready. Publication makes that version visible to participants and can trigger configured notifications. It does not lock every future change permanently.
+Time fit compares the slot with the application's recorded choice. A preferred or compatible time is different from a distant or conflicting assignment. Do not widen an applicant's availability because it would make the board easier to fill.
 
-After publication, make changes through the same planner. Save and republish or use the visible change workflow so participants see the new assignment. Moving, removing, or changing a time can produce a changed state and notification. Treat the latest published schedule as authoritative.
+Locked assignments cannot be moved earlier or later until unlocked. Reserved slots must be released before a participant can replace them. If a participant would overlap another appointment, correct the conflict before publishing.
 
-<VisualReference title="Castle schedule planner landmarks">
-Read stage, positions, times, and publication state together.
+## Suggestions and minimum-change planning
 
-<template #items>
+Suggestions use only reviewed candidates, recorded availability, eligibility, resources, locks, current placements, and configured ordering. They do not know offline agreements and cannot guarantee political fairness.
 
-- Instance and stage selector with stage date and slot configuration.
-- Position columns, time rows, available, occupied, and reserved cells, and player cards.
-- Candidate drawer, conflict badges, lock controls, suggestions, and gap actions.
-- Unsaved or Saved draft state, validation summary, Publish action, and published version feedback.
+Preserve valid manual placements and locks before requesting suggestions. Use a minimum-change approach when a published or agreed board already exists and unnecessary moves would create confusion.
 
-</template>
-</VisualReference>
+## Validate and publish
 
-## Purpose and decision workflow
+Run the visible validation or review summary. Resolve invalid assignments and ambiguous conflicts, then choose **Publish** when the complete draft is ready.
 
-Planning turns reviewed eligible applications into one conflict-checked kingdom schedule. A Minister of Justice, King, or other authorized planner selects the kingdom cycle, reviews the slot grid, preserves locked manual placements, and asks for suggestions only from candidates who remain eligible for that position and compatible with the open time. Candidate order can consider review state, preferred time, resource relevance, application priority, current placements, and the configured public-safe ranking rules. A full row, incompatible time, conflict, lock, or missing eligible candidate produces a gap or standby outcome rather than an invented placement.
+Publication creates the participant-facing schedule version and can trigger configured notices. It does not make future correction impossible. For a later change:
 
-```mermaid
-flowchart TD
-  A["Reviewed eligible applications"] --> G["Load kingdom planner grid"]
-  G --> L["Preserve locked and valid manual placements"]
-  L --> C{"Open row has compatible candidates?"}
-  C -- "No" --> S["Leave gap or record standby"]
-  C -- "Yes" --> R["Rank supported candidates and suggest"]
-  R --> M["Manager accepts, changes, or keeps manual placement"]
-  M --> V{"Whole draft passes validation?"}
-  V -- "No" --> G
-  V -- "Yes" --> P["Publish immutable schedule version"]
-  P --> N["Notify affected participants"]
-```
+1. start from the current board;
+2. preserve unaffected locks;
+3. make the smallest supported correction;
+4. save and validate;
+5. publish the successor version;
+6. verify the affected participant view.
 
-*Planner structure and draft-to-publish decision. Suggestions do not bypass manager review or whole-draft validation.*
+The latest published version is authoritative. Email is a convenience and can fail or arrive late, so it is not the schedule record.
 
-**Accessible summary:** Eligible applications enter a grid, locks are preserved, compatible candidates may be suggested, a manager decides placements, and only a fully valid draft publishes.
+## Application adjustments remain visible
 
-## Worked example, later change, and recovery
+If leadership corrects an applicant's identity, resource, or time information, review the adjustment history and note before scheduling. The original submission remains available for comparison. A correction does not bypass eligibility or publication validation.
 
-**Starting situation:** A preferred-time row becomes full before candidate Ilya is placed. Ilya is otherwise eligible. The planner eliminates the full row, finds no other compatible time, and leaves Ilya on standby. The manager does not widen Ilya's availability. After publication, another participant withdraws. The manager starts a controlled change from the current version, rechecks Ilya and all locks, places Ilya if the new slot qualifies, validates, and publishes the next version. The previous version remains historical and affected participants receive the supported notice.
-
-The planner cannot see offline agreements, unsubmitted availability, or unrecorded resources. If publication fails, record cycle, row, position, conflict, locks, candidate state, and draft version. Resolve the source application or placement; do not duplicate the schedule.
-
-## Limitations
-
-Suggestion order cannot guarantee political fairness or a globally optimal schedule. It evaluates only recorded applications, resolved identity, eligibility, time choices, resources, locks, grid capacity, and configured ordering. Human reviewers remain responsible for exceptional context and for documenting a manual placement. Publishing validates product constraints, not an external promise that every participant will attend.
-
-See [Statuses and Changes](/kingshot-events/castle-positions/statuses-and-changes) for the participant result and [Castle Position Problems](/kingshot-events/troubleshooting/castle-position-problems) for save or visibility issues.
-
-## Less interruption while arranging the board
-
-The scheduling workspace preserves the current administration context and refreshes data without repeatedly restarting the page. A valid kingdom selection is remembered, and the Points view uses that selected kingdom. Check the kingdom heading when returning from another area or account.
-
-You can include [temporary participants](/kingshot-events/castle-positions/temporary-participants) without first creating roster players. They still belong to the managed schedule and follow its draft and publication rules.
-
-The separate [Local Castle Planner](/kingshot-events/castle-positions/local-planner) reuses interactive slot cards for small guest or personal tasks. Its browser-only plan cannot replace this shared publication workflow.
+For application decisions, see [Review Workflow](/kingshot-events/castle-positions/review-workflow). For applicant-facing states, see [Statuses and Changes](/kingshot-events/castle-positions/statuses-and-changes). The [Local Castle Planner](/kingshot-events/castle-positions/local-planner) is browser-only and cannot publish this shared schedule.

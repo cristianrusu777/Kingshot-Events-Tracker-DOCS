@@ -6,10 +6,10 @@ const page = (title: string, path: string, navigationSection: string, audience: 
 })
 
 export const manualPages = [
-  { ...page("Local Castle Planner for Guests", "castle-positions/local-planner", "Castle Positions", "Guests and signed-in planners", 251), experienceLevel: 'Intermediate', lastReviewedDate: '2026-09-03' },
+  { ...page("Local Castle Planner for Guests", "castle-positions/local-planner", "Castle Positions", "Guests and signed-in planners", 251), experienceLevel: 'Intermediate', lastReviewedDate: '2026-09-14' },
   { ...page("Temporary Participants and Reviewed Players", "castle-positions/temporary-participants", "Castle Positions", "Castle organizers and reviewers", 252), experienceLevel: 'Intermediate', lastReviewedDate: '2026-09-03' },
   { ...page("KvK Resources, Proof, and Points", "castle-positions/kvk-resources-and-proof", "Castle Positions", "KvK applicants and Castle reviewers", 253), experienceLevel: 'Intermediate', lastReviewedDate: '2026-09-03' },
-  { ...page("Ascension Path: Plan Your Next Upgrades", "lab/ascension-path", "Simulations and Optimizations", "Players planning account progression", 275), experienceLevel: 'Intermediate', lastReviewedDate: '2026-09-03' },
+  { ...page("Ascension Path: Plan Your Next Upgrades", "lab/ascension-path", "Simulations and Optimizations", "Players planning account progression", 275), experienceLevel: 'Intermediate', lastReviewedDate: '2026-09-14' },
   { ...page("Import Your Lab Build from Screenshots", "lab/screenshot-build-import", "Simulations and Optimizations", "Lab users entering or updating a build", 276), experienceLevel: 'Intermediate', lastReviewedDate: '2026-09-03' },
   { ...page("Free and Premium Personal Plans", "subscriptions/personal-plans", "Subscriptions and Usage", "Registered account holders", 281), experienceLevel: 'Intermediate', lastReviewedDate: '2026-09-03' },
   page('Getting Started', 'getting-started/index', 'Getting Started', 'New users', 15),
@@ -32,11 +32,11 @@ export const manualPages = [
   page('Analytics Aggregation and Reward Decisions', 'analytics/reward-rules', 'Analytics and Rewards', 'Analytics viewers and reward managers', 240),
   page('Castle Candidate Ranking and Schedule Suggestions', 'castle-positions/planner-controls', 'Castle Positions', 'Kings and Ministers of Justice', 250),
   page('Knowledge Access, Publication, and Reading Verification', 'knowledge-hub/reading-sessions', 'Knowledge Hub', 'Readers, authors, reviewers, and session managers', 260),
-  { ...page('Lab Profiles, Autosave, and Optimization Order', 'lab/profiles-and-autosave', 'Simulations and Optimizations', 'Lab users', 270), lastReviewedDate: '2026-09-03' },
-  { ...page('Hero Gear Optimization Logic', 'lab/hero-gear', 'Simulations and Optimizations', 'Hero Gear planner users', 271), lastReviewedDate: '2026-09-03' },
+  { ...page('Lab Profiles, Shared Inputs, and Saving', 'lab/profiles-and-autosave', 'Simulations and Optimizations', 'Lab users', 270), lastReviewedDate: '2026-09-14' },
+  { ...page('Hero Gear Optimization Logic', 'lab/hero-gear', 'Simulations and Optimizations', 'Hero Gear planner users', 271), lastReviewedDate: '2026-09-14' },
   { ...page('Governor Gear Optimization Logic', 'lab/governor-gear', 'Simulations and Optimizations', 'Governor Gear planner users', 272), lastReviewedDate: '2026-09-03' },
   { ...page('Charm Optimization Logic', 'lab/charms', 'Simulations and Optimizations', 'Charm planner users', 273), lastReviewedDate: '2026-09-03' },
-  { ...page('Bear Trap Calculation and Result Anatomy', 'lab/bear-trap', 'Simulations and Optimizations', 'Rally leaders and scenario reviewers', 274), lastReviewedDate: '2026-09-03' },
+  { ...page('Bear Trap Calculation and Result Anatomy', 'lab/bear-trap', 'Simulations and Optimizations', 'Rally leaders and scenario reviewers', 274), lastReviewedDate: '2026-09-14' },
   { ...page('Plans, Grants, Quotas, and Effective Access', 'subscriptions/plans-and-effective-access', 'Subscriptions and Usage', 'Members and community owners', 280), lastReviewedDate: '2026-09-03' },
   { ...page('Dashboard, Alerts, and Quick Actions', 'overview/dashboard-and-alerts', 'Overview', 'Signed-in users', 285), lastReviewedDate: '2026-09-03' },
   page('Alliance Hub and Management', 'scopes-and-communities/alliance-hub', 'Scopes and Communities', 'Alliance members and managers', 286),
@@ -50,8 +50,10 @@ export const manualPages = [
   page('Rally Simulator', 'lab/rally-simulator', 'Simulations and Optimizations', 'Rally planners', 294),
   page('Battle Simulator', 'lab/battle-simulator', 'Simulations and Optimizations', 'Battle planners', 295),
   page('Game Data and Calculation Inputs', 'lab/game-data-reference', 'Simulations and Optimizations', 'Lab users and reviewers', 296),
+  { ...page('Championship Warboard', 'lab/championship-warboard', 'Simulations and Optimizations', 'Alliance Championship planners', 297), experienceLevel: 'Intermediate', lastReviewedDate: '2026-09-14' },
   { ...page('Subscription and Support Requests', 'subscriptions/support-requests', 'Subscriptions and Usage', 'Members and community owners', 298), lastReviewedDate: '2026-09-03' },
   page('Updates and Module Availability', 'updates/module-availability', 'Updates', 'Kingshot Events users', 299),
+  { product: 'kingshot-events', title: 'Redirect: September 5 platform update', path: '/kingshot-events/updates/2026-09-05-platform-update', file: 'kingshot-events/updates/2026-09-05-platform-update.md', navigationSection: 'Redirects', audience: 'Legacy visitors', experienceLevel: 'All levels', featureArea: 'Redirect', publicationStatus: 'redirect', sortOrder: 1099, lastReviewedDate: '2026-09-14', redirectTo: '/kingshot-events/updates/release-notes' },
   ...[
     ['accounts-and-access/multi-role-access', 'scopes-and-communities/hierarchy-and-switching'],
     ['accounts-and-access/password-and-security', 'getting-started/first-visit'],

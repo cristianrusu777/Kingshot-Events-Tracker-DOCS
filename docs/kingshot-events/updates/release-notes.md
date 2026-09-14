@@ -5,12 +5,19 @@ product: 'kingshot-events'
 audience: 'All users'
 experienceLevel: 'Intermediate'
 featureArea: 'Updates'
-lastReviewed: '2026-09-03'
-verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+lastReviewed: '2026-09-14'
+verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # User-facing Release Notes
+## September 14, 2026: Championship Warboard and connected planning
+
+This release adds the public [Championship Warboard](/kingshot-events/lab/championship-warboard), expands [shared Lab profiles](/kingshot-events/lab/profiles-and-autosave), and improves the explanation and safety boundaries in [Hero Gear](/kingshot-events/lab/hero-gear), [Ascension Path](/kingshot-events/lab/ascension-path), and [Bear Trap](/kingshot-events/lab/bear-trap).
+
+Castle Position applicants can return through private guest access codes, provide resources and availability, and request occupied slots with context. Reviewers gain clearer filters, proof review, and audited adjustments. Schedulers can use focused, chronological, and mobile-friendly planning views. The [Local Castle Planner](/kingshot-events/castle-positions/local-planner) now keeps richer participant details in its browser-only workspace.
+
+The standalone importer-ready announcement is maintained at the documentation repository root as `ralyvora-update-2026-09-14.md`.
 
 ## September 5, 2026: Strict Scoping, 1-Click Provisioning, Self-Service Requests, and Optimizer Precision
 

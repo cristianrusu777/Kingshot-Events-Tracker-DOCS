@@ -1,70 +1,111 @@
 ---
 title: 'Hero Gear Optimization Logic'
-description: 'Choose a useful objective, protect important gear, and understand the trade-offs in a proposed upgrade or reforge plan.'
+description: 'Enter all twelve pieces, choose a combat objective, protect gear, and interpret Enhancement, Mastery, Red Gear, Imbuement, and Reforge recommendations.'
 product: 'kingshot-events'
 audience: 'Hero Gear planner users'
 experienceLevel: 'Intermediate'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-09-03'
-verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+lastReviewed: '2026-09-14'
+verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Hero Gear Optimization Logic
 
-The Hero Gear Optimizer helps you turn current equipment and available materials into a plan you can review before spending. It considers enhancement, mastery, milestone requirements, locks, and your chosen build priorities. It does not change your game account.
+The Hero Gear Optimizer allocates owned Enhancement XP, Forgehammers, Mythic Gear, and Mithril across all twelve Hero Gear pieces. It compares upgrading with the current bag against an optional Enhancement Reforge, then provides an ordered plan you can review before making irreversible changes in Kingshot.
 
-## Give the planner the right starting point
+The calculation does not change your game account. Applying a plan updates only the selected Ralyvora profile after a separate confirmation.
 
-Choose the active Lab profile, then check each troop's gear, enhancement and mastery levels, available XP, Forge Hammers, Mythic Gear, and Mithril. Lock anything you do not want the planner to change.
+## Enter the current state
 
-Next choose your build profile. A strategic profile describes which stats matter for your goal; it is not a claim that those weights are a rule of the game. The **Bear Trap Rally Damage** profile favors offense while retaining defensive value so a damage-focused plan does not treat useful all-mode gear as worthless.
+Select the active account profile and verify every piece for Infantry, Cavalry, and Archer. Each troop has four pieces: Helm, Gloves, Chest, and Boots.
 
-## Choose the question you want answered
+Enter these dimensions separately:
 
-| Objective | How to interpret it |
+- **Enhancement:** the `+` level on the piece and the source of its normal primary-stat progression;
+- **Mastery Forging:** the Mastery level, which increases the piece's Enhancement stat and gates later Red levels;
+- **Red Gear and Imbuement:** Red progression after the ascension boundary, including milestone bonuses that can grant a separate Expedition Attack or Defense stat;
+- **Resources:** Enhancement XP, Forgehammers, Mythic Gear, and Mithril currently owned;
+- **Protection:** locks for pieces the optimizer must not upgrade or use as Reforge donors.
+
+Normal gear primary stats and Imbuement milestone bonuses are not one stat model. A piece's Enhancement can raise its primary Health or Lethality line, while a Red milestone can separately grant Attack or Defense. The recommendation details identify both sources when both contribute.
+
+## Choose the objective and combat context
+
+Choose the question you want the plan to answer:
+
+| Objective | What it values |
 | --- | --- |
-| Maximize Total Stat % | Searches for greater total gear stats while protecting build-profile priorities |
-| Balanced for my account | Values upgrades against your entered account stats and march formation |
-| Gear value only | Uses gear gains and build priorities without an account snapshot |
-| Match the published optimizer | Helps compare against the weighted reference method |
+| **Maximize Total Stat %** | A higher raw sum of Hero Gear percentage points, while retaining profile-priority safeguards |
+| **Balanced for my account** | Marginal combat value relative to the entered account snapshot and march formation |
+| **Gear value only** | The selected build-profile weights without requiring account combat stats |
+| **Match the published optimizer** | A linear weighted reference comparison for spreadsheet-style verification |
 
-For account-aware planning, enter the actual troop percentages, select where you read them, and confirm the formation. The stat source matters: some displayed totals already include Hero Gear. The tool accounts for that distinction so the same gear is not simply counted twice.
+For account-aware planning, choose the source of the percentages and enter all four values for every troop: Attack, Defense, Lethality, and Health. Enter a displayed `650.5%` as `650.5`.
 
-If usable account context is missing, inspect the result's fallback explanation. A gear-only comparison is not the same answer as a calculation based on your whole account.
+**Bonus Overview** already contains current Hero Gear. The optimizer subtracts the current Hero Gear contribution before applying the proposed gear, so it is counted once. A source that excludes Hero Gear is handled differently and adds the modeled contribution once.
 
-## Knapsack Pareto frontier solver and optimizer controls
+Formation is part of account-aware valuation. The Infantry, Cavalry, and Archer fields must total exactly 100%. Formation edits stay independent, and selecting a build profile does not silently turn its suggested formation into a fact about your account.
 
-To find exact optimal upgrade configurations, the Hero Gear calculation engine utilizes a multi-dimensional **Pareto frontier knapsack solver**:
-- **Multi-dimensional trade-offs:** Evaluates the trade-offs between enhancement XP investment, mastery stone milestone requirements, and non-linear stat gain curves across all equipment slots simultaneously.
-- **Optimizer Policy Controls:** Configure enhancement policies, reforge donor priority rules, and threshold cutoffs to match your strategic priorities.
-- **Combat Context Controls:** Align calculations with your primary combat focus (offensive damage, balanced troop resilience, or specialized march formations).
-- **Account-Aware Context:** Evaluates troop percentage snapshots and formation ratios from your account profile, ensuring stat gains reflect effective combat value rather than simple equipment totals.
+If no compatible combat snapshot is available, the results say so and fall back to gear-only valuation. Do not compare that result as if it used the whole account.
 
-## Follow the plan, not just the headline
+## Understand Mastery and Red checkpoints
 
-The planner compares affordable next steps and evaluates enhancement together with the mastery needed to cross milestone gates. Direct mastery level inputs allow precise starting state entry. The total stats preview lets you inspect current and projected equipment stats across all three troop classes before confirming a calculation.
+The optimizer can bundle the steps needed to reach a valid checkpoint. A later Enhancement target may require Mastery first, and a Red milestone may require both the Mastery gate and its separate Imbuement materials.
 
-After choosing an upgrade the engine consumes the modeled resources and reevaluates the remaining options. Locked, unreachable, maximum-level, and unaffordable choices are excluded.
+The cost breakdown keeps these categories separate:
 
-The familiar candidate question is **Affordable positive candidate?** If none remains, the plan stops and leaves unused resources. This does not mean every item is finished; a different required material may have run out.
+- Enhancement XP used for Enhancement;
+- Forgehammers and any Mastery-specific Mythic Gear used for Mastery Forging;
+- Mythic Gear and Mithril used for Red ascension or Imbuement.
 
-Review the ordered steps, affected troop and slot, before-and-after stats, material spending, and leftovers. The results display presents troop facts using dedicated semantic colors for **Infantry**, **Cavalry**, and **Archer**. Net troop gain tracking details the exact stat gain achieved for each troop class. Total stat percentage is a sum of stat gains, not the percentage by which you will win more battles or deal more damage.
+The recommendation shows the exact milestone stat gain, including a milestone that has zero value under the selected objective. A zero-valued Defense milestone, for example, can still be a real required cost on the path to a later target.
 
-## Reforge without losing sight of your priorities
+The default Red policy is **Complete milestones only**. It avoids spending into an intermediate Red level unless the plan can complete the supported milestone. Older unversioned saves are migrated to this safer default once. If you later choose another policy explicitly, that choice is preserved.
 
-Optional **reforge** can recover invested enhancement XP from eligible gear and reuse it in the proposed plan. A locked item is protected. In addition, **profile priority locks** prevent higher-priority gear from being selected as reforge donors: gear belonging to a higher-priority troop class cannot have its invested XP stripped to upgrade lower-priority items.
+The candidate loop asks whether an **Affordable positive candidate** remains after locks, gates, costs, and the selected objective are applied. If none remains, the plan stops and reports leftovers.
 
-An empty XP bag does not necessarily mean there is nothing to compare: invested, recoverable XP can still be relevant. Conversely, recoverable XP is not free new inventory, and not every material is refunded.
+## Reforge eligibility and protection
 
-For Maximize Total Stat %, a reforge must improve both raw stat total and weighted useful value over the no-reforge result before it is selected. Inspect that comparison and the actual donor items instead of assuming that a longer plan is better.
+Optional **Enhancement Reforge** resets eligible non-Red pieces to `+0` and returns their invested Enhancement XP. Mastery levels are preserved. Forgehammers, Mythic Gear, Mithril, and other irreversible materials are not refunded.
 
-**Example:** A proposed reforge would raise several secondary stats but reduce a higher-priority group. The larger raw sum alone is not sufficient. Priority protection prevents higher-priority gear from being used as donors, while keeping the no-reforge alternative visible for comparison.
+The Reforge panel separates:
 
-## Why an older result may differ
+- XP already in the inventory;
+- recoverable XP invested in eligible pieces;
+- XP locked in protected or Red pieces;
+- XP available if the recommended Reforge is performed.
 
-The XP cost table and reforge comparisons have been corrected, and account context is handled more consistently. Re-run a saved scenario after an update rather than relying on a copied old total. Compare the same input levels, inventory, objective, locks, and formation before deciding two results disagree.
+Only pieces with recoverable Enhancement XP can be donors. A Red piece is ineligible, and its invested XP remains irreversible. Manual piece locks and profile priority locks also keep important gear out of the set of Reforge donors. Higher-priority gear cannot be stripped merely to improve lower-priority gear.
 
-The planner searches supported choices; it does not prove a globally best build over every future upgrade. Treat predictions as conditional on the entered information and current catalog.
+**Allow Reforging** lets the optimizer compare the best legal Reforge plan with the no-Reforge plan. **Do Not Reforge** restricts the plan to bag XP. Advanced settings can limit actions or model a paid cooldown bypass, but the tool never assumes a price that you did not enter.
 
-Use [screenshot build import](/kingshot-events/lab/screenshot-build-import) to reduce data entry, [profiles and autosave](/kingshot-events/lab/profiles-and-autosave) to understand saving, and [Ascension Path](/kingshot-events/lab/ascension-path) for cross-system planning.
+For **Maximize Total Stat %**, a Reforge must improve both the raw stat total and the weighted useful value over the no-Reforge result. Moving XP around without a qualifying gain produces **Do not reforge**.
+
+## Read and execute the result
+
+Start with the verdict, then review the ordered execution plan. Reversible Enhancement changes appear before Mastery and Red actions. Red ascension and later checkpoints are explicitly marked irreversible.
+
+Check these result sections:
+
+- the troop that receives resources and the comparison across all three troops;
+- raw gear-stat change, build-profile value, full-objective value, and formation context;
+- before and after account totals when the selected stat source supports them;
+- each piece's starting and projected Enhancement, Mastery, and Red state;
+- recovered, preserved, spent, irreversible, and remaining XP;
+- separate Mastery and Imbuement material costs;
+- sensitivity notes showing how strongly weights affected the answer.
+
+If the plan recommends a Reforge, compare the XP in Kingshot's confirmation with the displayed recovered XP before continuing. Stop if the values differ. After every in-game step, verify the resulting level before moving to the next irreversible action.
+
+The single **Apply** action writes the projected Hero Gear and Hero Gear resource balances to the selected Ralyvora profile. It does not apply combat-stat totals or unrelated scenario settings.
+
+## Limitations
+
+- The planner uses the supported catalog and the account data you entered. It does not know future game changes.
+- Account-aware value is conditional on the selected stat source, formation, build weights, and current snapshot.
+- A bounded plan is not proof of the globally best build across every future resource drop.
+- A copied result can become stale after a profile, inventory, lock, objective, or formation change.
+- Reforge recovery must be checked against the live Kingshot confirmation before execution.
+
+Use [Profiles and Shared Inputs](/kingshot-events/lab/profiles-and-autosave) to understand what is reused, [Screenshot Build Import](/kingshot-events/lab/screenshot-build-import) to reduce manual entry, and [Ascension Path](/kingshot-events/lab/ascension-path) for cross-system planning.

@@ -1,68 +1,64 @@
 ---
 title: 'Castle Position Applicant Guide'
-description: 'Submit or update identity, stage availability, times, resources, and application answers.'
+description: 'Create, reopen, or update a Castle Position application with identity, availability, resources, and proof.'
 product: 'kingshot-events'
 audience: 'Players'
 experienceLevel: 'Intermediate'
 featureArea: 'Castle Position applications'
-lastReviewed: '2026-09-03'
+lastReviewed: '2026-09-14'
+verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Castle Position Applicant Guide
 
-Open the Castle Positions application for the intended kingdom. The page states whether applications are open, provisionally filled, published, or closed.
+Open the public Castle Positions link for the intended kingdom and application cycle. The form is available without a platform account and can be switched among the supported languages from the application page.
 
-## Submit an application
+## Submit a new application
 
-1. Confirm the kingdom and player identity. Sign in or use the supported public identity flow shown by the form.
-2. Review the configured application instructions and required fields.
-3. Enter resource values and custom answers requested for the available stages.
-4. For each stage, choose one primary availability: **Not available**, **Any available time**, or one offered UTC time.
-5. Review the summary, including identity, resources, answers, and time preferences.
-6. Submit once and keep the confirmation.
+1. Confirm the kingdom and alliance. If your alliance is not listed, use the visible unlisted-alliance option and enter the requested label.
+2. Identify the governor. A signed-in linked player may be suggested, while a guest provides the required public identity details.
+3. Enter the requested resources and custom answers. True Gold is entered and displayed as an item count, while configured speedup resources can use effective days.
+4. Upload resource proof when the cycle marks it required. Wait for the upload to finish.
+5. For every stage, choose **Not available**, **Any available time**, or a specific UTC time.
+6. Review identity, resources, proof, answers, and every stage choice.
+7. Submit once and keep the confirmation details.
 
-The form validates required answers and incompatible time choices. Times are shown with UTC context in the final review. Some times can be provisionally taken; when the page permits it, you may request one with a note, but the manager must resolve the conflict.
+The form shows step errors after you attempt to continue. It does not leave the time step until every stage has a valid choice.
 
-### Application Review summary step
-Before final confirmation, the form presents an **Application Review** step. This review screen summarizes:
-- Selected kingdom and verified governor identity.
-- Target castle positions and stage availability choices.
-- Configured resource commitments and custom questions.
-- Attached resource proof screenshots and upload status.
+An occupied time is not automatically available. Where the cycle permits it, choose the request action and add a useful note for the reviewer. The request remains provisional until leadership resolves it.
 
-Review all details carefully before submitting to avoid duplicate or conflicting applications.
+## Keep the guest secret access code
 
-## Confirmation and statuses
+A guest submission can return a **Guest Secret Access Code**. Copy and store it privately. The browser also remembers the code for convenience, but browser storage is not a reliable backup.
 
-After submission, **Application received** shows **Submitted**, **Needs review**, **Under review**, or **Updated**. **Standby** or **needs review** can mean an administrator must confirm the player identity. **Linked** means the application was connected to the player and submitted.
+The code reopens that exact application from the public Castle page. Treat it like a secret link: anyone with it may be able to view or edit the associated application while changes are allowed.
 
-The confirmation repeats requested stages and times. These are requests. A manager reviews eligible applications and the assignment becomes authoritative only in the published schedule.
+An ordinary new-application link does not silently open a remembered application. Enter the code or use the exact edit link when you intend to return to an existing record.
 
-## Update behavior
+## Edit one application or create another
 
-When the application period and current status allow edits, reopen the same application and submit the changed availability or resources. The result shows **Updated** and retains the same application identity. Once applications close or a schedule is published, ordinary editing can be unavailable. Contact an authorized kingdom manager rather than submitting a second identity.
+Use **Edit application** from the confirmation or return with the exact application link or guest code. An edit updates that application; it does not create a duplicate.
 
-<VisualReference title="Castle Position application landmarks">
-Complete the step sequence and review the final UTC choices.
+When the cycle permits multiple applications, **Create another application** starts from step one with a clean identity and form. It deliberately ignores the previous draft and guest key so the earlier application is not overwritten.
 
-<template #items>
+Do not use create-another mode merely to correct a time or resource amount. Edit the intended application instead. If the system detects a duplicate, the review team decides whether to use the latest submission or keep the existing one.
 
-- Kingdom and application-period banner with open, provisional, published, or closed state.
-- Player identity, configured resource fields, custom questions, and required-field feedback.
-- One availability or UTC time choice per stage, plus conflict or provisional notices.
-- Review summary, Submit or Update action, and **Application received** status.
+Repeated clicks while a submission is already in progress are suppressed. Wait for the result before trying again.
 
-</template>
-</VisualReference>
+## Understand status and leadership changes
 
-## Problems
+- **Submitted** or **Updated:** received and ready for review;
+- **Needs review**, **Under review**, or **Standby:** identity, eligibility, or another detail needs attention;
+- **Accepted:** eligible for scheduling, but not guaranteed a slot;
+- **Rejected:** not included unless leadership reopens and reviews it again.
 
-If submission is blocked, check required fields, one choice per stage, application-period state, and player identity. If a prior application exists, update it. If your confirmation says **Needs review**, wait for the kingdom reviewer or provide the public application details they request.
+Leadership can correct an application record after checking the source evidence. The applicant status view identifies an adjusted record, shows the note and changed fields, and preserves the original submission for comparison.
 
-## KvK resources and supporting screenshots
+Requested times are not appointments. A slot becomes authoritative only when it appears in the published schedule.
 
-When the cycle requests resource evidence, the application clearly states whether **Resource Proof** is optional or required. A required upload must finish successfully before submission. Review the screenshot preview, amounts, and UTC preferences together.
+## Proof and privacy
 
-Proof images have limited retention and are not public schedule pictures. See [KvK Resources, Proof, and Points](/kingshot-events/castle-positions/kvk-resources-and-proof) for accepted images, expiry, and day-specific scoring.
+Proof screenshots have limited retention and are not public schedule images. Upload only the requested evidence. Do not include passwords, unrelated conversations, or unnecessary personal information.
 
-If your player is missing or has a changed name, provide the correct in-game ID and let the reviewer resolve the identity. Approval can create or update the appropriate roster player; submitting a name alone does not. For a quick personal schedule without applications, the [Local Castle Planner](/kingshot-events/castle-positions/local-planner) is also available to guests.
+See [KvK Resources, Proof, and Points](/kingshot-events/castle-positions/kvk-resources-and-proof) for proof rules, [Statuses and Changes](/kingshot-events/castle-positions/statuses-and-changes) for application and publication states, and [Local Castle Planner](/kingshot-events/castle-positions/local-planner) for a browser-only personal schedule.

@@ -1,116 +1,125 @@
 ---
 title: 'Ascension Path: Plan Your Next Upgrades'
-description: 'Compare progression priorities, resource shortages, timing, and hypothetical shop choices in one planning workspace.'
+description: 'Validate your current build, compare Hero Gear, Governor Gear, and Charms, and inspect the projected account state.'
 product: 'kingshot-events'
 audience: 'Players planning account progression'
 experienceLevel: 'Intermediate'
 featureArea: 'Simulations and Optimizations'
-lastReviewed: '2026-09-03'
-verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+lastReviewed: '2026-09-14'
+verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Ascension Path: Plan Your Next Upgrades
 
-**Ascension Path** unifies progression across Hero Gear, Governor Gear, and Charms into a single strategic workspace. Rather than asking which piece to upgrade within one isolated menu, the tool evaluates your entire account to determine where your next materials deliver the highest combat return.
+**Ascension Path** compares Hero Gear, Governor Gear, and Charms in one progression workspace. It recommends an ordered path under the nine separate material balances in your selected account profile or temporary scenario.
 
-Open Ascension Path from the Lab. Start by reviewing the **Current Build** rather than the headline recommendation. A calculation based on outdated inventory or equipment levels produces the wrong sequence for your account.
+The tool never spends resources or changes your game account. It uses Ascension Engine version 1.3.0 and a bounded beam search, so its result is not a guaranteed global optimum.
 
-## Progression engine and search depth
+## Review Current Build first
 
-The planner is driven by Ascension Engine version 1.1.0. It applies a bounded beam search that evaluates progression up to 30 steps deep:
+Open Ascension Path from the Lab and inspect **Current Build** before running. The source cards show whether each input came from a saved profile, an owning optimizer, a confirmed screenshot import, or a temporary override.
 
-- **Cross-system scope:** The search evaluates candidate steps across Hero Gear, Governor Gear, and Charms simultaneously.
-- **Multi-resource balancing:** It tracks nine distinct upgrade currencies: Hero Gear XP, Forge Hammers, Mythic Gear, Mithril, Satin, Gilded Threads, Artisan's Vision, Charm Guides, and Charm Designs.
-- **Dominance rules:** At each depth level, the engine prunes inferior candidate branches to find an optimal sequence within modeled constraints without slowing down the browser.
+Confirm:
 
-## Start from confirmed inputs and combat focus
+- all twelve Hero Gear pieces and their Mastery state;
+- all six Governor Gear pieces;
+- all eighteen Charm slots;
+- Attack, Defense, Lethality, and Health for Infantry, Cavalry, and Archer;
+- all nine progression-material balances;
+- the selected locks and combat focus.
 
-Review your current equipment levels, account combat stats, and resource balances:
+Choose the meaning of your combat stats:
 
-1. **Input provenance:** Labels indicate whether a value originates from a confirmed profile, an isolated optimizer, a screenshot import, or a temporary scenario override.
-2. **Combat stat semantics:** Select how your entered combat stats should be interpreted:
-   - **Observed total:** Your entered stats already include your current equipment and progression bonuses.
-   - **Base plus progression:** Your entered stats represent an unequipped baseline to which equipment bonuses are added.
-3. **Choose a combat focus:**
+- **Observed total:** the entered totals already include current equipment, so the projection adds only the modeled change;
+- **Base plus progression:** the entered values are a baseline before the modeled Hero Gear, Governor Gear, and Charm contributions.
 
-| Combat Focus | Strategic Objective |
+## Resolve readiness before running
+
+The calculation stays off while you edit. The readiness panel validates equipment, locks, priorities, resource balances, and all twelve combat-stat values. Values must be finite and nonnegative.
+
+An explicit resource value of zero is valid. It means none of that material is currently owned. It does not make the profile incomplete.
+
+For **Observed total**, the tool warns when an entered combat total is below the modeled contribution from current equipment. It preserves the entered value so you can verify the source instead of silently replacing it.
+
+Correct blockers in the named Current Build section. Warnings can still allow a run, but review them before acting on the result.
+
+## Choose a combat focus
+
+| Combat focus | What it prioritizes |
 | --- | --- |
-| Overall Strength | Balances gains across all three troop classes and all combat stats equally. |
-| KvK / PvP | Follows your saved profile troop and stat priorities for competitive combat. |
-| Rally Leader | Prioritizes offensive stats while retaining defensive gains. |
+| **Overall Strength** | Balances supported troops and combat stats |
+| **KvK / PvP** | Uses the active profile's competitive troop and stat priorities |
+| **Rally Leader** | Emphasizes offensive value while retaining defensive contribution |
 
-## Action recommendations and target milestones
+The focus changes candidate value. It does not change upgrade costs or claim that one play style is universally best.
 
-After running the calculation, the header surfaces a clear summary action:
+## How the path is built
 
-- **UPGRADE NOW:** You have sufficient resources to complete one or more high-value steps immediately.
-- **SAVE:** Your owned resources are insufficient for the next milestone, and spending them on secondary choices would waste materials.
-- **COMPLETE:** All supported items across all three systems have reached their maximum modeled levels.
+The engine searches legal checkpoints across all three progression systems. A checkpoint includes every required intermediate step, material cost, Mastery gate, set transition, or Red milestone needed to reach it.
 
-### Milestone target cards
+Each selected step contains:
 
-Below the action banner, the **Next Target** and **Following Target** cards highlight upcoming milestones:
+- the system, piece, and exact transition;
+- resources consumed and projected balances;
+- combat deltas across the affected troop and stats;
+- a breakpoint indicator when a set or gear threshold is crossed;
+- an impact label and **Why First** explanation;
+- the strongest available alternative and why it ranked lower.
 
-- **System and transition:** Identifies the piece and target level (for example, Governor Ring Tier 4 -> Tier 5).
-- **Required materials:** The full material cost for that milestone.
-- **Sufficient resources:** Quantities of materials you already hold in adequate amounts.
-- **Missing resources:** Exact shortages preventing you from reaching that milestone.
-- **Recommendation badge:** Tags whether you should actively target or save for that checkpoint.
+The **Alternative comparison** explains which competing checkpoint was available from the same state and why it lost under the selected focus and resource budgets.
 
-## Step anatomy and alternative comparisons
+The search keeps a limited candidate beam for browser performance. Its technical diagnostics disclose the strategy, states evaluated, checkpoint depth, and termination reason. Use the path as a reviewable plan, not proof that every possible future sequence was exhausted.
 
-The plan displays an ordered sequence of recommended steps. Consecutive upgrades within the same system are grouped for clarity. You can filter steps by system (**All**, **Hero Gear**, **Governor Gear**, **Charms**) or search by keyword.
+## Read UPGRADE NOW, SAVE, and COMPLETE
 
-Each step provides complete technical details:
+- **UPGRADE NOW:** at least one recommended path step is affordable with the entered inventory.
+- **SAVE:** a modeled next checkpoint exists, but the complete material requirement is not currently affordable.
+- **COMPLETE:** no supported progression target remains in the selected scope.
 
-- **System badge and transition:** Indicates the system and the exact upgrade step.
-- **Resource cost:** Quantities consumed for that step and projected remaining balances.
-- **Combat delta:** The exact stat gains across **Infantry**, **Cavalry**, and **Archer** for Attack, Defense, Lethality, and Health.
-- **Combat impact:** Classified as `Very High`, `High`, `Medium`, `Low`, or `Marginal`.
-- **Breakpoint indicator:** Marks steps that activate a set bonus or cross a key gear threshold.
-- **Why First:** Explains the calculation reason this step was prioritized over competing candidates.
-- **Alternative comparison:** Shows the competing upgrade from another system that was evaluated at the same step, its combat impact, and an explicit explanation of **Why It Loses** (such as poor stat return per material or higher resource scarcity).
+**Next Target** shows required, sufficient, and missing materials. **Following Target** is conditional: it assumes you acquire exactly the first target's missing materials, complete that target, then evaluate what comes next. It does not assume other future income.
 
-## Weak point analysis and opportunity scores
+## Inspect weak points, forecast, and Projected Build
 
-The **Weak Points** section evaluates your three equipment systems to expose progression imbalances:
+**Weak point analysis** assigns an Opportunity score and a status such as High Priority, Medium, or Healthy to each supported system.
 
-- **Priority classification:** Each system is tagged as `High Priority`, `High`, `Medium`, or `Healthy`.
-- **Opportunity score:** A quantified score indicating the relative combat gain available per resource spent in that system.
-- **System diagnosis:** Text explanations detail why a system is lagging (for example, low charm levels relative to advanced governor gear) so you can direct future acquisitions effectively.
+**Weak Points** ranks the three systems by their strongest current marginal opportunity under your focus and budgets. A low rank can mean that no affordable step remains, not that the system is permanently unimportant.
 
-## Interactive forecast charts
+The forecast workbench includes:
 
-The forecast workbench visualizes your progression trajectory across two interactive charts:
+- **Combat Stats Trajectory** across the displayed path;
+- **Resource Depletion Curves** for the nine progression materials;
+- a tabular step-by-step projection.
 
-1. **Combat Stats Trajectory:** Plots the projected growth of Attack (sky blue), Defense (amber), Lethality (pink), and Health (emerald) averages from your current baseline across each planned step.
-2. **Resource Depletion Curves:** Multi-line chart tracking how all nine upgrade materials deplete step by step, showing which resource triggers a bottleneck.
-3. **Tabular Projection View:** A structured data table listing cumulative stat gains and remaining resource tallies at every step.
+The **Projected Build** section shows all twelve before and after combat values and the physical Hero Gear, Governor Gear, and Charm changes that create them. Combat changes are percentage points. Review this section with the ordered steps before copying anything into the game.
 
-If inputs change, earlier charts become stale; select Run again to refresh all projections.
+Changing an input makes the old result stale. Choose Run again before interpreting the charts or projected build.
 
-## Platform event timing decisions
+## Event timing
 
-Progression timing matters as much as upgrade order. Ascension Path analyzes active platform event sessions to produce a timing recommendation:
+When eligible event sessions are available, Ascension Path can compare the path with their timing:
 
-- **UPGRADE NOW:** An active event currently rewards points for spending your upgrade materials.
-- **WAIT:** A scheduled event offering point multipliers or spending milestones starts soon.
-- **NO TIMING ADVANTAGE:** No active or upcoming event provides bonuses for your required materials.
+- **UPGRADE NOW** when immediate strength is preferred or an important battle comes first;
+- **WAIT** when a known upcoming event preserves the modeled path while adding a configured efficiency benefit;
+- **NO TIMING ADVANTAGE** when no relevant active or upcoming event changes the decision.
 
-The decision card links directly to the relevant event session and explains the modeled efficiency gain.
+This timing card depends on recorded event information. It does not discover unconfigured Kingshot schedules.
 
-## Resource routing workbench and virtual shop
+## Resource Routing is temporary
 
-The **Resource Routing** tool simulates hypothetical acquisitions to resolve material shortages:
+Use **Resource Routing** to test a hypothetical virtual shop or other resource source:
 
-1. **Configure shop parameters:** Define a virtual shop name, currency label, and your available currency balance.
-2. **Add offer bundles:** Select from canonical resource packages or create custom offers with custom quantities, currency costs, and purchase limits.
-3. **Analyze route:** The engine computes the optimal combination of purchases using return-on-investment ranking to clear your biggest progression bottlenecks. This calculation does not buy real items.
-4. **Apply to temporary scenario:** Clicking this action adds the acquired materials directly into the temporary what-if inventory. It does not alter your confirmed profile inventory. Rerun the path to preview the new upgrade sequence enabled by those purchases.
+1. name the source and currency;
+2. enter the currency balance;
+3. add canonical or custom bundles with quantities, costs, and purchase limits;
+4. choose **Analyze route**;
+5. review the suggested combination and its projected path;
+6. optionally apply the acquired resources to the temporary scenario.
 
-## Saving and safe application
+The routing tool does not buy anything. Applying a route changes only the temporary scenario, leaves the confirmed profile untouched, and marks the previous calculation stale.
 
-Confirmed profile inputs follow the standard [Lab saving rules](/kingshot-events/lab/profiles-and-autosave). Edits made in the temporary scenario remain in the what-if sandbox until discarded or manually entered into your profile.
+## Saving and limitations
 
-Use the **Copy summary** button to export a clean text summary of your progression path for alliance discussion or personal planning.
+Confirmed account facts follow [Lab profile saving rules](/kingshot-events/lab/profiles-and-autosave). Temporary combat stats, resources, and routing results remain scenario overrides until you deliberately update the owning profile or optimizer.
+
+Ascension Path is limited to the current supported catalogs, entered balances, selected locks, and modeled combat objective. It cannot know future game releases, an unentered purchase, or personal priorities that are not represented in the profile. Use **Copy summary** for discussion, then verify every cost and level in Kingshot before spending.
