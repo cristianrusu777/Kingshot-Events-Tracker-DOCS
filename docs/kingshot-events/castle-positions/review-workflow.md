@@ -1,70 +1,68 @@
 ---
 title: 'Castle Position Review Workflow'
-description: 'Review candidate identity, eligibility, resources, preferences, conflicts, and status before scheduling.'
+description: 'Review identity, resources, proof, adjustments, duplicates, and status before an applicant enters scheduling.'
 product: 'kingshot-events'
 audience: 'Kings, kingdom managers, and Ministers of Justice'
 experienceLevel: 'Intermediate'
 featureArea: 'Castle Position review'
-lastReviewed: '2026-09-03'
+lastReviewed: '2026-09-14'
+verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f'
+sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # Castle Position Review Workflow
 
-Review converts submitted applications into a reliable candidate pool. It does not schedule the player by itself.
+Review turns submitted applications into a reliable candidate pool. Acceptance makes a player eligible for scheduling. It does not assign or publish a Castle Position.
+
+## Find the application
+
+Select the correct kingdom cycle, then use the Applications workspace to:
+
+- search by player identity;
+- filter by status;
+- show or hide rejected records;
+- compare total, accepted, pending, and rejected counts;
+- open an application's submitted details and resource proof.
+
+On a narrow screen, filters stack and the table scrolls within its container. Keep the selected kingdom and cycle visible before changing a status.
 
 ## Review procedure
 
-1. Select the kingdom instance and confirm its application period.
-2. Filter candidate pools by current status, stage, conflict, or other visible review controls.
-3. Open a candidate and verify the shared player match, alliance context, requested stages and times, resources, and custom answers.
-4. Resolve standby or identity-review cases before comparing candidates.
-5. Mark the application with the supported review outcome and record a useful note when needed.
-6. Send accepted or eligible candidates to the planner; keep rejected or unresolved candidates out of automatic placement.
+1. Verify the governor, in-game ID, kingdom, and alliance context.
+2. Review requested stages, UTC choices, occupied-slot notes, resources, custom answers, and contact preference.
+3. Open proof only when the cycle requests it and confirm that it supports the declared values.
+4. Resolve missing or conflicting roster identity. Approval can link an existing player, correct a confirmed name, create an eligible missing player, or use a temporary participant when no roster record should be created.
+5. Mark the supported outcome: accept, reject, or needs review.
+6. Send accepted candidates to scheduling. Keep unresolved or rejected applications out of automated placement.
 
-Candidate cards can distinguish scheduled and unscheduled pools. **No applications yet** means none were submitted to the selected instance. **No candidates match these filters** means the filters hid the available applications.
+True Gold is a count, not a duration. Other configured resources can be shown as effective days. Do not read a True Gold value as `0d` merely because both types appear in the same application.
 
-## Interpret indicators
+## Correct a submitted record
 
-- **Submitted**: received and waiting for review.
-- **Standby** or **Needs review**: identity or eligibility needs confirmation.
-- **Accepted**: eligible for planning, not guaranteed a slot.
-- **Rejected**: not included unless a manager deliberately changes the review outcome.
-- **Scheduled**: currently placed in the draft or published schedule.
-- Conflict indicators: requested time, duplicate placement, overlap, capacity, or another visible constraint needs manager attention.
+Authorized leadership can adjust a submitted application after verifying the source. Enter a note that explains the correction. The status view then shows:
 
-Resources and configured eligibility checks help reviewers compare candidates. They do not replace judgment or prove that a value is accurate. The suggestion and ranking mechanism is intentionally not documented as a public algorithm.
+- an adjusted badge and adjustment count;
+- who changed the record and when;
+- the review note;
+- each field's old and new value;
+- the original applicant submission for comparison.
 
-<RolePerspective>
+Use this for a verified correction, not to hide a disagreement or rewrite an applicant's history. Applicants can see leadership modifications on their status view.
 
-### As a Minister of Justice or kingdom manager
+## Resolve duplicates and rejected applications
 
-Work only in the assigned kingdom, confirm each candidate's source information, and separate application review from final scheduling.
+When two submissions represent the same application scope, use the duplicate-resolution action to keep the existing record or use the latest submission. Do not schedule both as separate candidates.
 
-### What the platform does automatically
+A rejected application can be reopened to **Needs review**, corrected or rechecked, and then accepted when appropriate. Reopening is an explicit status change and does not assign a slot.
 
-It groups candidates, displays configured eligibility and conflicts, and can prepare suggestions. The manager owns acceptance and placement decisions.
+## Interpret review states
 
-</RolePerspective>
+- **Submitted:** waiting for review;
+- **Needs review** or **Standby:** identity, eligibility, or another conflict needs attention;
+- **Accepted:** eligible for the planner;
+- **Rejected:** excluded until deliberately reopened;
+- **Scheduled:** currently placed in a draft or published schedule, so publication state still matters.
 
-<VisualReference title="Castle candidate review landmarks">
-Use filters and candidate detail before changing a review outcome.
+Candidate ranking and suggestions consider recorded inputs only. They cannot see offline agreements or verify an unsupported resource claim. The manager remains responsible for the final review decision.
 
-<template #items>
-
-- Instance and application-period context with candidate status filters.
-- Candidate pools for submitted, needs-review, accepted, rejected, and scheduled applications.
-- Player identity, requested stages and times, resources, custom answers, and conflict badges.
-- Review status, notes, selection controls, and action to continue to scheduling.
-
-</template>
-</VisualReference>
-
-Next: [Planning, Scheduling, and Publishing](/kingshot-events/castle-positions/planning-and-publishing).
-
-## Reviewed roster changes and temporary participants
-
-Approval now resolves an eligible player identity into the selected kingdom and alliance: it can create a missing player or update the name on the matching in-game ID. If identities conflict or more than one record matches, resolve that ambiguity before approving. A similar nickname alone is not a safe reason to merge people.
-
-For a participant who should not become a roster player, use a **temporary participant** in the managed schedule instead. That choice is marked as temporary and does not create a player or application. See [Temporary Participants and Reviewed Players](/kingshot-events/castle-positions/temporary-participants).
-
-Review resource screenshots only for their intended purpose, and use the appropriate day in [KvK Resources, Proof, and Points](/kingshot-events/castle-positions/kvk-resources-and-proof). An accepted identity still needs a compatible assignment and publication before its time is confirmed.
+Next: [Planning, Scheduling, and Publishing](/kingshot-events/castle-positions/planning-and-publishing). For a participant who should not become a roster player, see [Temporary Participants and Reviewed Players](/kingshot-events/castle-positions/temporary-participants).

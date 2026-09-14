@@ -1,238 +1,112 @@
 ---
 title: 'Lab Overview and Profiles'
-description: 'Choose a Lab module, manage reusable inputs, and understand device or signed-in persistence.'
+description: 'Choose a simulator or optimizer, manage shared account facts, and keep each result attached to its assumptions and limits.'
 product: 'kingshot-events'
 audience: 'All Lab users'
 experienceLevel: 'Intermediate'
 featureArea: 'Lab'
-lastReviewed: '2026-09-03'
-verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
+lastReviewed: '2026-09-14'
+verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 <CategoryHero category="lab" icon="flask" eyebrow="Explore before committing resources" title="Lab Overview and Profiles">
-Save account assumptions, compare upgrade paths, and interpret every result as a scenario rather than a guaranteed outcome.
+Save account assumptions, compare upgrade or battle scenarios, and treat every output as modeled guidance.
 </CategoryHero>
 
 <ProductFinder default-category="Simulations and Optimizations" />
 
 # Lab Overview and Profiles
 
-The **Lab** contains profiles, progression planners, optimizers, combat simulators, and supporting game data. Module cards show whether a tool is public, requires sign-in, is beta, or is currently unavailable.
-
-## Profiles and saved inputs
-
-A profile stores reusable supported inputs such as account stats, troop bonuses, formations, Hero Gear, Governor Gear, Charms, heroes, widgets, and owned resources. It is not a live connection to the game account. Update it after every relevant in-game change.
-
-Visitors can use a device-saved profile. Clearing site data, changing browsers, or using private browsing can remove or isolate it. Signed-in users can create and select saved profiles where cloud persistence is available. Always check the active profile name before editing or running a module.
-
-Some tools can apply an accepted plan back to the selected Lab profile. Applying changes the stored planning state, not the game account. Review the target levels and consumed resources before confirming.
-
-## Choose a module
-
-- **Hero Gear Optimizer**, **Governor Gear Optimizer**, and **Charm Optimizer** plan progression with current slots and inventory.
-- **Bear Trap Simulator** models a rally against the Bear with captain, joiners, formation, and stats.
-- **Rally Simulator** compares supported captain, joiner, formation, and stacking choices.
-- **Battle Simulator** runs a configured attacker and defender scenario.
-
-<VisualReference title="Lab and profile landmarks">
-Select the profile before the module and review persistence feedback after saving.
-
-<template #items>
-
-- Module cards with public, sign-in, beta, premium, or unavailable state.
-- Active profile selector, create, rename, duplicate, save, or delete actions where available.
-- Profile sections for account stats, troops, equipment, heroes, widgets, formations, and inventory.
-- Freshness or missing-input feedback and links to each compatible optimizer or simulator.
-
-</template>
-</VisualReference>
-
-All Lab outputs are modeled guidance. Continue with [Interpreting Results and Limitations](/kingshot-events/lab/interpreting-results).
-
-## How profiles and modules relate
-
-The active profile supplies shared account assumptions. Module-specific fields then describe a progression or combat scenario. Debounced autosave shows pending, saved, failed, or conflict state; switching profiles must not let an older pending response overwrite the newly active profile. Running a module uses the resolved saved and typed inputs at that moment. The output belongs to the scenario and never changes a live game account.
-
-```mermaid
-flowchart TD
-  P["Choose active profile"] --> S["Load shared stats, progression, formations, and inventory"]
-  S --> M{"Choose module"}
-  M -- "Progression optimizer" --> O["Add current levels, targets, weights, locks, and resources"]
-  M -- "Bear or battle model" --> B["Add troops, heroes, skills, capacities, buffs, and opponents"]
-  O --> V{"Inputs valid and saved?"}
-  B --> V
-  V -- "No" --> C["Correct fields or resolve save conflict"]
-  V -- "Yes" --> R["Run versioned model"]
-  R --> I["Interpret assumptions, steps, before/after result, leftovers, and limits"]
-```
-
-*Lab feature map. A profile supplies shared inputs; each module adds controls and produces a versioned scenario result only after validation.*
-
-**Accessible summary:** Users select a profile, add progression or combat inputs, resolve invalid or unsaved state, run the model, and interpret its output and limitations.
-
-## Decision mechanisms
-
-Hero Gear, Governor Gear, and Charm planning generate valid next candidates, remove locked, maximum, unaffordable, or out-of-scope choices, compare weighted gain with normalized cost, apply the best positive candidate, update resources, and repeat. The ordinary upgrade loop is greedy and iterative, with system-specific staging such as Hero Gear milestone bundles and reforge or Governor Gear set deltas. Hero Gear total-stat mode also compares alternate plans with its own priority protections; see its dedicated guide. It is not an exhaustive proof of global optimality.
-
-Bear Trap resolves the rally leader separately from joiners, validates capacity and formation, applies supported troop, Truegold, hero, captain, skill, stat, and temporary-buff effects, and distinguishes deterministic, probabilistic, estimated, and unresolved mechanics. Prediction error requires an observed result and helps diagnose assumptions; it does not validate every mechanic.
-
-## Worked example and common mistakes
-
-**Starting situation:** A Charm plan leaves Guides unused after Designs reach zero. **Rules:** Every candidate must cover all required materials. **Branch:** Design-requiring candidates are removed; a Guide-only positive candidate may continue, otherwise the plan stops. **Output:** Ordered steps and leftovers explain the stop. **Next action:** Correct the inventory only if it was entered incorrectly, then rerun from the same profile.
-
-Avoid running from the wrong profile, leaving an autosave pending, mixing game-displayed and estimated values, treating a modeled target as an in-game save, or claiming global optimality. If output surprises you, compare one controlled input change in a copied scenario.
+The Lab contains account profiles, progression planners, optimizers, combat simulators, the Championship Warboard, and supporting Game Data. The **Hub states and module availability** distinguish loading, unavailable, empty, ready, and error conditions. A tool can also be public, require sign-in, be beta, or be temporarily disabled.
 
 ## Why the Lab exists
 
-The Lab turns a vague question such as “what should I upgrade?” or “why did this rally behave differently?” into a reproducible scenario. Its purpose is not one impressive number. Its purpose is to expose assumptions, constraints, candidate choices, resource use, and uncertainty so alternatives can be compared.
+The Lab turns a broad question into a reproducible scenario. It exposes the account facts, scenario fields, locks, material limits, catalog version, model assumptions, and uncertainty used to produce an answer.
 
-The Lab is useful when a decision has interacting inputs: shared resources, locks, set thresholds, troop priorities, leader and joiner roles, formation capacity, stacking rules, or repeated battle variation. Outputs keep ordered steps, before-and-after state, leftovers, rejected effects, distributions, and limitations close to the scenario.
+Every calculation changes planning state only. It cannot spend game resources, equip gear, register an Alliance Championship lineup, publish a Castle schedule, or prove a live outcome.
+
+## Shared profiles and scenario fields
+
+Signed-in users can create account profiles that are available on their account. The **Profile library and persistence** lets an owner create, select, rename, duplicate, update, and remove profiles. The active profile can reuse:
+
+- march capacities and troop counts, tiers, and Truegold progression;
+- selected heroes, skill levels, and supported widgets;
+- Hero Gear, Mastery, Governor Gear, and Charms;
+- shared material balances;
+- named combat-stat snapshots.
+
+**Stat snapshots, sources, and layers** record all twelve combat percentages and what is already included. Source labels help a tool avoid adding the same equipment or widget contribution twice.
+
+Tool-specific scenario fields remain separate. Examples include an optimization objective, temporary budget, Bear formation, Battle opponent, or Warboard roster. Switching profiles refreshes shared facts and clears results that belong to the earlier profile.
+
+Visitors can use public tools with browser-local state, but the Profiles management page requires sign-in. Browser data is not cloud persistence.
+
+Read [Lab Profiles, Shared Inputs, and Saving](/kingshot-events/lab/profiles-and-autosave).
 
 ## Module purpose and output map
 
-| Module | Question it answers | Important inputs | Output to inspect |
+| Module | Question it answers | Inputs to verify | Output to inspect |
 | --- | --- | --- | --- |
-| Profiles | Which account assumptions should every tool reuse? | Gear, stats, materials, formations, heroes, widgets | Active profile, saved state, freshness, version |
-| Hero Gear | Which valid enhancement or mastery step offers the best current value? | Levels, mastery, locks, weights, materials, optional reforge | Ordered steps, milestone bundles, spending, leftovers |
-| Governor Gear | How do six pieces compete when set effects and three inventories interact? | Item levels, locks, weights, Satin, Thread, Vision | Direct and set deltas, before/after set state |
-| Charms | Which next levels best use Guides and Designs across troop priorities? | Eighteen slots, locks, weights, Guides, Designs | Slot upgrades, weighted gains, leftovers |
-| Bear Trap | How do leader and joiner inputs resolve into modeled contribution and damage? | Troops, tier, Truegold, capacities, heroes, skills, buffs | Formation guidance, contributions, estimate, observed error |
-| Rally | Which configured effects apply, fail, add, or multiply? | Leader, joiners, formation, skills, widgets, stats | Accepted and rejected effect stack |
-| Battle | How do attacker and defender results vary across trials? | Both sides, formations, bonuses, heroes, repeat count | Distribution and comparable scenario result |
-| Game Data | Which versioned costs and stats feed calculations? | System, entity, level transition, filters | Read-only catalog row and data version |
+| Profiles | Which account facts should compatible tools reuse? | Equipment, stats, resources, capacities, heroes | Active profile, source, saved state |
+| Ascension Path | Which cross-system checkpoint should come next? | Hero Gear, Governor Gear, Charms, nine resources | Ordered path, target shortages, Projected Build |
+| Hero Gear | How should four resources be allocated across twelve pieces? | Enhancement, Mastery, Red state, context, locks | Reforge verdict, milestones, costs, before and after |
+| Governor Gear | Which next levels best use Satin, Gilded Thread, and Artisan Vision? | Six levels, set state, objective, locks | Ordered steps, set deltas, remaining resources |
+| Charms | Which next charm levels best use Guides and Designs? | Eighteen slots, priorities, locks | Ordered upgrades, stopping reason, leftovers |
+| Bear Trap | How do leader, joiner, formation, and profile facts affect the modeled score? | Capacities, troops, heroes, skills, stats | Contributions, formation comparison, observed error |
+| Rally | Which configured effects apply and how do they stack? | Leader, joiners, formation, skills, widgets | Accepted and rejected effects, resulting multipliers |
+| Battle | How do two configured sides vary across repeated trials? | Both sides, formations, stats, repeat count | Distribution across repeated runs |
+| Championship Warboard | Which three-lane plan holds up across hidden opponent layouts? | Both rosters, AC evidence, round history, locks | Strategy matrix, lane plans, confidence, exports |
+| Game Data | Which supported catalog values feed the Lab? | System, entity, level, version | Read-only source and version details |
 
-## Demonstration: one profile, three questions
+## Progression planning
 
-Assume Nia''s profile contains current gear, troop stats, a 100,000 march capacity, materials, and heroes.
+**Hero Gear planning and reforge** distinguishes Enhancement, Mastery Forging, Red ascension, Imbuement milestones, profile locks, and recoverable versus irreversible XP. Select an optimization objective and inspect the no-Reforge comparison before acting.
 
-1. In **Hero Gear**, the optimizer generates next steps, removes locked and unaffordable candidates, values gain against normalized cost, applies one step, consumes resources, and recalculates. The answer is an ordered plan, not a target typed in advance.
-2. In **Rally**, the same profile supplies base assumptions, but Nia configures a leader and joiners for one scenario. The tool separates roles and classifies effects. It does not spend profile materials.
-3. In **Battle**, Nia configures both sides and a repeat count. The tool reports modeled variation. It does not update Rally and does not claim the most favorable trial will occur live.
+Governor Gear evaluates direct and set changes under three resource limits. Charm planning evaluates valid next levels across eighteen slots. A candidate can disappear because it is locked, at maximum, unaffordable, missing a valid catalog step, or has no positive value under the current objective.
 
-Shared profiles reduce re-entry, while scenario fields keep unrelated experiments separate.
+Ascension Path combines the three systems, keeps their nine material budgets separate, and shows the projected physical build behind the numeric result.
 
-## Input ownership and safe application
+## Combat and Championship planning
 
-Profile values, scenario overrides, catalog values, and observed outcomes are different evidence classes. An override should not silently rewrite a profile. A catalog correction should not be simulated by falsifying material balance. An observed Bear result can measure prediction error but must not mutate event history.
+Bear Trap has two different boundaries: **Simulate and contribute**. Simulation uses profile and scenario inputs. **Share Your Bear Experience** is a separate explicit flow for an observed result and never silently rewrites the profile.
 
-When a plan can be applied to a profile, confirmation should identify target profile, new levels, and consumed resources. It updates planning state only. The user still performs any real upgrade in game and refreshes the profile from the actual result.
+Rally separates leader and joiner effects, prerequisites, and stacking categories. Battle uses a worker-backed repeated model and keeps attacker and defender sources independent.
 
-## Failure diagnosis by module
+Championship Warboard accepts manual, spreadsheet, and AC-only roster input, works with partial opponent intelligence, and compares several three-lane strategies. Saved scenarios and observations stay in the current browser. Read [Championship Warboard](/kingshot-events/lab/championship-warboard).
 
-- **No candidate:** check locks, maximum levels, complete costs, positive weights, and every required material.
-- **Sequence stops early:** inspect leftovers and the first exhausted resource.
-- **Rally effect rejected:** check role, active slot, prerequisite, and stacking category.
-- **Battle distribution extreme:** verify both side assignments, counts, percentages, repeat count, and data version.
-- **Different user result:** compare profile, overrides, catalog and engine versions, and every control.
-- **Save conflict:** preserve values, reload the newer version, and reapply only intended changes.
+## Game Data and visual references
 
-The Lab cannot guarantee global optimality or live results. Its value is a transparent, repeatable comparison whose limitations remain attached.
-## Detailed Lab feature catalog
+**Game Data is the reference surface** for supported costs, heroes, skills, troops, gear, and other catalog records. Search and category navigation help locate an entry. An image existing in the interface does not prove the entry participates in every calculation.
 
-### Hub states and module availability
+The Lab uses a **Cyber design system** with an Ambient canvas backdrop, Compact battle cards, semantic troop and stat colors, and mobile navigation. Its authentic game asset mapping includes supported equipment artwork such as awakened Red tier gear. A Structured fallback system keeps a labeled category icon visible when a specific image is missing.
 
-The Lab landing page distinguishes loading, unavailable, empty, ready, and error states. Availability can depend on rollout, access, or configuration; an absent module is not evidence that a saved profile was deleted. Each module card should identify its question, required inputs, output type, and limitations before a user starts changing values.
-
-### Profile library and persistence
-
-The profile library is the reusable source of planning inputs. Users can create, select, rename, duplicate, update, and remove profiles within their permitted scope. Autosave reduces repetitive work, but version checks prevent an older browser tab from silently overwriting newer data. A conflict should preserve local values long enough to compare and reapply the intended change.
-
-### What a profile contains
-
-A complete profile can preserve:
-
-- identity and server or kingdom context;
-- march capacities and troop counts;
-- troop tier and Truegold-related values;
-- selected heroes, skill levels, active slots, and supported widgets;
-- combat-stat snapshots with source labels;
-- layered bonuses and effective combat values;
-- hero gear, governor gear, charms, and upgrade state;
-- shared resource balances used by optimization modules.
-
-Missing values remain missing. The Lab must not replace an unknown troop count, level, or source with a plausible-looking default and then present the result as verified.
-
-### Stat snapshots, sources, and layers
-
-A snapshot records the values used by a scenario at a point in time. Source labels distinguish profile values, catalog values, explicit scenario overrides, and observed outcomes. Layer views explain how base values and bonuses combine. This makes two runs comparable and prevents a later profile edit from changing the meaning of an earlier result.
-
-### Hero Gear planning and reforge
-
-Hero Gear supports objective-driven comparisons rather than a single unexplained score. A user selects eligible gear, locks items that must not change, supplies resource balances, chooses weights or an optimization objective, and reviews the proposed upgrade sequence. Reforge planning uses its own controls and cost constraints. Results should show consumed materials, leftovers, stat changes, stopping reason, and whether the plan can be applied back to the selected profile.
-
-### Governor Gear
-
-Governor Gear compares upgrade candidates against shared material limits and the selected objective. It should expose prerequisites, item state, costs, proposed order, and remaining resources. The recommended sequence is a plan for the represented data version; it is not proof that every future catalog or game balance will produce the same order.
-
-### Charms
-
-Charm planning evaluates current levels, eligible next levels, complete cost data, locks, and available materials. A candidate can disappear because it is already at maximum, lacks a valid next level, violates a lock, or needs a missing resource. The result must explain both selected upgrades and the first reason optimization stopped.
-
-### Bear Trap: simulate and contribute
-
-Bear tools have two intentionally different modes. **Simulate** uses profile and scenario inputs to estimate formation or contribution outcomes and keeps the assumptions visible. **Share Your Bear Experience** records an observed result as contribution evidence when the signed-in flow permits it. Observed evidence can measure prediction error, but it must not silently rewrite the simulation profile or event history.
-
-### Rally setup and effect resolution
-
-Rally planning separates leader and joiner contributions, active hero slots, troop composition, march capacity, role-specific effects, prerequisites, and stacking categories. Warnings identify invalid assignments or unsupported combinations. The effect breakdown should show accepted and rejected effects, widget or passive contributions, and the resulting multipliers so users can explain the final comparison.
-
-### Battle simulation
-
-Battle simulation compares two explicitly configured sides using a worker-backed repeated model. Users review formations, heroes, counts, tiers, statistics, controls, repeat count, seed or repeatability information when available, and catalog or engine version. The output is a distribution across repeated runs; not a guaranteed live outcome; and should include enough controls to reproduce or challenge the comparison.
-
-### Game Data
-
-Game Data is the reference surface for supported catalogs used by Lab modules. Search and category navigation help users locate heroes, skills, troops, gear, costs, and related records. Version and source labels matter: artwork, catalog completeness, and simulation support can have different statuses, so visual presence alone does not prove that a record participates in every engine.
-
-### Result trust labels
+## Result trust labels
 
 | Label | Meaning |
 | --- | --- |
-| Profile input | Persisted user-controlled planning value |
-| Scenario override | Temporary value for the current comparison |
+| Profile input | Saved account fact controlled by the profile owner |
+| Scenario override | Temporary value for one comparison |
 | Catalog input | Versioned application reference data |
-| Derived result | Calculated from declared inputs and engine rules |
+| Derived result | Calculated from declared inputs and model rules |
 | Observed contribution | User-submitted real outcome with its own context |
-| Applied plan | Confirmed planning-state update; never an in-game action |
+| Applied plan | Confirmed planning-state update, never an in-game action |
 
-A trustworthy Lab result always lets the reader answer: which profile, which overrides, which catalog version, which controls, which engine assumptions, and which warnings produced this output.
+## Safe application
 
-## Visual architecture and Cyber design system
+When an optimizer offers **Apply**, review the target profile, projected levels, and consumed resources. Safe application updates the supported profile fields only. It does not apply combat totals, unrelated scenario settings, or anything inside Kingshot.
 
-The Lab uses a unified Cyber design system tailored for high-density strategic planning:
+Screenshot import follows the same boundary: review recognized values and apply only selected valid changes. Uncertain fields remain unselected.
 
-- **Ambient canvas backdrop:** The interface features a subtle animated mesh background that provides visual depth without distracting from data entry or slowing down calculation rendering.
-- **Card depth and button sheens:** Tool cards use layered background gradients, soft inner borders, and constrained button sheen animations on hover to keep interactive controls distinct.
-- **Compact battle cards and inputs:** Input sections utilize compact number steppers and slim troop percentage bars to maximize visible screen space during complex multi-troop configurations.
-- **Semantic troop styling:** Every module enforces standardized color coding for troop classes:
-  - **Infantry:** Blue / Cyan tones
-  - **Cavalry:** Amber / Orange tones
-  - **Archer:** Green / Emerald tones
-- **Stat palette consistency:** Stat gains and trajectories use matching color tokens across all charts and cards: Attack (sky blue), Defense (amber), Lethality (pink), and Health (emerald).
-- **Dual-theme accessibility:** All text, borders, and input controls meet WCAG contrast standards (greater than or equal to 4.5:1) in both Dark and Light themes.
-- **Responsive workspace rails:** The simulator navigation rail expands from a compact 3.5rem icon rail to a 14rem navigation panel on larger screens, while collapsing to a touch-friendly bottom bar on mobile viewports.
+## Failure diagnosis by module
 
-## Authentic game entity artwork and asset fallbacks
+- **No candidate:** inspect locks, levels, prerequisites, weights, and every required material.
+- **Sequence stops early:** find the first exhausted resource and read the leftovers.
+- **Account totals look wrong:** verify the stat source and included layers.
+- **Bear or Rally effect is missing:** verify role, active slot, troop type, and prerequisites.
+- **Battle distribution is extreme:** compare both side assignments, stats, formations, seed, and repeat count.
+- **Warboard result is weak:** add observed AC or round evidence, then review the confidence range.
+- **Stale result:** rerun after changing a profile or scenario.
+- **Save conflict:** preserve your typed values, reload the newer profile version, and reapply only the intended change.
 
-The Lab incorporates authentic game asset mapping to replace generic icons with recognizable in-game visuals:
-
-- **Hero Gear:** High-resolution assets distinguish standard Epic equipment from awakened Red tier gear across all twelve slots (helm, gloves, chest, and boots for each troop class).
-- **Governor Gear:** WebP illustrations reflect exact troop type, piece placement, rarity color, tier level, and star count.
-- **Charms:** Distinct level illustrations map progression across all 22 charm tiers for **Infantry**, **Cavalry**, and **Archer**.
-- **Truegold Progression:** Dedicated troop artwork renders Truegold tiers 1 through 8.
-- **Skills and Exclusive Widgets:** WebP icons illustrate hero battle skills and hero-exclusive widgets, supported by an alias dictionary to match varied item naming.
-- **Structured fallback system:** When an image is loading or unavailable, the engine displays semantic SVG category icons (Crown for heroes, Sparkles for skills, Zap for widgets, Shield for equipment, Coins for materials, Swords for troops, and Flame for buffs) to avoid layout shifts.
-- **Asset protection:** Game artwork is protected against accidental drag-and-drop operations and context-menu triggering during calculations.
-
-## Recommended reading order
-
-Begin with [Profiles, Autosave, and Optimization Order](/kingshot-events/lab/profiles-and-autosave), then choose [Hero Gear](/kingshot-events/lab/hero-gear), [Governor Gear](/kingshot-events/lab/governor-gear), [Charms](/kingshot-events/lab/charms), or [Bear Trap](/kingshot-events/lab/bear-trap). Finish with [Interpreting Results](/kingshot-events/lab/interpreting-results) and [Simulator Problems](/kingshot-events/troubleshooting/simulator-problems).
-
-## Plan across systems, or enter a build faster
-
-**[Ascension Path](/kingshot-events/lab/ascension-path)** brings Hero Gear, Governor Gear, and Charms into one progression view. Check the current build, choose a combat focus, inspect the next target and forecast, and compare hypothetical resource offers without buying anything or changing the confirmed account.
-
-**[Screenshot build import](/kingshot-events/lab/screenshot-build-import)** lets you choose, drag, or paste relevant game screens and review recognized changes before applying selected values. This updates Lab inputs, not event results. Manual entry remains the fallback when an image is unclear or the import option is unavailable.
-
-The Lab's cards, stat-source explanations, result tables, charts, and mobile controls have been reorganized to make assumptions and next actions easier to find. Use the current result's labels and freshness notice rather than assuming an older screenshot describes the current calculation.
+Continue with [Interpreting Results](/kingshot-events/lab/interpreting-results), the guide for the selected tool, or [Simulator Problems](/kingshot-events/troubleshooting/simulator-problems).

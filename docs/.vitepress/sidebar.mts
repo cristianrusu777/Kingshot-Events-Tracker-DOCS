@@ -165,6 +165,7 @@ const productSidebar: Item[] = [
       link('Bear Trap model', 'lab/bear-trap'),
       link('Rally Simulator', 'lab/rally-simulator'),
       link('Battle Simulator', 'lab/battle-simulator'),
+      link('Championship Warboard', 'lab/championship-warboard'),
       link('Game data reference', 'lab/game-data-reference'),
       link('Bear rally and battle', 'lab/bear-rally-battle')
     ]),
