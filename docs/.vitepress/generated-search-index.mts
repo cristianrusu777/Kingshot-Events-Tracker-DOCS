@@ -1627,6 +1627,10 @@ export const searchIndex = [
       {
         "heading": "A dedicated inbox for follow-up",
         "text": "The bell and Notifications menu lead to a paginated inbox with unread, urgent, and action-needed views. Sidebar dots are explained by What's new here in the relevant section. Reading information clears its unread state, while actual decisions remain pending until completed in their owning workspace. This makes it possible to read everything without accidentally approving anything. See Notifications and Reports for examples and recovery steps."
+      },
+      {
+        "heading": "Admin Center live notification badges and alert indicators",
+        "text": "The Admin Control Panel features real-time visual indicators to help administrators identify and resolve pending review work without checking individual queues manually: - Sidebar Queue Badges: Dedicated red badge counters ( .admin-nav-badge-red ) appear next to navigation items when pending items exist. Monitored queues include: - User self-registration approval requests ( regPendingCount ) - Password reset requests ( passPendingCount ) - Data restore and recovery requests ( restorePendingCount ) - Subscription support inquiries and plan purchase requests ( subPendingCount ) - Topbar Pulsating Alert Pill: When the total pending review count across all queues is greater than zero, an alert pill in the topbar displays an animated pulsating red dot ( .admin-notification-dot-pulse ). Clicking the alert pill immediately directs the administrator to the primary review queues. - Responsive Sho"
       }
     ]
   },
@@ -1858,7 +1862,7 @@ export const searchIndex = [
       },
       {
         "heading": "Assistant privacy in the controlled rollout",
-        "text": "The first Ralyvora Assistant release does not persist conversation text and does not send assistant questions or page context to an external model provider. Its operational logging is limited to bounded technical metadata such as duration, matched-capability count, and the page category. Normal platform privacy requests and exports are therefore unchanged by this release."
+        "text": "External model processing is disabled until the signed-in user accepts the current Assistant disclosure. That account preference is versioned, auditable, and revocable. A user who declines can continue with deterministic capability guidance and every classic Ralyvora workflow. When AI is enabled, Ralyvora sends the configured provider the message, a bounded page context, a filtered capability/tool list, and only the compact structured results needed to answer. It does not send full database rows merely to answer a count or status question. A central redaction layer removes passwords, API keys, authorization and session tokens, database and Redis URLs, and credential-shaped text before provider egress. This release does not persist full Assistant conversations as account history. Operational logs retain bounded technical metadata such as duration, provider name, tool count, and page categ"
       }
     ]
   },
@@ -2535,31 +2539,63 @@ export const searchIndex = [
     "contentType": "Overview",
     "featureArea": "Assistant",
     "aliases": [],
-    "description": "Ralyvora Assistant Ralyvora Assistant is an additional way to discover and understand Kingshot Events. It does not replace the dashboard, forms, tables, Strategy Lab, Castle Position pages, Knowledge Hub, or administration pages. Every clas",
+    "description": "Ralyvora Assistant Ralyvora Assistant is an intelligent control and discovery layer for Kingshot Events. It can interpret requests with the configured external AI model, execute registered Ralyvora tools, and explain structured results. It ",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "Ralyvora Assistant Ralyvora Assistant is an additional way to discover and understand Kingshot Events. It does not replace the dashboard, forms, tables, Strategy Lab, Castle Position pages, Knowledge Hub, or administration pages. Every classic workflow remains available from the normal navigation. The assistant is in a controlled rollout. Accounts outside the rollout see an availability message and continue using the rest of Ralyvora normally."
+        "text": "Ralyvora Assistant Ralyvora Assistant is an intelligent control and discovery layer for Kingshot Events. It can interpret requests with the configured external AI model, execute registered Ralyvora tools, and explain structured results. It does not replace the dashboard, forms, tables, Strategy Lab, Castle Positions, Knowledge Hub, or administration pages. The same unified Assistant interface serves visitors and authenticated members, with capabilities dynamically resolved based on identity and effective permissions."
       },
       {
-        "heading": "What the assistant can do in the first release",
-        "text": "The first release can: - recommend a short list of features based on the signed-in account's effective permissions and the page where the assistant was opened; - explain what a registered feature does and why it may be useful; - distinguish a currently available capability from a safely discoverable role-gated capability; - explain missing role, permission, or kingdom and alliance scope without granting access; - route the user to a registered classic Ralyvora page; - keep optimizer and simulator engines authoritative for calculated results. The first release does not publish schedules, apply imports, change roles, delete records, or run an open-ended chain of actions. Those workflows remain in their existing governed pages."
+        "heading": "Access model and conceptual states",
+        "text": "The Assistant operates across three conceptual access tiers: 1. Guest (Public Access): Non-authenticated visitors. No sign-in is required merely to open the Assistant. The launcher is available on public landing, documentation, and product pages. Guests have access to a strictly reduced, public-safe capability and tool set. 2. Authenticated User: Signed-in members. Unlocks personal Strategy Profiles, personal optimization workflows, saved durable runs, event tracking, and account-scoped features. 3. Privileged / Scoped User: Members with specific roles within an alliance or kingdom (e.g., King, Minister of Justice, Castle manager) or Supreme Administrators with system-wide governance authority."
       },
       {
-        "heading": "Access and scope",
-        "text": "Assistant context is a hint, not authority. When it receives a current route, selected record, profile, workspace, kingdom, or alliance identifier, the server resolves the signed-in account again. A user who has leadership access in one kingdom does not gain the same access in another kingdom by naming it in a question or URL. An unavailable capability may still be explained when its existence is safe to disclose. For example, Castle Schedule Planning can be described to an ordinary player, but it remains unavailable unless the current kingdom scope grants the scheduling permission. The explanation describes the requirement without encouraging the user to pursue a privileged role."
+        "heading": "Guest capabilities and public safety",
+        "text": "Guests can safely explore Ralyvora without an account: - Basic conversation and greetings: Immediate, deterministic responses for common introductory queries. - Feature discovery: Explaining what Ralyvora is, what tools exist, and how different game systems are modeled. - Public Knowledge Hub search: Search and read published, global, non-restricted articles ( public free policy). - Public simulator explanations: Guidance on how the Bear Trap, Hero Gear, Governor Gear, and Charms calculators operate. - Public navigation: Opening registered public feature and documentation routes. - Safe role education: Explaining leadership roles (such as King, Minister of Justice, or Castle Positions) from public capability metadata without disclosing kingdom or alliance data."
       },
       {
-        "heading": "Assistant answers and calculated results",
-        "text": "Ralyvora calculation engines produce optimizer and simulator results. The assistant can explain where a tool lives, which inputs it needs, and how to continue in the classic interface. It must not present its own wording as an engine-authoritative calculation. If a result seems surprising, open the corresponding Strategy Lab page and inspect the saved inputs, model or rule version, assumptions, and calculation breakdown. Manual editing remains available in the original tool."
+        "heading": "Strict private data isolation",
+        "text": "Guests are strictly isolated from private and scoped data. Guests cannot access: - Strategy Profiles, player directories, and custom battle stats. - Alliance or kingdom analytics, member rosters, and attendance records. - Championship Warboard workspaces and opponent intel. - Screenshot and spreadsheet imports. - Private, draft, alliance-scoped, or kingdom-scoped Knowledge Hub articles. - Castle Position appointment schedules and pending candidate applications. - Background durable runs and execution logs. - Operations Console and Supreme Admin Center. Server-side tool filtering ensures that the model and runtime expose only GUEST SAFE TOOLS ( capability.list , capability.explain , capability.search , navigation.open , role.explain , recommendation.list , knowledge.search , knowledge.article ). Even if an unauthenticated caller attempts to forge a tool call or guess an internal ID, the s"
       },
       {
-        "heading": "Privacy and availability",
-        "text": "The controlled first release does not persist assistant conversations and does not send assistant questions or page context to an external model provider. Operational logs keep bounded metadata such as request duration and the number of matched capabilities; they do not keep the question text. If the assistant is unavailable, login and all normal platform areas continue working. Open the relevant page from the sidebar or dashboard and continue in the classic interface."
+        "heading": "Guest AI consent",
+        "text": "Authenticated users store their versioned AI consent in their account settings. Guests do not have an account row and are never stored as fake database users. Guest consent is managed in browser localStorage ( ralyvora assistant guest ai consent ). Before external AI processing, visitors receive a clear disclosure: - The message is processed by the configured external AI provider (Gemini or OpenAI). - Only the context necessary for the request is sent. - No account or private Ralyvora data is included because the visitor is not signed in. - Deterministic mode remains available without enabling AI."
       },
       {
-        "heading": "Good starting questions",
-        "text": "- What can Ralyvora do for me? - Which features are available with my current access? - What should I set up next? - What can I do with Castle Positions? - Explain the Hero Gear workflow. The response is intentionally concise. Open a suggested feature to review its full inputs, controls, and current data."
+        "heading": "Deterministic guest mode",
+        "text": "Even without external AI consent, visitors can use deterministic greetings, public feature discovery, safe role explanations, and navigation."
+      },
+      {
+        "heading": "Abuse and cost protection",
+        "text": "- Anonymous traffic is protected by IP-based and session-level rate limiting ( publicRequestLimit ). - Tool execution for guests is strictly capped at a maximum of 2 calls per interaction. - Anonymous mutation tools are completely disabled. - Guest conversations are ephemeral and never persisted to the database."
+      },
+      {
+        "heading": "Guest conversion and feature promotion",
+        "text": "Ralyvora Assistant acts as a natural product discovery and registration surface for visitors, adhering to the value first, CTA second principle: 1. Answer first: The Assistant provides immediate, helpful public guidance before suggesting an account. 2. Contextual recommendations: The promotion engine analyzes the guest's intent to highlight relevant account-based features: - Hero Gear queries: Recommends creating a free account to save Strategy Profiles and calculate upgrade paths using real gear, mastery, and materials. - Bear Trap queries: Recommends saving profiles and comparing formations using actual march capacities and battle stats. - Event queries: Highlights the Event Tracker and alliance participation analytics. - Castle queries: Explains Castle appointment management and role-specific workflows. 3. Free Account vs. Premium distinction: The Assistant clearly distinguishes what "
+      },
+      {
+        "heading": "Login-aware handoff and intent preservation",
+        "text": "When a guest requests a feature that requires an account (e.g., \"Show my Profile\" or \"Run deep optimizer\"): - The Assistant responds with an auth required explanation and provides [Sign in] and [Create free account] actions instead of raw error codes. - The guest's query intent is saved in sessionStorage ( ralyvora assistant pending intent ). - After completing sign-in or registration, the Assistant automatically refreshes its capabilities, clears guest restrictions, and continues the conversation with the user's authenticated context. - Mutations are never executed automatically upon login; read and action intent are re-evaluated against the newly authenticated actor."
+      },
+      {
+        "heading": "Logout safety",
+        "text": "When an authenticated user signs out: - Cached capabilities and tools are immediately invalidated. - All private structured state (selected profile ID, player ID, alliance ID, kingdom ID, run ID, and private tool cards) is cleared from the Assistant. - The Assistant session is reset cleanly to prevent leaking private data in shared browser environments."
+      },
+      {
+        "heading": "Administrative governance and Generative Mode control",
+        "text": "Supreme Administrators can manage the assistant's operational state dynamically through the Admin Center ( /admin/assistant-settings ): - Runtime Generative AI Toggle: Generative mode can be activated or deactivated with a single switch. Changes take effect immediately without requiring service restarts or configuration redeployments. - Deterministic Mode Guarantee: When generative mode is disabled - or if the upstream AI provider experiences an outage - the assistant automatically falls back to deterministic rule-based guidance. Users can continue to explore capabilities, inspect compact profiles, check optimization runs, and open safe application routes. - Strict Authorization Boundary: Assistant settings and provider toggles are restricted exclusively to Supreme Administrators. Role labels alone cannot authorize changes to AI operational mode."
+      },
+      {
+        "heading": "Permissions and authority",
+        "text": "Assistant context is a hint, not authority. The server resolves effective permissions again for every request and every tool action. Naming another kingdom, workspace, Profile, or run cannot grant access to it. Custom permissions are honored; role labels alone are not authorization. The hierarchy remains: backend permissions and state, Ralyvora calculation engines, scoped product data, capability metadata, then model explanation. The model cannot run SQL, select arbitrary services, invent routes, publish Castle schedules, change roles, apply imports, delete records, or replace optimizer mathematics. An unavailable capability may still be explained when its existence is safe to disclose. For example, Castle Schedule Planning can describe its benefits and kingdom-leadership requirement while remaining non-executable for a player without that permission."
+      },
+      {
+        "heading": "For Guests",
+        "text": "- What is Ralyvora and what tools are available? - How does the Bear Trap Simulator calculate damage? - What are the gear progression milestones in Hero Gear? - What can a King or Minister of Justice do? - Why should I create a free Ralyvora account?"
+      },
+      {
+        "heading": "For Authenticated Members",
+        "text": "- What can Ralyvora do with my current access? - List my Strategy Profiles and tell me what is incomplete. - How reliable is the intel in this Championship workspace? - Show my recent deep optimizations. - Can I manage Castle appointments in this kingdom?"
       }
     ]
   },
@@ -5061,15 +5097,55 @@ export const searchIndex = [
     "contentType": "Status reference",
     "featureArea": "Updates",
     "aliases": [],
-    "description": "User-facing Release Notes",
+    "description": "--- title: 'User-facing Release Notes' description: 'What changed since the August documentation update, with practical introductions and links to the revised guides.' product: 'kingshot-events' audience: 'All users' experienceLevel: 'Inter",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "User-facing Release Notes"
+        "text": "--- title: 'User-facing Release Notes' description: 'What changed since the August documentation update, with practical introductions and links to the revised guides.' product: 'kingshot-events' audience: 'All users' experienceLevel: 'Intermediate' featureArea: 'Updates' lastReviewed: '2026-09-20' verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f' sourceVerificationOwner: 'Ralyvora documentation' --- User-facing Release Notes"
+      },
+      {
+        "heading": "September 20, 2026: Guest Assistant Access and Contextual Conversion Engine",
+        "text": "Ralyvora Assistant is now available to unauthenticated visitors across public landing, documentation, and product pages without requiring login. Visitors can freely explore platform capabilities, search the public Knowledge Hub, learn about game mechanics and role responsibilities, and discover how creating an account unlocks personalized Strategy Profiles, real gear optimization, and event tracking."
+      },
+      {
+        "heading": "Three-tier capability and tool security",
+        "text": "- Public Guest Access: Visitors can launch Assistant immediately to ask questions, explore features, search public Knowledge Hub articles (public free), read simulator explanations, and safely learn about leadership roles (King, Minister of Justice, Castle Positions) without accessing private kingdom data. - Server-Side Tool Isolation: The tool registry strictly exposes only GUEST SAFE TOOLS (capability.list, capability.explain, capability.search, avigation.open, ole.explain, ecommendation.list, knowledge.search, knowledge.article). Authenticated tools (profiles, player directories, private analytics, warboard, imports, notifications, and administration) are never exposed, and forged tool calls or guessed IDs fail server-side. - Authoritative Knowledge Filtering: Guest searches return only published, global, public articles. Scoped, draft, alliance, and kingdom articles are excluded at t"
+      },
+      {
+        "heading": "Guest AI consent and deterministic availability",
+        "text": "- Browser-Scoped AI Consent: Visitors can opt in to external AI processing with consent stored in localStorage ( alyvora assistant guest ai consent) without creating fake database user accounts. - Deterministic Baseline: Even without external AI consent, guests can use deterministic greetings, public feature discovery, safe role education, and navigation. - Rate and Cost Protection: Public IP-based rate limiting, bounded context, and a 2-tool-call maximum protect upstream model resources."
+      },
+      {
+        "heading": "Value-first conversion and contextual feature promotion",
+        "text": "- Contextual Intent Matching: When a visitor asks about Hero Gear, Bear Trap, Charms, or Events, the Assistant provides public guidance first, then highlights how a free account allows saving Strategy Profiles and optimizing using real battle stats. - Free Account vs. Premium Clarity: Free account benefits (Profiles, saved builds, event tracking) are clearly distinguished from Premium entitlements (Deep Optimization). - Anti-Spam Controls: Low-intent messages (\"hi\", \"thanks\") never trigger signup cards. Recommendation cards can be dismissed for the session, and signed-in members never see registration CTAs."
+      },
+      {
+        "heading": "Login handoff and logout safety",
+        "text": "- Intent Restoration: When a guest requests an account-required feature (e.g. \"Show my Profile\"), the Assistant offers [Sign in] / [Create free account] actions and preserves the query intent in sessionStorage across login. - Immediate Capability Refresh & Logout Purge: Logging in immediately unlocks authenticated tools. Logging out immediately invalidates cached capabilities, purges private structured state, and cleanly resets the conversation. Read Ralyvora Assistant for complete architectural and security details."
+      },
+      {
+        "heading": "September 20, 2026: Admin CP modernization, Generative AI governance, and navigation reliability",
+        "text": "This release delivers a major visual and structural overhaul to the Admin Center, gives Supreme Administrators direct runtime control over Generative AI mode, adds real-time notification badges for pending queues, and resolves key navigation and context issues."
+      },
+      {
+        "heading": "Admin Center modern visual design and responsive shortcuts",
+        "text": "The Admin Control Panel now features a multi-layered ambient radial gradient mesh backdrop with subtle glassmorphic depth, replacing the previous flat monochrome layout. The Administration Shortcuts grid has been refactored into a fully responsive layout where icon tiles remain cleanly seated inside card boundaries, text wraps naturally, and navigation chevrons remain aligned."
+      },
+      {
+        "heading": "Live review queue indicators and notification dot",
+        "text": "Administrators now have instant visibility into pending items without navigating through each individual queue: - Red Sidebar Badges: Display active counts for pending registrations, password reset requests, data restore requests, and subscription support inquiries. - Pulsating Alert Dot: A topbar alert pill pulses red whenever there is pending work requiring administrative action."
+      },
+      {
+        "heading": "Supreme Admin Generative AI toggle and deterministic guarantees",
+        "text": "Supreme Administrators can now enable or disable external Generative AI mode on the fly via the Admin Center ( /admin/assistant-settings ). When generative mode is turned off - or during external provider outages - Ralyvora Assistant automatically and safely functions in 100% deterministic mode, allowing users to discover capabilities, view compact profile summaries, and navigate internal routes with zero external model egress."
+      },
+      {
+        "heading": "Navigation and route reliability",
+        "text": "- Users Page Access ( /admin/users ): Resolved an issue where navigating directly to /admin/users redirected to the overview page. The route now directly opens the User Accounts & Access surface. - Operations Console Subpath Resolution: Operations Console links now correctly respect application subpaths (resolving to /games/kingshot/platform-console ... ), preventing 404 errors on reverse-proxied deployments. - Assistant Context Pill: Opening the Assistant from any page now cleanly displays a human-readable context chip (such as admin users ) instead of raw URI-encoded strings ( assistant?from=%2Fadmin%2Fusers ). The standalone importer-ready announcement is maintained at the documentation repository root as ralyvora-update-2026-09-20.md ."
       },
       {
         "heading": "September 19, 2026: Ralyvora Assistant controlled rollout",
-        "text": "Ralyvora Assistant adds a permission-aware way to discover features, understand why they are useful, and move into the existing Ralyvora interface. It recommends a short set of relevant capabilities from the signed-in account's effective access and the page where it was opened. When a safe-to-disclose feature is unavailable, the assistant explains the applicable role, permission, or scope requirement without granting access. The classic interface remains fully available. Forms, tables, Strategy Lab, Castle Positions, Warboard, Knowledge Hub, Profiles, analytics, and administration do not depend on the assistant. Optimizer and simulator engines remain authoritative for calculations. This first controlled release is limited to explanation, discovery, and registered navigation. It does not publish schedules, apply imports, change roles, delete records, or send conversation text and page con"
+        "text": "Ralyvora Assistant now combines permission-aware discovery with an opt-in external AI model and registered server-side tools. It can inspect compact Profile completeness, summarize owned Championship intel, read durable optimization status, and start supported deep optimization after explicit confirmation. The redesigned command center also shows current scope, context-aware starters, structured tool cards, and recent background work across devices. The classic interface remains fully available. Forms, tables, Strategy Lab, Castle Positions, Warboard, Knowledge Hub, Profiles, analytics, and administration do not depend on the assistant. Optimizer and simulator engines remain authoritative for calculations. External model processing remains off until each user accepts the concise first-use disclosure, and it can be disabled later. Ralyvora sends only bounded request context, centrally red"
       },
       {
         "heading": "September 14, 2026: Championship Warboard and connected planning",

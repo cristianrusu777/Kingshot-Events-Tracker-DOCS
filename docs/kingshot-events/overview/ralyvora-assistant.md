@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Ralyvora Assistant'
 description: 'Use opt-in AI with permission-aware Ralyvora tools, public guest access, and contextual feature discovery while keeping every classic workflow available.'
 product: 'kingshot-events'
@@ -113,7 +113,7 @@ Supreme Administrators can manage the assistant's operational state dynamically 
 
 - **Runtime Generative AI Toggle:** Generative mode can be activated or deactivated with a single switch. Changes take effect immediately without requiring service restarts or configuration redeployments.
 - **Deterministic Mode Guarantee:** When generative mode is disabled - or if the upstream AI provider experiences an outage - the assistant automatically falls back to deterministic rule-based guidance. Users can continue to explore capabilities, inspect compact profiles, check optimization runs, and open safe application routes.
-- **Strict Authorization Boundary:** Assistant settings and provider toggles are restricted exclusively to Supreme Administrators (`admin:all` permission). Role labels alone cannot authorize changes to AI operational mode.
+- **Strict Authorization Boundary:** Assistant settings and provider toggles are restricted exclusively to Supreme Administrators. Role labels alone cannot authorize changes to AI operational mode.
 
 ## Permissions and authority
 
