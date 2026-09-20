@@ -1,4 +1,4 @@
-﻿---
+---
 title: "September 20, 2026: Admin CP Modernization, Generative AI Governance, Public Guest Assistant Access, and Contextual Conversion Engine"
 slug: "2026-09-20-admin-assistant-reliability-update"
 version: "2026.09.20"
@@ -29,7 +29,7 @@ Rather than implementing a disjointed or insecure "guest chatbot," the platform 
 - **`AUTHENTICATED USER`:** Signed-in members with active Strategy Profiles, personalized optimization workflows, and event tracking.
 - **`PRIVILEGED / SCOPED USER`:** Account holders with kingdom or alliance leadership assignments, or Supreme Administrators with platform-wide authority.
 
-Under this model, the backend authoritatively filters capabilities and tools for every single interaction. Guests are granted access only to registered, public-safe tools (`GUEST_SAFE_TOOLS`), while all private user dataâ€”including Strategy Profiles, player directories, alliance analytics, warboard workspaces, background runs, and administrative consolesâ€”remains completely inaccessible. Guessing entity IDs or forging tool calls fails authoritatively on the server.
+Under this model, the backend authoritatively filters capabilities and tools for every single interaction. Guests are granted access only to registered, public-safe tools (`GUEST_SAFE_TOOLS`), while all private user data - including Strategy Profiles, player directories, alliance analytics, warboard workspaces, background runs, and administrative consoles - remains completely inaccessible. Guessing entity IDs or forging tool calls fails authoritatively on the server.
 
 ### 2. Value-First Conversion & Contextual Feature Promotion Engine
 Guest Assistant is engineered not merely to answer questions, but to actively demonstrate the tangible value of creating a Ralyvora account through a deterministic, context-sensitive **Feature Promotion Engine**.
@@ -52,14 +52,14 @@ To protect upstream provider resources against abuse, guest traffic is enforced 
 ### 4. Seamless Login Handoffs and Logout Safety
 When a visitor attempts an action requiring an account, the Assistant presents an `auth_required` capability card offering immediate `[Sign in]` and `[Create free account]` actions rather than raw HTTP error codes. The user's query intent is preserved in browser `sessionStorage` (`ralyvora_assistant_pending_intent`), allowing the Assistant to refresh capabilities upon login and resume the workflow seamlessly without auto-executing unconfirmed mutations.
 
-Upon sign-out, all private structured stateâ€”including selected profile IDs, player IDs, alliance IDs, kingdom IDs, run IDs, and private tool cardsâ€”is immediately purged from client state, and the conversation session is cleanly reset to prevent sensitive data leakage on shared workstations.
+Upon sign-out, all private structured state - including selected profile IDs, player IDs, alliance IDs, kingdom IDs, run IDs, and private tool cards - is immediately purged from client state, and the conversation session is cleanly reset to prevent sensitive data leakage on shared workstations.
 
 ### 5. Admin Center Visual Modernization & Supreme Admin AI Governance
 The **Admin Center** (`/admin`) has received an extensive visual and structural overhaul. The previous monochrome interface has been replaced with a rich, multi-layered ambient radial gradient mesh backdrop and glassmorphic elevation. The **Administration Shortcuts** grid has been refactored into a fully responsive flex container layout (`div[role="button"]`), allowing descriptive text to wrap naturally, preventing icon tiles from overflowing card borders, and maintaining consistent chevron alignment across all viewports.
 
-To improve operational responsiveness, the Admin Center now features **Live Review Queue Badges** (`.admin-nav-badge-red`) across the navigation railâ€”displaying real-time pending counts for registrations, password resets, data restores, and subscription inquiriesâ€”coupled with an animated topbar **Pulsating Alert Dot** (`.admin-notification-dot-pulse`).
+To improve operational responsiveness, the Admin Center now features **Live Review Queue Badges** (`.admin-nav-badge-red`) across the navigation rail - displaying real-time pending counts for registrations, password resets, data restores, and subscription inquiries - coupled with an animated topbar **Pulsating Alert Dot** (`.admin-notification-dot-pulse`).
 
-For system governance, **Supreme Administrators** now have dedicated runtime controls in `/admin/assistant-settings` to toggle external **Generative AI mode** on or off instantly. When generative mode is deactivatedâ€”or during upstream provider outagesâ€”the Assistant automatically falls back to 100% deterministic rule-based guidance without requiring service restarts or configuration redeployments.
+For system governance, **Supreme Administrators** now have dedicated runtime controls in `/admin/assistant-settings` to toggle external **Generative AI mode** on or off instantly. When generative mode is deactivated - or during upstream provider outages - the Assistant automatically falls back to 100% deterministic rule-based guidance without requiring service restarts or configuration redeployments.
 
 ### 6. Navigation Reliability & Platform Observability
 Critical route handling and subpath resolution issues have been resolved across the platform. Direct navigation to `/admin/users` now reliably opens the User Accounts & Access surface rather than redirecting to the overview dashboard. Operations Console links now incorporate the application base path helper (`withBase('/platform-console#...')`), eliminating 404 errors on reverse-proxied subpath deployments (`/games/kingshot/`). Deep route Assistant context chips have been normalized to display clean, human-readable labels (`admin users`) with one-click dismissal.
@@ -117,7 +117,7 @@ Critical route handling and subpath resolution issues have been resolved across 
 #### Supreme Admin Generative AI Mode Management
 - **Type:** new_feature
 - **Area:** assistant
-- **Description:** Introduced an administrative settings workspace (`/admin/assistant-settings`) enabling Supreme Administrators (`admin:all` permission) to toggle external Generative AI mode on or off at runtime without service restarts. When generative mode is disabledâ€”or during external provider outagesâ€”Ralyvora Assistant operates in pure deterministic mode, delivering reliable capability discovery, profile inspection, and route navigation with zero external model egress. All configuration changes are recorded in the administrative audit log.
+- **Description:** Introduced an administrative settings workspace (`/admin/assistant-settings`) enabling Supreme Administrators to toggle external Generative AI mode on or off at runtime without service restarts. When generative mode is disabled - or during external provider outages - Ralyvora Assistant operates in pure deterministic mode, delivering reliable capability discovery, profile inspection, and route navigation with zero external model egress. All configuration changes are recorded in the administrative audit log.
 
 #### Dedicated User Management Route Restoration
 - **Type:** bug_fix

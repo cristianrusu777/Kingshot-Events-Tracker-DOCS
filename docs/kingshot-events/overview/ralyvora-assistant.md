@@ -27,8 +27,8 @@ The Assistant operates across three conceptual access tiers:
 flowchart TD
   Visitor["Visitor arrives at Ralyvora"] --> Launcher["Open Assistant Launcher"]
   Launcher --> StateCheck{"Signed in?"}
-  StateCheck -- "No (Guest)" --> GuestMode["Guest Mode<br/>â€¢ Public Tools Only<br/>â€¢ Knowledge Hub (Public)<br/>â€¢ Safe Role Education<br/>â€¢ Contextual Recommendations"]
-  StateCheck -- "Yes" --> AuthMode["Authenticated Mode<br/>â€¢ Strategy Profiles<br/>â€¢ Optimization Runs<br/>â€¢ Scoped Analytics<br/>â€¢ Personalized Guidance"]
+  StateCheck -- "No (Guest)" --> GuestMode["Guest Mode<br/>• Public Tools Only<br/>• Knowledge Hub (Public)<br/>• Safe Role Education<br/>• Contextual Recommendations"]
+  StateCheck -- "Yes" --> AuthMode["Authenticated Mode<br/>• Strategy Profiles<br/>• Optimization Runs<br/>• Scoped Analytics<br/>• Personalized Guidance"]
   GuestMode -- "Sign In / Register" --> AuthTransition["Refresh Capabilities<br/>& Restore Intent"]
   AuthTransition --> AuthMode
   AuthMode -- "Sign Out" --> LogoutReset["Purge Private State<br/>& Reset Session"]

@@ -5097,11 +5097,11 @@ export const searchIndex = [
     "contentType": "Status reference",
     "featureArea": "Updates",
     "aliases": [],
-    "description": "--- title: 'User-facing Release Notes' description: 'What changed since the August documentation update, with practical introductions and links to the revised guides.' product: 'kingshot-events' audience: 'All users' experienceLevel: 'Inter",
+    "description": "User-facing Release Notes",
     "sections": [
       {
         "heading": "Introduction",
-        "text": "--- title: 'User-facing Release Notes' description: 'What changed since the August documentation update, with practical introductions and links to the revised guides.' product: 'kingshot-events' audience: 'All users' experienceLevel: 'Intermediate' featureArea: 'Updates' lastReviewed: '2026-09-20' verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f' sourceVerificationOwner: 'Ralyvora documentation' --- User-facing Release Notes"
+        "text": "User-facing Release Notes"
       },
       {
         "heading": "September 20, 2026: Guest Assistant Access and Contextual Conversion Engine",

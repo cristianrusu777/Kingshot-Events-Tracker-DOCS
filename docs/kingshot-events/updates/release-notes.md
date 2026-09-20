@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'User-facing Release Notes'
 description: 'What changed since the August documentation update, with practical introductions and links to the revised guides.'
 product: 'kingshot-events'
@@ -121,7 +121,7 @@ Since the September 3 update, Kingshot Events has introduced strict tenant scopi
   2. `Player Requests (No Elevation)`: dedicated queue for accepting and provisioning player registrations without role elevations.
   3. `Uncreated Entities (Suggestions)`: highlights pending requests that require kingdom or alliance creation.
 - **Search and server pagination:** Includes full text search by player name, email, server code, or alliance tag, alongside server-side pagination with item counters.
-- **Suggestion badges and instant provisioning:** Uncreated entities display distinct badges (`ðŸ†• New #999` and `ðŸ†• New [TAG]`). A single click on `Accept & Provision` creates the kingdom and alliance atomically and approves the user. Role elevation drawers include matching 1-click provisioning buttons.
+- **Suggestion badges and instant provisioning:** Uncreated entities display distinct badges (`🆕 New #999` and `🆕 New [TAG]`). A single click on `Accept & Provision` creates the kingdom and alliance atomically and approves the user. Role elevation drawers include matching 1-click provisioning buttons.
 
 #### Exact Knapsack Pareto solver for Hero Gear
 - **Multi-dimensional Pareto frontier knapsack solver:** The Hero Gear engine computes exact optimal upgrade paths by evaluating multi-dimensional trade-offs between enhancement XP, mastery stones, and stat gain curves.
