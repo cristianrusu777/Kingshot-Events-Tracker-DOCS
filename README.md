@@ -1,4 +1,4 @@
-# Ralyvora Docs
+# Ralyvora Docs 
 
 Public VitePress documentation for Ralyvora platforms. Kingshot Events is the currently available product.
 
