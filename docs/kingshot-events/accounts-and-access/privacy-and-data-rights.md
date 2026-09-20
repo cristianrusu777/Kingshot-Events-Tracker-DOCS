@@ -57,3 +57,11 @@ The control center cannot guarantee a particular legal outcome or response time.
 The request-processing dialog uses readable light and dark theme colours, labelled controls, and keyboard dismissal when it is not saving. Review the response note before saving because it is visible to the requester.
 
 After a request is fulfilled, it should no longer be counted as a pending privacy action. A new informational response can still appear for the requester until it is read. A notification never replaces checking the request's status or the availability of an export.
+
+## Assistant privacy in the controlled rollout
+
+External model processing is disabled until the signed-in user accepts the current Assistant disclosure. That account preference is versioned, auditable, and revocable. A user who declines can continue with deterministic capability guidance and every classic Ralyvora workflow.
+
+When AI is enabled, Ralyvora sends the configured provider the message, a bounded page context, a filtered capability/tool list, and only the compact structured results needed to answer. It does not send full database rows merely to answer a count or status question. A central redaction layer removes passwords, API keys, authorization and session tokens, database and Redis URLs, and credential-shaped text before provider egress.
+
+This release does not persist full Assistant conversations as account history. Operational logs retain bounded technical metadata such as duration, provider name, tool count, and page category. Confirmed actions use the existing audit system with `AI_ASSISTANT` source metadata, actor, scope, action, success state, and timestamp, without storing the full conversation.

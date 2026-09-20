@@ -1,16 +1,72 @@
----
+﻿---
 title: 'User-facing Release Notes'
 description: 'What changed since the August documentation update, with practical introductions and links to the revised guides.'
 product: 'kingshot-events'
 audience: 'All users'
 experienceLevel: 'Intermediate'
 featureArea: 'Updates'
-lastReviewed: '2026-09-14'
+lastReviewed: '2026-09-20'
 verifiedAgainstSourceCommit: 'bea100eeccd39f9d71fc12820b2791c48adfcb8f'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
 
 # User-facing Release Notes
+## September 20, 2026: Guest Assistant Access and Contextual Conversion Engine
+
+Ralyvora Assistant is now available to unauthenticated visitors across public landing, documentation, and product pages without requiring login. Visitors can freely explore platform capabilities, search the public Knowledge Hub, learn about game mechanics and role responsibilities, and discover how creating an account unlocks personalized Strategy Profiles, real gear optimization, and event tracking.
+
+### Three-tier capability and tool security
+- **Public Guest Access:** Visitors can launch Assistant immediately to ask questions, explore features, search public Knowledge Hub articles (public_free), read simulator explanations, and safely learn about leadership roles (King, Minister of Justice, Castle Positions) without accessing private kingdom data.
+- **Server-Side Tool Isolation:** The tool registry strictly exposes only GUEST_SAFE_TOOLS (capability.list, capability.explain, capability.search, 
+avigation.open, ole.explain, ecommendation.list, knowledge.search, knowledge.article). Authenticated tools (profiles, player directories, private analytics, warboard, imports, notifications, and administration) are never exposed, and forged tool calls or guessed IDs fail server-side.
+- **Authoritative Knowledge Filtering:** Guest searches return only published, global, public articles. Scoped, draft, alliance, and kingdom articles are excluded at the query layer.
+
+### Guest AI consent and deterministic availability
+- **Browser-Scoped AI Consent:** Visitors can opt in to external AI processing with consent stored in localStorage (alyvora_assistant_guest_ai_consent) without creating fake database user accounts.
+- **Deterministic Baseline:** Even without external AI consent, guests can use deterministic greetings, public feature discovery, safe role education, and navigation.
+- **Rate and Cost Protection:** Public IP-based rate limiting, bounded context, and a 2-tool-call maximum protect upstream model resources.
+
+### Value-first conversion and contextual feature promotion
+- **Contextual Intent Matching:** When a visitor asks about Hero Gear, Bear Trap, Charms, or Events, the Assistant provides public guidance first, then highlights how a free account allows saving Strategy Profiles and optimizing using real battle stats.
+- **Free Account vs. Premium Clarity:** Free account benefits (Profiles, saved builds, event tracking) are clearly distinguished from Premium entitlements (Deep Optimization).
+- **Anti-Spam Controls:** Low-intent messages ("hi", "thanks") never trigger signup cards. Recommendation cards can be dismissed for the session, and signed-in members never see registration CTAs.
+
+### Login handoff and logout safety
+- **Intent Restoration:** When a guest requests an account-required feature (e.g. "Show my Profile"), the Assistant offers [Sign in] / [Create free account] actions and preserves the query intent in sessionStorage across login.
+- **Immediate Capability Refresh & Logout Purge:** Logging in immediately unlocks authenticated tools. Logging out immediately invalidates cached capabilities, purges private structured state, and cleanly resets the conversation.
+
+Read [Ralyvora Assistant](/kingshot-events/overview/ralyvora-assistant) for complete architectural and security details.
+
+## September 20, 2026: Admin CP modernization, Generative AI governance, and navigation reliability
+
+This release delivers a major visual and structural overhaul to the Admin Center, gives Supreme Administrators direct runtime control over Generative AI mode, adds real-time notification badges for pending queues, and resolves key navigation and context issues.
+
+### Admin Center modern visual design and responsive shortcuts
+The Admin Control Panel now features a multi-layered ambient radial gradient mesh backdrop with subtle glassmorphic depth, replacing the previous flat monochrome layout. The **Administration Shortcuts** grid has been refactored into a fully responsive layout where icon tiles remain cleanly seated inside card boundaries, text wraps naturally, and navigation chevrons remain aligned.
+
+### Live review queue indicators and notification dot
+Administrators now have instant visibility into pending items without navigating through each individual queue:
+- **Red Sidebar Badges:** Display active counts for pending registrations, password reset requests, data restore requests, and subscription support inquiries.
+- **Pulsating Alert Dot:** A topbar alert pill pulses red whenever there is pending work requiring administrative action.
+
+### Supreme Admin Generative AI toggle and deterministic guarantees
+Supreme Administrators can now enable or disable external Generative AI mode on the fly via the Admin Center (`/admin/assistant-settings`). When generative mode is turned off - or during external provider outages - Ralyvora Assistant automatically and safely functions in 100% deterministic mode, allowing users to discover capabilities, view compact profile summaries, and navigate internal routes with zero external model egress.
+
+### Navigation and route reliability
+- **Users Page Access (`/admin/users`):** Resolved an issue where navigating directly to `/admin/users` redirected to the overview page. The route now directly opens the User Accounts & Access surface.
+- **Operations Console Subpath Resolution:** Operations Console links now correctly respect application subpaths (resolving to `/games/kingshot/platform-console#...`), preventing 404 errors on reverse-proxied deployments.
+- **Assistant Context Pill:** Opening the Assistant from any page now cleanly displays a human-readable context chip (such as `admin users`) instead of raw URI-encoded strings (`assistant?from=%2Fadmin%2Fusers`).
+
+The standalone importer-ready announcement is maintained at the documentation repository root as `ralyvora-update-2026-09-20.md`.
+
+## September 19, 2026: Ralyvora Assistant controlled rollout
+
+Ralyvora Assistant now combines permission-aware discovery with an opt-in external AI model and registered server-side tools. It can inspect compact Profile completeness, summarize owned Championship intel, read durable optimization status, and start supported deep optimization after explicit confirmation. The redesigned command center also shows current scope, context-aware starters, structured tool cards, and recent background work across devices.
+
+The classic interface remains fully available. Forms, tables, Strategy Lab, Castle Positions, Warboard, Knowledge Hub, Profiles, analytics, and administration do not depend on the assistant. Optimizer and simulator engines remain authoritative for calculations.
+
+External model processing remains off until each user accepts the concise first-use disclosure, and it can be disabled later. Ralyvora sends only bounded request context, centrally redacts credential-shaped data, filters tools and scope on the server, and falls back to deterministic guidance during provider outages. High-risk actions such as Castle schedule publication, role changes, imports, and deletion remain unavailable through Assistant. Read [Ralyvora Assistant](/kingshot-events/overview/ralyvora-assistant) for privacy, tool coverage, background jobs, and current limitations.
+
 ## September 14, 2026: Championship Warboard and connected planning
 
 This release adds the public [Championship Warboard](/kingshot-events/lab/championship-warboard), expands [shared Lab profiles](/kingshot-events/lab/profiles-and-autosave), and improves the explanation and safety boundaries in [Hero Gear](/kingshot-events/lab/hero-gear), [Ascension Path](/kingshot-events/lab/ascension-path), and [Bear Trap](/kingshot-events/lab/bear-trap).
@@ -65,7 +121,7 @@ Since the September 3 update, Kingshot Events has introduced strict tenant scopi
   2. `Player Requests (No Elevation)`: dedicated queue for accepting and provisioning player registrations without role elevations.
   3. `Uncreated Entities (Suggestions)`: highlights pending requests that require kingdom or alliance creation.
 - **Search and server pagination:** Includes full text search by player name, email, server code, or alliance tag, alongside server-side pagination with item counters.
-- **Suggestion badges and instant provisioning:** Uncreated entities display distinct badges (`🆕 New #999` and `🆕 New [TAG]`). A single click on `Accept & Provision` creates the kingdom and alliance atomically and approves the user. Role elevation drawers include matching 1-click provisioning buttons.
+- **Suggestion badges and instant provisioning:** Uncreated entities display distinct badges (`ðŸ†• New #999` and `ðŸ†• New [TAG]`). A single click on `Accept & Provision` creates the kingdom and alliance atomically and approves the user. Role elevation drawers include matching 1-click provisioning buttons.
 
 #### Exact Knapsack Pareto solver for Hero Gear
 - **Multi-dimensional Pareto frontier knapsack solver:** The Hero Gear engine computes exact optimal upgrade paths by evaluating multi-dimensional trade-offs between enhancement XP, mastery stones, and stat gain curves.
@@ -246,3 +302,4 @@ The previous documentation refresh established the product portal, role-based jo
 ## Where to start
 
 For a quick experiment, try the local Castle helper. For a progression decision, start with your confirmed Lab build. For shared responsibilities, open Notifications and complete the action in its owning workspace. The detailed guides explain the limits and saving behavior of each choice.
+

@@ -5,7 +5,7 @@ product: 'kingshot-events'
 audience: 'Signed-in users'
 experienceLevel: 'Beginner'
 featureArea: 'Dashboard'
-lastReviewed: '2026-09-03'
+lastReviewed: '2026-09-20'
 verifiedAgainstSourceCommit: '6bfaf6e0a6a8ceb8d6dcf09ead5ad5a9f85185d0'
 sourceVerificationOwner: 'Ralyvora documentation'
 ---
@@ -52,3 +52,16 @@ If a count looks stale, refresh the dashboard and then the destination page. If 
 The bell and **Notifications** menu lead to a paginated inbox with unread, urgent, and action-needed views. Sidebar dots are explained by **What's new here** in the relevant section. Reading information clears its unread state, while actual decisions remain pending until completed in their owning workspace.
 
 This makes it possible to read everything without accidentally approving anything. See [Notifications and Reports](/kingshot-events/lifecycles/notifications-and-reports) for examples and recovery steps.
+
+
+## Admin Center live notification badges and alert indicators
+
+The Admin Control Panel features real-time visual indicators to help administrators identify and resolve pending review work without checking individual queues manually:
+
+- **Sidebar Queue Badges:** Dedicated red badge counters (`.admin-nav-badge-red`) appear next to navigation items when pending items exist. Monitored queues include:
+  - User self-registration approval requests (`regPendingCount`)
+  - Password reset requests (`passPendingCount`)
+  - Data restore and recovery requests (`restorePendingCount`)
+  - Subscription support inquiries and plan purchase requests (`subPendingCount`)
+- **Topbar Pulsating Alert Pill:** When the total pending review count across all queues is greater than zero, an alert pill in the topbar displays an animated pulsating red dot (`.admin-notification-dot-pulse`). Clicking the alert pill immediately directs the administrator to the primary review queues.
+- **Responsive Shortcuts:** The Administration Shortcuts surface provides fast navigation to primary management surfaces with accessible flex containers that preserve icon alignment and avoid text truncation.

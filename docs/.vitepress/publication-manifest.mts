@@ -83,6 +83,19 @@ export const publicationManifest = [
   },
   {
     "product": "kingshot-events",
+    "title": "Ralyvora Assistant",
+    "path": "/kingshot-events/overview/ralyvora-assistant",
+    "navigationSection": "Overview",
+    "audience": "Signed-in users in the controlled rollout",
+    "experienceLevel": "Beginner",
+    "featureArea": "Assistant",
+    "publicationStatus": "published",
+    "sortOrder": 16,
+    "lastReviewedDate": "2026-09-19",
+    "file": "kingshot-events/overview/ralyvora-assistant.md"
+  },
+  {
+    "product": "kingshot-events",
     "title": "Your First Visit, Registration, and Login",
     "path": "/kingshot-events/getting-started/first-visit",
     "navigationSection": "Getting Started",

@@ -1855,6 +1855,10 @@ export const searchIndex = [
       {
         "heading": "Readable review and accurate completion notices",
         "text": "The request-processing dialog uses readable light and dark theme colours, labelled controls, and keyboard dismissal when it is not saving. Review the response note before saving because it is visible to the requester. After a request is fulfilled, it should no longer be counted as a pending privacy action. A new informational response can still appear for the requester until it is read. A notification never replaces checking the request's status or the availability of an export."
+      },
+      {
+        "heading": "Assistant privacy in the controlled rollout",
+        "text": "The first Ralyvora Assistant release does not persist conversation text and does not send assistant questions or page context to an external model provider. Its operational logging is limited to bounded technical metadata such as duration, matched-capability count, and the page category. Normal platform privacy requests and exports are therefore unchanged by this release."
       }
     ]
   },
@@ -2519,6 +2523,43 @@ export const searchIndex = [
       {
         "heading": "Purpose, controls, and worked decision",
         "text": "Availability explains why a navigation item or Run control appears, disables, becomes read-only, or enters limited mode. Example: A member has the right alliance role and an accepted grant, but the module is disabled for that scope. Feature availability fails before the grant is used, so the action stays hidden or disabled. Enabling the feature can restore evaluation; the grant still cannot add management rights. Limitations include plan dates, quota, allocation, suspension, and page state. Troubleshoot with feature label, scope, assignment, effective source, usage state, and exact message."
+      }
+    ]
+  },
+  {
+    "title": "Ralyvora Assistant",
+    "path": "/kingshot-events/overview/ralyvora-assistant",
+    "category": "Overview",
+    "audience": "Signed-in users in the controlled rollout",
+    "level": "Beginner",
+    "contentType": "Overview",
+    "featureArea": "Assistant",
+    "aliases": [],
+    "description": "Ralyvora Assistant Ralyvora Assistant is an additional way to discover and understand Kingshot Events. It does not replace the dashboard, forms, tables, Strategy Lab, Castle Position pages, Knowledge Hub, or administration pages. Every clas",
+    "sections": [
+      {
+        "heading": "Introduction",
+        "text": "Ralyvora Assistant Ralyvora Assistant is an additional way to discover and understand Kingshot Events. It does not replace the dashboard, forms, tables, Strategy Lab, Castle Position pages, Knowledge Hub, or administration pages. Every classic workflow remains available from the normal navigation. The assistant is in a controlled rollout. Accounts outside the rollout see an availability message and continue using the rest of Ralyvora normally."
+      },
+      {
+        "heading": "What the assistant can do in the first release",
+        "text": "The first release can: - recommend a short list of features based on the signed-in account's effective permissions and the page where the assistant was opened; - explain what a registered feature does and why it may be useful; - distinguish a currently available capability from a safely discoverable role-gated capability; - explain missing role, permission, or kingdom and alliance scope without granting access; - route the user to a registered classic Ralyvora page; - keep optimizer and simulator engines authoritative for calculated results. The first release does not publish schedules, apply imports, change roles, delete records, or run an open-ended chain of actions. Those workflows remain in their existing governed pages."
+      },
+      {
+        "heading": "Access and scope",
+        "text": "Assistant context is a hint, not authority. When it receives a current route, selected record, profile, workspace, kingdom, or alliance identifier, the server resolves the signed-in account again. A user who has leadership access in one kingdom does not gain the same access in another kingdom by naming it in a question or URL. An unavailable capability may still be explained when its existence is safe to disclose. For example, Castle Schedule Planning can be described to an ordinary player, but it remains unavailable unless the current kingdom scope grants the scheduling permission. The explanation describes the requirement without encouraging the user to pursue a privileged role."
+      },
+      {
+        "heading": "Assistant answers and calculated results",
+        "text": "Ralyvora calculation engines produce optimizer and simulator results. The assistant can explain where a tool lives, which inputs it needs, and how to continue in the classic interface. It must not present its own wording as an engine-authoritative calculation. If a result seems surprising, open the corresponding Strategy Lab page and inspect the saved inputs, model or rule version, assumptions, and calculation breakdown. Manual editing remains available in the original tool."
+      },
+      {
+        "heading": "Privacy and availability",
+        "text": "The controlled first release does not persist assistant conversations and does not send assistant questions or page context to an external model provider. Operational logs keep bounded metadata such as request duration and the number of matched capabilities; they do not keep the question text. If the assistant is unavailable, login and all normal platform areas continue working. Open the relevant page from the sidebar or dashboard and continue in the classic interface."
+      },
+      {
+        "heading": "Good starting questions",
+        "text": "- What can Ralyvora do for me? - Which features are available with my current access? - What should I set up next? - What can I do with Castle Positions? - Explain the Hero Gear workflow. The response is intentionally concise. Open a suggested feature to review its full inputs, controls, and current data."
       }
     ]
   },
@@ -5025,6 +5066,10 @@ export const searchIndex = [
       {
         "heading": "Introduction",
         "text": "User-facing Release Notes"
+      },
+      {
+        "heading": "September 19, 2026: Ralyvora Assistant controlled rollout",
+        "text": "Ralyvora Assistant adds a permission-aware way to discover features, understand why they are useful, and move into the existing Ralyvora interface. It recommends a short set of relevant capabilities from the signed-in account's effective access and the page where it was opened. When a safe-to-disclose feature is unavailable, the assistant explains the applicable role, permission, or scope requirement without granting access. The classic interface remains fully available. Forms, tables, Strategy Lab, Castle Positions, Warboard, Knowledge Hub, Profiles, analytics, and administration do not depend on the assistant. Optimizer and simulator engines remain authoritative for calculations. This first controlled release is limited to explanation, discovery, and registered navigation. It does not publish schedules, apply imports, change roles, delete records, or send conversation text and page con"
       },
       {
         "heading": "September 14, 2026: Championship Warboard and connected planning",

@@ -17,7 +17,8 @@ const productSidebar: Item[] = [
     link('How the platform fits together', 'overview/platform-model'),
     link('Product terminology', 'overview/terminology'),
     link('Feature availability', 'overview/feature-availability'),
-    link('Dashboard, alerts, and quick actions', 'overview/dashboard-and-alerts')
+    link('Dashboard, alerts, and quick actions', 'overview/dashboard-and-alerts'),
+    link('Ralyvora Assistant', 'overview/ralyvora-assistant')
   ], false),
   section('Getting Started', '◇', [
     link('Your first visit', 'getting-started/first-visit'),
